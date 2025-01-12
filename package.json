@@ -1,6 +1,6 @@
 {
   "name": "digital-product-website",
-  "homepage": "https://Adarsh-oo7.github.io/Digital-Product",  
+  "homepage": "https://Adarsh-oo7.github.io/Digital-Product",
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev --turbopack",
@@ -16,8 +16,8 @@
     "gh-pages": "^6.3.0",
     "lucide-react": "^0.471.0",
     "next": "13.4.19",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
