@@ -58,7 +58,7 @@ export default function About() {
           <h2 className="text-3xl font-semibold mb-8 text-center">Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: 'Adarsh B S', role: 'Founder & CEO', image: '/img/adarsh.png?height=300&width=300' },
+              { name: 'Adarsh B S', role: 'Founder & CEO', image: './img/adarsh.png?height=300&width=300' },
               { name: 'Jane Smith', role: 'Lead Developer', image: '/placeholder.svg?height=300&width=300' },
               { name: 'Mike Johnson', role: 'UX Designer', image: '/placeholder.svg?height=300&width=300' },
             ].map((member, index) => (
