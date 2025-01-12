@@ -22,8 +22,9 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
-    "@types/react": "^18.2.0", 
-    "@types/react-dom": "^18.2.0", 
+    "@types/react": "^18.3.18", 
+    "@types/react-dom": "^18.3.5", 
+    "@types/prop-types": "^15.7.14", 
     "eslint": "^9",
     "eslint-config-next": "15.1.4",
     "postcss": "^8",
