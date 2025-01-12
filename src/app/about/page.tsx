@@ -59,8 +59,8 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { name: 'Adarsh B S', role: 'Founder & CEO', image: './img/adarsh.png?height=300&width=300' },
-              { name: 'Jane Smith', role: 'Lead Developer', image: '/placeholder.svg?height=300&width=300' },
-              { name: 'Mike Johnson', role: 'UX Designer', image: '/placeholder.svg?height=300&width=300' },
+              { name: 'adarsh', role: 'Lead Developer', image: '/placeholder.svg?height=300&width=300' },
+              { name: ' asd', role: 'UX Designer', image: '/placeholder.svg?height=300&width=300' },
             ].map((member, index) => (
               <div key={index} className="bg-gray-800 rounded-lg p-6 text-center">
                 <Image
