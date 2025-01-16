@@ -7,26 +7,26 @@ const projects = [
   {
     title: 'E-commerce Platform',
     description: 'A fully responsive online store with advanced features and seamless user experience.',
-    image: '/placeholder.svg?height=400&width=600',
-    technologies: ['React', 'Node.js', 'MongoDB'],
+    image: './img/ec.png?height=400&width=600',
+    technologies: ['Django', 'Bootstrap', 'Sql-lite'],
   },
   {
     title: 'Social Media Dashboard',
     description: 'Real-time analytics dashboard for social media management and performance tracking.',
-    image: '/placeholder.svg?height=400&width=600',
-    technologies: ['Vue.js', 'Express', 'PostgreSQL'],
+    image: './img/ht.png?height=400&width=600',
+    technologies: ['JavaScript', 'Django', 'MySql'],
   },
   {
     title: 'Fitness Tracking App',
     description: 'Mobile application for tracking workouts, nutrition, and personal fitness goals.',
-    image: '/placeholder.svg?height=400&width=600',
-    technologies: ['React Native', 'Firebase'],
+    image: './img/lt.png?height=400&width=600',
+    technologies: [' Bootstrap', 'JavaScript'],
   },
   {
     title: 'Corporate Intranet Portal',
     description: 'Secure and efficient intranet solution for large-scale enterprise communication.',
-    image: '/placeholder.svg?height=400&width=600',
-    technologies: ['Angular', 'ASP.NET Core', 'SQL Server'],
+    image: '/img/move.png?height=400&width=600',
+    technologies: ['React Js', 'Django', 'MySQL','Bootstrap'],
   },
 ]
 
