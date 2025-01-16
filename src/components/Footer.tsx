@@ -22,24 +22,24 @@ const Footer: React.FC = () => {
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
-            <p className="text-sm">123 Web Dev Street</p>
+            <p className="text-sm"> 695104, Korani P O</p>
             <p className="text-sm">Attingal, Thiruvananthapuram</p>
             <p className="text-sm">Phone: +91 9400355185</p>
-            <p className="text-sm">Email: adarshsarachandran.com</p>
+            <p className="text-sm">Email: adarshsarachandran@gmail.com</p>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+              <a href="https://www.facebook.com/Digital.Product.kerala/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
                 <Facebook />
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
                 <Twitter />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+              <a href="https://www.instagram.com/digital_prodect_sale/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
                 <Instagram />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+              <a href="https://www.linkedin.com/in/adarsh-bs/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
                 <Linkedin />
               </a>
             </div>
