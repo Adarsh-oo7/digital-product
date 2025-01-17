@@ -55,7 +55,6 @@ export default function Contact() {
   <input type="hidden" name="_next" value="https://adarshbs.com" />
 
 
-  <input type="hidden" name="_subject" value="New submission!" />
 
 
   <div>
