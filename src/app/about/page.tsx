@@ -123,7 +123,6 @@ export default function About() {
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.16649578382!2d76.84067420000002!3d8.660266599999991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x893ab90196d09cb5%3A0xdbfd038c9bb1b62!2sDigital%20product%20sale!5e1!3m2!1sen!2sin!4v1737039748951!5m2!1sen!2sin"
       width="100%"
       height="100%"
-      
       loading="lazy"
       style={{ border: 0, position: 'absolute', top: 0, left: 0 }}
     ></iframe>
