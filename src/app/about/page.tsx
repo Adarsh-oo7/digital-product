@@ -6,19 +6,19 @@ export default function About() {
   const teamMembers = [
     {
       name: 'Adarsh B S',
-      role: 'Founder',
+      role:  ['Project Manager', 'SEO and Marketing Specialist'],
       image: './img/adarsh.png?height=300&width=300',
     },
-    // {
-    //   name: 'John Doe',
-    //   role: 'Lead Developer',
-    //   image: '/placeholder.svg?height=300&width=300',
-    // },
-    // {
-    //   name: 'Jane Smith',
-    //   role: 'UX Designer',
-    //   image: '/placeholder.svg?height=300&width=300',
-    // },
+    {
+      name: 'Mudhin S',
+      role: ['Full-Stack Developer ','Backend Specialist','Quality Assurance(QA)'],
+      image: './img/midhin.jpg?height=300&width=300',
+    },
+    {
+      name: 'Aromal V G',
+      role: ['Full-Stack Developer','UI/UX Designer','Frondend Specialist'],
+      image: './img/aromal.png?height=300&width=300',
+    },
   ];
 
   return (
@@ -88,25 +88,37 @@ export default function About() {
         >
           <h2 className="text-3xl font-semibold mb-8 text-center">Meet Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={index}
-                className="bg-gray-800 rounded-lg p-6 text-center"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-              >
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={150}
-                  height={150}
-                  className="rounded-full mx-auto mb-4"
-                />
-                <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-                <p className="text-gray-400">{member.role}</p>
-              </motion.div>
-            ))}
+          {teamMembers.map((member, index) => (
+  <motion.div
+    key={index}
+    className="bg-gray-800 rounded-lg p-6 text-center"
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, delay: index * 0.2 }}
+  >
+    <Image
+      src={member.image}
+      alt={`Picture of ${member.name}`}
+      width={150}
+      height={150}
+      className="rounded-full mx-auto mb-4"
+    />
+    <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+    {Array.isArray(member.role) ? (
+      <p className="text-gray-400">
+        {member.role.map((r, i) => (
+          <span key={i}>
+            {r}
+            {i < member.role.length - 1 && <br />}
+          </span>
+        ))}
+      </p>
+    ) : (
+      <p className="text-gray-400">{member.role}</p>
+    )}
+  </motion.div>
+))}
+
           </div>
         </motion.div>
 

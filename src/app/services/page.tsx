@@ -1,7 +1,17 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Code, ShoppingCart, Search } from 'lucide-react'
+import { 
+  Code, 
+  Layers, 
+  Network, 
+  ShoppingCart, 
+  Search, 
+  Smartphone, 
+  Palette, 
+  Gauge, 
+  Wrench 
+} from 'lucide-react';
 
 const services = [
   {
@@ -19,7 +29,38 @@ const services = [
     description: 'Improve your online visibility and attract more customers to your website. We use data-driven strategies to boost your search engine rankings and increase organic traffic.',
     icon: Search,
   },
-]
+  {
+    title: 'Responsive Design',
+    description: 'Ensure your website looks great on all devices with our expertise in responsive web design using Bootstrap and CSS. Provide a seamless experience for your users.',
+    icon: Smartphone,
+  },
+  {
+    title: 'UI/UX Prototyping',
+    description: 'Create intuitive and visually appealing user interfaces using basic Figma designs. Turn your ideas into effective prototypes for a better user experience.',
+    icon: Palette,
+  },
+  {
+    title: 'Full-Stack Development',
+    description: 'Get a complete solution for your web application with our full-stack development services. From frontend interfaces to backend functionality, we cover it all.',
+    icon: Layers,
+  },
+  {
+    title: 'Custom APIs and Integrations',
+    description: 'Develop and integrate RESTful APIs tailored to your business needs. Connect multiple services and create a seamless ecosystem for your web application.',
+    icon: Network,
+  },
+  {
+    title: 'Performance Optimization',
+    description: 'Enhance your website’s loading speed and overall performance with our optimization techniques, ensuring a smooth user experience.',
+    icon: Gauge,
+  },
+  {
+    title: 'Website Maintenance',
+    description: 'Keep your website up-to-date and secure with regular maintenance. We handle bug fixes, updates, and performance improvements.',
+    icon: Wrench,
+  },
+];
+
 
 export default function Services() {
   return (
