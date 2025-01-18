@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <Link href="/" className="flex items-center text-2xl font-bold">
           <Image 
-            src="/img/loges.png"
+            src="./img/loges.png"
             alt="Digital Product Logo"
             className="h-11 w-auto mr-2"
           />
