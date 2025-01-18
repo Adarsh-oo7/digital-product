@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 
 import { useState } from "react";
 import Link from "next/link";
@@ -11,7 +12,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center text-2xl font-bold">
-          <img
+          <Image 
             src="/img/loges.png"
             alt="Digital Product Logo"
             className="h-11 w-auto mr-2"
