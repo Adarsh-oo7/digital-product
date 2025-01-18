@@ -6,25 +6,21 @@ import { Send } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  })
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   message: '',
+  // })
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prevState => ({ ...prevState, [name]: value }))
-  }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData)
-    // Reset form after submission
-    setFormData({ name: '', email: '', message: '' })
-    alert('Thank you for your message. We will get back to you soon!')
-  }
+
+  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //   // Here you would typically send the form data to your backend
+  //   console.log('Form submitted:', formData)
+  //   // Reset form after submission
+  //   setFormData({ name: '', email: '', message: '' })
+  //   alert('Thank you for your message. We will get back to you soon!')
+  // }
 
   return (
     <div className="min-h-screen py-16 px-4 relative">
@@ -52,7 +48,7 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <form action="https://formsubmit.co/adarshsarachandran@gmail.com" method="POST" className="space-y-6 ">
+          <form action="https://formsubmit.co/adarshsarachandran@gmail.com" method="POST"  className="space-y-6 ">
   <div>
     <label htmlFor="name" className="block text-sm font-medium mb-2 text-white">
       Name <span className="text-red-500">*</span>
