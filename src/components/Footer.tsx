@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-bold mb-4">Digital Product</h3>
             <p className="text-sm">Crafting digital experiences that inspire and innovate.</p>
             <Image
-  src="/img/logos.png" // Ensure the image path is correct relative to the `public` folder
+  src="./img/logos.png" // Ensure the image path is correct relative to the `public` folder
   alt="Logo" // Provide an alt description for accessibility
   width={56} // Explicit width (adjust as per your design)
   height={56} // Explicit height (adjust as per your design)
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
       height="40%"
       loading="lazy"
     ></iframe> */}
-    
+
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
