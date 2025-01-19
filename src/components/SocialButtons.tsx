@@ -32,13 +32,13 @@ const SocialButtons = () => {
   return (
     <div className="fixed bottom-4 right-4 flex flex-col space-y-4">
       <SocialButton
-        href="https://wa.me/919400355185"  // Replace with your actual WhatsApp number
+        href="https://wa.me/919400355185"  
         icon={WhatsApp}
         name="WhatsApp"
         color="bg-green-500 hover:bg-green-600"
       />
       <SocialButton
-        href="https://t.me/yourusername"  // Replace with your actual Telegram username or group link
+        href="https://t.me/Digital_Product_kerala"  
         icon={TelegramIcon}
         name="Telegram"
         color="bg-[#0088cc] hover:bg-[#0077b5]"
