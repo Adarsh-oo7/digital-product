@@ -10,13 +10,13 @@ export default function About() {
       image: './img/adarsh.png?height=300&width=300',
     },
     {
-      name: 'Mudhin S',
+      name: 'Midhin S',
       role: ['Full-Stack Developer ','Backend Specialist','Quality Assurance(QA)'],
       image: './img/midhin.jpg?height=300&width=300',
     },
     {
       name: 'Aromal V G',
-      role: ['Full-Stack Developer','UI/UX Designer','Frondend Specialist'],
+      role: ['Full-Stack Developer','UI/UX Designer','Frontend Specialist'],
       image: './img/aromal.png?height=300&width=300',
     },
   ];
