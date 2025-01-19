@@ -25,7 +25,7 @@ const projects = [
   {
     title: 'Corporate Intranet Portal',
     description: 'Secure and efficient intranet solution for large-scale enterprise communication.',
-    image: '/img/move.png?height=400&width=600',
+    image: './img/move.png?height=400&width=600',
     technologies: ['React Js', 'Django', 'MySQL','Bootstrap'],
   },
 ]
@@ -35,13 +35,21 @@ export default function Portfolio() {
     <div className="min-h-screen py-16 px-4">
       <div className="container mx-auto">
         <motion.h1 
-          className="text-4xl md:text-5xl font-bold mb-12 text-center"
+          className="text-4xl md:text-5xl font-bold mb-1 text-center"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           Our Portfolio
         </motion.h1>
+        <motion.h6 
+          className="text-1xl md:text-1xl font-bold mb-12 text-center"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Some Major Project
+        </motion.h6>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.div 

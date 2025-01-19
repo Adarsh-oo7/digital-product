@@ -12,11 +12,18 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center text-2xl font-bold">
-          <Image 
-            src="./img/loges.png"
-            alt="Digital Product Logo"
-            className="h-11 w-auto mr-2"
-          />
+        <Image 
+  src="/img/loges.png" // Ensure the path is relative to the `public` folder
+  alt="Digital Product Logo"
+  width={44} // Explicit width (matches `h-11`)
+  height={44} // Explicit height
+  className="h-11 w-auto mr-2"
+/>
+
+          
+
+
+          
           <span>Digital Product</span>
         </Link>
 

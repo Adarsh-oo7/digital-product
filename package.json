@@ -15,16 +15,16 @@
     "framer-motion": "^11.17.0",
     "gh-pages": "^6.3.0",
     "lucide-react": "^0.471.0",
-    "next": "^15.1.4",
-    "react": "^18.2.0", 
-    "react-dom": "^18.2.0" 
+    "next": "^15.2.0-canary.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
-    "@types/react": "^18.3.18", 
-    "@types/react-dom": "^18.3.5", 
-    "@types/prop-types": "^15.7.14", 
+    "@types/prop-types": "^15.7.14",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
     "eslint": "^9",
     "eslint-config-next": "15.1.4",
     "postcss": "^8",
