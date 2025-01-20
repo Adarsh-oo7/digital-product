@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Digital Product</h3>
             <p className="text-sm">Crafting digital experiences that inspire and innovate.</p>
-            <Image
+            <Image 
   src="./img/logos.png" // Ensure the image path is correct relative to the `public` folder
   alt="Logo" // Provide an alt description for accessibility
   width={56} // Explicit width (adjust as per your design)
