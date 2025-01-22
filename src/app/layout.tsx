@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: "Digital Product | Web Development Agency",
   description:
-    "Digital Product is a leading web development agency specializing in custom websites, e-commerce solutions, and SEO optimization. Transform your online presence with our expert team.",
+    "Digital Product is a top web development agency offering custom websites, e-commerce solutions, and SEO services. Transform your online presence today!",
   keywords: "digital product, web development agency, custom websites, e-commerce solutions, SEO optimization",
 }
 
