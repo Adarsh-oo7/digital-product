@@ -12,12 +12,13 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center text-2xl font-bold">
-        <Image 
-  src="./img/loges.png" // Ensure the path is relative to the `public` folder
+        <Image
+  src="/img/loges.png" // Make sure the path is relative to the public folder
   alt="Digital Product Logo"
-  title="Digital Product - Leading Web Development Agency" 
-  style={{ width: "100px", height: "auto" }}
-  className="h-11 w-auto mr-2"
+  title="Digital Product - Leading Web Development Agency"
+  width={100} // Width in pixels
+  height={50} // Height in pixels (adjust this to maintain aspect ratio)
+  className="h-auto w-16 mr-2" // Using Tailwind CSS for responsive sizing
 />
 
           
