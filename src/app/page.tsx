@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 // import { ArrowRight } from 'lucide-react'
-import Image from "next/image"
 import { ArrowRight, Code, ShoppingCart, Search } from "lucide-react"
 import AnimatedReviews from '../components/AnimatedReviews'
 
