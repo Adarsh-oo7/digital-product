@@ -15,6 +15,7 @@ const Navbar: React.FC = () => {
         <Image 
   src="./img/loges.png" // Ensure the path is relative to the `public` folder
   alt="Digital Product Logo"
+  title="Digital Product - Leading Web Development Agency" 
   width={44} // Explicit width (matches `h-11`)
   height={44} // Explicit height
   className="h-11 w-auto mr-2"

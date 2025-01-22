@@ -14,6 +14,7 @@ const Footer: React.FC = () => {
   src="./img/logos.png" // Ensure the image path is correct relative to the `public` folder
   alt="Logo" // Provide an alt description for accessibility
   width={56} // Explicit width (adjust as per your design)
+  title="Digital Product Logo"
   height={56} // Explicit height (adjust as per your design)
   className="h-14 w-auto"
 />           

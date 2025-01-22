@@ -39,6 +39,7 @@ export default function RootLayout({
         <meta name="twitter:title" content="Digital Product | Web Development Agency" />
         <meta name="twitter:description" content="Digital Product is a leading web development agency specializing in custom websites, e-commerce solutions, and SEO optimization." />
         <meta name="twitter:image" content="https://digital-product.adarshbs.com/twitter-image.jpg" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${inter.className} bg-gray-900 text-white flex flex-col min-h-screen`}>
         <AnimatedSky />
@@ -56,7 +57,6 @@ export default function RootLayout({
               "name": "Digital Product",
               "alternateName": "Digital Product Web Development Agency",
               "url": "https://digital-product.adarshbs.com/",
-              "description": "Digital Product is a leading web development agency specializing in custom websites, e-commerce solutions, and SEO optimization.",
               "sameAs": [
                 "https://www.instagram.com/digital_prodect_sale/",
                 "https://twitter.com/digitalproduct",
