@@ -18,7 +18,7 @@ const reviews: Review[] = [
     id: 1,
     name: "Ashik J.S",
     company: "Lemon Caters and Events",
-    content: "Digital Product transformed our online presence. Their expertise in web development is unmatched!",
+    content: "Digital Product transformed our online presence with their expert web development services. Their team's skills in creating custom digital products are unmatched!",
     rating:4.3
 
   },
@@ -26,14 +26,14 @@ const reviews: Review[] = [
     id: 2,
     name: "Kiran Mohan",
     company: "E-commerce Giants",
-    content: "The e-commerce solution provided by Digital Product boosted our sales by 200%. Highly recommended!",
+    content: "The e-commerce solution provided by this web development agency boosted our sales by 200%. Digital Product's expertise in creating powerful online stores is highly recommended!",
     rating:4
   },
   {
     id: 3,
     name: "Johnson A",
     company: "StartUp Ventures",
-    content: "As a startup, we needed a robust and scalable website. Digital Product delivered beyond our expectations.",
+    content: "As a startup, we needed a robust and scalable website. Digital Product delivered beyond our expectations, showcasing their prowess as a top-tier web development agency.",
     rating:5
 
   },
@@ -41,7 +41,7 @@ const reviews: Review[] = [
     id: 4,
     name: "Gautam Raj",
     company: "Creative Studios",
-    content: "The team at Digital Product brought our creative vision to life. Their design skills are top-notch!",
+    content: "The team at Digital Product brought our creative vision to life. Their web development skills and design expertise are truly top-notch!",
     rating:5
 
 
@@ -50,7 +50,7 @@ const reviews: Review[] = [
     id: 5,
     name: "Ishaan R.N",
     company: "Global Solutions",
-    content: "Digital Product's SEO strategies significantly improved our online visibility. Great results!",
+    content: "Digital Product's SEO strategies significantly improved our online visibility. Their comprehensive approach to web development and digital marketing delivered great results!",
     rating:4.5
 
   }
@@ -72,7 +72,7 @@ const AnimatedReviews = () => {
   return (
     <div ref={containerRef} className="w-full overflow-hidden  py-12">
     <h2 className="text-3xl font-bold text-center mb-8 text-white">
-      What Our Clients Say
+    What Our Clients Say About Our Web Development Agency
     </h2>
     <motion.div
       className="flex space-x-8 whitespace-nowrap"
