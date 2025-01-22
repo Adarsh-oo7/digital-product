@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 // import { ArrowRight } from 'lucide-react'
-import { ArrowRight, Code, ShoppingCart, Search } from "lucide-react"
+import { ArrowRight} from "lucide-react"
 import AnimatedReviews from '../components/AnimatedReviews'
 
 
