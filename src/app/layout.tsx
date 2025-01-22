@@ -27,6 +27,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Adarsh B S" />
+        <link rel="manifest" href="./site.webmanifest" />
         <meta name="keywords" content="digital product, web development agency, custom websites, e-commerce solutions, SEO optimization" />
         <meta property="og:title" content="Digital Product | Web Development Agency" />
         <meta property="og:description" content="Digital Product is a leading web development agency specializing in custom websites, e-commerce solutions, and SEO optimization." />
