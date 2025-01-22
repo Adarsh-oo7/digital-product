@@ -28,17 +28,10 @@ export default function RootLayout({
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Adarsh B S" />
         <meta name="keywords" content="digital product, web development agency, custom websites, e-commerce solutions, SEO optimization" />
-        <meta name="description" content="Digital Product is a leading web development agency specializing in custom websites, e-commerce solutions, and SEO optimization. Transform your online presence with our expert team." />
-        <link rel="canonical" href="https://digital-product.adarshbs.com/" />
         <meta property="og:title" content="Digital Product | Web Development Agency" />
         <meta property="og:description" content="Digital Product is a leading web development agency specializing in custom websites, e-commerce solutions, and SEO optimization." />
         <meta property="og:url" content="https://digital-product.adarshbs.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://digital-product.adarshbs.com/og-image.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Digital Product | Web Development Agency" />
-        <meta name="twitter:description" content="Digital Product is a leading web development agency specializing in custom websites, e-commerce solutions, and SEO optimization." />
-        <meta name="twitter:image" content="https://digital-product.adarshbs.com/twitter-image.jpg" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${inter.className} bg-gray-900 text-white flex flex-col min-h-screen`}>
@@ -59,7 +52,7 @@ export default function RootLayout({
               "url": "https://digital-product.adarshbs.com/",
               "sameAs": [
                 "https://www.instagram.com/digital_prodect_sale/",
-                "https://twitter.com/digitalproduct",
+                "https://www.threads.net/@digital_prodect_sale",
                 "https://www.linkedin.com/company/digitalproduct"
               ]
             }
