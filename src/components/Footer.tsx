@@ -29,11 +29,11 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
+              {/* <li><Link href="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
               <li><Link href="/about" className="hover:text-blue-400 transition-colors">About</Link></li>
-              <li><Link href="/services" className="hover:text-blue-400 transition-colors">Services</Link></li>
+              <li><Link href="/services" className="hover:text-blue-400 transition-colors">Services</Link></li> */}
               <li><Link href="/portfolio" className="hover:text-blue-400 transition-colors">Portfolio</Link></li>
-              <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Contact</Link></li>
+              {/* <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Contact</Link></li> */}
             </ul>
           </div>
           <div>
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
               <a href="https://www.instagram.com/digital_prodect_sale/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
                 <Instagram />
               </a>
-              <a href="https://www.linkedin.com/in/adarsh-bs/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+              <a href="https://www.linkedin.com/company/105625180/admin/dashboard/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
                 <Linkedin />
               </a>
             </div>

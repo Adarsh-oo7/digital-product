@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <Link href="/" className="flex items-center text-2xl font-bold">
         <Image
-  src="/img/loges.png" // Make sure the path is relative to the public folder
+  src="./img/loges.png" // Make sure the path is relative to the public folder
   alt="Digital Product Logo"
   title="Digital Product - Leading Web Development Agency"
   width={100} // Width in pixels
