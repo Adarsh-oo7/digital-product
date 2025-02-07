@@ -56,6 +56,11 @@ const Navbar: React.FC = () => {
               Contact
             </Link>
           </li>
+          <li>
+            <Link href="/book" className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition-colors">
+              Book Now
+            </Link>
+          </li>
         </ul>
 
         {/* Mobile Hamburger Menu */}
@@ -119,6 +124,12 @@ const Navbar: React.FC = () => {
                 Contact
               </Link>
             </li>
+            <li>
+            <Link href="/book" className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition-colors">
+              Book Now
+            </Link>
+          </li>
+           
           </ul>
         </div>
       )}
