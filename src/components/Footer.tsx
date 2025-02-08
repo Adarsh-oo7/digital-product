@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
             <p className="text-sm"> 695104, Korani P O</p>
             <p className="text-sm">Attingal, Thiruvananthapuram</p>
             <p className="text-sm">Phone: +91 9400355185</p>
-            <p className="text-sm">Email: adarshsarachandran@gmail.com</p>
+            <p className="text-sm">Email: digitalproductkerala@gmail.com</p>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
