@@ -1,30 +1,25 @@
 "use client";
-import Image from 'next/image';
-
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false); // State for services dropdown
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-opacity-80 bg-gray-900 text-white z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center text-2xl font-bold">
-        <Image
-  src="./img/loges.png" // Make sure the path is relative to the public folder
-  alt="Digital Product Logo"
-  title="Digital Product - Leading Web Development Agency"
-  width={100} // Width in pixels
-  height={50} // Height in pixels (adjust this to maintain aspect ratio)
-  className="h-auto w-16 mr-2" // Using Tailwind CSS for responsive sizing
-/>
-
-          
-
-
-          
+          <Image
+            src="./img/loges.png" // Make sure the path is correct
+            alt="Digital Product Logo"
+            title="Digital Product - Leading Web Development Agency"
+            width={100}
+            height={50}
+            className="h-auto w-16 mr-2"
+          />
           <span>Digital Product</span>
         </Link>
 
@@ -40,24 +35,53 @@ const Navbar: React.FC = () => {
               About
             </Link>
           </li>
-          <li>
-            <Link
-              href="/services"
-              className="hover:text-blue-400 transition-colors"
+
+          {/* Services Dropdown */}
+          <li className="relative">
+            <button
+              onClick={() => setIsServicesOpen(!isServicesOpen)}
+              className="hover:text-blue-400 transition-colors flex items-center"
             >
               Services
-            </Link>
+              <svg
+                className="ml-1 h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {isServicesOpen && (
+              <ul className="absolute left-0 mt-2 w-48 bg-gray-800 text-white rounded-md shadow-lg">
+                <li>
+                  <Link href="/services" className="block px-4 py-2 hover:bg-gray-700">
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/ai-services" className="block px-4 py-2 hover:bg-gray-700">
+                    AI Services
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog" className="block px-4 py-2 hover:bg-gray-700">
+                    Blog
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
+
           <li>
-            <Link
-              href="/contact"
-              className="hover:text-blue-400 transition-colors"
-            >
+            <Link href="/contact" className="hover:text-blue-400 transition-colors">
               Contact
             </Link>
           </li>
           <li>
-            <Link href="/book" className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition-colors">
+            <Link href="/book" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full transition-colors">
               Book Now
             </Link>
           </li>
@@ -76,19 +100,9 @@ const Navbar: React.FC = () => {
             stroke="currentColor"
           >
             {isMenuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
             )}
           </svg>
         </button>
@@ -108,28 +122,50 @@ const Navbar: React.FC = () => {
                 About
               </Link>
             </li>
-            <li>
-              <Link
-                href="/services"
-                className="block text-white hover:text-blue-400"
-              >
+            {/* Mobile Services Dropdown */}
+            <li className="block">
+              <button onClick={() => setIsServicesOpen(!isServicesOpen)} className="w-full text-left text-white hover:text-blue-400 flex justify-between">
                 Services
-              </Link>
+                <svg
+                  className="ml-2 h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {isServicesOpen && (
+                <ul className="mt-2 bg-gray-700 rounded-md">
+                  <li>
+                    <Link href="/services" className="block px-4 py-2 hover:bg-gray-600">
+                      Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/ai-services" className="block px-4 py-2 hover:bg-gray-600">
+                      AI Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/blog" className="block px-4 py-2 hover:bg-gray-600">
+                      Blog
+                    </Link>
+                  </li>
+                </ul>
+              )}
             </li>
             <li>
-              <Link
-                href="/contact"
-                className="block text-white hover:text-blue-400"
-              >
+              <Link href="/contact" className="block text-white hover:text-blue-400">
                 Contact
               </Link>
             </li>
             <li>
-            <Link href="/book" className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition-colors">
-              Book Now
-            </Link>
-          </li>
-           
+              <Link href="/book" className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-full transition-colors">
+                Book Now
+              </Link>
+            </li>
           </ul>
         </div>
       )}

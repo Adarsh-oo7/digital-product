@@ -69,7 +69,7 @@ export default function Contact() {
             </div>
           ) : (
             <form
-              action="https://formsubmit.co/adarshsarachandran@gmail.com"
+              action="https://formsubmit.co/digitalproductkerala@gmail.com"
               method="POST"
               onSubmit={handleFormSubmit}
               className="space-y-6"
