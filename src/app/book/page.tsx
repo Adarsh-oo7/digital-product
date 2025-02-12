@@ -141,7 +141,7 @@ export default function BookingPage() {
                             className="form-radio text-blue-600"
                           />
                           <span className="text-gray-700">{service.name}</span>
-                          <span className="text-gray-500">${service.price}</span>
+                          {/* <span className="text-gray-500">${service.price}</span> */}
                         </label>
                       </motion.div>
                     ))}
