@@ -30,7 +30,7 @@ const SocialButton = ({ href, icon: Icon, name, color }: { href: string; icon: R
 
 const SocialButtons = () => {
   return (
-    <div className="fixed bottom-4 right-4 flex flex-col space-y-4">
+    <div className="fixed bottom-16 mb-6 right-4 flex flex-col space-y-4">
       <SocialButton
         href="https://wa.me/919400355185"  
         icon={WhatsApp}
