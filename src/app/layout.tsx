@@ -5,7 +5,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
 import ChatbotAndSocialButtons from "@/components/ChatbotAndSocialButtons";
-import ChatbotScript from "@/components/ChatbotScript"; // Import the new client component
 
 const inter = Inter({ subsets: ["latin"] });
 

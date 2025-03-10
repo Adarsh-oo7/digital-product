@@ -6,7 +6,6 @@ export default function JotFormEmbed() {
   const iframeRef = useRef(null);
 
   useEffect(() => {
-    // Make sure window and document are available (client-side only)
     if (typeof window !== "undefined" && iframeRef.current) {
       // Load the JotForm script dynamically
       const script = document.createElement("script");
