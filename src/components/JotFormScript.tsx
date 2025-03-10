@@ -13,7 +13,9 @@ export default function JotFormEmbed() {
       script.async = true;
       script.onload = () => {
         // Once script is loaded, call the handler function
+        // @ts-expect-error - TypeScript error about jotformEmbedHandler not being recognized
         if (window.jotformEmbedHandler) {
+          // @ts-expect-error - TypeScript error
           window.jotformEmbedHandler(
             "iframe[id='JotFormIFrame-01957bc31fca7c41a203b140248b89346698']",
             "https://www.jotform.com"
@@ -38,6 +40,7 @@ export default function JotFormEmbed() {
         ref={iframeRef}
         id="JotFormIFrame-01957bc31fca7c41a203b140248b89346698"
         title="Alex: Problem Solver for Your business"
+        // Modern replacement for allowTransparency="true"
         style={{
           minWidth: "100%",
           maxWidth: "100%",
