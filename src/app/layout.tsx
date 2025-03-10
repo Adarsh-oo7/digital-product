@@ -4,7 +4,8 @@ import AnimatedSky from "@/components/AnimatedSky";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
-import ChatbotAndSocialButtons from "../components/ChatbotAndSocialButtons"; // Import the component
+import ChatbotAndSocialButtons from "@/components/ChatbotAndSocialButtons";
+import ChatbotScript from "@/components/ChatbotScript"; // Import the new client component
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,11 +43,15 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
 
+        {/* Use simple Script tag without event handlers if you don't need them */}
         <Script
           src="https://app.fastbots.ai/embed.js"
           data-bot-id="cm74658eg0tkgsvk7iw855klb"
           strategy="lazyOnload"
         />
+        
+        {/* Or use the client component if you need event handlers */}
+        {/* <ChatbotScript /> */}
       </head>
       <body
         className={`${inter.className} bg-gray-900 text-white flex flex-col min-h-screen`}
