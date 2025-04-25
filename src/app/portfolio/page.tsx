@@ -11,22 +11,22 @@ const projects = [
     technologies: ['Django', 'Bootstrap', 'Sql-lite'],
   },
   {
-    title: 'Social Media Dashboard',
-    description: 'Real-time analytics dashboard for social media management and performance tracking.',
-    image: './img/ht.png?height=400&width=600',
+    title: 'Website Maintenance for Existing Clients',
+    description: 'Provide ongoing maintenance and support for existing websites, including content updates, bug fixes, performance optimization, SEO improvements, and regular backups. Ensured smooth and secure operation for business and personal sites.',
+    image: './img/ht1.png?height=400&width=600',
     technologies: ['JavaScript', 'Django', 'MySql'],
   },
   {
-    title: 'Fitness Tracking App',
-    description: 'Mobile application for tracking workouts, nutrition, and personal fitness goals.',
+    title: 'Static website for Event management Team ',
+    description: 'Designed and developed a sleek, responsive static website for an event management team based in Attingal. The site showcases their services, event highlights, and contact details, providing a professional online presence to attract local clients.',
     image: './img/lt.png?height=400&width=600',
     technologies: [' Bootstrap', 'JavaScript'],
   },
   {
-    title: 'Corporate Intranet Portal',
-    description: 'Secure and efficient intranet solution for large-scale enterprise communication.',
-    image: './img/move.png?height=400&width=600',
-    technologies: ['React Js', 'Django', 'MySQL','Bootstrap'],
+    title: 'Basic website for Honey cultivating farmer ',
+    description: 'Created a clean and informative static website for a honey cultivator to showcase natural honey products, share farming practices, and provide contact information for direct sales. The design highlights purity, sustainability, and the local essence of Kerala farming.',
+    image: './img/sample1.png?height=400&width=600',
+    technologies: ['Next Js', ],
   },
 ]
 
