@@ -6,9 +6,12 @@ import { notFound } from "next/navigation";
 // Reuse blog posts from blog page
 import { blogPosts } from "../page";
 
-type Props = {
-  params: { slug: string };
-};
+// Use Next.js built-in type for dynamic route props
+import type { NextPage } from "next";
+
+interface Props {
+  params: Promise<{ slug: string }>;
+}
 
 // Generate static paths for all blog posts
 export async function generateStaticParams() {
@@ -19,7 +22,8 @@ export async function generateStaticParams() {
 
 // Dynamic metadata for SEO
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+  const { slug } = await params; // Await the params Promise
+  const post = blogPosts.find((p) => p.slug === slug);
   if (!post) {
     return {
       title: "Post Not Found | Digital Product Solutions",
@@ -39,6 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.excerpt,
       images: [`https://www.digitalproductsolutions.in${post.image}`],
       url: `https://www.digitalproductsolutions.in/blog/${post.slug}`,
+      type: "article",
     },
     twitter: {
       card: "summary_large_image",
@@ -49,8 +54,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function BlogPost({ params }: Props) {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+// Use NextPage type for the component
+const BlogPost: NextPage<Props> = async ({ params }) => {
+  const { slug } = await params; // Await the params Promise
+  const post = blogPosts.find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
@@ -150,4 +157,6 @@ export default function BlogPost({ params }: Props) {
       </div>
     </>
   );
-}
+};
+
+export default BlogPost;
