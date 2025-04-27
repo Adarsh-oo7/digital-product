@@ -12,6 +12,7 @@ const services = [
   { id: "e-commerce", name: "E-commerce Solutions", price: 6000 },
 ]
 
+
 export default function BookingPage() {
   const [formData, setFormData] = useState({
     name: "",
