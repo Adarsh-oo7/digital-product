@@ -92,7 +92,7 @@ export default function AIServices() {
                   href="/book"
                   className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition-colors"
                 >
-                  Learn More
+                  {`Explore ${service.title}`}
                 </Link>
               </div>
             </motion.div>

@@ -37,8 +37,7 @@ export default function Home() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      Digital Product: Transform Your Online Presence with Expert Web Development
-    </motion.h1>
+Expert Web Development to Transform Your Online Presence    </motion.h1>
     <motion.p
       className="text-xl md:text-2xl mb-12 max-w-2xl"
       initial={{ opacity: 0, y: 50 }}

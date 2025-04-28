@@ -1,32 +1,35 @@
-'use client'
+"use client"
 
-import { motion } from 'framer-motion'
-import Image from 'next/image'
+import { motion } from "framer-motion"
+import Image from "next/image"
 
 const projects = [
   {
-    title: 'E-commerce Platform',
-    description: 'A fully responsive online store with advanced features and seamless user experience.',
-    image: './img/ec.png?height=400&width=600',
-    technologies: ['Django', 'Bootstrap', 'Sql-lite'],
+    title: "E-commerce Platform",
+    description: "A fully responsive online store with advanced features and seamless user experience.",
+    image: "./img/ec.png?height=400&width=600",
+    technologies: ["Django", "Bootstrap", "Sql-lite"],
   },
   {
-    title: 'Website Maintenance for Existing Clients',
-    description: 'Provide ongoing maintenance and support for existing websites, including content updates, bug fixes, performance optimization, SEO improvements, and regular backups. Ensured smooth and secure operation for business and personal sites.',
-    image: './img/ht1.png?height=400&width=600',
-    technologies: ['JavaScript', 'Django', 'MySql'],
+    title: "Website Maintenance for Existing Clients",
+    description:
+      "Provide ongoing maintenance and support for existing websites, including content updates, bug fixes, performance optimization, SEO improvements, and regular backups. Ensured smooth and secure operation for business and personal sites.",
+    image: "./img/ht1.png?height=400&width=600",
+    technologies: ["JavaScript", "Django", "MySql"],
   },
   {
-    title: 'Static website for Event management Team ',
-    description: 'Designed and developed a sleek, responsive static website for an event management team based in Attingal. The site showcases their services, event highlights, and contact details, providing a professional online presence to attract local clients.',
-    image: './img/lt.png?height=400&width=600',
-    technologies: [' Bootstrap', 'JavaScript'],
+    title: "Static website for Event management Team",
+    description:
+      "Designed and developed a sleek, responsive static website for an event management team based in Attingal. The site showcases their services, event highlights, and contact details, providing a professional online presence to attract local clients.",
+    image: "./img/lt.png?height=400&width=600",
+    technologies: ["Bootstrap", "JavaScript"],
   },
   {
-    title: 'Basic website for Honey cultivating farmer ',
-    description: 'Created a clean and informative static website for a honey cultivator to showcase natural honey products, share farming practices, and provide contact information for direct sales. The design highlights purity, sustainability, and the local essence of Kerala farming.',
-    image: './img/sample1.png?height=400&width=600',
-    technologies: ['Next Js', ],
+    title: "Basic website for Honey cultivating farmer",
+    description:
+      "Created a clean and informative static website for a honey cultivator to showcase natural honey products, share farming practices, and provide contact information for direct sales. The design highlights purity, sustainability, and the local essence of Kerala farming.",
+    image: "./img/sample1.png?height=400&width=600",
+    technologies: ["Next Js"],
   },
 ]
 
@@ -34,7 +37,7 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen py-16 px-4">
       <div className="container mx-auto">
-        <motion.h1 
+        <motion.h1
           className="text-4xl md:text-5xl font-bold mb-1 text-center"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -42,25 +45,25 @@ export default function Portfolio() {
         >
           Our Portfolio
         </motion.h1>
-        <motion.h6 
-          className="text-1xl md:text-1xl font-bold mb-12 text-center"
+ YT        <motion.h2
+          className="text-xl md:text-xl font-bold mb-12 text-center"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Some Major Project
-        </motion.h6>
+          Some Major Projects
+        </motion.h2>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <motion.div 
+            <motion.div
               key={project.title}
               className="bg-gray-800 rounded-lg overflow-hidden shadow-lg"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
-              <Image 
-                src={project.image} 
+              <Image
+                src={project.image}
                 alt={project.title}
                 width={600}
                 height={400}
@@ -84,4 +87,3 @@ export default function Portfolio() {
     </div>
   )
 }
-
