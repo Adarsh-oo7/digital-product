@@ -81,11 +81,11 @@ export default function BookingPage() {
         <title>Book Services | Digital Product Solutions - Web Development in Kerala</title>
         <meta
           name="description"
-          content="Book web development, AI integration, SEO optimization, or e-commerce solutions with Digital Product Solutions in Attingal, Kerala. Schedule your appointment today."
+          content="Book web development, AI integration, SEO optimization, or e-commerce solutions with Digital Product Solutions in Attingal, Kerala. Schedule your appointment today with our expert team."
         />
         <meta
           name="keywords"
-          content="book web development Kerala, website design Attingal, AI solutions Kerala, SEO optimization Attingal, e-commerce solutions, Digital Product Solutions"
+          content="book web development Kerala, website design Attingal, AI solutions Kerala, SEO optimization Attingal, e-commerce solutions Kerala, Digital Product Solutions"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`${BASE_URL}/booking`} />
@@ -126,18 +126,26 @@ export default function BookingPage() {
                 "mainEntity": [
                   {
                     "@type": "Question",
-                    "name": "What services can I book in Attingal, Kerala?",
+                    "name": "What services can I book with Digital Product Solutions in Kerala?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "We offer web development, AI integration, SEO optimization, and e-commerce solutions for businesses in Attingal and across Kerala, tailored to your needs."
+                      "text": "We offer professional web development, AI integration, SEO optimization, and e-commerce solutions for businesses in Attingal and across Kerala, tailored to meet your unique business needs."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "How do I schedule an appointment?",
+                    "name": "How do I schedule an appointment in Attingal?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Use our booking form to select a service, date, and time. Our Attingal team will confirm your appointment within 24–48 hours."
+                      "text": "Use our online booking form to select a service, date, and time. Our Attingal-based team will confirm your appointment within 24–48 hours via email or phone."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What are the starting prices for your services?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Our services start at ₹3000 for SEO optimization, ₹5000 for web development, ₹6000 for e-commerce solutions, and ₹7000 for AI integration. Contact us for a customized quote."
                     }
                   }
                 ]
@@ -169,7 +177,7 @@ export default function BookingPage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Schedule a consultation with our expert team in Attingal, Kerala, to transform your business with professional web development, AI integration, SEO optimization, or e-commerce solutions. Select a service and preferred time to start your digital journey with us.
+                Schedule a consultation with our expert team in Attingal, Kerala, to transform your business with innovative web development, AI integration, SEO optimization, or e-commerce solutions. Whether you’re a startup or an established business in Kerala, select a service and preferred time to start your digital journey with us. Our tailored solutions ensure a strong online presence and measurable results.
               </motion.p>
             </div>
             <div className="md:w-1/2 p-8">
@@ -182,7 +190,7 @@ export default function BookingPage() {
                 >
                   <h2 className="text-2xl font-bold mb-4 text-gray-800">Thank You!</h2>
                   <p className="text-gray-600">
-                    Your booking request has been successfully sent. Our Attingal, Kerala team will confirm your appointment within 24–48 hours via email or phone.
+                    Your booking request has been successfully sent. Our Attingal, Kerala team will confirm your appointment within 24–48 hours via email or phone. Check your inbox (and spam folder) for our confirmation to begin your digital transformation.
                   </p>
                 </motion.div>
               ) : (
@@ -408,18 +416,18 @@ export default function BookingPage() {
           <div className="space-y-6">
             <div>
               <h4 className="text-lg font-semibold">
-                What services can I book in Attingal, Kerala?
+                What services can I book with Digital Product Solutions in Kerala?
               </h4>
               <p>
-                We offer professional web development, AI integration, SEO optimization, and e-commerce solutions for businesses in Attingal and across Kerala. Each service is tailored to meet your unique business needs, ensuring a strong digital presence.
+                We offer professional web development, AI integration, SEO optimization, and e-commerce solutions for businesses in Attingal and across Kerala. Each service is tailored to meet your unique business needs, ensuring a strong digital presence and measurable results.
               </p>
             </div>
             <div>
               <h4 className="text-lg font-semibold">
-                How do I schedule an appointment?
+                How do I schedule an appointment in Attingal?
               </h4>
               <p>
-                Use our booking form to select a service, date, and time. Our Attingal-based team will confirm your appointment within 24–48 hours via email or phone, ensuring a seamless process.
+                Use our online booking form to select a service, date, and time. Our Attingal-based team will confirm your appointment within 24–48 hours via email or phone, ensuring a seamless and efficient booking process.
               </p>
             </div>
             <div>
@@ -427,7 +435,15 @@ export default function BookingPage() {
                 What are the starting prices for your services?
               </h4>
               <p>
-                Our services start at ₹3000 for SEO optimization, ₹5000 for web development, ₹6000 for e-commerce solutions, and ₹7000 for AI integration. Contact us for a detailed quote customized to your project in Kerala.
+                Our services start at ₹3000 for SEO optimization, ₹5000 for web development, ₹6000 for e-commerce solutions, and ₹7000 for AI integration. Contact us for a detailed quote customized to your project requirements in Kerala.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold">
+                How long does it take to complete a project?
+              </h4>
+              <p>
+                Project timelines vary based on complexity. For example, a standard website may take 2–4 weeks, while AI integration could take 4–8 weeks. Our Attingal team provides a detailed timeline during your consultation to ensure transparency.
               </p>
             </div>
           </div>
