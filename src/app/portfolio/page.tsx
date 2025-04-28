@@ -13,28 +13,28 @@ const projects = [
   {
     title: "E-commerce Platform",
     description:
-      "A fully responsive online store with advanced features like secure payment gateways, product filtering, and seamless user experience, designed to boost sales and customer engagement.",
+      "A fully responsive e-commerce platform built for businesses in Kerala, featuring secure payment gateways, advanced product filtering, and an intuitive user interface. Designed to enhance customer engagement and drive sales, this solution supports local businesses in Attingal and beyond with seamless online shopping experiences tailored to their needs.",
     image: "./img/ec.png?height=400&width=600",
     technologies: ["Django", "Bootstrap", "Sql-lite"],
   },
   {
     title: "Website Maintenance for Existing Clients",
     description:
-      "Provide ongoing maintenance and support for existing websites, including content updates, bug fixes, performance optimization, SEO improvements, and regular backups. Ensured smooth and secure operation for business and personal sites.",
+      "Comprehensive website maintenance services for clients across Kerala, including Attingal. We provide regular content updates, bug fixes, performance optimization, SEO enhancements, and secure backups. Our services ensure business and personal websites operate smoothly, supporting local enterprises with reliable and secure digital solutions.",
     image: "./img/ht1.png?height=400&width=600",
     technologies: ["JavaScript", "Django", "MySql"],
   },
   {
     title: "Static Website for Event Management Team",
     description:
-      "Designed and developed a sleek, responsive static website for an event management team based in Attingal. The site showcases their services, event highlights, and contact details, providing a professional online presence to attract local clients.",
+      "A modern, responsive static website developed for an event management team in Attingal, Kerala. The site highlights their professional services, showcases past events, and includes a contact form for local inquiries. Optimized for performance and SEO, it strengthens their online presence and attracts clients in the event planning industry.",
     image: "./img/lt.png?height=400&width=600",
     technologies: ["Bootstrap", "JavaScript"],
   },
   {
     title: "Basic Website for Honey Cultivating Farmer",
     description:
-      "Created a clean and informative static website for a honey cultivator to showcase natural honey products, share farming practices, and provide contact information for direct sales. The design highlights purity, sustainability, and the local essence of Kerala farming.",
+      "A clean, user-friendly static website for a honey cultivator in Kerala, showcasing organic honey products and sustainable farming practices. Designed to reflect the local essence of Attingal’s agricultural heritage, the site includes product details, contact information, and SEO optimization to drive direct sales and customer engagement.",
     image: "./img/sample1.png?height=400&width=600",
     technologies: ["Next Js"],
   },
@@ -44,8 +44,42 @@ export default function Portfolio() {
   return (
     <>
       <Head>
-        <title>Portfolio | Digital Product Solutions</title>
+        <title>Portfolio | Digital Product Solutions - Web Development in Kerala</title>
+        <meta
+          name="description"
+          content="Explore our portfolio of innovative web development projects in Kerala, including e-commerce platforms, static websites, and maintenance services. Serving Attingal and beyond with tailored digital solutions."
+        />
+        <meta
+          name="keywords"
+          content="web development Kerala, website design Attingal, e-commerce solutions, static websites, website maintenance, Digital Product Solutions"
+        />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`${BASE_URL}/portfolio`} />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "CollectionPage",
+              "name": "Portfolio",
+              "description": "Explore our portfolio of web development projects by Digital Product Solutions, serving Kerala and Attingal with e-commerce platforms, static websites, and maintenance services.",
+              "url": "${BASE_URL}/portfolio",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Digital Product Solutions",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "${BASE_URL}/img/logo.png"
+                },
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Attingal",
+                  "addressRegion": "Kerala",
+                  "addressCountry": "India"
+                }
+              }
+            }
+          `}
+        </script>
       </Head>
       <div className="min-h-screen py-16 px-4">
         <div className="container mx-auto">
@@ -63,7 +97,7 @@ export default function Portfolio() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Some Major Projects
+            Major Web Development Projects in Kerala
           </motion.h2>
           <motion.p
             className="text-lg mb-12 text-center text-gray-600"
@@ -71,9 +105,7 @@ export default function Portfolio() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Explore our diverse portfolio showcasing innovative web development projects tailored to
-            businesses and individuals. From e-commerce platforms to static websites, our work reflects
-            our commitment to quality, functionality, and client satisfaction across various industries.
+            Discover our diverse portfolio of web development projects tailored for businesses and individuals in Kerala, particularly in Attingal. From robust e-commerce platforms to sleek static websites and reliable maintenance services, our work showcases innovation, quality, and a commitment to client success. Each project is designed to meet unique business needs, ensuring functionality, performance, and a strong online presence.
           </motion.p>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
