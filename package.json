@@ -1,6 +1,6 @@
 {
   "name": "digital-product-website",
-  "homepage": "https://digital-product.adarshbs.com/digital-product",
+  "homepage": "https://www.digitalproductsolutions.in",
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev --turbopack",
