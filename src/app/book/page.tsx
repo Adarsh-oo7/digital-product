@@ -31,7 +31,9 @@ export default function BookingPage() {
 
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
@@ -60,7 +62,7 @@ export default function BookingPage() {
           message: "",
           service: "",
         })
-        form.reset() // Reset form after successful submission
+        form.reset()
       } else {
         console.error("Form submission failed")
         alert("Form submission failed. Please try again.")
@@ -112,7 +114,7 @@ export default function BookingPage() {
                 },
                 "contactPoint": {
                   "@type": "ContactPoint",
-                  "telephone": "+91-1234567890",
+                  "telephone": "+919400355185",
                   "email": "digitalproductkerala@gmail.com",
                   "contactType": "Customer Service",
                   "areaServed": "IN",
@@ -124,7 +126,7 @@ export default function BookingPage() {
                 "mainEntity": [
                   {
                     "@type": "Question",
-                    "name": "What services can I book with Digital Product Solutions in Kerala?",
+                    "name": "What services can I book in Attingal, Kerala?",
                     "acceptedAnswer": {
                       "@type": "Answer",
                       "text": "We offer web development, AI integration, SEO optimization, and e-commerce solutions for businesses in Attingal and across Kerala, tailored to your needs."
@@ -132,7 +134,7 @@ export default function BookingPage() {
                   },
                   {
                     "@type": "Question",
-                    "name": "How do I schedule an appointment in Attingal?",
+                    "name": "How do I schedule an appointment?",
                     "acceptedAnswer": {
                       "@type": "Answer",
                       "text": "Use our booking form to select a service, date, and time. Our Attingal team will confirm your appointment within 24–48 hours."
@@ -167,7 +169,7 @@ export default function BookingPage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Schedule an appointment with our expert team in Attingal, Kerala, to transform your business with professional web development, AI integration, SEO optimization, or e-commerce solutions. Select a service and preferred time to start your digital journey.
+                Schedule a consultation with our expert team in Attingal, Kerala, to transform your business with professional web development, AI integration, SEO optimization, or e-commerce solutions. Select a service and preferred time to start your digital journey with us.
               </motion.p>
             </div>
             <div className="md:w-1/2 p-8">
@@ -180,7 +182,7 @@ export default function BookingPage() {
                 >
                   <h2 className="text-2xl font-bold mb-4 text-gray-800">Thank You!</h2>
                   <p className="text-gray-600">
-                    Your booking request has been successfully sent. Our Attingal, Kerala team will confirm your appointment within 24–48 hours.
+                    Your booking request has been successfully sent. Our Attingal, Kerala team will confirm your appointment within 24–48 hours via email or phone.
                   </p>
                 </motion.div>
               ) : (
@@ -204,7 +206,9 @@ export default function BookingPage() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.6 }}
                     >
-                      <label className="block text-gray-700 mb-2">Select a Service</label>
+                      <label className="block text-gray-700 mb-2">
+                        Select a Service <span className="text-red-500">*</span>
+                      </label>
                       <div className="space-y-4">
                         {services.map((service, index) => (
                           <motion.div
@@ -224,13 +228,14 @@ export default function BookingPage() {
                                 required
                                 aria-label={`Select ${service.name} service`}
                               />
-                              <span className="text-gray-700">{service.name} (₹{service.price})</span>
+                              <span className="text-gray-700">
+                                {service.name} (₹{service.price})
+                              </span>
                             </label>
                           </motion.div>
                         ))}
                       </div>
                     </motion.div>
-
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -254,7 +259,6 @@ export default function BookingPage() {
                         />
                       </div>
                     </motion.div>
-
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -278,7 +282,6 @@ export default function BookingPage() {
                         />
                       </div>
                     </motion.div>
-
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -302,7 +305,6 @@ export default function BookingPage() {
                         />
                       </div>
                     </motion.div>
-
                     <div className="flex space-x-4">
                       <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -351,7 +353,6 @@ export default function BookingPage() {
                         </div>
                       </motion.div>
                     </div>
-
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -373,11 +374,9 @@ export default function BookingPage() {
                         ></textarea>
                       </div>
                     </motion.div>
-
                     <input type="hidden" name="_captcha" value="false" />
                     <input type="hidden" name="_template" value="table" />
-                    <input type="hidden" name="_honeypot" value="" /> {/* Honeypot for spam prevention */}
-
+                    <input type="hidden" name="_honeypot" value="" />
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -403,24 +402,32 @@ export default function BookingPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <h3 className="text-2xl font-bold mb-6 text-center">Frequently Asked Questions</h3>
+          <h3 className="text-2xl font-bold mb-6 text-center">
+            Frequently Asked Questions
+          </h3>
           <div className="space-y-6">
             <div>
-              <h4 className="text-lg font-semibold">What services can I book with Digital Product Solutions in Kerala?</h4>
+              <h4 className="text-lg font-semibold">
+                What services can I book in Attingal, Kerala?
+              </h4>
               <p>
                 We offer professional web development, AI integration, SEO optimization, and e-commerce solutions for businesses in Attingal and across Kerala. Each service is tailored to meet your unique business needs, ensuring a strong digital presence.
               </p>
             </div>
             <div>
-              <h4 className="text-lg font-semibold">How do I schedule an appointment in Attingal?</h4>
+              <h4 className="text-lg font-semibold">
+                How do I schedule an appointment?
+              </h4>
               <p>
                 Use our booking form to select a service, date, and time. Our Attingal-based team will confirm your appointment within 24–48 hours via email or phone, ensuring a seamless process.
               </p>
             </div>
             <div>
-              <h4 className="text-lg font-semibold">What are the starting prices for your services?</h4>
+              <h4 className="text-lg font-semibold">
+                What are the starting prices for your services?
+              </h4>
               <p>
-                Our services start at ₹1500 for SEO optimization, ₹3000 for web development, ₹6000 for e-commerce solutions, and ₹6000 for AI integration. Contact us for a detailed quote customized to your project in Kerala.
+                Our services start at ₹3000 for SEO optimization, ₹5000 for web development, ₹6000 for e-commerce solutions, and ₹7000 for AI integration. Contact us for a detailed quote customized to your project in Kerala.
               </p>
             </div>
           </div>
