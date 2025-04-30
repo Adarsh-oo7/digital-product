@@ -8,9 +8,12 @@ import ChatbotAndSocialButtons from "@/components/ChatbotAndSocialButtons";
 // Initialize Inter font
 const inter = Inter({ subsets: ["latin"] });
 
-// Metadata for SEO
+// Base metadata
 export const metadata = {
-  title: "Digital Product Solutions | Best Web Development Agency in Kerala, Attingal, Korani",
+  title: {
+    default: "Digital Product Solutions | Best Web Development Agency in Kerala, Attingal, Korani",
+    template: "%s | Digital Product Solutions",
+  },
   description:
     "Digital Product Solutions is the best web development agency and digital solutions provider in Kerala, Attingal, and Korani. We offer custom websites, e-commerce solutions, SEO services, and more to elevate your online presence.",
   keywords: [
@@ -40,6 +43,32 @@ export const metadata = {
   },
 };
 
+// Dynamic metadata generation
+export async function generateMetadata({ params, searchParams }) {
+  // Fallback base URL
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.digitalproductsolutions.in";
+  
+  // Construct pathname from params (for dynamic routes) or fallback to current route
+  let pathname = "/";
+  if (params && params.slug) {
+    pathname = `/${params.slug.join("/")}`;
+  } else {
+    // For static routes, infer from known routes (adjust based on your routes)
+    const knownRoutes = ["ai-services", "contact", "portfolio", "about", "book"];
+    const route = Object.keys(searchParams).length ? "" : knownRoutes.find(route => route);
+    pathname = route ? `/${route}` : "/";
+  }
+
+  // Ensure trailing slash for consistency
+  const canonicalUrl = `${baseUrl}${pathname === "/" ? "" : pathname}${pathname.endsWith("/") ? "" : "/"}`;
+
+  return {
+    alternates: {
+      canonical: canonicalUrl,
+    },
+  };
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -52,7 +81,6 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Digital Product Solutions" />
-        <link rel="canonical" href="https://www.digitalproductsolutions.in/" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> {/* Optional: For Apple devices */}
