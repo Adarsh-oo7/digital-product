@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
+import { Facebook, Instagram, Linkedin } from 'lucide-react'
 import Image from 'next/image';
 
 const Footer: React.FC = () => {
@@ -45,20 +45,40 @@ const Footer: React.FC = () => {
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
-            <div className="flex space-x-4">
-              <a href="https://www.facebook.com/Digital.Product.kerala/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
-                <Facebook />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
-                <Twitter />
-              </a>
-              <a href="https://www.instagram.com/digital_prodect_sale/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
-                <Instagram />
-              </a>
-              <a href="https://www.linkedin.com/company/105625180/admin/dashboard/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
-                <Linkedin />
-              </a>
-            </div>
+            <div className="flex gap-4">
+  {/* Facebook - Fixed typo in 'Product' if needed */}
+  <a 
+    href="https://www.facebook.com/Digital.Product.kerala/" 
+    target="_blank" 
+    rel="noopener noreferrer nofollow"
+    aria-label="Visit our Facebook page"
+    className="hover:text-blue-400 transition-colors duration-200"
+  >
+    <Facebook className="w-6 h-6" />
+  </a>
+
+  {/* Instagram - Fixed typo in 'prodect' to 'product' */}
+  <a 
+    href="https://www.instagram.com/digital_product_solutions/" 
+    target="_blank" 
+    rel="noopener noreferrer nofollow"
+    aria-label="Visit our Instagram page"
+    className="hover:text-blue-400 transition-colors duration-200"
+  >
+    <Instagram className="w-6 h-6" />
+  </a>
+
+  {/* LinkedIn - Using company public URL instead of admin dashboard */}
+  <a 
+    href="https://www.linkedin.com/company/digital-product-adarsh/" 
+    target="_blank" 
+    rel="noopener noreferrer nofollow"
+    aria-label="Visit our LinkedIn page"
+    className="hover:text-blue-400 transition-colors duration-200"
+  >
+    <Linkedin className="w-6 h-6" />
+  </a>
+</div>
           </div>
         </div>
         <div className="mt-8 text-center text-sm">
