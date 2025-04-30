@@ -9,6 +9,16 @@ const BASE_URL = process.env.NODE_ENV === "production"
   ? "https://www.digitalproductsolutions.in"
   : "http://localhost:3000"
 
+
+  export const metadata = {
+    title: "Digital Product Solutions | Web Development Agency Attingal",
+    description:
+      "Digital Product is a top web development agency offering custom websites, e-commerce solutions, and SEO services. Transform your online presence today!",
+    keywords:
+      "digital product, web development agency, custom websites, e-commerce solutions, SEO optimization",
+  };
+  
+
 export default function About() {
   const teamMembers = [
     {
