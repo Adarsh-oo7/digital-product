@@ -4,34 +4,39 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import Head from "next/head"
 
+// Base URL for canonical tags
+const BASE_URL = process.env.NODE_ENV === "production"
+  ? "https://www.digitalproductsolutions.in"
+  : "http://localhost:3000"
+
 const projects = [
   {
-    title: "E-commerce Platform for Kerala Businesses",
-    description: "A fully responsive e-commerce platform built for businesses in Kerala, featuring secure payment gateways and intuitive UI. Designed to enhance customer engagement and drive sales for local businesses in Attingal.",
-    image: "/img/ec.png",
-    technologies: ["Django", "Bootstrap", "SQLite"],
-    location: "Attingal, Kerala"
+    title: "E-commerce Platform",
+    description:
+      "A fully responsive e-commerce platform built for businesses in Kerala, featuring secure payment gateways, advanced product filtering, and an intuitive user interface. Designed to enhance customer engagement and drive sales, this solution supports local businesses in Attingal and beyond with seamless online shopping experiences tailored to their needs.",
+    image: "./img/ec.png?height=400&width=600",
+    technologies: ["Django", "Bootstrap", "Sql-lite"],
   },
   {
-    title: "Website Maintenance Services",
-    description: "Comprehensive website maintenance for clients across Kerala including regular updates, performance optimization, and SEO enhancements. Ensuring reliable digital solutions for local enterprises.",
-    image: "/img/ht1.png",
-    technologies: ["JavaScript", "Django", "MySQL"],
-    location: "Across Kerala"
+    title: "Website Maintenance for Existing Clients",
+    description:
+      "Comprehensive website maintenance services for clients across Kerala, including Attingal. We provide regular content updates, bug fixes, performance optimization, SEO enhancements, and secure backups. Our services ensure business and personal websites operate smoothly, supporting local enterprises with reliable and secure digital solutions.",
+    image: "./img/ht1.png?height=400&width=600",
+    technologies: ["JavaScript", "Django", "MySql"],
   },
   {
-    title: "Event Management Website",
-    description: "Modern responsive website for an Attingal-based event management team showcasing services and past events. Optimized for performance and local SEO to attract clients.",
-    image: "/img/lt.png",
+    title: "Static Website for Event Management Team",
+    description:
+      "A modern, responsive static website developed for an event management team in Attingal, Kerala. The site highlights their professional services, showcases past events, and includes a contact form for local inquiries. Optimized for performance and SEO, it strengthens their online presence and attracts clients in the event planning industry.",
+    image: "./img/lt.png?height=400&width=600",
     technologies: ["Bootstrap", "JavaScript"],
-    location: "Attingal, Kerala"
   },
   {
-    title: "Honey Farm Website",
-    description: "Clean static website for a Kerala honey cultivator showcasing organic products and farming practices. Designed to reflect local agricultural heritage and drive direct sales.",
-    image: "/img/sample1.png",
-    technologies: ["Next.js"],
-    location: "Kerala"
+    title: "Basic Website for Honey Cultivating Farmer",
+    description:
+      "A clean, user-friendly static website for a honey cultivator in Kerala, showcasing organic honey products and sustainable farming practices. Designed to reflect the local essence of Attingal’s agricultural heritage, the site includes product details, contact information, and SEO optimization to drive direct sales and customer engagement.",
+    image: "./img/sample1.png?height=400&width=600",
+    technologies: ["Next Js"],
   },
 ]
 
@@ -39,104 +44,93 @@ export default function Portfolio() {
   return (
     <>
       <Head>
-        <title>Web Development Portfolio in Kerala | Digital Product Solutions</title>
-        <meta 
-          name="description" 
-          content="Our portfolio showcases web development projects for Kerala businesses including e-commerce platforms, websites, and maintenance services in Attingal and across Kerala." 
+        <title>Portfolio | Digital Product Solutions - Web Development in Kerala</title>
+        <meta
+          name="description"
+          content="Explore our portfolio of innovative web development projects in Kerala, including e-commerce platforms, static websites, and maintenance services. Serving Attingal and beyond with tailored digital solutions."
         />
-        <link rel="canonical" href="https://www.digitalproductsolutions.in/portfolio" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.digitalproductsolutions.in/portfolio" />
-        <meta property="og:title" content="Web Development Portfolio in Kerala | Digital Product Solutions" />
-        <meta 
-          property="og:description" 
-          content="See our web development projects for Kerala businesses including e-commerce and websites in Attingal" 
+        <meta
+          name="keywords"
+          content="web development Kerala, website design Attingal, e-commerce solutions, static websites, website maintenance, Digital Product Solutions"
         />
-        <meta property="og:image" content="https://www.digitalproductsolutions.in/og-portfolio.jpg" />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.digitalproductsolutions.in/portfolio" />
-        <meta property="twitter:title" content="Web Development Portfolio in Kerala" />
-        <meta 
-          property="twitter:description" 
-          content="Our web development projects for Kerala businesses in Attingal and beyond" 
-        />
-        <meta property="twitter:image" content="https://www.digitalproductsolutions.in/og-portfolio.jpg" />
-
-        {/* Schema.org */}
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`${BASE_URL}/portfolio`} />
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": "Portfolio",
-            "description": "Web development projects by Digital Product Solutions serving Kerala",
-            "url": "https://www.digitalproductsolutions.in/portfolio",
-            "mainEntity": projects.map(project => ({
-              "@type": "CreativeWork",
-              "name": project.title,
-              "description": project.description,
-              "locationCreated": {
-                "@type": "Place",
-                "name": project.location
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "CollectionPage",
+              "name": "Portfolio",
+              "description": "Explore our portfolio of web development projects by Digital Product Solutions, serving Kerala and Attingal with e-commerce platforms, static websites, and maintenance services.",
+              "url": "${BASE_URL}/portfolio",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Digital Product Solutions",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "${BASE_URL}/img/logo.png"
+                },
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Attingal",
+                  "addressRegion": "Kerala",
+                  "addressCountry": "India"
+                }
               }
-            }))
-          })}
+            }
+          `}
         </script>
       </Head>
-
-      <div className="min-h-screen py-16 px-4 bg-gray-50">
+      <div className="min-h-screen py-16 px-4">
         <div className="container mx-auto">
-          <motion.div
+          <motion.h1
+            className="text-4xl md:text-5xl font-bold mb-1 text-center"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-2">
-              Our Kerala Web Development Portfolio
-            </h1>
-            <h2 className="text-xl md:text-2xl font-semibold mb-4 text-indigo-600">
-              Projects in Attingal and Across Kerala
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Showcasing our work building digital solutions for local businesses, from e-commerce platforms to professional websites.
-            </p>
-          </motion.div>
-
+            Our Portfolio
+          </motion.h1>
+          <motion.h2
+            className="text-xl md:text-xl font-bold mb-6 text-center"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Major Web Development Projects in Kerala
+          </motion.h2>
+          <motion.p
+            className="text-lg mb-12 text-center text-gray-600"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Discover our diverse portfolio of web development projects tailored for businesses and individuals in Kerala, particularly in Attingal. From robust e-commerce platforms to sleek static websites and reliable maintenance services, our work showcases innovation, quality, and a commitment to client success. Each project is designed to meet unique business needs, ensuring functionality, performance, and a strong online presence.
+          </motion.p>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
-                className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-gray-800 rounded-lg overflow-hidden shadow-lg"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
-                <div className="relative h-64">
-                  <Image
-                    src={project.image}
-                    alt={`${project.title} project screenshot`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={600}
+                  height={400}
+                  className="w-full h-64 object-cover"
+                />
                 <div className="p-6">
-                  <div className="flex justify-between items-start mb-3">
-                    <h2 className="text-2xl font-semibold">{project.title}</h2>
-                    <span className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">
-                      {project.location}
-                    </span>
-                  </div>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <h2 className="text-2xl font-semibold mb-4">{project.title}</h2>
+                  <p className="text-gray-300 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="bg-indigo-600 text-white text-sm px-3 py-1 rounded-full"
+                        className="bg-blue-600 text-white text-sm px-3 py-1 rounded-full"
                       >
                         {tech}
                       </span>
@@ -146,24 +140,6 @@ export default function Portfolio() {
               </motion.div>
             ))}
           </div>
-
-          <motion.div
-            className="mt-16 bg-white rounded-lg p-8 shadow-lg text-center"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <h2 className="text-2xl font-semibold mb-4">Ready to Start Your Project?</h2>
-            <p className="mb-6 text-gray-600 max-w-2xl mx-auto">
-              Whether you're in Attingal or elsewhere in Kerala, we can help bring your digital vision to life with custom web solutions.
-            </p>
-            <a
-              href="/contact"
-              className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full transition-colors"
-            >
-              Contact Our Kerala Team
-            </a>
-          </motion.div>
         </div>
       </div>
     </>

@@ -31,62 +31,12 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About Us | Web Development Company in Kerala | Digital Product Solutions</title>
-        <meta
-          name="description"
-          content="Digital Product Solutions is a Kerala-based web development company in Attingal specializing in custom websites, e-commerce solutions, and digital products."
-        />
-        <meta
-          name="keywords"
-          content="web development Kerala, website company Attingal, Digital Product Solutions, about our team, Kerala developers"
-        />
+        <title>About Us | Digital Product Solutions</title>
         <link rel="canonical" href={`${BASE_URL}/about`} />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="About Our Kerala Web Development Team | Digital Product Solutions" />
-        <meta property="og:description" content="Learn about our Attingal-based web development team serving clients across Kerala with custom digital solutions." />
-        <meta property="og:url" content={`${BASE_URL}/about`} />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${BASE_URL}/img/logo.png`} />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Our Kerala Web Development Team" />
-        <meta name="twitter:description" content="Attingal-based team creating custom websites and digital solutions for Kerala businesses." />
-        <meta name="twitter:image" content={`${BASE_URL}/img/logo.png`} />
-
-        {/* Schema.org */}
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "AboutPage",
-              "name": "About Digital Product Solutions",
-              "description": "Web development company based in Attingal, Kerala",
-              "url": "${BASE_URL}/about",
-              "publisher": {
-                "@type": "Organization",
-                "name": "Digital Product Solutions",
-                "logo": {
-                  "@type": "ImageObject",
-                  "url": "${BASE_URL}/img/logo.png"
-                },
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Attingal",
-                  "addressRegion": "Kerala",
-                  "postalCode": "695101",
-                  "addressCountry": "IN"
-                }
-              }
-            }
-          `}
-        </script>
       </Head>
-      
-      {/* EXACTLY THE SAME DESIGN AS BEFORE */}
       <div className="min-h-screen py-16 px-4">
         <div className="container mx-auto">
+          {/* Page Title */}
           <motion.h1
             className="text-4xl md:text-5xl font-bold mb-8 text-center"
             initial={{ opacity: 0, y: -50 }}
@@ -96,6 +46,7 @@ export default function About() {
             About Digital Product Solutions
           </motion.h1>
 
+          {/* Mission and Vision */}
           <div className="grid md:grid-cols-2 gap-12">
             <motion.div
               className="space-y-6"
@@ -122,6 +73,7 @@ export default function About() {
               </p>
             </motion.div>
 
+            {/* Team Overview */}
             <motion.div
               className="space-y-6"
               initial={{ opacity: 0, x: 50 }}
@@ -146,6 +98,7 @@ export default function About() {
             </motion.div>
           </div>
 
+          {/* Team Members */}
           <motion.div
             className="mt-16"
             initial={{ opacity: 0, y: 50 }}
@@ -187,6 +140,7 @@ export default function About() {
             </div>
           </motion.div>
 
+          {/* Google Map */}
           <motion.div
             className="mt-16"
             initial={{ opacity: 0, y: 50 }}
