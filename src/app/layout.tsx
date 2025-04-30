@@ -9,7 +9,10 @@ import ChatbotAndSocialButtons from "@/components/ChatbotAndSocialButtons";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Best Web Developer in Kerala & Attingal | Digital Product Solutions",
+  title: {
+    default: "Best Web Developer in Kerala & Attingal | Digital Product Solutions",
+    template: "%s | Digital Product Solutions"
+  },
   description: "Top-rated web development agency in Attingal, Kerala. Custom websites, e-commerce solutions & SEO services. 10+ years experience serving Kerala businesses.",
   keywords: [
     "best web developer in Kerala",
@@ -21,6 +24,31 @@ export const metadata = {
     "custom website development Kerala"
   ],
   authors: [{ name: "Adarsh B S", url: "https://www.digitalproductsolutions.in" }],
+  alternates: {
+    canonical: "https://www.digitalproductsolutions.in",
+  },
+  openGraph: {
+    title: "Best Web Developer in Kerala & Attingal | Digital Product Solutions",
+    description: "Top-rated web development agency in Attingal, Kerala. Custom websites, e-commerce solutions & SEO services.",
+    url: "https://www.digitalproductsolutions.in",
+    siteName: "Digital Product Solutions",
+    images: [
+      {
+        url: "https://www.digitalproductsolutions.in/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Digital Product Solutions - Web Development Services",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Web Developer in Kerala & Attingal",
+    description: "Professional web development services in Kerala with focus on Attingal region. Custom solutions for businesses.",
+    images: ["https://www.digitalproductsolutions.in/twitter-image.jpg"],
+  },
 };
 
 export default function RootLayout({
@@ -34,27 +62,7 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.digitalproductsolutions.in/" />
         <link rel="manifest" href="/site.webmanifest" />
-
-        {/* Open Graph / Social Media */}
-        <meta property="og:title" content="Best Web Developer in Kerala & Attingal | Digital Product Solutions" />
-        <meta property="og:description" content="Top-rated web development agency in Attingal, Kerala. Custom websites, e-commerce solutions & SEO services." />
-        <meta property="og:url" content="https://www.digitalproductsolutions.in/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_IN" />
-        <meta property="og:site_name" content="Digital Product Solutions" />
-        <meta property="og:image" content="https://www.digitalproductsolutions.in/og-image.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Best Web Developer in Kerala & Attingal" />
-        <meta name="twitter:description" content="Professional web development services in Kerala with focus on Attingal region. Custom solutions for businesses." />
-        <meta name="twitter:image" content="https://www.digitalproductsolutions.in/twitter-image.jpg" />
-
-        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
@@ -82,6 +90,7 @@ export default function RootLayout({
               "@id": "https://www.digitalproductsolutions.in",
               "url": "https://www.digitalproductsolutions.in",
               "telephone": "+919400355185",
+              "priceRange": "$$",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Korani P O",
@@ -117,19 +126,48 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* WebSite Schema */}
-        <Script id="website-schema" type="application/ld+json">
+        {/* Service Schema */}
+        <Script id="service-schema" type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "Digital Product Solutions",
-              "alternateName": "Web Development Company in Kerala",
-              "url": "https://www.digitalproductsolutions.in",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://www.digitalproductsolutions.in/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
+              "@type": "Service",
+              "serviceType": "Web Development",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Digital Product Solutions"
+              },
+              "description": "Professional web development services in Kerala with focus on Attingal region",
+              "areaServed": {
+                "@type": "State",
+                "name": "Kerala"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Web Services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Custom Website Development"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "E-commerce Solutions"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "SEO Services"
+                    }
+                  }
+                ]
               }
             }
           `}
