@@ -6,12 +6,7 @@ import { Send } from "lucide-react"
 import Image from "next/image"
 import Head from "next/head"
 
-// Base URL for canonical tags
-const BASE_URL = process.env.NODE_ENV === "production"
-  ? "https://www.digitalproductsolutions.in"
-  : "http://localhost:3000"
-
-export default function Contact() {
+export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -25,15 +20,13 @@ export default function Contact() {
     })
       .then((response) => {
         if (response.ok) {
-          console.log("Form successfully submitted")
           form.reset()
         } else {
-          console.error("Form submission failed")
           setIsSubmitted(false)
         }
       })
       .catch((error) => {
-        console.error("Error submitting the form:", error)
+        console.error("Error submitting form:", error)
         setIsSubmitted(false)
       })
   }
@@ -41,85 +34,63 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact Us | Web Development in Attingal, Kerala</title>
+        <title>Contact Web Developers in Attingal, Kerala | Digital Product Solutions</title>
         <meta
           name="description"
-          content="Contact Digital Product Solutions in Attingal, Kerala, for expert web development, AI solutions, and website maintenance. Reach us via email, phone (+91 9400355185), or our contact form."
+          content="Get in touch with our Kerala web development team. Call +91 9400355185 or email digitalproductkerala@gmail.com for custom website solutions."
         />
-        <meta
-          name="keywords"
-          content="contact web development Kerala, website design Attingal, Digital Product Solutions, AI solutions Kerala, website maintenance Attingal"
+        <link rel="canonical" href="https://www.digitalproductsolutions.in/contact" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.digitalproductsolutions.in/contact" />
+        <meta property="og:title" content="Contact Our Kerala Web Development Team" />
+        <meta 
+          property="og:description" 
+          content="Professional web development services in Attingal, Kerala" 
         />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`${BASE_URL}/contact`} />
+        <meta property="og:image" content="https://www.digitalproductsolutions.in/og-contact.jpg" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.digitalproductsolutions.in/contact" />
+        <meta property="twitter:title" content="Contact Our Kerala Web Development Team" />
+        <meta 
+          property="twitter:description" 
+          content="Professional web development services in Attingal, Kerala" 
+        />
+        <meta property="twitter:image" content="https://www.digitalproductsolutions.in/og-contact.jpg" />
+
+        {/* Schema.org */}
         <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "ContactPage",
-              "name": "Contact Digital Product Solutions",
-              "description": "Get in touch with Digital Product Solutions in Attingal, Kerala, for professional web development, AI solutions, and website maintenance services.",
-              "url": "${BASE_URL}/contact",
-              "publisher": {
-                "@type": "Organization",
-                "name": "Digital Product Solutions",
-                "logo": {
-                  "@type": "ImageObject",
-                  "url": "${BASE_URL}/img/logo.png"
-                },
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "Attingal",
-                  "addressLocality": "Attingal",
-                  "addressRegion": "Kerala",
-                  "postalCode": "695101",
-                  "addressCountry": "IN"
-                },
-                "contactPoint": {
-                  "@type": "ContactPoint",
-                  "telephone": "+919400355185",
-                  "email": "digitalproductkerala@gmail.com",
-                  "contactType": "Customer Service",
-                  "areaServed": "IN",
-                  "availableLanguage": ["English", "Malayalam"]
-                }
-              },
-              "mainEntity": {
-                "@type": "FAQPage",
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "How can I contact Digital Product Solutions in Attingal?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Reach our Attingal, Kerala team via our contact form, email at digitalproductkerala@gmail.com, or phone at +91 9400355185 for web development and AI solutions."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "What services do you offer in Kerala?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "We provide web development, AI integration, website maintenance, and e-commerce solutions tailored for businesses in Attingal and across Kerala."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "How quickly will I receive a response?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Our Attingal team responds to inquiries within 24–48 hours, ensuring prompt communication to discuss your project requirements."
-                    }
-                  }
-                ]
-              }
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact Digital Product Solutions",
+            "description": "Web development services in Kerala",
+            "url": "https://www.digitalproductsolutions.in/contact",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Attingal",
+              "addressRegion": "Kerala",
+              "postalCode": "695101",
+              "addressCountry": "IN"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+919400355185",
+              "email": "digitalproductkerala@gmail.com",
+              "contactType": "customer service",
+              "areaServed": "IN"
             }
-          `}
+          })}
         </script>
       </Head>
+
       <div className="min-h-screen py-16 px-4 relative">
+        {/* Background Image */}
         <Image
-          src="./img/bgtt.jpg?height=1080&width=1920&text=Telephone+Background"
+          src="/img/bgtt.jpg"
           alt="Contact background with telephone theme"
           fill
           style={{ objectFit: "cover" }}
@@ -127,6 +98,8 @@ export default function Contact() {
           priority
         />
         <div className="absolute inset-0 bg-black bg-opacity-60" />
+        
+        {/* Main Content */}
         <div className="container mx-auto max-w-4xl relative z-10">
           <motion.h1
             className="text-4xl md:text-5xl font-bold mb-6 text-center text-white"
@@ -136,14 +109,17 @@ export default function Contact() {
           >
             Contact Digital Product Solutions
           </motion.h1>
+          
           <motion.p
             className="text-lg mb-12 text-center text-gray-300"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Connect with our expert team in Attingal, Kerala, to transform your business with innovative web development, AI-powered solutions, and reliable website maintenance. Serving clients in Attingal and across Kerala, we offer personalized consultations to understand your goals and deliver tailored digital solutions. Fill out our contact form, email us, or call +91 9400355185 to start your project today and achieve a strong online presence.
+            Connect with our expert team in Attingal, Kerala, to transform your business with innovative web development solutions.
           </motion.p>
+
+          {/* Contact Form Container */}
           <motion.div
             className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-8 shadow-lg"
             initial={{ opacity: 0, y: 50 }}
@@ -154,7 +130,7 @@ export default function Contact() {
               <div className="text-center text-white">
                 <h2 className="text-2xl font-bold mb-4">Thank You for Reaching Out!</h2>
                 <p>
-                  Your message has been successfully sent. Our Attingal, Kerala-based team will respond within 24–48 hours to discuss how we can support your business with customized web development and AI solutions. Check your inbox for our reply.
+                  Our Attingal-based team will respond within 24–48 hours.
                 </p>
               </div>
             ) : (
@@ -167,6 +143,7 @@ export default function Contact() {
                 >
                   Get in Touch with Our Kerala Team
                 </motion.h2>
+                
                 <form
                   action="https://formsubmit.co/digitalproductkerala@gmail.com"
                   method="POST"
@@ -174,10 +151,7 @@ export default function Contact() {
                   className="space-y-6"
                 >
                   <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium mb-2 text-white"
-                    >
+                    <label htmlFor="name" className="block text-sm font-medium mb-2 text-white">
                       Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -187,14 +161,11 @@ export default function Contact() {
                       required
                       className="w-full px-3 py-2 bg-white bg-opacity-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-300"
                       placeholder="Enter your full name"
-                      aria-required="true"
                     />
                   </div>
+
                   <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium mb-2 text-white"
-                    >
+                    <label htmlFor="email" className="block text-sm font-medium mb-2 text-white">
                       Email <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -204,14 +175,11 @@ export default function Contact() {
                       required
                       className="w-full px-3 py-2 bg-white bg-opacity-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-300"
                       placeholder="Enter your email address"
-                      aria-required="true"
                     />
                   </div>
+
                   <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium mb-2 text-white"
-                    >
+                    <label htmlFor="message" className="block text-sm font-medium mb-2 text-white">
                       Message <span className="text-red-500">*</span>
                     </label>
                     <textarea
@@ -221,16 +189,16 @@ export default function Contact() {
                       rows={4}
                       className="w-full px-3 py-2 bg-white bg-opacity-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-300"
                       placeholder="Tell us about your project or inquiry"
-                      aria-required="true"
                     ></textarea>
                   </div>
+
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_template" value="table" />
-                  <input type="hidden" name="_honeypot" value="" />
+                  <input type="hidden" name="_next" value="https://www.digitalproductsolutions.in/thank-you" />
+                  
                   <button
                     type="submit"
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition-colors flex items-center justify-center"
-                    aria-label="Submit contact form"
                   >
                     Send Message
                     <Send className="ml-2 h-5 w-5" />
@@ -239,6 +207,8 @@ export default function Contact() {
               </>
             )}
           </motion.div>
+
+          {/* Contact Information */}
           <motion.div
             className="mt-8 text-center text-gray-300"
             initial={{ opacity: 0, y: 50 }}
@@ -269,10 +239,9 @@ export default function Contact() {
             <p className="mt-4">
               Visit us: Attingal, Kerala, India – 695101
             </p>
-            <p className="mt-2">
-              We’re dedicated to empowering businesses in Kerala with innovative digital solutions, from responsive websites to advanced AI integrations.
-            </p>
           </motion.div>
+
+          {/* FAQ Section */}
           <motion.div
             className="mt-12 text-gray-300"
             initial={{ opacity: 0, y: 50 }}
@@ -288,7 +257,7 @@ export default function Contact() {
                   How can I contact Digital Product Solutions in Attingal?
                 </h4>
                 <p>
-                  Reach our Attingal, Kerala team via our contact form, email at{" "}
+                  Reach our team via our contact form, email at{" "}
                   <a
                     href="mailto:digitalproductkerala@gmail.com"
                     className="underline hover:text-blue-400"
@@ -302,7 +271,7 @@ export default function Contact() {
                   >
                     +91 9400355185
                   </a>
-                  . We’re here to assist with your web development and AI solution needs.
+                  .
                 </p>
               </div>
               <div>
@@ -310,7 +279,7 @@ export default function Contact() {
                   What services do you offer in Kerala?
                 </h4>
                 <p>
-                  We provide expert web development, AI integration, website maintenance, and e-commerce solutions tailored for businesses in Attingal and across Kerala, ensuring high-quality digital transformations.
+                  We provide web development, AI integration, website maintenance, and e-commerce solutions for businesses in Kerala.
                 </p>
               </div>
               <div>
@@ -318,7 +287,7 @@ export default function Contact() {
                   How quickly will I receive a response?
                 </h4>
                 <p>
-                  Our Attingal team responds to inquiries within 24–48 hours, ensuring prompt communication to discuss your project requirements and next steps.
+                  Our team responds to inquiries within 24–48 hours.
                 </p>
               </div>
             </div>
