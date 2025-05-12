@@ -38,9 +38,11 @@ export default function RootLayout({
           property="og:description"
           content="Digital Product is a leading web development agency specializing in custom websites, e-commerce solutions, and SEO optimization."
         />
-        <meta property="og:url" content="https://digital-product.adarshbs.com/" />
+        <meta property="og:url" content="https://www.digitalproductsolutions.in/" />
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="google-site-verification" content="DHDeaZm4O1GPWicrshCNxCRNOAjRdlqeaOdddGQnZ5I" />
+
 
         {/* Use simple Script tag without event handlers if you don't need them */}
         <Script

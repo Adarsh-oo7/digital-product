@@ -1,14 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // Export static HTML/CSS/JS files
+  output: "export", // For static site generation
   images: {
-    unoptimized: true, // Disable server-side image optimization
+    unoptimized: true, // Disable Next.js image optimization (required for static export)
   },
-  assetPrefix: process.env.NODE_ENV === "production" ? "/Digital-Product/" : "", // Use repo name as the prefix for production
+  assetPrefix: "", // No prefix needed for custom domains like digitalproductsolutions.in
   async headers() {
     return [
       {
-        // Apply headers to all routes
         source: "/:path*",
         headers: [
           {
