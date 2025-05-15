@@ -40,7 +40,7 @@ export default function RootLayout({
         />
         <meta property="og:url" content="https://www.digitalproductsolutions.in/" />
         <meta property="og:type" content="website" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="./img/logo.png" sizes="any" />
         <meta name="google-site-verification" content="DHDeaZm4O1GPWicrshCNxCRNOAjRdlqeaOdddGQnZ5I" />
 
 

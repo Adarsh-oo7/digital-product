@@ -8,7 +8,7 @@ module.exports = {
     exclude: ['/admin', '/private', '/api'], // Paths to exclude
     robotsTxtOptions: {
       additionalSitemaps: [
-        'https://digital-product.adarshbs.com/sitemap-0.xml', // Replace if you have custom sitemaps
+        'https://www.digitalproductsolutions.in/sitemap-0.xml', // Replace if you have custom sitemaps
       ],
     },
   };
