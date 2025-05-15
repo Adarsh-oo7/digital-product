@@ -11,7 +11,7 @@ import Head from "next/head"
 // Database of certificates
 const certificatesDatabase = [
   {
-    id: "DPS123456",
+    id: "DPS-231D16",
     name: "Arjun U",
     course: "Python (Django)",
     issueDate: "2025-04-24",
