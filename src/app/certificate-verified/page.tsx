@@ -319,7 +319,7 @@ export default function CertificateVerification() {
                 <input
                   type="text"
                   id="certificateId"
-                  placeholder="Enter Certificate ID (e.g. DPS123456)"
+                  placeholder="Enter Certificate ID (e.g. DPS-1234J6)"
                   value={certificateId}
                   onChange={(e) => setCertificateId(e.target.value)}
                   className="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-30 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-white placeholder-gray-300"
