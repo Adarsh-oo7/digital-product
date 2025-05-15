@@ -1,10 +1,10 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { 
-  CheckCircle, XCircle, Award, Search, FileCheck, 
-  Sparkles, Star, Trophy, Medal, Share2
+  CheckCircle, XCircle, Award, Search, 
+  Sparkles, Star, Trophy, Medal, 
 } from "lucide-react"
 import Head from "next/head"
 
@@ -93,9 +93,9 @@ const certificatesDatabase = [
 ];
 
 // Base URL for canonical tags
-const BASE_URL = process.env.NODE_ENV === "production"
-  ? "https://www.digitalproductsolutions.in"
-  : "http://localhost:3000"
+// const BASE_URL = process.env.NODE_ENV === "production"
+//   ? "https://www.digitalproductsolutions.in"
+//   : "http://localhost:3000"
 
 type CertificateData = {
   id: string
