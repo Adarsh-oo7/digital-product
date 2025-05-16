@@ -21,7 +21,7 @@ const certificatesDatabase = [
     badge: "Gold"
   },
   {
-    id: "DPS789012",
+    id: "DPS-7190S2",
     name: "Akhil Shibu",
     course: "Python (Django)",
     issueDate: "2025-04-24",
