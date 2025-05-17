@@ -12,7 +12,7 @@ export default function ChatbotAndSocialButtons() {
         {/* Instagram button */}
         <button 
           className="bg-blue-500 hover:bg-blue-600 p-3 rounded-full shadow-lg text-white"
-          onClick={() => window.open('hhttps://www.instagram.com/digital_product_solutions/', '_blank')}
+          onClick={() => window.open('https://www.instagram.com/digital_product_solutions/', '_blank')}
           aria-label="Instagram"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
