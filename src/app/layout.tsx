@@ -69,11 +69,11 @@ export default function RootLayout({
               "@type": "WebSite",
               "name": "Digital Product",
               "alternateName": "Digital Product Web Development Agency",
-              "url": "https://digital-product.adarshbs.com/",
+              "url": "https://www.digitalproductsolutions.in/",
               "sameAs": [
-                "https://www.instagram.com/digital_prodect_sale/",
+                "https://www.instagram.com/digital_product_solutions/",
                 "https://www.threads.net/@digital_prodect_sale",
-                "https://www.linkedin.com/company/digitalproduct"
+                "https://www.linkedin.com/company/digital-product-adarsh/"
               ]
             }
           `}
