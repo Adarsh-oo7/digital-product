@@ -57,10 +57,10 @@ const digitalServices = [
 ]
 
 const trustIndicators = [
-  { icon: Users, number: "20+", text: "Happy Clients" },
-  { icon: Award, number: "95%", text: "Success Rate" },
-  { icon: DollarSign, number: "5x", text: "Average ROI" },
-  { icon: Star, number: "4.9/5", text: "Client Rating" },
+  { id:1,icon: Users, number: "20+", text: "Happy Clients" },
+  { id:2,icon: Award, number: "95%", text: "Success Rate" },
+  { id:3,icon: DollarSign, number: "5x", text: "Average ROI" },
+  { id:4,icon: Star, number: "4.9/5", text: "Client Rating" },
 ]
 
 const whyChooseUs = [
@@ -145,7 +145,7 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           {trustIndicators.map((item) => (
-            <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+            <div key={item.id} className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
               <item.icon className="w-8 h-8 mx-auto mb-2 text-blue-400" />
               <div className="text-2xl font-bold text-white">{item.number}</div>
               <div className="text-sm text-gray-300">{item.text}</div>
