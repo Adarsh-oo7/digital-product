@@ -144,8 +144,8 @@ export default function Home() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          {trustIndicators.map((item, index) => (
-            <div key={index} className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+          {trustIndicators.map((item) => (
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
               <item.icon className="w-8 h-8 mx-auto mb-2 text-blue-400" />
               <div className="text-2xl font-bold text-white">{item.number}</div>
               <div className="text-sm text-gray-300">{item.text}</div>
