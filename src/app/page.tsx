@@ -300,7 +300,7 @@ export default function Home() {
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <h3 className="text-2xl font-bold text-center mb-8 text-gray-900">Industries We Serve</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              {['E-commerce', 'Healthcare', 'Fintech', 'Education', 'Real Estate', 'Manufacturing', 'Startups', 'Enterprise'].map((industry, index) => (
+              {['E-commerce', 'Healthcare', 'Fintech', 'Education', 'Real Estate', 'Manufacturing', 'Startups', 'Enterprise'].map((industry) => (
                 <div key={industry} className="p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
                   <div className="font-semibold text-gray-800">{industry}</div>
                 </div>
