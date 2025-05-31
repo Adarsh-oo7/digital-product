@@ -3,9 +3,9 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { 
-  ArrowRight, Cpu, Brain, Bitcoin as Robot, Star, Users, CheckCircle, Award, Shield, Clock, 
-  Zap, TrendingUp, MessageSquare, Target, Code, Search, BarChart3, Smartphone, Globe, 
-  Settings, Headphones, Rocket, DollarSign, Phone 
+  ArrowRight, Brain, Bitcoin as Star, Users, CheckCircle, Award, Shield, Clock, 
+  Zap, TrendingUp, MessageSquare, Target, Code, Search, BarChart3, Globe, 
+   Headphones, Rocket, DollarSign, Phone 
 } from "lucide-react"
 import AnimatedReviews from '../components/AnimatedReviews'
 import Image from "next/image"
