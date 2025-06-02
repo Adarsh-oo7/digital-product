@@ -249,7 +249,7 @@ export default function Home() {
               Every business is unique. We create tailored digital solutions that fit your specific needs and goals.
             </p>
             <Link
-              href="/custom-solutions"
+              href="/book"
               className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
             >
               Discuss Custom Solution
@@ -338,13 +338,13 @@ export default function Home() {
                 ))}
               </div>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                <Link
+                {/* <Link
                   href="/case-studies"
                   className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl"
                 >
                   View Case Studies
                   <BarChart3 className="ml-3 h-5 w-5" />
-                </Link>
+                </Link> */}
                 <Link
                   href="/contact"
                   className="inline-flex items-center bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white font-bold py-4 px-8 rounded-full transition-all duration-300"
