@@ -10,6 +10,7 @@ import {
 import AnimatedReviews from '../components/AnimatedReviews'
 import Image from "next/image"
 
+
 // Comprehensive Digital Services
 const digitalServices = [
   {
@@ -97,7 +98,9 @@ const businessResults = [
 
 export default function Home() {
   return (
+    
     <div className="min-h-screen flex flex-col">
+
       {/* SEO-Optimized Hero Section */}
       <div className="relative flex-grow flex flex-col justify-center items-center text-center mt-7 px-4 py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-pink-800 overflow-hidden">
         {/* Background Animation */}
@@ -314,8 +317,8 @@ export default function Home() {
               ].map((industry) => (
                 <div
                   key={industry}
-                  className="p-4 bg-gray-50 rounded-lg transition-all duration-300 
-                   group-hover:blur-sm hover:!blur-none hover:scale-105 hover:bg-blue-50 
+                  className="px-1 py-2 bg-gray-50 rounded-lg transition-all duration-300 
+                   group-hover:blur-sm hover:!blur-none hover:scale-105 hover:bg-gray-50 
                    cursor-pointer shadow-sm"
                 >
                   <div className="font-semibold text-gray-800">{industry}</div>
