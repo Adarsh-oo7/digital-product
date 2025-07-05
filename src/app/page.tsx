@@ -2,10 +2,10 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { 
-  ArrowRight, Brain, Bitcoin as Star, Users, CheckCircle, Award, Shield, Clock, 
-  Zap, TrendingUp, MessageSquare, Target, Code, Search, BarChart3, Globe, 
-   Headphones, Rocket, DollarSign, Phone 
+import {
+  ArrowRight, Brain, Bitcoin as Star, Users, CheckCircle, Award, Shield, Clock,
+  Zap, TrendingUp, MessageSquare, Target, Code, Search, BarChart3, Globe,
+  Headphones, Rocket, DollarSign, Phone
 } from "lucide-react"
 import AnimatedReviews from '../components/AnimatedReviews'
 import Image from "next/image"
@@ -57,10 +57,10 @@ const digitalServices = [
 ]
 
 const trustIndicators = [
-  { id:1,icon: Users, number: "20+", text: "Happy Clients" },
-  { id:2,icon: Award, number: "95%", text: "Success Rate" },
-  { id:3,icon: DollarSign, number: "5x", text: "Average ROI" },
-  { id:4,icon: Star, number: "4.9/5", text: "Client Rating" },
+  { id: 1, icon: Users, number: "20+", text: "Happy Clients" },
+  { id: 2, icon: Award, number: "95%", text: "Success Rate" },
+  { id: 3, icon: DollarSign, number: "5x", text: "Average ROI" },
+  { id: 4, icon: Star, number: "4.9/5", text: "Client Rating" },
 ]
 
 const whyChooseUs = [
@@ -133,7 +133,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Transform your business with AI agents, custom SaaS platforms, high-converting Meta ads, 
+          Transform your business with AI agents, custom SaaS platforms, high-converting Meta ads,
           SEO dominance, and intelligent chatbots. Your complete digital transformation partner.
         </motion.p>
 
@@ -192,11 +192,11 @@ export default function Home() {
               <span className="block text-blue-400">Under One Roof</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              From AI automation to digital marketing, custom SaaS development to SEO dominance - 
+              From AI automation to digital marketing, custom SaaS development to SEO dominance -
               we provide everything your business needs to thrive in the digital age.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {digitalServices.map((service, index) => (
               <motion.div
@@ -214,12 +214,12 @@ export default function Home() {
                     {service.category}
                   </span>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                
+
                 {/* Benefits List */}
                 <div className="space-y-2 mb-6">
                   {service.benefits.map((benefit, idx) => (
@@ -229,10 +229,10 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="pt-4 border-t border-gray-700">
-                  <Link 
-                    href="/services" 
+                  <Link
+                    href="/services"
                     className="text-blue-400 hover:text-blue-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform"
                   >
                     Learn More <ArrowRight className="ml-2 w-4 h-4" />
@@ -273,7 +273,7 @@ export default function Home() {
               <span className="block text-blue-600">Trust Digital Product Solutions</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're not just service providers - we're your strategic partners in digital success 
+              We're not just service providers - we're your strategic partners in digital success
               with a proven track record of delivering exceptional results.
             </p>
           </div>
@@ -299,14 +299,31 @@ export default function Home() {
           {/* Industry Expertise */}
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <h3 className="text-2xl font-bold text-center mb-8 text-gray-900">Industries We Serve</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              {['E-commerce', 'Healthcare', 'Fintech', 'Education', 'Real Estate', 'Manufacturing', 'Startups', 'Enterprise'].map((industry) => (
-                <div key={industry} className="p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
+
+            {/* Group wrapper to control hover effect */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center group">
+              {[
+                'E-commerce',
+                'Healthcare',
+                'Fintech',
+                'Education',
+                'Real Estate',
+                'Manufacturing',
+                'Startups',
+                'Enterprise',
+              ].map((industry) => (
+                <div
+                  key={industry}
+                  className="p-4 bg-gray-50 rounded-lg transition-all duration-300 
+                   group-hover:blur-sm hover:!blur-none hover:scale-105 hover:bg-blue-50 
+                   cursor-pointer shadow-sm"
+                >
                   <div className="font-semibold text-gray-800">{industry}</div>
                 </div>
               ))}
             </div>
           </div>
+
         </div>
       </motion.div>
 
@@ -397,10 +414,10 @@ export default function Home() {
               Ready to 10x Your Business?
             </h2>
             <p className="text-xl mb-12 text-gray-200 max-w-3xl mx-auto">
-              Join 50+ successful businesses who've transformed their operations with our 
+              Join 50+ successful businesses who've transformed their operations with our
               comprehensive digital solutions. Don't let competitors get ahead - start today!
             </p>
-            
+
             <div className="flex flex-col lg:flex-row gap-6 justify-center items-center mb-12">
               <Link
                 href="/contact"
@@ -456,12 +473,12 @@ export default function Home() {
               Digital Product Solutions - Your Complete Digital Transformation Partner
             </h2>
             <p className="text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Based in India, serving globally - we specialize in AI agents, custom SaaS development, 
-              Meta advertising, SEO services, chatbot integration, and comprehensive digital marketing solutions. 
+              Based in India, serving globally - we specialize in AI agents, custom SaaS development,
+              Meta advertising, SEO services, chatbot integration, and comprehensive digital marketing solutions.
               Transform your business with cutting-edge technology and proven strategies that deliver measurable results.
             </p>
           </div>
-          
+
           {/* Service Keywords for SEO */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm text-gray-400">
             <div>AI Agent Development</div>
