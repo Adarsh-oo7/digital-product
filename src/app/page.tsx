@@ -9,6 +9,7 @@ import {
 } from "lucide-react"
 import AnimatedReviews from '../components/AnimatedReviews'
 import Image from "next/image"
+import ModelViewer from '@/components/ModelViewer'
 
 
 // Comprehensive Digital Services
@@ -101,13 +102,14 @@ export default function Home() {
     
     <div className="min-h-screen flex flex-col">
 
+<ModelViewer/>
       {/* SEO-Optimized Hero Section */}
-      <div className="relative flex-grow flex flex-col justify-center items-center text-center mt-7 px-4 py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-pink-800 overflow-hidden">
+      <div className="relative flex-grow flex flex-col justify-center items-center text-center mt-7 px-4 py-20  overflow-hidden">
         {/* Background Animation */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-          <div className="absolute top-10 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+          {/* <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div> */}
+          {/* <div className="absolute top-10 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div> */}
+          {/* <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div> */}
         </div>
 
         <motion.div
@@ -140,21 +142,7 @@ export default function Home() {
           SEO dominance, and intelligent chatbots. Your complete digital transformation partner.
         </motion.p>
 
-        {/* Enhanced Trust Indicators */}
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 relative z-10"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          {trustIndicators.map((item) => (
-            <div key={item.id} className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-              <item.icon className="w-8 h-8 mx-auto mb-2 text-blue-400" />
-              <div className="text-2xl font-bold text-white">{item.number}</div>
-              <div className="text-sm text-gray-300">{item.text}</div>
-            </div>
-          ))}
-        </motion.div>
+
 
         <motion.div
           className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 relative z-10"

@@ -12,6 +12,7 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "@google/model-viewer": "^4.1.0",
     "@react-three/drei": "^10.4.4",
     "@react-three/fiber": "^9.2.0",
     "framer-motion": "^11.17.0",
