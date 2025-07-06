@@ -26,7 +26,7 @@ export default function ModelViewer() {
         zIndex: 0,
         pointerEvents: 'none',
         objectFit: 'cover',
-        opacity: 0.3, // 👈 semi-transparent
+        opacity: 0.6, // 👈 semi-transparent
       }}
     />
   );

@@ -10,6 +10,7 @@ import {
 import AnimatedReviews from '../components/AnimatedReviews'
 import Image from "next/image"
 import ModelViewer from '@/components/ModelViewer'
+import ProjectCarousel from '@/components/ProjectCarousel'
 
 
 // Comprehensive Digital Services
@@ -99,10 +100,10 @@ const businessResults = [
 
 export default function Home() {
   return (
-    
+
     <div className="min-h-screen flex flex-col">
 
-<ModelViewer/>
+      <ModelViewer />
       {/* SEO-Optimized Hero Section */}
       <div className="relative flex-grow flex flex-col justify-center items-center text-center mt-7 px-4 py-20  overflow-hidden">
         {/* Background Animation */}
@@ -142,7 +143,20 @@ export default function Home() {
           SEO dominance, and intelligent chatbots. Your complete digital transformation partner.
         </motion.p>
 
-
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 relative z-10"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          {trustIndicators.map((item) => (
+            <div key={item.id} className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <item.icon className="w-8 h-8 mx-auto mb-2 text-blue-400" />
+              <div className="text-2xl font-bold text-white">{item.number}</div>
+              <div className="text-sm text-gray-300">{item.text}</div>
+            </div>
+          ))}
+        </motion.div>
 
         <motion.div
           className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 relative z-10"
@@ -171,7 +185,7 @@ export default function Home() {
 
       {/* Comprehensive Services Section */}
       <motion.div
-        className="py-20 px-4 bg-gray-900 relative"
+        className="py-20 px-4  relative"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.6 }}
@@ -182,7 +196,7 @@ export default function Home() {
               Complete Digital Solutions
               <span className="block text-blue-400">Under One Roof</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-100 max-w-4xl mx-auto">
               From AI automation to digital marketing, custom SaaS development to SEO dominance -
               we provide everything your business needs to thrive in the digital age.
             </p>
@@ -192,7 +206,7 @@ export default function Home() {
             {digitalServices.map((service, index) => (
               <motion.div
                 key={service.title}
-                className="group bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 transform hover:-translate-y-2"
+                className="group bg-white/5 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 transform hover:-translate-y-2"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 + index * 0.1 }}
@@ -287,33 +301,42 @@ export default function Home() {
             ))}
           </div>
 
+          <ProjectCarousel/>
+
           {/* Industry Expertise */}
           <div className="bg-white rounded-2xl p-8 shadow-xl">
-            <h3 className="text-2xl font-bold text-center mb-8 text-gray-900">Industries We Serve</h3>
+            <h3 className="text-2xl font-bold text-center mb-8 text-gray-900">
+              Industries We Serve
+            </h3>
 
-            {/* Group wrapper to control hover effect */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center group">
-              {[
-                'E-commerce',
-                'Healthcare',
-                'Fintech',
-                'Education',
-                'Real Estate',
-                'Manufacturing',
-                'Startups',
-                'Enterprise',
-              ].map((industry) => (
-                <div
-                  key={industry}
-                  className="px-1 py-2 bg-gray-50 rounded-lg transition-all duration-300 
-                   group-hover:blur-sm hover:!blur-none hover:scale-105 hover:bg-gray-50 
-                   cursor-pointer shadow-sm"
-                >
-                  <div className="font-semibold text-gray-800">{industry}</div>
-                </div>
-              ))}
+            {/* Centered Grid Container */}
+            <div className="flex justify-center">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-20 gap-y-6 text-center group">
+                {[
+                  'E-commerce',
+                  'Healthcare',
+                  'Fintech',
+                  'Education',
+                  'Real Estate',
+                  'Manufacturing',
+                  'Startups',
+                  'Enterprise',
+                ].map((industry) => (
+                  <div
+                    key={industry}
+                    className="w-36 h-32 bg-gray-50 rounded-xl flex items-center justify-center 
+          text-center text-gray-800 font-semibold shadow-md cursor-pointer 
+          transition-all duration-300 group-hover:blur-sm hover:!blur-none 
+          hover:scale-105 hover:bg-gray-800 hover:text-white"
+                  >
+                    {industry}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
+
+
 
         </div>
       </motion.div>
