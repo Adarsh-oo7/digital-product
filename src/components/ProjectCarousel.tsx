@@ -1,102 +1,52 @@
 "use client"
 
-import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
-import { useState } from "react"
-import { ArrowLeft, ArrowRight } from "lucide-react"
+import Link from "next/link" // Optional if linking to internal route
 
 const projects = [
-  { title: "AI Chatbot Integration", image: "/img/lemons.png" },
-  { title: "E-commerce Web App", image: "/img/lemons.png" },
-  { title: "Real Estate 3D Viewer", image: "/img/lemons.png" },
-  { title: "Healthcare Dashboard", image: "/img/lemons.png" },
-  { title: "Logistics Tracker", image: "/img/lemons.png" },
-  { title: "Online Learning Platform", image: "/img/lemons.png" },
+  { title: "Construction Company", image: "../img/buildwellz.jpg", url: "https://www.buildwellz.in" },
+  { title: "Soft Drinks Company", image: "../img/guava-fizz.png", url: "https://www.squeezeberriez.in/" },
+  { title: "Catering", image: "../img/caters.png", url: "https://adarsh-oo7.github.io/-Lemons-Elegant-Catering/" },
 ]
 
-export default function ProjectCarousel() {
-  const [startIndex, setStartIndex] = useState(0)
-  const itemsToShow = 3
-
-  const canGoNext = startIndex + itemsToShow < projects.length
-  const canGoPrev = startIndex > 0
-
-  const nextSlide = () => {
-    if (canGoNext) {
-      setStartIndex((prev) => prev + 1)
-    }
-  }
-
-  const prevSlide = () => {
-    if (canGoPrev) {
-      setStartIndex((prev) => prev - 1)
-    }
-  }
-
-  const visibleProjects = projects.slice(startIndex, startIndex + itemsToShow)
-
+export default function ProjectGrid() {
   return (
-    <section className="py-16  relative">
+    <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-12">Our Projects</h2>
 
-        <div className="relative">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={startIndex}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {projects.map((project) => (
+            <a
+              key={project.title}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group overflow-hidden rounded-2xl shadow-lg aspect-square block"
             >
-              {visibleProjects.map((project) => (
-                <div
-                  key={project.title}
-                  className="relative group rounded-2xl overflow-hidden shadow-lg"
-                >
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={500}
-                    height={300}
-                    className="object-cover w-full h-64"
-                  />
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                    <h3 className="text-white text-xl font-semibold px-4 text-center">
-                      {project.title}
-                    </h3>
-                  </div>
-                </div>
-              ))}
-            </motion.div>
-          </AnimatePresence>
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/50 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-xl font-semibold text-center px-4">
+                  {project.title}
+                </h3>
+              </div>
+            </a>
+          ))}
+        </div>
 
-          {/* Navigation Arrows */}
-          <div className="absolute top-1/2 left-0 -translate-y-1/2 z-10">
-            <button
-              onClick={prevSlide}
-              disabled={!canGoPrev}
-              className={`bg-white text-black p-3 rounded-full shadow transition ${
-                canGoPrev ? "hover:bg-gray-200" : "opacity-30 cursor-not-allowed"
-              }`}
-              aria-label="Previous"
-            >
-              <ArrowLeft />
-            </button>
-          </div>
-          <div className="absolute top-1/2 right-0 -translate-y-1/2 z-10">
-            <button
-              onClick={nextSlide}
-              disabled={!canGoNext}
-              className={`bg-white p-3 text-black rounded-full shadow transition ${
-                canGoNext ? "hover:bg-gray-200" : "opacity-30 cursor-not-allowed"
-              }`}
-              aria-label="Next"
-            >
-              <ArrowRight />
-            </button>
-          </div>
+        {/* View All Projects Button */}
+        <div className="text-center mt-12">
+          <a
+            href="/portfolio" // Change this to your actual "All Projects" page route
+            className="inline-block bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition"
+          >
+            View All Projects
+          </a>
         </div>
       </div>
     </section>

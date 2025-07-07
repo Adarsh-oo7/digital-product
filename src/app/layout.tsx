@@ -50,7 +50,12 @@ export default function RootLayout({
           data-bot-id="cm74658eg0tkgsvk7iw855klb"
           strategy="lazyOnload"
         />
-        
+
+        <script
+          type="module"
+          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+        ></script>
+
         {/* Or use the client component if you need event handlers */}
         {/* <ChatbotScript /> */}
       </head>

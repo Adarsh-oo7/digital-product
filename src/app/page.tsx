@@ -11,6 +11,7 @@ import AnimatedReviews from '../components/AnimatedReviews'
 import Image from "next/image"
 import ModelViewer from '@/components/ModelViewer'
 import ProjectCarousel from '@/components/ProjectCarousel'
+import MarqueeCards from '@/components/MarqueeCards'
 
 
 // Comprehensive Digital Services
@@ -301,16 +302,16 @@ export default function Home() {
             ))}
           </div>
 
-          <ProjectCarousel/>
+          <ProjectCarousel />
 
           {/* Industry Expertise */}
-          <div className="bg-white rounded-2xl p-8 shadow-xl">
+          {/* <div className="bg-white rounded-2xl p-8 shadow-xl">
             <h3 className="text-2xl font-bold text-center mb-8 text-gray-900">
               Industries We Serve
-            </h3>
+            </h3> */}
 
             {/* Centered Grid Container */}
-            <div className="flex justify-center">
+            {/* <div className="flex justify-center">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-x-20 gap-y-6 text-center group">
                 {[
                   'E-commerce',
@@ -334,8 +335,9 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
 
+<MarqueeCards/>
 
 
         </div>

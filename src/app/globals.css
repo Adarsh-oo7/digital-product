@@ -8,18 +8,16 @@
   --background-end-rgb: 12, 12, 29;
 }
 
-
-
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
   }
-  
+
   a {
     color: #3b82f6; /* Tailwind's blue-500 */
     text-decoration: none;
     transition: color 0.2s ease;
   }
-  
+
   a:hover {
     color: #60a5fa; /* Tailwind's blue-400 */
   }
@@ -42,8 +40,6 @@ h1, h2, h3, h4, h5, h6 {
 .animation-delay-4000 {
   animation-delay: 4s;
 }
-
-
 
 @layer base {
   :root {
@@ -99,9 +95,11 @@ h1, h2, h3, h4, h5, h6 {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+  .theme {
+    --animate-marquee: marquee var(--duration) infinite linear;
+    --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  }
 }
-
-
 
 @layer base {
   * {
@@ -111,3 +109,24 @@ h1, h2, h3, h4, h5, h6 {
     @apply bg-background text-foreground;
   }
 }
+
+@theme inline {
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+}
+
+
