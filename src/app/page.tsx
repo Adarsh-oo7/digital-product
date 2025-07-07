@@ -345,70 +345,74 @@ export default function Home() {
 
       {/* Results & ROI Section */}
       <motion.div
-        className="py-20 px-4 bg-gray-900"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 1.6 }}
-      >
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold mb-8 text-white">
-                Proven Results That Transform Businesses
-              </h2>
-              <div className="space-y-6">
-                {businessResults.map((result, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex items-start"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 1.8 + index * 0.1 }}
-                  >
-                    <CheckCircle className="mr-4 h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300 text-lg">{result}</span>
-                  </motion.div>
-                ))}
-              </div>
-              <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/book"
-                  className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl"
-                >
-                  View Case Studies
-                  <BarChart3 className="ml-3 h-5 w-5" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white font-bold py-4 px-8 rounded-full transition-all duration-300"
-                >
-                  Get Your ROI Estimate
-                  <DollarSign className="ml-3 h-5 w-5" />
-                </Link>
-              </div>
-            </div>
-            <div className="relative">
-              <Image
-                src="./img/AiH.png"
-                alt="Digital Business Transformation Results"
-                width={600}
-                height={400}
-                className="rounded-2xl shadow-2xl"
-              />
-              {/* Stats Overlay */}
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-green-600 to-blue-600 text-white p-6 rounded-xl shadow-xl">
-                <div className="text-sm font-medium">Average Client ROI</div>
-                <div className="text-3xl font-bold">500%</div>
-                <div className="text-sm opacity-90">Within 12 Months</div>
-              </div>
-              <div className="absolute -top-6 -left-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-xl shadow-xl">
-                <div className="text-sm font-medium">Projects Delivered</div>
-                <div className="text-2xl font-bold">1000+</div>
-              </div>
-            </div>
-          </div>
+  className="py-20 px-4"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.8, delay: 1.6 }}
+>
+  <div className="container mx-auto bg-gray-900 rounded-3xl overflow-hidden shadow-2xl p-10">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 className="text-4xl font-bold mb-8 text-white">
+          Proven Results That Transform Businesses
+        </h2>
+        <div className="space-y-6">
+          {businessResults.map((result, index) => (
+            <motion.div
+              key={index}
+              className="flex items-start"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 1.8 + index * 0.1 }}
+            >
+              <CheckCircle className="mr-4 h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
+              <span className="text-gray-300 text-lg">{result}</span>
+            </motion.div>
+          ))}
         </div>
-      </motion.div>
+        <div className="mt-10 flex flex-col sm:flex-row gap-4">
+          <Link
+            href="/book"
+            className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl"
+          >
+            View Case Studies
+            <BarChart3 className="ml-3 h-5 w-5" />
+          </Link>
+          <Link
+            href="/contact"
+            className="inline-flex items-center bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white font-bold py-4 px-8 rounded-full transition-all duration-300"
+          >
+            Get Your ROI Estimate
+            <DollarSign className="ml-3 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+
+      {/* Right Section with Image + Overlays */}
+      <div className="relative">
+        <Image
+          src="./img/AiH.png"
+          alt="Digital Business Transformation Results"
+          width={600}
+          height={400}
+          className="rounded-2xl shadow-2xl"
+        />
+        {/* Bottom Right Overlay */}
+        <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-green-600 to-blue-600 text-white p-6 rounded-xl shadow-xl">
+          <div className="text-sm font-medium">Average Client ROI</div>
+          <div className="text-3xl font-bold">500%</div>
+          <div className="text-sm opacity-90">Within 12 Months</div>
+        </div>
+        {/* Top Left Overlay */}
+        <div className="absolute -top-6 -left-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-xl shadow-xl">
+          <div className="text-sm font-medium">Projects Delivered</div>
+          <div className="text-2xl font-bold">1000+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</motion.div>
+
 
       <AnimatedReviews />
 
