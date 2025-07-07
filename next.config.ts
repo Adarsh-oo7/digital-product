@@ -27,21 +27,19 @@ const nextConfig = {
             value: "nosniff",
           },
           {
-  key: "Content-Security-Policy",
-  value: `
-    default-src 'self';
-    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://app.fastbots.ai https://cdn.jotfor.ms;
-    style-src 'self' 'unsafe-inline';
-    img-src 'self' data:;
-    font-src 'self';
-    connect-src 'self' https://formsubmit.co https://app.fastbots.ai;
-    frame-src https://app.fastbots.ai https://form.jotform.com https://agent.jotform.com;
-    object-src 'none';
-    base-uri 'self';
-  `.replace(/\s{2,}/g, ' ').trim(),
-}
-
-
+            key: "Content-Security-Policy",
+            value: `
+              default-src 'self';
+              script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://app.fastbots.ai https://cdn.jotfor.ms;
+              style-src 'self' 'unsafe-inline';
+              img-src 'self' data:;
+              font-src 'self';
+              connect-src 'self' https://formsubmit.co https://app.fastbots.ai;
+              frame-src https://app.fastbots.ai https://form.jotform.com https://agent.jotform.com https://www.google.com https://maps.google.com;
+              object-src 'none';
+              base-uri 'self';
+            `.replace(/\s{2,}/g, " ").trim(),
+          },
         ],
       },
     ];
