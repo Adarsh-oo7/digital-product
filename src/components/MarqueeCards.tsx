@@ -49,14 +49,14 @@ export default function MarqueeCards() {
                     {[...cards, ...cards].map((card, idx) => (
                         <div
                             key={idx}
-                            className="relative min-w-[200px] h-[120px] rounded-lg overflow-hidden shadow"
+                            className="relative min-w-[400px] h-[200px] rounded-lg overflow-hidden shadow"
                         >
                             <div
                                 className="absolute inset-0 bg-cover bg-center"
                                 style={{ backgroundImage: `url(${card.image})` }}
                             />
                             <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px] flex items-center justify-center">
-                                <span className="text-white text-lg font-semibold">{card.title}</span>
+                                <span className="text-white text-xl font-semibold">{card.title}</span>
                             </div>
                         </div>
 
