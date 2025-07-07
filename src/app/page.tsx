@@ -106,7 +106,7 @@ export default function Home() {
 
       <ModelViewer />
       {/* SEO-Optimized Hero Section */}
-      <div className="relative flex-grow flex flex-col justify-center items-center text-center mt-7 px-4 py-20  overflow-hidden">
+      <div className="relative flex-grow flex flex-col justify-center items-center text-center mt-5 px-4 py-10  overflow-hidden">
         {/* Background Animation */}
         <div className="absolute inset-0 opacity-20">
           {/* <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div> */}
