@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link" // Optional if linking to internal route
 
 const projects = [
   { title: "Construction Company", image: "../img/buildwellz.jpg", url: "https://www.buildwellz.in" },
@@ -30,10 +29,10 @@ export default function ProjectGrid() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-black/50 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="text-xl font-semibold text-center px-4">
-                  {project.title}
-                </h3>
+
+              {/* Permanent bottom overlay with transparent background */}
+              <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-10">
+                <h3 className="text-lg text-center font-semibold">{project.title}</h3>
               </div>
             </a>
           ))}
@@ -42,7 +41,7 @@ export default function ProjectGrid() {
         {/* View All Projects Button */}
         <div className="text-center mt-12">
           <a
-            href="/portfolio" // Change this to your actual "All Projects" page route
+            href="/portfolio"
             className="inline-block bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition"
           >
             View All Projects
