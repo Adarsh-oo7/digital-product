@@ -8,12 +8,17 @@ const nextConfig = {
   basePath: process.env.NODE_ENV === 'production' ? '/your-repo-name' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/your-repo-name' : '',
   
-  // Temporarily disable ESLint and TypeScript errors during build
+  // Disable ESLint and TypeScript errors during build
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
+  },
+  
+  // Disable experimental features that might cause issues
+  experimental: {
+    forceSwcTransforms: true,
   },
   
   async headers() {
