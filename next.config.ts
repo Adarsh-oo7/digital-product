@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // For static site generation
+  output: "export",
   images: {
-    unoptimized: true, // Disable Next.js image optimization (required for static export)
+    unoptimized: true,
   },
-  assetPrefix: "", // No prefix needed for custom domains like digitalproductsolutions.in
+  assetPrefix: "",
   async headers() {
     return [
       {
@@ -28,8 +28,17 @@ const nextConfig = {
           },
           {
             key: "Content-Security-Policy",
-            value:
-              "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co; frame-ancestors 'none';",
+            value: `
+              default-src 'self';
+              script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://app.fastbots.ai https://cdn.jotfor.ms;
+              style-src 'self' 'unsafe-inline';
+              img-src 'self' data:;
+              font-src 'self';
+              connect-src 'self' https://formsubmit.co https://app.fastbots.ai;
+              frame-src https://app.fastbots.ai https://form.jotform.com https://agent.jotform.com https://www.google.com https://maps.google.com;
+              object-src 'none';
+              base-uri 'self';
+            `.replace(/\s{2,}/g, " ").trim(),
           },
         ],
       },

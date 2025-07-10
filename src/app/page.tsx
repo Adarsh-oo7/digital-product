@@ -2,13 +2,18 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { 
-  ArrowRight, Brain, Bitcoin as Star, Users, CheckCircle, Award, Shield, Clock, 
-  Zap, TrendingUp, MessageSquare, Target, Code, Search, BarChart3, Globe, 
-   Headphones, Rocket, DollarSign, Phone 
+import {
+  ArrowRight, Brain, Bitcoin as Star, Users, CheckCircle, Award, Shield, Clock,
+  Zap, TrendingUp, MessageSquare, Target, Code, Search, BarChart3, Globe,
+  Headphones, Rocket, DollarSign, Phone
 } from "lucide-react"
 import AnimatedReviews from '../components/AnimatedReviews'
 import Image from "next/image"
+import ProjectCarousel from '@/components/ProjectCarousel'
+import MarqueeCards from '@/components/MarqueeCards'
+import LeftModelViewer from '@/components/LeftModelViewer'
+import RightModelViewer from '@/components/RightModelViewer'
+
 
 // Comprehensive Digital Services
 const digitalServices = [
@@ -57,10 +62,10 @@ const digitalServices = [
 ]
 
 const trustIndicators = [
-  { id:1,icon: Users, number: "20+", text: "Happy Clients" },
-  { id:2,icon: Award, number: "95%", text: "Success Rate" },
-  { id:3,icon: DollarSign, number: "5x", text: "Average ROI" },
-  { id:4,icon: Star, number: "4.9/5", text: "Client Rating" },
+  { id: 1, icon: Users, number: "20+", text: "Happy Clients" },
+  { id: 2, icon: Award, number: "95%", text: "Success Rate" },
+  { id: 3, icon: DollarSign, number: "5x", text: "Average ROI" },
+  { id: 4, icon: Star, number: "4.9/5", text: "Client Rating" },
 ]
 
 const whyChooseUs = [
@@ -97,14 +102,23 @@ const businessResults = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+
+    <div className="min-h-screen  flex flex-col">
+
+{/* <div className="fixed min-h-screen w-full inset-0 z-0 pointer-events-none"> */}
+
+<LeftModelViewer scale={0.3}/>
+<RightModelViewer scale={0.3}/>
+
+
+{/* </div> */}
       {/* SEO-Optimized Hero Section */}
-      <div className="relative flex-grow flex flex-col justify-center items-center text-center mt-7 px-4 py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-pink-800 overflow-hidden">
+      <div className="relative flex-grow flex flex-col justify-center items-center text-center mt-5 px-4 py-10  overflow-hidden">
         {/* Background Animation */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
-          <div className="absolute top-10 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+          {/* <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div> */}
+          {/* <div className="absolute top-10 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div> */}
+          {/* <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div> */}
         </div>
 
         <motion.div
@@ -133,11 +147,10 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Transform your business with AI agents, custom SaaS platforms, high-converting Meta ads, 
+          Transform your business with AI agents, custom SaaS platforms, high-converting Meta ads,
           SEO dominance, and intelligent chatbots. Your complete digital transformation partner.
         </motion.p>
 
-        {/* Enhanced Trust Indicators */}
         <motion.div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 relative z-10"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -177,10 +190,11 @@ export default function Home() {
           </Link>
         </motion.div>
       </div>
+      
 
       {/* Comprehensive Services Section */}
       <motion.div
-        className="py-20 px-4 bg-gray-900 relative"
+        className="py-20 px-4  relative"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.6 }}
@@ -191,17 +205,17 @@ export default function Home() {
               Complete Digital Solutions
               <span className="block text-blue-400">Under One Roof</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              From AI automation to digital marketing, custom SaaS development to SEO dominance - 
+            <p className="text-xl text-gray-100 max-w-4xl mx-auto">
+              From AI automation to digital marketing, custom SaaS development to SEO dominance -
               we provide everything your business needs to thrive in the digital age.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {digitalServices.map((service, index) => (
               <motion.div
                 key={service.title}
-                className="group bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 transform hover:-translate-y-2"
+                className="group bg-white/5 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 transform hover:-translate-y-2"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 + index * 0.1 }}
@@ -214,12 +228,12 @@ export default function Home() {
                     {service.category}
                   </span>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                
+
                 {/* Benefits List */}
                 <div className="space-y-2 mb-6">
                   {service.benefits.map((benefit, idx) => (
@@ -229,10 +243,10 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="pt-4 border-t border-gray-700">
-                  <Link 
-                    href="/services" 
+                  <Link
+                    href="/services"
                     className="text-blue-400 hover:text-blue-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform"
                   >
                     Learn More <ArrowRight className="ml-2 w-4 h-4" />
@@ -273,7 +287,7 @@ export default function Home() {
               <span className="block text-blue-600">Trust Digital Product Solutions</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're not just service providers - we're your strategic partners in digital success 
+              We're not just service providers - we're your strategic partners in digital success
               with a proven track record of delivering exceptional results.
             </p>
           </div>
@@ -296,28 +310,55 @@ export default function Home() {
             ))}
           </div>
 
+          <ProjectCarousel />
+
           {/* Industry Expertise */}
-          <div className="bg-white rounded-2xl p-8 shadow-xl">
-            <h3 className="text-2xl font-bold text-center mb-8 text-gray-900">Industries We Serve</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              {['E-commerce', 'Healthcare', 'Fintech', 'Education', 'Real Estate', 'Manufacturing', 'Startups', 'Enterprise'].map((industry) => (
-                <div key={industry} className="p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
-                  <div className="font-semibold text-gray-800">{industry}</div>
-                </div>
-              ))}
-            </div>
+          <div className="rounded-2xl p-8 ">
+            <h3 className="text-4xl font-bold text-center mb-8 text-gray-900">
+              Industries We Serve
+            </h3>
+            <MarqueeCards />
+
+            {/* Centered Grid Container */}
+            {/* <div className="flex justify-center">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-20 gap-y-6 text-center group">
+                {[
+                  'E-commerce',
+                  'Healthcare',
+                  'Fintech',
+                  'Education',
+                  'Real Estate',
+                  'Manufacturing',
+                  'Startups',
+                  'Enterprise',
+                ].map((industry) => (
+                  <div
+                    key={industry}
+                    className="w-36 h-32 bg-gray-50 rounded-xl flex items-center justify-center 
+          text-center text-gray-800 font-semibold shadow-md cursor-pointer 
+          transition-all duration-300 group-hover:blur-sm hover:!blur-none 
+          hover:scale-105 hover:bg-gray-800 hover:text-white"
+                  >
+                    {industry}
+                  </div>
+                ))}
+              </div>
+            </div> */}
           </div>
+
+
+
         </div>
       </motion.div>
 
       {/* Results & ROI Section */}
       <motion.div
-        className="py-20 px-4 bg-gray-900"
+        className="py-20 px-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1.6 }}
       >
-        <div className="container mx-auto">
+        <div className="container mx-auto bg-gray-900 rounded-3xl overflow-hidden shadow-2xl p-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-8 text-white">
@@ -354,6 +395,8 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+
+            {/* Right Section with Image + Overlays */}
             <div className="relative">
               <Image
                 src="./img/AiH.png"
@@ -362,12 +405,13 @@ export default function Home() {
                 height={400}
                 className="rounded-2xl shadow-2xl"
               />
-              {/* Stats Overlay */}
+              {/* Bottom Right Overlay */}
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-green-600 to-blue-600 text-white p-6 rounded-xl shadow-xl">
                 <div className="text-sm font-medium">Average Client ROI</div>
                 <div className="text-3xl font-bold">500%</div>
                 <div className="text-sm opacity-90">Within 12 Months</div>
               </div>
+              {/* Top Left Overlay */}
               <div className="absolute -top-6 -left-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-xl shadow-xl">
                 <div className="text-sm font-medium">Projects Delivered</div>
                 <div className="text-2xl font-bold">1000+</div>
@@ -376,6 +420,7 @@ export default function Home() {
           </div>
         </div>
       </motion.div>
+
 
       <AnimatedReviews />
 
@@ -397,10 +442,10 @@ export default function Home() {
               Ready to 10x Your Business?
             </h2>
             <p className="text-xl mb-12 text-gray-200 max-w-3xl mx-auto">
-              Join 50+ successful businesses who've transformed their operations with our 
+              Join 50+ successful businesses who've transformed their operations with our
               comprehensive digital solutions. Don't let competitors get ahead - start today!
             </p>
-            
+
             <div className="flex flex-col lg:flex-row gap-6 justify-center items-center mb-12">
               <Link
                 href="/contact"
@@ -456,12 +501,12 @@ export default function Home() {
               Digital Product Solutions - Your Complete Digital Transformation Partner
             </h2>
             <p className="text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Based in India, serving globally - we specialize in AI agents, custom SaaS development, 
-              Meta advertising, SEO services, chatbot integration, and comprehensive digital marketing solutions. 
+              Based in India, serving globally - we specialize in AI agents, custom SaaS development,
+              Meta advertising, SEO services, chatbot integration, and comprehensive digital marketing solutions.
               Transform your business with cutting-edge technology and proven strategies that deliver measurable results.
             </p>
           </div>
-          
+
           {/* Service Keywords for SEO */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm text-gray-400">
             <div>AI Agent Development</div>

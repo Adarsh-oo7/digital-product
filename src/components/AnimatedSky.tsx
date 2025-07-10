@@ -25,7 +25,7 @@ const AnimatedSky: React.FC = () => {
     const shootingStars: { x: number; y: number; length: number; speed: number; opacity: number }[] = []
     let nebulaOffset = 0
 
-    for (let i = 0; i < 400; i++) {
+    for (let i = 0; i < 200; i++) {
       stars.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -125,7 +125,7 @@ const AnimatedSky: React.FC = () => {
           }
         });
       
-        if (shootingStars.length < 10 && Math.random() < 0.02) {
+        if (shootingStars.length < 100 && Math.random() < 0.05) {
           shootingStars.push({
             x: Math.random() * width, // Use local width
             y: 0,
