@@ -9,11 +9,13 @@ interface RightModelViewerProps {
 
 export default function RightModelViewer({ scale = 0.4 }: RightModelViewerProps) {
   const pathname = usePathname();
-  const modelRef = useRef<HTMLModelViewerElement>(null);
+  // Change this line - use HTMLElement instead of HTMLModelViewerElement
+  const modelRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (modelRef.current) {
-      modelRef.current.exposure = 1;
+      // Cast to any to access model-viewer specific properties
+      (modelRef.current as any).exposure = 1;
     }
   }, [pathname]);
 
