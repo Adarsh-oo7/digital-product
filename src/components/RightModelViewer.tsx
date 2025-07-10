@@ -57,6 +57,8 @@ export default function RightModelViewer({ scale = 0.4 }: RightModelViewerProps)
             height: '150%',
             objectFit: 'contain',
             pointerEvents: 'none',
+            opacity: 0.5, // ✅ set desired transparency
+          transition: 'opacity 0.8s ease',
           }}
         />
       </div>
