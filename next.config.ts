@@ -19,18 +19,6 @@ const nextConfig = {
   // Additional build optimizations
   swcMinify: true,
   
-  // Webpack configuration to bypass additional checks
-  webpack: (config, { isServer }) => {
-    // Disable type checking during build
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-      };
-    }
-    return config;
-  },
-  
   async headers() {
     return [
       {
