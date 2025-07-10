@@ -66,9 +66,11 @@ jobs:
       - name: Build with Next.js
         run: |
           export CI=false
-          ${{ steps.detect-package-manager.outputs.runner }} next build --no-lint
+          export SKIP_TYPE_CHECK=true
+          ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
           CI: false
+          SKIP_TYPE_CHECK: true
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

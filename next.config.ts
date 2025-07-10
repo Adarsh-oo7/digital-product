@@ -16,6 +16,9 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   
+  // Additional build optimizations
+  swcMinify: true,
+  
   // Disable experimental features that might cause issues
   experimental: {
     forceSwcTransforms: true,
