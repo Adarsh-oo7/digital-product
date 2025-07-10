@@ -9,9 +9,10 @@ import {
 } from "lucide-react"
 import AnimatedReviews from '../components/AnimatedReviews'
 import Image from "next/image"
-import ModelViewer from '@/components/ModelViewer'
 import ProjectCarousel from '@/components/ProjectCarousel'
 import MarqueeCards from '@/components/MarqueeCards'
+import LeftModelViewer from '@/components/LeftModelViewer'
+import RightModelViewer from '@/components/RightModelViewer'
 
 
 // Comprehensive Digital Services
@@ -102,9 +103,15 @@ const businessResults = [
 export default function Home() {
   return (
 
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen  flex flex-col">
 
-      <ModelViewer />
+{/* <div className="fixed min-h-screen w-full inset-0 z-0 pointer-events-none"> */}
+
+<LeftModelViewer scale={0.3}/>
+<RightModelViewer scale={0.3}/>
+
+
+{/* </div> */}
       {/* SEO-Optimized Hero Section */}
       <div className="relative flex-grow flex flex-col justify-center items-center text-center mt-5 px-4 py-10  overflow-hidden">
         {/* Background Animation */}
@@ -183,6 +190,7 @@ export default function Home() {
           </Link>
         </motion.div>
       </div>
+      
 
       {/* Comprehensive Services Section */}
       <motion.div
