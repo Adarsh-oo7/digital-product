@@ -1,21 +1,27 @@
-'use client';
-
+'use client'
+import { useEffect,useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { useEffect, useRef } from 'react';
 
-interface LeftModelViewerProps {
-  scale?: number;
+function isMobile() {
+  if (typeof window !== 'undefined') {
+    return window.innerWidth < 768;
+  }
+  return false;
 }
 
 export default function LeftModelViewer({ scale = 0.4 }: LeftModelViewerProps) {
   const pathname = usePathname();
   const modelRef = useRef<HTMLModelViewerElement>(null);
+  const [show, setShow] = useState(true);
 
   useEffect(() => {
+    setShow(!isMobile());
     if (modelRef.current) {
       modelRef.current.exposure = 1;
     }
   }, [pathname]);
+
+  if (!show) return null;
 
   return (
     <div
@@ -24,7 +30,7 @@ export default function LeftModelViewer({ scale = 0.4 }: LeftModelViewerProps) {
         transform: `translateY(-50%) scale(${scale})`,
         transformOrigin: 'left',
         width: '80vw',
-        height: '20vh', // Increased to ensure enough vertical room
+        height: '20vh',
         overflow: 'visible',
         animation: 'floatY 5s ease-in-out infinite',
       }}
@@ -46,10 +52,10 @@ export default function LeftModelViewer({ scale = 0.4 }: LeftModelViewerProps) {
         style={{
           width: '100%',
           height: '150%',
-          maxHeight: '100vh', // prevents overflow from scaling
+          maxHeight: '100vh',
           objectFit: 'contain',
           pointerEvents: 'none',
-          opacity: 0.5, // ✅ set desired transparency
+          opacity: 0.5,
           transition: 'opacity 0.8s ease',
         }}
       />
