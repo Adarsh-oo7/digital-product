@@ -5,7 +5,7 @@ import Image from "next/image"
 const projects = [
   { title: "Construction Company", image: "../img/buildwellz.jpg", url: "https://www.buildwellz.in" },
   { title: "Soft Drinks Company", image: "../img/guava-fizz.png", url: "https://www.squeezeberriez.in/" },
-  { title: "Catering", image: "../img/caters.png", url: "https://adarsh-oo7.github.io/-Lemons-Elegant-Catering/" },
+  { title: "Wedding Events", image: "../img/wedding events.jpg", url: "https://crystalknotfilms.com/" },
 ]
 
 export default function ProjectGrid() {

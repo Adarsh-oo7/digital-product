@@ -105,13 +105,13 @@ export default function Home() {
 
     <div className="min-h-screen  flex flex-col">
 
-{/* <div className="fixed min-h-screen w-full inset-0 z-0 pointer-events-none"> */}
+      {/* <div className="fixed min-h-screen w-full inset-0 z-0 pointer-events-none"> */}
 
-<LeftModelViewer scale={0.3}/>
-<RightModelViewer scale={0.3}/>
+      <LeftModelViewer scale={0.3} />
+      <RightModelViewer scale={0.3} />
 
 
-{/* </div> */}
+      {/* </div> */}
       {/* SEO-Optimized Hero Section */}
       <div className="relative flex-grow flex flex-col justify-center items-center text-center mt-5 px-4 py-10  overflow-hidden">
         {/* Background Animation */}
@@ -190,8 +190,9 @@ export default function Home() {
           </Link>
         </motion.div>
       </div>
-      
 
+      <ProjectCarousel />
+      
       {/* Comprehensive Services Section */}
       <motion.div
         className="py-20 px-4  relative"
@@ -310,7 +311,7 @@ export default function Home() {
             ))}
           </div>
 
-          <ProjectCarousel />
+
 
           {/* Industry Expertise */}
           <div className="rounded-2xl p-8 ">
