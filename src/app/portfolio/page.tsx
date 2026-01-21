@@ -59,6 +59,30 @@ const projects = [
     clientType: "Agriculture",
     testimonial: "Now we can reach customers directly without middlemen!",
   },
+  {
+    title: "Wedding Events Website",
+    category: "Business Website",
+    description:
+      "A sophisticated, responsive static website crafted for a premier wedding planning team in Banglore, India. The platform features an elegant portfolio of luxury weddings, detailed service breakdowns, and a seamless inquiry system for prospective couples. Engineered for high performance and local SEO, the site effectively showcases their creative excellence and simplifies the booking process for the regional wedding market.",
+    image: "./img/Screenshot 2026-01-20 221313.png",
+    technologies: ["Next.js"],
+    features: ["Event Gallery", "Wedding Videos", "Contact and Services", "Custom SEO"],
+    duration: "2 weeks",
+    clientType: "Wedding Events",
+    testimonial: "Now we can reach customers directly without middlemen!",
+  },
+  {
+    title: "Kerala Sellers Website",
+    category: "Business Website",
+    description:
+      "Kerala Sellers is an all-in-one e-commerce solution designed for Kerala’s local businesses. With secure payment integration, smart product management, custom dashboard, advanced product filtering, and a clean, intuitive interface, the platform helps sellers connect with customers effortlessly and scale their business online—starting from Attingal to all of Kerala.",
+    image: "./img/Screenshot 2026-01-21 153250.png",
+    technologies: ["Next.js"],
+    features: ["Own Website", "Dashboard", "Stock Management", "Billing Software"],
+    duration: "8 Months",
+    clientType: "E-Commerce",
+    testimonial: "Our Sales increased significantly after launching the new website.",
+  },
 ]
 
 const stats = [
@@ -71,9 +95,9 @@ const stats = [
 export default function Portfolio() {
   const [filter, setFilter] = useState("All")
   const categories = ["All", "E-commerce Development", "Business Website", "Maintenance & Support", "Agriculture & Local Business"]
-  
-  const filteredProjects = filter === "All" 
-    ? projects 
+
+  const filteredProjects = filter === "All"
+    ? projects
     : projects.filter(project => project.category === filter)
 
   return (
@@ -140,7 +164,7 @@ export default function Portfolio() {
           `}
         </script>
       </Head>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white py-20 px-4 overflow-hidden">
@@ -162,7 +186,7 @@ export default function Portfolio() {
               <p className="text-xl md:text-2xl mb-8 text-gray-100 leading-relaxed">
                 Discover our award-winning collection of digital solutions that have transformed businesses across Kerala and Attingal. From cutting-edge e-commerce platforms to elegant business websites, each project represents our commitment to excellence and client success.
               </p>
-              
+
               {/* Trust Indicators */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
                 {stats.map((stat, index) => (
@@ -195,11 +219,10 @@ export default function Portfolio() {
                 <button
                   key={category}
                   onClick={() => setFilter(category)}
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                    filter === category
-                      ? "bg-blue-600 text-white shadow-lg transform scale-105"
-                      : "bg-gray-200 text-gray-700 hover:bg-gray-300 hover:shadow-md"
-                  }`}
+                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${filter === category
+                    ? "bg-blue-600 text-white shadow-lg transform scale-105"
+                    : "bg-gray-200 text-gray-700 hover:bg-gray-300 hover:shadow-md"
+                    }`}
                 >
                   {category}
                 </button>
@@ -211,7 +234,7 @@ export default function Portfolio() {
         {/* Projects Grid */}
         <section className="py-16 px-4">
           <div className="container mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-12">
               {filteredProjects.map((project, index) => (
                 <motion.div
                   key={project.title}
@@ -224,15 +247,15 @@ export default function Portfolio() {
                     <Image
                       src={project.image}
                       alt={`${project.title} - Web Development Project by Digital Product Solutions`}
-                      width={600}
-                      height={400}
+                      width={500}
+                      height={300}
                       className="w-full h-64 object-cover transform hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       {project.category}
                     </div>
                   </div>
-                  
+
                   <div className="p-8">
                     <div className="flex justify-between items-start mb-4">
                       <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">{project.title}</h3>
@@ -241,9 +264,9 @@ export default function Portfolio() {
                         <div>{project.clientType}</div>
                       </div>
                     </div>
-                    
+
                     <p className="text-gray-600 mb-6 leading-relaxed text-lg">{project.description}</p>
-                    
+
                     {/* Key Features */}
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-800 mb-3">Key Features:</h4>
@@ -256,7 +279,7 @@ export default function Portfolio() {
                         ))}
                       </div>
                     </div>
-                    
+
                     {/* Technologies */}
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-800 mb-3">Technologies Used:</h4>
@@ -271,7 +294,7 @@ export default function Portfolio() {
                         ))}
                       </div>
                     </div>
-                    
+
                     {/* Client Testimonial */}
                     <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500">
                       <p className="text-gray-700 italic">"{project.testimonial}"</p>
@@ -279,7 +302,7 @@ export default function Portfolio() {
                         <div className="flex text-yellow-400">
                           {[...Array(5)].map((_, i) => (
                             <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                              <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                              <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                             </svg>
                           ))}
                         </div>
@@ -313,24 +336,24 @@ export default function Portfolio() {
                   View Our Services
                 </button>
               </div>
-              
+
               {/* Trust Badges */}
               <div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-sm text-gray-300">
                 <div className="flex items-center">
                   <svg className="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   100% Satisfaction Guarantee
                 </div>
                 <div className="flex items-center">
                   <svg className="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   Local Kerala Business
                 </div>
                 <div className="flex items-center">
                   <svg className="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   24/7 Support Available
                 </div>
