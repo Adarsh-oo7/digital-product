@@ -74,6 +74,11 @@ const Navbar: React.FC = () => {
               </ul>
             )}
           </li>
+          <li>
+            <Link href="/pricing" className="hover:text-blue-400 transition-colors">
+              Pricing
+            </Link>
+          </li>
 
           <li>
             <Link href="/contact" className="hover:text-blue-400 transition-colors">
