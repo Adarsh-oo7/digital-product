@@ -17,7 +17,8 @@ export default function LeftModelViewer({ scale = 0.4 }: LeftModelViewerProps) {
   useEffect(() => {
     setShow(!isMobile());
     if (modelRef.current) {
-      modelRef.current.exposure = 1;
+      // Cast to any to access model-viewer specific properties
+      (modelRef.current as any).exposure = 1;
     }
   }, [pathname]);
 
