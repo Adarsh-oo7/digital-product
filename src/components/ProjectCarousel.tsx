@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 
 const projects = [
   { title: "Construction Company", image: "../img/buildwellz.jpg", url: "https://www.buildwellz.in" },
@@ -9,8 +10,18 @@ const projects = [
 ]
 
 const InHouseprojects = [
-  { title: "Kerala Sellers", image: "../img/ks dsp.jpg", url: "https://www.keralasellers.in/", upcoming: false },
-  { title: "Kerala PSC", image: "../img/ks dsp (1).jpg", url: "#", upcoming: true },
+  {
+    title: "Kerala Sellers",
+    image: "../img/ks dsp.jpg",
+    url: "/kerala-sellers",   // internal route
+    upcoming: false
+  },
+  {
+    title: "Kerala PSC",
+    image: "../img/ks dsp (1).jpg",
+    url: "#",
+    upcoming: true
+  },
 ];
 
 export default function ProjectGrid() {
@@ -50,38 +61,57 @@ export default function ProjectGrid() {
 
         <div className="w-full flex justify-center py-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 max-w-fit mx-auto">
-            {InHouseprojects.map((project) => (
-              <a
-                key={project.title}
-                href={project.upcoming ? undefined : project.url}
-                target={project.upcoming ? undefined : "_blank"}
-                rel="noopener noreferrer"
-                // If upcoming: removes pointer, adds grayscale, and slightly fades the card
-                className={`relative group overflow-hidden rounded-2xl shadow-lg aspect-square block w-60 md:w-64 bg-gray-100 transition-all
-          ${project.upcoming ? "cursor-default grayscale opacity-80" : "hover:shadow-2xl"}`}
-              >
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className={`object-cover ${!project.upcoming && "transition-transform duration-300 group-hover:scale-110"}`}
-                />
+            {InHouseprojects.map((project) => {
+              const Card = (
+                <div
+                  className={`relative group overflow-hidden rounded-2xl shadow-lg aspect-square block w-60 md:w-64 bg-gray-100 transition-all
+      ${project.upcoming ? "cursor-default grayscale opacity-80" : "hover:shadow-2xl"}`}
+                >
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
 
-                {/* Bottom Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4">
-                  <h3 className="text-sm md:text-base text-center font-semibold">
-                    {project.title}
-                  </h3>
-                  {project.upcoming && (
-                    <p className="text-[10px] uppercase tracking-widest text-yellow-500 text-center mt-1">
-                      Coming Soon
-                    </p>
-                  )}
+                  <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4">
+                    <h3 className="text-sm md:text-base text-center font-semibold">
+                      {project.title}
+                    </h3>
+                    {project.upcoming && (
+                      <p className="text-[10px] uppercase tracking-widest text-yellow-500 text-center mt-1">
+                        Coming Soon
+                      </p>
+                    )}
+                  </div>
                 </div>
+              )
 
-               
-              </a>
-            ))}
+              if (project.upcoming) {
+                return <div key={project.title}>{Card}</div>
+              }
+
+              // 🔥 Internal route
+              if (project.url.startsWith("/")) {
+                return (
+                  <Link key={project.title} href={project.url}>
+                    {Card}
+                  </Link>
+                )
+              }
+
+              // 🌍 External route
+              return (
+                <a
+                  key={project.title}
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {Card}
+                </a>
+              )
+            })}
           </div>
         </div>
 

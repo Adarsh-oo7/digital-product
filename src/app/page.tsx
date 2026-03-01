@@ -1,12 +1,17 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import Link from 'next/link'
 import {
-  ArrowRight, Brain, Bitcoin as Star, Users, CheckCircle, Award, Shield, Clock,
-  Zap, TrendingUp, MessageSquare, Target, Code, Search, BarChart3, Globe,
-  Headphones, Rocket, DollarSign, Phone
+  ArrowRight, Bitcoin as Star, Users, CheckCircle, Award, Shield, Clock,
+  Zap, TrendingUp, MessageSquare, BarChart3, Globe,
+  Headphones, Rocket, DollarSign, Phone, Code2, Instagram, BadgeDollarSign, MessageCircle, MapPin, Layers,
+  Smartphone,
+  Bot,
+  Settings,
 } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa";
 import AnimatedReviews from '../components/AnimatedReviews'
 import Image from "next/image"
 import ProjectCarousel from '@/components/ProjectCarousel'
@@ -14,52 +19,6 @@ import MarqueeCards from '@/components/MarqueeCards'
 import LeftModelViewer from '@/components/LeftModelViewer'
 import RightModelViewer from '@/components/RightModelViewer'
 
-
-// Comprehensive Digital Services
-const digitalServices = [
-  {
-    icon: Brain,
-    title: "AI Agent Development",
-    description: "Custom AI agents that automate complex business processes, handle customer inquiries, and boost productivity by 400%.",
-    benefits: ["24/7 automation", "Cost reduction", "Scalable solutions"],
-    category: "AI Solutions"
-  },
-  {
-    icon: MessageSquare,
-    title: "Chatbot Setup & Integration",
-    description: "Intelligent chatbots for websites, WhatsApp, Facebook Messenger, and more. Reduce support costs by 60%.",
-    benefits: ["Multi-platform", "Smart responses", "Lead generation"],
-    category: "AI Solutions"
-  },
-  {
-    icon: Target,
-    title: "Meta Ads & PPC Management",
-    description: "High-converting Facebook and Instagram ad campaigns that deliver 5x ROAS with precision targeting.",
-    benefits: ["5x ROAS average", "Precise targeting", "Campaign optimization"],
-    category: "Digital Marketing"
-  },
-  {
-    icon: Code,
-    title: "Custom SaaS Development",
-    description: "Scalable SaaS platforms tailored to your business needs. From MVP to enterprise-level solutions.",
-    benefits: ["Scalable architecture", "Custom features", "Cloud hosting"],
-    category: "Development"
-  },
-  {
-    icon: Search,
-    title: "SEO ",
-    description: "Dominate search results with our proven SEO strategies. Average 300% increase in organic traffic.",
-    benefits: ["Top rankings", "Organic traffic", "Content strategy"],
-    category: "Digital Marketing"
-  },
-  {
-    icon: Globe,
-    title: "Complete Web Solutions",
-    description: "From landing pages to complex web applications. Modern, fast, and conversion-optimized websites.",
-    benefits: ["Mobile responsive", "Fast loading", "Conversion focused"],
-    category: "Development"
-  },
-]
 
 const trustIndicators = [
   { id: 1, icon: Users, number: "20+", text: "Happy Clients" },
@@ -100,7 +59,69 @@ const businessResults = [
   "Dominate local search with comprehensive digital presence"
 ]
 
+const stats = [
+  { value: 20, suffix: "+", label: "Kerala Businesses Helped" },
+  { value: 6, suffix: "", label: "Service Areas" },
+  { value: 7, suffix: " Days", label: "Website Delivery" },
+  { value: 0, suffix: "", label: "Kerala Based", custom: "Trivandrum" },
+  { value: 0, suffix: "", label: "Talk to Developer", custom: "Direct" },
+];
+
+interface CounterProps {
+  value: number;
+  suffix?: string;
+}
+
+function Counter({ value, suffix }: CounterProps) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const duration = 1500;
+    const increment = value / (duration / 16);
+
+    const counter = setInterval(() => {
+      start += increment;
+      if (start >= value) {
+        setCount(value);
+        clearInterval(counter);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+
+    return () => clearInterval(counter);
+  }, [value]);
+
+  return (
+    <span className="text-3xl md:text-4xl font-bold text-yellow-400">
+      {value === 0 ? "" : count}
+      {suffix}
+    </span>
+  );
+}
+
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
 export default function Home() {
+
+
   return (
 
     <div className="min-h-screen  flex flex-col">
@@ -134,9 +155,9 @@ export default function Home() {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Complete Digital Solutions
+            We Build Software, Apps & Al Solutions
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent block">
-              AI • SaaS • Marketing • SEO
+              for Kerala Businesses
             </span>
           </h1>
         </motion.div>
@@ -147,8 +168,10 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Transform your business with AI agents, custom SaaS platforms, high-converting Meta ads,
-          SEO dominance, and intelligent chatbots. Your complete digital transformation partner.
+          Digital Product Solutions has helped <strong>20+ businesses across Kerala</strong> with
+          custom software, mobile apps, WhatsApp automation, SEO, social media management,
+          and AI-powered tools. Based in Trivandrum. Website live in 7 days.
+
         </motion.p>
 
         <motion.div
@@ -177,7 +200,7 @@ export default function Home() {
             className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 flex items-center justify-center shadow-2xl transform hover:scale-105"
             aria-label="Get Free Digital Strategy Consultation"
           >
-            Get Free Strategy Consultation
+            Get Free Consultation
             <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link
@@ -185,104 +208,192 @@ export default function Home() {
             className="group bg-white/10 backdrop-blur-sm border-2 border-white/30 hover:bg-white hover:text-gray-900 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 flex items-center justify-center transform hover:scale-105"
             aria-label="View Our Portfolio"
           >
-            View Success Stories
+            See Our Work
             <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>
       </div>
 
-      <ProjectCarousel />
-      
-      {/* Comprehensive Services Section */}
-      <motion.div
-        className="py-20 px-4  relative"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-      >
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Complete Digital Solutions
-              <span className="block text-blue-400">Under One Roof</span>
-            </h2>
-            <p className="text-xl text-gray-100 max-w-4xl mx-auto">
-              From AI automation to digital marketing, custom SaaS development to SEO dominance -
-              we provide everything your business needs to thrive in the digital age.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {digitalServices.map((service, index) => (
+      <section className="w-full text-white py-14">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 text-center">
+            {stats.map((stat, i) => (
               <motion.div
-                key={service.title}
-                className="group bg-white/5 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 transform hover:-translate-y-2"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 + index * 0.1 }}
+                key={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
+                viewport={{ once: true }}
+                className="flex flex-col items-center transition-all duration-300 hover:scale-105"
               >
-                <div className="flex items-center justify-between mb-6">
-                  <div className="bg-gradient-to-br from-blue-500 to-purple-600 w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <span className="text-xs px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full font-semibold">
-                    {service.category}
+                {stat.custom ? (
+                  <span className="text-3xl md:text-4xl font-bold text-yellow-400">
+                    {stat.custom}
                   </span>
-                </div>
+                ) : (
+                  <Counter value={stat.value} suffix={stat.suffix} />
+                )}
 
-                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-
-                {/* Benefits List */}
-                <div className="space-y-2 mb-6">
-                  {service.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-green-400">
-                      <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </div>
-                  ))}
-                </div>
-
-                <div className="pt-4 border-t border-gray-700">
-                  <Link
-                    href="/services"
-                    className="text-blue-400 hover:text-blue-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform"
-                  >
-                    Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                </div>
+                <span className="text-sm md:text-base text-gray-300 mt-2">
+                  {stat.label}
+                </span>
               </motion.div>
             ))}
           </div>
-
-          {/* Service Categories CTA */}
-          <div className="mt-16 text-center">
-            <h3 className="text-2xl font-bold text-white mb-6">Need a Custom Solution?</h3>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Every business is unique. We create tailored digital solutions that fit your specific needs and goals.
-            </p>
-            <Link
-              href="/book"
-              className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
-            >
-              Discuss Custom Solution
-              <Rocket className="ml-2 w-5 h-5" />
-            </Link>
-          </div>
         </div>
-      </motion.div>
+      </section>
+
+
+
+      <ProjectCarousel />
+
+
+      <section id="services" className="py-20 text-white">
+        <div className="max-w-7xl mx-auto px-6">
+
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto mb-14"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Everything Your Kerala Business Needs
+              <span className="block text-blue-400">
+                Under One Roof
+              </span>
+            </h2>
+            <p className="text-gray-400 text-base md:text-lg">
+              We've helped 20+ businesses across Kerala with these 6 service areas.
+              All delivered by the same dedicated team.
+            </p>
+          </motion.div>
+
+          {/* Services Grid */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {[
+              {
+                icon: Code2,
+                title: "Software Development",
+                desc: "Custom web apps, dashboards, booking systems and business platforms built specifically for Kerala businesses.",
+                price: "Starting ₹15,000",
+                link: "/portfolio",
+              },
+              {
+                icon: Smartphone,
+                title: "App Development",
+                desc: "Android and iOS mobile apps for Kerala businesses — restaurants, shops, clinics and delivery services.",
+                price: "Starting ₹25,000",
+                link: "/portfolio",
+              },
+              {
+                icon: TrendingUp,
+                title: "SEO Services",
+                desc: "Rank on Google when Kerala customers search for your service. Organic traffic that grows monthly.",
+                price: "Starting ₹5,000",
+                link: "/portfolio",
+              },
+              {
+                icon: Instagram,
+                title: "Social Media Management",
+                desc: "Instagram, Facebook and WhatsApp marketing handled for you. Daily posts and audience growth.",
+                price: "Starting ₹3,000/month",
+                link: "/portfolio",
+              },
+              {
+                icon: Settings,
+                title: "Business Automation",
+                desc: "Automate WhatsApp replies, order tracking and invoice generation. Set once — runs forever.",
+                price: "Starting ₹10,000",
+                link: "/portfolio",
+              },
+              {
+                icon: Bot,
+                title: "AI-Powered Solutions",
+                desc: "AI chatbots, smart recommendations and automation systems for Kerala businesses.",
+                price: "Starting ₹12,000",
+                link: "/portfolio",
+              },
+            ].map((service, index) => {
+              const Icon = service.icon;
+
+              return (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-gray-700 hover:border-yellow-400 transition-all duration-300 hover:-translate-y-2 group"
+                >
+                  {/* Icon Box */}
+                  <div className="mb-6 w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-blue-400/20 group-hover:scale-110 transition duration-300">
+                    <Icon className="w-7 h-7 text-blue-400 group-hover:text-yellow-400 transition duration-300" />
+                  </div>
+
+                  <h3 className="text-xl font-semibold mb-3">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-gray-400 text-sm mb-5">
+                    {service.desc}
+                  </p>
+
+                  <div className="text-yellow-400 font-bold mb-4">
+                    {service.price}
+                  </div>
+
+                  <a
+                    href={service.link}
+                    className="text-sm font-medium hover:text-yellow-400 transition"
+                  >
+                    Learn More →
+                  </a>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-16 text-center"
+        >
+          <h3 className="text-2xl font-bold mb-6">
+            Need a Custom Solution?
+          </h3>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Every business is unique. We create tailored digital solutions that fit your specific needs and goals.
+          </p>
+          <Link
+            href="/book"
+            className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
+          >
+            Discuss Custom Solution
+            <Rocket className="ml-2 w-5 h-5" />
+          </Link>
+        </motion.div>
+      </section>
 
       {/* Why Choose Us Section */}
       <motion.div
-        className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50"
+        className="py-10 px-4 bg-gradient-to-br from-gray-50 to-blue-50"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1.2 }}
       >
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          {/* <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
               Why 500+ Businesses
               <span className="block text-blue-600">Trust Digital Product Solutions</span>
@@ -291,9 +402,9 @@ export default function Home() {
               We're not just service providers - we're your strategic partners in digital success
               with a proven track record of delivering exceptional results.
             </p>
-          </div>
+          </div> */}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {whyChooseUs.map((item, index) => (
               <motion.div
                 key={item.title}
@@ -309,7 +420,88 @@ export default function Home() {
                 <p className="text-gray-600 leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
-          </div>
+          </div> */}
+
+          <section id="why-us" className="py-10 bg-white">
+            <div className="max-w-6xl mx-auto px-6">
+
+              {/* Heading */}
+              <div className="text-center max-w-2xl mx-auto mb-20">
+                <h2 className="text-3xl md:text-4xl  font-bold mb-6 text-gray-900 tracking-tight">
+                  Why 20+ Kerala Businesses Choose
+                  <span className="block text-blue-600 font-normal mt-3">
+                    Digital Product Solutions
+                  </span>
+                </h2>
+
+                <p className="mt-6 text-gray-500 text-lg leading-relaxed">
+                  We're not a big agency with 50 people you'll never talk to. We are kerala builders who understand your market.
+                </p>
+              </div>
+
+              {/* Grid */}
+              <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+
+                {[
+                  {
+                    title: "Talk Directly to the Developer",
+                    desc: "No account managers. No project managers. You whatsapp Adarsh directly and get answers immediately.",
+                    icon: MessageCircle,
+                  },
+                  {
+                    title: "Built for Kerala Businesses",
+                    desc: "Based in Trivandrum. We understand Kerala customers, kerala markets and what actually works here.",
+                    icon: MapPin,
+                  },
+                  {
+                    title: "Fast Delivery – 7 Days",
+                    desc: "Most websites go live in 7 days. Apps in 30. No Months of waiting. No scope creep.",
+                    icon: Zap,
+                  },
+                  {
+                    title: "All Services in One Place",
+                    desc: "Software, apps, SEO, socialmedia, automation and AI — all from one focused team that know your bussiness.",
+                    icon: Layers,
+                  },
+                  {
+                    title: "Build Kerala Sellers",
+                    desc: "We don't justbuilt for clients.we build our own live marketplace. We know what it takes to ship real.",
+                    icon: Rocket,
+                  },
+                  {
+                    title: "Transparent Pricing",
+                    desc: "You know the price before we start.No hidden fees. No surprice Invoices. Starting from ₹3,000/month.",
+                    icon: BadgeDollarSign,
+                  },
+                ].map((item, i) => {
+                  const Icon = item.icon;
+                  return (
+                    <div
+                      key={i}
+                      className="group p-8 rounded-2xl border border-gray-100 hover:border-green-500 shadow-lg hover:shadow-xl transition-all duration-300"
+                    >
+                      <div className="mb-6">
+                        <Icon
+                          size={28}
+                          strokeWidth={1.5}
+                          className="text-gray-700 group-hover:text-green-600 transition"
+                        />
+                      </div>
+
+                      <h3 className="text-lg font-medium text-gray-900 mb-3">
+                        {item.title}
+                      </h3>
+
+                      <p className="text-gray-500 leading-relaxed text-sm">
+                        {item.desc}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+
+            </div>
+          </section>
 
 
 
@@ -407,7 +599,7 @@ export default function Home() {
                 className="rounded-2xl shadow-2xl"
               />
               {/* Bottom Right Overlay */}
-              
+
 
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-green-600 to-blue-600 text-white p-6 rounded-xl shadow-xl">
                 <div className="text-sm font-medium">Average Client ROI</div>
@@ -442,59 +634,47 @@ export default function Home() {
             </div>
 
             <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">
-              Ready to 10x Your Business?
+              Ready to Grow Your Business Online?
             </h2>
             <p className="text-xl mb-12 text-gray-200 max-w-3xl mx-auto">
-              Join 50+ successful businesses who've transformed their operations with our
-              comprehensive digital solutions. Don't let competitors get ahead - start today!
+              Get a <span className="font-semibold text-blue-600">free consultation</span> —
+              talk directly to our developer. No sales pitch. No pressure.
+              Just honest advice on what your business actually needs.
             </p>
 
+
             <div className="flex flex-col lg:flex-row gap-6 justify-center items-center mb-12">
-              <Link
-                href="/contact"
-                className="group bg-white text-gray-900 hover:bg-gray-100 font-bold py-5 px-12 rounded-full transition-all duration-300 inline-flex items-center shadow-2xl transform hover:scale-105 text-lg"
-                aria-label="Get Free Digital Strategy Audit"
-              >
-                Get Free Digital Strategy Audit
-                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <div className="text-center">
-                <div className="text-sm text-gray-300 mb-1">🎯 Free comprehensive audit • No strings attached</div>
-                <div className="text-sm text-gray-300">⭐ Trusted by Fortune 20 companies</div>
-                <div className="text-sm text-yellow-400 font-semibold">💰 Average 500% ROI guaranteed</div>
+              <div className=" flex flex-col sm:flex-row items-center justify-center gap-4">
+
+                <a
+                  href="https://wa.me/919400355185?text=Hi%20Adarsh%2C%20I%20want%20a%20free%20consultation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-semibold text-white bg-green-600 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300"
+                >
+                  <FaWhatsapp className="text-xl" />
+                  WhatsApp Now – Free Consultation
+                </a>
+
+                <a
+                  href="tel:+919400355185"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-gray-800 bg-gray-100 rounded-xl hover:bg-gray-200 transition-all duration-300"
+                >
+                  📞 Call +91 94003 55185
+                </a>
+
               </div>
+
             </div>
 
             {/* Contact Options */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                <Phone className="w-8 h-8 mx-auto mb-4 text-blue-400" />
-                <h3 className="font-bold mb-2">Call Now</h3>
-                <p className="text-sm text-gray-300">Speak with our experts</p>
-                <Link href="tel:+91-9400355185" className="text-blue-400 hover:text-blue-300 font-semibold">
-                  +91-9400355185
-                </Link>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                <MessageSquare className="w-8 h-8 mx-auto mb-4 text-green-400" />
-                <h3 className="font-bold mb-2">WhatsApp</h3>
-                <p className="text-sm text-gray-300">Quick consultation</p>
-                <Link href="https://wa.me/919400355185" className="text-green-400 hover:text-green-300 font-semibold">
-                  Chat Now
-                </Link>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                <Globe className="w-8 h-8 mx-auto mb-4 text-purple-400" />
-                <h3 className="font-bold mb-2">Schedule Meeting</h3>
-                <p className="text-sm text-gray-300">Book your slot</p>
-                <Link href="/book" className="text-purple-400 hover:text-purple-300 font-semibold">
-                  Book Now
-                </Link>
-              </div>
-            </div>
+            <p className="mt-8 text-sm text-gray-100">
+              📍 Based in Trivandrum, Kerala · Serving all of Kerala · Reply within 2 hours
+            </p>
           </motion.div>
         </div>
       </section>
+
 
       {/* SEO Footer Content */}
       <section className="bg-gray-900 py-16 px-4">
@@ -504,10 +684,14 @@ export default function Home() {
               Digital Product Solutions - Your Complete Digital Transformation Partner
             </h2>
             <p className="text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Based in India, serving globally - we specialize in AI agents, custom SaaS development,
-              Meta advertising, SEO services, chatbot integration, and comprehensive digital marketing solutions.
-              Transform your business with cutting-edge technology and proven strategies that deliver measurable results.
+              Software development and digital marketing company based in
+              Thiruvananthapuram (Trivandrum), Kerala. We help businesses across
+              Kerala with software development, mobile apps, SEO, social media
+              management, business automation and AI solutions.
             </p>
+            <p className="mt-4 font-semibold text-blue-400">
+                20+ Kerala businesses helped.
+              </p>
           </div>
 
           {/* Service Keywords for SEO */}
@@ -523,6 +707,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+    
     </div>
   )
 }

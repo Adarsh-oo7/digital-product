@@ -32,11 +32,11 @@ export default function RootLayout({
 
         <meta
           property="og:title"
-          content="Digital Product | Web Development Agency"
+          content="Software, App & Web Development Agency in Trivandrum Kerala | Digital Product Solutions"
         />
         <meta
           property="og:description"
-          content="Digital Product is a leading web development agency specializing in custom websites, e-commerce solutions, and SEO optimization."
+          content="Digital Product Solutions — Software development, mobile apps, SEO, WhatsApp automation & Al solutions for Kerala businesses. 20+ businesses helped. Based in Trivandrum. Call +919400355185"
         />
         <meta property="og:url" content="https://www.digitalproductsolutions.in/" />
         <meta property="og:type" content="website" />
@@ -58,6 +58,100 @@ export default function RootLayout({
 
         {/* Or use the client component if you need event handlers */}
         {/* <ChatbotScript /> */}
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Digital Product Solutions",
+              "url": "https://www.digitalproductsolutions.in",
+              "telephone": "+919400355185",
+              "description":
+                "Software development, mobile app development, SEO, social media management, business automation and AI solutions for Kerala businesses. Based in Trivandrum, Kerala. 20+ businesses helped.",
+              "priceRange": "₹₹",
+              "openingHours": "Mo-Sa 09:00-19:00",
+              "areaServed": [
+                "Thiruvananthapuram",
+                "Kochi",
+                "Kozhikode",
+                "Kottayam",
+                "Thrissur",
+                "Kollam",
+                "Kerala"
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Thiruvananthapuram",
+                "addressLocality": "Thiruvananthapuram",
+                "addressRegion": "Kerala",
+                "postalCode": "695001",
+                "addressCountry": "IN"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "8.5241",
+                "longitude": "76.9366"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Digital Services for Kerala Businesses",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Software Development Kerala",
+                      "description": "Custom web apps and business software starting ₹15,000"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "App Development Kerala",
+                      "description": "Android and iOS apps for Kerala businesses starting ₹25,000"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "SEO Services Kerala",
+                      "description": "Google ranking for Kerala businesses starting ₹5,000/month"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Social Media Management Kerala",
+                      "description": "Instagram and Facebook management starting ₹3,000/month"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Business Automation Kerala",
+                      "description": "WhatsApp and business automation starting ₹10,000"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "AI Solutions Kerala",
+                      "description": "AI chatbots and automation for Kerala businesses starting ₹12,000"
+                    }
+                  }
+                ]
+              }
+            })
+          }}
+        />
+
       </head>
       <body
         className={`${inter.className} bg-gray-900 text-white flex flex-col min-h-screen`}
