@@ -5,9 +5,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === "production" ? "/digital-product" : "",
-  assetPrefix: process.env.NODE_ENV === "production" ? "/digital-product" : "",
-
   eslint: {
     ignoreDuringBuilds: true,
   },
