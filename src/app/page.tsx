@@ -6,7 +6,7 @@ import Link from 'next/link'
 import {
   ArrowRight, Bitcoin as Star, Users, CheckCircle, Award,
   Zap, TrendingUp, BarChart3,
-  Headphones, Rocket, DollarSign, Code2, Instagram, BadgeDollarSign, MessageCircle, MapPin, Layers,
+  Rocket, DollarSign, Code2, Instagram, BadgeDollarSign, MessageCircle, MapPin, Layers,
   Smartphone,
   Bot,
   Settings,
