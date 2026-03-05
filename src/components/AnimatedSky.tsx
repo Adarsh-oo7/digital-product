@@ -61,82 +61,82 @@ const AnimatedSky: React.FC = () => {
     }
 
     function drawNebula(offset: number) {
-        if (!ctx || !canvas) return; // Check BOTH ctx and canvas
-    
-        const centerX = canvas.width / 2;
-        const centerY = canvas.height / 2;
-        const maxRadius = Math.max(centerX, centerY); // Use the larger of width/2 or height/2
-    
-        const gradient = ctx.createRadialGradient(
-          centerX, centerY, 0,
-          centerX, centerY, maxRadius // Use maxRadius here
+      if (!ctx || !canvas) return; // Check BOTH ctx and canvas
+
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+      const maxRadius = Math.max(centerX, centerY); // Use the larger of width/2 or height/2
+
+      const gradient = ctx.createRadialGradient(
+        centerX, centerY, 0,
+        centerX, centerY, maxRadius // Use maxRadius here
+      );
+
+      gradient.addColorStop(0, 'rgba(100, 0, 100, 0.05)');
+      gradient.addColorStop(0.5, 'rgba(50, 0, 100, 0.05)');
+      gradient.addColorStop(1, 'rgba(0, 0, 50, 0)');
+
+      ctx.beginPath();
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.beginPath();
+      for (let i = 0; i < 5; i++) {
+        ctx.ellipse(
+          centerX + Math.cos(offset / 100 + i) * 100,
+          centerY + Math.sin(offset / 100 + i) * 100,
+          100 + Math.sin(offset / 50 + i) * 50,
+          50 + Math.cos(offset / 50 + i) * 25,
+          0, 0, Math.PI * 2
         );
-    
-        gradient.addColorStop(0, 'rgba(100, 0, 100, 0.05)');
-        gradient.addColorStop(0.5, 'rgba(50, 0, 100, 0.05)');
-        gradient.addColorStop(1, 'rgba(0, 0, 50, 0)');
-    
-        ctx.beginPath();
-        ctx.fillStyle = gradient;
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-    
-        ctx.beginPath();
-        for (let i = 0; i < 5; i++) {
-          ctx.ellipse(
-            centerX + Math.cos(offset / 100 + i) * 100,
-            centerY + Math.sin(offset / 100 + i) * 100,
-            100 + Math.sin(offset / 50 + i) * 50,
-            50 + Math.cos(offset / 50 + i) * 25,
-            0, 0, Math.PI * 2
-          );
+      }
+      ctx.fillStyle = 'rgba(100, 0, 100, 0.05)';
+      ctx.fill();
+    }
+
+    function animate() {
+      if (!ctx || !canvas) return; // Check BOTH ctx and canvas
+
+      const width = canvas.width;  // Store width and height locally
+      const height = canvas.height; // This is the key change
+
+      ctx.clearRect(0, 0, width, height); // Use the local variables
+      ctx.fillStyle = '#0f0326';
+      ctx.fillRect(0, 0, width, height);
+
+      drawNebula(nebulaOffset);
+      nebulaOffset += 0.5;
+
+      stars.forEach(star => {
+        star.twinkle += star.twinkleSpeed;
+        if (star.twinkle > 1 || star.twinkle < 0) star.twinkleSpeed *= -1;
+        const opacity = 0.5 + Math.sin(star.twinkle * Math.PI) * 0.5;
+        drawStar(star.x, star.y, star.radius, star.color, opacity);
+      });
+
+      shootingStars.forEach((star, index) => {
+        drawShootingStar(star.x, star.y, star.length, star.opacity);
+        star.x += star.speed;
+        star.y += star.speed / 2;
+        star.opacity -= 0.02;
+
+        if (star.opacity <= 0) {
+          shootingStars.splice(index, 1);
         }
-        ctx.fillStyle = 'rgba(100, 0, 100, 0.05)';
-        ctx.fill();
+      });
+
+      if (shootingStars.length < 100 && Math.random() < 0.05) {
+        shootingStars.push({
+          x: Math.random() * width, // Use local width
+          y: 0,
+          length: Math.random() * 80 + 20,
+          speed: Math.random() * 15 + 8,
+          opacity: 1
+        });
       }
 
-      function animate() {
-        if (!ctx || !canvas) return; // Check BOTH ctx and canvas
-      
-        const width = canvas.width;  // Store width and height locally
-        const height = canvas.height; // This is the key change
-      
-        ctx.clearRect(0, 0, width, height); // Use the local variables
-        ctx.fillStyle = '#0c0c1d';
-        ctx.fillRect(0, 0, width, height);
-      
-        drawNebula(nebulaOffset);
-        nebulaOffset += 0.5;
-      
-        stars.forEach(star => {
-          star.twinkle += star.twinkleSpeed;
-          if (star.twinkle > 1 || star.twinkle < 0) star.twinkleSpeed *= -1;
-          const opacity = 0.5 + Math.sin(star.twinkle * Math.PI) * 0.5;
-          drawStar(star.x, star.y, star.radius, star.color, opacity);
-        });
-      
-        shootingStars.forEach((star, index) => {
-          drawShootingStar(star.x, star.y, star.length, star.opacity);
-          star.x += star.speed;
-          star.y += star.speed / 2;
-          star.opacity -= 0.02;
-      
-          if (star.opacity <= 0) {
-            shootingStars.splice(index, 1);
-          }
-        });
-      
-        if (shootingStars.length < 100 && Math.random() < 0.05) {
-          shootingStars.push({
-            x: Math.random() * width, // Use local width
-            y: 0,
-            length: Math.random() * 80 + 20,
-            speed: Math.random() * 15 + 8,
-            opacity: 1
-          });
-        }
-      
-        animationFrameId = requestAnimationFrame(animate);
-      }
+      animationFrameId = requestAnimationFrame(animate);
+    }
 
     animate()
 

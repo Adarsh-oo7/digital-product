@@ -1,7 +1,7 @@
 'use client'
 
 import { Check } from 'lucide-react'
-
+import Link from "next/link";
 // Custom color scheme
 const colors = {
     background: '#111111',
@@ -202,30 +202,32 @@ function PricingCard({ plan }: { plan: Plan }) {
                 </div>
 
                 {/* CTA Button */}
-                <button
-                    className="w-full py-2.5 sm:py-3 px-4 rounded-lg font-semibold transition-all duration-200 text-sm sm:text-base active:scale-95"
-                    style={{
-                        backgroundColor: plan.featured ? colors.accent : colors.card,
-                        color: plan.featured ? colors.accentForeground : colors.foreground,
-                        border: plan.featured ? 'none' : `1px solid ${colors.accent}`,
-                    }}
-                    onMouseEnter={(e) => {
-                        if (plan.featured) {
-                            e.currentTarget.style.opacity = '0.9';
-                        } else {
-                            e.currentTarget.style.backgroundColor = colors.accent + '10';
-                        }
-                    }}
-                    onMouseLeave={(e) => {
-                        if (plan.featured) {
-                            e.currentTarget.style.opacity = '1';
-                        } else {
-                            e.currentTarget.style.backgroundColor = colors.card;
-                        }
-                    }}
-                >
-                    {plan.cta}
-                </button>
+                <Link href="/contact">
+                    <button
+                        className="w-full py-2.5 sm:py-3 px-4 rounded-lg font-semibold transition-all duration-200 text-sm sm:text-base active:scale-95"
+                        style={{
+                            backgroundColor: plan.featured ? colors.accent : colors.card,
+                            color: plan.featured ? colors.accentForeground : colors.foreground,
+                            border: plan.featured ? 'none' : `1px solid ${colors.accent}`,
+                        }}
+                        onMouseEnter={(e) => {
+                            if (plan.featured) {
+                                e.currentTarget.style.opacity = '0.9';
+                            } else {
+                                e.currentTarget.style.backgroundColor = colors.accent + '10';
+                            }
+                        }}
+                        onMouseLeave={(e) => {
+                            if (plan.featured) {
+                                e.currentTarget.style.opacity = '1';
+                            } else {
+                                e.currentTarget.style.backgroundColor = colors.card;
+                            }
+                        }}
+                    >
+                        {plan.cta}
+                    </button>
+                </Link>
             </div>
         </div>
     )

@@ -20,18 +20,18 @@ const Navbar: React.FC = () => {
             height={50}
             className="h-auto w-16 mr-2"
           />
-          <span>Digital Product</span>
+          <span className="text-white hover:text-blue-300">Digital Product</span>
         </Link>
 
         {/* Desktop Navigation Links */}
         <ul className="hidden md:flex space-x-6">
           <li>
-            <Link href="/" className="hover:text-blue-400 transition-colors">
+            <Link href="/" className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent block hover:text-blue-400 transition-colors">
               Home
             </Link>
           </li>
           <li>
-            <Link href="/about" className="hover:text-blue-400 transition-colors">
+            <Link href="/about" className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent block hover:text-blue-400 transition-colors">
               About
             </Link>
           </li>
@@ -75,18 +75,18 @@ const Navbar: React.FC = () => {
             )}
           </li>
           <li>
-            <Link href="/pricing" className="hover:text-blue-400 transition-colors">
+            <Link href="/pricing" className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent block hover:text-blue-400 transition-colors">
               Pricing
             </Link>
           </li>
 
           <li>
-            <Link href="/contact" className="hover:text-blue-400 transition-colors">
+            <Link href="/contact" className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent blockhover:text-blue-400 transition-colors">
               Contact
             </Link>
           </li>
           <li>
-            <Link href="/book" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full transition-colors">
+            <Link href="/book" className="bg-blue-600  hover:bg-blue-700 text-white px-4 py-2 rounded-full transition-colors">
               Book Now
             </Link>
           </li>

@@ -232,73 +232,59 @@ export default function Portfolio() {
         </section>
 
         {/* Projects Grid */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="container mx-auto max-w-6xl">
             <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-12">
               {filteredProjects.map((project, index) => (
                 <motion.div
                   key={project.title}
-                  className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
-                  initial={{ opacity: 0, y: 50 }}
+                  className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
+                  initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  transition={{ duration: 0.6, delay: index * 0.15 }}
                 >
-                  <div className="relative overflow-hidden">
+                  {/* Smaller Image */}
+                  <div className="relative w-full h-44 overflow-hidden">
                     <Image
                       src={project.image}
-                      alt={`${project.title} - Web Development Project by Digital Product Solutions`}
-                      width={500}
-                      height={300}
-                      className="w-full h-64 object-cover transform hover:scale-110 transition-transform duration-500"
+                      alt={`${project.title} - Web Development Project`}
+                      fill
+                      className="object-cover transition-transform duration-700 hover:scale-105"
                     />
-                    <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium shadow-md">
                       {project.category}
                     </div>
                   </div>
 
+                  {/* Content */}
                   <div className="p-8">
-                    <div className="flex justify-between items-start mb-4">
-                      <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">{project.title}</h3>
-                      <div className="text-right text-sm text-gray-500">
-                        <div className="font-semibold">{project.duration}</div>
-                        <div>{project.clientType}</div>
-                      </div>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-3 leading-tight">
+                      {project.title}
+                    </h3>
+
+                    <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                      {project.description}
+                    </p>
+
+                    {/* Features - Modern Pills */}
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {project.features.map((feature) => (
+                        <span
+                          key={feature}
+                          className="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full"
+                        >
+                          {feature}
+                        </span>
+                      ))}
                     </div>
 
-                    <p className="text-gray-600 mb-6 leading-relaxed text-lg">{project.description}</p>
+                    {/* Testimonial - Cleaner */}
+                    <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                      <p className="text-sm text-gray-600 italic">
+                        “{project.testimonial}”
+                      </p>
 
-                    {/* Key Features */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-800 mb-3">Key Features:</h4>
-                      <div className="grid grid-cols-2 gap-2">
-                        {project.features.map((feature) => (
-                          <div key={feature} className="flex items-center text-sm text-gray-600">
-                            <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                            {feature}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Technologies */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-800 mb-3">Technologies Used:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech) => (
-                          <span
-                            key={tech}
-                            className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm px-4 py-2 rounded-full font-medium shadow-md"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Client Testimonial */}
-                    <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500">
-                      <p className="text-gray-700 italic">"{project.testimonial}"</p>
-                      <div className="flex items-center mt-2">
+                      <div className="flex items-center mt-3">
                         <div className="flex text-yellow-400">
                           {[...Array(5)].map((_, i) => (
                             <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
@@ -306,7 +292,9 @@ export default function Portfolio() {
                             </svg>
                           ))}
                         </div>
-                        <span className="text-sm text-gray-500 ml-2">Verified Client</span>
+                        <span className="text-xs text-gray-500 ml-2">
+                          Verified Client
+                        </span>
                       </div>
                     </div>
                   </div>

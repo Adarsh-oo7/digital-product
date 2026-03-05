@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { motion } from "framer-motion"
-import { Send } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion";
+import { Send, Plus } from "lucide-react"
 import Image from "next/image"
 import Head from "next/head"
 
@@ -15,9 +15,37 @@ const BASE_URL = process.env.NODE_ENV === "production"
 
 
 
-  
+
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      question: "How can I contact Digital Product Solutions?",
+      answer:
+        "You can contact us through our website contact form, email us at digitalproductkerala@gmail.com, or call +91 9400355185. We assist businesses with web development, AI solutions, SEO and digital automation services globally.",
+    },
+    {
+      question: "What services do you provide?",
+      answer:
+        "We provide professional website development, mobile app development, AI-powered solutions, SEO optimization, social media management and business automation systems for businesses in India and worldwide.",
+    },
+    {
+      question: "How long does it take to build a website?",
+      answer:
+        "A typical business website takes around 2–4 weeks depending on features, design requirements and integrations. Advanced systems such as AI automation or custom platforms may take longer.",
+    },
+    {
+      question: "Do you work with clients outside India?",
+      answer:
+        "Yes. Digital Product Solutions works with businesses globally, providing scalable digital solutions including SaaS platforms, automation systems and modern web applications.",
+    },
+  ];
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -46,80 +74,103 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact Us | Web Development in Attingal, Kerala</title>
+        <title>Contact Digital Product Solutions | Web Development & AI Solutions</title>
+
         <meta
           name="description"
-          content="Contact Digital Product Solutions in Attingal, Kerala, for expert web development, AI solutions, and website maintenance. Reach us via email, phone (+91 9400355185), or our contact form."
+          content="Contact Digital Product Solutions for professional web development, AI-powered solutions, SEO services, and business automation. Serving Kerala, India, and global clients."
         />
+
         <meta
           name="keywords"
-          content="contact web development Kerala, website design Attingal, Digital Product Solutions, AI solutions Kerala, website maintenance Attingal"
+          content="contact web development company, AI solutions company, website development India, SEO services India, Digital Product Solutions contact"
         />
+
         <meta name="robots" content="index, follow" />
+
         <link rel="canonical" href={`${BASE_URL}/contact`} />
+
+        {/* Open Graph (for social sharing) */}
+        <meta property="og:title" content="Contact Digital Product Solutions" />
+        <meta
+          property="og:description"
+          content="Get in touch with Digital Product Solutions for web development, AI solutions, SEO services, and digital automation."
+        />
+        <meta property="og:url" content={`${BASE_URL}/contact`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${BASE_URL}/img/logo.png`} />
+
+        {/* Twitter Card */}
+        {/* <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Digital Product Solutions" />
+        <meta
+          name="twitter:description"
+          content="Reach our team for web development, AI solutions, SEO and digital services."
+        />
+        <meta name="twitter:image" content={`${BASE_URL}/img/logo.png`} /> */}
+
+        {/* Organization Schema */}
         <script type="application/ld+json">
           {`
-            {
-              "@context": "https://schema.org",
-              "@type": "ContactPage",
-              "name": "Contact Digital Product Solutions",
-              "description": "Get in touch with Digital Product Solutions in Attingal, Kerala, for professional web development, AI solutions, and website maintenance services.",
-              "url": "${BASE_URL}/contact",
-              "publisher": {
-                "@type": "Organization",
-                "name": "Digital Product Solutions",
-                "logo": {
-                  "@type": "ImageObject",
-                  "url": "${BASE_URL}/img/logo.png"
-                },
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "Attingal",
-                  "addressLocality": "Attingal",
-                  "addressRegion": "Kerala",
-                  "postalCode": "695101",
-                  "addressCountry": "IN"
-                },
-                "contactPoint": {
-                  "@type": "ContactPoint",
-                  "telephone": "+919400355185",
-                  "email": "digitalproductkerala@gmail.com",
-                  "contactType": "Customer Service",
-                  "areaServed": "IN",
-                  "availableLanguage": ["English", "Malayalam"]
-                }
-              },
-              "mainEntity": {
-                "@type": "FAQPage",
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "How can I contact Digital Product Solutions in Attingal?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Reach our Attingal, Kerala team via our contact form, email at digitalproductkerala@gmail.com, or phone at +91 9400355185 for web development and AI solutions."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "What services do you offer in Kerala?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "We provide web development, AI integration, website maintenance, and e-commerce solutions tailored for businesses in Attingal and across Kerala."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "How quickly will I receive a response?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Our Attingal team responds to inquiries within 24–48 hours, ensuring prompt communication to discuss your project requirements."
-                    }
-                  }
-                ]
-              }
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Digital Product Solutions",
+        "url": "${BASE_URL}",
+        "logo": "${BASE_URL}/img/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+919400355185",
+          "contactType": "Customer Service",
+          "email": "digitalproductkerala@gmail.com",
+          "areaServed": ["IN", "Worldwide"],
+          "availableLanguage": ["English", "Malayalam"]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Attingal",
+          "addressRegion": "Kerala",
+          "postalCode": "695101",
+          "addressCountry": "IN"
+        }
+      }
+    `}
+        </script>
+
+        {/* FAQ Schema */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How can I contact Digital Product Solutions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can contact Digital Product Solutions through our website contact form, email at digitalproductkerala@gmail.com, or phone at +91 9400355185."
             }
-          `}
+          },
+          {
+            "@type": "Question",
+            "name": "What services do you offer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide website development, mobile app development, AI-powered solutions, SEO services, social media marketing and business automation systems."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How quickly will I receive a response?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our team usually responds within 24 hours to discuss your project requirements and provide consultation."
+            }
+          }
+        ]
+      }
+    `}
         </script>
       </Head>
       <div className="min-h-screen py-16 px-4 relative">
@@ -279,53 +330,63 @@ export default function Contact() {
             </p>
           </motion.div>
           <motion.div
-            className="mt-12 text-gray-300"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            className="mt-20 max-w-4xl mx-auto px-4"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold mb-6 text-center text-white">
+            <h3 className="text-3xl font-bold text-center text-white mb-12">
               Frequently Asked Questions
             </h3>
-            <div className="space-y-6">
-              <div>
-                <h4 className="text-lg font-semibold text-white">
-                  How can I contact Digital Product Solutions in Attingal?
-                </h4>
-                <p>
-                  Reach our Attingal, Kerala team via our contact form, email at{" "}
-                  <a
-                    href="mailto:digitalproductkerala@gmail.com"
-                    className="underline hover:text-blue-400"
+
+            <div className="space-y-5">
+              {faqs.map((faq, index) => {
+                const isOpen = openIndex === index;
+
+                return (
+                  <div
+                    key={index}
+                    className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl overflow-hidden transition hover:border-blue-500"
                   >
-                    digitalproductkerala@gmail.com
-                  </a>
-                  , or phone at{" "}
-                  <a
-                    href="tel:+919400355185"
-                    className="underline hover:text-blue-400"
-                  >
-                    +91 9400355185
-                  </a>
-                  . We’re here to assist with your web development and AI solution needs.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-white">
-                  What services do you offer in Kerala?
-                </h4>
-                <p>
-                  We provide expert web development, AI integration, website maintenance, and e-commerce solutions tailored for businesses in Attingal and across Kerala, ensuring high-quality digital transformations.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-white">
-                  How quickly will I receive a response?
-                </h4>
-                <p>
-                  Our Attingal team responds to inquiries within 24–48 hours, ensuring prompt communication to discuss your project requirements and next steps.
-                </p>
-              </div>
+                    {/* Question */}
+                    <button
+                      onClick={() => toggleFAQ(index)}
+                      className="w-full flex items-center justify-between text-left p-6"
+                    >
+                      <h4 className="text-lg font-semibold text-white">
+                        {faq.question}
+                      </h4>
+
+                      <motion.div
+                        animate={{ rotate: isOpen ? 45 : 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="text-blue-400"
+                      >
+                        <Plus size={22} />
+                      </motion.div>
+                    </button>
+
+                    {/* Answer */}
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          key="content"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.35 }}
+                          className="overflow-hidden"
+                        >
+                          <p className="px-6 pb-6 text-gray-300 leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              })}
             </div>
           </motion.div>
         </div>

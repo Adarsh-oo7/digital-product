@@ -13,8 +13,8 @@ const BASE_URL = process.env.NODE_ENV === "production"
 
 const services = [
   { id: "web-dev", name: "Web Development", price: 5000 },
-  { id: "ai-integration", name: "AI Integration", price: 7000 },
-  { id: "seo-optimization", name: "SEO Optimization", price: 3000 },
+  { id: "ai-integration", name: "AI Integration", price: 12000 },
+  { id: "seo-optimization", name: "SEO Optimization", price: 5000 },
   { id: "e-commerce", name: "E-commerce Solutions", price: 6000 },
 ]
 
@@ -30,6 +30,40 @@ export default function BookingPage() {
   })
 
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [open, setOpen] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      question:
+        "What digital services does Digital Product Solutions offer in Kerala, India and globally?",
+      answer:
+        "We provide professional website development, e-commerce development, AI-powered solutions, SEO services, business automation and mobile app development. Our services are available for businesses across Kerala, all over India and internationally, helping brands build strong digital presence and scalable systems.",
+    },
+    {
+      question:
+        "Do you offer SEO services for businesses outside Kerala?",
+      answer:
+        "Yes. Our SEO services are designed for local businesses in Kerala, national brands across India, and global companies. We focus on keyword optimization, technical SEO, content strategy and performance tracking to improve Google rankings and organic traffic.",
+    },
+    {
+      question:
+        "What are your starting prices for web development and AI solutions?",
+      answer:
+        "Our pricing depends on project scope and features. Website development typically starts from affordable packages, while AI-powered automation and advanced systems are priced based on complexity. Contact us for a customized quote tailored to your business goals.",
+    },
+    {
+      question:
+        "How long does it take to complete a website or automation project?",
+      answer:
+        "Project timelines vary depending on requirements. A standard business website may take 2–4 weeks, while advanced AI integration or automation systems may take 4–8 weeks. We provide a detailed roadmap and timeline before starting the project.",
+    },
+    {
+      question:
+        "Can you help scale my business digitally?",
+      answer:
+        "Absolutely. Our goal is not just building websites, but creating digital growth systems through SEO, AI integration, marketing automation and conversion-focused design to help your business scale locally and globally.",
+    },
+  ];
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -81,7 +115,7 @@ export default function BookingPage() {
         <title>Book Services | Digital Product Solutions - Web Development in Kerala</title>
         <meta
           name="description"
-          content="Book web development, AI integration, SEO optimization, or e-commerce solutions with Digital Product Solutions in Attingal, Kerala. Schedule your appointment today with our expert team."
+          content="Book web development, AI integration, SEO optimization, or e-commerce solutions with Digital Product Solutions in Attingal, Kerala.Based in Trivandrum. Call +919400355185. Schedule your appointment today with our expert team."
         />
         <meta
           name="keywords"
@@ -405,47 +439,41 @@ export default function BookingPage() {
           </div>
         </motion.div>
         <motion.div
-          className="container mx-auto max-w-4xl mt-12 text-gray-200"
+          className="container mx-auto max-w-4xl mt-20 text-gray-200"
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
         >
-          <h3 className="text-2xl font-bold mb-6 text-center">
+          <h3 className="text-3xl font-bold mb-10 text-center text-white">
             Frequently Asked Questions
           </h3>
+
           <div className="space-y-6">
-            <div>
-              <h4 className="text-lg font-semibold">
-                What services can I book with Digital Product Solutions in Kerala?
-              </h4>
-              <p>
-                We offer professional web development, AI integration, SEO optimization, and e-commerce solutions for businesses in Attingal and across Kerala. Each service is tailored to meet your unique business needs, ensuring a strong digital presence and measurable results.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold">
-                How do I schedule an appointment in Attingal?
-              </h4>
-              <p>
-                Use our online booking form to select a service, date, and time. Our Attingal-based team will confirm your appointment within 24–48 hours via email or phone, ensuring a seamless and efficient booking process.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold">
-                What are the starting prices for your services?
-              </h4>
-              <p>
-                Our services start at ₹3000 for SEO optimization, ₹5000 for web development, ₹6000 for e-commerce solutions, and ₹7000 for AI integration. Contact us for a detailed quote customized to your project requirements in Kerala.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold">
-                How long does it take to complete a project?
-              </h4>
-              <p>
-                Project timelines vary based on complexity. For example, a standard website may take 2–4 weeks, while AI integration could take 4–8 weeks. Our Attingal team provides a detailed timeline during your consultation to ensure transparency.
-              </p>
-            </div>
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 cursor-pointer hover:border-indigo-500 transition-all duration-300"
+                onClick={() => setOpen(open === index ? null : index)}
+              >
+                <h4 className="text-lg font-semibold flex justify-between items-center">
+                  {faq.question}
+                  <span className="text-indigo-400">
+                    {open === index ? "−" : "+"}
+                  </span>
+                </h4>
+
+                {open === index && (
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="mt-4 text-gray-300 leading-relaxed"
+                  >
+                    {faq.answer}
+                  </motion.p>
+                )}
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>
