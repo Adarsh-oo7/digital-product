@@ -3,19 +3,21 @@
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef } from 'react';
 
+interface HTMLModelViewerElement extends HTMLElement {
+  exposure: number;
+}
+
 interface RightModelViewerProps {
   scale?: number;
 }
 
 export default function RightModelViewer({ scale = 0.4 }: RightModelViewerProps) {
   const pathname = usePathname();
-  // Change this line - use HTMLElement instead of HTMLModelViewerElement
-  const modelRef = useRef<HTMLElement>(null);
+  const modelRef = useRef<HTMLModelViewerElement>(null);
 
   useEffect(() => {
     if (modelRef.current) {
-      // Cast to any to access model-viewer specific properties
-      (modelRef.current as any).exposure = 1;
+      modelRef.current.exposure = 1;
     }
   }, [pathname]);
 
@@ -24,13 +26,14 @@ export default function RightModelViewer({ scale = 0.4 }: RightModelViewerProps)
       className="absolute top-1/2 right-[5vw] z-0 pointer-events-none"
       style={{
         transform: 'translateY(-35%)',
-        width: '100vw',          // ❗️Constrain width
-        height: '100vh',         // ❗️Constrain height to avoid overflow
+        width: '100vw',
+        height: '100vh',
         overflow: 'visible',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        animation: 'floatY 5s ease-in-out infinite',      }}
+        animation: 'floatY 5s ease-in-out infinite',
+      }}
     >
       <div
         style={{
@@ -42,7 +45,7 @@ export default function RightModelViewer({ scale = 0.4 }: RightModelViewerProps)
       >
         <model-viewer
           key={pathname + '-right'}
-          ref={modelRef}
+          ref={modelRef as React.RefObject<HTMLModelViewerElement & Element>}
           src="/models/right-model/scene.gltf"
           auto-rotate
           auto-rotate-delay="0"
@@ -59,8 +62,8 @@ export default function RightModelViewer({ scale = 0.4 }: RightModelViewerProps)
             height: '150%',
             objectFit: 'contain',
             pointerEvents: 'none',
-            opacity: 0.5, // ✅ set desired transparency
-          transition: 'opacity 0.8s ease',
+            opacity: 0.5,
+            transition: 'opacity 0.8s ease',
           }}
         />
       </div>

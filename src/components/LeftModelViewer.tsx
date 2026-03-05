@@ -1,6 +1,14 @@
 'use client'
-import { useEffect,useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
+
+interface HTMLModelViewerElement extends HTMLElement {
+  exposure: number;
+}
+
+interface LeftModelViewerProps {
+  scale?: number;
+}
 
 function isMobile() {
   if (typeof window !== 'undefined') {
@@ -17,8 +25,7 @@ export default function LeftModelViewer({ scale = 0.4 }: LeftModelViewerProps) {
   useEffect(() => {
     setShow(!isMobile());
     if (modelRef.current) {
-      // Cast to any to access model-viewer specific properties
-      (modelRef.current as any).exposure = 1;
+      modelRef.current.exposure = 1;
     }
   }, [pathname]);
 
@@ -38,7 +45,7 @@ export default function LeftModelViewer({ scale = 0.4 }: LeftModelViewerProps) {
     >
       <model-viewer
         key={pathname + '-left'}
-        ref={modelRef}
+        ref={modelRef as React.RefObject<HTMLModelViewerElement & Element>}
         src="/models/left-model/scene.gltf"
         auto-rotate
         auto-rotate-delay="0"

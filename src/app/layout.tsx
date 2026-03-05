@@ -43,22 +43,6 @@ export default function RootLayout({
         <link rel="icon" href="./img/logo.png" sizes="any" />
         <meta name="google-site-verification" content="DHDeaZm4O1GPWicrshCNxCRNOAjRdlqeaOdddGQnZ5I" />
 
-
-        {/* Use simple Script tag without event handlers if you don't need them */}
-        <Script
-          src="https://app.fastbots.ai/embed.js"
-          data-bot-id="cm74658eg0tkgsvk7iw855klb"
-          strategy="lazyOnload"
-        />
-
-        <script
-          type="module"
-          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
-        ></script>
-
-        {/* Or use the client component if you need event handlers */}
-        {/* <ChatbotScript /> */}
-
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -68,19 +52,10 @@ export default function RootLayout({
               "name": "Digital Product Solutions",
               "url": "https://www.digitalproductsolutions.in",
               "telephone": "+919400355185",
-              "description":
-                "Software development, mobile app development, SEO, social media management, business automation and AI solutions for Kerala businesses. Based in Trivandrum, Kerala. 20+ businesses helped.",
+              "description": "Software development, mobile app development, SEO, social media management, business automation and AI solutions for Kerala businesses. Based in Trivandrum, Kerala. 20+ businesses helped.",
               "priceRange": "₹₹",
               "openingHours": "Mo-Sa 09:00-19:00",
-              "areaServed": [
-                "Thiruvananthapuram",
-                "Kochi",
-                "Kozhikode",
-                "Kottayam",
-                "Thrissur",
-                "Kollam",
-                "Kerala"
-              ],
+              "areaServed": ["Thiruvananthapuram", "Kochi", "Kozhikode", "Kottayam", "Thrissur", "Kollam", "Kerala"],
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Thiruvananthapuram",
@@ -98,60 +73,17 @@ export default function RootLayout({
                 "@type": "OfferCatalog",
                 "name": "Digital Services for Kerala Businesses",
                 "itemListElement": [
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Software Development Kerala",
-                      "description": "Custom web apps and business software starting ₹15,000"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "App Development Kerala",
-                      "description": "Android and iOS apps for Kerala businesses starting ₹25,000"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "SEO Services Kerala",
-                      "description": "Google ranking for Kerala businesses starting ₹5,000/month"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Social Media Management Kerala",
-                      "description": "Instagram and Facebook management starting ₹3,000/month"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Business Automation Kerala",
-                      "description": "WhatsApp and business automation starting ₹10,000"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "AI Solutions Kerala",
-                      "description": "AI chatbots and automation for Kerala businesses starting ₹12,000"
-                    }
-                  }
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Software Development Kerala", "description": "Custom web apps and business software starting ₹15,000" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "App Development Kerala", "description": "Android and iOS apps for Kerala businesses starting ₹25,000" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO Services Kerala", "description": "Google ranking for Kerala businesses starting ₹5,000/month" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Management Kerala", "description": "Instagram and Facebook management starting ₹3,000/month" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Automation Kerala", "description": "WhatsApp and business automation starting ₹10,000" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Solutions Kerala", "description": "AI chatbots and automation for Kerala businesses starting ₹12,000" } }
                 ]
               }
             })
           }}
         />
-
       </head>
       <body
         className={`${inter.className} bg-gray-900 text-white flex flex-col min-h-screen`}
@@ -160,6 +92,18 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-grow pt-16">{children}</main>
         <Footer />
+
+        <Script
+          src="https://app.fastbots.ai/embed.js"
+          data-bot-id="cm74658eg0tkgsvk7iw855klb"
+          strategy="lazyOnload"
+        />
+
+        <Script
+          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+          type="module"
+          strategy="lazyOnload"
+        />
 
         <Script id="schema-script" type="application/ld+json">
           {`
