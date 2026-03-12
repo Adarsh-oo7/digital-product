@@ -45,7 +45,7 @@ export default function ClientBlog({ initialPosts }: { initialPosts: BlogPost[] 
   );
 
   return (
-    <div className="min-h-screen bg-gray-50 py-16 px-4">
+    <div className="min-h-screen bg-gray-50 py-16 mt-8 px-4">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <motion.header
@@ -184,7 +184,7 @@ export default function ClientBlog({ initialPosts }: { initialPosts: BlogPost[] 
         )}
 
         {/* Service Highlights */}
-        <motion.section
+        {/* <motion.section
           className="bg-gray-100 py-12 px-6 rounded-lg mb-12"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -234,7 +234,7 @@ export default function ClientBlog({ initialPosts }: { initialPosts: BlogPost[] 
               </Link>
             </div>
           </div>
-        </motion.section>
+        </motion.section> */}
 
         {/* Call to Action */}
         <motion.section
@@ -259,7 +259,7 @@ export default function ClientBlog({ initialPosts }: { initialPosts: BlogPost[] 
         </motion.section>
 
         {/* Testimonials */}
-        <motion.section
+        {/* <motion.section
           className="bg-gray-100 py-12 px-6 rounded-lg"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -282,7 +282,7 @@ export default function ClientBlog({ initialPosts }: { initialPosts: BlogPost[] 
               <p className="text-gray-900 font-semibold">— Jane Smith, CTO of InnovateNow</p>
             </div>
           </div>
-        </motion.section>
+        </motion.section> */}
       </div>
     </div>
   );

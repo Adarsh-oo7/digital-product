@@ -10,9 +10,33 @@ const BASE_URL = process.env.NODE_ENV === "production"
   : "http://localhost:3000"
 
 
-  
+
 
 export default function About() {
+
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Digital Product Solutions",
+        "url": "https://www.digitalproductsolutions.in",
+        "logo": "https://www.digitalproductsolutions.in/logo.png",
+        "founder": {
+          "@type": "Person",
+          "name": "Adarsh B S"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Trivandrum",
+          "addressRegion": "Kerala",
+          "addressCountry": "India"
+        }
+      })
+    }}
+  />
+
   const teamMembers = [
     {
       name: "Adarsh B S",
@@ -120,7 +144,7 @@ export default function About() {
                 >
                   <Image
                     src={member.image}
-                    alt={`Picture of ${member.name}`}
+                    alt={`${member.name} – ${member.role[0]} at Digital Product Solutions`}
                     width={150}
                     height={150}
                     className="rounded-full mx-auto mb-4"

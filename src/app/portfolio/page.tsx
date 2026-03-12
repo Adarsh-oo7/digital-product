@@ -86,7 +86,7 @@ const projects = [
 ]
 
 const stats = [
-  { number: "50+", label: "Projects Completed" },
+  { number: "20+", label: "Projects Completed" },
   { number: "100%", label: "Client Satisfaction" },
   { number: "3+", label: "Years Experience" },
   { number: "24/7", label: "Support Available" },

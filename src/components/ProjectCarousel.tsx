@@ -121,7 +121,7 @@ export default function ProjectGrid() {
             href="/portfolio"
             className="inline-block bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition"
           >
-            View All Projects
+            View All Client Projects
           </a>
         </div>
       </div>

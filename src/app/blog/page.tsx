@@ -11,8 +11,8 @@ export const blogPosts = [
     content:
       "Artificial Intelligence (AI) is revolutionizing industries by automating processes, enhancing customer experiences, and enabling data-driven decisions. In 2025, businesses leveraging AI solutions are poised for exponential growth. From predictive analytics to personalized marketing, AI empowers companies to stay competitive. At Digital Product Solutions, we specialize in custom AI integrations that align with your business goals, ensuring scalability and efficiency. Our case studies show up to 40% revenue growth for clients using our AI tools. Learn how our AI expertise can transform your operations today.",
     category: "AI Solutions",
-    date: "2025-04-20",
-    image: "/images/ai-business-growth.jpg",
+    date: "2026-02-20",
+    image: "/blog/1.png",
     slug: "ai-powered-digital-solutions-business-growth",
     keywords: [
       "AI solutions",
@@ -32,7 +32,7 @@ export const blogPosts = [
       "In the competitive world of e-commerce, a one-size-fits-all platform often falls short. Custom e-commerce software tailored to your brand can enhance user experience, improve checkout processes, and integrate advanced features like AI-driven product recommendations. At Digital Product Solutions, we build scalable e-commerce solutions that drive sales and customer loyalty. Our clients have seen up to 50% conversion rate improvements with our custom platforms. From seamless payment gateways to responsive designs, our expertise ensures your store stands out in 2025.",
     category: "E-commerce Solutions",
     date: "2025-04-15",
-    image: "/images/ecommerce-software.jpg",
+    image: "/blog/2.png",
     slug: "custom-ecommerce-software-sales",
     keywords: [
       "e-commerce software",
@@ -52,7 +52,7 @@ export const blogPosts = [
       "With over 60% of web traffic coming from mobile devices, responsive web design is non-negotiable in 2025. A responsive website adapts to any screen size, ensuring a consistent and engaging user experience. At Digital Product Solutions, we craft responsive websites that rank high on search engines and convert visitors into clients. Our SEO-optimized designs have helped clients achieve 30% higher engagement rates. Discover how our web design services can help you captivate clients and boost conversions.",
     category: "Web Design",
     date: "2025-04-10",
-    image: "/images/responsive-web-design.jpg",
+    image: "/blog/3.png",
     slug: "responsive-web-design-clients",
     keywords: [
       "responsive design",
@@ -72,7 +72,7 @@ export const blogPosts = [
       "Cloud-based solutions offer unparalleled flexibility, security, and scalability for businesses. Whether you're migrating to the cloud or building cloud-native applications, Digital Product Solutions provides tailored cloud strategies using AWS, Azure, and Google Cloud. Our clients report 25% cost savings and 99.9% uptime with our cloud solutions. Learn how cloud technology can future-proof your business and support rapid growth in 2025.",
     category: "Cloud Solutions",
     date: "2025-04-05",
-    image: "/images/cloud-solutions.jpg",
+    image: "/blog/4.png",
     slug: "cloud-based-digital-solutions",
     keywords: [
       "cloud solutions",
@@ -92,7 +92,7 @@ export const blogPosts = [
       "Search Engine Optimization (SEO) is the backbone of digital success in 2025. By optimizing your website for search engines, you can attract organic traffic, increase brand visibility, and convert visitors into clients. At Digital Product Solutions, we integrate SEO best practices into every project, from keyword research to technical SEO. Our clients have seen 200% increases in organic traffic within six months. Learn how our SEO services can elevate your digital products to the top of Google search results.",
     category: "SEO Strategies",
     date: "2025-04-01",
-    image: "/images/seo-strategies.jpg",
+    image: "/blog/5.png",
     slug: "seo-critical-digital-product-success",
     keywords: [
       "SEO strategies",
@@ -112,7 +112,7 @@ export const blogPosts = [
       "Cybersecurity is a top priority for businesses in 2025. At Digital Product Solutions, we embed advanced security features into every digital product, from encryption to secure APIs. Our clients enjoy peace of mind with 100% compliance to GDPR and other regulations. Learn how our cybersecurity expertise can safeguard your digital assets and build client trust.",
     category: "Cybersecurity",
     date: "2025-03-28",
-    image: "/images/cybersecurity.jpg",
+    image: "/blog/6.png",
     slug: "secure-digital-products-cybersecurity",
     keywords: [
       "cybersecurity",
@@ -132,7 +132,7 @@ export const blogPosts = [
       "User Experience (UX) design is critical for retaining clients and driving conversions. In 2025, trends like micro-interactions and AI-driven personalization are shaping the future of UX. Digital Product Solutions delivers UX designs that increase user satisfaction by 35%. Discover how our UX expertise can make your digital solutions stand out.",
     category: "UX Design",
     date: "2025-03-25",
-    image: "/images/ux-design.jpg",
+    image: "/blog/7.png",
     slug: "future-ux-design-digital-solutions",
     keywords: [
       "UX design",
@@ -152,7 +152,7 @@ export const blogPosts = [
       "Data analytics empowers businesses to make informed decisions and optimize performance. At Digital Product Solutions, we integrate advanced analytics tools into your digital solutions, providing real-time insights. Our clients have improved operational efficiency by 30% with our analytics solutions. Learn how data can transform your business strategy.",
     category: "Data Analytics",
     date: "2025-03-20",
-    image: "/images/data-analytics.jpg",
+    image: "/blog/8.png",
     slug: "data-analytics-business-decisions",
     keywords: [
       "data analytics",
@@ -172,7 +172,7 @@ export const blogPosts = [
       "Choosing the right digital solution can be overwhelming. At Digital Product Solutions, we simplify the process by offering tailored consultations and custom solutions. Whether you need AI, e-commerce, or cloud solutions, our team ensures a perfect fit. Learn how to make informed decisions with our expert guide.",
     category: "Digital Solutions",
     date: "2025-03-15",
-    image: "/images/digital-solutions-guide.jpg",
+    image: "/blog/9.png",
     slug: "choose-right-digital-solution",
     keywords: [
       "digital solutions",
@@ -192,7 +192,7 @@ export const blogPosts = [
       "APIs are the backbone of modern digital products, enabling seamless integrations and scalability. Digital Product Solutions builds robust API-driven solutions that connect your systems and enhance user experiences. Our API integrations have reduced development time by 20% for clients. Learn how APIs can power your digital products.",
     category: "API Development",
     date: "2025-03-10",
-    image: "/images/api-development.jpg",
+    image: "/blog/10.png",
     slug: "apis-digital-product-development",
     keywords: [
       "API development",
@@ -212,7 +212,7 @@ export const blogPosts = [
       "AI-driven marketing solutions are transforming how businesses engage with customers. From personalized campaigns to predictive analytics, Digital Product Solutions delivers marketing tools that increase ROI by up to 45%. Learn how our AI marketing solutions can help you reach your audience more effectively.",
     category: "AI Solutions",
     date: "2025-03-05",
-    image: "/images/ai-marketing.jpg",
+    image: "/blog/1.png",
     slug: "ai-driven-marketing-solutions",
     keywords: [
       "AI marketing",
@@ -232,7 +232,7 @@ export const blogPosts = [
       "Microservices architecture allows e-commerce platforms to scale efficiently and adapt to changing demands. Digital Product Solutions leverages microservices to build flexible, high-performance e-commerce solutions. Our clients report 40% faster deployment times with microservices. Discover the benefits of this approach for your online store.",
     category: "E-commerce Solutions",
     date: "2025-03-01",
-    image: "/images/microservices-ecommerce.jpg",
+    image: "/blog/1.png",
     slug: "microservices-ecommerce-development",
     keywords: [
       "microservices",
@@ -252,7 +252,7 @@ export const blogPosts = [
       "Voice search is growing rapidly, with 50% of searches expected to be voice-based by 2025. Digital Product Solutions optimizes websites for voice search with structured data and conversational keywords. Our clients have seen 25% more traffic from voice searches. Learn how to stay ahead with our voice search SEO strategies.",
     category: "SEO Strategies",
     date: "2025-02-25",
-    image: "/images/voice-search.jpg",
+    image: "/blog/13.png",
     slug: "optimize-website-voice-search",
     keywords: [
       "voice search",
@@ -272,7 +272,7 @@ export const blogPosts = [
       "Next.js is the go-to framework for building scalable, SEO-friendly web applications. At Digital Product Solutions, we use Next.js to deliver fast, responsive web apps that rank high on search engines. Our clients enjoy 30% faster load times with our Next.js solutions. Learn how Next.js can elevate your web presence.",
     category: "Web Development",
     date: "2025-02-20",
-    image: "/images/nextjs-web-apps.jpg",
+    image: "/blog/14.png",
     slug: "scalable-web-applications-nextjs",
     keywords: [
       "Next.js",
@@ -292,7 +292,7 @@ export const blogPosts = [
       "5G technology is transforming digital product performance with faster load times and improved connectivity. Digital Product Solutions builds 5G-optimized solutions that deliver seamless user experiences. Our clients report 50% faster app performance with 5G integrations. Learn how 5G can boost your digital products.",
     category: "Digital Solutions",
     date: "2025-02-15",
-    image: "/images/5g-technology.jpg",
+    image: "/blog/15.png",
     slug: "5g-digital-product-performance",
     keywords: [
       "5G technology",
@@ -312,7 +312,7 @@ export const blogPosts = [
       "AI chatbots enhance customer support and drive sales in e-commerce stores. Digital Product Solutions builds custom AI chatbots that provide 24/7 support and personalized recommendations. Our clients have seen 20% higher customer satisfaction with our chatbots. Learn how to integrate AI chatbots into your store.",
     category: "E-commerce Solutions",
     date: "2025-02-10",
-    image: "/images/ai-chatbots.jpg",
+    image: "/blog/16.png",
     slug: "ai-chatbots-ecommerce-store",
     keywords: [
       "AI chatbots",
@@ -332,7 +332,7 @@ export const blogPosts = [
       "Content marketing is a powerful tool for building brand authority and driving conversions. Digital Product Solutions creates content strategies that align with your business goals, from blog posts to whitepapers. Our clients have achieved 150% more leads with our content marketing services. Discover how content can elevate your digital success.",
     category: "Digital Marketing",
     date: "2025-02-05",
-    image: "/images/content-marketing.jpg",
+    image: "/blog/17.png",
     slug: "content-marketing-digital-success",
     keywords: [
       "content marketing",
@@ -352,7 +352,7 @@ export const blogPosts = [
       "Web performance is critical for user satisfaction and SEO rankings. Digital Product Solutions optimizes websites for speed, achieving load times under 2 seconds. Our clients report 40% lower bounce rates with our performance solutions. Learn how to optimize your website for better user experiences in 2025.",
     category: "Web Development",
     date: "2025-02-01",
-    image: "/images/web-performance.jpg",
+    image: "/blog/18.png",
     slug: "optimizing-web-performance",
     keywords: [
       "web performance",
@@ -372,7 +372,7 @@ export const blogPosts = [
       "Accessibility is essential for reaching a wider audience and complying with regulations like WCAG. Digital Product Solutions builds accessible digital products that enhance user experiences for all. Our accessible designs have increased client reach by 25%. Learn how accessibility can improve your digital products.",
     category: "Digital Solutions",
     date: "2025-01-25",
-    image: "/images/accessibility.jpg",
+    image: "/blog/19.png",
     slug: "accessibility-digital-products",
     keywords: [
       "accessibility",
@@ -392,7 +392,7 @@ export const blogPosts = [
       "Blockchain technology offers unmatched security for digital solutions, from secure transactions to data integrity. Digital Product Solutions integrates blockchain into digital products for enhanced trust and transparency. Our clients report 30% higher client confidence with blockchain solutions. Learn how blockchain can secure your business in 2025.",
     category: "Blockchain Solutions",
     date: "2025-01-20",
-    image: "/images/blockchain-security.jpg",
+    image: "/blog/20.png",
     slug: "blockchain-security-digital-solutions",
     keywords: [
       "blockchain",
@@ -412,7 +412,7 @@ export const blogPosts = [
       "From AI to low-code platforms, digital product development is evolving rapidly. Digital Product Solutions stays at the forefront of these trends, delivering innovative solutions that drive business success. Learn about the top 5 trends for 2025 and how we can help you leverage them for growth.",
     category: "Digital Solutions",
     date: "2025-01-15",
-    image: "/images/digital-trends.jpg",
+    image: "/blog/21.png",
     slug: "top-trends-digital-product-development",
     keywords: [
       "digital product development",
@@ -432,7 +432,7 @@ export const blogPosts = [
       "A/B testing is a powerful tool for optimizing digital products. Digital Product Solutions uses data-driven A/B testing to improve user experiences and conversions. Our clients have seen 20% higher conversion rates with our testing strategies. Learn how A/B testing can enhance your digital products.",
     category: "Digital Solutions",
     date: "2025-01-10",
-    image: "/images/ab-testing.jpg",
+    image: "/blog/22.png",
     slug: "ab-testing-digital-products",
     keywords: [
       "A/B testing",
@@ -452,7 +452,7 @@ export const blogPosts = [
       "DevOps practices accelerate development cycles and improve product quality. Digital Product Solutions implements DevOps workflows to deliver digital products faster and more reliably. Our clients report 30% faster time-to-market with our DevOps solutions. Learn how DevOps can transform your development process.",
     category: "DevOps",
     date: "2025-01-05",
-    image: "/images/devops.jpg",
+    image: "/blog/23.png",
     slug: "devops-digital-development",
     keywords: [
       "DevOps",
@@ -472,7 +472,7 @@ export const blogPosts = [
       "Digital innovation is key to staying ahead in a rapidly changing market. Digital Product Solutions delivers cutting-edge solutions, from AI to blockchain, to future-proof your business. Our innovative strategies have helped clients achieve 35% growth in market share. Learn how to embrace digital innovation for long-term success.",
     category: "Digital Solutions",
     date: "2025-01-01",
-    image: "/images/digital-innovation.jpg",
+    image: "/blog/24.png",
     slug: "future-proof-business-digital-innovation",
     keywords: [
       "digital innovation",
@@ -492,7 +492,7 @@ export const blogPosts = [
       "Low-code platforms enable rapid development without sacrificing quality. Digital Product Solutions leverages low-code solutions to deliver digital products up to 50% faster. Our clients benefit from cost-effective, scalable solutions tailored to their needs. Learn how low-code can transform your development process in 2025.",
     category: "Digital Solutions",
     date: "2024-12-25",
-    image: "/images/low-code-platforms.jpg",
+    image: "/blog/25.png",
     slug: "low-code-platforms-rapid-development",
     keywords: [
       "low-code platforms",

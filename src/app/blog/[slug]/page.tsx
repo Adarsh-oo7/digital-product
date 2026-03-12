@@ -71,6 +71,7 @@ const BlogPost: NextPage<Props> = async ({ params }) => {
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
+    dateModified: post.date,
     image: `https://www.digitalproductsolutions.in${post.image}`,
     url: `https://www.digitalproductsolutions.in/blog/${post.slug}`,
     author: {
@@ -81,7 +82,10 @@ const BlogPost: NextPage<Props> = async ({ params }) => {
     publisher: {
       "@type": "Organization",
       name: "Digital Product Solutions",
-      logo: "https://www.digitalproductsolutions.in/images/logo.jpg",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.digitalproductsolutions.in/images/logo.jpg"
+      }
     },
     keywords: post.keywords,
   };
@@ -109,7 +113,7 @@ const BlogPost: NextPage<Props> = async ({ params }) => {
             width={800}
             height={400}
             className="w-full h-auto mb-8 rounded-lg"
-            loading="lazy"
+            priority
           />
           <div className="prose prose-lg text-gray-700 mb-12">{post.content}</div>
 

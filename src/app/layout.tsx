@@ -178,6 +178,38 @@ export default function RootLayout({
           `}
         </Script>
 
+        <Script id="local-business-schema" type="application/ld+json">
+          {`
+{
+ "@context": "https://schema.org",
+ "@type": "LocalBusiness",
+ "name": "Digital Product Solutions",
+ "url": "https://www.digitalproductsolutions.in/",
+ "logo": "https://www.digitalproductsolutions.in/logo.png",
+ "image": "https://www.digitalproductsolutions.in/og-image.jpg",
+ "telephone": "+91XXXXXXXXXX",
+ "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Trivandrum",
+   "addressRegion": "Kerala",
+   "addressCountry": "India"
+ },
+ "areaServed": "Kerala",
+ "sameAs": [
+   "https://www.instagram.com/digital_product_solutions/",
+   "https://www.threads.net/@digital_prodect_sale",
+   "https://www.linkedin.com/company/digital-product-adarsh/"
+ ],
+ "serviceType": [
+   "Website Development",
+   "SEO Services",
+   "Web Design",
+   "App Development"
+ ]
+}
+`}
+        </Script>
+
         <ChatbotAndSocialButtons />
       </body>
     </html>

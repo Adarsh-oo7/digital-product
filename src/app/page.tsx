@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState } from "react";
 import Link from 'next/link'
 import {
@@ -19,6 +19,88 @@ import MarqueeCards from '@/components/MarqueeCards'
 import LeftModelViewer from '@/components/LeftModelViewer'
 import RightModelViewer from '@/components/RightModelViewer'
 
+
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "SAIF" },
+      "itemReviewed": {
+        "@type": "Organization",
+        "name": "CrystalKnotFilms"
+      },
+      "reviewBody":
+        "The team transformed our online presence into something that matches the quality of our films. The improved visibility and structure brought us steady, serious client leads.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Vipin Mohan" },
+      "itemReviewed": {
+        "@type": "Organization",
+        "name": "BuilDwellz"
+      },
+      "reviewBody":
+        "The team understood our brand and translated it into a clean, high-end digital presence. We started attracting more serious residential clients shortly after launch.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Abhishek" },
+      "itemReviewed": {
+        "@type": "Organization",
+        "name": "Squeeze Berriez"
+      },
+      "reviewBody":
+        "The new website perfectly captures our Kerala roots and premium beverage quality. It helped us build stronger brand trust and attract new retail partnership inquiries.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Aromal V VG" },
+      "itemReviewed": {
+        "@type": "Organization",
+        "name": "Kerala Sellers"
+      },
+      "reviewBody":
+        "Kerala Sellers was built to empower local businesses with a powerful yet simple digital marketplace. From product listings to payments and automation, everything was designed for real-world execution.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Anvar Riyas" },
+      "itemReviewed": {
+        "@type": "Organization",
+        "name": "Lemon Caters and Events"
+      },
+      "reviewBody":
+        "Digital Product rebuilt our catering website and optimized our Google presence.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.5",
+        "bestRating": "5"
+      }
+    }
+  ]
+}
 
 const trustIndicators = [
   { id: 1, icon: Users, number: "20+", text: "Happy Clients" },
@@ -51,20 +133,20 @@ const whyChooseUs = [
 ]
 
 const businessResults = [
-  "Increase revenue by up to 500% with AI-powered automation",
-  "Reduce operational costs by 60% through intelligent systems",
-  "Generate 10x more qualified leads with targeted campaigns",
-  "Achieve 300% organic traffic growth with expert SEO",
-  "Scale your SaaS product to millions of users seamlessly",
-  "Dominate local search with comprehensive digital presence"
+  "Automate workflows and reduce manual business processes",
+  "Attract high-quality leads with data-driven marketing",
+  "Build fast, scalable websites and SaaS platforms",
+  "Improve visibility with advanced SEO strategies",
+  "Create powerful digital platforms that grow with your business",
+  "Strengthen your online presence across search and social"
 ]
 
 const stats = [
   { value: 20, suffix: "+", label: "Kerala Businesses Helped" },
-  { value: 6, suffix: "", label: "Service Areas" },
-  { value: 7, suffix: " Days", label: "Website Delivery" },
-  { value: 0, suffix: "", label: "Kerala Based", custom: "Trivandrum" },
-  { value: 0, suffix: "", label: "Talk to Developer", custom: "Direct" },
+  { value: 7, suffix: " Days", label: "Average Delivery Time" },
+  { value: 100, suffix: "%", label: "Client Satisfaction" },
+  { custom: "Trivandrum", label: "Kerala Based" },
+  { custom: "Direct", label: "Talk to Developer" },
 ];
 
 interface CounterProps {
@@ -72,32 +154,23 @@ interface CounterProps {
   suffix?: string;
 }
 
-function Counter({ value, suffix }: CounterProps) {
-  const [count, setCount] = useState(0);
+function Counter({ value, suffix = "" }: CounterProps) {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, latest => Math.round(latest));
 
   useEffect(() => {
-    let start = 0;
-    const duration = 1500;
-    const increment = value / (duration / 16);
+    const controls = animate(count, value, {
+      duration: 2,
+      ease: "easeOut",
+    });
 
-    const counter = setInterval(() => {
-      start += increment;
-      if (start >= value) {
-        setCount(value);
-        clearInterval(counter);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
-
-    return () => clearInterval(counter);
+    return controls.stop;
   }, [value]);
 
   return (
-    <span className="text-3xl md:text-4xl font-bold text-yellow-400">
-      {value === 0 ? "" : count}
-      {suffix}
-    </span>
+    <motion.span className="text-3xl md:text-4xl font-bold text-yellow-400">
+      <motion.span>{rounded}</motion.span> {suffix}
+    </motion.span>
   );
 }
 
@@ -151,7 +224,7 @@ export default function Home() {
           {/* Trust Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6 border border-white/20">
             <Star className="w-4 h-4 text-yellow-400 mr-2" />
-            <span className="text-sm font-medium">India's Leading Digital Solutions Agency</span>
+            <span className="text-sm font-medium">Leading Digital Agency in Trivandrum, Kerala</span>
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
@@ -168,8 +241,8 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Digital Product Solutions has helped <strong>20+ businesses across Kerala</strong> with
-          custom software, mobile apps, WhatsApp automation, SEO, social media management,
+          Digital Product Solutions is a modern digital agency in Trivandrum providing helped <strong>20+ businesses across Kerala</strong> with
+          website development, custom digital solution, software, mobile apps, WhatsApp automation, SEO, social media management,
           and AI-powered tools. Based in Trivandrum. Website live in 7 days.
 
         </motion.p>
@@ -225,14 +298,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: i * 0.15 }}
                 viewport={{ once: true }}
-                className="flex flex-col items-center transition-all duration-300 hover:scale-105"
+                className="flex flex-col items-center hover:scale-105 transition-all duration-300"
               >
                 {stat.custom ? (
                   <span className="text-3xl md:text-4xl font-bold text-yellow-400">
                     {stat.custom}
                   </span>
                 ) : (
-                  <Counter value={stat.value} suffix={stat.suffix} />
+                  <Counter value={stat.value} suffix={stat.suffix || ""} />
                 )}
 
                 <span className="text-sm md:text-base text-gray-300 mt-2">
@@ -460,7 +533,7 @@ export default function Home() {
                   },
                   {
                     title: "All Services in One Place",
-                    desc: "Software, apps, SEO, socialmedia, automation and AI — all from one focused team that know your bussiness.",
+                    desc: "Software, apps, SEO, socialmedia, automation and AI — all from one focused team that know your business.",
                     icon: Layers,
                   },
                   {
@@ -470,7 +543,7 @@ export default function Home() {
                   },
                   {
                     title: "Transparent Pricing",
-                    desc: "You know the price before we start.No hidden fees. No surprice Invoices. Starting from ₹3,000/month.",
+                    desc: "You know the price before we start.No hidden fees. No surprise Invoices. Starting from ₹3,000/month.",
                     icon: BadgeDollarSign,
                   },
                 ].map((item, i) => {
@@ -602,21 +675,24 @@ export default function Home() {
 
 
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-green-600 to-blue-600 text-white p-6 rounded-xl shadow-xl">
-                <div className="text-sm font-medium">Average Client ROI</div>
-                <div className="text-3xl font-bold">500%</div>
-                <div className="text-sm opacity-90">Within 12 Months</div>
+                <div className="text-sm font-medium">Client Success</div>
+                <div className="text-3xl font-bold">2.5×</div>
+                <div className="text-sm opacity-90">Average Inquiry Growth</div>
               </div>
               {/* Top Left Overlay */}
               <div className="absolute -top-6 -left-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-xl shadow-xl">
                 <div className="text-sm font-medium">Projects Delivered</div>
-                <div className="text-2xl font-bold">1000+</div>
+                <div className="text-2xl font-bold">20+</div>
               </div>
             </div>
           </div>
         </div>
       </motion.div>
 
-
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+      />
       <AnimatedReviews />
 
       {/* Enhanced CTA Section with Urgency */}
@@ -630,7 +706,7 @@ export default function Home() {
           >
             <div className="inline-flex items-center px-6 py-3 bg-red-600/80 backdrop-blur-sm rounded-full mb-8">
               <Clock className="w-5 h-5 mr-2" />
-              <span className="font-semibold">Limited Time: 50% Off All Digital Solutions This Month!</span>
+              <span className="font-semibold">Limited Client Slots Available – Start Your Project Today</span>
             </div>
 
             <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">
@@ -690,8 +766,8 @@ export default function Home() {
               management, business automation and AI solutions.
             </p>
             <p className="mt-4 font-semibold text-blue-400">
-                20+ Kerala businesses helped.
-              </p>
+              20+ Kerala businesses helped.
+            </p>
           </div>
 
           {/* Service Keywords for SEO */}
@@ -707,7 +783,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-    
+
     </div>
   )
 }

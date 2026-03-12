@@ -66,17 +66,19 @@ const Navbar: React.FC = () => {
                     AI Services
                   </Link>
                 </li>
-                <li>
-                  <Link href="/blog" className="block px-4 py-2 hover:bg-gray-700">
-                    Blog
-                  </Link>
-                </li>
+                
               </ul>
             )}
           </li>
           <li>
             <Link href="/pricing" className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent block hover:text-blue-400 transition-colors">
               Pricing
+            </Link>
+          </li>
+
+          <li>
+            <Link href="/blog" className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent block hover:text-blue-400 transition-colors">
+              Blog
             </Link>
           </li>
 
