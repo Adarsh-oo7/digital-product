@@ -29,6 +29,22 @@ export default function RootLayout({
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Adarsh B S" />
         <link rel="manifest" href="/site.webmanifest" />
+          {/* Google Analytics */}
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-W95558LF2R"
+  />
+  <script
+    dangerouslySetInnerHTML={{
+      __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W95558LF2R');
+      `,
+    }}
+  />
+
 
         <meta
           property="og:title"
