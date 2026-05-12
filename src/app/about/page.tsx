@@ -9,57 +9,130 @@ const BASE_URL = process.env.NODE_ENV === "production"
   ? "https://www.digitalproductsolutions.in"
   : "http://localhost:3000"
 
+const teamMembers = [
+  {
+    name: "Adarsh B S",
+    role: ["Project Manager", "SEO and Marketing Specialist"],
+    image: "./img/adarshnew.png?height=300&width=300",
+    tier: "core",
+  },
+  {
+    name: "Midhin S",
+    role: ["Full-Stack Developer", "Backend Specialist", "Quality Assurance (QA)"],
+    image: "./img/midhin.jpg?height=300&width=300",
+    tier: "core",
+  },
+  {
+    name: "Aromal V G",
+    role: ["Full-Stack Developer", "UI/UX Designer", "Frontend Specialist"],
+    image: "./img/aromalnew.png?height=300&width=300",
+    tier: "core",
+  },
+  {
+    name: "Akhil Shibu",
+    image: "./img/shibu.png?height=300&width=300",
+    tier: "member",
+  },
+  {
+    name: "Akhilesh C J",
+    image: "./img/akhilesh.png?height=300&width=300",
+    tier: "member",
+  },
+  {
+    name: "Adarsh M",
+    image: "./img/adarsh m.png?height=300&width=300",
+    tier: "member",
+  },
 
+  {
+    name: "Arjun",
+    image: "./img/arjun.png?height=300&width=300",
+    tier: "member",
+  },
+  {
+    name: "Mohd Sha",
+    image: "./img/shah new.png?height=300&width=300",
+    tier: "member",
+  },
+  {
+    name: "Nakul P",
+    image: "./img/nakul.png?height=300&width=300",
+    tier: "member",
+  },
+]
 
+// ✅ Moved outside the component to avoid re-creating on every render
+const MemberCard = ({
+  member,
+  index,
+}: {
+  member: (typeof teamMembers)[0]
+  index: number
+}) => (
+  <motion.div
+    className="flex flex-col items-center gap-2"
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, delay: index * 0.2 }}
+  >
+    <Image
+      src={member.image}
+      alt={`${member.name}${member.role?.[0] ? ` – ${member.role[0]}` : ""} at Digital Product Solutions`}
+      width={200}
+      height={200}
+      className="rounded-full"
+    />
+    <h3 className="text-xl font-semibold mt-2">{member.name}</h3>
+
+    {member.role && member.role.length > 0 && (
+      <p className="text-gray-400 text-center">
+        {member.role.map((r, i) => (
+          <span key={i}>
+            {r}
+            {i < member.role!.length - 1 && <br />}
+          </span>
+        ))}
+      </p>
+    )}
+  </motion.div>
+)
 
 export default function About() {
 
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Digital Product Solutions",
-        "url": "https://www.digitalproductsolutions.in",
-        "logo": "https://www.digitalproductsolutions.in/logo.png",
-        "founder": {
-          "@type": "Person",
-          "name": "Adarsh B S"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Trivandrum",
-          "addressRegion": "Kerala",
-          "addressCountry": "India"
-        }
-      })
-    }}
-  />
+  const coreTeam = teamMembers.filter((m) => m.tier === "core")
+  const otherMembers = teamMembers.filter((m) => m.tier === "member")
 
-  const teamMembers = [
-    {
-      name: "Adarsh B S",
-      role: ["Project Manager", "SEO and Marketing Specialist"],
-      image: "./img/adarsh.png?height=300&width=300",
-    },
-    {
-      name: "Midhin S",
-      role: ["Full-Stack Developer", "Backend Specialist", "Quality Assurance (QA)"],
-      image: "./img/midhin.jpg?height=300&width=300",
-    },
-    {
-      name: "Aromal V G",
-      role: ["Full-Stack Developer", "UI/UX Designer", "Frontend Specialist"],
-      image: "./img/aromal.png?height=300&width=300",
-    },
-  ]
+
 
   return (
     <>
       <Head>
         <title>About Us | Digital Product Solutions</title>
         <link rel="canonical" href={`${BASE_URL}/about`} />
+        < script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Digital Product Solutions",
+              "url": "https://www.digitalproductsolutions.in",
+              "logo": "https://www.digitalproductsolutions.in/logo.png",
+              "founder": {
+                "@type": "Person",
+                "name": "Adarsh B S"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Trivandrum",
+                "addressRegion": "Kerala",
+                "addressCountry": "India"
+              }
+            })
+          }
+          }
+        />
+
       </Head>
       <div className="min-h-screen py-16 px-4">
         <div className="container mx-auto">
@@ -74,54 +147,77 @@ export default function About() {
           </motion.h1>
 
           {/* Mission and Vision */}
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="space-y-12">
+            {/* Mission & Vision — full width stacked with big number labels */}
             <motion.div
-              className="space-y-6"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
+              className="grid md:grid-cols-2 gap-6"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h2 className="text-2xl font-semibold">Our Mission</h2>
-              <p>
-                At Digital Product Solutions, we are dedicated to empowering businesses with
-                innovative web and AI solutions that drive growth and digital transformation.
-                Our mission is to transform your ideas into impactful digital realities using
-                cutting-edge technologies, tailored strategies, and a client-centric approach.
-                We strive to deliver measurable results, helping businesses of all sizes succeed
-                in the competitive online landscape.
-              </p>
-              <h2 className="text-2xl font-semibold">Our Vision</h2>
-              <p>
-                We envision a future where every business, from startups to global enterprises,
-                has access to high-quality digital products that compete on a global stage. Our
-                goal is to bridge the gap between ambition and achievement by providing scalable,
-                user-focused solutions that elevate brands, enhance user experiences, and create
-                lasting value in the digital ecosystem.
-              </p>
+              <div className="relative bg-gray-800/40 rounded-2xl p-8 overflow-hidden">
+                <span className="absolute top-4 right-6 text-8xl font-bold text-gray-700/30 select-none leading-none">
+                  01
+                </span>
+                <h2 className="text-xl font-semibold mb-4 text-blue-400">Our Mission</h2>
+                <p className="text-gray-400 leading-relaxed relative z-10">
+                  At Digital Product Solutions, we are dedicated to empowering businesses with
+                  innovative web and AI solutions that drive growth and digital transformation.
+                  Our mission is to transform your ideas into impactful digital realities using
+                  cutting-edge technologies, tailored strategies, and a client-centric approach.
+                  We strive to deliver measurable results, helping businesses of all sizes succeed
+                  in the competitive online landscape.
+                </p>
+              </div>
+
+              <div className="relative bg-gray-800/40 rounded-2xl p-8 overflow-hidden">
+                <span className="absolute top-4 right-6 text-8xl font-bold text-gray-700/30 select-none leading-none">
+                  02
+                </span>
+                <h2 className="text-xl font-semibold mb-4 text-purple-400">Our Vision</h2>
+                <p className="text-gray-400 leading-relaxed relative z-10">
+                  We envision a future where every business, from startups to global enterprises,
+                  has access to high-quality digital products that compete on a global stage. Our
+                  goal is to bridge the gap between ambition and achievement by providing scalable,
+                  user-focused solutions that elevate brands, enhance user experiences, and create
+                  lasting value in the digital ecosystem.
+                </p>
+              </div>
             </motion.div>
 
-            {/* Team Overview */}
+            {/* Team — full width banner style */}
             <motion.div
-              className="space-y-6"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
+              className="rounded-2xl border border-gray-700 overflow-hidden"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <h2 className="text-2xl font-semibold">Our Team</h2>
-              <p>
-                Our dynamic team of developers, designers, and strategists collaborates to bring
-                your digital vision to life. With expertise in web development, AI integration,
-                UI/UX design, SEO, and project management, we deliver innovative and reliable
-                solutions. Staying ahead of industry trends, we ensure your project is built with
-                the latest technologies and best practices for optimal performance and user
-                satisfaction.
-              </p>
-              <ul className="list-disc list-inside">
-                <li>Expert developers proficient in modern frameworks and programming languages</li>
-                <li>Creative designers crafting intuitive, visually stunning interfaces</li>
-                <li>Experienced project managers ensuring seamless delivery and client satisfaction</li>
-                <li>Dedicated support team for ongoing maintenance, optimization, and updates</li>
-              </ul>
+              <div className="px-8 py-6 border-b border-gray-700">
+                <h2 className="text-xl font-semibold">Our Team</h2>
+                <p className="text-gray-400 mt-2 leading-relaxed">
+                  Our dynamic team of developers, designers, and strategists collaborates to bring
+                  your digital vision to life. With expertise in web development, AI integration,
+                  UI/UX design, SEO, and project management, we deliver innovative and reliable
+                  solutions. Staying ahead of industry trends, we ensure your project is built with
+                  the latest technologies and best practices for optimal performance and user
+                  satisfaction.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-gray-700">
+                {[
+                  { text: "Expert developers proficient in modern frameworks and programming languages", color: "text-blue-400" },
+                  { text: "Creative designers crafting intuitive, visually stunning interfaces", color: "text-purple-400" },
+                  { text: "Experienced project managers ensuring seamless delivery and client satisfaction", color: "text-green-400" },
+                  { text: "Dedicated support team for ongoing maintenance, optimization, and updates", color: "text-orange-400" },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3 px-6 py-5">
+                    <span className={`text-lg font-bold shrink-0 ${item.color}`}>
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <p className="text-gray-400 text-sm leading-relaxed">{item.text}</p>
+                  </div>
+                ))}
+              </div>
             </motion.div>
           </div>
 
@@ -132,39 +228,45 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
+            {/* Core Team */}
             <h2 className="text-3xl font-semibold mb-8 text-center">Meet Our Team</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {teamMembers.map((member, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-gray-800 rounded-lg p-6 text-center"
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                >
-                  <Image
-                    src={member.image}
-                    alt={`${member.name} – ${member.role[0]} at Digital Product Solutions`}
-                    width={150}
-                    height={150}
-                    className="rounded-full mx-auto mb-4"
-                  />
-                  <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-                  {Array.isArray(member.role) ? (
-                    <p className="text-gray-400">
-                      {member.role.map((r, i) => (
-                        <span key={i}>
-                          {r}
-                          {i < member.role.length - 1 && <br />}
-                        </span>
-                      ))}
-                    </p>
-                  ) : (
-                    <p className="text-gray-400">{member.role}</p>
-                  )}
-                </motion.div>
+              {coreTeam.map((member, index) => (
+                <MemberCard key={index} member={member} index={index} />
               ))}
             </div>
+
+            {otherMembers.length > 0 && (
+              <div className="mt-16">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="flex-1 h-px bg-gray-700" />
+                  <h3 className="text-sm font-semibold uppercase tracking-widest text-gray-400">
+                    Our Crew
+                  </h3>
+                  <div className="flex-1 h-px bg-gray-700" />
+                </div>
+                <div className="flex gap-6 overflow-x-auto pb-4 justify-center flex-wrap">
+                  {otherMembers.map((member, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex flex-col items-center gap-2 min-w-[200px]"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                    >
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={130}
+                        height={130}
+                        className="rounded-full border-2 border-gray-600"
+                      />
+                      <p className="text-sm text-gray-300 text-center">{member.name}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            )}
           </motion.div>
 
           {/* Google Map */}
