@@ -2,10 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 
-interface HTMLModelViewerElement extends HTMLElement {
-  exposure: number;
-}
-
 interface RightModelViewerProps {
   scale?: number;
 }
@@ -18,13 +14,14 @@ function isMobile() {
 }
 
 export default function RightModelViewer({ scale = 0.4 }: RightModelViewerProps) {
-  const modelRef = useRef<any>(null);
+
+  const modelRef = useRef<HTMLElement | null>(null);
+
   const [show, setShow] = useState(false);
 
   useEffect(() => {
     if (isMobile()) return;
 
-    // delay loading to protect LCP
     const timer = setTimeout(() => {
       setShow(true);
     }, 1200);
@@ -34,7 +31,7 @@ export default function RightModelViewer({ scale = 0.4 }: RightModelViewerProps)
 
   useEffect(() => {
     if (modelRef.current) {
-      modelRef.current.exposure = 1;
+      ;(modelRef.current as HTMLElement & { exposure: number }).exposure = 1;
     }
   }, []);
 

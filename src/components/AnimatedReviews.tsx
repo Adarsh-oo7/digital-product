@@ -1,8 +1,8 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, useAnimation } from 'framer-motion'
+import { useEffect } from 'react'
 import { Star } from 'lucide-react'
-
 interface Review {
   id: number
   fullName: string
@@ -71,8 +71,6 @@ const reviews: Review[] = [
     result:
       "Successfully launched the platform and onboarded sellers from multiple districts within the first phase.",
 
-    content: "Kerala Sellers was built to empower local businesses with a powerful yet simple digital marketplace. From product listings to payments and automation, everything was designed for real-world execution.",
-    result: "Successfully launched the platform and onboarded sellers from multiple districts within the first phase.",
     rating: 5,
     image: "/img/boy.jpg",
   },

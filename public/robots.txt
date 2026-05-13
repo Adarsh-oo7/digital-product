@@ -1,10 +1,10 @@
-# robots.txt for https://www.digitalproductsolutions.in/
+# *
 User-agent: *
 Allow: /
 
-# Prevent crawling of non-essential or private pages (optional, adjust as needed)
-Disallow: /admin/
-Disallow: /private/
+# Host
+Host: https://digital-product.adarshbs.com
 
-# Sitemap
-Sitemap: https://www.digitalproductsolutions.in/sitemap.xml
+# Sitemaps
+Sitemap: https://digital-product.adarshbs.com/sitemap.xml
+Sitemap: https://www.digitalproductsolutions.in/sitemap-0.xml

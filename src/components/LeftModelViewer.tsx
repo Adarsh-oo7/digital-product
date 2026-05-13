@@ -3,10 +3,6 @@
 import { useEffect, useRef, useState } from "react"
 import { usePathname } from "next/navigation"
 
-interface HTMLModelViewerElement extends HTMLElement {
-  exposure: number;
-}
-
 interface LeftModelViewerProps {
   scale?: number;
 }
@@ -18,19 +14,16 @@ function isMobile() {
   return false
 }
 
-interface LeftModelViewerProps {
-  scale?: number
-}
-
 export default function LeftModelViewer({ scale = 0.4 }: LeftModelViewerProps) {
   const pathname = usePathname()
-  const modelRef = useRef<any>(null)
+
+  const modelRef = useRef<HTMLElement | null>(null)
+
   const [show, setShow] = useState(false)
 
   useEffect(() => {
     if (isMobile()) return
 
-    // delay loading model to protect LCP
     const timer = setTimeout(() => {
       setShow(true)
     }, 1200)
@@ -40,7 +33,7 @@ export default function LeftModelViewer({ scale = 0.4 }: LeftModelViewerProps) {
 
   useEffect(() => {
     if (modelRef.current) {
-      modelRef.current.exposure = 1
+      ;(modelRef.current as HTMLElement & { exposure: number }).exposure = 1
     }
   }, [pathname])
 
