@@ -16,7 +16,7 @@ const projects = [
     category: "E-commerce Development",
     description:
       "A fully responsive e-commerce platform built for businesses in Kerala, featuring secure payment gateways, advanced product filtering, and an intuitive user interface. Designed to enhance customer engagement and drive sales, this solution supports local businesses in Attingal and beyond with seamless online shopping experiences tailored to their needs.",
-    image: "./img/ec.png?height=400&width=600",
+    image: "./img/ec.jpeg?height=400&width=600",
     technologies: ["Django", "Bootstrap", "SQLite"],
     features: ["Secure Payment Gateway", "Product Filtering", "Mobile Responsive", "SEO Optimized"],
     duration: "6 weeks",
@@ -28,7 +28,7 @@ const projects = [
     category: "Maintenance & Support",
     description:
       "Comprehensive website maintenance services for clients across Kerala, including Attingal. We provide regular content updates, bug fixes, performance optimization, SEO enhancements, and secure backups. Our services ensure business and personal websites operate smoothly, supporting local enterprises with reliable and secure digital solutions.",
-    image: "./img/ht1.png?height=400&width=600",
+    image: "./img/ht1.jpeg?height=400&width=600",
     technologies: ["JavaScript", "Django", "MySQL"],
     features: ["24/7 Monitoring", "Regular Updates", "Security Patches", "Performance Optimization"],
     duration: "Ongoing",
@@ -40,7 +40,7 @@ const projects = [
     category: "Business Website",
     description:
       "A modern, responsive static website developed for an event management team in Attingal, Kerala. The site highlights their professional services, showcases past events, and includes a contact form for local inquiries. Optimized for performance and SEO, it strengthens their online presence and attracts clients in the event planning industry.",
-    image: "./img/lt.png?height=400&width=600",
+    image: "./img/lemons.jpeg?height=400&width=600",
     technologies: ["Bootstrap", "JavaScript"],
     features: ["Event Gallery", "Contact Forms", "Service Showcase", "Mobile Optimized"],
     duration: "3 weeks",
@@ -52,7 +52,7 @@ const projects = [
     category: "Agriculture & Local Business",
     description:
       "A clean, user-friendly static website for a honey cultivator in Kerala, showcasing organic honey products and sustainable farming practices. Designed to reflect the local essence of Attingal's agricultural heritage, the site includes product details, contact information, and SEO optimization to drive direct sales and customer engagement.",
-    image: "./img/sample1.png?height=400&width=600",
+    image: "./img/honey.jpeg?height=400&width=600",
     technologies: ["Next.js"],
     features: ["Product Catalog", "Online Ordering", "Farm Story", "Local SEO"],
     duration: "2 weeks",
@@ -64,7 +64,7 @@ const projects = [
     category: "Business Website",
     description:
       "A sophisticated, responsive static website crafted for a premier wedding planning team in Banglore, India. The platform features an elegant portfolio of luxury weddings, detailed service breakdowns, and a seamless inquiry system for prospective couples. Engineered for high performance and local SEO, the site effectively showcases their creative excellence and simplifies the booking process for the regional wedding market.",
-    image: "./img/Screenshot 2026-01-20 221313.png",
+    image: "./img/crystalknot.jpeg?height=400&width=600",
     technologies: ["Next.js"],
     features: ["Event Gallery", "Wedding Videos", "Contact and Services", "Custom SEO"],
     duration: "2 weeks",
@@ -76,12 +76,36 @@ const projects = [
     category: "Business Website",
     description:
       "Kerala Sellers is an all-in-one e-commerce solution designed for Kerala’s local businesses. With secure payment integration, smart product management, custom dashboard, advanced product filtering, and a clean, intuitive interface, the platform helps sellers connect with customers effortlessly and scale their business online—starting from Attingal to all of Kerala.",
-    image: "./img/Screenshot 2026-01-21 153250.png",
+    image: "./img/keralasellers.jpeg?height=400&width=600",
     technologies: ["Next.js"],
     features: ["Own Website", "Dashboard", "Stock Management", "Billing Software"],
     duration: "8 Months",
     clientType: "E-Commerce",
     testimonial: "Our Sales increased significantly after launching the new website.",
+  },
+  {
+    title: "Mangrove Moments Website",
+    category: "Business Website",
+    description:
+      "Kerala Sellers is an all-in-one e-commerce solution designed for Kerala’s local businesses. With secure payment integration, smart product management, custom dashboard, advanced product filtering, and a clean, intuitive interface, the platform helps sellers connect with customers effortlessly and scale their business online—starting from Attingal to all of Kerala.",
+    image: "./img/moments.jpeg?height=400&width=600",
+    technologies: ["Next.js"],
+    features: ["Own Website", "contact", "pricing", "Gallery", "Activities"],
+    duration: "3 weeks",
+    clientType: "Business",
+    testimonial: "Now we can reach customers directly",
+  },
+  {
+    title: "Mangrove spot Website",
+    category: "Business Website",
+    description:
+      "Kerala Sellers is an all-in-one e-commerce solution designed for Kerala’s local businesses. With secure payment integration, smart product management, custom dashboard, advanced product filtering, and a clean, intuitive interface, the platform helps sellers connect with customers effortlessly and scale their business online—starting from Attingal to all of Kerala.",
+    image: "./img/spot.jpeg?height=400&width=600",
+    technologies: ["Next.js"],
+    features: ["Own Website", "contact", "pricing", "Gallery", "Activities"],
+    duration: "3 weeks",
+    clientType: "Business",
+    testimonial: "Now we can reach customers directly without middlemen!",
   },
 ]
 
@@ -234,67 +258,67 @@ export default function Portfolio() {
         {/* Projects Grid */}
         <section className="py-20 px-4 bg-gray-50">
           <div className="container mx-auto max-w-6xl">
-            <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-12">
+            <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 xs:grid-col-1 gap-6">
               {filteredProjects.map((project, index) => (
                 <motion.div
                   key={project.title}
-                  className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
+                  className="group relative rounded-3xl overflow-hidden shadow-md aspect-square cursor-pointer"
                   initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.15 }}
                 >
-                  {/* Smaller Image */}
-                  <div className="relative w-full h-44 overflow-hidden">
-                    <Image
-                      src={project.image}
-                      alt={`${project.title} - Web Development Project`}
-                      fill
-                      className="object-cover transition-transform duration-700 hover:scale-105"
-                    />
-                    <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium shadow-md">
-                      {project.category}
-                    </div>
+                  {/* Full Image */}
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} - Web Development Project`}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+
+                  {/* Always visible: category badge */}
+                  <div className="absolute top-3 left-3 md:top-4 md:left-4 bg-blue-600 text-white px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-medium shadow-md z-10">
+                    {project.category}
                   </div>
 
-                  {/* Content */}
-                  <div className="p-8">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-3 leading-tight">
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+
+                  {/* Hover content — slides up */}
+                  <div className="absolute inset-x-0 bottom-0 z-20 p-3 md:p-6 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                    <h3 className="text-sm md:text-xl font-bold text-white mb-1 md:mb-2 leading-tight">
                       {project.title}
                     </h3>
 
-                    <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                    <p className="text-gray-300 text-[11px] md:text-sm leading-relaxed mb-2 md:mb-4 line-clamp-2">
                       {project.description}
                     </p>
 
-                    {/* Features - Modern Pills */}
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    {/* Feature pills */}
+                    <div className="flex flex-wrap gap-1 md:gap-2 mb-2 md:mb-4">
                       {project.features.map((feature) => (
                         <span
                           key={feature}
-                          className="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full"
+                          className="text-[10px] md:text-xs bg-white/20 text-white px-2 py-0.5 md:px-3 md:py-1 rounded-full backdrop-blur-sm"
                         >
                           {feature}
                         </span>
                       ))}
                     </div>
 
-                    {/* Testimonial - Cleaner */}
-                    <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                      <p className="text-sm text-gray-600 italic">
-                        “{project.testimonial}”
+                    {/* Testimonial */}
+                    <div className="border-t border-white/20 pt-2 md:pt-4">
+                      <p className="text-[10px] md:text-xs text-gray-300 italic line-clamp-2">
+                        "{project.testimonial}"
                       </p>
-
-                      <div className="flex items-center mt-3">
+                      <div className="flex items-center mt-1 md:mt-2 gap-1 md:gap-2">
                         <div className="flex text-yellow-400">
                           {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <svg key={i} className="w-2.5 h-2.5 md:w-3 md:h-3 fill-current" viewBox="0 0 20 20">
                               <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                             </svg>
                           ))}
                         </div>
-                        <span className="text-xs text-gray-500 ml-2">
-                          Verified Client
-                        </span>
+                        <span className="text-[10px] md:text-xs text-gray-400">Verified Client</span>
                       </div>
                     </div>
                   </div>
