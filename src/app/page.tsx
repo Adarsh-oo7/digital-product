@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Link from 'next/link'
 import {
   ArrowRight, Bitcoin as Star, Users, CheckCircle, Award,
@@ -21,87 +21,87 @@ import LeftModelViewer from '@/components/LeftModelViewer'
 import RightModelViewer from '@/components/RightModelViewer'
 
 
-const reviewSchema = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "itemListElement": [
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "SAIF" },
-      "itemReviewed": {
-        "@type": "Organization",
-        "name": "CrystalKnotFilms"
-      },
-      "reviewBody":
-        "The team transformed our online presence into something that matches the quality of our films. The improved visibility and structure brought us steady, serious client leads.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Vipin Mohan" },
-      "itemReviewed": {
-        "@type": "Organization",
-        "name": "BuilDwellz"
-      },
-      "reviewBody":
-        "The team understood our brand and translated it into a clean, high-end digital presence. We started attracting more serious residential clients shortly after launch.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4.5",
-        "bestRating": "5"
-      }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Abhishek" },
-      "itemReviewed": {
-        "@type": "Organization",
-        "name": "Squeeze Berriez"
-      },
-      "reviewBody":
-        "The new website perfectly captures our Kerala roots and premium beverage quality. It helped us build stronger brand trust and attract new retail partnership inquiries.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4.5",
-        "bestRating": "5"
-      }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Aromal V VG" },
-      "itemReviewed": {
-        "@type": "Organization",
-        "name": "Kerala Sellers"
-      },
-      "reviewBody":
-        "Kerala Sellers was built to empower local businesses with a powerful yet simple digital marketplace. From product listings to payments and automation, everything was designed for real-world execution.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Anvar Riyas" },
-      "itemReviewed": {
-        "@type": "Organization",
-        "name": "Lemon Caters and Events"
-      },
-      "reviewBody":
-        "Digital Product rebuilt our catering website and optimized our Google presence.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4.5",
-        "bestRating": "5"
-      }
-    }
-  ]
-}
+// const reviewSchema = {
+//   "@context": "https://schema.org",
+//   "@type": "ItemList",
+//   "itemListElement": [
+//     {
+//       "@type": "Review",
+//       "author": { "@type": "Person", "name": "SAIF" },
+//       "itemReviewed": {
+//         "@type": "Organization",
+//         "name": "CrystalKnotFilms"
+//       },
+//       "reviewBody":
+//         "The team transformed our online presence into something that matches the quality of our films. The improved visibility and structure brought us steady, serious client leads.",
+//       "reviewRating": {
+//         "@type": "Rating",
+//         "ratingValue": "5",
+//         "bestRating": "5"
+//       }
+//     },
+//     {
+//       "@type": "Review",
+//       "author": { "@type": "Person", "name": "Vipin Mohan" },
+//       "itemReviewed": {
+//         "@type": "Organization",
+//         "name": "BuilDwellz"
+//       },
+//       "reviewBody":
+//         "The team understood our brand and translated it into a clean, high-end digital presence. We started attracting more serious residential clients shortly after launch.",
+//       "reviewRating": {
+//         "@type": "Rating",
+//         "ratingValue": "4.5",
+//         "bestRating": "5"
+//       }
+//     },
+//     {
+//       "@type": "Review",
+//       "author": { "@type": "Person", "name": "Abhishek" },
+//       "itemReviewed": {
+//         "@type": "Organization",
+//         "name": "Squeeze Berriez"
+//       },
+//       "reviewBody":
+//         "The new website perfectly captures our Kerala roots and premium beverage quality. It helped us build stronger brand trust and attract new retail partnership inquiries.",
+//       "reviewRating": {
+//         "@type": "Rating",
+//         "ratingValue": "4.5",
+//         "bestRating": "5"
+//       }
+//     },
+//     {
+//       "@type": "Review",
+//       "author": { "@type": "Person", "name": "Aromal V VG" },
+//       "itemReviewed": {
+//         "@type": "Organization",
+//         "name": "Kerala Sellers"
+//       },
+//       "reviewBody":
+//         "Kerala Sellers was built to empower local businesses with a powerful yet simple digital marketplace. From product listings to payments and automation, everything was designed for real-world execution.",
+//       "reviewRating": {
+//         "@type": "Rating",
+//         "ratingValue": "5",
+//         "bestRating": "5"
+//       }
+//     },
+//     {
+//       "@type": "Review",
+//       "author": { "@type": "Person", "name": "Anvar Riyas" },
+//       "itemReviewed": {
+//         "@type": "Organization",
+//         "name": "Lemon Caters and Events"
+//       },
+//       "reviewBody":
+//         "Digital Product rebuilt our catering website and optimized our Google presence.",
+//       "reviewRating": {
+//         "@type": "Rating",
+//         "ratingValue": "4.5",
+//         "bestRating": "5"
+//       }
+//     }
+//   ]
+// }
 
 const trustIndicators = [
   { id: 1, icon: Users, number: "20+", text: "Happy Clients" },
