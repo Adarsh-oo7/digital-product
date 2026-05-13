@@ -1,9 +1,7 @@
 'use client'
 
-import { motion, useAnimation } from 'framer-motion'
-import { useEffect } from 'react'
+import { motion } from 'framer-motion'
 import { Star } from 'lucide-react'
-
 
 interface Review {
   id: number
@@ -28,66 +26,33 @@ const reviews: Review[] = [
     businessName: "CrystalKnotFilms",
     city: "Banglore",
     website: "https://crystalknotfilms.com/",
-    content:
-      "The team transformed our online presence into something that matches the quality of our films. The improved visibility and structure brought us steady, serious client leads.",
-
-    before:
-      "The brand relied mainly on Instagram to showcase wedding films, with no dedicated website to present portfolios or convert visitors into serious booking inquiries.",
-
-    solution:
-      "Built a cinematic portfolio website showcasing wedding films, optimized for mobile viewing, with a structured gallery and a simple inquiry system for couples.",
-
-    result:
-      "Booked 4 wedding projects within the first month of launching the new website.",
-
+    content: "The team transformed our online presence into something that matches the quality of our films. The improved visibility and structure brought us steady, serious client leads.",
+    result: "Booked 4 wedding projects within the first month of launching the new website.",
     rating: 5,
     image: "/img/boy.jpg",
   },
-
   {
     id: 2,
     fullName: "Vipin Mohan",
     businessName: "BuilDwellz",
     city: "Varkala",
     website: "https://www.buildwellz.in/",
-    content:
-      "The team understood our brand and translated it into a clean, high-end digital presence. We started attracting more serious residential clients shortly after launch.",
-
-    before:
-      "The business relied mainly on referrals and social media, with no professional website to showcase completed projects or build credibility with new clients.",
-
-    solution:
-      "Designed a modern construction company website showcasing project portfolio, service details, and an optimized inquiry system to attract serious residential clients.",
-
-    result:
-      "Increased direct client inquiries by 2.5x compared to before the website launch.",
-
+    content: "The team understood our brand and translated it into a clean, high-end digital presence. We started attracting more serious residential clients shortly after launch.",
+    result: "Increased direct client inquiries by 2.5x compared to before the website launch.",
     rating: 4.5,
     image: "/img/boy.jpg",
   },
-
   {
     id: 3,
     fullName: "Abhishek",
     businessName: "Squeeze Berriez",
     city: "Thrissur",
     website: "https://www.squeezeberriez.in/",
-    content:
-      "The new website perfectly captures our Kerala roots and premium beverage quality. It helped us build stronger brand trust and attract new retail partnership inquiries.",
-
-    before:
-      "The brand had limited online presence and no dedicated website to showcase products, making it difficult for retailers and distributors to discover the brand.",
-
-    solution:
-      "Designed a modern brand-focused website highlighting product range, Kerala-inspired identity, and clear contact options for retail and partnership inquiries.",
-
-    result:
-      "Received 4 new retail partnership discussions in the first month.",
-
+    content: "The new website perfectly captures our Kerala roots and premium beverage quality. It helped us build stronger brand trust and attract new retail partnership inquiries.",
+    result: "Received 4 new retail partnership discussions in the first month.",
     rating: 4.5,
     image: "/img/boy.jpg",
   },
-
   {
     id: 4,
     fullName: "Aromal V VG",
@@ -106,6 +71,8 @@ const reviews: Review[] = [
     result:
       "Successfully launched the platform and onboarded sellers from multiple districts within the first phase.",
 
+    content: "Kerala Sellers was built to empower local businesses with a powerful yet simple digital marketplace. From product listings to payments and automation, everything was designed for real-world execution.",
+    result: "Successfully launched the platform and onboarded sellers from multiple districts within the first phase.",
     rating: 5,
     image: "/img/boy.jpg",
   },
@@ -125,8 +92,6 @@ const reviews: Review[] = [
   }
 
 ]
-
-
 
 const AnimatedReviews = () => {
 
@@ -149,7 +114,6 @@ const AnimatedReviews = () => {
   return (
     <section className="py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-
         <h2 className="text-3xl md:text-4xl font-semibold text-center text-white mb-16">
           Real Results from Kerala Businesses
         </h2>

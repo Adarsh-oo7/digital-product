@@ -3,6 +3,14 @@
 import { useEffect, useRef, useState } from "react"
 import { usePathname } from "next/navigation"
 
+interface HTMLModelViewerElement extends HTMLElement {
+  exposure: number;
+}
+
+interface LeftModelViewerProps {
+  scale?: number;
+}
+
 function isMobile() {
   if (typeof window !== "undefined") {
     return window.innerWidth < 768

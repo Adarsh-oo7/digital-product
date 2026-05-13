@@ -2,6 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 
+interface HTMLModelViewerElement extends HTMLElement {
+  exposure: number;
+}
+
 interface RightModelViewerProps {
   scale?: number;
 }
