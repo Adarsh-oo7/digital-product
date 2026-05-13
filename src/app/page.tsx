@@ -266,7 +266,7 @@ export default function Home() {
                     {stat.custom}
                   </span>
                 ) : (
-                  <Counter value={stat.value} suffix={stat.suffix || ""} />
+                 <Counter value={stat.value ?? 0} suffix={stat.suffix || ""} />
                 )}
                 <span className="text-sm md:text-base text-gray-300 mt-2">
                   {stat.label}
