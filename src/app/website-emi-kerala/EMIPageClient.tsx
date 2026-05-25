@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
+import { EmiBanner } from "@/components/EmiBanner";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -309,13 +310,23 @@ export default function EMIPageClient() {
       <Navbar />
 
       {/* Push content below fixed navbar */}
-      <main className="pt-16 bg-gray-50 min-h-screen">
+      <main className="pt-7 bg-gray-50 min-h-screen">
+
+        <EmiBanner
+          images={[
+            "blog/WEBSITE.jpg",
+            "blog/WEBSITE.jpg",
+            "blog/WEBSITE.jpg",
+          ]}
+        />
 
         {/* ── HERO ─────────────────────────────────────────────────── */}
         <section className="relative overflow-hidden bg-gradient-to-br from-orange-500 via-orange-400 to-amber-400 px-5 pt-14 pb-16 text-center">
           {/* decorative blobs */}
           <span className="pointer-events-none absolute -top-14 -right-14 h-56 w-56 rounded-full bg-white/10" />
           <span className="pointer-events-none absolute -bottom-20 -left-12 h-48 w-48 rounded-full bg-white/8" />
+
+
 
           <motion.div
             initial="hidden"
@@ -532,11 +543,10 @@ export default function EMIPageClient() {
               {EMI_PLANS.map((plan) => (
                 <div
                   key={plan.months}
-                  className={`relative rounded-2xl border-[1.5px] p-5 flex flex-col ${
-                    plan.best
-                      ? "border-orange-500 bg-orange-50 shadow-lg"
-                      : "border-orange-100 bg-gray-50"
-                  }`}
+                  className={`relative rounded-2xl border-[1.5px] p-5 flex flex-col ${plan.best
+                    ? "border-orange-500 bg-orange-50 shadow-lg"
+                    : "border-orange-100 bg-gray-50"
+                    }`}
                 >
                   {plan.best && (
                     <span className="absolute -top-3 right-5 rounded-full bg-orange-500 px-3 py-0.5 text-[10px] font-extrabold text-white uppercase tracking-wide">
@@ -563,11 +573,10 @@ export default function EMIPageClient() {
                     href={WA_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`block w-full text-center rounded-xl py-2.5 text-sm font-bold transition-colors ${
-                      plan.best
-                        ? "bg-orange-500 text-white hover:bg-orange-600"
-                        : "bg-white border border-orange-200 text-orange-500 hover:bg-orange-50"
-                    }`}
+                    className={`block w-full text-center rounded-xl py-2.5 text-sm font-bold transition-colors ${plan.best
+                      ? "bg-orange-500 text-white hover:bg-orange-600"
+                      : "bg-white border border-orange-200 text-orange-500 hover:bg-orange-50"
+                      }`}
                   >
                     Book This Plan
                   </a>
@@ -649,42 +658,38 @@ export default function EMIPageClient() {
               {PRICING.map((row, i) => (
                 <div
                   key={i}
-                  className={`flex items-center justify-between px-5 py-4 border-b border-orange-50 last:border-b-0 ${
-                    row.style === "total" ? "bg-orange-500" : ""
-                  }`}
+                  className={`flex items-center justify-between px-5 py-4 border-b border-orange-50 last:border-b-0 ${row.style === "total" ? "bg-orange-500" : ""
+                    }`}
                 >
                   <div>
                     <p
-                      className={`text-sm font-semibold ${
-                        row.style === "total" ? "text-white" : "text-gray-600"
-                      }`}
+                      className={`text-sm font-semibold ${row.style === "total" ? "text-white" : "text-gray-600"
+                        }`}
                     >
                       {row.label}
                     </p>
                     {row.labelMl && (
                       <p
-                        className={`text-xs ${
-                          row.style === "total" ? "text-orange-100" : "text-gray-300"
-                        }`}
+                        className={`text-xs ${row.style === "total" ? "text-orange-100" : "text-gray-300"
+                          }`}
                       >
                         {row.labelMl}
                       </p>
                     )}
                   </div>
                   <p
-                    className={`font-bold text-base ${
-                      row.style === "total"
-                        ? "text-white text-lg font-extrabold"
-                        : row.style === "orange"
+                    className={`font-bold text-base ${row.style === "total"
+                      ? "text-white text-lg font-extrabold"
+                      : row.style === "orange"
                         ? "text-orange-500"
                         : row.style === "green"
-                        ? "text-green-600"
-                        : row.style === "muted"
-                        ? "text-gray-400 text-sm"
-                        : row.style === "strike"
-                        ? "text-gray-300 line-through text-sm"
-                        : "text-gray-800"
-                    }`}
+                          ? "text-green-600"
+                          : row.style === "muted"
+                            ? "text-gray-400 text-sm"
+                            : row.style === "strike"
+                              ? "text-gray-300 line-through text-sm"
+                              : "text-gray-800"
+                      }`}
                   >
                     {row.value}
                   </p>
