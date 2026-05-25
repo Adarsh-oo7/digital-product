@@ -315,8 +315,7 @@ export default function EMIPageClient() {
         <EmiBanner
           images={[
             "blog/WEBSITE.jpg",
-            "blog/WEBSITE.jpg",
-            "blog/WEBSITE.jpg",
+            "blog/WEBSITE1.jpg",
           ]}
         />
 
