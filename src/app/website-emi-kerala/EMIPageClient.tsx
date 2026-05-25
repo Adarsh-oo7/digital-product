@@ -152,7 +152,8 @@ const FAQS = [
   },
 ];
 
-const PRICING = [
+type PricingStyle = "strike" | "orange" | "normal" | "green" | "muted" | "total";
+const PRICING: { label: string; labelMl: string; value: string; style: PricingStyle }[] = [
   { label: "Market Value", labelMl: "Original Price", value: "₹16,000", style: "strike" },
   { label: "Anniversary Offer Price", labelMl: "ഓഫർ വില", value: "₹7,499", style: "orange" },
   { label: "Initial Payment", labelMl: "ആദ്യ payment", value: "₹1,000", style: "normal" },
@@ -160,7 +161,7 @@ const PRICING = [
   { label: "Hosting", labelMl: "1 Year FREE", value: "FREE", style: "green" },
   { label: "Domain", labelMl: "Domain charge", value: "Extra", style: "muted" },
   { label: "You Save", labelMl: "", value: "₹8,501 + Hosting", style: "total" },
-] as const;
+];
 
 // ─── Workflow steps ───────────────────────────────────────────────────────────
 
@@ -230,6 +231,41 @@ const WORKFLOW_STEPS = [
     color: "bg-teal-50 border-teal-200",
     iconBg: "bg-teal-500",
     connector: false,
+  },
+];
+
+const TRUST_BADGES = [
+  { icon: "🔒", label: "100% Secure Payment" },
+  { icon: "📄", label: "Written Agreement" },
+  { icon: "🔁", label: "Free Revisions" },
+  { icon: "🌐", label: "1 Yr Free Hosting" },
+  { icon: "⭐", label: "5-Star Rated" },
+];
+
+const TESTIMONIALS = [
+  {
+    name: "Rahul Menon",
+    biz: "Rahul Bakery, Thrissur",
+    text: "വെബ്സൈറ്റ് ready ആയതിന് ശേഷം Google-ൽ നിന്ന് customer വരാൻ തുടങ്ങി. EMI ആയതുകൊണ്ട് ഒരു burden-ഉം തോന്നിയില്ല!",
+    stars: 5,
+    avatar: "RM",
+    color: "bg-blue-500",
+  },
+  {
+    name: "Sneha Krishnan",
+    biz: "Sneha Boutique, Kochi",
+    text: "Professional design, fast delivery. Payment EMI-ൽ ആയതുകൊണ്ട് startup-ന് manage ചെയ്യാൻ easy ആയിരുന്നു.",
+    stars: 5,
+    avatar: "SK",
+    color: "bg-pink-500",
+  },
+  {
+    name: "Dr. Arun P.",
+    biz: "Arun Clinic, Kozhikode",
+    text: "Clinic-ന് ഒരു professional website ഉണ്ടാകണം എന്ന് ആഗ്രഹം ഉണ്ടായിരുന്നു. ₹1000-ൽ start ചെയ്തു, ഇപ്പോൾ online appointments കിട്ടുന്നു!",
+    stars: 5,
+    avatar: "AP",
+    color: "bg-teal-500",
   },
 ];
 
@@ -338,6 +374,26 @@ export default function EMIPageClient() {
             <strong className="text-white text-base font-extrabold">₹1,000</strong>{" "}
             initial payment &bull; EMI available
           </motion.p>
+
+          {/* Social proof micro-stats */}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            custom={0.35}
+            className="flex justify-center gap-6 mt-6 flex-wrap"
+          >
+            {[
+              { num: "50+", label: "Websites Delivered" },
+              { num: "5★", label: "Average Rating" },
+              { num: "100%", label: "Kerala-Based Team" },
+            ].map((s) => (
+              <div key={s.label} className="text-center">
+                <p className="text-2xl font-extrabold text-white leading-none">{s.num}</p>
+                <p className="text-[11px] text-white/70 mt-0.5">{s.label}</p>
+              </div>
+            ))}
+          </motion.div>
         </section>
 
         {/* ── COUNTDOWN ────────────────────────────────────────────── */}
@@ -672,6 +728,73 @@ export default function EMIPageClient() {
             </div>
           </motion.div>
         </section>
+
+        {/* ── TESTIMONIALS ─────────────────────────────────────────── */}
+        <section className="bg-gray-50 py-12">
+          <motion.div
+            className="container mx-auto max-w-5xl px-5"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <SectionHeading
+              en="What Our Clients Say"
+              ml="ഞങ്ങളുടെ customers പറയുന്നത്"
+            />
+            <div className="grid md:grid-cols-3 gap-5">
+              {TESTIMONIALS.map((t) => (
+                <div
+                  key={t.name}
+                  className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex flex-col gap-3"
+                >
+                  {/* Stars */}
+                  <div className="flex gap-0.5">
+                    {Array.from({ length: t.stars }).map((_, i) => (
+                      <span key={i} className="text-amber-400 text-sm">★</span>
+                    ))}
+                  </div>
+                  <p className="text-sm text-gray-600 leading-relaxed flex-1">&ldquo;{t.text}&rdquo;</p>
+                  <div className="flex items-center gap-3 pt-2 border-t border-gray-50">
+                    <div className={`${t.color} rounded-full h-9 w-9 flex items-center justify-center text-white text-xs font-extrabold shrink-0`}>
+                      {t.avatar}
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-gray-900">{t.name}</p>
+                      <p className="text-xs text-gray-400">{t.biz}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </section>
+
+        {/* ── GUARANTEE BADGE ──────────────────────────────────────── */}
+        <motion.section
+          className="py-10"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="container mx-auto max-w-3xl px-5">
+            <div className="rounded-2xl border-2 border-green-200 bg-green-50 px-6 py-6 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
+              <div className="text-5xl shrink-0">🛡️</div>
+              <div>
+                <p className="text-lg font-extrabold text-green-800 mb-1">
+                  Our Commitment to You
+                </p>
+                <p className="text-sm text-green-700 leading-relaxed">
+                  Written agreement, clear scope, free revisions until you're satisfied — and post-launch support always available on WhatsApp. No hidden charges. No surprises. <strong>100% transparency.</strong>
+                </p>
+                <p className="text-xs text-green-600 mt-2 font-semibold">
+                  Written agreement ഉണ്ടാകും · Hidden charges ഇല്ല · Free revisions ഉൾപ്പെടും
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.section>
 
         {/* ── FAQ ──────────────────────────────────────────────────── */}
         <motion.section
