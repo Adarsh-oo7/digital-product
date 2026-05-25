@@ -234,14 +234,6 @@ const WORKFLOW_STEPS = [
   },
 ];
 
-const TRUST_BADGES = [
-  { icon: "🔒", label: "100% Secure Payment" },
-  { icon: "📄", label: "Written Agreement" },
-  { icon: "🔁", label: "Free Revisions" },
-  { icon: "🌐", label: "1 Yr Free Hosting" },
-  { icon: "⭐", label: "5-Star Rated" },
-];
-
 const TESTIMONIALS = [
   {
     name: "Rahul Menon",
