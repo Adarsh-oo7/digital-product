@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 
@@ -163,6 +162,77 @@ const PRICING = [
   { label: "You Save", labelMl: "", value: "₹8,501 + Hosting", style: "total" },
 ] as const;
 
+// ─── Workflow steps ───────────────────────────────────────────────────────────
+
+const WORKFLOW_STEPS = [
+  {
+    step: "01",
+    icon: "💬",
+    en: "Requirement Gathering",
+    ml: "ആവശ്യങ്ങൾ മനസ്സിലാക്കുന്നു",
+    desc: "We discuss your business goals, design preferences, pages needed, and any special features via WhatsApp or call.",
+    descMl: "WhatsApp / Call-ൽ ബിസിനസ്സ് details, design ideas, pages ഒക്കെ discuss ചെയ്യും.",
+    color: "bg-blue-50 border-blue-200",
+    iconBg: "bg-blue-500",
+    connector: true,
+  },
+  {
+    step: "02",
+    icon: "📋",
+    en: "Proposal & Quotation",
+    ml: "Proposal അയക്കുന്നു",
+    desc: "You receive a detailed proposal with scope, timeline, EMI plan options, and total cost — no hidden charges.",
+    descMl: "Scope, timeline, EMI options സഹിതം clear ആയ proposal — hidden charges ഇല്ല.",
+    color: "bg-purple-50 border-purple-200",
+    iconBg: "bg-purple-500",
+    connector: true,
+  },
+  {
+    step: "03",
+    icon: "✅",
+    en: "Confirmation & Booking",
+    ml: "Confirm ചെയ്ത് Book ചെയ്യൂ",
+    desc: "Agree on the plan, pay ₹1,000 initial amount, and sign a simple agreement to lock in your project slot.",
+    descMl: "₹1,000 pay ചെയ്ത് project slot confirm ചെയ്യൂ. Agreement simple ആണ്.",
+    color: "bg-orange-50 border-orange-200",
+    iconBg: "bg-orange-500",
+    connector: true,
+  },
+  {
+    step: "04",
+    icon: "🎨",
+    en: "Design & Development",
+    ml: "Website Build ചെയ്യുന്നു",
+    desc: "Our team designs and builds your website. You review drafts and share feedback until you're 100% satisfied.",
+    descMl: "Design draft share ചെയ്യും, feedback നൽകൂ, final approval നിങ്ങൾക്ക് ആണ്.",
+    color: "bg-yellow-50 border-yellow-200",
+    iconBg: "bg-yellow-500",
+    connector: true,
+  },
+  {
+    step: "05",
+    icon: "🚀",
+    en: "Launch & Deployment",
+    ml: "Website Live ആകുന്നു!",
+    desc: "Website goes live with SSL, hosting setup, and Google indexing. Your business is now online!",
+    descMl: "SSL, Hosting, Google indexing — complete setup. ബിസിനസ്സ് ഇനി Online ആണ്! 🎉",
+    color: "bg-green-50 border-green-200",
+    iconBg: "bg-green-500",
+    connector: true,
+  },
+  {
+    step: "06",
+    icon: "🛠️",
+    en: "Support & Assistance",
+    ml: "Launch ശേഷവും നിങ്ങൾക്കൊപ്പം",
+    desc: "Post-launch support for edits, fixes, and guidance. We're just a WhatsApp message away whenever you need help.",
+    descMl: "Launch ശേഷം edits, fixes, guidance — WhatsApp-ൽ always available ആണ്.",
+    color: "bg-teal-50 border-teal-200",
+    iconBg: "bg-teal-500",
+    connector: false,
+  },
+];
+
 const WA_URL =
   "https://wa.me/919400355185?text=Hi%2C%20I%27m%20interested%20in%20the%20Anniversary%20Website%20EMI%20Offer";
 
@@ -323,8 +393,82 @@ export default function EMIPageClient() {
           </div>
         </motion.section>
 
-        {/* ── EMI PLANS ────────────────────────────────────────────── */}
+        {/* ── HOW IT WORKS (WORKFLOW) ───────────────────────────────── */}
         <section className="bg-white py-12">
+          <motion.div
+            className="container mx-auto max-w-4xl px-5"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <SectionHeading
+              en="How It Works — Our Process"
+              ml="Requirement മുതൽ Support വരെ — Step by Step"
+            />
+
+            <div className="relative">
+              {/* Vertical line on desktop */}
+              <div className="hidden md:block absolute left-[28px] top-8 bottom-8 w-[2px] bg-gradient-to-b from-blue-300 via-orange-300 to-teal-300" />
+
+              <div className="space-y-5">
+                {WORKFLOW_STEPS.map((step, i) => (
+                  <motion.div
+                    key={step.step}
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.08 }}
+                    className={`relative flex gap-4 rounded-2xl border ${step.color} p-5`}
+                  >
+                    {/* Step icon circle */}
+                    <div
+                      className={`shrink-0 ${step.iconBg} rounded-full h-14 w-14 flex flex-col items-center justify-center shadow-sm`}
+                    >
+                      <span className="text-xl leading-none">{step.icon}</span>
+                      <span className="text-[9px] text-white font-bold mt-0.5 leading-none">
+                        STEP {step.step}
+                      </span>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex flex-wrap items-center gap-2 mb-1">
+                        <p className="text-sm font-extrabold text-gray-900">{step.en}</p>
+                        <span className="text-xs font-semibold text-orange-500 bg-orange-50 border border-orange-200 rounded-full px-2 py-0.5">
+                          {step.ml}
+                        </span>
+                      </div>
+                      <p className="text-xs text-gray-600 leading-relaxed">{step.desc}</p>
+                      <p className="text-[11px] text-gray-400 mt-1 leading-relaxed">{step.descMl}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Bottom CTA inside workflow */}
+            <div className="mt-8 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-400 p-5 text-center">
+              <p className="text-white font-bold text-base mb-1">
+                Ready to Start? 🚀
+              </p>
+              <p className="text-white/80 text-xs mb-4">
+                ഇന്നുതന്നെ WhatsApp ചെയ്യൂ — Step 1 ഇവിടെ നിന്ന് തുടങ്ങാം!
+              </p>
+              <a
+                href={WA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-xl bg-white px-6 py-2.5 text-sm font-extrabold text-orange-500 hover:bg-orange-50 transition-colors shadow"
+              >
+                📞 WhatsApp Now — +91 94003 55185
+              </a>
+            </div>
+          </motion.div>
+        </section>
+
+        {/* ── EMI PLANS ────────────────────────────────────────────── */}
+        <section className="bg-gray-50 py-12">
           <motion.div
             className="container mx-auto max-w-5xl px-5"
             initial={{ opacity: 0, y: 40 }}
