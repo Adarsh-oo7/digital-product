@@ -1,10 +1,10 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import AnimatedSky from "@/components/AnimatedSky";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
 import ChatbotAndSocialButtons from "@/components/ChatbotAndSocialButtons";
+import ClientCursor from "@/components/ClientCursor";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,21 +29,21 @@ export default function RootLayout({
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Adarsh B S" />
         <link rel="manifest" href="/site.webmanifest" />
-          {/* Google Analytics */}
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-W95558LF2R"
-  />
-  <script
-    dangerouslySetInnerHTML={{
-      __html: `
+        {/* Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-W95558LF2R"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-W95558LF2R');
       `,
-    }}
-  />
+          }}
+        />
 
 
         <meta
@@ -102,11 +102,13 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} bg-gray-900 text-white flex flex-col min-h-screen`}
+        className={`${inter.className}  text-black flex flex-col min-h-screen`}
       >
-        <AnimatedSky />
+       
         <Navbar />
-        <main className="flex-grow pt-16">{children}</main>
+        {/* <ClientCursor /> */}
+
+        <main className="flex-grow">{children}</main>
         <Footer />
 
         <Script
@@ -169,7 +171,6 @@ export default function RootLayout({
 }
 `}
         </Script>
-
         <ChatbotAndSocialButtons />
       </body>
     </html>

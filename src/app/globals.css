@@ -8,30 +8,50 @@
   --background-end-rgb: 12, 12, 29;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
 
-  a {
-    color: #3b82f6; /* Tailwind's blue-500 */
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
+a {
+  color: #3b82f6;
+  /* Tailwind's blue-500 */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
 
-  a:hover {
-    color: #60a5fa; /* Tailwind's blue-400 */
-  }
+a:hover {
+  color: #60a5fa;
+  /* Tailwind's blue-400 */
+}
+
 /* Add any additional global styles here */
 @keyframes blob {
-  0% { transform: translate(0px, 0px) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
-  100% { transform: translate(0px, 0px) scale(1); }
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
 }
 
 body {
   overflow-x: hidden;
 }
+
 
 .animate-blob {
   animation: blob 7s infinite;
@@ -44,6 +64,51 @@ body {
 .animation-delay-4000 {
   animation-delay: 4s;
 }
+
+@font-face {
+  font-family: 'Ginger';
+  src: url('/fonts/GingerBread.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Essential Sans';
+  src: url('/fonts/Essence Sans Light.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  src: url('/fonts/Cinzel-Regular.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* src: url('/crystalknotfilms/fonts/Quicksand_Book.otf') format('opentype'); */
+
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/Quicksand_Book.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 
 @layer base {
   :root {
@@ -73,6 +138,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -99,6 +165,7 @@ body {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+
   .theme {
     --animate-marquee: marquee var(--duration) infinite linear;
     --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
@@ -109,6 +176,7 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -116,30 +184,34 @@ body {
 
 @theme inline {
   @keyframes marquee {
-  from {
-    transform: translateX(0);
+    from {
+      transform: translateX(0);
     }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
+
   @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+    from {
+      transform: translateY(0);
     }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
     }
   }
 }
 
 @keyframes floatY {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(-35%);
   }
+
   50% {
     transform: translateY(-50%);
   }
 }
-
-

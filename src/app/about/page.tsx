@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Head from "next/head"
+import ParticleNetwork from "@/components/ParticleNetwork"
 
 // Base URL for canonical tags
 const BASE_URL = process.env.NODE_ENV === "production"
@@ -134,7 +135,25 @@ export default function About() {
         />
 
       </Head>
-      <div className="min-h-screen py-16 px-4">
+      <div className="min-h-screen py-16 px-4 mt-20">
+
+        <div className="absolute inset-0 z-0 pointer-events-none">
+
+          {/* BLUE GLOW */}
+          <div className="absolute w-[700px] h-[700px] 
+      bg-blue-300/30 rounded-full blur-3xl 
+      top-1/2 left-1/3 
+      -translate-x-1/2 -translate-y-1/2" />
+
+          {/* PURPLE GLOW */}
+          <div className="absolute w-[700px] h-[700px] 
+      bg-purple-300/30 rounded-full blur-3xl 
+      top-1/2 left-2/3 
+      -translate-x-1/2 -translate-y-1/2" />
+        </div>
+
+        <ParticleNetwork />
+
         <div className="container mx-auto">
           {/* Page Title */}
           <motion.h1
@@ -143,7 +162,10 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            About Digital Product Solutions
+            <span className="text-gray-900">About </span>
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Digital Product Solutions
+            </span>
           </motion.h1>
 
           {/* Mission and Vision */}
@@ -155,12 +177,12 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="relative bg-gray-800/40 rounded-2xl p-8 overflow-hidden">
-                <span className="absolute top-4 right-6 text-8xl font-bold text-gray-700/30 select-none leading-none">
+              <div className="relative bg-gray-800/60 rounded-2xl p-8 overflow-hidden">
+                <span className="absolute top-4 right-6 text-8xl font-bold text-white select-none leading-none">
                   01
                 </span>
                 <h2 className="text-xl font-semibold mb-4 text-blue-400">Our Mission</h2>
-                <p className="text-gray-400 leading-relaxed relative z-10">
+                <p className="text-white leading-relaxed relative z-10">
                   At Digital Product Solutions, we are dedicated to empowering businesses with
                   innovative web and AI solutions that drive growth and digital transformation.
                   Our mission is to transform your ideas into impactful digital realities using
@@ -170,12 +192,12 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="relative bg-gray-800/40 rounded-2xl p-8 overflow-hidden">
-                <span className="absolute top-4 right-6 text-8xl font-bold text-gray-700/30 select-none leading-none">
+              <div className="relative bg-gray-800/60 rounded-2xl p-8 overflow-hidden">
+                <span className="absolute top-4 right-6 text-8xl font-bold text-white select-none leading-none">
                   02
                 </span>
                 <h2 className="text-xl font-semibold mb-4 text-purple-400">Our Vision</h2>
-                <p className="text-gray-400 leading-relaxed relative z-10">
+                <p className="text-white leading-relaxed relative z-10">
                   We envision a future where every business, from startups to global enterprises,
                   has access to high-quality digital products that compete on a global stage. Our
                   goal is to bridge the gap between ambition and achievement by providing scalable,
@@ -194,7 +216,7 @@ export default function About() {
             >
               <div className="px-8 py-6 border-b border-gray-700">
                 <h2 className="text-xl font-semibold">Our Team</h2>
-                <p className="text-gray-400 mt-2 leading-relaxed">
+                <p className="text-gray-500 mt-2 leading-relaxed">
                   Our dynamic team of developers, designers, and strategists collaborates to bring
                   your digital vision to life. With expertise in web development, AI integration,
                   UI/UX design, SEO, and project management, we deliver innovative and reliable
@@ -214,7 +236,7 @@ export default function About() {
                     <span className={`text-lg font-bold shrink-0 ${item.color}`}>
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <p className="text-gray-400 text-sm leading-relaxed">{item.text}</p>
+                    <p className="text-gray-500 text-sm leading-relaxed">{item.text}</p>
                   </div>
                 ))}
               </div>
