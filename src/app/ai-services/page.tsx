@@ -60,7 +60,7 @@ export default function AIServices() {
         <title>AI Services | Digital Product Solutions</title>
         <link rel="canonical" href={`${BASE_URL}/ai-services`} />
       </Head>
-      <div className="min-h-screen py-16 mt-7 px-4 bg-gradient-to-br from-purple-900 to-indigo-900">
+      <div className="min-h-screen py-32 px-4 bg-gradient-to-br from-purple-900 to-indigo-900">
         <div className="container mx-auto max-w-6xl">
           <motion.h1
             className="text-4xl md:text-5xl font-bold mb-8 text-center text-white"

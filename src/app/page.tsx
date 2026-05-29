@@ -455,37 +455,70 @@ export default function Home() {
 
       <AnimatedReviews />
 
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-900 via-purple-900 to-pink-800 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="py-20 px-4 bg-white relative overflow-hidden">
+        {/* subtle background glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.08),transparent_60%)]"></div>
+
         <div className="max-w-5xl mx-auto text-center relative z-10">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <div className="inline-flex items-center px-6 py-3 bg-red-600/80 backdrop-blur-sm rounded-full mb-8">
-              <Clock className="w-5 h-5 mr-2" />
-              <span className="font-semibold">Limited Client Slots Available – Start Your Project Today</span>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+
+            {/* Badge */}
+            <div className="inline-flex items-center border border-blue-500 px-5 py-2.5 bg-blue-50 text-blue-700 rounded-full mb-8 text-sm sm:text-base font-medium shadow-sm">
+              <Clock className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+              Limited Client Slots Available
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">Ready to Grow Your Business Online?</h2>
-            <p className="text-xl mb-12 text-gray-200 max-w-3xl mx-auto">
+
+            {/* Heading */}
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 leading-tight">
+              Ready to Grow Your <br className="hidden sm:block" />
+              <span className="text-blue-600">Business Online?</span>
+            </h2>
+
+            {/* Description */}
+            <p className="text-sm sm:text-lg md:text-xl mb-10 text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Get a <span className="font-semibold text-blue-600">free consultation</span> —
               talk directly to our developer. No sales pitch. No pressure.
               Just honest advice on what your business actually needs.
             </p>
-            <div className="flex flex-col lg:flex-row gap-6 justify-center items-center mb-12">
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://wa.me/919400355185?text=Hi%20Adarsh%2C%20I%20want%20a%20free%20consultation" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-semibold text-white bg-green-600 rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300">
-                  <FaWhatsapp className="text-xl" />
-                  WhatsApp Now – Free Consultation
-                </a>
-                <a href="tel:+919400355185" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-gray-800 bg-gray-100 rounded-xl hover:bg-gray-200 transition-all duration-300">
-                  📞 Call +91 94003 55185
-                </a>
-              </div>
+
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
+
+              {/* WhatsApp */}
+              <a
+                href="https://wa.me/919400355185?text=Hi%20Adarsh%2C%20I%20want%20a%20free%20consultation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-semibold text-white bg-blue-600 rounded-xl shadow-md hover:bg-blue-400 hover:text-black hover:shadow-lg transition-all duration-300"
+              >
+                <FaWhatsapp className="text-lg" />
+                Free Consultation
+              </a>
+
+              {/* Call */}
+              <a
+                href="tel:+919400355185"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-gray-800 bg-gray-100 rounded-xl hover:bg-gray-200 transition-all duration-300"
+              >
+                📞 Call Now
+              </a>
             </div>
-            <p className="mt-8 text-sm text-gray-100">📍 Based in Trivandrum, Kerala · Serving all of Kerala · Reply within 2 hours</p>
+
+            {/* Footer note */}
+            <p className="text-xs sm:text-sm text-gray-500">
+              📍 Based in Trivandrum, Kerala · Serving all of Kerala · Reply within 2 hours
+            </p>
+
           </motion.div>
         </div>
       </section>
 
-      <section className="bg-gray-900 py-16 px-4">
+      {/* <section className="bg-gray-900 py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Digital Product Solutions - Your Complete Digital Transformation Partner</h2>
@@ -505,7 +538,7 @@ export default function Home() {
             <div>Business Automation</div>
           </div>
         </div>
-      </section>
+      </section> */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,500&family=DM+Sans:wght@300;400;500&display=swap');
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

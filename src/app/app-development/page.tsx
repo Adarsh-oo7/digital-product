@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function AppDevelopmentPage() {
   return (
-    <section className="min-h-screen mt-7 bg-gradient-to-b from-white to-gray-50 py-16 px-4">
+    <section className="min-h-screen mt-7 bg-gradient-to-b from-white to-gray-50 py-32 px-4">
       <div className="max-w-6xl mx-auto">
 
         {/* HERO */}
@@ -18,7 +18,7 @@ export default function AppDevelopmentPage() {
           </span>
 
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Build Powerful <span className="text-purple-600">Mobile Apps</span>  
+            Build Powerful <span className="text-purple-600">Mobile Apps</span>
             <br /> For Android & iOS
           </h1>
 
@@ -142,8 +142,25 @@ export default function AppDevelopmentPage() {
 
           <Link
             href="/contact"
-            className="bg-white text-purple-600 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition shadow-lg"
-          >
+            className="
+    inline-flex items-center justify-center text-center
+    
+    w-full sm:w-auto
+    
+    px-6 sm:px-8 lg:px-10
+    py-3 sm:py-3.5 lg:py-4
+    
+    text-sm sm:text-base lg:text-lg
+    
+    font-semibold rounded-full
+    
+    bg-white text-blue-600
+    
+    shadow-md hover:shadow-lg
+    hover:bg-gray-100
+    
+    transition-all duration-300
+  "          >
             Get Free App Consultation
           </Link>
         </div>

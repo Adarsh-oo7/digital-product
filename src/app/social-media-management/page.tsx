@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function SocialMediaManagementPage() {
   return (
-    <section className="min-h-screen mt-7 bg-gradient-to-b from-white to-gray-50 py-16 px-4">
+    <section className="min-h-screen mt-7 bg-gradient-to-b from-white to-gray-50 py-32 px-4">
       <div className="max-w-6xl mx-auto">
 
         {/* HERO */}
@@ -18,7 +18,7 @@ export default function SocialMediaManagementPage() {
           </span>
 
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Grow Your Brand on <span className="text-pink-600">Social Media</span>  
+            Grow Your Brand on <span className="text-pink-600">Social Media</span>
             <br /> Turn Followers Into Customers
           </h1>
 
@@ -140,11 +140,31 @@ export default function SocialMediaManagementPage() {
             Let’s turn your social media presence into a powerful marketing machine.
           </p>
 
+
           <Link
             href="/contact"
-            className="bg-white text-pink-600 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition shadow-lg"
+            className="
+    inline-flex items-center justify-center text-center
+    
+    w-full sm:w-auto
+    
+    px-6 sm:px-8 lg:px-10
+    py-3 sm:py-3.5 lg:py-4
+    
+    text-sm sm:text-base lg:text-lg
+    
+    font-semibold rounded-full
+    
+    bg-white text-blue-600
+    
+    shadow-md hover:shadow-lg
+    hover:bg-gray-100
+    
+    transition-all duration-300
+  "
           >
             Get Social Media Plan
+
           </Link>
         </div>
 

@@ -4,88 +4,66 @@ import Image from 'next/image';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">Digital Product</h3>
-            <p className="text-sm">Crafting digital experiences that inspire and innovate.</p>
-            <Image 
-  src="./img/logos.png" // Ensure the image path is correct relative to the `public` folder
-  alt="Logo" // Provide an alt description for accessibility
-  width={56} // Explicit width (adjust as per your design)
-  title="Digital Product Logo"
-  height={56} // Explicit height (adjust as per your design)
-  className="h-14 w-auto"
-/>           
- {/* <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.16649578382!2d76.84067420000002!3d8.660266599999991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x893ab90196d09cb5%3A0xdbfd038c9bb1b62!2sDigital%20product%20sale!5e1!3m2!1sen!2sin!4v1737039748951!5m2!1sen!2sin"
-      width="50%"
-      height="40%"
-      loading="lazy"
-    ></iframe> */}
+    <div className="relative">
+      <div className="pointer-events-none absolute bottom-full left-0 w-full h-12 z-20
+  bg-gradient-to-b from-transparent via-black/8 to-black/5" />
+      <footer className="relative border-t border-gray-200 py-14 bg-gradient-to-b from-[#ced4fd] via-[#decef9] to-[#ced4fd] overflow-hidden">
 
-          </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              {/* <li><Link href="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
-              <li><Link href="/about" className="hover:text-blue-400 transition-colors">About</Link></li>
-              <li><Link href="/services" className="hover:text-blue-400 transition-colors">Services</Link></li> */}
-              <li><Link href="/portfolio" className="hover:text-blue-400 transition-colors">Portfolio</Link></li>
-              {/* <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Contact</Link></li> */}
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
-            <p className="text-sm"> 695104, Korani P O</p>
-            <p className="text-sm">Attingal, Thiruvananthapuram</p>
-            <p className="text-sm">Phone: +91 9400355185</p>
-            <p className="text-sm">Email: digitalproductkerala@gmail.com</p>
-          </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
-            <div className="flex gap-4">
-  {/* Facebook - Fixed typo in 'Product' if needed */}
-  <a 
-    href="https://www.facebook.com/Digital.Product.kerala/" 
-    target="_blank" 
-    rel="noopener noreferrer nofollow"
-    aria-label="Visit our Facebook page"
-    className="hover:text-blue-400 transition-colors duration-200"
-  >
-    <Facebook className="w-6 h-6" />
-  </a>
-
-  {/* Instagram - Fixed typo in 'prodect' to 'product' */}
-  <a 
-    href="https://www.instagram.com/digital_product_solutions/" 
-    target="_blank" 
-    rel="noopener noreferrer nofollow"
-    aria-label="Visit our Instagram page"
-    className="hover:text-blue-400 transition-colors duration-200"
-  >
-    <Instagram className="w-6 h-6" />
-  </a>
-
-  {/* LinkedIn - Using company public URL instead of admin dashboard */}
-  <a 
-    href="https://www.linkedin.com/company/digital-product-adarsh/" 
-    target="_blank" 
-    rel="noopener noreferrer nofollow"
-    aria-label="Visit our LinkedIn page"
-    className="hover:text-blue-400 transition-colors duration-200"
-  >
-    <Linkedin className="w-6 h-6" />
-  </a>
-</div>
-          </div>
+        <div className="absolute inset-0 z-0">
+          <div className="absolute w-[600px] h-[600px] bg-blue-100 rounded-full blur-3xl top-[-150px] left-[-150px]" />
+          <div className="absolute w-[500px] h-[500px] bg-purple-100 rounded-full blur-3xl bottom-[-150px] right-[-150px]" />
         </div>
-        <div className="mt-8 text-center text-sm">
-          <p>&copy; 2026 Digital Product. All rights reserved.</p>
+        <div className="max-w-5xl mx-auto px-4">
+
+          {/* Top section */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 relative z-2">
+
+            {/* Logo + Name */}
+            <div className="flex items-center gap-3">
+              <Image
+                src="/img/logos.png"
+                alt="Digital Product Logo"
+                width={50}
+                height={50}
+                className="h-12 w-auto"
+              />
+              {/* <span className="text-gray-900 text-sm font-medium tracking-tight">
+              Digital Product
+            </span> */}
+            </div>
+
+            {/* Navigation */}
+            <nav className="flex flex-wrap justify-center gap-6 text-sm ">
+              <Link href="/" className=" text-black hover:text-blue-600 transition">Home</Link>
+              <Link href="/about" className="text-black hover:text-blue-600 transition">About</Link>
+              <Link href="/services" className="text-black hover:text-blue-600 transition">Services</Link>
+              <Link href="/portfolio" className="text-black hover:text-blue-600 transition">Portfolio</Link>
+              <Link href="/contact" className="text-black hover:text-blue-600 transition">Contact</Link>
+            </nav>
+
+            {/* Social */}
+            <div className="flex gap-5 text-gray-400">
+              <a href="https://www.facebook.com/Digital.Product.kerala/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-blue-600 transition">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://www.instagram.com/digital_product_solutions/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-blue-600 transition">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="https://www.linkedin.com/company/digital-product-adarsh/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-blue-600 transition">
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </div>
+
+          </div>
+
+          {/* Bottom */}
+          <div className="mt-10 text-center text-xs text-gray-600">
+            © 2026 Digital Product · Kerala, India
+          </div>
+
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   )
 }
 

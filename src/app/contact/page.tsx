@@ -173,7 +173,7 @@ export default function Contact() {
     `}
         </script>
       </Head>
-      <div className="min-h-screen py-16 px-4 relative">
+      <div className="min-h-screen py-16 pt-36 px-4 relative bg-white">
         <Image
           src="./img/bgtt.jpg?height=1080&width=1920&text=Telephone+Background"
           alt="Contact background with telephone theme"
