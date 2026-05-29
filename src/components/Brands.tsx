@@ -56,11 +56,11 @@ export default function Brands() {
 
 
             <h3 className="text-center font-bold tracking-tight
-  text-2xl sm:text-3xl md:text-4xl lg:text-5xl
-  mb-10 md:mb-14
-  bg-gradient-to-r from-blue-600 via-purple-500 to-indigo-600
-  bg-clip-text text-transparent relative z-20">
-                Our Brands
+                            text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+                            mb-10 md:mb-14
+                            bg-gradient-to-r from-blue-600 via-purple-500 to-indigo-600
+                            bg-clip-text text-transparent relative z-20">
+                            Our Brands
             </h3>
 
             {/* White Box Content */}
