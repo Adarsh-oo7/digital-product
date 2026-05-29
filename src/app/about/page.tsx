@@ -15,18 +15,22 @@ const teamMembers = [
     name: "Adarsh B S",
     role: ["Project Manager", "SEO and Marketing Specialist"],
     image: "./img/adarshnew.png?height=300&width=300",
+    imageHover: "/img/adarshcrazy.jpeg?height=300&width=300",
     tier: "core",
   },
   {
     name: "Midhin S",
     role: ["Full-Stack Developer", "Backend Specialist", "Quality Assurance (QA)"],
     image: "./img/midhin.jpg?height=300&width=300",
+    imageHover: "/img/midhincrazy.jpeg?height=300&width=300",
     tier: "core",
   },
+
   {
     name: "Aromal V G",
     role: ["Full-Stack Developer", "UI/UX Designer", "Frontend Specialist"],
     image: "./img/aromalnew.png?height=300&width=300",
+    imageHover: "/img/aromalcrazy.jpeg?height=300&width=300",
     tier: "core",
   },
   {
@@ -34,6 +38,7 @@ const teamMembers = [
     image: "./img/shibu.png?height=300&width=300",
     tier: "member",
   },
+
   {
     name: "Akhilesh C J",
     image: "./img/akhilesh.png?height=300&width=300",
@@ -76,13 +81,25 @@ const MemberCard = ({
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, delay: index * 0.2 }}
   >
-    <Image
-      src={member.image}
-      alt={`${member.name}${member.role?.[0] ? ` – ${member.role[0]}` : ""} at Digital Product Solutions`}
-      width={200}
-      height={200}
-      className="rounded-full"
-    />
+    <div className="relative w-[200px] h-[200px] group">
+      {/* Default Image */}
+      <Image
+        src={member.image}
+        alt={`${member.name}${member.role?.[0] ? ` – ${member.role[0]}` : ""} at Digital Product Solutions`}
+        fill
+        className="rounded-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+      />
+
+      {/* Hover Image */}
+      {member.imageHover && (
+        <Image
+          src={member.imageHover}
+          alt={member.name}
+          fill
+          className="rounded-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        />
+      )}
+    </div>
     <h3 className="text-xl font-semibold mt-2">{member.name}</h3>
 
     {member.role && member.role.length > 0 && (
@@ -283,7 +300,7 @@ export default function About() {
                         height={130}
                         className="rounded-full border-2 border-gray-600"
                       />
-                      <p className="text-sm text-gray-300 text-center">{member.name}</p>
+                      <p className="text-sm text-gray-500 text-center">{member.name}</p>
                     </motion.div>
                   ))}
                 </div>

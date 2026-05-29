@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { motion } from "framer-motion";
 
 type ImageCompareProps = {
     before: string;
@@ -73,14 +74,65 @@ export default function ImageCompare({
                 }}
             >
                 {/* Line */}
-                <div className="w-[2px] h-full bg-white shadow-[0_0_12px_rgba(255,255,255,0.9)]" />
+                <div className="w-[2px] h-full bg-blue-400 shadow-[0_0_12px_rgba(59,130,246,0.7)]" />
 
-                {/* Handle */}
-                <div className="absolute w-10 h-10 bg-white rounded-full shadow-xl flex items-center justify-center">
-                    <div className="flex">
-                        <div className="w-[2px] h-4 bg-black mx-[1px]" />
-                        <div className="w-[2px] h-4 bg-black mx-[1px]" />
+                {/* HANDLE */}
+                <div className="absolute w-10 h-10 flex items-center justify-center z-10">
+                    {/* Soft Glow */}
+                    <motion.div
+                        className="absolute w-12 h-12 rounded-full bg-blue-300/20 blur-xl"
+                        animate={{ scale: [1, 1.3, 1] }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                    />
+
+                    {/* Core */}
+                    <div className="relative w-10 h-10 bg-white rounded-full shadow-xl flex items-center justify-center z-10 border border-blue-200">
+                        <div className="flex">
+                            <div className="w-[2px] h-4 bg-blue-600 mx-[1px]" />
+                            <div className="w-[2px] h-4 bg-blue-600 mx-[1px]" />
+                        </div>
                     </div>
+
+                    {/* ✨ ORBITING PARTICLES */}
+                    <motion.div
+                        className="absolute inset-0 flex items-center justify-center z-20"
+                        animate={{ rotate: 360 }}
+                        transition={{
+                            duration: 8,
+                            repeat: Infinity,
+                            ease: "linear",
+                        }}
+                    >
+                        {[...Array(10)].map((_, i) => {
+                            const angle = (i / 10) * 360;
+
+                            return (
+                                <div
+                                    key={i}
+                                    className="absolute"
+                                    style={{
+                                        transform: `rotate(${angle}deg) translateX(26px)`, // 👈 radius from center
+                                    }}
+                                >
+                                    <motion.span
+                                        className="block w-[2px] h-[2px] rounded-full 
+          bg-blue-700 shadow-[0_0_8px_rgba(59,130,246,0.9)]"
+                                        animate={{
+                                            opacity: [0.3, 1, 0.3],
+                                            scale: [0.8, 1.4, 0.8],
+                                        }}
+                                        transition={{
+                                            duration: 2,
+                                            repeat: Infinity,
+                                            delay: i * 0.15,
+                                            ease: "easeInOut",
+                                        }}
+                                    />
+                                </div>
+                            );
+                        })}
+                    </motion.div>
+
                 </div>
             </div>
 
