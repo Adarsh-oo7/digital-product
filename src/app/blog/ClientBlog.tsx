@@ -45,7 +45,7 @@ export default function ClientBlog({ initialPosts }: { initialPosts: BlogPost[] 
   );
 
   return (
-    <div className="min-h-screen py-16 mt-24 px-4 relative overflow-hidden">
+    <div className="min-h-screen py-32 px-4 relative overflow-hidden">
 
       {/* 🌈 BACKGROUND BLOBS */}
       <div className="absolute inset-0 z-0 pointer-events-none">

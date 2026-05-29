@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import Head from "next/head"
 import { useState } from "react"
+import ParticleNetwork from "@/components/ParticleNetwork"
 
 // Base URL for canonical tags
 const BASE_URL = process.env.NODE_ENV === "production"
@@ -11,54 +12,6 @@ const BASE_URL = process.env.NODE_ENV === "production"
   : "http://localhost:3000"
 
 const projects = [
-  {
-    title: "E-commerce Platform",
-    category: "E-commerce Development",
-    description:
-      "A fully responsive e-commerce platform built for businesses in Kerala, featuring secure payment gateways, advanced product filtering, and an intuitive user interface. Designed to enhance customer engagement and drive sales, this solution supports local businesses in Attingal and beyond with seamless online shopping experiences tailored to their needs.",
-    image: "./img/ec.jpeg?height=400&width=600",
-    technologies: ["Django", "Bootstrap", "SQLite"],
-    features: ["Secure Payment Gateway", "Product Filtering", "Mobile Responsive", "SEO Optimized"],
-    duration: "6 weeks",
-    clientType: "Local Business",
-    testimonial: "Increased our online sales by 300% within the first month!",
-  },
-  {
-    title: "Website Maintenance Services",
-    category: "Maintenance & Support",
-    description:
-      "Comprehensive website maintenance services for clients across Kerala, including Attingal. We provide regular content updates, bug fixes, performance optimization, SEO enhancements, and secure backups. Our services ensure business and personal websites operate smoothly, supporting local enterprises with reliable and secure digital solutions.",
-    image: "./img/ht1.jpeg?height=400&width=600",
-    technologies: ["JavaScript", "Django", "MySQL"],
-    features: ["24/7 Monitoring", "Regular Updates", "Security Patches", "Performance Optimization"],
-    duration: "Ongoing",
-    clientType: "Multiple Businesses",
-    testimonial: "Professional and reliable service that keeps our website running perfectly.",
-  },
-  {
-    title: "Event Management Website",
-    category: "Business Website",
-    description:
-      "A modern, responsive static website developed for an event management team in Attingal, Kerala. The site highlights their professional services, showcases past events, and includes a contact form for local inquiries. Optimized for performance and SEO, it strengthens their online presence and attracts clients in the event planning industry.",
-    image: "./img/lemons.jpeg?height=400&width=600",
-    technologies: ["Bootstrap", "JavaScript"],
-    features: ["Event Gallery", "Contact Forms", "Service Showcase", "Mobile Optimized"],
-    duration: "3 weeks",
-    clientType: "Event Management",
-    testimonial: "Our bookings increased significantly after launching the new website.",
-  },
-  {
-    title: "Organic Honey Farm Website",
-    category: "Agriculture & Local Business",
-    description:
-      "A clean, user-friendly static website for a honey cultivator in Kerala, showcasing organic honey products and sustainable farming practices. Designed to reflect the local essence of Attingal's agricultural heritage, the site includes product details, contact information, and SEO optimization to drive direct sales and customer engagement.",
-    image: "./img/honey.jpeg?height=400&width=600",
-    technologies: ["Next.js"],
-    features: ["Product Catalog", "Online Ordering", "Farm Story", "Local SEO"],
-    duration: "2 weeks",
-    clientType: "Agriculture",
-    testimonial: "Now we can reach customers directly without middlemen!",
-  },
   {
     title: "Wedding Events Website",
     category: "Business Website",
@@ -71,6 +24,32 @@ const projects = [
     clientType: "Wedding Events",
     testimonial: "Now we can reach customers directly without middlemen!",
   },
+  {
+    title: "Construction Company Website",
+    category: "Business Website",
+    description:
+      "A sophisticated, responsive static website crafted for a premier construction company in Attingal, India. The platform features an elegant portfolio of completed projects, detailed service breakdowns, and a seamless inquiry system for prospective clients. Engineered for high performance and local SEO, the site effectively showcases their creative excellence and simplifies the booking process for the regional construction market.",
+    image: "./img/buildwellz.jpeg?height=400&width=600",
+    technologies: ["Next.js"],
+    features: ["Clients Gallery", "Construction Videos", "Contact and Services", "Custom SEO"],
+    duration: "2 weeks",
+    clientType: "Construction",
+    testimonial: "Reached more clients in our area and got more inquiries after launching the new website.",
+  },
+  {
+    title: "Soft Drinks Company Website",
+    category: "Business Website",
+    description:
+      "Responsive static with mini ecommerce website crafted for a premier soft drinks company in Kochi, Kerala. The platform features an elegant portfolio of their products, detailed service breakdowns, and a seamless inquiry system for prospective clients. Engineered for high performance and local SEO, the site effectively showcases their creative excellence and simplifies the booking process for the regional soft drinks market.",
+    image: "./img/Softdrinks.jpeg?height=400&width=600",
+    technologies: ["Next.js"],
+    features: ["Product Catalog", "Online Ordering", "Contact and Services", "Custom SEO"],
+    duration: "2 weeks",
+    clientType: "Soft Drinks",
+    testimonial: "Got more inquiries after launching the new website.",
+  },
+
+
   {
     title: "Kerala Sellers Website",
     category: "Business Website",
@@ -106,6 +85,54 @@ const projects = [
     duration: "3 weeks",
     clientType: "Business",
     testimonial: "Now we can reach customers directly without middlemen!",
+  },
+  {
+    title: "Event Management Website",
+    category: "Business Website",
+    description:
+      "A modern, responsive static website developed for an event management team in Attingal, Kerala. The site highlights their professional services, showcases past events, and includes a contact form for local inquiries. Optimized for performance and SEO, it strengthens their online presence and attracts clients in the event planning industry.",
+    image: "./img/lemons.jpeg?height=400&width=600",
+    technologies: ["Bootstrap", "JavaScript"],
+    features: ["Event Gallery", "Contact Forms", "Service Showcase", "Mobile Optimized"],
+    duration: "3 weeks",
+    clientType: "Event Management",
+    testimonial: "Our bookings increased significantly after launching the new website.",
+  },
+  {
+    title: "Organic Honey Farm Website",
+    category: "Agriculture & Local Business",
+    description:
+      "A clean, user-friendly static website for a honey cultivator in Kerala, showcasing organic honey products and sustainable farming practices. Designed to reflect the local essence of Attingal's agricultural heritage, the site includes product details, contact information, and SEO optimization to drive direct sales and customer engagement.",
+    image: "./img/honey.jpeg?height=400&width=600",
+    technologies: ["Next.js"],
+    features: ["Product Catalog", "Online Ordering", "Farm Story", "Local SEO"],
+    duration: "2 weeks",
+    clientType: "Agriculture",
+    testimonial: "Now we can reach customers directly without middlemen!",
+  },
+  {
+    title: "E-commerce Platform",
+    category: "E-commerce Development",
+    description:
+      "A fully responsive e-commerce platform built for businesses in Kerala, featuring secure payment gateways, advanced product filtering, and an intuitive user interface. Designed to enhance customer engagement and drive sales, this solution supports local businesses in Attingal and beyond with seamless online shopping experiences tailored to their needs.",
+    image: "./img/ec.jpeg?height=400&width=600",
+    technologies: ["Django", "Bootstrap", "SQLite"],
+    features: ["Secure Payment Gateway", "Product Filtering", "Mobile Responsive", "SEO Optimized"],
+    duration: "6 weeks",
+    clientType: "Local Business",
+    testimonial: "Increased our online sales by 300% within the first month!",
+  },
+  {
+    title: "Website Maintenance Services",
+    category: "Maintenance & Support",
+    description:
+      "Comprehensive website maintenance services for clients across Kerala, including Attingal. We provide regular content updates, bug fixes, performance optimization, SEO enhancements, and secure backups. Our services ensure business and personal websites operate smoothly, supporting local enterprises with reliable and secure digital solutions.",
+    image: "./img/ht1.jpeg?height=400&width=600",
+    technologies: ["JavaScript", "Django", "MySQL"],
+    features: ["24/7 Monitoring", "Regular Updates", "Security Patches", "Performance Optimization"],
+    duration: "Ongoing",
+    clientType: "Multiple Businesses",
+    testimonial: "Professional and reliable service that keeps our website running perfectly.",
   },
 ]
 
@@ -189,11 +216,15 @@ export default function Portfolio() {
         </script>
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      <div className="min-h-screen ">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <section className="relative text-black py-36 px-4 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <div className="absolute w-[600px] h-[600px] bg-blue-200 rounded-full blur-3xl top-[-150px] left-[-150px]" />
+            <div className="absolute w-[500px] h-[500px] bg-purple-200 rounded-full blur-3xl bottom-[-150px] right-[-150px]" />
+          </div>
+          <ParticleNetwork />
+
           <div className="container mx-auto relative z-10">
             <motion.div
               className="text-center max-w-4xl mx-auto"
@@ -201,13 +232,13 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-500 bg-clip-text text-transparent z-20 relative">
                 Our Portfolio
               </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-blue-100">
+              {/* <h2 className="text-md sm:text-lg md:text-xl lg:text-xl font-semibold mb-6 text-black z-20 relative">
                 Premium Web Development Projects in Kerala
-              </h2>
-              <p className="text-xl md:text-2xl mb-8 text-gray-100 leading-relaxed">
+              </h2> */}
+              <p className="text-sm sm:text-base md:text-lg lg:text-lg mb-8 text-black leading-relaxed z-20 relative">
                 Discover our award-winning collection of digital solutions that have transformed businesses across Kerala and Attingal. From cutting-edge e-commerce platforms to elegant business websites, each project represents our commitment to excellence and client success.
               </p>
 
@@ -221,8 +252,8 @@ export default function Portfolio() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                   >
-                    <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">{stat.number}</div>
-                    <div className="text-sm md:text-base text-gray-200">{stat.label}</div>
+                    <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-bold text-blue-500 mb-2">{stat.number}</div>
+                    <div className="text-sm md:text-base text-blue-500">{stat.label}</div>
                   </motion.div>
                 ))}
               </div>
@@ -329,7 +360,7 @@ export default function Portfolio() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white py-16 px-4">
+        <section className="bg-gradient-to-r from-blue-500 to-indigo-400 text-white py-16 px-4">
           <div className="container mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}

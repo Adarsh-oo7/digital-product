@@ -16,10 +16,11 @@ import { FaWhatsapp } from "react-icons/fa";
 import AnimatedReviews from '../components/AnimatedReviews'
 import Image from "next/image"
 import ProjectCarousel from '@/components/ProjectCarousel'
-import MarqueeCards from '@/components/MarqueeCards'
+// import MarqueeCards from '@/components/MarqueeCards'
 import FunnelUI from "@/components/FunnelUI";
 import HeroSectionV2 from "@/components/HeroSection";
 import ImageCompare from "@/components/ImageCompare";
+import Brands from "@/components/Brands";
 
 
 // const reviewSchema = {
@@ -389,20 +390,13 @@ export default function Home() {
               </div>
             </div>
           </section>
-
-          {/* INDUSTRIES */}
-          <div className="rounded-2xl p-8 mt-10 relative z-10">
-            <h3 className="text-4xl font-bold text-center mb-8 text-gray-900">
-              Industries We Serve
-            </h3>
-            <MarqueeCards />
-          </div>
-
         </div>
       </motion.div>
 
+      <Brands />
+
       <motion.div
-        className="py-20 px-4"
+        className="pb-20 px-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1.6 }}
