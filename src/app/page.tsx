@@ -347,8 +347,8 @@ export default function Home() {
               {/* HEADER */}
               <div className="text-center max-w-2xl mx-auto mb-20">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 tracking-tight">
-                  Why 20+ Kerala Businesses Choose
-                  <span className="block text-blue-600 font-normal mt-3">
+                  Why <span className="text-red-500">20+</span> Kerala Businesses Choose
+                  <span className="block text-blue-600 font-bold mt-3">
                     Digital Product Solutions
                   </span>
                 </h2>
