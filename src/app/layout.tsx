@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
 import ChatbotAndSocialButtons from "@/components/ChatbotAndSocialButtons";
-import ClientCursor from "@/components/ClientCursor";
+// import ClientCursor from "@/components/ClientCursor";
 
 const inter = Inter({ subsets: ["latin"] });
 
