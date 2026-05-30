@@ -50,7 +50,7 @@ export default function CursorDot() {
           position: fixed;
           width: 7px;
           height: 7px;
-          background: #c9a84c; /* var(--h-gold) */
+          background: #3b82f6;
           border-radius: 50%;
           pointer-events: none;
           z-index: 999999;
@@ -63,7 +63,7 @@ export default function CursorDot() {
           position: fixed;
           width: 32px;
           height: 32px;
-          border: 1.5px solid #1c1916; /* var(--h-charcoal) */
+          border: 1.5px solid #3b82f6; 
           border-radius: 50%;
           pointer-events: none;
           z-index: 999998;
