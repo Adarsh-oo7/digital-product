@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type ImageCompareProps = {
     before: string;
@@ -9,9 +10,7 @@ type ImageCompareProps = {
 
 export default function ImageCompare({
     before,
-    after,
-    className = "w-full"
-}: ImageCompareProps) {
+    after }: ImageCompareProps) {
     const [position, setPosition] = useState(50);
     const containerRef = useRef<HTMLDivElement>(null);
     const isDragging = useRef(false);
@@ -47,23 +46,31 @@ export default function ImageCompare({
             }}
         >
             {/* AFTER IMAGE */}
-            <img
-                src={after}
-                alt="after"
-                className="absolute inset-0 w-full h-full object-contain bg-black"
-                draggable={false}
-            />
+            <div className="absolute inset-0">
+                <Image
+                    src={after}
+                    alt="after"
+                    fill
+                    className="object-contain bg-black"
+                    draggable={false}
+                />
+            </div>
 
             {/* BEFORE IMAGE */}
-            <img
-                src={before}
-                alt="before"
-                className="absolute inset-0 w-full h-full object-contain bg-black"
-                draggable={false}
+            <div
+                className="absolute inset-0"
                 style={{
                     clipPath: `inset(0 ${100 - position}% 0 0)`,
                 }}
-            />
+            >
+                <Image
+                    src={before}
+                    alt="before"
+                    fill
+                    className="object-contain bg-black"
+                    draggable={false}
+                />
+            </div>
 
             {/* DIVIDER */}
             <div

@@ -30,20 +30,20 @@ export default function RootLayout({
         <meta name="author" content="Adarsh B S" />
         <link rel="manifest" href="/site.webmanifest" />
         {/* Google Analytics */}
-        <script
-          async
+
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-W95558LF2R"
+          strategy="afterInteractive"
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-W95558LF2R');
-      `,
-          }}
-        />
+      `}
+        </Script>
 
 
         <meta
@@ -104,7 +104,7 @@ export default function RootLayout({
       <body
         className={`${inter.className}  text-black flex flex-col min-h-screen`}
       >
-       
+
         <Navbar />
         <ClientCursor />
 

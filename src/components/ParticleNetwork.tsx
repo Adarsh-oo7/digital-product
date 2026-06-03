@@ -32,7 +32,7 @@ export default function ParticleNetwork() {
             ctx.clearRect(0, 0, width, height);
 
             // update particles
-            for (let p of particles) {
+            for (const p of particles) {
                 // mouse interaction (repel effect)
                 const dx = p.x - mouse.current.x;
                 const dy = p.y - mouse.current.y;

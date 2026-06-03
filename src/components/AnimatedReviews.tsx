@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState, useRef, useEffect } from 'react'
 import { useMotionValue, animate } from "framer-motion"
+import Image from "next/image";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface Review {
@@ -204,8 +205,14 @@ function TestimonialCard({ review, index }: { review: Review; index: number }) {
             boxShadow: '0 2px 8px rgba(196,136,42,0.12)',
           }}>
             {review.image ? (
-              <img src={review.image} alt={review.fullName}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div style={{ position: "relative", width: "100%", height: "100%" }}>
+                <Image
+                  src={review.image}
+                  alt={review.fullName}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
             ) : (
               <span style={{
                 fontFamily: "'Literata', serif",
@@ -768,7 +775,7 @@ export default function ExpandableTestimonials() {
             >
               {/* Duplicate for seamless loop */}
               {[...reviews, ...reviews].map((review, i) => (
-                <div className="et-card">
+                <div key={i} className="et-card">
                   <TestimonialCard review={review} index={i} />
                 </div>
               ))}

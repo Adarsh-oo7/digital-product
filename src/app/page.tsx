@@ -4,7 +4,7 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect } from "react";
 import Link from 'next/link'
 import {
-  ArrowRight, Bitcoin as Star, Users, CheckCircle, Award,
+  CheckCircle, 
   Zap, TrendingUp, BarChart3,
   Rocket, DollarSign, Code2, Instagram, BadgeDollarSign, MessageCircle, MapPin, Layers,
   Smartphone,
@@ -116,38 +116,7 @@ const businessResults = [
   "Strengthen your online presence across search and social"
 ]
 
-const stats = [
-  { value: 20, suffix: "+", label: "Kerala Businesses Helped" },
-  { value: 7, suffix: " Days", label: "Average Delivery Time" },
-  { value: 100, suffix: "%", label: "Client Satisfaction" },
-  { custom: "Trivandrum", label: "Kerala Based" },
-  { custom: "Direct", label: "Talk to Developer" },
-];
 
-interface CounterProps {
-  value: number;
-  suffix?: string;
-}
-
-function Counter({ value, suffix = "" }: CounterProps) {
-  const count = useMotionValue(0);
-  const rounded = useTransform(count, latest => Math.round(latest));
-
-  useEffect(() => {
-    const controls = animate(count, value, {
-      duration: 2,
-      ease: "easeOut",
-    });
-
-    return controls.stop;
-  }, [value]);
-
-  return (
-    <motion.span className="text-3xl md:text-4xl font-bold text-yellow-400">
-      <motion.span>{rounded}</motion.span> {suffix}
-    </motion.span>
-  );
-}
 
 const containerVariants = {
   hidden: {},
