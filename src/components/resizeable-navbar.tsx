@@ -13,6 +13,11 @@ import React, { useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+type NavItem = {
+    name: string;
+    link: string;
+    children?: NavItem[];
+};
 interface NavbarProps {
     children: React.ReactNode;
     className?: string;
@@ -26,12 +31,12 @@ interface NavBodyProps {
 
 interface NavItemsProps {
     items: {
-        children: any;
         name: string;
         link: string;
+        children?: NavItem[]; // ✅ optional
     }[];
     className?: string;
-    onItemClick?: () => void;
+    onItemClick?: (item: NavItem) => void;
 }
 
 interface MobileNavProps {
@@ -122,7 +127,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         >
             {items.map((item, idx) => (
                 <div
-                    key={`link-${idx}`}
+                    key={item.link}
                     className="relative"
                     onMouseEnter={() => {
                         setHovered(idx);
@@ -132,7 +137,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                     {/* Main Nav Item */}
                     <Link
                         href={item.link}
-                        onClick={onItemClick}
+                        onClick={() => onItemClick?.(item)}
                         className="relative px-4 py-2 block"
                     >
                         {hovered === idx && (
@@ -160,7 +165,8 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                             exit={{ opacity: 0, y: 10 }}
                             className="absolute left-1/2 top-full z-50 mt-3 w-56 -translate-x-1/2 rounded-2xl bg-white/90 backdrop-blur-lg shadow-xl border border-white/20 p-2"
                         >
-                            {item.children.map((child: any) => (
+                            {item.children.map((child: NavItem) => (
+
                                 <Link
                                     key={child.name}
                                     href={child.link}
