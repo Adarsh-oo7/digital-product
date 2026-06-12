@@ -1,10 +1,15 @@
-# *
+# Robots.txt — digitalproductsolutions.in
 User-agent: *
 Allow: /
 
+# Disallow admin and private routes
+Disallow: /admin
+Disallow: /api
+Disallow: /private
+
 # Host
-Host: https://digital-product.adarshbs.com
+Host: https://www.digitalproductsolutions.in
 
 # Sitemaps
-Sitemap: https://digital-product.adarshbs.com/sitemap.xml
+Sitemap: https://www.digitalproductsolutions.in/sitemap.xml
 Sitemap: https://www.digitalproductsolutions.in/sitemap-0.xml

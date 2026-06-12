@@ -99,9 +99,7 @@ export default function WhiteHero() {
                text-sm sm:text-base md:text-lg lg:text-lg
                max-w-3xl mx-auto leading-relaxed px-2 sm:px-0"
                 >
-                    Digital Product Solutions is a modern digital agency in Trivandrum providing helped <strong>20+ businesses across Kerala</strong> with
-                    website development, custom digital solution, software, mobile apps, WhatsApp automation, SEO, social media management,
-                    and AI-powered tools. Based in Trivandrum. Website live in 7 days.
+                    We are your end-to-end technology partner. From custom web and mobile apps to technical SEO, WhatsApp bots, and AI automation, <strong>Digital Product Solutions</strong> builds the exact tools your Kerala business needs to eliminate manual work and generate sales. Based in Trivandrum, with <strong>20+ successful deployments</strong> across the state. Live in 7 days.
                 </motion.p>
 
                 {/* CTA */}

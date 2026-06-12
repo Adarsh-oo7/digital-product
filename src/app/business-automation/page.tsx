@@ -1,14 +1,35 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Business Automation Services | Streamline & Scale Your Operations",
+  title: "Business Automation & WhatsApp Bots for Kerala SMEs | Digital Product Solutions",
   description:
-    "Professional business automation services to streamline workflows, automate customer communication and improve operational efficiency globally.",
+    "Automate WhatsApp replies, order tracking, invoicing and CRM for Kerala businesses. Business automation services in Trivandrum starting ₹10,000. Save time, scale faster.",
+  keywords: "business automation Kerala, WhatsApp automation Kerala, WhatsApp bot Trivandrum, workflow automation Kerala, CRM automation Kerala",
+  alternates: { canonical: "https://www.digitalproductsolutions.in/business-automation" },
+  openGraph: {
+    title: "Business Automation & WhatsApp Bots for Kerala SMEs | Digital Product Solutions",
+    description: "Automate WhatsApp, orders, invoices and CRM for Kerala businesses. Starting ₹10,000.",
+    url: "https://www.digitalproductsolutions.in/business-automation",
+    type: "website",
+  },
 };
 
 export default function BusinessAutomationPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is business automation?", "acceptedAnswer": { "@type": "Answer", "text": "Business automation uses software to perform repetitive tasks automatically — like sending WhatsApp confirmations, generating invoices, tracking orders and syncing CRM data — without manual effort." } },
+      { "@type": "Question", "name": "How much does business automation cost in Kerala?", "acceptedAnswer": { "@type": "Answer", "text": "Business automation in Kerala starts at ₹10,000 for basic WhatsApp auto-reply setups. Full workflow automation ranges from ₹25,000 to ₹1,50,000." } },
+      { "@type": "Question", "name": "Can you automate WhatsApp for my Kerala business?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We set up WhatsApp Business API automation for Kerala businesses — auto-replies, order confirmations, appointment reminders, delivery updates and customer follow-ups." } },
+      { "@type": "Question", "name": "How long does automation setup take?", "acceptedAnswer": { "@type": "Answer", "text": "Simple WhatsApp automation is ready in 3–5 days. Complex multi-workflow automation with CRM integration typically takes 2–4 weeks." } },
+      { "@type": "Question", "name": "Do I need technical knowledge to use the automation?", "acceptedAnswer": { "@type": "Answer", "text": "No. We build automation systems that run completely in the background. You receive a simple dashboard to monitor everything." } }
+    ]
+  };
+
   return (
     <section className="min-h-screen mt-7 bg-gradient-to-b from-white to-gray-50 py-32 px-4">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="max-w-6xl mx-auto">
 
         {/* HERO */}
@@ -121,6 +142,60 @@ export default function BusinessAutomationPage() {
                   {`0${i + 1}`}
                 </div>
                 <h3 className="font-semibold text-gray-800">{step}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* RELATED SERVICES */}
+        <div className="mb-20 bg-indigo-50 border border-indigo-100 rounded-3xl p-10">
+          <h2 className="text-2xl font-bold mb-6 text-gray-800">Explore Specialised Automation Services</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Link href="/whatsapp-automation-kerala" className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-indigo-400 transition group">
+              <span className="text-indigo-600 font-bold text-lg">💬</span>
+              <div>
+                <div className="font-semibold text-gray-800 group-hover:text-indigo-600">WhatsApp Automation Kerala</div>
+                <div className="text-sm text-gray-500">Automate customer replies & confirmations</div>
+              </div>
+            </Link>
+            <Link href="/ai-chatbot-development-kerala" className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-indigo-400 transition group">
+              <span className="text-indigo-600 font-bold text-lg">🤖</span>
+              <div>
+                <div className="font-semibold text-gray-800 group-hover:text-indigo-600">AI Chatbot Development Kerala</div>
+                <div className="text-sm text-gray-500">24/7 hospital, hotel & clinic bots</div>
+              </div>
+            </Link>
+            <Link href="/ai-automation-for-businesses-kerala" className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-indigo-400 transition group">
+              <span className="text-indigo-600 font-bold text-lg">⚙️</span>
+              <div>
+                <div className="font-semibold text-gray-800 group-hover:text-indigo-600">AI Business Automation</div>
+                <div className="text-sm text-gray-500">Intelligent document & process automation</div>
+              </div>
+            </Link>
+            <Link href="/odoo-erp-development-kerala" className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-indigo-400 transition group">
+              <span className="text-indigo-600 font-bold text-lg">💼</span>
+              <div>
+                <div className="font-semibold text-gray-800 group-hover:text-indigo-600">Odoo ERP Development Kerala</div>
+                <div className="text-sm text-gray-500">Manage sales, stock & manufacturing</div>
+              </div>
+            </Link>
+          </div>
+        </div>
+
+        {/* FAQ SECTION */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
+          <div className="space-y-6 max-w-3xl mx-auto">
+            {[
+              { q: "What is business automation?", a: "Business automation uses software to perform repetitive tasks automatically — like sending WhatsApp confirmations, generating invoices, tracking orders and syncing CRM data — without manual effort." },
+              { q: "How much does business automation cost in Kerala?", a: "Business automation in Kerala starts at ₹10,000 for basic WhatsApp auto-reply setups. Full workflow automation ranges from ₹25,000 to ₹1,50,000." },
+              { q: "Can you automate WhatsApp for my Kerala business?", a: "Yes. We set up WhatsApp Business API automation for Kerala businesses — auto-replies, order confirmations, appointment reminders, delivery updates and customer follow-ups." },
+              { q: "How long does automation setup take?", a: "Simple WhatsApp automation is ready in 3–5 days. Complex multi-workflow automation with CRM integration typically takes 2–4 weeks." },
+              { q: "Do I need technical knowledge to use the automation?", a: "No. We build automation systems that run completely in the background. You receive a simple dashboard to monitor everything." }
+            ].map((item, i) => (
+              <div key={i} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+                <h3 className="font-semibold text-gray-900 mb-2">{item.q}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.a}</p>
               </div>
             ))}
           </div>

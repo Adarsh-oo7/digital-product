@@ -1,14 +1,34 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Social Media Management Services | Grow Your Brand Online",
+  title: "Social Media & Performance Marketing for Kerala Businesses | Digital Product Solutions",
   description:
-    "Professional social media management services to grow your brand on Instagram, Facebook and WhatsApp. Content creation, ads and audience growth worldwide.",
+    "Social media management, Google Ads & Meta Ads for Kerala businesses. Instagram, Facebook & WhatsApp marketing in Trivandrum. Starting ₹3,000/month.",
+  keywords: "social media management Kerala, Instagram marketing Trivandrum, Facebook ads Kerala, Google ads management Kerala, performance marketing Kerala, digital marketing agency Kerala",
+  alternates: { canonical: "https://www.digitalproductsolutions.in/social-media-management" },
+  openGraph: {
+    title: "Social Media & Performance Marketing for Kerala Businesses | Digital Product Solutions",
+    description: "Social media management, Google Ads & Meta Ads for Kerala businesses. Based in Trivandrum. Starting ₹3,000/month.",
+    url: "https://www.digitalproductsolutions.in/social-media-management",
+    type: "website",
+  },
 };
 
 export default function SocialMediaManagementPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What platforms do you manage for social media?", "acceptedAnswer": { "@type": "Answer", "text": "We primarily manage Instagram, Facebook, and WhatsApp marketing campaigns, creating Reels, posts, and automated status content for Kerala brands." } },
+      { "@type": "Question", "name": "How much does social media management cost in Kerala?", "acceptedAnswer": { "@type": "Answer", "text": "Our social media management packages in Kerala start at ₹3,000 per month for basic content scheduling. Full campaign management including custom graphic design, Reels editing, and ad campaign setup starts at ₹10,000 per month." } },
+      { "@type": "Question", "name": "Do you run paid advertisement campaigns?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we specialize in high-ROI performance marketing across Meta Ads (Instagram & Facebook) and Google Ads, helping Kerala businesses get phone calls, WhatsApp inquiries, and orders directly." } },
+      { "@type": "Question", "name": "How do you track and report campaign success?", "acceptedAnswer": { "@type": "Answer", "text": "We send monthly analytics reports showing reach, followers, engagement rate, website clicks, and actual conversion leads (form submissions or WhatsApp clicks)." } }
+    ]
+  };
+
   return (
     <section className="min-h-screen mt-7 bg-gradient-to-b from-white to-gray-50 py-32 px-4">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="max-w-6xl mx-auto">
 
         {/* HERO */}
@@ -126,6 +146,59 @@ export default function SocialMediaManagementPage() {
           </div>
         </div>
 
+        {/* RELATED SPECIALISED SERVICES */}
+        <div className="mb-20 bg-pink-50 border border-pink-100 rounded-3xl p-10">
+          <h2 className="text-2xl font-bold mb-6 text-gray-800">Explore Performance Marketing Services</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Link href="/google-ads-management-kerala" className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-pink-400 transition group">
+              <span className="text-pink-600 font-bold text-lg">📈</span>
+              <div>
+                <div className="font-semibold text-gray-800 group-hover:text-pink-600">Google Ads Management</div>
+                <div className="text-sm text-gray-500">Run search & map listing ad campaigns</div>
+              </div>
+            </Link>
+            <Link href="/seo-services" className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-pink-400 transition group">
+              <span className="text-pink-600 font-bold text-lg">🔍</span>
+              <div>
+                <div className="font-semibold text-gray-800 group-hover:text-pink-600">SEO Services Kerala</div>
+                <div className="text-sm text-gray-500">Get long-term organic traffic from Google</div>
+              </div>
+            </Link>
+            <Link href="/digital-marketing-trivandrum" className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-pink-400 transition group">
+              <span className="text-pink-600 font-bold text-lg">🎯</span>
+              <div>
+                <div className="font-semibold text-gray-800 group-hover:text-pink-600">Digital Marketing Trivandrum</div>
+                <div className="text-sm text-gray-500">Full agency scale growth & marketing solutions</div>
+              </div>
+            </Link>
+            <Link href="/local-seo-kerala" className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-pink-400 transition group">
+              <span className="text-pink-600 font-bold text-lg">📍</span>
+              <div>
+                <div className="font-semibold text-gray-800 group-hover:text-pink-600">Local SEO Kerala</div>
+                <div className="text-sm text-gray-500">Rank high on local maps and search queries</div>
+              </div>
+            </Link>
+          </div>
+        </div>
+
+        {/* FAQ SECTION */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
+          <div className="space-y-6 max-w-3xl mx-auto">
+            {[
+              { q: "What platforms do you manage for social media?", a: "We manage Instagram, Facebook, and WhatsApp marketing campaigns, creating Reels, posts, and automated status content for Kerala brands." },
+              { q: "How much does social media management cost in Kerala?", a: "Our social media management packages in Kerala start at ₹3,000 per month for basic content scheduling. Full campaign management including custom graphic design, Reels editing, and ad campaign setup starts at ₹10,000 per month." },
+              { q: "Do you run paid advertisement campaigns?", a: "Yes, we specialize in high-ROI performance marketing across Meta Ads (Instagram & Facebook) and Google Ads, helping Kerala businesses get phone calls, WhatsApp inquiries, and orders directly." },
+              { q: "How do you track and report campaign success?", a: "We send monthly analytics reports showing reach, followers, engagement rate, website clicks, and actual conversion leads (form submissions or WhatsApp clicks)." }
+            ].map((item, i) => (
+              <div key={i} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+                <h3 className="font-semibold text-gray-900 mb-2">{item.q}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* CTA */}
         <div className="relative bg-gradient-to-r from-pink-600 to-orange-500 text-white p-14 rounded-3xl text-center overflow-hidden">
 
@@ -139,7 +212,6 @@ export default function SocialMediaManagementPage() {
           <p className="mb-8 text-pink-100 text-lg">
             Let’s turn your social media presence into a powerful marketing machine.
           </p>
-
 
           <Link
             href="/contact"
@@ -161,10 +233,8 @@ export default function SocialMediaManagementPage() {
     hover:bg-gray-100
     
     transition-all duration-300
-  "
-          >
+  "          >
             Get Social Media Plan
-
           </Link>
         </div>
 

@@ -9,11 +9,27 @@ import ClientCursor from "@/components/ClientCursor";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Digital Product | Web Development Agency",
+  title: "Software & Web Development Agency in Trivandrum, Kerala | Digital Product Solutions",
   description:
-    "Digital Product is a top web development agency offering custom websites, e-commerce solutions, and SEO services. Transform your online presence today!",
+    "Digital Product Solutions — Kerala's trusted software development, mobile app, SEO & WhatsApp automation agency based in Trivandrum. 20+ Kerala businesses helped. Call +919400355185.",
   keywords:
-    "digital product, web development agency, custom websites, e-commerce solutions, SEO optimization",
+    "web development agency Kerala, software development Trivandrum, SEO services Kerala, WhatsApp automation Kerala, mobile app development Kerala, digital marketing Trivandrum, AI chatbot Kerala",
+  alternates: {
+    canonical: "https://www.digitalproductsolutions.in/",
+  },
+  openGraph: {
+    title: "Software, App & Web Development Agency in Trivandrum Kerala | Digital Product Solutions",
+    description: "Digital Product Solutions — Software development, mobile apps, SEO, WhatsApp automation & AI solutions for Kerala businesses. 20+ businesses helped. Based in Trivandrum. Call +919400355185",
+    url: "https://www.digitalproductsolutions.in/",
+    siteName: "Digital Product Solutions",
+    type: "website",
+    locale: "en_IN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Software & Web Development Agency in Trivandrum, Kerala | Digital Product Solutions",
+    description: "Custom software, apps, SEO & AI automation for Kerala businesses. Based in Trivandrum. 20+ businesses helped.",
+  },
 };
 
 export default function RootLayout({
@@ -147,16 +163,26 @@ export default function RootLayout({
  "@type": "LocalBusiness",
  "name": "Digital Product Solutions",
  "url": "https://www.digitalproductsolutions.in/",
- "logo": "https://www.digitalproductsolutions.in/logo.png",
- "image": "https://www.digitalproductsolutions.in/og-image.jpg",
- "telephone": "+91XXXXXXXXXX",
+ "logo": "https://www.digitalproductsolutions.in/img/logo.png",
+ "image": "https://www.digitalproductsolutions.in/img/logo.png",
+ "telephone": "+919400355185",
+ "email": "adarsh@digitalproductsolutions.in",
  "address": {
    "@type": "PostalAddress",
-   "addressLocality": "Trivandrum",
+   "streetAddress": "Thiruvananthapuram",
+   "addressLocality": "Thiruvananthapuram",
    "addressRegion": "Kerala",
-   "addressCountry": "India"
+   "postalCode": "695001",
+   "addressCountry": "IN"
  },
- "areaServed": "Kerala",
+ "geo": {
+   "@type": "GeoCoordinates",
+   "latitude": "8.5241",
+   "longitude": "76.9366"
+ },
+ "openingHours": "Mo-Sa 09:00-19:00",
+ "priceRange": "₹₹",
+ "areaServed": ["Thiruvananthapuram", "Kochi", "Kozhikode", "Kottayam", "Thrissur", "Kollam", "Kannur", "Palakkad", "Kerala"],
  "sameAs": [
    "https://www.instagram.com/digital_product_solutions/",
    "https://www.threads.net/@digital_prodect_sale",
@@ -165,8 +191,14 @@ export default function RootLayout({
  "serviceType": [
    "Website Development",
    "SEO Services",
+   "Local SEO Kerala",
    "Web Design",
-   "App Development"
+   "App Development",
+   "AI Chatbot Development",
+   "WhatsApp Automation",
+   "Business Automation",
+   "Social Media Management",
+   "Digital Marketing Trivandrum"
  ]
 }
 `}

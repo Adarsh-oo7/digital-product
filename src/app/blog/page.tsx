@@ -505,6 +505,11 @@ export const blogPosts = [
   },
 ];
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1.0,
+};
+
 // SEO Metadata
 export const metadata: Metadata = {
   title: "Digital Product Solutions Blog | AI, E-commerce, Web Design & More",
@@ -523,7 +528,6 @@ export const metadata: Metadata = {
     "data analytics",
   ],
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1.0",
   alternates: {
     canonical: "https://www.digitalproductsolutions.in/blog",
   },

@@ -23,97 +23,57 @@ import ImageCompare from "@/components/ImageCompare";
 import Brands from "@/components/Brands";
 
 
-// const reviewSchema = {
-//   "@context": "https://schema.org",
-//   "@type": "ItemList",
-//   "itemListElement": [
-//     {
-//       "@type": "Review",
-//       "author": { "@type": "Person", "name": "SAIF" },
-//       "itemReviewed": {
-//         "@type": "Organization",
-//         "name": "CrystalKnotFilms"
-//       },
-//       "reviewBody":
-//         "The team transformed our online presence into something that matches the quality of our films. The improved visibility and structure brought us steady, serious client leads.",
-//       "reviewRating": {
-//         "@type": "Rating",
-//         "ratingValue": "5",
-//         "bestRating": "5"
-//       }
-//     },
-//     {
-//       "@type": "Review",
-//       "author": { "@type": "Person", "name": "Vipin Mohan" },
-//       "itemReviewed": {
-//         "@type": "Organization",
-//         "name": "BuilDwellz"
-//       },
-//       "reviewBody":
-//         "The team understood our brand and translated it into a clean, high-end digital presence. We started attracting more serious residential clients shortly after launch.",
-//       "reviewRating": {
-//         "@type": "Rating",
-//         "ratingValue": "4.5",
-//         "bestRating": "5"
-//       }
-//     },
-//     {
-//       "@type": "Review",
-//       "author": { "@type": "Person", "name": "Abhishek" },
-//       "itemReviewed": {
-//         "@type": "Organization",
-//         "name": "Squeeze Berriez"
-//       },
-//       "reviewBody":
-//         "The new website perfectly captures our Kerala roots and premium beverage quality. It helped us build stronger brand trust and attract new retail partnership inquiries.",
-//       "reviewRating": {
-//         "@type": "Rating",
-//         "ratingValue": "4.5",
-//         "bestRating": "5"
-//       }
-//     },
-//     {
-//       "@type": "Review",
-//       "author": { "@type": "Person", "name": "Aromal V VG" },
-//       "itemReviewed": {
-//         "@type": "Organization",
-//         "name": "Kerala Sellers"
-//       },
-//       "reviewBody":
-//         "Kerala Sellers was built to empower local businesses with a powerful yet simple digital marketplace. From product listings to payments and automation, everything was designed for real-world execution.",
-//       "reviewRating": {
-//         "@type": "Rating",
-//         "ratingValue": "5",
-//         "bestRating": "5"
-//       }
-//     },
-//     {
-//       "@type": "Review",
-//       "author": { "@type": "Person", "name": "Anvar Riyas" },
-//       "itemReviewed": {
-//         "@type": "Organization",
-//         "name": "Lemon Caters and Events"
-//       },
-//       "reviewBody":
-//         "Digital Product rebuilt our catering website and optimized our Google presence.",
-//       "reviewRating": {
-//         "@type": "Rating",
-//         "ratingValue": "4.5",
-//         "bestRating": "5"
-//       }
-//     }
-//   ]
-// }
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "SAIF" },
+      "itemReviewed": { "@type": "Organization", "name": "CrystalKnotFilms" },
+      "reviewBody": "The team transformed our online presence into something that matches the quality of our films. The improved visibility and structure brought us steady, serious client leads.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Vipin Mohan" },
+      "itemReviewed": { "@type": "Organization", "name": "BuilDwellz" },
+      "reviewBody": "The team understood our brand and translated it into a clean, high-end digital presence. We started attracting more serious residential clients shortly after launch.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "4.5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Abhishek" },
+      "itemReviewed": { "@type": "Organization", "name": "Squeeze Berriez" },
+      "reviewBody": "The new website perfectly captures our Kerala roots and premium beverage quality. It helped us build stronger brand trust and attract new retail partnership inquiries.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "4.5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Aromal V VG" },
+      "itemReviewed": { "@type": "Organization", "name": "Kerala Sellers" },
+      "reviewBody": "Kerala Sellers was built to empower local businesses with a powerful yet simple digital marketplace. From product listings to payments and automation, everything was designed for real-world execution.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Anvar Riyas" },
+      "itemReviewed": { "@type": "Organization", "name": "Lemon Caters and Events" },
+      "reviewBody": "Digital Product rebuilt our catering website and optimized our Google presence.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "4.5", "bestRating": "5" }
+    }
+  ]
+};
 
 
 
 const businessResults = [
-  "Automate workflows and reduce manual business processes",
-  "Attract high-quality leads with data-driven marketing",
-  "Build fast, scalable websites and SaaS platforms",
-  "Improve visibility with advanced SEO strategies",
-  "Create powerful digital platforms that grow with your business",
-  "Strengthen your online presence across search and social"
+  "We automate your repetitive business processes & save daily operational hours",
+  "We generate high-quality inquiries through targeted performance ads & local SEO",
+  "We engineer custom, scalable software & mobile applications for your exact operations",
+  "We rank your brand #1 on Google search & map pack rankings in your target Kerala cities",
+  "We deploy custom WhatsApp chatbots & AI tools to capture and qualify leads 24/7",
+  "We provide direct developer WhatsApp access for instant support and updates"
 ]
 
 
@@ -138,6 +98,8 @@ const itemVariants = {
 
 export default function Home() {
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
     <div className="min-h-screen flex flex-col "
       style={{
         pointerEvents: "auto",
@@ -278,6 +240,44 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* ===== INDUSTRIES WE SERVE ===== */}
+      <section id="industries" className="py-16 px-4 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.06),transparent_60%)] pointer-events-none" />
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <span className="inline-block bg-blue-100 text-blue-600 text-sm px-4 py-1 rounded-full mb-4 font-medium">Industries We Serve</span>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Digital Solutions for Every <span className="text-blue-600">Kerala Industry</span>
+            </h2>
+            <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">
+              We build websites, apps, automation and marketing systems for specific Kerala industries — so everything we deliver is already optimised for your market.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            {[
+              { icon: "🏥", name: "Hospitals & Clinics", link: "/website-development-for-hospitals-clinics-kerala" },
+              { icon: "🏨", name: "Hotels & Resorts", link: "/website-development-for-hotels-resorts-kerala" },
+              { icon: "🍽️", name: "Restaurants", link: "/restaurant-website-online-ordering-kerala" },
+              { icon: "🛒", name: "E-commerce", link: "/ecommerce-website-development-kerala" },
+              { icon: "🏗️", name: "Real Estate", link: "/real-estate-builder-website-development-kerala" },
+              { icon: "🏫", name: "Schools", link: "/school-education-management-software-kerala" },
+            ].map((ind, i) => (
+              <Link
+                key={i}
+                href={ind.link}
+                className="flex flex-col items-center gap-2 p-4 bg-gray-50 rounded-2xl border border-gray-100 hover:border-blue-400 hover:bg-blue-50 hover:shadow-md transition-all duration-300 group text-center"
+              >
+                <span className="text-3xl">{ind.icon}</span>
+                <span className="text-xs font-medium text-gray-700 group-hover:text-blue-600 leading-tight">{ind.name}</span>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link href="/software-development" className="text-blue-600 text-sm font-medium hover:underline">View all industry solutions →</Link>
+          </div>
+        </div>
+      </section>
+
       <motion.div
         className="px-4 relative overflow-hidden bg-white"
         initial={{ opacity: 0 }}
@@ -322,17 +322,17 @@ export default function Home() {
                   </span>
                 </h2>
                 <p className="mt-6 text-gray-500 text-lg leading-relaxed">
-                  We're not a big agency with 50 people you'll never talk to.
-                  We are kerala builders who understand your market.
+                  We're not a bloated agency with layers of communication.
+                  We are Kerala builders who design and deploy the solutions your business needs.
                 </p>
               </div>
 
               {/* CARDS */}
               <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
                 {[
-                  { title: "Talk Directly to the Developer", desc: "No account managers. No project managers. You whatsapp Adarsh directly and get answers immediately.", icon: MessageCircle },
-                  { title: "Built for Kerala Businesses", desc: "Based in Trivandrum. We understand Kerala customers, kerala markets and what actually works here.", icon: MapPin },
-                  { title: "Fast Delivery – 7 Days", desc: "Most websites go live in 7 days. Apps in 30. No Months of waiting.", icon: Zap },
+                  { title: "Talk Directly to the Developer", desc: "No account managers or sales reps. You WhatsApp Adarsh directly to get updates and answers immediately.", icon: MessageCircle },
+                  { title: "Built for Kerala Businesses", desc: "Based in Trivandrum. We understand Kerala customers, local markets, and what actually drives growth here.", icon: MapPin },
+                  { title: "Fast Delivery – 7 Days", desc: "Most websites go live in 7 days. Custom apps in 30 days. No long months of waiting.", icon: Zap },
                   { title: "All Services in One Place", desc: "Software, apps, SEO, social media, automation and AI — all in one team.", icon: Layers },
                   { title: "Build Kerala Sellers", desc: "We build our own marketplace products. We know real execution.", icon: Rocket },
                   { title: "Transparent Pricing", desc: "No hidden fees. Clear pricing. Starting from ₹3,000/month.", icon: BadgeDollarSign },
@@ -417,6 +417,74 @@ export default function Home() {
       </motion.div>
 
       <AnimatedReviews />
+
+      {/* ===== KERALA CITIES COVERAGE ===== */}
+      <section className="py-14 px-4 bg-gray-50 border-y border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-2">Serving Businesses Across <span className="text-blue-600">All of Kerala</span></h2>
+            <p className="text-gray-500 text-sm">Based in Trivandrum — we provide digital services to every major city in Kerala.</p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+            {[
+              { city: "Trivandrum", link: "/digital-marketing-trivandrum" },
+              { city: "Kochi", link: "/local-seo-kerala" },
+              { city: "Kollam", link: "/digital-marketing-kollam" },
+              { city: "Kozhikode", link: "/digital-marketing-kozhikode" },
+              { city: "Kannur", link: "/seo-services-kannur" },
+              { city: "Kottayam", link: "/web-development-kottayam" },
+            ].map((c, i) => (
+              <Link
+                key={i}
+                href={c.link}
+                className="flex items-center justify-center gap-2 px-3 py-3 bg-white rounded-xl border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition-all duration-200 text-sm font-medium text-gray-600 shadow-sm hover:shadow"
+              >
+                <span className="text-base">📍</span>{c.city}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== SEO SEMANTIC CONTENT BLOCK ===== */}
+      <section className="py-12 px-4 bg-white border-b border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h2 className="text-lg font-bold text-gray-800 mb-3">Kerala&apos;s Digital Growth Agency</h2>
+              <p className="text-gray-500 text-sm leading-relaxed">
+                <strong>Digital Product Solutions</strong> is a software development and digital marketing agency based in <strong>Trivandrum, Kerala</strong>.
+                We help businesses across Kerala grow online through custom websites, mobile apps, SEO, WhatsApp automation and AI chatbots.
+                Trusted by 20+ businesses in Trivandrum, Kochi, Kollam, Kozhikode and across Kerala.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {["SEO Kerala", "WhatsApp Automation", "AI Chatbot", "Web Development", "App Development", "Google Ads Kerala"].map((tag, i) => (
+                  <span key={i} className="text-xs px-3 py-1 bg-blue-50 text-blue-600 rounded-full border border-blue-100 font-medium">{tag}</span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h2 className="text-lg font-bold text-gray-800 mb-3">Specialised Services in Kerala</h2>
+              <ul className="space-y-2">
+                {[
+                  { text: "AI Chatbot Development Kerala", link: "/ai-chatbot-development-kerala" },
+                  { text: "WhatsApp Automation Kerala", link: "/whatsapp-automation-kerala" },
+                  { text: "Local SEO Kerala", link: "/local-seo-kerala" },
+                  { text: "Hospital Website Development Kerala", link: "/website-development-for-hospitals-clinics-kerala" },
+                  { text: "Google Ads Management Kerala", link: "/google-ads-management-kerala" },
+                  { text: "Odoo ERP Development Kerala", link: "/odoo-erp-development-kerala" },
+                ].map((item, i) => (
+                  <li key={i}>
+                    <Link href={item.link} className="text-sm text-gray-600 hover:text-blue-600 transition flex items-center gap-2">
+                      <span className="text-blue-400">→</span>{item.text}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="py-20 px-4 bg-white relative overflow-hidden">
         {/* subtle background glow */}
@@ -566,5 +634,6 @@ export default function Home() {
         }
       `}</style>
     </div>
+    </>
   )
 }
