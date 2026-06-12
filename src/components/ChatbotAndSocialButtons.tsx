@@ -8,7 +8,7 @@ export default function ChatbotAndSocialButtons() {
   return (
     <div className="fixed bottom-4 right-4 z-50">
       {/* Social and contact buttons */}
-      <div className="flex flex-col gap-2 mb-4">
+      <div className="flex flex-row md:flex-col gap-2 items-center justify-end">
         {/* Instagram button */}
         <div className="relative group">
           <button 

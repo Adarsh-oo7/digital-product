@@ -80,9 +80,12 @@ export default function WhiteHero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="font-semibold leading-tight text-gray-900
+                    className="font-bold leading-tight text-gray-900
                text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
                 >
+                    <span className="block text-xs sm:text-sm md:text-base font-bold uppercase tracking-widest text-indigo-600 mb-3 sm:mb-4">
+                        IT Company in Trivandrum, Kerala
+                    </span>
                     We Build{" "}
 
                     <FlipWords words={["Software", "Apps", "AI Solutions"]} />

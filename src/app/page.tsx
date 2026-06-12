@@ -65,7 +65,52 @@ const reviewSchema = {
   ]
 };
 
-
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What services does Digital Product Solutions offer in Kerala?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Digital Product Solutions is a registered MSME IT company in Trivandrum, Kerala. We specialize in custom software development, mobile app development (Android & iOS), search engine optimization (SEO), social media management, WhatsApp Business API automation, and custom AI chatbot systems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to deploy a website or custom app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most professional business websites go live within 7 days. Mobile app development and custom business platforms typically take 15 to 45 days depending on the specific requirements, databases, and third-party integrations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are your software and SEO pricing packages so affordable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We are currently offering a limited-time launch discount to celebrate our registration as an MSME IT agency in Trivandrum. This allows local Kerala businesses to secure high-quality web assets at entry-level rates before prices return to normal market standards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide direct communication with developers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We eliminate bloated corporate structures and junior account managers. Our clients get direct WhatsApp communication with our founder and lead developer, Adarsh, ensuring rapid feedback and transparency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you serve businesses outside of Trivandrum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we serve businesses all across Kerala, including Kochi, Kollam, Kozhikode, Kannur, Palakkad, Kottayam, and Thrissur, as well as select international clients."
+      }
+    }
+  ]
+};
 
 const businessResults = [
   "We automate your repetitive business processes & save daily operational hours",
@@ -75,7 +120,6 @@ const businessResults = [
   "We deploy custom WhatsApp chatbots & AI tools to capture and qualify leads 24/7",
   "We provide direct developer WhatsApp access for instant support and updates"
 ]
-
 
 
 const containerVariants = {
@@ -100,6 +144,7 @@ export default function Home() {
   return (
     <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     <div className="min-h-screen flex flex-col "
       style={{
         pointerEvents: "auto",
@@ -174,13 +219,13 @@ export default function Home() {
         text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl 
         max-w-5xl md:max-w-3xl mx-auto">
               Everything Your Kerala Business Needs
-              <span className="block text-blue-400">Under One Roof</span>
+              <span className="block text-blue-500">Under One Roof</span>
             </h2>
             <p className="mt-3 sm:mt-4 text-gray-600 leading-relaxed
         text-sm sm:text-lg md:text-lg lg:text-xl 
         max-w-4xl md:max-w-3xl mx-auto">
-              We've helped 20+ businesses across Kerala with these 6 service areas.
-              All delivered by the same dedicated team.
+              We&apos;ve helped 20+ businesses across Kerala with these 6 service areas. 
+              Take advantage of our <strong>limited-time launch pricing</strong> to lock in premium quality at entry-level rates (slots are strictly limited).
             </p>
           </motion.div>
 
@@ -192,12 +237,12 @@ export default function Home() {
             className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
           >
             {[
-              { icon: Code2, title: "Software Development", desc: "Custom web apps, dashboards, booking systems and business platforms built specifically for Kerala businesses.", price: "Starting ₹15,000", link: "/software-development" },
-              { icon: Smartphone, title: "App Development", desc: "Android and iOS mobile apps for Kerala businesses — restaurants, shops, clinics and delivery services.", price: "Starting ₹25,000", link: "/app-development" },
-              { icon: TrendingUp, title: "SEO Services", desc: "Rank on Google when Kerala customers search for your service. Organic traffic that grows monthly.", price: "Starting ₹5,000", link: "/seo-services" },
-              { icon: Instagram, title: "Social Media Management", desc: "Instagram, Facebook and WhatsApp marketing handled for you. Daily posts and audience growth.", price: "Starting ₹3,000/month", link: "/social-media-management" },
-              { icon: Settings, title: "Business Automation", desc: "Automate WhatsApp replies, order tracking and invoice generation. Set once — runs forever.", price: "Starting ₹10,000", link: "/business-automation" },
-              { icon: Bot, title: "AI-Powered Solutions", desc: "AI chatbots, smart recommendations and automation systems for Kerala businesses.", price: "Starting ₹12,000", link: "/ai-powered-solutions" },
+              { icon: Code2, title: "Software Development", desc: "Custom web apps, dashboards, booking systems and business platforms built specifically for Kerala businesses.", price: "₹15,000 (Launch Offer - 3 Slots Left!)", link: "/software-development" },
+              { icon: Smartphone, title: "App Development", desc: "Android and iOS mobile apps for Kerala businesses — restaurants, shops, clinics and delivery services.", price: "₹25,000 (Launch Offer - 2 Slots Left!)", link: "/app-development" },
+              { icon: TrendingUp, title: "SEO Services", desc: "Rank on Google when Kerala customers search for your service. Organic traffic that grows monthly.", price: "₹5,000/mo (Special Launch Offer!)", link: "/seo-services" },
+              { icon: Instagram, title: "Social Media Management", desc: "Instagram, Facebook and WhatsApp marketing handled for you. Daily posts and audience growth.", price: "₹3,000/mo (Special Launch Offer!)", link: "/social-media-management" },
+              { icon: Settings, title: "Business Automation", desc: "Automate WhatsApp replies, order tracking and invoice generation. Set once — runs forever.", price: "₹10,000 (Launch Offer - 4 Slots Left!)", link: "/business-automation" },
+              { icon: Bot, title: "AI-Powered Solutions", desc: "AI chatbots, smart recommendations and automation systems for Kerala businesses.", price: "₹12,000 (Launch Offer - 3 Slots Left!)", link: "/ai-powered-solutions" },
             ].map((service, index) => {
               const Icon = service.icon;
               return (
@@ -417,6 +462,100 @@ export default function Home() {
       </motion.div>
 
       <AnimatedReviews />
+
+      {/* ===== ABOUT TEAM SECTION ===== */}
+      <section id="about-summary" className="py-16 px-4 bg-white relative overflow-hidden">
+        <div className="max-w-5xl mx-auto border-t border-gray-100 pt-16">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="inline-block bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full mb-4 font-semibold uppercase tracking-wider">Our Agency Team</span>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                A Dedicated Team of <span className="text-blue-600">9 Digital Creators</span> Based in Trivandrum
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                We are a registered MSME IT company and growth agency. Unlike solo freelancers who might vanish mid-project, or bloated agencies where you get ignored, Digital Product Solutions offers a structured team of engineers, UI/UX designers, copywriters, and SEO specialists.
+              </p>
+              <ul className="space-y-3 text-gray-700 font-medium">
+                <li className="flex items-center gap-2">
+                  <span className="text-blue-500 font-bold">✔</span> Direct developer WhatsApp access — no account manager filters
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-blue-500 font-bold">✔</span> Full-stack capability (Next.js, Flutter, Python AI, Odoo)
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-blue-500 font-bold">✔</span> Locally owned and operated in Trivandrum, Kerala
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-indigo-50 to-blue-50 border border-blue-100 p-8 rounded-3xl relative">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Core Agency Benchmarks</h3>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
+                  <div className="text-3xl font-extrabold text-blue-600 mb-1">9</div>
+                  <div className="text-xs text-gray-500 uppercase font-semibold">Team Members</div>
+                </div>
+                <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
+                  <div className="text-3xl font-extrabold text-blue-600 mb-1">20+</div>
+                  <div className="text-xs text-gray-500 uppercase font-semibold">Happy Clients</div>
+                </div>
+                <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
+                  <div className="text-3xl font-extrabold text-blue-600 mb-1">MSME</div>
+                  <div className="text-xs text-gray-500 uppercase font-semibold">Govt Registered</div>
+                </div>
+                <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
+                  <div className="text-3xl font-extrabold text-blue-600 mb-1">5.0★</div>
+                  <div className="text-xs text-gray-500 uppercase font-semibold">Google Rating</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== FAQ SECTION ON HOMEPAGE ===== */}
+      <section id="faq" className="py-16 px-4 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full mb-3 font-semibold uppercase tracking-wider">Frequently Asked Questions</span>
+            <h2 className="text-3xl font-bold text-gray-900">Answers to Your Questions</h2>
+            <p className="text-gray-500 text-sm mt-2">Get direct facts on our timeline, pricing model, and how we deliver digital growth.</p>
+          </div>
+          <div className="space-y-6">
+            {[
+              {
+                q: "What services does Digital Product Solutions offer in Kerala?",
+                a: "Digital Product Solutions is a registered MSME IT company in Trivandrum. We specialize in custom software development, mobile app development (Android & iOS), SEO, performance marketing (Google & Meta Ads), WhatsApp Business API automation, and custom conversational AI chatbot systems."
+              },
+              {
+                q: "How long does it take to deploy a website or custom app?",
+                a: "Our professional business websites go live within 7 days. Mobile app development and custom business platforms typically take 15 to 45 days depending on the specific databases, features, and third-party integrations required."
+              },
+              {
+                q: "Why are your software and SEO pricing packages so affordable?",
+                a: "We are currently offering a limited-time launch discount to celebrate our registration as an MSME IT agency in Trivandrum. This allows local Kerala businesses to secure high-quality web assets at entry-level rates before prices return to normal market standards."
+              },
+              {
+                q: "Do you provide direct communication with developers?",
+                a: "Yes. We eliminate bloated corporate structures and junior account managers. Our clients get direct WhatsApp communication with our founder and lead developer, Adarsh, ensuring rapid feedback and transparency."
+              },
+              {
+                q: "Do you serve businesses outside of Trivandrum?",
+                a: "Yes, we serve businesses all across Kerala, including Kochi, Kollam, Kozhikode, Kannur, Palakkad, Kottayam, and Thrissur, as well as select international clients."
+              }
+            ].map((faq, idx) => (
+              <div key={idx} className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-start gap-2">
+                  <span className="text-blue-500 font-extrabold text-xl leading-none">Q.</span>
+                  {faq.q}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed pl-6">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ===== KERALA CITIES COVERAGE ===== */}
       <section className="py-14 px-4 bg-gray-50 border-y border-gray-100">
