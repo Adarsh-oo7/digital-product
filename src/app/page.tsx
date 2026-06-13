@@ -709,69 +709,6 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,500&family=DM+Sans:wght@300;400;500&display=swap');
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
-        .lux-primary {
-          display: inline-flex; align-items: center; gap: 10px;
-          background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
-          color: #fff; font-family: 'DM Sans', sans-serif; font-size: 13.5px;
-          font-weight: 500; letter-spacing: 0.5px; padding: 15px 38px;
-          border-radius: 100px; border: none; cursor: pointer;
-          text-decoration: none; position: relative; overflow: hidden;
-          box-shadow: 0 4px 20px rgba(29,78,216,0.35);
-          transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .lux-primary::before {
-          content: ''; position: absolute; inset: 0;
-          background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
-        }
-        .lux-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(29,78,216,0.45); }
- 
-        .lux-secondary {
-          display: inline-flex; align-items: center; gap: 10px;
-          background: rgba(255,255,255,0.7); backdrop-filter: blur(12px);
-          color: #1e3a8a; font-family: 'DM Sans', sans-serif; font-size: 13.5px;
-          font-weight: 500; letter-spacing: 0.5px; padding: 14px 36px;
-          border-radius: 100px; border: 1px solid rgba(29,78,216,0.25);
-          cursor: pointer; text-decoration: none;
-          box-shadow: 0 2px 16px rgba(29,78,216,0.08);
-          transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-        }
-        .lux-secondary:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(29,78,216,0.15); background: rgba(255,255,255,0.95); }
- 
-        .stat-glass {
-          background: rgba(255,255,255,0.72);
-          backdrop-filter: blur(20px);
-          border: 1px solid rgba(255,255,255,0.9);
-          border-radius: 20px;
-          padding: 22px 16px;
-          text-align: center;
-          box-shadow: 0 8px 32px rgba(29,78,216,0.08), inset 0 1px 0 rgba(255,255,255,0.9);
-          transition: transform 0.25s, box-shadow 0.25s;
-          cursor: default;
-        }
-        .stat-glass:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 20px 50px rgba(29,78,216,0.16), inset 0 1px 0 rgba(255,255,255,1); }
- 
-        .pill-tag {
-          font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 400;
-          color: #6b8dd6; padding: 5px 14px;
-          border: 1px solid rgba(29,78,216,0.15); border-radius: 100px;
-          background: rgba(255,255,255,0.6); backdrop-filter: blur(8px);
-          letter-spacing: 0.2px; cursor: default;
-          transition: all 0.18s;
-        }
-        .pill-tag:hover { background: rgba(29,78,216,0.07); color: #1d4ed8; border-color: rgba(29,78,216,0.3); }
- 
-        @keyframes float-badge { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-5px);} }
-        .float-badge { animation: float-badge 4s ease-in-out infinite; }
- 
-        @keyframes shimmer {
-          0% { background-position: -200% center; }
-          100% { background-position: 200% center; }
-        }
-      `}</style>
     </div>
     </>
   )

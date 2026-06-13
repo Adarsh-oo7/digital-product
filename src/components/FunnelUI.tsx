@@ -72,13 +72,13 @@ export default function SVGFunnel() {
             {/* TOP INTRO */}
             <div className="absolute top-14 left-0 w-full px-4 text-center z-20 ">
 
-                <h1 className="font-bold text-gray-900 leading-tight
+                <h2 className="font-bold text-gray-900 leading-tight
         text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl 
         max-w-5xl md:max-w-3xl mx-auto
         [@media(min-width:530px)_and_(max-width:639px)]:text-xl">
                     Unlock Business <span className="text-blue-600">Growth</span> with Our Connected
                     <span className="text-red-400"> Revenue Engine</span>
-                </h1>
+                </h2>
 
                 <p className="mt-3 sm:mt-4 text-gray-600 leading-relaxed
         text-sm sm:text-lg md:text-lg lg:text-xl 

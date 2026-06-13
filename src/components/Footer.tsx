@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
               <p className="text-gray-700 leading-relaxed">
                 📞 Phone: <a href="tel:+919400355185" className="hover:text-blue-600 transition font-semibold">+91 9400355185</a><br />
                 💬 WhatsApp: <a href="https://wa.me/919400355185" className="hover:text-blue-600 transition font-semibold">+91 9400355185</a><br />
-                ✉️ Email: <a href="mailto:adarsh@digitalproductsolutions.in" className="hover:text-blue-600 transition">adarsh@digitalproductsolutions.in</a>
+                ✉️ Email: <Link href="/contact" className="hover:text-blue-600 transition">Send us a message</Link>
               </p>
             </div>
           </div>

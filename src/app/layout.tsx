@@ -9,9 +9,9 @@ import ClientCursor from "@/components/ClientCursor";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Software & Web Development Agency in Trivandrum, Kerala | Digital Product Solutions",
+  title: "Web & App Development Agency | Trivandrum, Kerala",
   description:
-    "Digital Product Solutions — Kerala's trusted software development, mobile app, SEO & WhatsApp automation agency based in Trivandrum. 20+ Kerala businesses helped. Call +919400355185.",
+    "Kerala's trusted software & mobile app development agency in Trivandrum. SEO, WhatsApp automation & custom solutions for 20+ local businesses.",
   keywords:
     "web development agency Kerala, software development Trivandrum, SEO services Kerala, WhatsApp automation Kerala, mobile app development Kerala, digital marketing Trivandrum, AI chatbot Kerala",
   alternates: {
