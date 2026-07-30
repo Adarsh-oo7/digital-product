@@ -1,14 +1,14 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "SEO Services in Kerala | Local SEO & Technical SEO | Digital Product Solutions",
+  title: "SEO Services in Kerala | Starting ₹5,000/mo | Google Page 1 Rankings",
   description:
-    "Expert SEO services in Kerala for businesses in Trivandrum, Kochi, Kollam & Kozhikode. Get more Google traffic, local map pack rankings, and consistent leads. Starting ₹5,000/month.",
+    "Professional SEO services in Kerala. Rank your business on Page 1 of Google in Kochi, Trivandrum, Kozhikode, and across Kerala starting at ₹5,000/month. Free SEO audits!",
   keywords: "SEO services Kerala, local SEO Trivandrum, SEO company Kochi, Google ranking Kerala, local SEO Kerala, technical SEO India, SEO agency Trivandrum",
   alternates: { canonical: "https://www.digitalproductsolutions.in/seo-services" },
   openGraph: {
-    title: "SEO Services in Kerala | Local SEO & Technical SEO | Digital Product Solutions",
-    description: "Expert SEO services in Kerala. Get your business to rank on Google in Trivandrum, Kochi, Kollam, Kozhikode and beyond.",
+    title: "SEO Services in Kerala | Starting ₹5,000/mo | Google Page 1 Rankings",
+    description: "Rank your business on Page 1 of Google in Kochi, Trivandrum, and across Kerala starting at ₹5,000/month. Free SEO audit.",
     url: "https://www.digitalproductsolutions.in/seo-services",
     type: "website",
   },

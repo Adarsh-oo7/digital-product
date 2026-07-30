@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 export const metadata = {
   title: "Local SEO Checklist for Kerala Businesses (Trivandrum, Kollam, Kannur) 2026 | Digital Product Solutions",
@@ -55,7 +55,7 @@ export default function BlogPost() {
 
         {/* BODY */}
         <div className="prose prose-lg max-w-none">
-          <p className="text-lg text-gray-600 mb-6">If your Kerala business isn't appearing in <strong>Google's local pack</strong> (the map results) when customers search for your services, you're losing leads to competitors. Here is a step-by-step local SEO checklist specifically for Kerala businesses.</p>
+          <p className="text-lg text-gray-600 mb-6">If your Kerala business isn't appearing in <strong>Google's local pack</strong> (the map results) when customers search for your services, you're losing leads to competitors. By leveraging professional <Link href="/seo-services-kerala" className="text-blue-600 underline font-semibold hover:text-blue-800">SEO services in Kerala</Link>, you can rank higher and gain more inquiries. Here is a step-by-step local SEO checklist specifically for Kerala businesses.</p>
 
         <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-10">The Kerala Local SEO Checklist</h2>
         <div className="space-y-4 mb-8">
@@ -102,9 +102,9 @@ export default function BlogPost() {
               <span className="text-blue-600 font-bold text-lg">&#128279;</span>
               <span className="font-medium text-gray-700 group-hover:text-blue-600">View Related Service &#8594;</span>
             </Link>
-            <Link href="/seo-services" className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-400 transition group">
+            <Link href="/seo-services-kerala" className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-400 transition group">
               <span className="text-purple-600 font-bold text-lg">&#128279;</span>
-              <span className="font-medium text-gray-700 group-hover:text-blue-600">Explore More &#8594;</span>
+              <span className="font-medium text-gray-700 group-hover:text-blue-600">Kerala SEO Agency &#8594;</span>
             </Link>
             <Link href="/pricing" className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-400 transition group">
               <span className="text-green-600 font-bold text-lg">&#128176;</span>

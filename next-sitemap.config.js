@@ -2,6 +2,7 @@
 module.exports = {
   siteUrl: 'https://www.digitalproductsolutions.in',
   generateRobotsTxt: false, // We manage robots.txt manually
+  generateIndexSitemap: false, // Generate single sitemap.xml
   changefreq: 'weekly',
   priority: 0.7,
   sitemapSize: 5000,
@@ -32,6 +33,12 @@ module.exports = {
       '/real-estate-builder-website-development-kerala',
       '/ai-agent-rag-development-india',
     ];
+    // New Local SEO landing pages
+    const newLocalPages = [
+      '/seo-services-kerala',
+      '/app-development-kerala',
+      '/software-development-trivandrum',
+    ];
     // City Pages
     const cityPages = [
       '/digital-marketing-kollam',
@@ -51,8 +58,8 @@ module.exports = {
       '/blog/digital-marketing-hotels-kerala',
     ];
 
-    [...phase1, ...phase2, ...phase3, ...cityPages, ...blogPosts].forEach(path => {
-      result.push({ loc: path, changefreq: 'weekly', priority: 0.8, lastmod: '2026-06-12' });
+    [...phase1, ...phase2, ...phase3, ...newLocalPages, ...cityPages, ...blogPosts].forEach(path => {
+      result.push({ loc: path, changefreq: 'weekly', priority: 0.8, lastmod: '2026-07-30' });
     });
 
     return result;
@@ -62,8 +69,6 @@ module.exports = {
       { userAgent: '*', allow: '/' },
       { userAgent: '*', disallow: ['/admin', '/api', '/private'] },
     ],
-    additionalSitemaps: [
-      'https://www.digitalproductsolutions.in/sitemap-0.xml',
-    ],
+    additionalSitemaps: [],
   },
 };

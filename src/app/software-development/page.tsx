@@ -1,14 +1,14 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Custom Software & Web App Development in Kerala | Digital Product Solutions",
+  title: "Custom Software Development in Kerala | Web Apps & ERP | Starting ₹15,000",
   description:
-    "Custom software development for Kerala businesses — hospitals, schools, hotels, manufacturing & retail. Web apps, dashboards, ERP/Odoo, booking systems. Based in Trivandrum. Starting ₹15,000.",
+    "Custom software and web application development agency in Kerala. Custom web portals, SaaS platforms, ERP, and Odoo setup starting at ₹15,000. Get a free proposal!",
   keywords: "software development Kerala, web app development Trivandrum, custom software Kerala, ERP development Kerala, Odoo Kerala, hospital management software Kerala",
   alternates: { canonical: "https://www.digitalproductsolutions.in/software-development" },
   openGraph: {
-    title: "Custom Software & Web App Development in Kerala | Digital Product Solutions",
-    description: "Custom web apps, dashboards, ERP & booking systems for Kerala businesses. Based in Trivandrum. Starting ₹15,000.",
+    title: "Custom Software Development in Kerala | Web Apps & ERP | Starting ₹15,000",
+    description: "Custom web applications, dashboards, Odoo ERP, and SaaS products built for Kerala businesses. Starting at ₹15,000.",
     url: "https://www.digitalproductsolutions.in/software-development",
     type: "website",
   },

@@ -12,4 +12,3 @@ Host: https://www.digitalproductsolutions.in
 
 # Sitemaps
 Sitemap: https://www.digitalproductsolutions.in/sitemap.xml
-Sitemap: https://www.digitalproductsolutions.in/sitemap-0.xml

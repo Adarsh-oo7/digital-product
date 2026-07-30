@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 export const metadata = {
   title: "Best Digital Marketing Strategies for Hotels & Resorts in Kerala 2026 | Digital Product Solutions",
@@ -99,9 +99,9 @@ export default function BlogPost() {
               <span className="text-blue-600 font-bold text-lg">&#128279;</span>
               <span className="font-medium text-gray-700 group-hover:text-blue-600">View Related Service &#8594;</span>
             </Link>
-            <Link href="/digital-marketing-trivandrum" className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-400 transition group">
+            <Link href="/seo-services-kerala" className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-400 transition group">
               <span className="text-purple-600 font-bold text-lg">&#128279;</span>
-              <span className="font-medium text-gray-700 group-hover:text-blue-600">Explore More &#8594;</span>
+              <span className="font-medium text-gray-700 group-hover:text-blue-600">Hotel SEO Kerala &#8594;</span>
             </Link>
             <Link href="/pricing" className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-400 transition group">
               <span className="text-green-600 font-bold text-lg">&#128176;</span>

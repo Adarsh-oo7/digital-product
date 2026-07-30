@@ -1,14 +1,14 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Mobile App Development for Kerala Businesses | Android & iOS | Digital Product Solutions",
+  title: "Mobile App Development in Kerala | Starting ₹25,000 | iOS & Android Apps",
   description:
-    "Android & iOS app development for Kerala businesses — restaurants, clinics, shops, delivery services. Mobile apps built in Trivandrum. Starting ₹25,000.",
+    "Top-tier mobile app development in Kerala. We build custom, high-performance Android & iOS apps for businesses, shops, and clinics starting at ₹25,000. Free consultation!",
   keywords: "app development Kerala, mobile app development Trivandrum, Android app Kerala, iOS app Kerala, restaurant app Kerala, clinic app development",
   alternates: { canonical: "https://www.digitalproductsolutions.in/app-development" },
   openGraph: {
-    title: "Mobile App Development for Kerala Businesses | Android & iOS | Digital Product Solutions",
-    description: "Android & iOS apps for Kerala restaurants, clinics, shops & delivery services. Built in Trivandrum. Starting ₹25,000.",
+    title: "Mobile App Development in Kerala | Starting ₹25,000 | iOS & Android Apps",
+    description: "High-performance Android & iOS apps built in Kerala. Scale your business, clinic, or restaurant starting at ₹25,000.",
     url: "https://www.digitalproductsolutions.in/app-development",
     type: "website",
   },
