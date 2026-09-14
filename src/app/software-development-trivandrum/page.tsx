@@ -65,10 +65,10 @@ export default function SoftwareDevelopmentTrivandrumPage() {
       "telephone": "+919400355185",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Thiruvananthapuram",
-        "addressLocality": "Thiruvananthapuram",
+        "streetAddress": "Mangalapuram Panchayat, Korani, Chempakamangalam",
+        "addressLocality": "Korani",
         "addressRegion": "Kerala",
-        "postalCode": "695001",
+        "postalCode": "695104",
         "addressCountry": "IN"
       }
     },

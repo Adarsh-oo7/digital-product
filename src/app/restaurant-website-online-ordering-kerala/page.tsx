@@ -1,4 +1,5 @@
 ﻿import Link from "next/link";
+import CtaBand from "@/components/seo/CtaBand";
 
 export const metadata = {
   title: "Restaurant Website & Online Ordering System in Kerala | Digital Product Solutions",
@@ -132,10 +133,11 @@ export default function Page() {
               Get Free Consultation
             </Link>
             <Link href="https://wa.me/919400355185" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 font-semibold rounded-full bg-orange-500 text-white border border-white/30 hover:bg-orange-400 transition-all duration-300">
-              WhatsApp Now
+              WhatsApp a Developer
             </Link>
           </div>
         </div>
+        <CtaBand whatsappText="Hi, I need a restaurant website in Kerala" />
       </div>
     </section>
   );

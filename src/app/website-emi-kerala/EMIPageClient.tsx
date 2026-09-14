@@ -311,6 +311,15 @@ export default function EMIPageClient() {
 
       {/* Push content below fixed navbar */}
       <main className="pt-7 bg-gray-50 min-h-screen">
+        <div className="bg-gray-900 text-white text-center px-4 py-4 text-sm md:text-base">
+          This anniversary EMI offer ended on 25 June 2026. It is kept online only as a historical page and is not advertised as a live deal.
+          {" "}
+          <a href="/pricing" className="underline font-semibold">See current website packages</a>
+          {" · "}
+          <a href="/website-development-cost-kerala" className="underline font-semibold">Website cost in Kerala</a>
+          {" · "}
+          <a href="/contact" className="underline font-semibold">Get a project estimate</a>
+        </div>
 
         <EmiBanner
           images={[

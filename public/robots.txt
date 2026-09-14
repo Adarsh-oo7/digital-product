@@ -2,13 +2,11 @@
 User-agent: *
 Allow: /
 
-# Disallow admin and private routes
 Disallow: /admin
 Disallow: /api
 Disallow: /private
+Disallow: /certificate-verified
 
-# Host
 Host: https://www.digitalproductsolutions.in
 
-# Sitemaps
 Sitemap: https://www.digitalproductsolutions.in/sitemap.xml

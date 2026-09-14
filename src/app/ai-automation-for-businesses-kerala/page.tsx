@@ -1,18 +1,5 @@
 ﻿import Link from "next/link";
 
-export const metadata = {
-  title: "AI Automation for Kerala Businesses | Workflow Automation | Digital Product Solutions",
-  description: "AI-powered business automation for Kerala SMEs — workflow automation, CRM automation, AI data processing and intelligent document handling. Starting ₹15,000.",
-  keywords: "AI automation Kerala, business automation Trivandrum, AI workflow Kerala, intelligent automation Kerala, AI business solutions",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/ai-automation-for-businesses-kerala" },
-  openGraph: {
-    title: "AI Automation for Kerala Businesses | Workflow Automation | Digital Product Solutions",
-    description: "AI-powered business automation for Kerala SMEs — workflow automation, CRM automation, AI data processing and intelligent document handling. Starting ₹15,000.",
-    url: "https://www.digitalproductsolutions.in/ai-automation-for-businesses-kerala",
-    type: "website",
-  },
-};
-
 export default function Page() {
   return (
     <section className="min-h-screen mt-7 bg-gradient-to-b from-white to-gray-50 py-32 px-4">

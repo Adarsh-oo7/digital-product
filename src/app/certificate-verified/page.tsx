@@ -183,7 +183,7 @@ export default function CertificateVerification() {
         <title>Certificate Verification | Digital Product Solutions</title>
         <meta
           name="description"
-          content="Verify the authenticity of certificates issued by Digital Product Solutions in Attingal, Kerala. Check course completion, training certifications, and digital credentials."
+          content="Verify the authenticity of certificates issued by Digital Product Solutions in Korani, Thiruvananthapuram district, Kerala. Check course completion, training certifications, and digital credentials."
         />
       </Head>
       <div className="min-h-screen py-16 px-4 relative overflow-hidden">

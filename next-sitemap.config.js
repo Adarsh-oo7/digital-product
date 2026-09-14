@@ -1,74 +1,114 @@
 /** @type {import('next-sitemap').IConfig} */
+const ALLOW = new Set([
+  '/',
+  '/about',
+  '/services',
+  '/pricing',
+  '/portfolio',
+  '/contact',
+  '/book',
+  '/website-development',
+  '/website-maintenance-kerala',
+  '/software-development',
+  '/app-development',
+  '/seo-services',
+  '/business-automation',
+  '/ai-powered-solutions',
+  '/social-media-management',
+  '/ecommerce-website-development-kerala',
+  '/whatsapp-automation-kerala',
+  '/affordable-website-development-trivandrum',
+  '/website-developer-trivandrum',
+  '/website-development-trivandrum',
+  '/website-development-cost-kerala',
+  '/small-business-website-kerala',
+  '/website-redesign-trivandrum',
+  '/website-cost-calculator',
+  '/project-cost-estimator',
+  '/affordable-ecommerce-website-kerala',
+  '/online-store-development-trivandrum',
+  '/ecommerce-website-cost-kerala',
+  '/clinic-website-development-kerala',
+  '/hospital-website-development-kerala',
+  '/construction-website-development-kerala',
+  '/school-website-development-kerala',
+  '/startup-mvp-development-kerala',
+  '/freelance-web-developer-kerala',
+  '/dedicated-developer-team-kerala',
+  '/outsource-web-development-kerala',
+  '/restaurant-website-online-ordering-kerala',
+  '/website-development-for-hotels-resorts-kerala',
+  '/real-estate-builder-website-development-kerala',
+  '/website-development-for-hospitals-clinics-kerala',
+  '/ai-chatbot-development-kerala',
+  '/digital-marketing-trivandrum',
+  '/local-seo-kerala',
+  '/seo-for-doctors-clinics-kerala',
+  '/google-ads-management-kerala',
+  '/odoo-erp-development-kerala',
+  '/school-education-management-software-kerala',
+  '/ai-agent-rag-development-india',
+  '/software-development-trivandrum',
+  '/kerala-sellers',
+  '/digital-marketing-kollam',
+  '/digital-marketing-kozhikode',
+  '/seo-services-kannur',
+  '/web-development-kottayam',
+  '/web-development-palakkad',
+  '/blog',
+  '/blog/website-cost-kerala-2026',
+  '/blog/whatsapp-automation-restaurants-kerala',
+  '/blog/ai-chatbots-clinics-kerala',
+  '/blog/local-seo-checklist-kerala',
+  '/blog/odoo-erp-kerala-manufacturers',
+  '/blog/ayurvedic-clinic-website-kerala',
+  '/blog/digital-marketing-hotels-kerala',
+  '/blog/freelancer-vs-development-team-kerala',
+  '/blog/wordpress-vs-custom-website-kerala',
+  '/blog/website-vs-landing-page-kerala',
+  '/blog/seo-vs-google-ads-kerala',
+  '/blog/whatsapp-automation-vs-manual-kerala',
+  '/blog/how-to-create-website-small-business-kerala',
+  '/blog/how-to-sell-online-kerala',
+  '/blog/how-to-choose-a-website-developer-kerala',
+  '/blog/app-development-cost-kerala',
+  '/blog/software-development-cost-kerala',
+  '/blog/seo-cost-kerala',
+]);
+
 module.exports = {
   siteUrl: 'https://www.digitalproductsolutions.in',
-  generateRobotsTxt: false, // We manage robots.txt manually
-  generateIndexSitemap: false, // Generate single sitemap.xml
+  generateRobotsTxt: false,
+  generateIndexSitemap: false,
+  outDir: 'out',
   changefreq: 'weekly',
   priority: 0.7,
   sitemapSize: 5000,
-  exclude: ['/admin', '/private', '/api', '/certificate-verified'],
-  additionalPaths: async (config) => {
-    const result = [];
-    // Phase 1 Pages
-    const phase1 = [
-      '/ai-chatbot-development-kerala',
-      '/whatsapp-automation-kerala',
-      '/digital-marketing-trivandrum',
-      '/local-seo-kerala',
-      '/website-development-for-hospitals-clinics-kerala',
-    ];
-    // Phase 2 Pages
-    const phase2 = [
-      '/website-development-for-hotels-resorts-kerala',
-      '/seo-for-doctors-clinics-kerala',
-      '/google-ads-management-kerala',
-      '/ecommerce-website-development-kerala',
-      '/ai-automation-for-businesses-kerala',
-    ];
-    // Phase 3 Pages
-    const phase3 = [
-      '/odoo-erp-development-kerala',
-      '/school-education-management-software-kerala',
-      '/restaurant-website-online-ordering-kerala',
-      '/real-estate-builder-website-development-kerala',
-      '/ai-agent-rag-development-india',
-    ];
-    // New Local SEO landing pages
-    const newLocalPages = [
-      '/seo-services-kerala',
-      '/app-development-kerala',
-      '/software-development-trivandrum',
-    ];
-    // City Pages
-    const cityPages = [
-      '/digital-marketing-kollam',
-      '/digital-marketing-kozhikode',
-      '/seo-services-kannur',
-      '/web-development-kottayam',
-      '/web-development-palakkad',
-    ];
-    // Blog Posts
-    const blogPosts = [
-      '/blog/website-cost-kerala-2026',
-      '/blog/whatsapp-automation-restaurants-kerala',
-      '/blog/ai-chatbots-clinics-kerala',
-      '/blog/local-seo-checklist-kerala',
-      '/blog/odoo-erp-kerala-manufacturers',
-      '/blog/ayurvedic-clinic-website-kerala',
-      '/blog/digital-marketing-hotels-kerala',
-    ];
-
-    [...phase1, ...phase2, ...phase3, ...newLocalPages, ...cityPages, ...blogPosts].forEach(path => {
-      result.push({ loc: path, changefreq: 'weekly', priority: 0.8, lastmod: '2026-07-30' });
-    });
-
-    return result;
+  exclude: [
+    '/admin',
+    '/private',
+    '/api',
+    '/certificate-verified',
+    '/website-emi-kerala',
+    '/seo-services-kerala',
+    '/app-development-kerala',
+    '/ai-services',
+    '/ai-automation-for-businesses-kerala',
+  ],
+  transform: async (config, path) => {
+    if (!ALLOW.has(path)) return null;
+    return {
+      loc: path,
+      changefreq: 'weekly',
+      priority: path === '/' ? 1.0 : path.startsWith('/blog/') ? 0.6 : 0.8,
+      lastmod: new Date().toISOString(),
+    };
   },
-  robotsTxtOptions: {
-    policies: [
-      { userAgent: '*', allow: '/' },
-      { userAgent: '*', disallow: ['/admin', '/api', '/private'] },
-    ],
-    additionalSitemaps: [],
+  additionalPaths: async (config) => {
+    const extra = [];
+    for (const path of ALLOW) {
+      extra.push(await config.transform(config, path));
+    }
+    return extra.filter(Boolean);
   },
 };

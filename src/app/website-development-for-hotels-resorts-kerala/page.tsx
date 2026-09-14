@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CtaBand from "@/components/seo/CtaBand";
 
 export const metadata = {
   title: "Website Development for Hotels & Resorts in Kerala | Digital Product Solutions",
@@ -108,9 +109,10 @@ export default function HotelResortWebsiteKerala() {
           <h2 className="text-4xl font-bold mb-4">Starting at ₹35,000</h2>
           <p className="mb-8 text-amber-100 text-lg">Get direct bookings with a professional hotel website. Built in 7–14 days.</p>
           <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 font-semibold rounded-full bg-white text-amber-600 shadow-md hover:shadow-lg hover:bg-gray-100 transition-all duration-300">
-            Get Free Hotel Website Quote
+            Get a Project Estimate
           </Link>
         </div>
+        <CtaBand whatsappText="Hi, I need a hotel website in Kerala" />
       </div>
     </section>
   );

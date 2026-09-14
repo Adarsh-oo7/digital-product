@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "SEO Services in Kerala | Starting ₹5,000/mo | Google Page 1 Rankings",
+  title: "SEO Services in Kerala | From ₹5,000/month",
   description:
-    "Professional SEO services in Kerala. Rank your business on Page 1 of Google in Kochi, Trivandrum, Kozhikode, and across Kerala starting at ₹5,000/month. Free SEO audits!",
+    "SEO retainers for Kerala businesses from ₹5,000/month as published on this site. Technical fixes, local pages and Google Business Profile support — not a ranking guarantee.",
   keywords: "SEO services Kerala, local SEO Trivandrum, SEO company Kochi, Google ranking Kerala, local SEO Kerala, technical SEO India, SEO agency Trivandrum",
   alternates: { canonical: "https://www.digitalproductsolutions.in/seo-services" },
   openGraph: {

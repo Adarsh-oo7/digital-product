@@ -2,6 +2,8 @@
 import { useState } from "react";
 import JotFormEmbed from "../components/JotFormScript"
 
+import { track } from "@/lib/analytics";
+
 export default function ChatbotAndSocialButtons() {
   const [showJotForm, setShowJotForm] = useState(false);
 
@@ -30,7 +32,10 @@ export default function ChatbotAndSocialButtons() {
         <div className="relative group">
           <button 
             className="bg-green-500 hover:bg-green-600 p-3 rounded-full shadow-lg text-white transition-all duration-200"
-            onClick={() => window.open('https://wa.me/9400355185', '_blank')}
+            onClick={() => {
+              track("whatsapp_click", { location: "floating" });
+              window.open('https://wa.me/919400355185', '_blank');
+            }}
             aria-label="WhatsApp"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -48,6 +53,7 @@ export default function ChatbotAndSocialButtons() {
           <button 
             className="bg-blue-600 hover:bg-blue-700 p-3 rounded-full shadow-lg text-white transition-all duration-200"
             onClick={() => {
+              track("phone_click", { location: "floating" });
               window.location.href = "tel:+919400355185";
             }}
             aria-label="Phone Call"

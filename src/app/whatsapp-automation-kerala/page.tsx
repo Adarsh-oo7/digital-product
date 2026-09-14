@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CtaBand from "@/components/seo/CtaBand";
 
 export const metadata = {
   title: "WhatsApp Automation for Kerala Businesses | Digital Product Solutions",
@@ -178,10 +179,10 @@ export default function WhatsAppAutomationKerala() {
             Stop missing customer messages. Automate your WhatsApp and let your business reply 24/7.
           </p>
           <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 font-semibold rounded-full bg-white text-green-600 shadow-md hover:shadow-lg hover:bg-gray-100 transition-all duration-300">
-            Get WhatsApp Automation Setup
+            Get a Project Estimate
           </Link>
         </div>
-
+        <CtaBand whatsappText="Hi, I want WhatsApp automation for my Kerala business" />
       </div>
     </section>
   );

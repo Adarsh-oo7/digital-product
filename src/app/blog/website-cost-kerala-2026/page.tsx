@@ -2,12 +2,12 @@
 
 export const metadata = {
   title: "How Much Does a Website Cost in Kerala in 2026? | Digital Product Solutions",
-  description: "Complete guide to website development costs in Kerala 2026. Business websites, e-commerce, hospital sites & apps — transparent pricing from Trivandrum's top agency.",
+  description: "Published website package ranges for Kerala businesses in 2026, plus one-time, recurring and optional costs from Digital Product Solutions.",
   keywords: "website development cost Kerala 2026, how much does a website cost in Kerala, website price Kerala, web development charges Kerala",
   alternates: { canonical: "https://www.digitalproductsolutions.in/blog/website-cost-kerala-2026" },
   openGraph: {
     title: "How Much Does a Website Cost in Kerala in 2026? | Digital Product Solutions",
-    description: "Complete guide to website development costs in Kerala 2026. Business websites, e-commerce, hospital sites & apps — transparent pricing from Trivandrum's top agency.",
+    description: "Published website package ranges for Kerala businesses in 2026, plus one-time, recurring and optional costs from Digital Product Solutions.",
     url: "https://www.digitalproductsolutions.in/blog/website-cost-kerala-2026",
     type: "article",
   },
@@ -18,7 +18,7 @@ export default function BlogPost() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "How Much Does a Website Cost in Kerala in 2026?",
-    "description": "Complete guide to website development costs in Kerala 2026. Business websites, e-commerce, hospital sites & apps — transparent pricing from Trivandrum's top agency.",
+    "description": "Published website package ranges for Kerala businesses in 2026, plus one-time, recurring and optional costs from Digital Product Solutions.",
     "author": { "@type": "Person", "name": "Adarsh B S" },
     "publisher": { "@type": "Organization", "name": "Digital Product Solutions", "url": "https://www.digitalproductsolutions.in" },
     "url": "https://www.digitalproductsolutions.in/blog/website-cost-kerala-2026",

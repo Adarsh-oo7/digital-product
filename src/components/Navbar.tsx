@@ -20,6 +20,7 @@ const navItems = [
     name: "Services",
     link: "#",
     children: [
+      { name: "Website Development", link: "/website-development" },
       { name: "Software Development", link: "/software-development" },
       { name: "App Development", link: "/app-development" },
       { name: "SEO Services", link: "/seo-services" },

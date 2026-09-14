@@ -54,7 +54,10 @@ export default function HospitalClinicWebsiteKerala() {
           </h1>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We build professional websites for <strong>hospitals, clinics, multi-specialty centers and Ayurvedic wellness centers</strong> across Kerala. Online appointment booking, doctor profiles, patient portals and SEO for healthcare in <strong>Trivandrum, Kochi, Kollam and beyond</strong>.
+            We build professional websites for <strong>hospitals, clinics, multi-specialty centers and Ayurvedic wellness centers</strong> across Kerala. For dedicated pages see{" "}
+            <Link href="/hospital-website-development-kerala" className="text-teal-700 font-semibold underline">hospital websites</Link>
+            {" "}and{" "}
+            <Link href="/clinic-website-development-kerala" className="text-teal-700 font-semibold underline">clinic websites</Link>.
           </p>
 
           <div className="mt-8 flex justify-center gap-4 flex-wrap">

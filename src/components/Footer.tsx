@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
             <div>
               <h4 className="font-bold text-gray-900 mb-3 uppercase tracking-wider">Office Location</h4>
               <p className="text-gray-700 leading-relaxed">
-                📍 Trivandrum, Kerala, India - 695001<br />
+                📍 Mangalapuram Panchayat, Korani, Chempakamangalam, Kerala 695104<br />
                 Serving clients in Trivandrum, Kochi, Kollam, Kozhikode, Kannur, Palakkad, Kottayam, and across Kerala.
               </p>
             </div>
@@ -55,8 +55,12 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Navigation */}
-            <nav className="flex flex-wrap justify-center gap-6 text-sm ">
+            <nav className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm ">
               <Link href="/" className=" text-black hover:text-blue-600 transition">Home</Link>
+              <Link href="/website-development" className="text-black hover:text-blue-600 transition">Websites</Link>
+              <Link href="/website-development-cost-kerala" className="text-black hover:text-blue-600 transition">Website cost</Link>
+              <Link href="/ecommerce-website-development-kerala" className="text-black hover:text-blue-600 transition">E-commerce</Link>
+              <Link href="/pricing" className="text-black hover:text-blue-600 transition">Pricing</Link>
               <Link href="/about" className="text-black hover:text-blue-600 transition">About</Link>
               <Link href="/blog" className="text-black hover:text-blue-600 transition">Blog</Link>
               <Link href="/portfolio" className="text-black hover:text-blue-600 transition">Portfolio</Link>
@@ -80,7 +84,7 @@ const Footer: React.FC = () => {
 
           {/* Bottom */}
           <div className="mt-10 text-center text-xs text-gray-600">
-            © 2026 Digital Product Solutions · Trivandrum, Kerala, India. All rights reserved.
+            © 2026 Digital Product Solutions · Korani, Thiruvananthapuram, Kerala. All rights reserved.
           </div>
 
         </div>

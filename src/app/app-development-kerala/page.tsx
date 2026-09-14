@@ -1,19 +1,5 @@
 import Link from "next/link";
 
-export const metadata = {
-  title: "Mobile App Development Company in Kerala | Starting ₹25,000",
-  description:
-    "We are the leading mobile app development company in Kerala. We build custom Android & iOS applications starting at ₹25,000. Compare us to Noviindus - we provide flat rates, full code ownership, and direct developer communication.",
-  keywords: "mobile app development company in kerala, app development kerala, android app development kerala, ios app development kerala, mobile app developers kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/app-development-kerala" },
-  openGraph: {
-    title: "Mobile App Development Company in Kerala | Starting ₹25,000",
-    description: "Premium Android & iOS mobile applications engineered for Kerala businesses, startups, clinics, and hotels. Get a free wireframe design and custom proposal.",
-    url: "https://www.digitalproductsolutions.in/app-development-kerala",
-    type: "website",
-  },
-};
-
 export default function AppDevelopmentKeralaPage() {
   const faqSchema = {
     "@context": "https://schema.org",

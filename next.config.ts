@@ -6,10 +6,11 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   eslint: {
+    // Next 15 lint plugin currently throws "nextVitals is not defined" in this environment.
     ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
 };
 

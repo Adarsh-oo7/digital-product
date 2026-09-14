@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 import ClientBlog from "./ClientBlog";
+import { keralaDedicatedListings, priorityGuides } from "@/content/priority-articles";
+import { indexableBlogSlugs } from "@/lib/blog";
 
-// Expanded blog posts for SEO authority
-export const blogPosts = [
+// Generic System A posts — listed but noindexed (see blog/[slug] generateMetadata).
+const genericBlogPosts = [
   {
     id: 1,
     title: "How AI-Powered Digital Solutions Drive Business Growth in 2025",
@@ -505,6 +507,8 @@ export const blogPosts = [
   },
 ];
 
+export const blogPosts = [...genericBlogPosts, ...keralaDedicatedListings, ...priorityGuides];
+
 export const viewport = {
   width: "device-width",
   initialScale: 1.0,
@@ -562,7 +566,9 @@ export default function Blog() {
       url: "https://www.digitalproductsolutions.in",
       logo: "https://www.digitalproductsolutions.in/images/logo.jpg",
     },
-    blogPost: blogPosts.map((post) => ({
+    blogPost: blogPosts
+      .filter((post) => indexableBlogSlugs.has(post.slug))
+      .map((post) => ({
       "@type": "BlogPosting",
       headline: post.title,
       description: post.excerpt,
@@ -583,7 +589,7 @@ export default function Blog() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
-      <ClientBlog initialPosts={blogPosts} />
+      <ClientBlog initialPosts={blogPosts.filter((post) => indexableBlogSlugs.has(post.slug))} />
     </>
   );
 }

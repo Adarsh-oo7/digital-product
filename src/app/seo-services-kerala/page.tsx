@@ -1,19 +1,5 @@
 import Link from "next/link";
 
-export const metadata = {
-  title: "SEO Services in Kerala | Starting ₹5,000/mo | Top SEO Company in Kerala",
-  description:
-    "Rank on Google Page 1 with elite SEO services in Kerala. Transparent pricing starting at ₹5,000/mo. Beat competitors like Techpullers with technical Next.js speed, local schemas, and direct-to-developer support.",
-  keywords: "seo services kerala, seo company kerala, seo service in kerala, local seo trivandrum, best seo agency kochi, search engine optimization kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/seo-services-kerala" },
-  openGraph: {
-    title: "SEO Services in Kerala | Starting ₹5,000/mo | Top SEO Company in Kerala",
-    description: "Rank your business on Page 1 of Google in Kochi, Trivandrum, Kozhikode, and across Kerala starting at ₹5,000/month. Free technical SEO audits!",
-    url: "https://www.digitalproductsolutions.in/seo-services-kerala",
-    type: "website",
-  },
-};
-
 export default function SEOServicesKeralaPage() {
   const faqSchema = {
     "@context": "https://schema.org",

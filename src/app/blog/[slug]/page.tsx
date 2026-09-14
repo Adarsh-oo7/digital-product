@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 
 // Reuse blog posts from blog page
 import { blogPosts } from "../page";
+import { dedicatedBlogSlugs, indexableBlogSlugs } from "@/lib/blog";
+import CtaBand from "@/components/seo/CtaBand";
 
 // Use Next.js built-in type for dynamic route props
 import type { NextPage } from "next";
@@ -15,9 +17,11 @@ interface Props {
 
 // Generate static paths for all blog posts
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
-  }));
+  return blogPosts
+    .filter((post) => !dedicatedBlogSlugs.includes(post.slug as (typeof dedicatedBlogSlugs)[number]))
+    .map((post) => ({
+      slug: post.slug,
+    }));
 }
 
 // Dynamic metadata for SEO
@@ -31,10 +35,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  const indexable = indexableBlogSlugs.has(post.slug);
   return {
     title: `${post.title} | Digital Product Solutions`,
     description: post.excerpt,
     keywords: post.keywords,
+    robots: indexable
+      ? { index: true, follow: true }
+      : { index: false, follow: true },
     alternates: {
       canonical: `https://www.digitalproductsolutions.in/blog/${post.slug}`,
     },
@@ -115,7 +123,11 @@ const BlogPost: NextPage<Props> = async ({ params }) => {
             className="w-full h-auto mb-8 rounded-lg"
             priority
           />
-          <div className="prose prose-lg text-gray-700 mb-12">{post.content}</div>
+          <div className="prose prose-lg text-gray-700 mb-12 space-y-4">
+            {post.content.split("\n\n").map((para) => (
+              <p key={para.slice(0, 48)}>{para}</p>
+            ))}
+          </div>
 
           {/* Related Posts */}
           {relatedPosts.length > 0 && (
@@ -150,12 +162,7 @@ const BlogPost: NextPage<Props> = async ({ params }) => {
             <p className="text-gray-600 mb-6 max-w-xl mx-auto">
               Contact Digital Product Solutions to build tailored AI, e-commerce, and web design solutions that drive growth.
             </p>
-            <Link
-              href="/contact"
-              className="inline-block bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Get Started
-            </Link>
+            <CtaBand heading="Discuss this with the Kerala team" />
           </section>
         </div>
       </div>

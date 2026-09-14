@@ -66,7 +66,7 @@ const projects = [
     title: "Mangrove Moments Website",
     category: "Business Website",
     description:
-      "Kerala Sellers is an all-in-one e-commerce solution designed for Kerala’s local businesses. With secure payment integration, smart product management, custom dashboard, advanced product filtering, and a clean, intuitive interface, the platform helps sellers connect with customers effortlessly and scale their business online—starting from Attingal to all of Kerala.",
+      "Hospitality website for Mangrove Moments with contact, pricing, gallery and activity pages so guests can reach the venue directly.",
     image: "./img/moments.jpeg?height=400&width=600",
     technologies: ["Next.js"],
     features: ["Own Website", "contact", "pricing", "Gallery", "Activities"],
@@ -78,7 +78,7 @@ const projects = [
     title: "Mangrove spot Website",
     category: "Business Website",
     description:
-      "Kerala Sellers is an all-in-one e-commerce solution designed for Kerala’s local businesses. With secure payment integration, smart product management, custom dashboard, advanced product filtering, and a clean, intuitive interface, the platform helps sellers connect with customers effortlessly and scale their business online—starting from Attingal to all of Kerala.",
+      "Hospitality website for Mangrove Spot covering contact, pricing, gallery and activities for visitors.",
     image: "./img/spot.jpeg?height=400&width=600",
     technologies: ["Next.js"],
     features: ["Own Website", "contact", "pricing", "Gallery", "Activities"],
@@ -154,19 +154,19 @@ export default function Portfolio() {
   return (
     <>
       <Head>
-        <title>Portfolio | Digital Product Solutions - Premium Web Development in Kerala & Attingal</title>
+        <title>Portfolio | Digital Product Solutions - Web Development in Kerala</title>
         <meta
           name="description"
-          content="Explore our award-winning portfolio of web development projects in Kerala. Specialized in e-commerce platforms, business websites, and maintenance services. Serving Attingal and all of Kerala with 100% client satisfaction guarantee."
+          content="Explore our portfolio of web development projects in Kerala. E-commerce platforms, business websites, and maintenance for clients across Trivandrum district and Kerala."
         />
         <meta
           name="keywords"
-          content="web development Kerala, website design Attingal, e-commerce solutions Kerala, static websites, website maintenance, Digital Product Solutions portfolio, web developer Attingal, business websites Kerala"
+          content="web development Kerala, website design Trivandrum, e-commerce solutions Kerala, static websites, website maintenance, Digital Product Solutions portfolio, web developer Korani, business websites Kerala"
         />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Digital Product Solutions" />
         <meta property="og:title" content="Portfolio | Digital Product Solutions - Premium Web Development in Kerala" />
-        <meta property="og:description" content="50+ successful projects, 100% client satisfaction. Professional web development services in Kerala and Attingal." />
+        <meta property="og:description" content="Web development case studies for Kerala businesses. Digital Product Solutions, Korani, Thiruvananthapuram." />
         <meta property="og:image" content={`${BASE_URL}/img/portfolio-banner.jpg`} />
         <meta property="og:url" content={`${BASE_URL}/portfolio`} />
         <meta property="og:type" content="website" />
@@ -189,14 +189,16 @@ export default function Portfolio() {
                 },
                 "address": {
                   "@type": "PostalAddress",
-                  "addressLocality": "Attingal",
+                  "streetAddress": "Mangalapuram Panchayat, Korani, Chempakamangalam",
+                  "addressLocality": "Korani",
                   "addressRegion": "Kerala",
-                  "addressCountry": "India"
+                  "postalCode": "695104",
+                  "addressCountry": "IN"
                 },
                 "aggregateRating": {
                   "@type": "AggregateRating",
                   "ratingValue": "5.0",
-                  "reviewCount": "50"
+                  "reviewCount": "25"
                 }
               },
               "mainEntity": [
@@ -239,7 +241,7 @@ export default function Portfolio() {
                 Premium Web Development Projects in Kerala
               </h2> */}
               <p className="text-sm sm:text-base md:text-lg lg:text-lg mb-8 text-black leading-relaxed z-20 relative">
-                Discover our award-winning collection of digital solutions that have transformed businesses across Kerala and Attingal. From cutting-edge e-commerce platforms to elegant business websites, each project represents our commitment to excellence and client success.
+                Discover our collection of digital solutions for businesses across Kerala and Thiruvananthapuram district. From e-commerce platforms to business websites, each project represents our commitment to practical delivery and client success.
               </p>
 
               {/* Trust Indicators */}
@@ -369,7 +371,7 @@ export default function Portfolio() {
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Start Your Project?</h2>
               <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
-                Join our satisfied clients in Kerala and Attingal. Let's transform your digital presence with a custom solution tailored to your business needs.
+                Join our clients in Kerala and Trivandrum. Let's transform your digital presence with a custom solution tailored to your business needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">

@@ -5,30 +5,31 @@ import Footer from "@/components/Footer";
 import Script from "next/script";
 import ChatbotAndSocialButtons from "@/components/ChatbotAndSocialButtons";
 import ClientCursor from "@/components/ClientCursor";
+import { business, postalAddressSchema, SITE_URL } from "@/lib/business";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Web & App Development Agency | Trivandrum, Kerala",
-  description:
-    "Kerala's trusted software & mobile app development agency in Trivandrum. SEO, WhatsApp automation & custom solutions for 20+ local businesses.",
-  keywords:
-    "web development agency Kerala, software development Trivandrum, SEO services Kerala, WhatsApp automation Kerala, mobile app development Kerala, digital marketing Trivandrum, AI chatbot Kerala",
-  alternates: {
-    canonical: "https://www.digitalproductsolutions.in/",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Website & Software Team in Trivandrum, Kerala",
+    template: "%s | Digital Product Solutions",
   },
+  description:
+    "Kerala development team for business websites, software, apps, SEO and WhatsApp automation. Office in Korani, Thiruvananthapuram district. Direct developer access.",
   openGraph: {
-    title: "Software, App & Web Development Agency in Trivandrum Kerala | Digital Product Solutions",
-    description: "Digital Product Solutions — Software development, mobile apps, SEO, WhatsApp automation & AI solutions for Kerala businesses. 20+ businesses helped. Based in Trivandrum. Call +919400355185",
-    url: "https://www.digitalproductsolutions.in/",
+    title: "Website & Software Team in Trivandrum, Kerala | Digital Product Solutions",
+    description:
+      "Websites, software, apps, SEO and WhatsApp automation for Kerala businesses. Direct developer communication. Office in Korani, Thiruvananthapuram district.",
+    url: SITE_URL,
     siteName: "Digital Product Solutions",
     type: "website",
     locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Software & Web Development Agency in Trivandrum, Kerala | Digital Product Solutions",
-    description: "Custom software, apps, SEO & AI automation for Kerala businesses. Based in Trivandrum. 20+ businesses helped.",
+    title: "Website & Software Team in Trivandrum, Kerala",
+    description: "Custom websites, apps, SEO and automation for Kerala businesses.",
   },
 };
 
@@ -42,7 +43,6 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="index, follow" />
         <meta name="author" content="Adarsh B S" />
         <link rel="manifest" href="/site.webmanifest" />
         {/* Google Analytics */}
@@ -62,16 +62,6 @@ export default function RootLayout({
         </Script>
 
 
-        <meta
-          property="og:title"
-          content="Software, App & Web Development Agency in Trivandrum Kerala | Digital Product Solutions"
-        />
-        <meta
-          property="og:description"
-          content="Digital Product Solutions — Software development, mobile apps, SEO, WhatsApp automation & Al solutions for Kerala businesses. 20+ businesses helped. Based in Trivandrum. Call +919400355185"
-        />
-        <meta property="og:url" content="https://www.digitalproductsolutions.in/" />
-        <meta property="og:type" content="website" />
         <link rel="icon" href="./img/logo.png" sizes="any" />
         <meta name="google-site-verification" content="DHDeaZm4O1GPWicrshCNxCRNOAjRdlqeaOdddGQnZ5I" />
 
@@ -81,26 +71,14 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "Digital Product Solutions",
-              "url": "https://www.digitalproductsolutions.in",
-              "telephone": "+919400355185",
-              "description": "Software development, mobile app development, SEO, social media management, business automation and AI solutions for Kerala businesses. Based in Trivandrum, Kerala. 20+ businesses helped.",
+              "name": business.legalName,
+              "url": SITE_URL,
+              "telephone": business.telephone,
+              "description": "Software development, mobile app development, SEO, social media management, business automation and AI solutions for Kerala businesses. Office in Korani, Thiruvananthapuram district. 20+ businesses helped.",
               "priceRange": "₹₹",
-              "openingHours": "Mo-Sa 09:00-19:00",
-              "areaServed": ["Thiruvananthapuram", "Kochi", "Kozhikode", "Kottayam", "Thrissur", "Kollam", "Kerala"],
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Thiruvananthapuram",
-                "addressLocality": "Thiruvananthapuram",
-                "addressRegion": "Kerala",
-                "postalCode": "695001",
-                "addressCountry": "IN"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "8.5241",
-                "longitude": "76.9366"
-              },
+              "openingHours": business.openingHours,
+              "areaServed": ["Thiruvananthapuram", "Kochi", "Kozhikode", "Kottayam", "Thrissur", "Kollam", "Kannur", "Palakkad", "Kerala"],
+              "address": postalAddressSchema,
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
                 "name": "Digital Services for Kerala Businesses",
@@ -169,16 +147,11 @@ export default function RootLayout({
  "email": "adarsh@digitalproductsolutions.in",
  "address": {
    "@type": "PostalAddress",
-   "streetAddress": "Thiruvananthapuram",
-   "addressLocality": "Thiruvananthapuram",
+   "streetAddress": "Mangalapuram Panchayat, Korani, Chempakamangalam",
+   "addressLocality": "Korani",
    "addressRegion": "Kerala",
-   "postalCode": "695001",
+   "postalCode": "695104",
    "addressCountry": "IN"
- },
- "geo": {
-   "@type": "GeoCoordinates",
-   "latitude": "8.5241",
-   "longitude": "76.9366"
  },
  "openingHours": "Mo-Sa 09:00-19:00",
  "priceRange": "₹₹",

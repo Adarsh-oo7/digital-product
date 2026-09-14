@@ -4,19 +4,14 @@ import type React from "react"
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Calendar, Clock, User, Mail, Phone, MessageSquare } from "lucide-react"
-import Head from "next/head"
 import ParticleNetwork from "@/components/ParticleNetwork"
-
-// Base URL for canonical tags
-const BASE_URL = process.env.NODE_ENV === "production"
-  ? "https://www.digitalproductsolutions.in"
-  : "http://localhost:3000"
+import { track } from "@/lib/analytics"
 
 const services = [
-  { id: "web-dev", name: "Web Development", price: 5000 },
-  { id: "ai-integration", name: "AI Integration", price: 12000 },
-  { id: "seo-optimization", name: "SEO Optimization", price: 5000 },
-  { id: "e-commerce", name: "E-commerce Solutions", price: 6000 },
+  { id: "web-dev", name: "Web Development" },
+  { id: "ai-integration", name: "AI Integration" },
+  { id: "seo-optimization", name: "SEO Optimization" },
+  { id: "e-commerce", name: "E-commerce website" },
 ]
 
 export default function BookingPage() {
@@ -32,6 +27,13 @@ export default function BookingPage() {
 
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [open, setOpen] = useState<number | null>(null);
+  const [bookStarted, setBookStarted] = useState(false);
+
+  const markBookStart = () => {
+    if (bookStarted) return;
+    setBookStarted(true);
+    track("book_start", { form: "book" });
+  };
 
   const faqs = [
     {
@@ -76,7 +78,6 @@ export default function BookingPage() {
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const form = e.target as HTMLFormElement
-    console.log("Form Data:", formData)
 
     try {
       const formDataObj = new FormData(form)
@@ -86,7 +87,7 @@ export default function BookingPage() {
       })
 
       if (response.ok) {
-        console.log("Form successfully submitted")
+        track("booking_submit", { form: "book" })
         setIsSubmitted(true)
         setFormData({
           name: "",
@@ -112,83 +113,7 @@ export default function BookingPage() {
 
   return (
     <>
-      <Head>
-        <title>Book Services | Digital Product Solutions - Web Development in Kerala</title>
-        <meta
-          name="description"
-          content="Book web development, AI integration, SEO optimization, or e-commerce solutions with Digital Product Solutions in Attingal, Kerala.Based in Trivandrum. Call +919400355185. Schedule your appointment today with our expert team."
-        />
-        <meta
-          name="keywords"
-          content="book web development Kerala, website design Attingal, AI solutions Kerala, SEO optimization Attingal, e-commerce solutions Kerala, Digital Product Solutions"
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`${BASE_URL}/booking`} />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "WebPage",
-              "name": "Book Services",
-              "description": "Schedule an appointment with Digital Product Solutions in Attingal, Kerala, for professional web development, AI integration, SEO optimization, and e-commerce solutions.",
-              "url": "${BASE_URL}/booking",
-              "publisher": {
-                "@type": "Organization",
-                "name": "Digital Product Solutions",
-                "logo": {
-                  "@type": "ImageObject",
-                  "url": "${BASE_URL}/img/logo.png"
-                },
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "Attingal",
-                  "addressLocality": "Attingal",
-                  "addressRegion": "Kerala",
-                  "postalCode": "695101",
-                  "addressCountry": "IN"
-                },
-                "contactPoint": {
-                  "@type": "ContactPoint",
-                  "telephone": "+919400355185",
-                  "email": "digitalproductkerala@gmail.com",
-                  "contactType": "Customer Service",
-                  "areaServed": "IN",
-                  "availableLanguage": ["English", "Malayalam"]
-                }
-              },
-              "mainEntity": {
-                "@type": "FAQPage",
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "What services can I book with Digital Product Solutions in Kerala?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "We offer professional web development, AI integration, SEO optimization, and e-commerce solutions for businesses in Attingal and across Kerala, tailored to meet your unique business needs."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "How do I schedule an appointment in Attingal?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Use our online booking form to select a service, date, and time. Our Attingal-based team will confirm your appointment within 24–48 hours via email or phone."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "What are the starting prices for your services?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Our services start at ₹3000 for SEO optimization, ₹5000 for web development, ₹6000 for e-commerce solutions, and ₹7000 for AI integration. Contact us for a customized quote."
-                    }
-                  }
-                ]
-              }
-            }
-          `}
-        </script>
-      </Head>
+
       <div className="min-h-screen  pt-36 pb-20 px-4 relative overflow-hidden">
 
         <div className="absolute inset-0 z-0">
@@ -214,7 +139,7 @@ export default function BookingPage() {
               >
                 <h2 className="text-2xl font-bold mb-4 text-gray-800">Thank You!</h2>
                 <p className="text-gray-600">
-                  Your booking request has been successfully sent. Our Attingal, Kerala team will confirm your appointment within 24–48 hours via email or phone. Check your inbox (and spam folder) for our confirmation to begin your digital transformation.
+                  Your booking request has been successfully sent. Our Kerala team will confirm your appointment within 24–48 hours via email or phone. Check your inbox (and spam folder) for our confirmation to begin your digital transformation.
                 </p>
               </motion.div>
             ) : (
@@ -232,6 +157,7 @@ export default function BookingPage() {
                   action="https://formsubmit.co/digitalproductkerala@gmail.com"
                   method="POST"
                   onSubmit={handleFormSubmit}
+                  onFocusCapture={markBookStart}
                   className="space-y-6"
                 >
                   <motion.div
@@ -262,7 +188,7 @@ export default function BookingPage() {
                               aria-label={`Select ${service.name} service`}
                             />
                             <span className="text-gray-700">
-                              {service.name} (₹{service.price})
+                              {service.name}
                             </span>
                           </label>
                         </motion.div>

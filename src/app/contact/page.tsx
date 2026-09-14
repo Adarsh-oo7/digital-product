@@ -4,12 +4,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, Plus } from "lucide-react"
 import Image from "next/image"
-import Head from "next/head"
-
-// Base URL for canonical tags
-const BASE_URL = process.env.NODE_ENV === "production"
-  ? "https://www.digitalproductsolutions.in"
-  : "http://localhost:3000"
+import { track } from "@/lib/analytics"
 
 
 
@@ -19,6 +14,14 @@ const BASE_URL = process.env.NODE_ENV === "production"
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [formStarted, setFormStarted] = useState(false);
+
+  const markFormStart = () => {
+    if (formStarted) return;
+    setFormStarted(true);
+    track("form_start", { form: "contact" });
+    track("estimate_start", { form: "contact" });
+  };
 
   const faqs = [
     {
@@ -50,6 +53,7 @@ export default function Contact() {
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const form = e.target as HTMLFormElement
+    track("form_submit", { form: "contact" })
     setIsSubmitted(true)
     const formData = new FormData(form)
     fetch(form.action, {
@@ -73,106 +77,7 @@ export default function Contact() {
 
   return (
     <>
-      <Head>
-        <title>Contact Digital Product Solutions | Web Development & AI Solutions</title>
 
-        <meta
-          name="description"
-          content="Contact Digital Product Solutions for professional web development, AI-powered solutions, SEO services, and business automation. Serving Kerala, India, and global clients."
-        />
-
-        <meta
-          name="keywords"
-          content="contact web development company, AI solutions company, website development India, SEO services India, Digital Product Solutions contact"
-        />
-
-        <meta name="robots" content="index, follow" />
-
-        <link rel="canonical" href={`${BASE_URL}/contact`} />
-
-        {/* Open Graph (for social sharing) */}
-        <meta property="og:title" content="Contact Digital Product Solutions" />
-        <meta
-          property="og:description"
-          content="Get in touch with Digital Product Solutions for web development, AI solutions, SEO services, and digital automation."
-        />
-        <meta property="og:url" content={`${BASE_URL}/contact`} />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${BASE_URL}/img/logo.png`} />
-
-        {/* Twitter Card */}
-        {/* <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Digital Product Solutions" />
-        <meta
-          name="twitter:description"
-          content="Reach our team for web development, AI solutions, SEO and digital services."
-        />
-        <meta name="twitter:image" content={`${BASE_URL}/img/logo.png`} /> */}
-
-        {/* Organization Schema */}
-        <script type="application/ld+json">
-          {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Digital Product Solutions",
-        "url": "${BASE_URL}",
-        "logo": "${BASE_URL}/img/logo.png",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+919400355185",
-          "contactType": "Customer Service",
-          "email": "digitalproductkerala@gmail.com",
-          "areaServed": ["IN", "Worldwide"],
-          "availableLanguage": ["English", "Malayalam"]
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Attingal",
-          "addressRegion": "Kerala",
-          "postalCode": "695101",
-          "addressCountry": "IN"
-        }
-      }
-    `}
-        </script>
-
-        {/* FAQ Schema */}
-        <script type="application/ld+json">
-          {`
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How can I contact Digital Product Solutions?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You can contact Digital Product Solutions through our website contact form, email at digitalproductkerala@gmail.com, or phone at +91 9400355185."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What services do you offer?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We provide website development, mobile app development, AI-powered solutions, SEO services, social media marketing and business automation systems."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How quickly will I receive a response?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Our team usually responds within 24 hours to discuss your project requirements and provide consultation."
-            }
-          }
-        ]
-      }
-    `}
-        </script>
-      </Head>
       <div className="min-h-screen py-16 pt-36 px-4 relative bg-white">
         <Image
           src="./img/bgtt.jpg?height=1080&width=1920&text=Telephone+Background"
@@ -198,7 +103,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Connect with our expert team in Attingal, Kerala, to transform your business with innovative web development, AI-powered solutions, and reliable website maintenance. Serving clients in Attingal and across Kerala, we offer personalized consultations to understand your goals and deliver tailored digital solutions. Fill out our contact form, email us, or call +91 9400355185 to start your project today and achieve a strong online presence.
+            Connect with our expert team in Korani, Thiruvananthapuram district, Kerala, to transform your business with innovative web development, AI-powered solutions, and reliable website maintenance. Serving clients across Trivandrum and Kerala, we offer personalized consultations to understand your goals and deliver tailored digital solutions. Fill out our contact form, email us, or call +91 9400355185 to start your project today and achieve a strong online presence.
           </motion.p>
           <motion.div
             className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-8 shadow-lg"
@@ -210,7 +115,7 @@ export default function Contact() {
               <div className="text-center text-white">
                 <h2 className="text-2xl font-bold mb-4">Thank You for Reaching Out!</h2>
                 <p>
-                  Your message has been successfully sent. Our Attingal, Kerala-based team will respond within 24–48 hours to discuss how we can support your business with customized web development and AI solutions. Check your inbox for our reply.
+                  Your message has been successfully sent. Our Kerala-based team will respond within 24–48 hours to discuss how we can support your business with customized web development and AI solutions. Check your inbox for our reply.
                 </p>
               </div>
             ) : (
@@ -227,6 +132,7 @@ export default function Contact() {
                   action="https://formsubmit.co/digitalproductkerala@gmail.com"
                   method="POST"
                   onSubmit={handleFormSubmit}
+                  onFocusCapture={markFormStart}
                   className="space-y-6"
                 >
                   <div>
@@ -264,6 +170,55 @@ export default function Contact() {
                     />
                   </div>
                   <div>
+                    <label htmlFor="service" className="block text-sm font-medium mb-2 text-white">
+                      Service needed
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      className="w-full px-3 py-2 bg-white bg-opacity-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
+                      defaultValue=""
+                    >
+                      <option value="" className="text-gray-800">Select a service</option>
+                      <option value="website" className="text-gray-800">Website</option>
+                      <option value="ecommerce" className="text-gray-800">E-commerce</option>
+                      <option value="software" className="text-gray-800">Software</option>
+                      <option value="app" className="text-gray-800">Mobile app</option>
+                      <option value="seo" className="text-gray-800">SEO</option>
+                      <option value="automation" className="text-gray-800">WhatsApp / automation</option>
+                      <option value="other" className="text-gray-800">Something else</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="location" className="block text-sm font-medium mb-2 text-white">
+                      Town / district
+                    </label>
+                    <input
+                      type="text"
+                      id="location"
+                      name="location"
+                      className="w-full px-3 py-2 bg-white bg-opacity-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-300"
+                      placeholder="e.g. Trivandrum, Kollam"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="budget" className="block text-sm font-medium mb-2 text-white">
+                      Budget range (optional)
+                    </label>
+                    <select
+                      id="budget"
+                      name="budget"
+                      className="w-full px-3 py-2 bg-white bg-opacity-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
+                      defaultValue=""
+                    >
+                      <option value="" className="text-gray-800">Not sure yet</option>
+                      <option value="under-10k" className="text-gray-800">Under ₹10,000</option>
+                      <option value="10-25k" className="text-gray-800">₹10,000–₹25,000</option>
+                      <option value="25-50k" className="text-gray-800">₹25,000–₹50,000</option>
+                      <option value="50k-plus" className="text-gray-800">₹50,000+</option>
+                    </select>
+                  </div>
+                  <div>
                     <label
                       htmlFor="message"
                       className="block text-sm font-medium mb-2 text-white"
@@ -288,7 +243,7 @@ export default function Contact() {
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition-colors flex items-center justify-center"
                     aria-label="Submit contact form"
                   >
-                    Send Message
+                    Get a Project Estimate
                     <Send className="ml-2 h-5 w-5" />
                   </button>
                 </form>
@@ -302,7 +257,7 @@ export default function Contact() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="mb-4">
-              Prefer direct communication? Reach our Attingal-based team at:
+              Prefer direct communication? Reach our Korani, Thiruvananthapuram team at:
             </p>
             <p>
               Email:{" "}
@@ -318,12 +273,13 @@ export default function Contact() {
               <a
                 href="tel:+919400355185"
                 className="underline hover:text-blue-400"
+                onClick={() => track("phone_click", { location: "contact" })}
               >
                 +91 9400355185
               </a>
             </p>
             <p className="mt-4">
-              Visit us: Attingal, Kerala, India – 695101
+              Visit us: Mangalapuram Panchayat, Korani, Chempakamangalam, Kerala 695104
             </p>
             <p className="mt-2">
               We’re dedicated to empowering businesses in Kerala with innovative digital solutions, from responsive websites to advanced AI integrations.
