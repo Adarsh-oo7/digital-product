@@ -49,8 +49,10 @@ export default function ImageCompare({
             <div className="absolute inset-0">
                 <Image
                     src={after}
-                    alt="after"
+                    alt="Example after a website and funnel rebuild"
                     fill
+                    loading="lazy"
+                    sizes="100vw"
                     className="object-contain bg-black"
                     draggable={false}
                 />
@@ -65,8 +67,10 @@ export default function ImageCompare({
             >
                 <Image
                     src={before}
-                    alt="before"
+                    alt="Example before a website and funnel rebuild"
                     fill
+                    loading="lazy"
+                    sizes="100vw"
                     className="object-contain bg-black"
                     draggable={false}
                 />

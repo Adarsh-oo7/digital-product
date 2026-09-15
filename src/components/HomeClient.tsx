@@ -115,9 +115,9 @@ const faqSchema = {
 
 const businessResults = [
   "We automate your repetitive business processes & save daily operational hours",
-  "We generate high-quality inquiries through targeted performance ads & local SEO",
+  "We generate enquiries through local SEO and paid ads when those services are scoped",
   "We engineer custom, scalable software & mobile applications for your exact operations",
-  "We rank your brand #1 on Google search & map pack rankings in your target Kerala cities",
+  "We help Kerala businesses appear in Google Search and Maps with honest SEO work — not guaranteed #1 rankings",
   "We deploy custom WhatsApp chatbots & AI tools to capture and qualify leads 24/7",
   "We provide direct developer WhatsApp access for instant support and updates"
 ]
@@ -447,7 +447,7 @@ export default function Home() {
             </div>
 
             <div className="relative">
-              <Image src="./img/AiH.png" alt="Digital Business Transformation Results" width={600} height={400} className="rounded-2xl shadow-2xl" />
+              <Image src="./img/AiH.png" alt="Digital business work from Digital Product Solutions" width={600} height={400} className="rounded-2xl shadow-2xl" loading="lazy" />
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-green-600 to-blue-600 text-white p-6 rounded-xl shadow-xl">
                 <div className="text-sm font-medium">Client Success</div>
                 <div className="text-3xl font-bold">2.5×</div>

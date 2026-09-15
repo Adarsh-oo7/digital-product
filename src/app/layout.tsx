@@ -12,15 +12,15 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Website & Software Team in Trivandrum, Kerala",
+    default: "Website & App Development Team in Trivandrum, Kerala",
     template: "%s | Digital Product Solutions",
   },
   description:
-    "Kerala development team for business websites, software, apps, SEO and WhatsApp automation. Office in Korani, Thiruvananthapuram district. Direct developer access.",
+    "Kerala team in Trivandrum for websites, software, apps, SEO and WhatsApp automation. Direct developer access from Korani.",
   openGraph: {
-    title: "Website & Software Team in Trivandrum, Kerala | Digital Product Solutions",
+    title: "Website & App Development Team in Trivandrum, Kerala",
     description:
-      "Websites, software, apps, SEO and WhatsApp automation for Kerala businesses. Direct developer communication. Office in Korani, Thiruvananthapuram district.",
+      "Kerala team in Trivandrum for websites, software, apps, SEO and WhatsApp automation. Direct developer access from Korani.",
     url: SITE_URL,
     siteName: "Digital Product Solutions",
     type: "website",
@@ -28,8 +28,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website & Software Team in Trivandrum, Kerala",
-    description: "Custom websites, apps, SEO and automation for Kerala businesses.",
+    title: "Website & App Development Team in Trivandrum, Kerala",
+    description:
+      "Kerala team in Trivandrum for websites, software, apps, SEO and WhatsApp automation.",
   },
 };
 
@@ -39,8 +40,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "if(location.protocol==='http:')location.replace('https://'+location.host+location.pathname+location.search+location.hash);",
+          }}
+        />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Adarsh B S" />
@@ -109,12 +116,6 @@ export default function RootLayout({
         <Script
           src="https://app.fastbots.ai/embed.js"
           data-bot-id="cm74658eg0tkgsvk7iw855klb"
-          strategy="lazyOnload"
-        />
-
-        <Script
-          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
-          type="module"
           strategy="lazyOnload"
         />
 

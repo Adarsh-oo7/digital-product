@@ -4,10 +4,11 @@ import JsonLd from "@/components/seo/JsonLd";
 import { business, SITE_URL } from "@/lib/business";
 
 export const metadata = pageMetadata({
-  title: "Website & Software Team in Trivandrum, Kerala",
+  title: "Website & App Development Team in Trivandrum, Kerala",
   description:
-    "Digital Product Solutions is a small Kerala development team in Korani, Thiruvananthapuram district. Websites, software, apps, SEO and WhatsApp automation with direct developer access.",
+    "Kerala team in Trivandrum for websites, software, apps, SEO and WhatsApp automation. Direct developer access from Korani.",
   path: "/",
+  absoluteTitle: true,
 });
 
 export default function HomePage() {

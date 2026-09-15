@@ -18,20 +18,20 @@ const Footer: React.FC = () => {
           {/* Contact & Location Info for Local SEO & Trust */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 pb-10 border-b border-black/10 relative z-10 text-gray-800 text-sm">
             <div>
-              <h4 className="font-bold text-gray-900 mb-3 uppercase tracking-wider">Digital Product Solutions</h4>
+              <h2 className="font-bold text-gray-900 mb-3 uppercase tracking-wider text-sm">Digital Product Solutions</h2>
               <p className="text-gray-700 leading-relaxed">
                 Premium custom software, mobile applications, technical SEO, performance marketing, and business automation systems built specifically for growing brands.
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-gray-900 mb-3 uppercase tracking-wider">Office Location</h4>
+              <h2 className="font-bold text-gray-900 mb-3 uppercase tracking-wider text-sm">Office Location</h2>
               <p className="text-gray-700 leading-relaxed">
                 📍 Mangalapuram Panchayat, Korani, Chempakamangalam, Kerala 695104<br />
                 Serving clients in Trivandrum, Kochi, Kollam, Kozhikode, Kannur, Palakkad, Kottayam, and across Kerala.
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-gray-900 mb-3 uppercase tracking-wider">Contact & Inquiries</h4>
+              <h2 className="font-bold text-gray-900 mb-3 uppercase tracking-wider text-sm">Contact & Inquiries</h2>
               <p className="text-gray-700 leading-relaxed">
                 📞 Phone: <a href="tel:+919400355185" className="hover:text-blue-600 transition font-semibold">+91 9400355185</a><br />
                 💬 WhatsApp: <a href="https://wa.me/919400355185" className="hover:text-blue-600 transition font-semibold">+91 9400355185</a><br />

@@ -13,6 +13,7 @@ export function pageMetadata({
   noindex = false,
   canonicalPath,
   ogImage = "/img/logo.png",
+  absoluteTitle = false,
 }: {
   title: string;
   description: string;
@@ -20,13 +21,18 @@ export function pageMetadata({
   noindex?: boolean;
   canonicalPath?: string;
   ogImage?: string;
+  /** Skip the layout "%s | Digital Product Solutions" suffix (use on the homepage title). */
+  absoluteTitle?: boolean;
 }): Metadata {
   const canonical = absUrl(canonicalPath ?? path);
   const image = ogImage.startsWith("http") ? ogImage : absUrl(ogImage);
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description,
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      languages: { "en-IN": canonical, "x-default": canonical },
+    },
     robots: noindex
       ? { index: false, follow: true }
       : { index: true, follow: true },

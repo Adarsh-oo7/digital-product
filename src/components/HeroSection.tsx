@@ -3,16 +3,16 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-import { ArrowRight, Star, Users, Award, DollarSign } from "lucide-react";
+import { ArrowRight, Star, Users, Award, MapPin } from "lucide-react";
 import ParticleNetwork from "./ParticleNetwork";
 import Link from "next/link";
 // simple particle data
 
 const trustIndicators = [
-    { id: 1, icon: Users, number: "20+", text: "Happy Clients" },
-    { id: 2, icon: Award, number: "95%", text: "Success Rate" },
-    { id: 3, icon: DollarSign, number: "5x", text: "Average ROI" },
-    { id: 4, icon: Star, number: "4.9/5", text: "Client Rating" },
+    { id: 1, icon: Users, number: "20+", text: "Kerala businesses" },
+    { id: 2, icon: Award, number: "MSME", text: "Registered team" },
+    { id: 3, icon: MapPin, number: "Korani", text: "Trivandrum office" },
+    { id: 4, icon: Star, number: "5.0", text: "25 Google reviews" },
 ]
 
 const FlipWords = ({ words }: { words: string[] }) => {
@@ -71,7 +71,7 @@ export default function WhiteHero() {
            text-xs sm:text-sm"                >
                     <Star className="w-4 h-4 text-yellow-400 mr-2" />
                     <span className="text-sm text-gray-600">
-                        Leading Digital Agency in Trivandrum, Kerala
+                        Digital Product Solutions · Trivandrum, Kerala
                     </span>
                 </motion.div>
 
@@ -84,7 +84,7 @@ export default function WhiteHero() {
                text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
                 >
                     <span className="block text-xs sm:text-sm md:text-base font-bold uppercase tracking-widest text-indigo-600 mb-3 sm:mb-4">
-                        IT Company in Trivandrum, Kerala
+                        Website &amp; app development team based in Trivandrum
                     </span>
                     We Build{" "}
 

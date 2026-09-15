@@ -7,7 +7,7 @@ import { useRef, useEffect, useState } from "react"
 
 const projects = [
   { title: "Construction Company", image: "../img/buildwellz.jpg", url: "https://www.buildwellz.in" },
-  { title: "Soft Drinks Company", image: "../img/guava-fizz.png", url: "https://www.squeezeberriez.in/" },
+  { title: "Soft Drinks Company", image: "../img/guava-fizz.jpg", url: "https://www.squeezeberriez.in/" },
   { title: "Wedding Events", image: "../img/wedding events.jpg", url: "https://crystalknotfilms.com/" },
   { title: "Sports", image: "../img/mm.jpg", url: "https://www.mangrovemoments.com/" },
   { title: "Entertainment", image: "../img/ms.jpg", url: "https://www.mangrovespot.in/" },
@@ -71,6 +71,8 @@ function InfiniteCarousel(props: { items: Project[] }) {
               src={project.image}
               alt={project.title}
               fill
+              loading="lazy"
+              sizes="(max-width: 768px) 80vw, 320px"
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
