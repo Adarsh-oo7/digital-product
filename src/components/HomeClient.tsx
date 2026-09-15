@@ -239,7 +239,7 @@ export default function Home() {
           >
             {[
               { icon: Code2, title: "Software Development", desc: "Custom web apps, dashboards, booking systems and business platforms built specifically for Kerala businesses.", price: "₹15,000 (Launch Offer - 3 Slots Left!)", link: "/software-development" },
-              { icon: Smartphone, title: "App Development", desc: "Android and iOS mobile apps for Kerala businesses — restaurants, shops, clinics and delivery services.", price: "₹25,000 (Launch Offer - 2 Slots Left!)", link: "/app-development" },
+              { icon: Smartphone, title: "App Development", desc: "Android and iOS mobile apps for Kerala businesses — restaurants, shops, clinics and delivery services.", price: "₹25,000 (Launch Offer - 2 Slots Left!)", link: "/app-development-kerala" },
               { icon: TrendingUp, title: "SEO Services", desc: "Rank on Google when Kerala customers search for your service. Organic traffic that grows monthly.", price: "₹5,000/mo (Special Launch Offer!)", link: "/seo-services" },
               { icon: Instagram, title: "Social Media Management", desc: "Instagram, Facebook and WhatsApp marketing handled for you. Daily posts and audience growth.", price: "₹3,000/mo (Special Launch Offer!)", link: "/social-media-management" },
               { icon: Settings, title: "Business Automation", desc: "Automate WhatsApp replies, order tracking and invoice generation. Set once — runs forever.", price: "₹10,000 (Launch Offer - 4 Slots Left!)", link: "/business-automation" },

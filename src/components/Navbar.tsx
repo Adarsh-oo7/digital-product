@@ -22,7 +22,7 @@ const navItems = [
     children: [
       { name: "Website Development", link: "/website-development" },
       { name: "Software Development", link: "/software-development" },
-      { name: "App Development", link: "/app-development" },
+      { name: "App Development", link: "/app-development-kerala" },
       { name: "SEO Services", link: "/seo-services" },
       { name: "Social Media Management", link: "/social-media-management" },
       { name: "Business Automation", link: "/business-automation" },

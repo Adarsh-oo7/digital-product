@@ -1,14 +1,15 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Mobile App Development in Kerala | Starting ₹25,000 | iOS & Android Apps",
+  title: "Custom Android and iOS App Development",
   description:
-    "Top-tier mobile app development in Kerala. We build custom, high-performance Android & iOS apps for businesses, shops, and clinics starting at ₹25,000. Free consultation!",
-  keywords: "app development Kerala, mobile app development Trivandrum, Android app Kerala, iOS app Kerala, restaurant app Kerala, clinic app development",
+    "Catalogue, booking and operations apps for Android and iOS. Published starting price ₹25,000. Kerala local work lives on the app development in Kerala page.",
+  keywords: "app development, Android app, iOS app, Flutter, React Native",
   alternates: { canonical: "https://www.digitalproductsolutions.in/app-development" },
   openGraph: {
-    title: "Mobile App Development in Kerala | Starting ₹25,000 | iOS & Android Apps",
-    description: "High-performance Android & iOS apps built in Kerala. Scale your business, clinic, or restaurant starting at ₹25,000.",
+    title: "Custom Android and iOS App Development | Digital Product Solutions",
+    description:
+      "Catalogue, booking and operations apps for Android and iOS. Published starting price ₹25,000.",
     url: "https://www.digitalproductsolutions.in/app-development",
     type: "website",
   },
@@ -43,9 +44,13 @@ export default function AppDevelopmentPage() {
           </h1>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We design and develop high-performance mobile applications for startups,
-            enterprises and growing businesses across Kerala, India and globally.
-            Launch faster. Scale smarter.
+            We design and develop Android and iOS applications for catalogues, bookings
+            and internal operations. Published starting price ₹25,000. If you are searching
+            from Kerala, use the dedicated{" "}
+            <Link href="/app-development-kerala" className="text-purple-700 font-semibold underline">
+              app development in Kerala
+            </Link>{" "}
+            page.
           </p>
 
           <div className="mt-8 flex justify-center gap-4 flex-wrap">

@@ -1,11 +1,10 @@
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "App Development in Kerala",
-  description: "This URL consolidates into the main app development page.",
+  title: "Mobile App Development in Kerala",
+  description:
+    "Android and iOS apps from a Kerala development team in Thiruvananthapuram district. App work is listed from ₹25,000. Request a scoped estimate — not a ranking or download guarantee.",
   path: "/app-development-kerala",
-  noindex: true,
-  canonicalPath: "/app-development",
 });
 
 export default function Layout({ children }: { children: React.ReactNode }) {

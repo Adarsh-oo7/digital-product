@@ -12,7 +12,7 @@
 | Cluster | Competing URLs | Why it cannibalises | Decision | Notes |
 | --- | --- | --- | --- | --- |
 | SEO services Kerala | `/seo-services` vs `/seo-services-kerala` | Near-identical titles. | **DONE:** `/seo-services-kerala` noindex, canonical `/seo-services`. | Static export: no 301. |
-| App development Kerala | `/app-development` vs `/app-development-kerala` | Same commercial intent. | **DONE:** `/app-development-kerala` noindex, canonical `/app-development`. | |
+| App development Kerala | `/app-development` vs `/app-development-kerala` | Same commercial intent. | **UPDATED 15 Sep 2026:** `/app-development-kerala` is the indexable Kerala URL (GSC owner). `/app-development` remains a generic app-service hub with a different title. | User requested the Kerala URL to be available to Google. |
 | AI hub | `/ai-powered-solutions` vs `/ai-services` vs `/ai-chatbot-development-kerala` vs `/ai-automation-for-businesses-kerala` | Four pages sell AI. | **DONE:** `/ai-services` noindex → `/ai-powered-solutions`. `/ai-automation-for-businesses-kerala` noindex → `/business-automation`. Chatbot page kept. | |
 | Automation | `/business-automation` vs `/whatsapp-automation-kerala` vs `/ai-automation-for-businesses-kerala` | Overlapping copy. | **DONE:** WhatsApp page remains channel owner; AI-automation URL noindex to business-automation. | |
 | Cost of a Kerala website | `/blog/website-cost-kerala-2026` vs `/pricing` vs `/website-emi-kerala` vs `/website-development-cost-kerala` | Four price stories. | **DONE:** Cost guide owner `/website-development-cost-kerala`. Pricing = packages. EMI noindex (expired). Blog kept as supporting article. | Do not pick a public price until remaining `/book` vs `/pricing` conflicts are confirmed. |
