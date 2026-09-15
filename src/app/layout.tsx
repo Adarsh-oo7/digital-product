@@ -63,6 +63,7 @@ export default function RootLayout({
 
 
         <link rel="icon" href="./img/logo.png" sizes="any" />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM facts for Digital Product Solutions" />
         <meta name="google-site-verification" content="DHDeaZm4O1GPWicrshCNxCRNOAjRdlqeaOdddGQnZ5I" />
 
         <script
@@ -122,12 +123,12 @@ export default function RootLayout({
             {
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "Digital Product",
-              "alternateName": "Digital Product Web Development Agency",
+              "name": "Digital Product Solutions",
+              "alternateName": ["DPS Kerala", "Digital Product Solutions Trivandrum"],
               "url": "https://www.digitalproductsolutions.in/",
               "sameAs": [
                 "https://www.instagram.com/digital_product_solutions/",
-                "https://www.threads.net/@digital_prodect_sale",
+                "https://www.facebook.com/Digital.Product.kerala/",
                 "https://www.linkedin.com/company/digital-product-adarsh/"
               ]
             }
@@ -158,7 +159,7 @@ export default function RootLayout({
  "areaServed": ["Thiruvananthapuram", "Kochi", "Kozhikode", "Kottayam", "Thrissur", "Kollam", "Kannur", "Palakkad", "Kerala"],
  "sameAs": [
    "https://www.instagram.com/digital_product_solutions/",
-   "https://www.threads.net/@digital_prodect_sale",
+   "https://www.facebook.com/Digital.Product.kerala/",
    "https://www.linkedin.com/company/digital-product-adarsh/"
  ],
  "serviceType": [

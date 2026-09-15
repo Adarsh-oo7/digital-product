@@ -1,5 +1,38 @@
 # Robots.txt — digitalproductsolutions.in
+# Machine-readable facts for assistants: https://www.digitalproductsolutions.in/llms.txt
+
 User-agent: *
+Allow: /
+
+# OpenAI ChatGPT search / browsing
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Google Search, AI Overviews, Gemini grounding
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Bing (often used by ChatGPT search)
+User-agent: Bingbot
+Allow: /
+
+# Anthropic, Perplexity, Apple
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
 Allow: /
 
 Disallow: /admin
