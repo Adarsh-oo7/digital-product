@@ -16,6 +16,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import AnimatedReviews from './AnimatedReviews'
 import Image from "next/image"
 import ProjectCarousel from '@/components/ProjectCarousel'
+import WorkStoriesBand from '@/components/seo/WorkStoriesBand'
 // import MarqueeCards from '@/components/MarqueeCards'
 import FunnelUI from "@/components/FunnelUI";
 import HeroSectionV2 from "@/components/HeroSection";
@@ -193,6 +194,8 @@ export default function Home() {
 
       <ProjectCarousel />
 
+      <WorkStoriesBand slugs={["buildwellz", "crystal-knot-films", "squeeze-berriez"]} />
+
       <div className="relative w-screen left-1/2 -translate-x-1/2">
         <ImageCompare
           before="/img/funnelbef.jpg"
@@ -286,6 +289,23 @@ export default function Home() {
         </motion.div>
       </section>
 
+      <section className="py-10 px-4 bg-gray-50 border-y border-gray-100">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">Need a price range, not another long article?</h2>
+          <p className="text-gray-600 text-sm md:text-base mb-5">
+            The calculator uses the packages already on /pricing. It is not a quote. Then read a real project story if you want proof.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/website-cost-calculator" className="inline-flex justify-center px-6 py-3 rounded-xl bg-gray-900 text-white font-semibold hover:bg-gray-800">
+              Website cost calculator
+            </Link>
+            <Link href="/work" className="inline-flex justify-center px-6 py-3 rounded-xl border border-gray-300 font-semibold hover:bg-white">
+              Honest project stories
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ===== INDUSTRIES WE SERVE ===== */}
       <section id="industries" className="py-16 px-4 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.06),transparent_60%)] pointer-events-none" />
@@ -305,7 +325,7 @@ export default function Home() {
               { icon: "🏨", name: "Hotels & Resorts", link: "/website-development-for-hotels-resorts-kerala" },
               { icon: "🍽️", name: "Restaurants", link: "/restaurant-website-online-ordering-kerala" },
               { icon: "🛒", name: "E-commerce", link: "/ecommerce-website-development-kerala" },
-              { icon: "🏗️", name: "Real Estate", link: "/real-estate-builder-website-development-kerala" },
+              { icon: "🏗️", name: "Construction", link: "/construction-website-development-kerala" },
               { icon: "🏫", name: "Schools", link: "/school-education-management-software-kerala" },
             ].map((ind, i) => (
               <Link
@@ -449,9 +469,9 @@ export default function Home() {
             <div className="relative">
               <Image src="./img/AiH.png" alt="Digital business work from Digital Product Solutions" width={600} height={400} className="rounded-2xl shadow-2xl" loading="lazy" />
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-green-600 to-blue-600 text-white p-6 rounded-xl shadow-xl">
-                <div className="text-sm font-medium">Client Success</div>
-                <div className="text-3xl font-bold">2.5×</div>
-                <div className="text-sm opacity-90">Average Inquiry Growth</div>
+                <div className="text-sm font-medium">Google reviews</div>
+                <div className="text-3xl font-bold">5.0</div>
+                <div className="text-sm opacity-90">from 25 reviews</div>
               </div>
               <div className="absolute -top-6 -left-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-xl shadow-xl">
                 <div className="text-sm font-medium">Projects Delivered</div>
@@ -473,8 +493,19 @@ export default function Home() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6 leading-tight">
                 A Dedicated Team of <span className="text-blue-600">9 Digital Creators</span> Based in Trivandrum
               </h2>
+              <div className="flex gap-3 mb-6">
+                {[
+                  { src: "/img/adarshnew.png", alt: "Adarsh B S" },
+                  { src: "/img/midhin.jpg", alt: "Midhin S" },
+                  { src: "/img/aromalnew.png", alt: "Aromal V G" },
+                ].map((p) => (
+                  <div key={p.src} className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border border-gray-200 bg-gray-100">
+                    <Image src={p.src} alt={p.alt} fill className="object-cover" sizes="80px" />
+                  </div>
+                ))}
+              </div>
               <p className="text-gray-600 leading-relaxed mb-6">
-                We are a registered MSME IT company and growth agency. Unlike solo freelancers who might vanish mid-project, or bloated agencies where you get ignored, Digital Product Solutions offers a structured team of engineers, UI/UX designers, copywriters, and SEO specialists.
+                We are a registered MSME IT company and growth agency. Unlike solo freelancers who might vanish mid-project, or bloated agencies where you get ignored, Digital Product Solutions offers a structured team of engineers, UI/UX designers, copywriters, and SEO specialists. Photos are the real people in Korani — not stock or AI faces.
               </p>
               <ul className="space-y-3 text-gray-700 font-medium">
                 <li className="flex items-center gap-2">

@@ -31,6 +31,7 @@ export const websiteDevelopment: LandingContent = {
   ownership: "You should own the domain in your name. Confirm hosting location, source-file handover and post-launch support in writing. We do not use “you will rank #1” promises.",
   proof: "Public examples on this site include construction (BuilDwellz), beverages (Squeeze Berriez), wedding films (CrystalKnot Films), hospitality (Mangrove Moments and Mangrove Spot) and the Kerala Sellers marketplace we built.",
   related: [
+    { href: "/work", label: "Real project stories" },
     { href: "/affordable-website-development-trivandrum", label: "Affordable website development in Trivandrum" },
     { href: "/website-development-cost-kerala", label: "Website development cost in Kerala" },
     { href: "/restaurant-website-online-ordering-kerala", label: "Restaurant websites" },
@@ -530,6 +531,7 @@ export const constructionWebsite: LandingContent = {
   ownership: "Project claims (sq ft, “luxury”) are your copy. We will not invent awards.",
   proof: "BuilDwellz is listed as a construction website in the portfolio with a public URL (buildwellz.in).",
   related: [
+    { href: "/work/buildwellz", label: "BuilDwellz project story" },
     { href: "/real-estate-builder-website-development-kerala", label: "Builder and real-estate websites" },
     { href: "/portfolio", label: "Portfolio" },
     { href: "/website-development", label: "Website development" },

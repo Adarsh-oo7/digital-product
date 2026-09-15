@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,500&family=DM+Sans:wght@300;400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -220,7 +221,6 @@ body {
 /* =====================================================
    Luxury button & card styles (moved from page.tsx)
    ===================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,500&family=DM+Sans:wght@300;400;500&display=swap');
 
 .lux-primary {
   display: inline-flex;
@@ -331,4 +331,4 @@ body {
 @keyframes shimmer {
   0% { background-position: -200% center; }
   100% { background-position: 200% center; }
-}
+}

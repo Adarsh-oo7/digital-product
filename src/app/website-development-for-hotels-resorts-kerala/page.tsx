@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CtaBand from "@/components/seo/CtaBand";
+import WorkStoriesBand from "@/components/seo/WorkStoriesBand";
 
 export const metadata = {
   title: "Website Development for Hotels & Resorts in Kerala | Digital Product Solutions",
@@ -72,6 +73,11 @@ export default function HotelResortWebsiteKerala() {
             </ul>
           </div>
         </div>
+
+        <WorkStoriesBand
+          slugs={["mangrove-moments", "mangrove-spot"]}
+          heading="Hospitality sites we actually shipped"
+        />
 
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>

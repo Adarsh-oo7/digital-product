@@ -35,41 +35,41 @@ const reviews: Review[] = [
     tag: "Film & Photography",
     website: "https://crystalknotfilms.com/",
     content: "The team transformed our online presence into something that truly matches the quality of our films. The improved visibility and structure brought us steady, serious client leads we hadn't seen before.",
-    result: "Booked 4 wedding projects within the first month of launching the new website.",
-    metric: "4×",
-    metricLabel: "Bookings in month one",
+    result: "Live wedding-film site with gallery, films and enquiry — see the project story for what shipped.",
+    metric: "Live",
+    metricLabel: "crystalknotfilms.com",
     rating: 5,
-    image: "/img/boy.jpg",
+    image: "/img/crystalknot.jpeg",
   },
   {
     id: 2,
     fullName: "Vipin Mohan",
     businessName: "BuilDwellz",
-    city: "Varkala",
+    city: "Kerala",
     industry: "Architecture",
     tag: "Architecture & Design",
     website: "https://www.buildwellz.in/",
     content: "The team understood our brand and translated it into a clean, high-end digital presence. We started attracting more serious residential clients shortly after launch.",
-    result: "Increased direct client inquiries by 2.5× compared to before the website launch.",
-    metric: "2.5×",
-    metricLabel: "Inquiry growth",
+    result: "Public construction website with gallery, services and enquiry. Timeline about two weeks.",
+    metric: "Live",
+    metricLabel: "buildwellz.in",
     rating: 4.5,
-    image: "/img/boy.jpg",
+    image: "/img/buildwellz.jpeg",
   },
   {
     id: 3,
     fullName: "Abhishek",
     businessName: "Squeeze Berriez",
-    city: "Thrissur",
+    city: "Kerala",
     industry: "F&B",
     tag: "Food & Beverage",
     website: "https://www.squeezeberriez.in/",
     content: "The new website perfectly captures our Kerala roots and premium beverage quality. It helped us build stronger brand trust and attract new retail partnership inquiries.",
-    result: "Received 4 new retail partnership discussions in the first month.",
-    metric: "4",
-    metricLabel: "Retail partnerships",
+    result: "Product catalogue site live for the Kerala beverage brand.",
+    metric: "Live",
+    metricLabel: "squeezeberriez.in",
     rating: 4.5,
-    image: "/img/boy.jpg",
+    image: "/img/Softdrinks.jpeg",
   },
   {
     id: 4,
@@ -81,29 +81,29 @@ const reviews: Review[] = [
     website: "https://www.keralasellers.in/",
     content: "Kerala Sellers was built to empower local businesses with a powerful yet simple digital marketplace. From listings to payments and automation — everything was designed for real-world execution.",
     before: "Local businesses relied on Instagram and WhatsApp with no central platform.",
-    solution: "Full-featured marketplace with listings, orders, and payments via a simple dashboard.",
-    result: "Successfully launched and onboarded sellers from multiple districts in the first phase.",
-    metric: "6+",
-    metricLabel: "Districts onboarded",
+    solution: "Marketplace with listings, orders, and payments via a seller dashboard.",
+    result: "In-house product we built over about eight months — not a two-week brochure site.",
+    metric: "8 mo",
+    metricLabel: "Build timeline",
     rating: 5,
-    image: "/img/boy.jpg",
+    image: "/img/keralasellers.jpeg",
   },
   {
     id: 5,
     fullName: "Anvar Riyas",
     businessName: "Lemon Caters",
-    city: "Kochi",
+    city: "Kerala",
     industry: "Catering",
     tag: "Hospitality",
     website: "https://lemoncaters.in",
-    content: "Digital Product rebuilt our catering website and optimized our Google presence. We went from zero digital footprint to a steady stream of real catering inquiries within just ten days.",
-    before: "No website — depended entirely on WhatsApp inquiries.",
-    solution: "Fast catering website with menu showcase and WhatsApp booking integration.",
-    result: "Received 11 catering inquiries in the first 10 days.",
-    metric: "11",
-    metricLabel: "Leads in 10 days",
+    content: "Digital Product rebuilt our catering website and optimized our Google presence.",
+    before: "Enquiries lived mainly on WhatsApp.",
+    solution: "Catering website with gallery, services and contact, plus Google presence work.",
+    result: "Live site at lemoncaters.in. We do not publish a lead count on this card.",
+    metric: "Live",
+    metricLabel: "lemoncaters.in",
     rating: 4.5,
-    image: "/img/boy.jpg",
+    image: "/img/lemons.jpeg",
   },
 ]
 
@@ -726,8 +726,8 @@ export default function ExpandableTestimonials() {
           >
 
             <h2 className="et-title">
-              Real <span className="et-result">Results</span> from<br />
-              <em>Real</em> <span className="et-business">Businesses</span>
+              Honest <span className="et-result">reviews</span> from<br />
+              <em>live</em> <span className="et-business">Kerala projects</span>
             </h2>
 
           </motion.div>
@@ -740,7 +740,7 @@ export default function ExpandableTestimonials() {
             transition={{ delay: 0.5, duration: 0.6 }}
           >
             <span className="et-hint-line" />
-            Click any card to read the full story
+            Click any card to read the quote — full stories on /work
             <span className="et-hint-line" />
           </motion.div>
 

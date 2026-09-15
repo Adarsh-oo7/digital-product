@@ -120,7 +120,7 @@ const projects = [
     features: ["Secure Payment Gateway", "Product Filtering", "Mobile Responsive", "SEO Optimized"],
     duration: "6 weeks",
     clientType: "Local Business",
-    testimonial: "Increased our online sales by 300% within the first month!",
+    testimonial: "Got more inquiries after launching the new website.",
   },
   {
     title: "Website Maintenance Services",

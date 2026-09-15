@@ -29,6 +29,7 @@ const navItems = [
       { name: "AI Chatbots & Automation", link: "/ai-powered-solutions" },
     ]
   },
+  { name: "Work", link: "/work" },
   { name: "Pricing", link: "/pricing" },
   { name: "Blog", link: "/blog" },
   { name: "Contact", link: "/contact" },

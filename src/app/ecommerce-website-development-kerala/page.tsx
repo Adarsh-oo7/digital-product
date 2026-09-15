@@ -1,5 +1,6 @@
 ﻿import Link from "next/link";
 import CtaBand from "@/components/seo/CtaBand";
+import WorkStoriesBand from "@/components/seo/WorkStoriesBand";
 
 export const metadata = {
   title: "E-commerce Website Development in Kerala | Online Store | Digital Product Solutions",
@@ -80,6 +81,10 @@ export default function Page() {
             Get a Project Estimate
           </Link>
         </div>
+        <WorkStoriesBand
+          slugs={["squeeze-berriez", "kerala-sellers"]}
+          heading="Kerala product sites that are live"
+        />
         <CtaBand whatsappText="Hi, I want an estimate for an online store" />
       </div>
     </section>
