@@ -9,7 +9,8 @@
     "lint": "next lint",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d out",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "@google/model-viewer": "^4.1.0",
