@@ -112,3 +112,5 @@ module.exports = {
     return extra.filter(Boolean);
   },
 };
+
+module.exports.allowPaths = [...ALLOW];

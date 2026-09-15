@@ -26,7 +26,27 @@ Priority list to request once:
 - `/freelance-web-developer-kerala`
 - `/contact`
 
-Do **not** request indexing for pages that are meant to stay out of Google: `/website-emi-kerala`, `/certificate-verified`, `/seo-services-kerala`, `/ai-services`.
+## Search Console: “Couldn't fetch”
+
+That status means Google’s **retry** of the sitemap file failed. It does **not** mean the 74 URLs were never seen.
+
+Typical pattern for this site:
+
+- **Discovered pages: 74** — Google already read the sitemap (last successful read was 14 Sep 2026).
+- **Submitted: 15 Sep 2026 / Couldn’t fetch** — a later fetch failed. Deploys that day briefly served GitHub’s generic 404 while Pages swapped artifacts.
+
+The sitemap is a normal `200` `application/xml` file at:
+
+https://www.digitalproductsolutions.in/sitemap.xml
+
+**What to do**
+
+1. Open that URL in Chrome. You should see XML, not a GitHub “Page not found” page.
+2. In Search Console, open the sitemap row. Wait 24–72 hours, or use the menu to **resubmit** once. Do not spam resubmit.
+3. Optional: URL Inspection of `https://www.digitalproductsolutions.in/sitemap.xml` → Test live URL.
+
+Do not add a second sitemap URL unless Google asks. Keep using the www HTTPS file only.
+
 
 ## What this repo now automates
 
