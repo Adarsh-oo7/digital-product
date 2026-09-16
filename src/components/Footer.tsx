@@ -68,6 +68,8 @@ const Footer: React.FC = () => {
               <Link href="/portfolio" className="text-black hover:text-blue-600 transition">Portfolio</Link>
               <Link href="/contact" className="text-black hover:text-blue-600 transition">Contact</Link>
               <Link href="/privacy-policy" className="text-black hover:text-blue-600 transition">Privacy Policy</Link>
+              <Link href="/terms-of-service" className="text-black hover:text-blue-600 transition">Terms of Service</Link>
+              <Link href="/data-deletion" className="text-black hover:text-blue-600 transition">Data Deletion</Link>
             </nav>
 
             {/* Social */}
@@ -90,9 +92,17 @@ const Footer: React.FC = () => {
             <div>
               © 2026 Digital Product Solutions · Korani, Thiruvananthapuram, Kerala. All rights reserved.
             </div>
-            <div>
+            <div className="flex flex-wrap items-center justify-center gap-4">
               <Link href="/privacy-policy" className="text-gray-700 hover:text-blue-600 font-medium underline underline-offset-2 transition">
-                Privacy Policy & Data Deletion
+                Privacy Policy
+              </Link>
+              <span className="text-gray-400">·</span>
+              <Link href="/terms-of-service" className="text-gray-700 hover:text-blue-600 font-medium underline underline-offset-2 transition">
+                Terms of Service
+              </Link>
+              <span className="text-gray-400">·</span>
+              <Link href="/data-deletion" className="text-gray-700 hover:text-blue-600 font-medium underline underline-offset-2 transition">
+                Data Deletion
               </Link>
             </div>
           </div>
