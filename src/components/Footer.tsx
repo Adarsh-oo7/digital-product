@@ -67,6 +67,7 @@ const Footer: React.FC = () => {
               <Link href="/blog" className="text-black hover:text-blue-600 transition">Blog</Link>
               <Link href="/portfolio" className="text-black hover:text-blue-600 transition">Portfolio</Link>
               <Link href="/contact" className="text-black hover:text-blue-600 transition">Contact</Link>
+              <Link href="/privacy-policy" className="text-black hover:text-blue-600 transition">Privacy Policy</Link>
             </nav>
 
             {/* Social */}
@@ -85,8 +86,15 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Bottom */}
-          <div className="mt-10 text-center text-xs text-gray-600">
-            © 2026 Digital Product Solutions · Korani, Thiruvananthapuram, Kerala. All rights reserved.
+          <div className="mt-10 pt-6 border-t border-black/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-600 text-center sm:text-left">
+            <div>
+              © 2026 Digital Product Solutions · Korani, Thiruvananthapuram, Kerala. All rights reserved.
+            </div>
+            <div>
+              <Link href="/privacy-policy" className="text-gray-700 hover:text-blue-600 font-medium underline underline-offset-2 transition">
+                Privacy Policy & Data Deletion
+              </Link>
+            </div>
           </div>
 
         </div>

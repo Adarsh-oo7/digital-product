@@ -84,6 +84,7 @@ const ALLOW = new Set([
   '/blog/app-development-cost-kerala',
   '/blog/software-development-cost-kerala',
   '/blog/seo-cost-kerala',
+  '/privacy-policy',
 ]);
 
 module.exports = {
