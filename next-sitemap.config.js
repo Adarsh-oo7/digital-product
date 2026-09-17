@@ -87,6 +87,7 @@ const ALLOW = new Set([
   '/privacy-policy',
   '/terms-of-service',
   '/data-deletion',
+  '/freelance-software-developer-kerala',
 ]);
 
 module.exports = {

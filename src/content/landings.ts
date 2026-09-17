@@ -711,7 +711,7 @@ export const outsourceWeb: LandingContent = {
     { title: "Build", text: "You remain the face unless you want us on the call." },
     { title: "Handover", text: "Repo and hosting as agreed." },
   ],
-  ownership: "Be explicit who the contract is with. We will not pretend to be your employees on the client’s Google listing.",
+  ownership: "Be explicit who the contract is with. We will not pretend to be your employees on the client's Google listing.",
   proof: "Delivery examples remain the public portfolio. We will not list undisclosed white-label clients.",
   related: [
     { href: "/dedicated-developer-team-kerala", label: "Dedicated team" },
@@ -725,3 +725,57 @@ export const outsourceWeb: LandingContent = {
   whatsappText: "Hi, I want to outsource a web project to your Kerala team",
 };
 
+export const freelanceSoftwareDev: LandingContent = {
+  path: "/freelance-software-developer-kerala",
+  metaTitle: "Freelance Software Developer in Kerala | Digital Product Solutions",
+  metaDescription:
+    "Looking for a freelance software developer in Kerala? Digital Product Solutions is a Trivandrum-based team building custom web apps, SaaS, APIs, CRM, mobile apps and automation for businesses across Kerala.",
+  h1: "Freelance Software Developer in Kerala",
+  lede: "Looking for a freelance software developer in Kerala? Digital Product Solutions is a Trivandrum-based software development team building custom web applications, SaaS products, business platforms, APIs, mobile applications and automation systems for businesses across Kerala — with direct developer communication on every project.",
+  audience: "Businesses and founders across Kerala — in Trivandrum, Kochi, Kollam, Kottayam, Kozhikode, Thrissur, Kannur and Palakkad — who need a software developer they can actually speak to, not an account manager chain.",
+  problem: "Most searches for a 'freelance software developer in Kerala' are really about finding a developer who responds on WhatsApp, ships on time, and understands local business requirements. A solo freelancer can deliver this — and can also disappear mid-project. Digital Product Solutions operates as a small, named MSME team that gives you direct developer access without the single-point-of-failure risk.",
+  deliverables: [
+    "Custom web application development (React, Next.js, Python/Django, Node.js)",
+    "SaaS product development for Kerala-based startups and businesses",
+    "CRM and ERP system development (including Odoo-based solutions)",
+    "API design, development and third-party integration",
+    "WhatsApp Business API automation and chatbot systems",
+    "Payment gateway integration (Razorpay, Cashfree)",
+    "Mobile application development (Flutter, React Native)",
+    "Bug fixing, performance optimisation and code audits",
+    "Cloud deployment and hosting setup (AWS, Vercel, VPS)",
+    "Project handover with documentation and developer access",
+  ],
+  costs: [
+    { title: "Custom software", text: "Starting from ₹15,000 for scoped projects. Complex SaaS and ERP work is quoted after discovery. That is a published starting figure — not a fixed price for your requirement." },
+    { title: "Mobile apps", text: "From ₹25,000 published on the app pages. Confirm stack and features in the estimate." },
+    { title: "Hourly or retainer", text: "Not a public rate card. Ask for a monthly retainer or fixed-scope quote depending on your engagement model." },
+  ],
+  process: [
+    { title: "Discovery conversation", text: "WhatsApp or estimate form. Describe the business problem, not just the tech stack. Most Kerala project scopes start here." },
+    { title: "Written scope and estimate", text: "We send a clear scope covering features, delivery phases, exclusions and price range. This is the document to compare, not a headline number." },
+    { title: "Development with direct access", text: "You can WhatsApp the developer building your project — the published selling point of working with this team versus a large agency." },
+    { title: "Testing and handover", text: "QA, deployment and handover with source code access as per the contract." },
+  ],
+  ownership: "You own the custom code built specifically for your project. Pre-existing libraries and frameworks used in delivery remain the team's IP. Repository access and post-launch support terms are written into the estimate before build starts.",
+  proof: "Publicly deployed projects from this team include: BuilDwellz (construction industry — buildwellz.in), Crystal Knot Films (wedding media — crystalknotfilms.com), Squeeze Berriez (FMCG brand — squeezeberriez.in), Mangrove Moments and Mangrove Spot (hospitality), Lemon Caters (catering), and Kerala Sellers (D2C marketplace). The team has also built WhatsApp automation systems, CRM tools, AI chatbots and SEO platforms. The About page lists the core team: Adarsh B S (Project Manager, SEO), Midhin S (Full-Stack, Backend), Aromal V G (Full-Stack, UI/UX). Google Business Profile rating: 5.0 from 25 reviews.",
+  related: [
+    { href: "/software-development", label: "Software development overview" },
+    { href: "/app-development-kerala", label: "Mobile app development in Kerala" },
+    { href: "/whatsapp-automation-kerala", label: "WhatsApp Business API development" },
+    { href: "/freelance-web-developer-kerala", label: "Freelance web developer in Kerala" },
+    { href: "/dedicated-developer-team-kerala", label: "Dedicated developer team" },
+    { href: "/work", label: "Real project case studies" },
+    { href: "/contact", label: "Get a project estimate" },
+  ],
+  faqs: [
+    { q: "Is Digital Product Solutions a single freelancer?", a: "No. It is a small registered MSME team based in Korani, Thiruvananthapuram district. You still get direct developer WhatsApp access, which is what most people searching for a freelance software developer in Kerala actually want." },
+    { q: "What technologies does the team use for software development?", a: "The homepage and service pages publicly list Python, Django, React, Next.js, Flutter, Node.js, Odoo, and AI/ML integrations. Stack is confirmed per project estimate — not assumed." },
+    { q: "Can you build SaaS products for Kerala startups?", a: "Yes. SaaS and multi-tenant platform development is listed as a capability. Discovery conversation is needed to scope phasing and infrastructure." },
+    { q: "Do you work with clients outside Trivandrum?", a: "Yes. The site states service across Kerala — including Kochi, Kollam, Kottayam, Kozhikode, Thrissur, Kannur and Palakkad — and wider India. Most delivery is remote; in-person meetings in Trivandrum district are by arrangement." },
+    { q: "How do I start a software development project?", a: "WhatsApp +91 9400355185 or use the estimate form on the contact page. Describe your business problem and rough budget. A written scope follows that conversation." },
+    { q: "Do you fix bugs on existing software I did not build with you?", a: "Bug fixing and maintenance on third-party or legacy code is offered as a service. Raise it on WhatsApp with a description of the stack first." },
+  ],
+  serviceName: "Freelance Software Developer Kerala",
+  whatsappText: "Hi, I am looking for a software developer in Kerala",
+};
