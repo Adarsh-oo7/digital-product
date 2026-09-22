@@ -149,7 +149,7 @@ export default function PrivacyPolicyPage() {
               1. About Us & Scope
             </h2>
             <p className="mb-4">
-              <strong>Digital Product Solutions</strong> (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) is a registered MSME technology agency based in Mangalapuram Panchayat, Korani, Chempakamangalam, Thiruvananthapuram, Kerala 695104, India. We operate the website <a href={SITE_URL} className="text-blue-600 font-semibold hover:underline">{SITE_URL}</a> and build custom software, web applications, mobile apps, business automations, and AI integrations.
+              <strong>Digital Product Solutions</strong> (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) is a registered MSME technology agency based in Korani, Thiruvananthapuram, Kerala 695104, India. We operate the website <a href={SITE_URL} className="text-blue-600 font-semibold hover:underline">{SITE_URL}</a> and build custom software, web applications, mobile apps, business automations, and AI integrations.
             </p>
             <p className="mb-4">
               This Privacy Policy explains how we collect, use, process, disclose, and safeguard personal information when:

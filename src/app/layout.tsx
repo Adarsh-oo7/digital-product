@@ -149,16 +149,23 @@ export default function RootLayout({
  "email": "adarsh@digitalproductsolutions.in",
  "address": {
    "@type": "PostalAddress",
-   "streetAddress": "Mangalapuram Panchayat, Korani, Chempakamangalam",
-   "addressLocality": "Korani",
+   "streetAddress": "Korani",
+   "addressLocality": "Thiruvananthapuram",
    "addressRegion": "Kerala",
    "postalCode": "695104",
    "addressCountry": "IN"
  },
+ "geo": {
+   "@type": "GeoCoordinates",
+   "latitude": 8.660278,
+   "longitude": 76.838053
+ },
+ "hasMap": "https://www.google.com/maps?cid=990739385366027106",
  "openingHours": "Mo-Sa 09:00-19:00",
  "priceRange": "₹₹",
  "areaServed": ["Thiruvananthapuram", "Kochi", "Kozhikode", "Kottayam", "Thrissur", "Kollam", "Kannur", "Palakkad", "Kerala"],
  "sameAs": [
+   "https://www.google.com/maps?cid=990739385366027106",
    "https://www.instagram.com/digital_product_solutions/",
    "https://www.facebook.com/Digital.Product.kerala/",
    "https://www.linkedin.com/company/digital-product-adarsh/"

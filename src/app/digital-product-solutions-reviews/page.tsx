@@ -65,7 +65,7 @@ export default function ReviewsPage() {
   };
 
   const mapsSearch =
-    "https://www.google.com/maps/search/?api=1&query=Digital%20Product%20Solutions%20Korani%20Kerala";
+    "https://www.google.com/maps?cid=990739385366027106";
 
   return (
     <main className="min-h-screen bg-white pt-28 pb-16 px-4">

@@ -26,7 +26,8 @@ const Footer: React.FC = () => {
             <div>
               <h2 className="font-bold text-gray-900 mb-3 uppercase tracking-wider text-sm">Office Location</h2>
               <p className="text-gray-700 leading-relaxed">
-                📍 Mangalapuram Panchayat, Korani, Chempakamangalam, Kerala 695104<br />
+                📍 Korani, Thiruvananthapuram, Kerala 695104<br />
+                <a href="https://www.google.com/maps?cid=990739385366027106" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition font-semibold">Open in Google Maps</a><br />
                 Serving clients in Trivandrum, Kochi, Kollam, Kozhikode, Kannur, Palakkad, Kottayam, and across Kerala.
               </p>
             </div>

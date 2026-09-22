@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Send, Plus } from "lucide-react"
 import Image from "next/image"
 import { track } from "@/lib/analytics"
+import { business } from "@/lib/business"
 
 
 
@@ -279,7 +280,7 @@ export default function Contact() {
               </a>
             </p>
             <p className="mt-4">
-              Visit us: Mangalapuram Panchayat, Korani, Chempakamangalam, Kerala 695104
+              Visit us: Korani, Thiruvananthapuram, Kerala 695104
             </p>
             <p className="mt-2">
               We’re dedicated to empowering businesses in Kerala with innovative digital solutions, from responsive websites to advanced AI integrations.
@@ -348,7 +349,7 @@ export default function Contact() {
 
           <div className="w-full mt-10 rounded-xl overflow-hidden border border-gray-700 shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.3284626251293!2d76.8380526744956!3d8.660278494652756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x893ab90196d09cb5%3A0xdbfd038c9bb1b62!2sDigital%20product%20solutions!5e0!3m2!1sen!2sin!4v1772689938826!5m2!1sen!2sin"
+              src={business.mapsEmbedSrc}
               width="100%"
               height="400"
               style={{ border: 0 }}

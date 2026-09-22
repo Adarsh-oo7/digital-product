@@ -1,11 +1,12 @@
 /**
  * Single source of truth for NAP and local entity fields.
  *
- * Address, PIN and phone were confirmed from Google Business Profile
- * (owner, 14 Sep 2026): Korani / Chempakamangalam, Kerala 695104.
+ * Public pin is the Google listing the owner shared (Korani,
+ * Thiruvananthapuram). Coordinates come from the existing Contact map
+ * embed for “Digital product solutions”, not from a panchayat text search.
  *
  * Office vs service area:
- * - Office: Korani, Mangalapuram Panchayat, Thiruvananthapuram district
+ * - Office: Korani, Thiruvananthapuram, Kerala 695104
  * - Service area: Trivandrum / Kerala (not a city-centre office at 695001)
  */
 export const SITE_URL = "https://www.digitalproductsolutions.in";
@@ -14,19 +15,22 @@ export const business = {
   legalName: "Digital Product Solutions",
   publicName: "Digital Product Solutions",
   description:
-    "Registered MSME IT company in Thiruvananthapuram district, Kerala. Websites, software, mobile apps, SEO, WhatsApp automation and AI solutions for small and medium businesses.",
+    "Registered MSME IT company in Korani, Thiruvananthapuram, Kerala. Websites, software, mobile apps, SEO, WhatsApp automation and AI solutions for small and medium businesses.",
 
-  streetAddress: "Mangalapuram Panchayat, Korani, Chempakamangalam",
-  addressLocality: "Korani",
+  streetAddress: "Korani",
+  addressLocality: "Thiruvananthapuram",
   addressRegion: "Kerala",
   postalCode: "695104",
   addressCountry: "IN",
   addressCountryName: "India",
   district: "Thiruvananthapuram",
 
-  /** One-line visible address (matches GBP). */
-  addressLine:
-    "Mangalapuram Panchayat, Korani, Chempakamangalam, Kerala 695104",
+  /** One-line visible address (matches the Korani Google pin). */
+  addressLine: "Korani, Thiruvananthapuram, Kerala 695104",
+
+  /** Pin from the Contact page Google embed for this business. */
+  latitude: 8.660278,
+  longitude: 76.838053,
 
   telephone: "+919400355185",
   telephoneDisplay: "+91 94003 55185",
@@ -54,8 +58,11 @@ export const business = {
     "https://www.linkedin.com/company/digital-product-adarsh/",
   ] as const,
 
+  /** Opens the Digital Product Solutions place pin in Korani. */
+  mapsUrl: "https://www.google.com/maps?cid=990739385366027106",
+  mapsShareUrl: "https://share.google/RQBkpICvuXSo7u45X",
   mapsEmbedSrc:
-    "https://maps.google.com/maps?q=Mangalapuram%20Panchayat%2C%20Korani%2C%20Chempakamangalam%2C%20Kerala%20695104&output=embed",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.3284626251293!2d76.8380526744956!3d8.660278494652756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x893ab90196d09cb5%3A0xdbfd038c9bb1b62!2sDigital%20product%20solutions!5e0!3m2!1sen!2sin!4v1772689938826!5m2!1sen!2sin",
 
   gbpCategoryObserved: "Internet marketing service",
 } as const;
@@ -74,4 +81,10 @@ export const postalAddressSchema = {
   addressRegion: business.addressRegion,
   postalCode: business.postalCode,
   addressCountry: business.addressCountry,
+};
+
+export const geoSchema = {
+  "@type": "GeoCoordinates" as const,
+  latitude: business.latitude,
+  longitude: business.longitude,
 };

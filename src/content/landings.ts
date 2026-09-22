@@ -94,7 +94,7 @@ export const websiteDeveloperTvm: LandingContent = {
   metaDescription:
     "Choose a Trivandrum-area development team with direct developer access. Digital Product Solutions is based in Korani, Thiruvananthapuram district.",
   h1: "Website developer in Trivandrum",
-  lede: "Looking for a website developer near Trivandrum? Digital Product Solutions is a small MSME team in Korani, Mangalapuram Panchayat (PIN 695104), serving Thiruvananthapuram district and Kerala.",
+  lede: "Looking for a website developer near Trivandrum? Digital Product Solutions is a small MSME team in Korani, Thiruvananthapuram (PIN 695104), serving Thiruvananthapuram district and Kerala.",
   audience: "Buyers comparing local developers, small agencies and freelancers who want to know who they will actually talk to.",
   problem: "Provider pages often hide whether you get a salesperson, a freelancer who may disappear, or engineers. This page explains the team model.",
   deliverables: [
@@ -107,7 +107,7 @@ export const websiteDeveloperTvm: LandingContent = {
     { title: "Proposal", text: "Pages, timeline and a price range from published packages or a custom estimate." },
     { title: "Build", text: "You can message the developer directly, which is the point of this model versus a layered agency." },
   ],
-  ownership: "Office address used on Google Business Profile: Mangalapuram Panchayat, Korani, Chempakamangalam, Kerala 695104. Service area is Kerala; we do not operate fake city branch offices.",
+  ownership: "Office pin: Korani, Thiruvananthapuram, Kerala 695104. Service area is Kerala; we do not operate fake city branch offices.",
   proof: "Google Business Profile for this business currently shows a 5.0 rating from 25 reviews. Portfolio URLs are listed on /portfolio.",
   related: [
     { href: "/website-development-trivandrum", label: "Website development in Trivandrum" },
@@ -117,7 +117,7 @@ export const websiteDeveloperTvm: LandingContent = {
     { href: "/contact", label: "Get a project estimate" },
   ],
   faqs: [
-    { q: "Are you in Trivandrum city centre?", a: "The registered Google listing address is Korani, Chempakamangalam, PIN 695104, in Thiruvananthapuram district — not PIN 695001 city centre." },
+    { q: "Are you in Trivandrum city centre?", a: "The Google listing is in Korani, Thiruvananthapuram, PIN 695104 — not PIN 695001 city centre." },
     { q: "Do you work outside Trivandrum?", a: "Yes. The website states service across Kerala. Remote delivery is normal; local visits are by arrangement." },
   ],
   serviceName: "Website Developer Trivandrum",

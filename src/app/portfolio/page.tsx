@@ -189,8 +189,8 @@ export default function Portfolio() {
                 },
                 "address": {
                   "@type": "PostalAddress",
-                  "streetAddress": "Mangalapuram Panchayat, Korani, Chempakamangalam",
-                  "addressLocality": "Korani",
+                  "streetAddress": "Korani",
+                  "addressLocality": "Thiruvananthapuram",
                   "addressRegion": "Kerala",
                   "postalCode": "695104",
                   "addressCountry": "IN"

@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import Head from "next/head"
 import ParticleNetwork from "@/components/ParticleNetwork"
+import { business } from "@/lib/business";
 
 // Base URL for canonical tags
 const BASE_URL = process.env.NODE_ENV === "production"
@@ -142,8 +143,8 @@ export default function About() {
               },
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Mangalapuram Panchayat, Korani, Chempakamangalam",
-                "addressLocality": "Korani",
+                "streetAddress": "Korani",
+                "addressLocality": "Thiruvananthapuram",
                 "addressRegion": "Kerala",
                 "postalCode": "695104",
                 "addressCountry": "IN"
@@ -320,14 +321,20 @@ export default function About() {
             <h2 className="text-3xl font-semibold mb-8 text-center">Our Location</h2>
             <div className="relative overflow-hidden rounded-lg" style={{ paddingBottom: "56.25%" }}>
               <iframe
-                src="https://maps.google.com/maps?q=Mangalapuram%20Panchayat%2C%20Korani%2C%20Chempakamangalam%2C%20Kerala%20695104&output=embed"
-                title="Digital Product Solutions office in Korani, Kerala"
+                src={business.mapsEmbedSrc}
+                title="Digital Product Solutions office in Korani, Thiruvananthapuram"
                 width="100%"
                 height="100%"
                 loading="lazy"
                 style={{ border: 0, position: "absolute", top: 0, left: 0 }}
               ></iframe>
             </div>
+            <p className="text-center text-sm text-gray-400 mt-4">
+              Korani, Thiruvananthapuram, Kerala 695104 ·{" "}
+              <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">
+                Open in Google Maps
+              </a>
+            </p>
           </motion.div>
         </div>
       </div>
