@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 
 // Reuse blog posts from blog page
@@ -114,25 +113,24 @@ const BlogPost: NextPage<Props> = async ({ params }) => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(postSchema) }}
       />
-      <div className="min-h-screen bg-gray-50 py-16 px-4">
+      <div className="min-h-screen bg-gray-50 py-32 px-4">
         <div className="container mx-auto max-w-4xl">
+          <nav className="text-sm text-gray-500 mb-8">
+            <Link href="/" className="hover:text-blue-600">Home</Link>
+            <span className="mx-2">/</span>
+            <Link href="/blog" className="hover:text-blue-600">Blog</Link>
+            <span className="mx-2">/</span>
+            <span className="text-gray-800">{post.title}</span>
+          </nav>
           <header className="mb-8">
+            <span className="inline-block bg-blue-100 text-blue-700 text-sm px-4 py-1 rounded-full mb-4 font-medium">
+              {post.category}
+            </span>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {post.title}
             </h1>
-            <div className="flex gap-4 mb-6">
-              <span className="text-blue-600">{post.category}</span>
-              <time className="text-gray-500">{post.date}</time>
-            </div>
+            <time className="text-gray-500">{post.date}</time>
           </header>
-          <Image
-            src={post.image}
-            alt={post.title}
-            width={800}
-            height={400}
-            className="w-full h-auto mb-8 rounded-lg"
-            priority
-          />
           <div className="prose prose-lg text-gray-700 mb-12 space-y-4">
             {post.content.split("\n\n").map((block, i) =>
               block.startsWith("## ") ? (

@@ -1,0 +1,78 @@
+export const htmlSitemapGroups: { heading: string; links: { href: string; label: string }[] }[] = [
+  {
+    heading: "Company",
+    links: [
+      { href: "/", label: "Home" },
+      { href: "/about", label: "About" },
+      { href: "/work", label: "Work stories" },
+      { href: "/digital-product-solutions-reviews", label: "Reviews" },
+      { href: "/portfolio", label: "Portfolio" },
+      { href: "/pricing", label: "Pricing" },
+      { href: "/contact", label: "Contact" },
+      { href: "/book", label: "Book" },
+      { href: "/blog", label: "Blog" },
+    ],
+  },
+  {
+    heading: "Websites",
+    links: [
+      { href: "/website-development", label: "Website development Kerala" },
+      { href: "/affordable-website-development-trivandrum", label: "Affordable websites Trivandrum" },
+      { href: "/website-developer-trivandrum", label: "Website developer Trivandrum" },
+      { href: "/website-development-trivandrum", label: "Website development Trivandrum" },
+      { href: "/website-development-cost-kerala", label: "Website cost Kerala" },
+      { href: "/small-business-website-kerala", label: "Small business websites" },
+      { href: "/website-redesign-trivandrum", label: "Website redesign Trivandrum" },
+      { href: "/clinic-website-development-kerala", label: "Clinic websites" },
+      { href: "/hospital-website-development-kerala", label: "Hospital websites" },
+      { href: "/construction-website-development-kerala", label: "Construction websites" },
+      { href: "/school-website-development-kerala", label: "School websites" },
+      { href: "/freelance-web-developer-kerala", label: "Freelance web developer Kerala" },
+      { href: "/dedicated-developer-team-kerala", label: "Dedicated developer team" },
+    ],
+  },
+  {
+    heading: "E-commerce",
+    links: [
+      { href: "/ecommerce-website-development-kerala", label: "E-commerce websites Kerala" },
+      { href: "/affordable-ecommerce-website-kerala", label: "Affordable e-commerce Kerala" },
+      { href: "/online-store-development-trivandrum", label: "Online store Trivandrum" },
+      { href: "/ecommerce-website-cost-kerala", label: "E-commerce cost Kerala" },
+    ],
+  },
+  {
+    heading: "SEO and ads",
+    links: [
+      { href: "/seo-services", label: "SEO company in Kerala" },
+      { href: "/local-seo-kerala", label: "Local SEO Kerala" },
+      { href: "/seo-for-doctors-clinics-kerala", label: "SEO for doctors" },
+      { href: "/digital-marketing-trivandrum", label: "Digital marketing Trivandrum" },
+      { href: "/google-ads-management-kerala", label: "Google Ads Kerala" },
+      { href: "/seo-services-kannur", label: "SEO Kannur" },
+      { href: "/digital-marketing-kollam", label: "Digital marketing Kollam" },
+    ],
+  },
+  {
+    heading: "Software and CRM",
+    links: [
+      { href: "/software-development", label: "Software development" },
+      { href: "/crm-software-kerala", label: "CRM software Kerala" },
+      { href: "/whatsapp-automation-kerala", label: "WhatsApp automation" },
+      { href: "/app-development-kerala", label: "App development Kerala" },
+    ],
+  },
+  {
+    heading: "Blog",
+    links: [
+      { href: "/blog/website-cost-kerala-2026", label: "Website cost Kerala 2026" },
+      { href: "/blog/software-development-cost-kerala", label: "Software development cost Kerala" },
+      { href: "/blog/digital-marketing-hotels-kerala", label: "Hotel digital marketing Kerala" },
+      { href: "/blog/ai-powered-digital-solutions-business-growth", label: "AI-powered digital solutions" },
+      { href: "/blog/responsive-web-design-clients", label: "Responsive web design Kerala" },
+      { href: "/blog/cloud-based-digital-solutions", label: "Cloud hosting Kerala sites" },
+      { href: "/blog/ai-driven-marketing-solutions", label: "AI marketing Kerala" },
+      { href: "/blog/secure-digital-products-cybersecurity", label: "Website security Kerala" },
+      { href: "/blog/microservices-ecommerce-development", label: "E-commerce architecture Kerala" },
+    ],
+  },
+];

@@ -75,6 +75,7 @@ const ALLOW = new Set([
   '/seo-services-kannur',
   '/web-development-kottayam',
   '/web-development-palakkad',
+  '/all-pages',
   '/blog',
   '/blog/ai-powered-digital-solutions-business-growth',
   '/blog/custom-ecommerce-software-sales',
