@@ -99,7 +99,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
             }}
             transition={{ type: "spring", stiffness: 200, damping: 50 }}
             className={cn(
-                "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full  px-4 py-2 lg:flex bg-black/40 ",
+                "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start overflow-visible rounded-full  px-4 py-2 lg:flex bg-black/40 ",
                 visible && "bg-black/40 dark:bg-neutral-950/80",
                 className
             )}
@@ -255,27 +255,25 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
     return (
-
         <Link
             href="/"
-            className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-lg font-normal text-black"
+            className="relative z-20 mr-4 flex shrink-0 items-center gap-2 px-2 py-1 text-lg font-normal text-black"
         >
-            {/* Logo */}
             <Image
-                src="./img/loges.png"
-                alt="Digital Product Logo"
+                src="/img/loges.png"
+                alt="Digital Product Solutions"
                 width={40}
                 height={40}
-                className="h-auto w-12 mr-2"
+                className="h-10 w-10 shrink-0 object-contain"
+                priority
             />
-
-            <span className="font-medium text-white dark:text-white">
-                <span style={{ fontFamily: "Quicksand, sans-serif" }}>
-                    Digital Product
-                </span>
+            <span
+                className="whitespace-nowrap font-medium text-white dark:text-white"
+                style={{ fontFamily: "Quicksand, sans-serif" }}
+            >
+                Digital Product
             </span>
         </Link>
-
     );
 };
 
