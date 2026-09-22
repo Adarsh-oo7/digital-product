@@ -339,25 +339,32 @@ export default function Home() {
             ))}
           </div>
           <p className="text-center text-sm font-semibold text-gray-700 mt-10 mb-4">Industry CRM &amp; lead management</p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {[
-              { icon: "🏠", name: "Real Estate CRM", link: "/real-estate-crm-lead-management-kerala" },
-              { icon: "🚌", name: "Travel Agency CRM", link: "/travel-agency-crm-kerala" },
-              { icon: "🎓", name: "Admission CRM", link: "/education-admission-crm-kerala" },
-              { icon: "🚗", name: "Car Dealer CRM", link: "/car-dealer-crm-kerala" },
+              { icon: "🏠", name: "Real Estate", link: "/real-estate-crm-lead-management-kerala" },
+              { icon: "🚌", name: "Travel", link: "/travel-agency-crm-kerala" },
+              { icon: "🎓", name: "Admissions", link: "/education-admission-crm-kerala" },
+              { icon: "🚗", name: "Car dealers", link: "/car-dealer-crm-kerala" },
+              { icon: "💍", name: "Wedding", link: "/wedding-planner-crm-kerala" },
+              { icon: "📷", name: "Photography", link: "/photography-crm-kerala" },
+              { icon: "🛋️", name: "Interior", link: "/interior-design-crm-kerala" },
+              { icon: "💪", name: "Gyms", link: "/gym-crm-kerala" },
+              { icon: "🪑", name: "Furniture", link: "/furniture-crm-kerala" },
             ].map((ind) => (
               <Link
                 key={ind.link}
                 href={ind.link}
-                className="flex flex-col items-center gap-2 p-4 bg-gray-50 rounded-2xl border border-gray-100 hover:border-blue-400 hover:bg-blue-50 hover:shadow-md transition-all duration-300 group text-center"
+                className="flex flex-col items-center gap-2 p-4 bg-gray-50 rounded-2xl border border-gray-100 hover:border-orange-400 hover:bg-orange-50 hover:shadow-md transition-all duration-300 group text-center"
               >
                 <span className="text-3xl">{ind.icon}</span>
-                <span className="text-xs font-medium text-gray-700 group-hover:text-blue-600 leading-tight">{ind.name}</span>
+                <span className="text-xs font-medium text-gray-700 group-hover:text-orange-700 leading-tight">{ind.name}</span>
               </Link>
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link href="/software-development" className="text-blue-600 text-sm font-medium hover:underline">View all industry solutions →</Link>
+            <Link href="/crm-software-kerala" className="text-orange-700 text-sm font-medium hover:underline">
+              All CRM landing pages (if you are searching a specific industry) →
+            </Link>
           </div>
         </div>
       </section>

@@ -44,6 +44,7 @@ export const business = {
   openingHours: "Mo-Sa 09:00-19:00",
   gbpHoursObserved: "Open 24 hours",
 
+  yearsExperience: "4+",
   googleRatingValue: "5.0",
   googleReviewCount: 25,
 

@@ -48,12 +48,15 @@ export default function CrmLandingPage({ content }: { content: CrmIndustry }) {
         <Breadcrumbs
           items={[
             { name: "Home", href: "/" },
-            { name: "Software", href: "/software-development" },
+            { name: "CRM software", href: "/crm-software-kerala" },
             { name: content.badge, href: content.path },
           ]}
         />
 
         <header className="text-center mb-16">
+          <p className="mb-6 text-xs sm:text-sm font-semibold uppercase tracking-widest text-orange-600">
+            Kerala CRM provider · {business.yearsExperience} years shipping software · WhatsApp-first · Direct developers · {business.googleRatingValue} from {business.googleReviewCount} Google reviews
+          </p>
           <span className={`inline-block ${content.accent.badge} text-sm px-4 py-1 rounded-full mb-4 font-medium`}>
             {content.badge}
           </span>
@@ -63,19 +66,30 @@ export default function CrmLandingPage({ content }: { content: CrmIndustry }) {
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">{content.lede}</p>
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
-            <Link href="/contact" className={`${content.accent.button} px-8 py-3 rounded-full font-semibold transition shadow-lg`}>
-              Get a project estimate
-            </Link>
             <a
               href={whatsappUrl(content.whatsappText)}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-gray-300 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
+              className={`${content.accent.button} px-8 py-3 rounded-full font-semibold transition shadow-lg`}
             >
-              WhatsApp a developer
+              WhatsApp the developer now
             </a>
+            <Link href="/contact" className="border border-gray-300 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+              Get a written estimate
+            </Link>
           </div>
         </header>
+
+        <section className="mb-12 max-w-3xl mx-auto rounded-2xl border border-orange-200 bg-orange-50 p-5">
+          <h2 className="text-sm font-bold uppercase tracking-wide text-orange-900 mb-2">If you searched this, you are on the right page</h2>
+          <ul className="flex flex-wrap gap-2">
+            {content.searchQueries.map((q) => (
+              <li key={q} className="text-sm bg-white border border-orange-100 rounded-full px-3 py-1 text-gray-700">
+                {q}
+              </li>
+            ))}
+          </ul>
+        </section>
 
         <section className="mb-16 max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold mb-3">{content.problemTitle}</h2>
