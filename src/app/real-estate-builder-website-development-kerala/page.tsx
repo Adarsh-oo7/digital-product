@@ -26,7 +26,7 @@ export default function Page() {
       {
         "@type": "Question",
         "name": "Can you build a lead management system for my real estate business?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes — we build real estate CRM systems that capture leads from your website, WhatsApp and social media, and track them through the sales funnel." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The dedicated page is /real-estate-crm-lead-management-kerala. It captures leads from your website, WhatsApp and other sources you already use, then tracks follow-up and site visits. Portal APIs are only included if confirmed in the estimate." }
       }
     ]
   };
@@ -92,7 +92,7 @@ export default function Page() {
           <div className="space-y-6 max-w-3xl mx-auto">
             {[
               { q: "How much does a real estate website cost in Kerala?", a: "Real estate website development in Kerala starts at ₹35,000 for a basic builder portfolio. Full websites with property listings, virtual tours and CRM integration start from ₹75,000." },
-              { q: "Can you build a lead management system for my real estate business?", a: "Yes — we build real estate CRM systems that capture leads from your website, WhatsApp and social media, and track them through the sales funnel." }
+              { q: "Can you build a lead management system for my real estate business?", a: "Yes. See /real-estate-crm-lead-management-kerala. It captures leads from your website, WhatsApp and other sources you already use, then tracks follow-up and site visits. Portal APIs are only included if confirmed in the estimate." }
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
                 <h3 className="font-semibold text-gray-900 mb-2">{item.q}</h3>
@@ -106,6 +106,7 @@ export default function Page() {
           <h2 className="text-2xl font-bold mb-6 text-gray-800">Related Services</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
+              { href: "/real-estate-crm-lead-management-kerala", icon: "📋", title: "Real Estate CRM Kerala", desc: "Lead inbox, follow-up and site visits — not the public listings site" },
               { href: "/ai-chatbot-development-kerala", icon: "🤖", title: "Real Estate Chatbot", desc: "Lead qualification & site visit scheduling" },
               { href: "/google-ads-management-kerala", icon: "📈", title: "Real Estate Google Ads Kerala", desc: "Targeted ads for property buyers" },
               { href: "/seo-services", icon: "🔍", title: "Real Estate SEO Kerala", desc: "Rank for property searches in Kerala" },

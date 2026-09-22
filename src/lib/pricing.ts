@@ -4,6 +4,7 @@ export const verifiedPricing = {
   websitePremium: { label: "Premium / dynamic website", from: 25000, to: 45000, delivery: "2–3 weeks" },
   ecommerce: { label: "E-commerce website", from: 35000, to: 70000, delivery: "3–4 weeks" },
   softwareFrom: 15000,
+  softwarePlatformFrom: 75000,
   appFrom: 25000,
   seoMonthlyFrom: 5000,
   socialMonthlyFrom: 3000,

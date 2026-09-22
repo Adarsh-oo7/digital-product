@@ -338,6 +338,24 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          <p className="text-center text-sm font-semibold text-gray-700 mt-10 mb-4">Industry CRM &amp; lead management</p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {[
+              { icon: "🏠", name: "Real Estate CRM", link: "/real-estate-crm-lead-management-kerala" },
+              { icon: "🚌", name: "Travel Agency CRM", link: "/travel-agency-crm-kerala" },
+              { icon: "🎓", name: "Admission CRM", link: "/education-admission-crm-kerala" },
+              { icon: "🚗", name: "Car Dealer CRM", link: "/car-dealer-crm-kerala" },
+            ].map((ind) => (
+              <Link
+                key={ind.link}
+                href={ind.link}
+                className="flex flex-col items-center gap-2 p-4 bg-gray-50 rounded-2xl border border-gray-100 hover:border-blue-400 hover:bg-blue-50 hover:shadow-md transition-all duration-300 group text-center"
+              >
+                <span className="text-3xl">{ind.icon}</span>
+                <span className="text-xs font-medium text-gray-700 group-hover:text-blue-600 leading-tight">{ind.name}</span>
+              </Link>
+            ))}
+          </div>
           <div className="mt-8 text-center">
             <Link href="/software-development" className="text-blue-600 text-sm font-medium hover:underline">View all industry solutions →</Link>
           </div>

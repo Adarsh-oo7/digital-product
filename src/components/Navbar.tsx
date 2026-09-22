@@ -27,6 +27,7 @@ const navItems = [
       { name: "Social Media Management", link: "/social-media-management" },
       { name: "Business Automation", link: "/business-automation" },
       { name: "AI Chatbots & Automation", link: "/ai-powered-solutions" },
+      { name: "Real Estate CRM", link: "/real-estate-crm-lead-management-kerala" },
     ]
   },
   { name: "Work", link: "/work" },

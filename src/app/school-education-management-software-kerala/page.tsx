@@ -106,6 +106,7 @@ export default function Page() {
           <h2 className="text-2xl font-bold mb-6 text-gray-800">Related Services</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
+              { href: "/education-admission-crm-kerala", icon: "🎓", title: "Admission CRM Kerala", desc: "Enquiry to admission — different from this ERP" },
               { href: "/software-development", icon: "💻", title: "Custom Software Development", desc: "Custom-built school management systems" },
               { href: "/app-development", icon: "📱", title: "School Mobile App Development", desc: "Android & iOS apps for schools" },
               { href: "/whatsapp-automation-kerala", icon: "💬", title: "WhatsApp Automation for Schools", desc: "Parent notifications & fee reminders" },
