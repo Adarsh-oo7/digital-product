@@ -39,7 +39,7 @@ const reviews: Review[] = [
     metric: "Live",
     metricLabel: "crystalknotfilms.com",
     rating: 5,
-    image: "/img/crystalknot.jpeg",
+    image: "/img/crystalknot.jpg",
   },
   {
     id: 2,
@@ -54,7 +54,7 @@ const reviews: Review[] = [
     metric: "Live",
     metricLabel: "buildwellz.in",
     rating: 4.5,
-    image: "/img/buildwellz.jpeg",
+    image: "/img/buildwellz.jpg",
   },
   {
     id: 3,
@@ -69,7 +69,7 @@ const reviews: Review[] = [
     metric: "Live",
     metricLabel: "squeezeberriez.in",
     rating: 4.5,
-    image: "/img/Softdrinks.jpeg",
+    image: "/img/Softdrinks.jpg",
   },
   {
     id: 4,
@@ -86,7 +86,7 @@ const reviews: Review[] = [
     metric: "8 mo",
     metricLabel: "Build timeline",
     rating: 5,
-    image: "/img/keralasellers.jpeg",
+    image: "/img/keralasellers.jpg",
   },
   {
     id: 5,
@@ -103,7 +103,7 @@ const reviews: Review[] = [
     metric: "Live",
     metricLabel: "lemoncaters.in",
     rating: 4.5,
-    image: "/img/lemons.jpeg",
+    image: "/img/lemons.jpg",
   },
 ]
 

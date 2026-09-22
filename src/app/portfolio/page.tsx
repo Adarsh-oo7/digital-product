@@ -17,7 +17,7 @@ const projects = [
     category: "Business Website",
     description:
       "A sophisticated, responsive static website crafted for a premier wedding planning team in Banglore, India. The platform features an elegant portfolio of luxury weddings, detailed service breakdowns, and a seamless inquiry system for prospective couples. Engineered for high performance and local SEO, the site effectively showcases their creative excellence and simplifies the booking process for the regional wedding market.",
-    image: "./img/crystalknot.jpeg?height=400&width=600",
+    image: "/img/crystalknot.jpg",
     technologies: ["Next.js"],
     features: ["Event Gallery", "Wedding Videos", "Contact and Services", "Custom SEO"],
     duration: "2 weeks",
@@ -29,7 +29,7 @@ const projects = [
     category: "Business Website",
     description:
       "A sophisticated, responsive static website crafted for a premier construction company in Attingal, India. The platform features an elegant portfolio of completed projects, detailed service breakdowns, and a seamless inquiry system for prospective clients. Engineered for high performance and local SEO, the site effectively showcases their creative excellence and simplifies the booking process for the regional construction market.",
-    image: "./img/buildwellz.jpeg?height=400&width=600",
+    image: "/img/buildwellz.jpg",
     technologies: ["Next.js"],
     features: ["Clients Gallery", "Construction Videos", "Contact and Services", "Custom SEO"],
     duration: "2 weeks",
@@ -41,7 +41,7 @@ const projects = [
     category: "Business Website",
     description:
       "Responsive static with mini ecommerce website crafted for a premier soft drinks company in Kochi, Kerala. The platform features an elegant portfolio of their products, detailed service breakdowns, and a seamless inquiry system for prospective clients. Engineered for high performance and local SEO, the site effectively showcases their creative excellence and simplifies the booking process for the regional soft drinks market.",
-    image: "./img/Softdrinks.jpeg?height=400&width=600",
+    image: "/img/Softdrinks.jpg",
     technologies: ["Next.js"],
     features: ["Product Catalog", "Online Ordering", "Contact and Services", "Custom SEO"],
     duration: "2 weeks",
@@ -55,7 +55,7 @@ const projects = [
     category: "Business Website",
     description:
       "Kerala Sellers is an all-in-one e-commerce solution designed for Kerala’s local businesses. With secure payment integration, smart product management, custom dashboard, advanced product filtering, and a clean, intuitive interface, the platform helps sellers connect with customers effortlessly and scale their business online—starting from Attingal to all of Kerala.",
-    image: "./img/keralasellers.jpeg?height=400&width=600",
+    image: "/img/keralasellers.jpg",
     technologies: ["Next.js"],
     features: ["Own Website", "Dashboard", "Stock Management", "Billing Software"],
     duration: "8 Months",
@@ -67,7 +67,7 @@ const projects = [
     category: "Business Website",
     description:
       "Hospitality website for Mangrove Moments with contact, pricing, gallery and activity pages so guests can reach the venue directly.",
-    image: "./img/moments.jpeg?height=400&width=600",
+    image: "/img/moments.jpg",
     technologies: ["Next.js"],
     features: ["Own Website", "contact", "pricing", "Gallery", "Activities"],
     duration: "3 weeks",
@@ -79,7 +79,7 @@ const projects = [
     category: "Business Website",
     description:
       "Hospitality website for Mangrove Spot covering contact, pricing, gallery and activities for visitors.",
-    image: "./img/spot.jpeg?height=400&width=600",
+    image: "/img/spot.jpg",
     technologies: ["Next.js"],
     features: ["Own Website", "contact", "pricing", "Gallery", "Activities"],
     duration: "3 weeks",
@@ -91,7 +91,7 @@ const projects = [
     category: "Business Website",
     description:
       "A modern, responsive static website developed for an event management team in Attingal, Kerala. The site highlights their professional services, showcases past events, and includes a contact form for local inquiries. Optimized for performance and SEO, it strengthens their online presence and attracts clients in the event planning industry.",
-    image: "./img/lemons.jpeg?height=400&width=600",
+    image: "/img/lemons.jpg",
     technologies: ["Bootstrap", "JavaScript"],
     features: ["Event Gallery", "Contact Forms", "Service Showcase", "Mobile Optimized"],
     duration: "3 weeks",
@@ -103,7 +103,7 @@ const projects = [
     category: "Agriculture & Local Business",
     description:
       "A clean, user-friendly static website for a honey cultivator in Kerala, showcasing organic honey products and sustainable farming practices. Designed to reflect the local essence of Attingal's agricultural heritage, the site includes product details, contact information, and SEO optimization to drive direct sales and customer engagement.",
-    image: "./img/honey.jpeg?height=400&width=600",
+    image: "/img/honey.jpg",
     technologies: ["Next.js"],
     features: ["Product Catalog", "Online Ordering", "Farm Story", "Local SEO"],
     duration: "2 weeks",
@@ -115,7 +115,7 @@ const projects = [
     category: "E-commerce Development",
     description:
       "A fully responsive e-commerce platform built for businesses in Kerala, featuring secure payment gateways, advanced product filtering, and an intuitive user interface. Designed to enhance customer engagement and drive sales, this solution supports local businesses in Attingal and beyond with seamless online shopping experiences tailored to their needs.",
-    image: "./img/ec.jpeg?height=400&width=600",
+    image: "/img/ec.jpg",
     technologies: ["Django", "Bootstrap", "SQLite"],
     features: ["Secure Payment Gateway", "Product Filtering", "Mobile Responsive", "SEO Optimized"],
     duration: "6 weeks",
@@ -127,7 +127,7 @@ const projects = [
     category: "Maintenance & Support",
     description:
       "Comprehensive website maintenance services for clients across Kerala, including Attingal. We provide regular content updates, bug fixes, performance optimization, SEO enhancements, and secure backups. Our services ensure business and personal websites operate smoothly, supporting local enterprises with reliable and secure digital solutions.",
-    image: "./img/ht1.jpeg?height=400&width=600",
+    image: "/img/ht1.jpg",
     technologies: ["JavaScript", "Django", "MySQL"],
     features: ["24/7 Monitoring", "Regular Updates", "Security Patches", "Performance Optimization"],
     duration: "Ongoing",

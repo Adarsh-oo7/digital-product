@@ -34,7 +34,7 @@ export const workStories: WorkStory[] = [
     where: "Kerala (Attingal / Varkala region)",
     timeline: "About 2 weeks",
     liveUrl: "https://www.buildwellz.in/",
-    image: "/img/buildwellz.jpeg",
+    image: "/img/buildwellz.jpg",
     imageAlt: "BuilDwellz construction website built by Digital Product Solutions",
     problem:
       "Serious residential clients look up a builder before they WhatsApp. A folder of site photos is not a company they can verify.",
@@ -62,7 +62,7 @@ export const workStories: WorkStory[] = [
     where: "Client in Bangalore; built by the Kerala team",
     timeline: "About 2 weeks",
     liveUrl: "https://crystalknotfilms.com/",
-    image: "/img/crystalknot.jpeg",
+    image: "/img/crystalknot.jpg",
     imageAlt: "Crystal Knot Films wedding website",
     problem:
       "A film studio’s site has to look as considered as the films. Couples compare portfolios before they enquire.",
@@ -89,7 +89,7 @@ export const workStories: WorkStory[] = [
     where: "Kerala",
     timeline: "About 2 weeks",
     liveUrl: "https://www.squeezeberriez.in/",
-    image: "/img/Softdrinks.jpeg",
+    image: "/img/Softdrinks.jpg",
     imageAlt: "Squeeze Berriez product website",
     problem:
       "Retail and hospitality buyers still ask for a URL. An Instagram grid does not show the brand, products and how to order in one place.",
@@ -117,7 +117,7 @@ export const workStories: WorkStory[] = [
     where: "Kerala backwaters",
     timeline: "About 3 weeks",
     liveUrl: "https://www.mangrovemoments.com/",
-    image: "/img/moments.jpeg",
+    image: "/img/moments.jpg",
     imageAlt: "Mangrove Moments hospitality website",
     problem:
       "Activity and stay businesses lose enquiries when guests only find them on someone else’s listing.",
@@ -144,7 +144,7 @@ export const workStories: WorkStory[] = [
     where: "Kerala",
     timeline: "About 3 weeks",
     liveUrl: "https://www.mangrovespot.in/",
-    image: "/img/spot.jpeg",
+    image: "/img/spot.jpg",
     imageAlt: "Mangrove Spot website",
     problem: "Visitors searching the venue name need hours, photos and a way to book — not a Facebook cover photo.",
     whatWeDid:
@@ -166,7 +166,7 @@ export const workStories: WorkStory[] = [
     where: "Kerala",
     timeline: "About 3 weeks",
     liveUrl: "https://lemoncaters.in/",
-    image: "/img/lemons.jpeg",
+    image: "/img/lemons.jpg",
     imageAlt: "Lemon Caters and Events website",
     problem: "Catering enquiries that live only in WhatsApp are hard to trust when a family is choosing a vendor for a function.",
     whatWeDid:
@@ -193,7 +193,7 @@ export const workStories: WorkStory[] = [
     where: "Kerala",
     timeline: "About 8 months",
     liveUrl: "https://www.keralasellers.in/",
-    image: "/img/keralasellers.jpeg",
+    image: "/img/keralasellers.jpg",
     imageAlt: "Kerala Sellers marketplace",
     problem:
       "Many local sellers only had Instagram and WhatsApp — no shared catalogue, orders or payments in one place.",

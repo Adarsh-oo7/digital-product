@@ -15,14 +15,14 @@ const teamMembers = [
     name: "Adarsh B S",
     role: ["Project Manager", "SEO and Marketing Specialist"],
     image: "./img/adarshnew.png?height=300&width=300",
-    imageHover: "/img/adarshcrazy.jpeg?height=300&width=300",
+    imageHover: "/img/adarshcrazy.jpg",
     tier: "core",
   },
   {
     name: "Midhin S",
     role: ["Full-Stack Developer", "Backend Specialist", "Quality Assurance (QA)"],
     image: "./img/midhin.jpg?height=300&width=300",
-    imageHover: "/img/midhincrazy.jpeg?height=300&width=300",
+    imageHover: "/img/midhincrazy.jpg",
     tier: "core",
   },
 
@@ -30,7 +30,7 @@ const teamMembers = [
     name: "Aromal V G",
     role: ["Full-Stack Developer", "UI/UX Designer", "Frontend Specialist"],
     image: "./img/aromalnew.png?height=300&width=300",
-    imageHover: "/img/aromalcrazy.jpeg?height=300&width=300",
+    imageHover: "/img/aromalcrazy.jpg",
     tier: "core",
   },
   {
