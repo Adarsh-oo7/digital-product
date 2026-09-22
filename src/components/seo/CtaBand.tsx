@@ -21,7 +21,7 @@ export default function CtaBand({
         <Link
           href="/contact"
           onClick={() => track("estimate_start", { location: "cta_band" })}
-          className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-blue-600 font-semibold hover:bg-blue-500"
+          className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-blue-600 !text-white font-semibold hover:bg-blue-500 hover:!text-white"
         >
           Get a Project Estimate
         </Link>
@@ -30,14 +30,14 @@ export default function CtaBand({
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => track("whatsapp_click", { location: "cta_band" })}
-          className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-green-600 font-semibold hover:bg-green-500"
+          className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-green-600 !text-white font-semibold hover:bg-green-500 hover:!text-white"
         >
           WhatsApp a Developer
         </a>
         <a
           href={telUrl}
           onClick={() => track("phone_click", { location: "cta_band" })}
-          className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-white/10 font-semibold hover:bg-white/20"
+          className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-white/10 !text-white font-semibold hover:bg-white/20 hover:!text-white"
         >
           Call Now
         </a>

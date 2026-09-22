@@ -74,7 +74,7 @@ export default function ClientBlog({ initialPosts }: { initialPosts: BlogPost[] 
             </span>
           </motion.h1>
           <p className="text-sm sm:text-sm md:text-lg lg:text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-            Discover expert insights on AI solutions, e-commerce software, web design, and more to grow your business in 2026. Stay ahead with Digital Product Solutions.
+            Honest Kerala notes on websites, AI chatbots, WhatsApp automation, CRM and SEO. Published prices only — no fake ranking or revenue claims.
           </p>
         </motion.header>
 

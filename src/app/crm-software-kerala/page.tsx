@@ -52,9 +52,9 @@ export default function CrmHubPage() {
           href={whatsappUrl("Hi, I want a Kerala CRM estimate — I will tell you the industry")}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex mb-12 px-8 py-3 rounded-full bg-orange-600 text-white font-semibold hover:bg-orange-700"
+          className="inline-flex mb-12 px-8 py-3 rounded-xl bg-green-600 !text-white font-semibold hover:bg-green-700 hover:!text-white"
         >
-          WhatsApp the developer now
+          WhatsApp a developer
         </a>
 
         <h2 className="text-2xl font-bold mb-6">Industry landing pages</h2>

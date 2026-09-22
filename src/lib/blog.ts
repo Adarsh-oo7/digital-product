@@ -1,3 +1,5 @@
+import { rewrittenLegacySlugs } from "@/content/legacy-blog";
+
 /** Dedicated folder posts — must not be emitted by blog/[slug] generateStaticParams. */
 export const dedicatedBlogSlugs = [
   "website-cost-kerala-2026",
@@ -9,9 +11,14 @@ export const dedicatedBlogSlugs = [
   "digital-marketing-hotels-kerala",
 ] as const;
 
-/** Indexable blog URLs (dedicated Kerala posts + 2026 guides). All other [slug] posts are noindex. */
+/**
+ * Indexable blog URLs. Dedicated Kerala posts, 2026 guides, and rewritten
+ * legacy articles Google already discovered. Duplicate service URLs stay noindex
+ * in their own layouts — not here.
+ */
 export const indexableBlogSlugs = new Set<string>([
   ...dedicatedBlogSlugs,
+  ...rewrittenLegacySlugs,
   "freelancer-vs-development-team-kerala",
   "wordpress-vs-custom-website-kerala",
   "website-vs-landing-page-kerala",

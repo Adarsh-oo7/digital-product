@@ -7,6 +7,8 @@ import { notFound } from "next/navigation";
 import { blogPosts } from "../page";
 import { dedicatedBlogSlugs, indexableBlogSlugs } from "@/lib/blog";
 import CtaBand from "@/components/seo/CtaBand";
+import { pageMetadata } from "@/lib/seo";
+import type { ReactNode } from "react";
 
 // Use Next.js built-in type for dynamic route props
 import type { NextPage } from "next";
@@ -36,30 +38,38 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const indexable = indexableBlogSlugs.has(post.slug);
-  return {
-    title: `${post.title} | Digital Product Solutions`,
+  const base = pageMetadata({
+    title: post.title,
     description: post.excerpt,
+    path: `/blog/${post.slug}`,
+    noindex: !indexable,
+    ogImage: post.image,
+  });
+  return {
+    ...base,
     keywords: post.keywords,
-    robots: indexable
-      ? { index: true, follow: true }
-      : { index: false, follow: true },
-    alternates: {
-      canonical: `https://www.digitalproductsolutions.in/blog/${post.slug}`,
-    },
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      images: [`https://www.digitalproductsolutions.in${post.image}`],
-      url: `https://www.digitalproductsolutions.in/blog/${post.slug}`,
+      ...base.openGraph,
       type: "article",
     },
-    twitter: {
-      card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
-      images: [`https://www.digitalproductsolutions.in${post.image}`],
-    },
   };
+}
+
+const SITE = "https://www.digitalproductsolutions.in";
+
+function linkify(text: string): ReactNode[] {
+  const parts = text.split(/(https:\/\/www\.digitalproductsolutions\.in\/[a-z0-9\-_/]*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith(SITE)) {
+      const href = part.slice(SITE.length) || "/";
+      return (
+        <Link key={i} href={href} className="text-blue-800 underline underline-offset-2">
+          {part.replace(/^https:\/\//, "")}
+        </Link>
+      );
+    }
+    return <span key={i}>{part}</span>;
+  });
 }
 
 // Use NextPage type for the component
@@ -124,9 +134,15 @@ const BlogPost: NextPage<Props> = async ({ params }) => {
             priority
           />
           <div className="prose prose-lg text-gray-700 mb-12 space-y-4">
-            {post.content.split("\n\n").map((para) => (
-              <p key={para.slice(0, 48)}>{para}</p>
-            ))}
+            {post.content.split("\n\n").map((block, i) =>
+              block.startsWith("## ") ? (
+                <h2 key={i} className="text-2xl font-bold text-gray-900 mt-8 mb-2">
+                  {block.slice(3)}
+                </h2>
+              ) : (
+                <p key={i}>{linkify(block)}</p>
+              ),
+            )}
           </div>
 
           {/* Related Posts */}
@@ -160,7 +176,7 @@ const BlogPost: NextPage<Props> = async ({ params }) => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-gray-600 mb-6 max-w-xl mx-auto">
-              Contact Digital Product Solutions to build tailored AI, e-commerce, and web design solutions that drive growth.
+              WhatsApp the Kerala team for a scoped estimate. Published prices only — we do not promise rankings or revenue.
             </p>
             <CtaBand heading="Discuss this with the Kerala team" />
           </section>
