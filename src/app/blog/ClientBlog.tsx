@@ -45,7 +45,7 @@ export default function ClientBlog({ initialPosts }: { initialPosts: BlogPost[] 
   );
 
   return (
-    <div className="min-h-screen py-32 px-4 relative overflow-hidden">
+    <div className="min-h-screen pt-40 pb-16 px-4 relative overflow-hidden">
 
       {/* 🌈 BACKGROUND BLOBS */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -57,16 +57,16 @@ export default function ClientBlog({ initialPosts }: { initialPosts: BlogPost[] 
         {/* Header */}
         <motion.header
           className="text-center mb-12"
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
         >
 
           <motion.h1
-            className="text-4xl md:text-5xl font-bold mb-8 text-center"
-            initial={{ opacity: 0, y: -50 }}
+            className="text-4xl md:text-5xl font-bold mb-4 text-center text-gray-900"
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
           >
             <span className="bg-gradient-to-r from-blue-600 to-black bg-clip-text text-transparent">DPS </span>
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">

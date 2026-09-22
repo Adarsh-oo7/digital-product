@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 
 // Reuse blog posts from blog page
@@ -131,6 +132,16 @@ const BlogPost: NextPage<Props> = async ({ params }) => {
             </h1>
             <time className="text-gray-500">{post.date}</time>
           </header>
+          {post.image && !post.image.includes("logo") && (
+            <Image
+              src={post.image}
+              alt={post.title}
+              width={1200}
+              height={675}
+              className="mb-8 h-64 w-full rounded-xl object-cover md:h-80"
+              priority
+            />
+          )}
           <div className="prose prose-lg text-gray-700 mb-12 space-y-4">
             {post.content.split("\n\n").map((block, i) =>
               block.startsWith("## ") ? (
