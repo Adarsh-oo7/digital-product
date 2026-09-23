@@ -198,8 +198,8 @@ export default function Home() {
 
       <div className="relative w-screen left-1/2 -translate-x-1/2">
         <ImageCompare
-          before="/img/funnelbef.jpg"
-          after="/img/funnelaft.jpg"
+          before="/img/projects/funnel-before.jpg"
+          after="/img/projects/funnel-after.jpg"
           className="w-full h-[80vh]"
         />
       </div>

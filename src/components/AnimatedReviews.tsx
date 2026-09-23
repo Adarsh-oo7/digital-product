@@ -39,7 +39,7 @@ const reviews: Review[] = [
     metric: "Live",
     metricLabel: "crystalknotfilms.com",
     rating: 5,
-    image: "/img/crystalknot.jpg",
+    image: "/img/projects/crystalknot.jpg",
   },
   {
     id: 2,
@@ -54,7 +54,7 @@ const reviews: Review[] = [
     metric: "Live",
     metricLabel: "buildwellz.in",
     rating: 4.5,
-    image: "/img/buildwellz.jpg",
+    image: "/img/projects/buildwellz.jpg",
   },
   {
     id: 3,
@@ -69,7 +69,7 @@ const reviews: Review[] = [
     metric: "Live",
     metricLabel: "squeezeberriez.in",
     rating: 4.5,
-    image: "/img/Softdrinks.jpg",
+    image: "/img/projects/softdrinks.jpg",
   },
   {
     id: 4,

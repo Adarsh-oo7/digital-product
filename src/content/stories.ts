@@ -34,7 +34,7 @@ export const workStories: WorkStory[] = [
     where: "Kerala (Attingal / Varkala region)",
     timeline: "About 2 weeks",
     liveUrl: "https://www.buildwellz.in/",
-    image: "/img/buildwellz.jpg",
+    image: "/img/projects/buildwellz.jpg",
     imageAlt: "BuilDwellz construction website built by Digital Product Solutions",
     problem:
       "Serious residential clients look up a builder before they WhatsApp. A folder of site photos is not a company they can verify.",
@@ -62,7 +62,7 @@ export const workStories: WorkStory[] = [
     where: "Client in Bangalore; built by the Kerala team",
     timeline: "About 2 weeks",
     liveUrl: "https://crystalknotfilms.com/",
-    image: "/img/crystalknot.jpg",
+    image: "/img/projects/crystalknot.jpg",
     imageAlt: "Crystal Knot Films wedding website",
     problem:
       "A film studio’s site has to look as considered as the films. Couples compare portfolios before they enquire.",
@@ -89,7 +89,7 @@ export const workStories: WorkStory[] = [
     where: "Kerala",
     timeline: "About 2 weeks",
     liveUrl: "https://www.squeezeberriez.in/",
-    image: "/img/Softdrinks.jpg",
+    image: "/img/projects/softdrinks.jpg",
     imageAlt: "Squeeze Berriez product website",
     problem:
       "Retail and hospitality buyers still ask for a URL. An Instagram grid does not show the brand, products and how to order in one place.",

@@ -17,7 +17,7 @@ const projects = [
     category: "Business Website",
     description:
       "A sophisticated, responsive static website crafted for a premier wedding planning team in Banglore, India. The platform features an elegant portfolio of luxury weddings, detailed service breakdowns, and a seamless inquiry system for prospective couples. Engineered for high performance and local SEO, the site effectively showcases their creative excellence and simplifies the booking process for the regional wedding market.",
-    image: "/img/crystalknot.jpg",
+    image: "/img/projects/crystalknot.jpg",
     technologies: ["Next.js"],
     features: ["Event Gallery", "Wedding Videos", "Contact and Services", "Custom SEO"],
     duration: "2 weeks",
@@ -29,7 +29,7 @@ const projects = [
     category: "Business Website",
     description:
       "A sophisticated, responsive static website crafted for a premier construction company in Attingal, India. The platform features an elegant portfolio of completed projects, detailed service breakdowns, and a seamless inquiry system for prospective clients. Engineered for high performance and local SEO, the site effectively showcases their creative excellence and simplifies the booking process for the regional construction market.",
-    image: "/img/buildwellz.jpg",
+    image: "/img/projects/buildwellz.jpg",
     technologies: ["Next.js"],
     features: ["Clients Gallery", "Construction Videos", "Contact and Services", "Custom SEO"],
     duration: "2 weeks",
@@ -41,7 +41,7 @@ const projects = [
     category: "Business Website",
     description:
       "Responsive static with mini ecommerce website crafted for a premier soft drinks company in Kochi, Kerala. The platform features an elegant portfolio of their products, detailed service breakdowns, and a seamless inquiry system for prospective clients. Engineered for high performance and local SEO, the site effectively showcases their creative excellence and simplifies the booking process for the regional soft drinks market.",
-    image: "/img/Softdrinks.jpg",
+    image: "/img/projects/softdrinks.jpg",
     technologies: ["Next.js"],
     features: ["Product Catalog", "Online Ordering", "Contact and Services", "Custom SEO"],
     duration: "2 weeks",
