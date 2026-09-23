@@ -9,7 +9,7 @@
     "lint": "next lint",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d out",
-    "postbuild": "node scripts/write-sitemap.cjs",
+    "postbuild": "node scripts/write-sitemap.cjs && node scripts/check-images.js",
     "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
