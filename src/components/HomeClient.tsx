@@ -25,48 +25,6 @@ import Brands from "@/components/Brands";
 import { track } from "@/lib/analytics";
 
 
-const reviewSchema = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "itemListElement": [
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "SAIF" },
-      "itemReviewed": { "@type": "Organization", "name": "CrystalKnotFilms" },
-      "reviewBody": "The team transformed our online presence into something that matches the quality of our films. The improved visibility and structure brought us steady, serious client leads.",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Vipin Mohan" },
-      "itemReviewed": { "@type": "Organization", "name": "BuilDwellz" },
-      "reviewBody": "The team understood our brand and translated it into a clean, high-end digital presence. We started attracting more serious residential clients shortly after launch.",
-      "reviewRating": { "@type": "Rating", "ratingValue": "4.5", "bestRating": "5" }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Abhishek" },
-      "itemReviewed": { "@type": "Organization", "name": "Squeeze Berriez" },
-      "reviewBody": "The new website perfectly captures our Kerala roots and premium beverage quality. It helped us build stronger brand trust and attract new retail partnership inquiries.",
-      "reviewRating": { "@type": "Rating", "ratingValue": "4.5", "bestRating": "5" }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Aromal V VG" },
-      "itemReviewed": { "@type": "Organization", "name": "Kerala Sellers" },
-      "reviewBody": "Kerala Sellers was built to empower local businesses with a powerful yet simple digital marketplace. From product listings to payments and automation, everything was designed for real-world execution.",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Anvar Riyas" },
-      "itemReviewed": { "@type": "Organization", "name": "Lemon Caters and Events" },
-      "reviewBody": "Digital Product rebuilt our catering website and optimized our Google presence.",
-      "reviewRating": { "@type": "Rating", "ratingValue": "4.5", "bestRating": "5" }
-    }
-  ]
-};
-
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -92,7 +50,7 @@ const faqSchema = {
       "name": "Why are your software and SEO pricing packages so affordable?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We are currently offering a limited-time launch discount to celebrate our registration as an MSME IT agency in Trivandrum. This allows local Kerala businesses to secure high-quality web assets at entry-level rates before prices return to normal market standards."
+        "text": "Starting prices are published on the pricing page: websites from ₹5,000, SEO from ₹5,000 a month, and custom software from ₹15,000. Your figure depends on scope. There is no countdown and no limited slot count."
       }
     },
     {
@@ -145,7 +103,6 @@ const itemVariants = {
 export default function Home() {
   return (
     <>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     <div className="min-h-screen flex flex-col "
       style={{
@@ -228,8 +185,8 @@ export default function Home() {
             <p className="mt-3 sm:mt-4 text-gray-600 leading-relaxed
         text-sm sm:text-lg md:text-lg lg:text-xl 
         max-w-4xl md:max-w-3xl mx-auto">
-              We&apos;ve helped 20+ businesses across Kerala with these 6 service areas. 
-              Take advantage of our <strong>limited-time launch pricing</strong> to lock in premium quality at entry-level rates (slots are strictly limited).
+              We&apos;ve helped 20+ businesses across Kerala with these 6 service areas.
+              Starting prices below are the ones published on this site. The estimate depends on scope.
             </p>
           </motion.div>
 
@@ -241,12 +198,12 @@ export default function Home() {
             className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
           >
             {[
-              { icon: Code2, title: "Software Development", desc: "Custom web apps, dashboards, booking systems and business platforms built specifically for Kerala businesses.", price: "₹15,000 (Launch Offer - 3 Slots Left!)", link: "/software-development" },
-              { icon: Smartphone, title: "App Development", desc: "Android and iOS mobile apps for Kerala businesses — restaurants, shops, clinics and delivery services.", price: "₹25,000 (Launch Offer - 2 Slots Left!)", link: "/app-development-kerala" },
-              { icon: TrendingUp, title: "SEO Services", desc: "Rank on Google when Kerala customers search for your service. Organic traffic that grows monthly.", price: "₹5,000/mo (Special Launch Offer!)", link: "/seo-services" },
-              { icon: Instagram, title: "Social Media Management", desc: "Instagram, Facebook and WhatsApp marketing handled for you. Daily posts and audience growth.", price: "₹3,000/mo (Special Launch Offer!)", link: "/social-media-management" },
-              { icon: Settings, title: "Business Automation", desc: "Automate WhatsApp replies, order tracking and invoice generation. Set once — runs forever.", price: "₹10,000 (Launch Offer - 4 Slots Left!)", link: "/business-automation" },
-              { icon: Bot, title: "AI-Powered Solutions", desc: "AI chatbots, smart recommendations and automation systems for Kerala businesses.", price: "₹12,000 (Launch Offer - 3 Slots Left!)", link: "/ai-powered-solutions" },
+              { icon: Code2, title: "Software Development", desc: "Custom web apps, dashboards, booking systems and business platforms built specifically for Kerala businesses.", price: "From ₹15,000", link: "/software-development" },
+              { icon: Smartphone, title: "App Development", desc: "Android and iOS mobile apps for Kerala businesses — restaurants, shops, clinics and delivery services.", price: "From ₹25,000", link: "/app-development-kerala" },
+              { icon: TrendingUp, title: "SEO Services", desc: "Technical SEO, local pages and Google Business Profile support for Kerala businesses. No ranking guarantee.", price: "From ₹5,000/month", link: "/seo-services" },
+              { icon: Instagram, title: "Social Media Management", desc: "Instagram, Facebook and WhatsApp marketing handled for you. Daily posts and audience growth.", price: "From ₹3,000/month", link: "/social-media-management" },
+              { icon: Settings, title: "Business Automation", desc: "Automate WhatsApp replies, order tracking and invoice generation. Set once — runs forever.", price: "From ₹10,000", link: "/business-automation" },
+              { icon: Bot, title: "AI-Powered Solutions", desc: "AI chatbots, smart recommendations and automation systems for Kerala businesses.", price: "From ₹12,000", link: "/ai-powered-solutions" },
             ].map((service, index) => {
               const Icon = service.icon;
               return (
@@ -589,7 +546,7 @@ export default function Home() {
               },
               {
                 q: "Why are your software and SEO pricing packages so affordable?",
-                a: "We are currently offering a limited-time launch discount to celebrate our registration as an MSME IT agency in Trivandrum. This allows local Kerala businesses to secure high-quality web assets at entry-level rates before prices return to normal market standards."
+                a: "Starting prices are published on the pricing page: websites from ₹5,000, SEO from ₹5,000 a month, and custom software from ₹15,000. Your figure depends on scope. There is no countdown and no limited slot count."
               },
               {
                 q: "Do you provide direct communication with developers?",

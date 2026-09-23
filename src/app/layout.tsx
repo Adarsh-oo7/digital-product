@@ -13,11 +13,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Website & App Development Team in Trivandrum, Kerala",
+    default: "Website, App and Software Development in Kerala",
     template: "%s | Digital Product Solutions",
   },
   description:
-    "Kerala team in Trivandrum for websites, software, apps, SEO and WhatsApp automation. Direct developer access from Korani.",
+    "Trivandrum team in Korani for websites, custom software, mobile apps, SEO and WhatsApp automation. Direct developer access and published prices.",
   keywords: [
     "Website Development Kerala",
     "App Development Trivandrum",
@@ -67,9 +67,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website & App Development Team in Trivandrum, Kerala",
+    title: "Website, App and Software Development in Kerala",
     description:
-      "Kerala team in Trivandrum for websites, software, apps, SEO and WhatsApp automation.",
+      "Trivandrum team in Korani for websites, custom software, mobile apps, SEO and WhatsApp automation.",
     images: [`${SITE_URL}/img/logo.png`],
   },
   verification: {
@@ -114,13 +114,6 @@ const rootSchema = {
         business.mapsUrl,
         ...business.sameAs,
       ],
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: business.googleRatingValue,
-        reviewCount: String(business.googleReviewCount),
-        bestRating: "5",
-        worstRating: "1",
-      },
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Digital Services for Kerala Businesses",
@@ -154,7 +147,7 @@ const rootSchema = {
             itemOffered: {
               "@type": "Service",
               name: "SEO Services Kerala",
-              description: "Google ranking and local SEO for Kerala businesses starting ₹5,000/month",
+              description: "Local SEO and Google Business Profile support for Kerala businesses starting ₹5,000/month",
             },
           },
           {

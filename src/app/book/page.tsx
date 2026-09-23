@@ -38,33 +38,33 @@ export default function BookingPage() {
   const faqs = [
     {
       question:
-        "What digital services does Digital Product Solutions offer in Kerala, India and globally?",
+        "What digital services does Digital Product Solutions offer in Kerala?",
       answer:
-        "We provide professional website development, e-commerce development, AI-powered solutions, SEO services, business automation and mobile app development. Our services are available for businesses across Kerala, all over India and internationally, helping brands build strong digital presence and scalable systems.",
+        "Websites, e-commerce, custom software, mobile apps, SEO, WhatsApp automation and AI tools for Kerala businesses. The office is in Korani, Thiruvananthapuram.",
     },
     {
       question:
         "Do you offer SEO services for businesses outside Kerala?",
       answer:
-        "Yes. Our SEO services are designed for local businesses in Kerala, national brands across India, and global companies. We focus on keyword optimization, technical SEO, content strategy and performance tracking to improve Google rankings and organic traffic.",
+        "The SEO work is built for Kerala cities first. A business outside Kerala can ask, and we say yes only when the scope fits. We do not promise a Google position.",
     },
     {
       question:
         "What are your starting prices for web development and AI solutions?",
       answer:
-        "Our pricing depends on project scope and features. Website development typically starts from affordable packages, while AI-powered automation and advanced systems are priced based on complexity. Contact us for a customized quote tailored to your business goals.",
+        "Published starting ranges: websites ₹5,000–₹8,000, SEO from ₹5,000 a month, custom software from ₹15,000, apps from ₹25,000, AI from ₹12,000. The estimate depends on scope.",
     },
     {
       question:
         "How long does it take to complete a website or automation project?",
       answer:
-        "Project timelines vary depending on requirements. A standard business website may take 2–4 weeks, while advanced AI integration or automation systems may take 4–8 weeks. We provide a detailed roadmap and timeline before starting the project.",
+        "Most business websites go live in about 7 days. Custom apps and platforms usually take 15 to 45 days after the scope is agreed.",
     },
     {
       question:
-        "Can you help scale my business digitally?",
+        "What happens on the first call?",
       answer:
-        "Absolutely. Our goal is not just building websites, but creating digital growth systems through SEO, AI integration, marketing automation and conversion-focused design to help your business scale locally and globally.",
+        "We confirm the service, the town, a starting range from the published prices, and what the first build includes. You can also review project stories on the work page before you book.",
     },
   ];
 
@@ -111,8 +111,19 @@ export default function BookingPage() {
     }
   }
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="min-h-screen  pt-36 pb-20 px-4 relative overflow-hidden">
 
@@ -144,7 +155,7 @@ export default function BookingPage() {
               </motion.div>
             ) : (
               <>
-                <motion.h2
+                <motion.h1
                   className="text-2xl text-center font-extrabold mb-6 text-gray-800"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -152,7 +163,7 @@ export default function BookingPage() {
                   style={{ fontFamily: "Quicksand, sans-serif" }}
                 >
                   Schedule Your Appointment
-                </motion.h2>
+                </motion.h1>
                 <form
                   action="https://formsubmit.co/digitalproductkerala@gmail.com"
                   method="POST"
@@ -380,15 +391,11 @@ export default function BookingPage() {
                   </span>
                 </h4>
 
-                {open === index && (
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="mt-4 text-gray-500 leading-relaxed"
-                  >
-                    {faq.answer}
-                  </motion.p>
-                )}
+                <div className={`grid transition-[grid-template-rows] duration-300 ${open === index ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+                  <p className="overflow-hidden text-gray-500 leading-relaxed">
+                    <span className="block pt-4">{faq.answer}</span>
+                  </p>
+                </div>
               </div>
             ))}
           </div>

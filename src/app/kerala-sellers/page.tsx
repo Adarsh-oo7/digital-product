@@ -12,12 +12,12 @@ export default function KeralaSellersPage() {
         </div>
 
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
           We Also Built Kerala Sellers
           <span className="block text-green-400 mt-3">
             Kerala's Online Marketplace
           </span>
-        </h2>
+        </h1>
 
         {/* Description */}
         <p className="mt-6 text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">

@@ -1,7 +1,7 @@
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "About the Kerala Development Team",
+  title: "About Digital Product Solutions in Trivandrum",
   description:
     "Digital Product Solutions is a registered MSME team in Korani, Thiruvananthapuram district. Direct developer access for websites, software, apps and automation.",
   path: "/about",

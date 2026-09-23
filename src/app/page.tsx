@@ -4,9 +4,9 @@ import JsonLd from "@/components/seo/JsonLd";
 import { business, SITE_URL } from "@/lib/business";
 
 export const metadata = pageMetadata({
-  title: "Website & App Development Team in Trivandrum, Kerala",
+  title: "Website, App and Software Development in Kerala",
   description:
-    "Kerala team in Trivandrum for websites, software, apps, SEO and WhatsApp automation. Direct developer access from Korani.",
+    "Trivandrum team in Korani for websites, custom software, mobile apps, SEO and WhatsApp automation. Direct developer access, published prices, and live project stories.",
   path: "/",
   absoluteTitle: true,
 });

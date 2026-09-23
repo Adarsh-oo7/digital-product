@@ -89,6 +89,14 @@ export default function AppDevelopmentKeralaPage() {
     <section className="min-h-screen mt-7 bg-gradient-to-b from-white to-gray-50 py-32 px-4">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.digitalproductsolutions.in/" },
+          { "@type": "ListItem", position: 2, name: "App Development Kerala", item: "https://www.digitalproductsolutions.in/app-development-kerala" },
+        ],
+      }) }} />
       <div className="max-w-6xl mx-auto">
 
         {/* H1 HERO SECTION */}

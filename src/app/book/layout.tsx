@@ -1,9 +1,9 @@
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Book a Consultation with the Kerala Team",
+  title: "Book a Website or Software Consultation in Kerala",
   description:
-    "Schedule a discussion about your website, software, SEO or automation project. Digital Product Solutions, Korani, Thiruvananthapuram district.",
+    "Book a consultation with Digital Product Solutions in Korani, Thiruvananthapuram. The first call covers scope, timeline and the published starting range.",
   path: "/book",
 });
 

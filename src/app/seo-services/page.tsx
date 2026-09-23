@@ -2,10 +2,10 @@ import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "SEO Services in Kerala | From ₹5,000/month",
-  description: "SEO retainers for Kerala businesses from ₹5,000/month as published on this site. Technical fixes, local pages and Google Business Profile support — not a ranking guarantee.",
+  title: "SEO Services in Kerala and Trivandrum",
+  description: "SEO for Kerala businesses from ₹5,000/month. Technical fixes, local pages and Google Business Profile support in Trivandrum and other Kerala cities. No ranking guarantee.",
   path: "/seo-services",
-  keywords: "SEO services Kerala, local SEO Trivandrum, SEO company Kochi, Google ranking Kerala, local SEO Kerala, technical SEO India, SEO agency Trivandrum",
+  keywords: "SEO services Kerala, SEO services in Trivandrum, SEO services in Kerala, local SEO Trivandrum, local SEO Kerala, technical SEO",
 });
 
 export default function SEOServicesPage() {
@@ -21,7 +21,7 @@ export default function SEOServicesPage() {
       {
         "@type": "Question",
         "name": "How long does SEO take to show results in Kerala?",
-        "acceptedAnswer": { "@type": "Answer", "text": "For local Kerala businesses targeting city-level keywords (Trivandrum, Kollam, Kozhikode), you can expect to see significant improvement in 4–10 weeks due to low competition in most tier-2 cities." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Google has to recrawl the pages after the technical and local fixes. Some local queries move within a few months and some do not. We do not promise a position or a date." }
       },
       {
         "@type": "Question",
@@ -50,6 +50,14 @@ export default function SEOServicesPage() {
     <section className="min-h-screen mt-7 bg-gradient-to-b from-white to-gray-50 py-32 px-4">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.digitalproductsolutions.in/" },
+          { "@type": "ListItem", position: 2, name: "SEO Services", item: "https://www.digitalproductsolutions.in/seo-services" },
+        ],
+      }) }} />
       <div className="max-w-6xl mx-auto">
 
         {/* HERO */}
@@ -59,13 +67,13 @@ export default function SEOServicesPage() {
           </span>
 
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Rank Higher on <span className="text-green-600">Google</span> in Kerala
-            <br /> Get More Local Customers
+            SEO Services in <span className="text-green-600">Kerala</span>
+            <br /> For Trivandrum and Local Enquiries
           </h1>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We help businesses in <strong>Trivandrum, Kochi, Kollam, Kozhikode, Kannur</strong> and across Kerala increase visibility, attract qualified local traffic,
-            and generate consistent leads through data-driven SEO strategies.
+            Technical SEO, local pages and Google Business Profile support for businesses in <strong>Trivandrum, Kochi, Kollam, Kozhikode, Kannur</strong> and across Kerala.
+            Retainers start at ₹5,000 a month. Position on Google is not guaranteed.
           </p>
 
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
@@ -172,7 +180,7 @@ export default function SEOServicesPage() {
           <div className="grid sm:grid-cols-2 gap-4">
             <Link href="/local-seo-kerala" className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-green-400 transition group">
               <span className="text-green-600 font-bold text-lg">📍</span>
-              <div><div className="font-semibold text-gray-800 group-hover:text-green-600">Local SEO Kerala</div><div className="text-sm text-gray-500">Google Maps & local pack rankings</div></div>
+              <div><div className="font-semibold text-gray-800 group-hover:text-green-600">Local SEO Kerala</div><div className="text-sm text-gray-500">Google Maps and local pages</div></div>
             </Link>
             <Link href="/digital-marketing-trivandrum" className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-green-400 transition group">
               <span className="text-green-600 font-bold text-lg">🎯</span>
@@ -184,7 +192,7 @@ export default function SEOServicesPage() {
             </Link>
             <Link href="/google-ads-management-kerala" className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-green-400 transition group">
               <span className="text-green-600 font-bold text-lg">📈</span>
-              <div><div className="font-semibold text-gray-800 group-hover:text-green-600">Google Ads Management Kerala</div><div className="text-sm text-gray-500">ROI-tracked paid search campaigns</div></div>
+              <div><div className="font-semibold text-gray-800 group-hover:text-green-600">Google Ads Management Kerala</div><div className="text-sm text-gray-500">Paid search campaigns</div></div>
             </Link>
           </div>
         </div>
@@ -195,7 +203,7 @@ export default function SEOServicesPage() {
           <div className="space-y-6 max-w-3xl mx-auto">
             {[
               { q: "How much does SEO cost in Kerala?", a: "Our SEO services in Kerala start at ₹5,000 per month. Pricing depends on your industry, location targeting (Trivandrum, Kochi, Kollam, etc.), and the number of target keywords." },
-              { q: "How long does SEO take to show results in Kerala?", a: "For local Kerala businesses targeting city-level keywords (Trivandrum, Kollam, Kozhikode), you can expect significant improvement in 4–10 weeks due to low competition in most tier-2 cities." },
+              { q: "How long does SEO take to show results in Kerala?", a: "Google has to recrawl the pages after the technical and local fixes. Some local queries move within a few months and some do not. We do not promise a position or a date." },
               { q: "Do you provide local SEO for businesses outside Trivandrum?", a: "Yes — we provide local SEO across Kerala including Kochi, Kollam, Kozhikode, Kannur, Kottayam, Palakkad and Thrissur." },
               { q: "What is included in your SEO service?", a: "Our SEO package includes keyword research, on-page optimization, technical SEO, Google Business Profile optimization, local citation building, monthly reporting and internal linking strategy." },
             ].map((item, i) => (
@@ -218,7 +226,7 @@ export default function SEOServicesPage() {
           </h2>
 
           <p className="mb-8 text-green-100 text-lg">
-            Let&apos;s increase your visibility and bring customers directly from Google across Kerala.
+            Technical fixes, local pages and Google Business Profile support. No promise of a ranking.
           </p>
 
           <Link
@@ -249,4 +257,4 @@ export default function SEOServicesPage() {
       </div>
     </section>
   );
-}
+}

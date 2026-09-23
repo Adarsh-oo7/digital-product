@@ -14,7 +14,7 @@ export const viewport = {
 
 export const metadata: Metadata = {
   ...pageMetadata({
-    title: "Kerala blog on websites, AI, WhatsApp and CRM",
+    title: "Digital Growth and Software Guides for Kerala Businesses",
     description:
       "Kerala-focused notes on websites, AI chatbots, WhatsApp automation, CRM and SEO. Published prices only — no fake ranking or revenue claims.",
     path: "/blog",

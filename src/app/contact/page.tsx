@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Send, Plus } from "lucide-react"
 import Image from "next/image"
 import { track } from "@/lib/analytics"
@@ -28,22 +28,22 @@ export default function Contact() {
     {
       question: "How can I contact Digital Product Solutions?",
       answer:
-        "You can contact us through our website contact form, email us at digitalproductkerala@gmail.com, or call +91 9400355185. We assist businesses with web development, AI solutions, SEO and digital automation services globally.",
+        "Use the form on this page, WhatsApp or call +91 94003 55185, or email digitalproductkerala@gmail.com. The office is in Korani, Thiruvananthapuram, Kerala 695104.",
     },
     {
       question: "What services do you provide?",
       answer:
-        "We provide professional website development, mobile app development, AI-powered solutions, SEO optimization, social media management and business automation systems for businesses in India and worldwide.",
+        "Websites, mobile apps, custom software, SEO, social media, WhatsApp automation and AI tools for Kerala businesses. Starting prices are on the pricing page.",
     },
     {
       question: "How long does it take to build a website?",
       answer:
-        "A typical business website takes around 2–4 weeks depending on features, design requirements and integrations. Advanced systems such as AI automation or custom platforms may take longer.",
+        "Most business websites go live in about 7 days. Custom apps and platforms usually take 15 to 45 days after the scope is agreed.",
     },
     {
-      question: "Do you work with clients outside India?",
+      question: "Do you work with clients outside Kerala?",
       answer:
-        "Yes. Digital Product Solutions works with businesses globally, providing scalable digital solutions including SaaS platforms, automation systems and modern web applications.",
+        "Most work is for businesses in Kerala. We also take a small number of clients outside Kerala when the scope fits.",
     },
   ];
 
@@ -76,8 +76,19 @@ export default function Contact() {
       })
   }
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="min-h-screen py-16 pt-36 px-4 relative bg-white">
         <Image
@@ -324,23 +335,14 @@ export default function Contact() {
                       </motion.div>
                     </button>
 
-                    {/* Answer */}
-                    <AnimatePresence initial={false}>
-                      {isOpen && (
-                        <motion.div
-                          key="content"
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.35 }}
-                          className="overflow-hidden"
-                        >
-                          <p className="px-6 pb-6 text-gray-300 leading-relaxed">
-                            {faq.answer}
-                          </p>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                    {/* Answer stays in the HTML so it can be read when closed. */}
+                    <div className={`grid transition-[grid-template-rows] duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+                      <div className="overflow-hidden">
+                        <p className="px-6 pb-6 text-gray-300 leading-relaxed">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 );
               })}

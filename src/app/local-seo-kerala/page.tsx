@@ -2,8 +2,8 @@ import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "Local SEO Services in Kerala | Google Maps Ranking",
-  description: "Local SEO services for Kerala businesses — rank on Google Maps, local pack &",
+  title: "Local SEO Services in Kerala",
+  description: "Google Business Profile, local pages and citations for Kerala businesses. SEO retainers from ₹5,000/month. Map-pack position is not guaranteed.",
   path: "/local-seo-kerala",
   keywords: "local SEO Kerala, Google My Business Kerala, local SEO Trivandrum, map pack ranking Kerala, near me SEO Kerala, local business SEO Kochi",
 });
@@ -16,7 +16,7 @@ export default function LocalSEOKerala() {
       {
         "@type": "Question",
         "name": "What is local SEO and why does my Kerala business need it?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Local SEO helps your business appear in Google Map Pack and 'near me' searches for your city (e.g., 'dentist near me Trivandrum' or 'best restaurant Kollam'). 80% of local searches lead to store visits — local SEO puts your business in front of these customers." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Local SEO is the work on your Google Business Profile, city pages and citations so Google can understand where you serve. It does not guarantee a map-pack position." }
       },
       {
         "@type": "Question",
@@ -26,7 +26,7 @@ export default function LocalSEOKerala() {
       {
         "@type": "Question",
         "name": "How quickly can my business rank on Google Maps in Kerala?",
-        "acceptedAnswer": { "@type": "Answer", "text": "For cities like Kollam, Kannur, Kottayam and Palakkad where competition is very low, most businesses see significant ranking improvement in 4–8 weeks. Trivandrum and Kochi take 8–14 weeks due to higher competition." }
+        "acceptedAnswer": { "@type": "Answer", "text": "There is no reliable week count. Google recrawls on its own schedule. We do not promise a map-pack position for Trivandrum, Kochi or any other Kerala city." }
       },
       {
         "@type": "Question",
@@ -39,6 +39,14 @@ export default function LocalSEOKerala() {
   return (
     <section className="min-h-screen mt-7 bg-gradient-to-b from-white to-gray-50 py-32 px-4">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.digitalproductsolutions.in/" },
+          { "@type": "ListItem", position: 2, name: "Local SEO Kerala", item: "https://www.digitalproductsolutions.in/local-seo-kerala" },
+        ],
+      }) }} />
       <div className="max-w-6xl mx-auto">
 
         {/* HERO */}
@@ -49,11 +57,11 @@ export default function LocalSEOKerala() {
 
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Local SEO Services in <span className="text-emerald-600">Kerala</span>
-            <br /> Rank on Google Maps & &quot;Near Me&quot; Searches
+            <br /> Google Maps and Near-Me Searches
           </h1>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We help <strong>Kerala businesses rank in the Google Map Pack</strong> and &quot;near me&quot; searches across <strong>Trivandrum, Kochi, Kollam, Kozhikode, Kannur, Kottayam and Palakkad</strong>. Most tier-2 Kerala cities have near-zero competition — you can rank within 4–8 weeks.
+            Google Business Profile, local pages and citations for businesses in <strong>Trivandrum, Kochi, Kollam, Kozhikode, Kannur, Kottayam and Palakkad</strong>. Map-pack position is not guaranteed.
           </p>
 
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
@@ -115,9 +123,9 @@ export default function LocalSEOKerala() {
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Why Kerala Businesses Need Local SEO Now</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { stat: "311", label: "Businesses in Trivandrum seeking SEO", desc: "Yet only ~31 verified SEO companies cover all of Kerala" },
-              { stat: "80%", label: "Kerala SMEs with no digital presence", desc: "Your competitors aren't online — this is your window" },
-              { stat: "4–8 wk", label: "Time to rank in tier-2 Kerala cities", desc: "Kollam, Kannur, Kottayam, Palakkad — near-zero competition" },
+              { stat: "₹5,000", label: "Monthly SEO start", desc: "Published retainer on this site. The estimate still depends on scope." },
+              { stat: "GBP", label: "Google Business Profile", desc: "Categories, hours, photos and a Maps link that matches the website." },
+              { stat: "Korani", label: "Trivandrum office", desc: "Scoped from Thiruvananthapuram district and delivered across Kerala." },
             ].map((s, i) => (
               <div key={i} className="bg-white rounded-2xl p-6 text-center shadow-sm border border-emerald-100">
                 <div className="text-4xl font-bold text-emerald-600 mb-2">{s.stat}</div>
@@ -133,9 +141,9 @@ export default function LocalSEOKerala() {
           <h2 className="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
           <div className="space-y-6 max-w-3xl mx-auto">
             {[
-              { q: "What is local SEO and why does my Kerala business need it?", a: "Local SEO helps your business appear in Google Map Pack and 'near me' searches for your city. 80% of local searches lead to store visits — local SEO puts your business in front of these customers." },
+              { q: "What is local SEO and why does my Kerala business need it?", a: "Local SEO is the work on your Google Business Profile, city pages and citations so Google can understand where you serve. It does not guarantee a map-pack position." },
               { q: "How much does local SEO cost in Kerala?", a: "Local SEO services in Kerala start at ₹5,000/month. This includes Google Business Profile optimization, local citation building and review management." },
-              { q: "How quickly can my business rank on Google Maps in Kerala?", a: "For cities like Kollam, Kannur, Kottayam and Palakkad where competition is very low, most businesses see significant ranking improvement in 4–8 weeks." },
+              { q: "How quickly can my business rank on Google Maps in Kerala?", a: "There is no reliable week count. Google recrawls on its own schedule. We do not promise a map-pack position for Trivandrum, Kochi or any other Kerala city." },
               { q: "Do you optimize Google Business Profile for Kerala businesses?", a: "Yes — GBP optimization is a core part of our local SEO service. This includes setup, verification, categories, services, photos, Q&A and weekly posts." },
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
@@ -152,7 +160,7 @@ export default function LocalSEOKerala() {
           <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-emerald-400 rounded-full opacity-20"></div>
           <h2 className="text-4xl font-bold mb-4">Starting at ₹5,000 / Month</h2>
           <p className="mb-8 text-emerald-100 text-lg">
-            Rank your Kerala business on Google Maps in the next 4–8 weeks. Free audit available.
+            SEO retainers start at ₹5,000 a month. Ask for an audit of your Google Business Profile.
           </p>
           <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 font-semibold rounded-full bg-white text-emerald-600 shadow-md hover:shadow-lg hover:bg-gray-100 transition-all duration-300">
             Get Free Local SEO Audit
