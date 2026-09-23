@@ -1,17 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 ﻿import Link from "next/link";
 
-export const metadata = {
-  title: "Odoo ERP Development in Kerala | ERP for Manufacturing & Retail | Digital Product Solutions",
+export const metadata = pageMetadata({
+  title: "Odoo ERP Development in Kerala | ERP for Manufacturing & Retail",
   description: "Odoo ERP implementation partner in Kerala for manufacturing, retail & distribution. Inventory, accounting, HR & CRM modules. Based in Trivandrum. Starting ₹2,00,000.",
+  path: "/odoo-erp-development-kerala",
   keywords: "Odoo ERP Kerala, ERP development Kerala, Odoo implementation partner Kerala, manufacturing ERP Kerala, ERP for retail Kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/odoo-erp-development-kerala" },
-  openGraph: {
-    title: "Odoo ERP Development in Kerala | ERP for Manufacturing & Retail | Digital Product Solutions",
-    description: "Odoo ERP implementation partner in Kerala for manufacturing, retail & distribution. Inventory, accounting, HR & CRM modules. Based in Trivandrum. Starting ₹2,00,000.",
-    url: "https://www.digitalproductsolutions.in/odoo-erp-development-kerala",
-    type: "website",
-  },
-};
+});
 
 export default function Page() {
   const faqSchema = {

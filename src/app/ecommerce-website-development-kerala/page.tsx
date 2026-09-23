@@ -1,20 +1,14 @@
+import { pageMetadata } from "@/lib/seo";
 ﻿import Link from "next/link";
 import CtaBand from "@/components/seo/CtaBand";
 import WorkStoriesBand from "@/components/seo/WorkStoriesBand";
 
-export const metadata = {
-  title: "E-commerce Website Development in Kerala | Online Store | Digital Product Solutions",
-  description:
-    "E-commerce website development for Kerala businesses. Online stores with payment gateway, inventory and WhatsApp order notifications. Published range ₹35,000–₹70,000+.",
+export const metadata = pageMetadata({
+  title: "E-commerce Website Development in Kerala | Online Store",
+  description: "E-commerce website development for Kerala businesses. Online stores with payment gateway, inventory and WhatsApp order notifications. Published range ₹35,000–₹70,000+.",
+  path: "/ecommerce-website-development-kerala",
   keywords: "ecommerce website development Kerala, online store Kerala, e-commerce Trivandrum, shopping website Kerala, sell online Kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/ecommerce-website-development-kerala" },
-  openGraph: {
-    title: "E-commerce Website Development in Kerala | Online Store | Digital Product Solutions",
-    description: "E-commerce website development for Kerala businesses. Online stores with payment gateway, inventory and WhatsApp order notifications. Published range ₹35,000–₹70,000+.",
-    url: "https://www.digitalproductsolutions.in/ecommerce-website-development-kerala",
-    type: "website",
-  },
-};
+});
 
 export default function Page() {
   return (

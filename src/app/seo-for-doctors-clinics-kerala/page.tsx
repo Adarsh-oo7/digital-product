@@ -1,17 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 ﻿import Link from "next/link";
 
-export const metadata = {
-  title: "SEO for Doctors & Clinics in Kerala | Google Ranking for Healthcare | Digital Product Solutions",
-  description: "SEO services for doctors, clinics, hospitals & Ayurvedic centers in Kerala. Rank for 'doctor near me' searches in Trivandrum, Kochi, Kollam. Starting ₹5,000/month.",
+export const metadata = pageMetadata({
+  title: "SEO for Doctors & Clinics in Kerala | Google Ranking for Healthcare",
+  description: "SEO services for doctors, clinics, hospitals & Ayurvedic centers in Kerala. Rank for",
+  path: "/seo-for-doctors-clinics-kerala",
   keywords: "SEO for doctors Kerala, clinic SEO Trivandrum, doctor website SEO Kerala, medical SEO Kerala, hospital SEO Kochi",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/seo-for-doctors-clinics-kerala" },
-  openGraph: {
-    title: "SEO for Doctors & Clinics in Kerala | Google Ranking for Healthcare | Digital Product Solutions",
-    description: "SEO services for doctors, clinics, hospitals & Ayurvedic centers in Kerala. Rank for 'doctor near me' searches in Trivandrum, Kochi, Kollam. Starting ₹5,000/month.",
-    url: "https://www.digitalproductsolutions.in/seo-for-doctors-clinics-kerala",
-    type: "website",
-  },
-};
+});
 
 export default function Page() {
   return (

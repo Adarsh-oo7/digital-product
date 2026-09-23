@@ -1,4 +1,6 @@
-# Robots.txt — digitalproductsolutions.in
+# Robots.txt — https://www.digitalproductsolutions.in
+# Search Engine & AI Crawler Directives
+
 User-agent: *
 Allow: /
 Disallow: /admin
@@ -6,4 +8,29 @@ Disallow: /api
 Disallow: /private
 Disallow: /certificate-verified
 
+# Major Search Engine Crawlers
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
+Allow: /
+Disallow: /admin
+Disallow: /api
+Disallow: /private
+Disallow: /certificate-verified
+
+# AI Search & Answer Engine Crawlers (Generative Engine Optimization)
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: PerplexityBot
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin
+Disallow: /api
+Disallow: /private
+Disallow: /certificate-verified
+
+# LLM Directives & Sitemaps
 Sitemap: https://www.digitalproductsolutions.in/sitemap.xml
+Host: https://www.digitalproductsolutions.in
+

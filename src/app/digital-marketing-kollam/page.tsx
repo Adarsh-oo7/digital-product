@@ -1,17 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 ﻿import Link from "next/link";
 
-export const metadata = {
-  title: "Digital Marketing in Kollam | Digital Product Solutions",
+export const metadata = pageMetadata({
+  title: "Digital Marketing in Kollam",
   description: "Professional digital marketing services in Kollam, Kerala. Expert digital solutions for local businesses — SEO, web development, WhatsApp automation & AI. Based in Trivandrum. Starting from ₹3,000/month.",
+  path: "/digital-marketing-kollam",
   keywords: "digital marketing Kollam, SEO Kollam, digital marketing agency Kollam Kerala, online marketing Kollam",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/digital-marketing-kollam" },
-  openGraph: {
-    title: "Digital Marketing in Kollam | Digital Product Solutions",
-    description: "Professional digital marketing for Kollam businesses. Starting from ₹3,000/month.",
-    url: "https://www.digitalproductsolutions.in/digital-marketing-kollam",
-    type: "website",
-  },
-};
+});
 
 export default function Page() {
   const localBusinessSchema = {

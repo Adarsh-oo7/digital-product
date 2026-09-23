@@ -1,17 +1,13 @@
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Local SEO Checklist for Kerala Businesses (Trivandrum, Kollam, Kannur) 2026 | Digital Product Solutions",
+export const metadata = pageMetadata({
+  title: "Local SEO Checklist for Kerala Businesses (Trivandrum, Kollam, Kannur) 2026",
   description: "Complete local SEO checklist for Kerala businesses. Step-by-step Google Maps ranking guide for Trivandrum, Kollam, Kozhikode, Kannur and other Kerala cities.",
+  path: "/blog/local-seo-checklist-kerala",
   keywords: "local SEO checklist Kerala, Google My Business setup Kannur, local SEO Trivandrum, map ranking Kerala, local SEO guide Kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/blog/local-seo-checklist-kerala" },
-  openGraph: {
-    title: "Local SEO Checklist for Kerala Businesses (Trivandrum, Kollam, Kannur) 2026 | Digital Product Solutions",
-    description: "Complete local SEO checklist for Kerala businesses. Step-by-step Google Maps ranking guide for Trivandrum, Kollam, Kozhikode, Kannur and other Kerala cities.",
-    url: "https://www.digitalproductsolutions.in/blog/local-seo-checklist-kerala",
-    type: "article",
-  },
-};
+});
 
 export default function BlogPost() {
   const articleSchema = {
@@ -20,7 +16,7 @@ export default function BlogPost() {
     "headline": "Local SEO Checklist for Kerala Businesses 2026",
     "description": "Complete local SEO checklist for Kerala businesses. Step-by-step Google Maps ranking guide for Trivandrum, Kollam, Kozhikode, Kannur and other Kerala cities.",
     "author": { "@type": "Person", "name": "Adarsh B S" },
-    "publisher": { "@type": "Organization", "name": "Digital Product Solutions", "url": "https://www.digitalproductsolutions.in" },
+    "publisher": { "@type": "Organization", "name": "Digital Product Solutions", "url": "https://www.digitalproductsolutions.in", "logo": { "@type": "ImageObject", "url": "https://www.digitalproductsolutions.in/img/logo.png" } },
     "url": "https://www.digitalproductsolutions.in/blog/local-seo-checklist-kerala",
     "datePublished": "2026-06-12"
   };
@@ -31,13 +27,13 @@ export default function BlogPost() {
       <div className="max-w-4xl mx-auto">
 
         {/* BREADCRUMB */}
-        <nav className="text-sm text-gray-500 mb-8">
-          <Link href="/" className="hover:text-blue-600">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-blue-600">Blog</Link>
-          <span className="mx-2">/</span>
-          <span className="text-gray-800">Local SEO Checklist for Kerala Businesses 2026</span>
-        </nav>
+        <Breadcrumbs
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Blog", href: "/blog" },
+            { name: "Local SEO Checklist for Kerala Businesses (Trivandrum, Kollam, Kannur) 2026", href: "/blog/local-seo-checklist-kerala" },
+          ]}
+        />
 
         {/* HEADER */}
         <header className="mb-12">

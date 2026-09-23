@@ -1,17 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 ﻿import Link from "next/link";
 
-export const metadata = {
-  title: "Digital Marketing in Kozhikode (Calicut) | Digital Product Solutions",
+export const metadata = pageMetadata({
+  title: "Digital Marketing in Kozhikode (Calicut)",
   description: "Professional digital marketing services in Kozhikode (Calicut), Kerala. Expert digital solutions for local businesses — SEO, web development, WhatsApp automation & AI. Based in Trivandrum. Starting from ₹3,000/month.",
+  path: "/digital-marketing-kozhikode",
   keywords: "digital marketing Kozhikode, SEO Kozhikode, digital agency Calicut, online marketing Kozhikode Kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/digital-marketing-kozhikode" },
-  openGraph: {
-    title: "Digital Marketing in Kozhikode (Calicut) | Digital Product Solutions",
-    description: "Professional digital marketing for Kozhikode (Calicut) businesses. Starting from ₹3,000/month.",
-    url: "https://www.digitalproductsolutions.in/digital-marketing-kozhikode",
-    type: "website",
-  },
-};
+});
 
 export default function Page() {
   const localBusinessSchema = {

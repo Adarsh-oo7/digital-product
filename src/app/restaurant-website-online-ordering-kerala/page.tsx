@@ -1,19 +1,14 @@
+import { pageMetadata } from "@/lib/seo";
 ﻿import Link from "next/link";
 import CtaBand from "@/components/seo/CtaBand";
 import WorkStoriesBand from "@/components/seo/WorkStoriesBand";
 
-export const metadata = {
-  title: "Restaurant Website & Online Ordering System in Kerala | Digital Product Solutions",
+export const metadata = pageMetadata({
+  title: "Restaurant Website & Online Ordering System in Kerala",
   description: "Restaurant website development with online ordering & QR menu for Kerala restaurants. WhatsApp order notifications, table booking & delivery management. Starting ₹25,000.",
+  path: "/restaurant-website-online-ordering-kerala",
   keywords: "restaurant website development Kerala, online ordering system restaurant Kerala, QR menu Kerala, restaurant app Kerala, food delivery website Kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/restaurant-website-online-ordering-kerala" },
-  openGraph: {
-    title: "Restaurant Website & Online Ordering System in Kerala | Digital Product Solutions",
-    description: "Restaurant website development with online ordering & QR menu for Kerala restaurants. WhatsApp order notifications, table booking & delivery management. Starting ₹25,000.",
-    url: "https://www.digitalproductsolutions.in/restaurant-website-online-ordering-kerala",
-    type: "website",
-  },
-};
+});
 
 export default function Page() {
   const faqSchema = {

@@ -5,11 +5,12 @@ import Footer from "@/components/Footer";
 import Script from "next/script";
 import ChatbotAndSocialButtons from "@/components/ChatbotAndSocialButtons";
 import ClientCursor from "@/components/ClientCursor";
-import { business, postalAddressSchema, SITE_URL } from "@/lib/business";
+import { business, postalAddressSchema, geoSchema, SITE_URL } from "@/lib/business";
+import type { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: "Website & App Development Team in Trivandrum, Kerala",
@@ -17,6 +18,36 @@ export const metadata = {
   },
   description:
     "Kerala team in Trivandrum for websites, software, apps, SEO and WhatsApp automation. Direct developer access from Korani.",
+  keywords: [
+    "Website Development Kerala",
+    "App Development Trivandrum",
+    "SEO Services Kerala",
+    "Software Development Trivandrum",
+    "WhatsApp Automation Kerala",
+    "Web Design Company Trivandrum",
+    "Digital Product Solutions",
+    "Freelance Software Developer Kerala",
+  ],
+  alternates: {
+    canonical: SITE_URL,
+    languages: { "en-IN": SITE_URL, "x-default": SITE_URL },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/img/logo.png",
+    shortcut: "/img/logo.png",
+    apple: "/img/logo.png",
+  },
   openGraph: {
     title: "Website & App Development Team in Trivandrum, Kerala",
     description:
@@ -25,13 +56,150 @@ export const metadata = {
     siteName: "Digital Product Solutions",
     type: "website",
     locale: "en_IN",
+    images: [
+      {
+        url: `${SITE_URL}/img/logo.png`,
+        width: 1200,
+        height: 630,
+        alt: "Digital Product Solutions",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Website & App Development Team in Trivandrum, Kerala",
     description:
       "Kerala team in Trivandrum for websites, software, apps, SEO and WhatsApp automation.",
+    images: [`${SITE_URL}/img/logo.png`],
   },
+  verification: {
+    google: "DHDeaZm4O1GPWicrshCNxCRNOAjRdlqeaOdddGQnZ5I",
+  },
+};
+
+const rootSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": `${SITE_URL}/#organization`,
+      name: business.legalName,
+      legalName: business.legalName,
+      alternateName: ["DPS Kerala", "Digital Product Solutions Trivandrum", "Digital Product Solutions Korani"],
+      url: SITE_URL,
+      logo: `${SITE_URL}/img/logo.png`,
+      image: `${SITE_URL}/img/logo.png`,
+      telephone: business.telephone,
+      email: business.emailSchema,
+      description:
+        "Registered MSME IT company in Korani, Thiruvananthapuram, Kerala. Websites, software, mobile apps, SEO, WhatsApp automation and AI solutions for Kerala businesses.",
+      priceRange: "₹₹",
+      openingHours: business.openingHours,
+      address: postalAddressSchema,
+      geo: geoSchema,
+      hasMap: business.mapsUrl,
+      areaServed: [
+        "Thiruvananthapuram",
+        "Kochi",
+        "Kozhikode",
+        "Kottayam",
+        "Thrissur",
+        "Kollam",
+        "Kannur",
+        "Palakkad",
+        "Kerala",
+        "India",
+      ],
+      sameAs: [
+        business.mapsUrl,
+        ...business.sameAs,
+      ],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: business.googleRatingValue,
+        reviewCount: String(business.googleReviewCount),
+        bestRating: "5",
+        worstRating: "1",
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Digital Services for Kerala Businesses",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Software Development Kerala",
+              description: "Custom web apps and business software starting ₹15,000",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Website Development Kerala",
+              description: "Professional responsive business websites starting ₹5,000",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "App Development Kerala",
+              description: "Android and iOS apps for Kerala businesses starting ₹25,000",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "SEO Services Kerala",
+              description: "Google ranking and local SEO for Kerala businesses starting ₹5,000/month",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "WhatsApp Automation Kerala",
+              description: "Official WhatsApp Cloud API and business automation starting ₹10,000",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Social Media Management Kerala",
+              description: "Instagram and Facebook management starting ₹3,000/month",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "AI Solutions Kerala",
+              description: "AI chatbots and automation for Kerala businesses starting ₹12,000",
+            },
+          },
+        ],
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "Digital Product Solutions",
+      alternateName: ["DPS Kerala", "Digital Product Solutions Trivandrum"],
+      publisher: {
+        "@id": `${SITE_URL}/#organization`,
+      },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: `${SITE_URL}/blog?q={search_term_string}`,
+        "query-input": "required name=search_term_string",
+      },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -52,8 +220,8 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Adarsh B S" />
         <link rel="manifest" href="/site.webmanifest" />
-        {/* Google Analytics */}
 
+        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-W95558LF2R"
           strategy="afterInteractive"
@@ -68,45 +236,19 @@ export default function RootLayout({
       `}
         </Script>
 
-
-        <link rel="icon" href="./img/logo.png" sizes="any" />
+        <link rel="icon" href="/img/logo.png" sizes="any" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM facts for Digital Product Solutions" />
-        <meta name="google-site-verification" content="DHDeaZm4O1GPWicrshCNxCRNOAjRdlqeaOdddGQnZ5I" />
 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": business.legalName,
-              "url": SITE_URL,
-              "telephone": business.telephone,
-              "description": "Software development, mobile app development, SEO, social media management, business automation and AI solutions for Kerala businesses. Office in Korani, Thiruvananthapuram district. 20+ businesses helped.",
-              "priceRange": "₹₹",
-              "openingHours": business.openingHours,
-              "areaServed": ["Thiruvananthapuram", "Kochi", "Kozhikode", "Kottayam", "Thrissur", "Kollam", "Kannur", "Palakkad", "Kerala"],
-              "address": postalAddressSchema,
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Digital Services for Kerala Businesses",
-                "itemListElement": [
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Software Development Kerala", "description": "Custom web apps and business software starting ₹15,000" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "App Development Kerala", "description": "Android and iOS apps for Kerala businesses starting ₹25,000" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO Services Kerala", "description": "Google ranking for Kerala businesses starting ₹5,000/month" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Management Kerala", "description": "Instagram and Facebook management starting ₹3,000/month" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Automation Kerala", "description": "WhatsApp and business automation starting ₹10,000" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Solutions Kerala", "description": "AI chatbots and automation for Kerala businesses starting ₹12,000" } }
-                ]
-              }
-            })
+            __html: JSON.stringify(rootSchema),
           }}
         />
       </head>
       <body
         className={`${inter.className}  text-black flex flex-col min-h-screen`}
       >
-
         <Navbar />
         <ClientCursor />
 
@@ -119,72 +261,6 @@ export default function RootLayout({
           strategy="lazyOnload"
         />
 
-        <Script id="schema-script" type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "Digital Product Solutions",
-              "alternateName": ["DPS Kerala", "Digital Product Solutions Trivandrum"],
-              "url": "https://www.digitalproductsolutions.in/",
-              "sameAs": [
-                "https://www.instagram.com/digital_product_solutions/",
-                "https://www.facebook.com/Digital.Product.kerala/",
-                "https://www.linkedin.com/company/digital-product-adarsh/"
-              ]
-            }
-          `}
-        </Script>
-
-        <Script id="local-business-schema" type="application/ld+json">
-          {`
-{
- "@context": "https://schema.org",
- "@type": "LocalBusiness",
- "name": "Digital Product Solutions",
- "url": "https://www.digitalproductsolutions.in/",
- "logo": "https://www.digitalproductsolutions.in/img/logo.png",
- "image": "https://www.digitalproductsolutions.in/img/logo.png",
- "telephone": "+919400355185",
- "email": "adarsh@digitalproductsolutions.in",
- "address": {
-   "@type": "PostalAddress",
-   "streetAddress": "Korani",
-   "addressLocality": "Thiruvananthapuram",
-   "addressRegion": "Kerala",
-   "postalCode": "695104",
-   "addressCountry": "IN"
- },
- "geo": {
-   "@type": "GeoCoordinates",
-   "latitude": 8.660278,
-   "longitude": 76.838053
- },
- "hasMap": "https://www.google.com/maps?cid=990739385366027106",
- "openingHours": "Mo-Sa 09:00-19:00",
- "priceRange": "₹₹",
- "areaServed": ["Thiruvananthapuram", "Kochi", "Kozhikode", "Kottayam", "Thrissur", "Kollam", "Kannur", "Palakkad", "Kerala"],
- "sameAs": [
-   "https://www.google.com/maps?cid=990739385366027106",
-   "https://www.instagram.com/digital_product_solutions/",
-   "https://www.facebook.com/Digital.Product.kerala/",
-   "https://www.linkedin.com/company/digital-product-adarsh/"
- ],
- "serviceType": [
-   "Website Development",
-   "SEO Services",
-   "Local SEO Kerala",
-   "Web Design",
-   "App Development",
-   "AI Chatbot Development",
-   "WhatsApp Automation",
-   "Business Automation",
-   "Social Media Management",
-   "Digital Marketing Trivandrum"
- ]
-}
-`}
-        </Script>
         <ChatbotAndSocialButtons />
       </body>
     </html>

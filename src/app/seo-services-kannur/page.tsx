@@ -1,17 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 ﻿import Link from "next/link";
 
-export const metadata = {
-  title: "SEO Services in Kannur | Digital Product Solutions",
+export const metadata = pageMetadata({
+  title: "SEO Services in Kannur",
   description: "Professional seo services services in Kannur, Kerala. Expert digital solutions for local businesses — SEO, web development, WhatsApp automation & AI. Based in Trivandrum. Starting from ₹5,000/month.",
+  path: "/seo-services-kannur",
   keywords: "SEO services Kannur, SEO company Kannur Kerala, Google ranking Kannur, local SEO Kannur",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/seo-services-kannur" },
-  openGraph: {
-    title: "SEO Services in Kannur | Digital Product Solutions",
-    description: "Professional seo services for Kannur businesses. Starting from ₹5,000/month.",
-    url: "https://www.digitalproductsolutions.in/seo-services-kannur",
-    type: "website",
-  },
-};
+});
 
 export default function Page() {
   const localBusinessSchema = {

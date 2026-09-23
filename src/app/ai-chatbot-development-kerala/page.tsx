@@ -1,18 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
-export const metadata = {
-  title: "AI Chatbot Development in Kerala | WhatsApp Chatbot | Digital Product Solutions",
-  description:
-    "AI chatbot development for Kerala businesses — hospitals, hotels, restaurants, retail. WhatsApp chatbots, website chatbots & appointment booking bots. Based in Trivandrum. Starting ₹12,000.",
+export const metadata = pageMetadata({
+  title: "AI Chatbot Development in Kerala | WhatsApp Chatbot",
+  description: "AI chatbot development for Kerala businesses — hospitals, hotels, restaurants, retail. WhatsApp chatbots, website chatbots & appointment booking bots. Based in Trivandrum. Starting ₹12,000.",
+  path: "/ai-chatbot-development-kerala",
   keywords: "AI chatbot development Kerala, WhatsApp chatbot Kerala, chatbot for hospital Kerala, chatbot for restaurant Kerala, AI chatbot Trivandrum, chatbot development India",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/ai-chatbot-development-kerala" },
-  openGraph: {
-    title: "AI Chatbot Development in Kerala | WhatsApp Chatbot | Digital Product Solutions",
-    description: "Custom AI chatbots for Kerala businesses. WhatsApp bots, appointment bots & customer support automation. Based in Trivandrum.",
-    url: "https://www.digitalproductsolutions.in/ai-chatbot-development-kerala",
-    type: "website",
-  },
-};
+});
 
 export default function AIChatbotDevelopmentKerala() {
   const faqSchema = {

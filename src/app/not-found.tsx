@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Page not found | Digital Product Solutions",
+  title: "Page Not Found",
   description: "The page you requested is not available. Return to Digital Product Solutions for websites, software and SEO in Kerala.",
   robots: { index: false, follow: true },
 };
+
 
 export default function NotFound() {
   return (

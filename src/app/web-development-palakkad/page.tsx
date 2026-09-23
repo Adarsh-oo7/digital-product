@@ -1,17 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 ﻿import Link from "next/link";
 
-export const metadata = {
-  title: "Web Development in Palakkad | Digital Product Solutions",
+export const metadata = pageMetadata({
+  title: "Web Development in Palakkad",
   description: "Professional web development services in Palakkad, Kerala. Expert digital solutions for local businesses — SEO, web development, WhatsApp automation & AI. Based in Trivandrum. Starting from ₹15,000.",
+  path: "/web-development-palakkad",
   keywords: "web development Palakkad, website development Palakkad Kerala, software development Palakkad, web design Palakkad",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/web-development-palakkad" },
-  openGraph: {
-    title: "Web Development in Palakkad | Digital Product Solutions",
-    description: "Professional web development for Palakkad businesses. Starting from ₹15,000.",
-    url: "https://www.digitalproductsolutions.in/web-development-palakkad",
-    type: "website",
-  },
-};
+});
 
 export default function Page() {
   const localBusinessSchema = {

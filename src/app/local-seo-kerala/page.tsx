@@ -1,18 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Local SEO Services in Kerala | Google Maps Ranking | Digital Product Solutions",
-  description:
-    "Local SEO services for Kerala businesses — rank on Google Maps, local pack & 'near me' searches in Trivandrum, Kochi, Kollam, Kozhikode, Kannur. Starting ₹5,000/month.",
+export const metadata = pageMetadata({
+  title: "Local SEO Services in Kerala | Google Maps Ranking",
+  description: "Local SEO services for Kerala businesses — rank on Google Maps, local pack &",
+  path: "/local-seo-kerala",
   keywords: "local SEO Kerala, Google My Business Kerala, local SEO Trivandrum, map pack ranking Kerala, near me SEO Kerala, local business SEO Kochi",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/local-seo-kerala" },
-  openGraph: {
-    title: "Local SEO Services in Kerala | Google Maps Ranking | Digital Product Solutions",
-    description: "Rank on Google Maps and local pack in Kerala. Local SEO for Trivandrum, Kochi, Kollam, Kozhikode, Kannur. Starting ₹5,000/month.",
-    url: "https://www.digitalproductsolutions.in/local-seo-kerala",
-    type: "website",
-  },
-};
+});
 
 export default function LocalSEOKerala() {
   const faqSchema = {

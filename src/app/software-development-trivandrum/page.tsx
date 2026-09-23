@@ -1,18 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Digital Product Development Company in Trivandrum | Custom Software",
-  description:
-    "Top digital product development company in Trivandrum, Kerala. We provide custom software development, SaaS products, Odoo ERP, and web application services starting at ₹15,000. Free quote!",
+  description: "Top digital product development company in Trivandrum, Kerala. We provide custom software development, SaaS products, Odoo ERP, and web application services starting at ₹15,000. Free quote!",
+  path: "/software-development-trivandrum",
   keywords: "digital product development company, digital product development services, software development trivandrum, software agency trivandrum, custom software kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/software-development-trivandrum" },
-  openGraph: {
-    title: "Digital Product Development Company in Trivandrum | Custom Software",
-    description: "Expert software development and digital product development services in Trivandrum, Kerala. We build custom web apps, Odoo ERP, and SaaS products.",
-    url: "https://www.digitalproductsolutions.in/software-development-trivandrum",
-    type: "website",
-  },
-};
+});
 
 export default function SoftwareDevelopmentTrivandrumPage() {
   const faqSchema = {

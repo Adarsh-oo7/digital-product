@@ -1,18 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Custom Software Development in Kerala | Web Apps & ERP | Starting ₹15,000",
-  description:
-    "Custom software and web application development agency in Kerala. Custom web portals, SaaS platforms, ERP, and Odoo setup starting at ₹15,000. Get a free proposal!",
+  description: "Custom software and web application development agency in Kerala. Custom web portals, SaaS platforms, ERP, and Odoo setup starting at ₹15,000. Get a free proposal!",
+  path: "/software-development",
   keywords: "software development Kerala, web app development Trivandrum, custom software Kerala, ERP development Kerala, Odoo Kerala, hospital management software Kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/software-development" },
-  openGraph: {
-    title: "Custom Software Development in Kerala | Web Apps & ERP | Starting ₹15,000",
-    description: "Custom web applications, dashboards, Odoo ERP, and SaaS products built for Kerala businesses. Starting at ₹15,000.",
-    url: "https://www.digitalproductsolutions.in/software-development",
-    type: "website",
-  },
-};
+});
 
 export default function SoftwareDevelopmentPage() {
   const faqSchema = {

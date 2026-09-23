@@ -7,7 +7,8 @@ import { notFound } from "next/navigation";
 import { blogPosts } from "../page";
 import { dedicatedBlogSlugs, indexableBlogSlugs } from "@/lib/blog";
 import CtaBand from "@/components/seo/CtaBand";
-import { pageMetadata } from "@/lib/seo";
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import { pageMetadata, absUrl } from "@/lib/seo";
 import type { ReactNode } from "react";
 
 // Use Next.js built-in type for dynamic route props
@@ -32,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) {
     return {
-      title: "Post Not Found | Digital Product Solutions",
+      title: "Post Not Found",
       description: "The requested blog post could not be found.",
     };
   }
@@ -90,20 +91,24 @@ const BlogPost: NextPage<Props> = async ({ params }) => {
     description: post.excerpt,
     datePublished: post.date,
     dateModified: post.date,
-    image: `https://www.digitalproductsolutions.in${post.image}`,
-    url: `https://www.digitalproductsolutions.in/blog/${post.slug}`,
+    image: post.image.startsWith("http") ? post.image : absUrl(post.image),
+    url: absUrl(`/blog/${post.slug}`),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": absUrl(`/blog/${post.slug}`),
+    },
     author: {
       "@type": "Organization",
       name: "Digital Product Solutions",
-      url: "https://www.digitalproductsolutions.in",
+      url: SITE,
     },
     publisher: {
       "@type": "Organization",
       name: "Digital Product Solutions",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.digitalproductsolutions.in/images/logo.jpg"
-      }
+        url: absUrl("/img/logo.png"),
+      },
     },
     keywords: post.keywords,
   };
@@ -116,13 +121,13 @@ const BlogPost: NextPage<Props> = async ({ params }) => {
       />
       <div className="min-h-screen bg-gray-50 py-32 px-4">
         <div className="container mx-auto max-w-4xl">
-          <nav className="text-sm text-gray-500 mb-8">
-            <Link href="/" className="hover:text-blue-600">Home</Link>
-            <span className="mx-2">/</span>
-            <Link href="/blog" className="hover:text-blue-600">Blog</Link>
-            <span className="mx-2">/</span>
-            <span className="text-gray-800">{post.title}</span>
-          </nav>
+          <Breadcrumbs
+            items={[
+              { name: "Home", href: "/" },
+              { name: "Blog", href: "/blog" },
+              { name: post.title, href: `/blog/${post.slug}` },
+            ]}
+          />
           <header className="mb-8">
             <span className="inline-block bg-blue-100 text-blue-700 text-sm px-4 py-1 rounded-full mb-4 font-medium">
               {post.category}

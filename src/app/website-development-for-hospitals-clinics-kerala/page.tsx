@@ -1,18 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Hospital & Clinic Website Development in Kerala | Digital Product Solutions",
-  description:
-    "Professional hospital, clinic & Ayurvedic center website development in Kerala. Online appointment booking, patient portals & doctor profiles. Trivandrum-based. Starting ₹25,000.",
+export const metadata = pageMetadata({
+  title: "Hospital & Clinic Website Development in Kerala",
+  description: "Professional hospital, clinic & Ayurvedic center website development in Kerala. Online appointment booking, patient portals & doctor profiles. Trivandrum-based. Starting ₹25,000.",
+  path: "/website-development-for-hospitals-clinics-kerala",
   keywords: "hospital website development Kerala, clinic website design Trivandrum, doctor website Kerala, Ayurvedic clinic website Kerala, medical website development Kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/website-development-for-hospitals-clinics-kerala" },
-  openGraph: {
-    title: "Hospital & Clinic Website Development in Kerala | Digital Product Solutions",
-    description: "Website development for hospitals, clinics & Ayurveda centers in Kerala. Online appointment booking, doctor profiles & patient portals. Based in Trivandrum.",
-    url: "https://www.digitalproductsolutions.in/website-development-for-hospitals-clinics-kerala",
-    type: "website",
-  },
-};
+});
 
 export default function HospitalClinicWebsiteKerala() {
   const faqSchema = {

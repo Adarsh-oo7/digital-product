@@ -1,19 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Custom Android and iOS App Development",
-  description:
-    "Catalogue, booking and operations apps for Android and iOS. Published starting price ₹25,000. Kerala local work lives on the app development in Kerala page.",
+  description: "Catalogue, booking and operations apps for Android and iOS. Published starting price ₹25,000. Kerala local work lives on the app development in Kerala page.",
+  path: "/app-development",
   keywords: "app development, Android app, iOS app, Flutter, React Native",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/app-development" },
-  openGraph: {
-    title: "Custom Android and iOS App Development | Digital Product Solutions",
-    description:
-      "Catalogue, booking and operations apps for Android and iOS. Published starting price ₹25,000.",
-    url: "https://www.digitalproductsolutions.in/app-development",
-    type: "website",
-  },
-};
+});
 
 export default function AppDevelopmentPage() {
   const faqSchema = {

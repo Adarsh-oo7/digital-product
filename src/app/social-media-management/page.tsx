@@ -1,18 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Social Media & Performance Marketing for Kerala Businesses | Digital Product Solutions",
-  description:
-    "Social media management, Google Ads & Meta Ads for Kerala businesses. Instagram, Facebook & WhatsApp marketing in Trivandrum. Starting ₹3,000/month.",
+export const metadata = pageMetadata({
+  title: "Social Media & Performance Marketing for Kerala Businesses",
+  description: "Social media management, Google Ads & Meta Ads for Kerala businesses. Instagram, Facebook & WhatsApp marketing in Trivandrum. Starting ₹3,000/month.",
+  path: "/social-media-management",
   keywords: "social media management Kerala, Instagram marketing Trivandrum, Facebook ads Kerala, Google ads management Kerala, performance marketing Kerala, digital marketing agency Kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/social-media-management" },
-  openGraph: {
-    title: "Social Media & Performance Marketing for Kerala Businesses | Digital Product Solutions",
-    description: "Social media management, Google Ads & Meta Ads for Kerala businesses. Based in Trivandrum. Starting ₹3,000/month.",
-    url: "https://www.digitalproductsolutions.in/social-media-management",
-    type: "website",
-  },
-};
+});
 
 export default function SocialMediaManagementPage() {
   const faqSchema = {

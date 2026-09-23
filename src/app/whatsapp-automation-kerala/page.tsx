@@ -1,19 +1,13 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import CtaBand from "@/components/seo/CtaBand";
 
-export const metadata = {
-  title: "WhatsApp Automation for Kerala Businesses | Digital Product Solutions",
-  description:
-    "WhatsApp Business automation for Kerala SMEs — auto-replies, order confirmations, appointment reminders & lead follow-ups. Based in Trivandrum. Starting ₹10,000.",
+export const metadata = pageMetadata({
+  title: "WhatsApp Automation for Kerala Businesses",
+  description: "WhatsApp Business automation for Kerala SMEs — auto-replies, order confirmations, appointment reminders & lead follow-ups. Based in Trivandrum. Starting ₹10,000.",
+  path: "/whatsapp-automation-kerala",
   keywords: "WhatsApp automation Kerala, WhatsApp bot Trivandrum, WhatsApp business automation, WhatsApp automation for restaurants Kerala, WhatsApp auto-reply business",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/whatsapp-automation-kerala" },
-  openGraph: {
-    title: "WhatsApp Automation for Kerala Businesses | Digital Product Solutions",
-    description: "Automate your WhatsApp Business — replies, orders, appointments & follow-ups. Kerala businesses served from Trivandrum. Starting ₹10,000.",
-    url: "https://www.digitalproductsolutions.in/whatsapp-automation-kerala",
-    type: "website",
-  },
-};
+});
 
 export default function WhatsAppAutomationKerala() {
   const faqSchema = {

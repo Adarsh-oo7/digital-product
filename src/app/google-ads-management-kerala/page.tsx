@@ -1,17 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 ﻿import Link from "next/link";
 
-export const metadata = {
-  title: "Google Ads Management in Kerala | PPC Agency Trivandrum | Digital Product Solutions",
+export const metadata = pageMetadata({
+  title: "Google Ads Management in Kerala | PPC Agency Trivandrum",
   description: "Google Ads management for Kerala businesses. ROI-tracked Search, Display & YouTube campaigns for hospitals, real estate, education & retail. Based in Trivandrum.",
+  path: "/google-ads-management-kerala",
   keywords: "Google Ads management Kerala, PPC agency Trivandrum, Google Ads Kochi, paid search Kerala, Google advertising Kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/google-ads-management-kerala" },
-  openGraph: {
-    title: "Google Ads Management in Kerala | PPC Agency Trivandrum | Digital Product Solutions",
-    description: "Google Ads management for Kerala businesses. ROI-tracked Search, Display & YouTube campaigns for hospitals, real estate, education & retail. Based in Trivandrum.",
-    url: "https://www.digitalproductsolutions.in/google-ads-management-kerala",
-    type: "website",
-  },
-};
+});
 
 export default function Page() {
   return (

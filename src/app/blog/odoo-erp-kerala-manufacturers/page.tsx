@@ -1,17 +1,13 @@
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Odoo ERP for Kerala Manufacturers: Complete Implementation Guide 2026 | Digital Product Solutions",
+export const metadata = pageMetadata({
+  title: "Odoo ERP for Kerala Manufacturers: Complete Implementation Guide 2026",
   description: "How Kerala manufacturers and retailers can implement Odoo ERP for inventory, accounting and production management. Costs, modules and implementation timeline.",
+  path: "/blog/odoo-erp-kerala-manufacturers",
   keywords: "Odoo ERP implementation Kerala, ERP for manufacturing Kerala, Odoo partner Kerala, ERP software Kerala manufacturers",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/blog/odoo-erp-kerala-manufacturers" },
-  openGraph: {
-    title: "Odoo ERP for Kerala Manufacturers: Complete Implementation Guide 2026 | Digital Product Solutions",
-    description: "How Kerala manufacturers and retailers can implement Odoo ERP for inventory, accounting and production management. Costs, modules and implementation timeline.",
-    url: "https://www.digitalproductsolutions.in/blog/odoo-erp-kerala-manufacturers",
-    type: "article",
-  },
-};
+});
 
 export default function BlogPost() {
   const articleSchema = {
@@ -20,7 +16,7 @@ export default function BlogPost() {
     "headline": "Odoo ERP for Kerala Manufacturers: Implementation Guide 2026",
     "description": "How Kerala manufacturers and retailers can implement Odoo ERP for inventory, accounting and production management. Costs, modules and implementation timeline.",
     "author": { "@type": "Person", "name": "Adarsh B S" },
-    "publisher": { "@type": "Organization", "name": "Digital Product Solutions", "url": "https://www.digitalproductsolutions.in" },
+    "publisher": { "@type": "Organization", "name": "Digital Product Solutions", "url": "https://www.digitalproductsolutions.in", "logo": { "@type": "ImageObject", "url": "https://www.digitalproductsolutions.in/img/logo.png" } },
     "url": "https://www.digitalproductsolutions.in/blog/odoo-erp-kerala-manufacturers",
     "datePublished": "2026-06-12"
   };
@@ -31,13 +27,13 @@ export default function BlogPost() {
       <div className="max-w-4xl mx-auto">
 
         {/* BREADCRUMB */}
-        <nav className="text-sm text-gray-500 mb-8">
-          <Link href="/" className="hover:text-blue-600">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-blue-600">Blog</Link>
-          <span className="mx-2">/</span>
-          <span className="text-gray-800">Odoo ERP for Kerala Manufacturers</span>
-        </nav>
+        <Breadcrumbs
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Blog", href: "/blog" },
+            { name: "Odoo ERP for Kerala Manufacturers: Complete Implementation Guide 2026", href: "/blog/odoo-erp-kerala-manufacturers" },
+          ]}
+        />
 
         {/* HEADER */}
         <header className="mb-12">

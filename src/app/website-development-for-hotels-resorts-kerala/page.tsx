@@ -1,20 +1,14 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import CtaBand from "@/components/seo/CtaBand";
 import WorkStoriesBand from "@/components/seo/WorkStoriesBand";
 
-export const metadata = {
-  title: "Website Development for Hotels & Resorts in Kerala | Digital Product Solutions",
-  description:
-    "Hotel & resort website development in Kerala — room booking engines, photo galleries, tour packages & guest reviews. Serving Backwater resorts, homestays & luxury hotels. Starting ₹35,000.",
+export const metadata = pageMetadata({
+  title: "Website Development for Hotels & Resorts in Kerala",
+  description: "Hotel & resort website development in Kerala — room booking engines, photo galleries, tour packages & guest reviews. Serving Backwater resorts, homestays & luxury hotels. Starting ₹35,000.",
+  path: "/website-development-for-hotels-resorts-kerala",
   keywords: "hotel website development Kerala, resort website Kerala, backwater resort website, homestay website Kerala, hotel booking website Trivandrum",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/website-development-for-hotels-resorts-kerala" },
-  openGraph: {
-    title: "Website Development for Hotels & Resorts in Kerala | Digital Product Solutions",
-    description: "Professional hotel & resort websites with online booking for Kerala's hospitality industry. Starting ₹35,000.",
-    url: "https://www.digitalproductsolutions.in/website-development-for-hotels-resorts-kerala",
-    type: "website",
-  },
-};
+});
 
 export default function HotelResortWebsiteKerala() {
   const faqSchema = {

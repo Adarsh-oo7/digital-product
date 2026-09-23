@@ -1,17 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 ﻿import Link from "next/link";
 
-export const metadata = {
-  title: "School & Education Management Software in Kerala | Digital Product Solutions",
+export const metadata = pageMetadata({
+  title: "School & Education Management Software in Kerala",
   description: "School management system development for Kerala schools, colleges & coaching centers. Student records, attendance, fees, exams & parent portal. Starting ₹50,000.",
+  path: "/school-education-management-software-kerala",
   keywords: "school management software Kerala, student management system Kerala, school ERP Kerala, education software Trivandrum, LMS development Kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/school-education-management-software-kerala" },
-  openGraph: {
-    title: "School & Education Management Software in Kerala | Digital Product Solutions",
-    description: "School management system development for Kerala schools, colleges & coaching centers. Student records, attendance, fees, exams & parent portal. Starting ₹50,000.",
-    url: "https://www.digitalproductsolutions.in/school-education-management-software-kerala",
-    type: "website",
-  },
-};
+});
 
 export default function Page() {
   const faqSchema = {

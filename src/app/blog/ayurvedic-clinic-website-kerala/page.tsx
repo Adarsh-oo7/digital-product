@@ -1,17 +1,13 @@
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import { pageMetadata } from "@/lib/seo";
 ﻿import Link from "next/link";
 
-export const metadata = {
-  title: "Website Ideas for Ayurvedic Clinics & Wellness Centers in Kerala 2026 | Digital Product Solutions",
+export const metadata = pageMetadata({
+  title: "Website Ideas for Ayurvedic Clinics & Wellness Centers in Kerala 2026",
   description: "How to build the perfect Ayurvedic clinic website in Kerala — treatment pages, online consultation booking, SEO for Ayurveda searches and WhatsApp integration. Starting ₹25,000.",
+  path: "/blog/ayurvedic-clinic-website-kerala",
   keywords: "ayurvedic clinic website design Kerala, SEO for Ayurvedic clinics Kerala, Ayurveda center website Trivandrum, wellness center website Kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/blog/ayurvedic-clinic-website-kerala" },
-  openGraph: {
-    title: "Website Ideas for Ayurvedic Clinics & Wellness Centers in Kerala 2026 | Digital Product Solutions",
-    description: "How to build the perfect Ayurvedic clinic website in Kerala — treatment pages, online consultation booking, SEO for Ayurveda searches and WhatsApp integration. Starting ₹25,000.",
-    url: "https://www.digitalproductsolutions.in/blog/ayurvedic-clinic-website-kerala",
-    type: "article",
-  },
-};
+});
 
 export default function BlogPost() {
   const articleSchema = {
@@ -20,7 +16,7 @@ export default function BlogPost() {
     "headline": "Website Ideas for Ayurvedic Clinics & Wellness Centers in Kerala",
     "description": "How to build the perfect Ayurvedic clinic website in Kerala — treatment pages, online consultation booking, SEO for Ayurveda searches and WhatsApp integration. Starting ₹25,000.",
     "author": { "@type": "Person", "name": "Adarsh B S" },
-    "publisher": { "@type": "Organization", "name": "Digital Product Solutions", "url": "https://www.digitalproductsolutions.in" },
+    "publisher": { "@type": "Organization", "name": "Digital Product Solutions", "url": "https://www.digitalproductsolutions.in", "logo": { "@type": "ImageObject", "url": "https://www.digitalproductsolutions.in/img/logo.png" } },
     "url": "https://www.digitalproductsolutions.in/blog/ayurvedic-clinic-website-kerala",
     "datePublished": "2026-06-12"
   };
@@ -31,13 +27,13 @@ export default function BlogPost() {
       <div className="max-w-4xl mx-auto">
 
         {/* BREADCRUMB */}
-        <nav className="text-sm text-gray-500 mb-8">
-          <Link href="/" className="hover:text-blue-600">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-blue-600">Blog</Link>
-          <span className="mx-2">/</span>
-          <span className="text-gray-800">Website Ideas for Ayurvedic Clinics & Wellness Centers in Kerala</span>
-        </nav>
+        <Breadcrumbs
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Blog", href: "/blog" },
+            { name: "Website Ideas for Ayurvedic Clinics & Wellness Centers in Kerala 2026", href: "/blog/ayurvedic-clinic-website-kerala" },
+          ]}
+        />
 
         {/* HEADER */}
         <header className="mb-12">

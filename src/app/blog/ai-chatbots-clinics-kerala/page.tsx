@@ -1,17 +1,13 @@
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import { pageMetadata } from "@/lib/seo";
 ﻿import Link from "next/link";
 
-export const metadata = {
-  title: "AI Chatbots for Clinics in Kerala: What Healthcare Providers Need to Know | Digital Product Solutions",
+export const metadata = pageMetadata({
+  title: "AI Chatbots for Clinics in Kerala: What Healthcare Providers Need to Know",
   description: "How Kerala hospitals and clinics can use AI chatbots for appointment booking, patient queries and 24/7 support. Costs, use cases and implementation guide for 2026.",
+  path: "/blog/ai-chatbots-clinics-kerala",
   keywords: "AI chatbot for clinic Kerala, AI chatbot for hospital appointment booking, chatbot for clinic Trivandrum, healthcare chatbot Kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/blog/ai-chatbots-clinics-kerala" },
-  openGraph: {
-    title: "AI Chatbots for Clinics in Kerala: What Healthcare Providers Need to Know | Digital Product Solutions",
-    description: "How Kerala hospitals and clinics can use AI chatbots for appointment booking, patient queries and 24/7 support. Costs, use cases and implementation guide for 2026.",
-    url: "https://www.digitalproductsolutions.in/blog/ai-chatbots-clinics-kerala",
-    type: "article",
-  },
-};
+});
 
 export default function BlogPost() {
   const articleSchema = {
@@ -20,7 +16,7 @@ export default function BlogPost() {
     "headline": "AI Chatbots for Clinics in Kerala: What Healthcare Providers Need to Know",
     "description": "How Kerala hospitals and clinics can use AI chatbots for appointment booking, patient queries and 24/7 support. Costs, use cases and implementation guide for 2026.",
     "author": { "@type": "Person", "name": "Adarsh B S" },
-    "publisher": { "@type": "Organization", "name": "Digital Product Solutions", "url": "https://www.digitalproductsolutions.in" },
+    "publisher": { "@type": "Organization", "name": "Digital Product Solutions", "url": "https://www.digitalproductsolutions.in", "logo": { "@type": "ImageObject", "url": "https://www.digitalproductsolutions.in/img/logo.png" } },
     "url": "https://www.digitalproductsolutions.in/blog/ai-chatbots-clinics-kerala",
     "datePublished": "2026-06-12"
   };
@@ -31,13 +27,13 @@ export default function BlogPost() {
       <div className="max-w-4xl mx-auto">
 
         {/* BREADCRUMB */}
-        <nav className="text-sm text-gray-500 mb-8">
-          <Link href="/" className="hover:text-blue-600">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-blue-600">Blog</Link>
-          <span className="mx-2">/</span>
-          <span className="text-gray-800">AI Chatbots for Clinics in Kerala</span>
-        </nav>
+        <Breadcrumbs
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Blog", href: "/blog" },
+            { name: "AI Chatbots for Clinics in Kerala: What Healthcare Providers Need to Know", href: "/blog/ai-chatbots-clinics-kerala" },
+          ]}
+        />
 
         {/* HEADER */}
         <header className="mb-12">

@@ -1,17 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 ﻿import Link from "next/link";
 
-export const metadata = {
-  title: "Website Development for Builders & Real Estate in Kerala | Digital Product Solutions",
+export const metadata = pageMetadata({
+  title: "Website Development for Builders & Real Estate in Kerala",
   description: "Professional real estate & builder website development in Kerala. Property listings, virtual tours, EMI calculator & CRM for lead management. Starting ₹35,000.",
+  path: "/real-estate-builder-website-development-kerala",
   keywords: "real estate website development Kerala, builder website Kerala, property website Trivandrum, real estate CRM Kerala, developer website Kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/real-estate-builder-website-development-kerala" },
-  openGraph: {
-    title: "Website Development for Builders & Real Estate in Kerala | Digital Product Solutions",
-    description: "Professional real estate & builder website development in Kerala. Property listings, virtual tours, EMI calculator & CRM for lead management. Starting ₹35,000.",
-    url: "https://www.digitalproductsolutions.in/real-estate-builder-website-development-kerala",
-    type: "website",
-  },
-};
+});
 
 export default function Page() {
   const faqSchema = {

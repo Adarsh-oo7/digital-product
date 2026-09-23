@@ -1,17 +1,13 @@
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Best Digital Marketing Strategies for Hotels & Resorts in Kerala 2026 | Digital Product Solutions",
+export const metadata = pageMetadata({
+  title: "Best Digital Marketing Strategies for Hotels & Resorts in Kerala 2026",
   description: "Complete digital marketing guide for Kerala hotels, backwater resorts and homestays. SEO, Google Ads, Instagram marketing and direct booking strategies that work.",
+  path: "/blog/digital-marketing-hotels-kerala",
   keywords: "digital marketing for backwater resort Kerala, hotel SEO services Kerala, hotel digital marketing Kerala, resort marketing Kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/blog/digital-marketing-hotels-kerala" },
-  openGraph: {
-    title: "Best Digital Marketing Strategies for Hotels & Resorts in Kerala 2026 | Digital Product Solutions",
-    description: "Complete digital marketing guide for Kerala hotels, backwater resorts and homestays. SEO, Google Ads, Instagram marketing and direct booking strategies that work.",
-    url: "https://www.digitalproductsolutions.in/blog/digital-marketing-hotels-kerala",
-    type: "article",
-  },
-};
+});
 
 export default function BlogPost() {
   const articleSchema = {
@@ -20,7 +16,7 @@ export default function BlogPost() {
     "headline": "Best Digital Marketing Strategies for Hotels & Resorts in Kerala 2026",
     "description": "Complete digital marketing guide for Kerala hotels, backwater resorts and homestays. SEO, Google Ads, Instagram marketing and direct booking strategies that work.",
     "author": { "@type": "Person", "name": "Adarsh B S" },
-    "publisher": { "@type": "Organization", "name": "Digital Product Solutions", "url": "https://www.digitalproductsolutions.in" },
+    "publisher": { "@type": "Organization", "name": "Digital Product Solutions", "url": "https://www.digitalproductsolutions.in", "logo": { "@type": "ImageObject", "url": "https://www.digitalproductsolutions.in/img/logo.png" } },
     "url": "https://www.digitalproductsolutions.in/blog/digital-marketing-hotels-kerala",
     "datePublished": "2026-06-12"
   };
@@ -31,13 +27,13 @@ export default function BlogPost() {
       <div className="max-w-4xl mx-auto">
 
         {/* BREADCRUMB */}
-        <nav className="text-sm text-gray-500 mb-8">
-          <Link href="/" className="hover:text-blue-600">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-blue-600">Blog</Link>
-          <span className="mx-2">/</span>
-          <span className="text-gray-800">Best Digital Marketing Strategies for Hotels & Resorts in Kerala 2026</span>
-        </nav>
+        <Breadcrumbs
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Blog", href: "/blog" },
+            { name: "Best Digital Marketing Strategies for Hotels & Resorts in Kerala 2026", href: "/blog/digital-marketing-hotels-kerala" },
+          ]}
+        />
 
         {/* HEADER */}
         <header className="mb-12">

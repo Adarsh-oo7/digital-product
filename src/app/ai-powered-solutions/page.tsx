@@ -1,18 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
-export const metadata = {
-  title: "AI Chatbots & Automation for Kerala Businesses | Digital Product Solutions",
-  description:
-    "AI chatbots, WhatsApp automation & intelligent systems for Kerala businesses — hospitals, hotels, restaurants, retail. Based in Trivandrum. Starting ₹12,000.",
+export const metadata = pageMetadata({
+  title: "AI Chatbots & Automation for Kerala Businesses",
+  description: "AI chatbots, WhatsApp automation & intelligent systems for Kerala businesses — hospitals, hotels, restaurants, retail. Based in Trivandrum. Starting ₹12,000.",
+  path: "/ai-powered-solutions",
   keywords: "AI chatbot development Kerala, WhatsApp chatbot Kerala, AI automation Trivandrum, chatbot for hospital Kerala, AI solutions for small business Kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/ai-powered-solutions" },
-  openGraph: {
-    title: "AI Chatbots & Automation for Kerala Businesses | Digital Product Solutions",
-    description: "AI chatbots, WhatsApp bots & automation for hospitals, hotels, restaurants and retail across Kerala. Based in Trivandrum.",
-    url: "https://www.digitalproductsolutions.in/ai-powered-solutions",
-    type: "website",
-  },
-};
+});
 
 export default function AIPoweredSolutionsPage() {
   const faqSchema = {

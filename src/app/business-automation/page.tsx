@@ -1,18 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Business Automation & WhatsApp Bots for Kerala SMEs | Digital Product Solutions",
-  description:
-    "Automate WhatsApp replies, order tracking, invoicing and CRM for Kerala businesses. Business automation services in Trivandrum starting ₹10,000. Save time, scale faster.",
+export const metadata = pageMetadata({
+  title: "Business Automation & WhatsApp Bots for Kerala SMEs",
+  description: "Automate WhatsApp replies, order tracking, invoicing and CRM for Kerala businesses. Business automation services in Trivandrum starting ₹10,000. Save time, scale faster.",
+  path: "/business-automation",
   keywords: "business automation Kerala, WhatsApp automation Kerala, WhatsApp bot Trivandrum, workflow automation Kerala, CRM automation Kerala",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/business-automation" },
-  openGraph: {
-    title: "Business Automation & WhatsApp Bots for Kerala SMEs | Digital Product Solutions",
-    description: "Automate WhatsApp, orders, invoices and CRM for Kerala businesses. Starting ₹10,000.",
-    url: "https://www.digitalproductsolutions.in/business-automation",
-    type: "website",
-  },
-};
+});
 
 export default function BusinessAutomationPage() {
   const faqSchema = {

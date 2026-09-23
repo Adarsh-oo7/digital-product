@@ -1,17 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 ﻿import Link from "next/link";
 
-export const metadata = {
-  title: "Web Development in Kottayam | Digital Product Solutions",
+export const metadata = pageMetadata({
+  title: "Web Development in Kottayam",
   description: "Professional web development services in Kottayam, Kerala. Expert digital solutions for local businesses — SEO, web development, WhatsApp automation & AI. Based in Trivandrum. Starting from ₹15,000.",
+  path: "/web-development-kottayam",
   keywords: "web development Kottayam, website development Kottayam Kerala, software development Kottayam, web design Kottayam",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/web-development-kottayam" },
-  openGraph: {
-    title: "Web Development in Kottayam | Digital Product Solutions",
-    description: "Professional web development for Kottayam businesses. Starting from ₹15,000.",
-    url: "https://www.digitalproductsolutions.in/web-development-kottayam",
-    type: "website",
-  },
-};
+});
 
 export default function Page() {
   const localBusinessSchema = {

@@ -1,17 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
 ﻿import Link from "next/link";
 
-export const metadata = {
-  title: "AI Agent & RAG/LLM Integration Services India | Digital Product Solutions",
+export const metadata = pageMetadata({
+  title: "AI Agent & RAG/LLM Integration Services India",
   description: "Custom AI agent development, RAG (Retrieval Augmented Generation) chatbots & LLM integration for businesses in India. GPT-4, Claude, Gemini integrations. Starting ₹1,00,000.",
+  path: "/ai-agent-rag-development-india",
   keywords: "AI agent development India, RAG chatbot development, LLM integration India, GPT-4 integration, custom AI agent Kerala, retrieval augmented generation India",
-  alternates: { canonical: "https://www.digitalproductsolutions.in/ai-agent-rag-development-india" },
-  openGraph: {
-    title: "AI Agent & RAG/LLM Integration Services India | Digital Product Solutions",
-    description: "Custom AI agent development, RAG (Retrieval Augmented Generation) chatbots & LLM integration for businesses in India. GPT-4, Claude, Gemini integrations. Starting ₹1,00,000.",
-    url: "https://www.digitalproductsolutions.in/ai-agent-rag-development-india",
-    type: "website",
-  },
-};
+});
 
 export default function Page() {
   const faqSchema = {
