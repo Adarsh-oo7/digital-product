@@ -21,16 +21,27 @@ const imageRegex = /["'`]((\.{0,2}\/)?img\/[^"'`\?#]+(?:\.(?:jpg|jpeg|png|webp|s
 let allFound = new Set();
 let broken = [];
 
+// Strict Linux case-checking cache
+const dirFilesMap = new Map();
+function fileExistsCaseSensitive(cleanPath) {
+  const dir = path.join("./public", path.dirname(cleanPath));
+  const base = path.basename(cleanPath);
+  if (!fs.existsSync(dir)) return false;
+  if (!dirFilesMap.has(dir)) {
+    dirFilesMap.set(dir, fs.readdirSync(dir));
+  }
+  return dirFilesMap.get(dir).includes(base);
+}
+
 files.forEach(f => {
   const content = fs.readFileSync(f, "utf8");
   let match;
   while ((match = imageRegex.exec(content)) !== null) {
     const imgPath = match[1];
     allFound.add(imgPath);
-    const cleanPath = imgPath.replace(/^\.?\.?\/?/, "");
-    const publicPath = path.join("./public", cleanPath);
-    if (!fs.existsSync(publicPath)) {
-      broken.push({ file: f, ref: imgPath, expectedPublic: publicPath });
+    const cleanPath = decodeURIComponent(imgPath.replace(/^\.?\.?\/?/, ""));
+    if (!fileExistsCaseSensitive(cleanPath)) {
+      broken.push({ file: f, ref: imgPath, expectedPublic: path.join("./public", cleanPath) });
     }
   }
 });
@@ -40,7 +51,7 @@ console.log("Broken references count:", broken.length);
 if (broken.length > 0) {
   console.log("Broken references:", JSON.stringify(broken, null, 2));
 } else {
-  console.log("All image references successfully match files in public/!");
+  console.log("All image references successfully match files in public/ with strict case!");
 }
 
 const relRegex = /["'`](\.{1,2}\/img\/[^"'`]+)["'`]/g;

@@ -6,7 +6,7 @@ import { motion, useAnimation } from "framer-motion";
 const cards = [
     { title: "Fintech", image: "/img/fintech.jpg" },
     { title: "Healthcare", image: "/img/healthcare.jpg" },
-    { title: "E-commerce", image: "/img/Ecommerce.jpg" },
+    { title: "E-commerce", image: "/img/ECommerce.jpg" },
     { title: "Education", image: "/img/education.webp" },
     { title: "Real Estate", image: "/img/realestate.webp" },
     { title: "Manufacturing", image: "/img/manufacturing.jpg" },
