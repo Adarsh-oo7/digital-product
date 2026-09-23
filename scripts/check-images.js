@@ -54,3 +54,10 @@ files.forEach(f => {
   }
 });
 console.log("Total relative image references (./ or ../):", relCount);
+
+if (broken.length > 0 || relCount > 0) {
+  console.error("❌ Image validation failed: Broken or relative paths detected.");
+  process.exit(1);
+} else {
+  console.log("✅ Image validation passed.");
+}
