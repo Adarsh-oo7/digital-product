@@ -15,14 +15,14 @@ const teamMembers = [
   {
     name: "Adarsh B S",
     role: ["Project Manager", "SEO and Marketing Specialist"],
-    image: "./img/adarshnew.png?height=300&width=300",
+    image: "/img/adarshnew.png",
     imageHover: "/img/adarshcrazy.jpg",
     tier: "core",
   },
   {
     name: "Midhin S",
     role: ["Full-Stack Developer", "Backend Specialist", "Quality Assurance (QA)"],
-    image: "./img/midhin.jpg?height=300&width=300",
+    image: "/img/midhin.jpg",
     imageHover: "/img/midhincrazy.jpg",
     tier: "core",
   },
@@ -30,40 +30,40 @@ const teamMembers = [
   {
     name: "Aromal V G",
     role: ["Full-Stack Developer", "UI/UX Designer", "Frontend Specialist"],
-    image: "./img/aromalnew.png?height=300&width=300",
+    image: "/img/aromalnew.png",
     imageHover: "/img/aromalcrazy.jpg",
     tier: "core",
   },
   {
     name: "Akhil Shibu",
-    image: "./img/shibu.png?height=300&width=300",
+    image: "/img/shibu.png",
     tier: "member",
   },
 
   {
     name: "Akhilesh C J",
-    image: "./img/akhilesh.png?height=300&width=300",
+    image: "/img/akhilesh.png",
     tier: "member",
   },
   {
     name: "Adarsh M",
-    image: "./img/adarsh m.png?height=300&width=300",
+    image: "/img/adarsh m.png",
     tier: "member",
   },
 
   {
     name: "Arjun",
-    image: "./img/arjun.png?height=300&width=300",
+    image: "/img/arjun.png",
     tier: "member",
   },
   {
     name: "Mohd Sha",
-    image: "./img/shah new.png?height=300&width=300",
+    image: "/img/shah new.png",
     tier: "member",
   },
   {
     name: "Nakul P",
-    image: "./img/nakul.png?height=300&width=300",
+    image: "/img/nakul.png",
     tier: "member",
   },
 ]

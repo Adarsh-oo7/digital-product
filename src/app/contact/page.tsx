@@ -81,7 +81,7 @@ export default function Contact() {
 
       <div className="min-h-screen py-16 pt-36 px-4 relative bg-white">
         <Image
-          src="./img/bgtt.jpg?height=1080&width=1920&text=Telephone+Background"
+          src="/img/bgtt.jpg"
           alt="Contact background with telephone theme"
           fill
           style={{ objectFit: "cover" }}

@@ -492,7 +492,7 @@ export default function Home() {
             </div>
 
             <div className="relative">
-              <Image src="./img/AiH.png" alt="Digital business work from Digital Product Solutions" width={600} height={400} className="rounded-2xl shadow-2xl" loading="lazy" />
+              <Image src="/img/AiH.png" alt="Digital business work from Digital Product Solutions" width={600} height={400} className="rounded-2xl shadow-2xl" loading="lazy" />
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-green-600 to-blue-600 text-white p-6 rounded-xl shadow-xl">
                 <div className="text-sm font-medium">Google reviews</div>
                 <div className="text-3xl font-bold">5.0</div>

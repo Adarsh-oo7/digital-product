@@ -18,38 +18,38 @@ const services = [
     icon: Cpu,
     title: "Machine Learning Solutions",
     description: "Leverage the power of machine learning to gain insights from your data and automate complex tasks.",
-    image: "./img/Ai11.png?height=300&width=400&text=Machine+Learning",
+    image: "/img/Ai11.png",
   },
   {
     icon: Brain,
     title: "Natural Language Processing",
     description: "Implement advanced NLP techniques to understand and generate human-like text for chatbots and more.",
-    image: "./img/Ai2.png?height=300&width=400&text=NLP",
+    image: "/img/Ai2.png",
   },
   {
     icon: Robot,
     title: "AI-Powered Automation",
     description:
       "Streamline your business processes with intelligent automation powered by cutting-edge AI technology.",
-    image: "./img/ai3.jpg?height=300&width=400&text=AI+Automation",
+    image: "/img/ai3.jpg",
   },
   {
     icon: BarChart,
     title: "Predictive Analytics",
     description: "Use AI to forecast trends, optimize operations, and make data-driven decisions for your business.",
-    image: "/img/ai4.jpg?height=300&width=400&text=Predictive+Analytics",
+    image: "/img/ai4.jpg",
   },
   {
     icon: Cloud,
     title: "AI-Enabled Cloud Solutions",
     description: "Harness the power of AI in cloud computing to scale your operations and improve efficiency.",
-    image: "./img/ai5.png?height=300&width=400&text=AI+Cloud",
+    image: "/img/ai5.png",
   },
   {
     icon: Shield,
     title: "AI-Driven Cybersecurity",
     description: "Protect your digital assets with advanced AI-powered threat detection and prevention systems.",
-    image: "./img/ai6.png?height=300&width=400&text=AI+Cybersecurity",
+    image: "/img/ai6.png",
   },
 ]
 

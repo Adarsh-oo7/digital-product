@@ -6,16 +6,16 @@ import Link from "next/link"
 import { useRef, useEffect, useState } from "react"
 
 const projects = [
-  { title: "Construction Company", image: "../img/buildwellz.jpg", url: "https://www.buildwellz.in" },
-  { title: "Soft Drinks Company", image: "../img/guava-fizz.jpg", url: "https://www.squeezeberriez.in/" },
-  { title: "Wedding Events", image: "../img/wedding events.jpg", url: "https://crystalknotfilms.com/" },
-  { title: "Sports", image: "../img/mm.jpg", url: "https://www.mangrovemoments.com/" },
-  { title: "Entertainment", image: "../img/ms.jpg", url: "https://www.mangrovespot.in/" },
+  { title: "Construction Company", image: "/img/buildwellz.jpg", url: "https://www.buildwellz.in" },
+  { title: "Soft Drinks Company", image: "/img/guava-fizz.jpg", url: "https://www.squeezeberriez.in/" },
+  { title: "Wedding Events", image: "/img/wedding events.jpg", url: "https://crystalknotfilms.com/" },
+  { title: "Sports", image: "/img/mm.jpg", url: "https://www.mangrovemoments.com/" },
+  { title: "Entertainment", image: "/img/ms.jpg", url: "https://www.mangrovespot.in/" },
 ]
 
 const inHouseProjects = [
-  { title: "Kerala Sellers", image: "../img/ks dsp.jpg", url: "/kerala-sellers", upcoming: false },
-  { title: "Kerala PSC", image: "../img/ks dsp (1).jpg", url: "#", upcoming: true },
+  { title: "Kerala Sellers", image: "/img/ks dsp.jpg", url: "/kerala-sellers", upcoming: false },
+  { title: "Kerala PSC", image: "/img/ks dsp (1).jpg", url: "#", upcoming: true },
 ]
 
 type Project = { title: string; image: string; url: string }
