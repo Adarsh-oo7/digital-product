@@ -218,7 +218,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
                   <p className="text-gray-400 text-sm mb-5">{service.desc}</p>
                   <div className="bg-gradient-to-r from-blue-600 to-purple-500 bg-clip-text text-transparent font-bold mb-4">{service.price}</div>
-                  <a href={service.link} className="bg-gradient-to-r from-blue-600 to-purple-500 bg-clip-text text-transparent text-sm font-medium hover:text-red-400 transition">Learn More →</a>
+                  <a href={service.link} className="bg-gradient-to-r from-blue-600 to-purple-500 bg-clip-text text-transparent text-sm font-medium hover:text-red-400 transition">{service.title} →</a>
                 </motion.div>
               );
             })}

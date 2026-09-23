@@ -83,6 +83,7 @@ export default function WhiteHero() {
                     className="font-bold leading-tight text-gray-900
                text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
                 >
+                    <span className="sr-only">Website, App and Software Development for Kerala Businesses. </span>
                     <span className="block text-xs sm:text-sm md:text-base font-bold uppercase tracking-widest text-indigo-600 mb-3 sm:mb-4">
                         Website &amp; app development team based in Trivandrum
                     </span>

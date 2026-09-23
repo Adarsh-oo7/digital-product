@@ -150,7 +150,6 @@ module.exports = {
       loc: path,
       changefreq: 'weekly',
       priority: path === '/' ? 1.0 : path.startsWith('/blog/') ? 0.6 : 0.8,
-      lastmod: new Date().toISOString(),
     };
   },
   additionalPaths: async (config) => {

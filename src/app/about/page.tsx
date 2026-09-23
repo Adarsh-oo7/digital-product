@@ -186,6 +186,7 @@ export default function About() {
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Digital Product Solutions
             </span>
+            <span className="text-gray-900"> in Trivandrum</span>
           </motion.h1>
 
           {/* Mission and Vision */}

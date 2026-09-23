@@ -186,11 +186,6 @@ const rootSchema = {
       publisher: {
         "@id": `${SITE_URL}/#organization`,
       },
-      potentialAction: {
-        "@type": "SearchAction",
-        target: `${SITE_URL}/blog?q={search_term_string}`,
-        "query-input": "required name=search_term_string",
-      },
     },
   ],
 };
@@ -247,12 +242,6 @@ export default function RootLayout({
 
         <main className="flex-grow">{children}</main>
         <Footer />
-
-        <Script
-          src="https://app.fastbots.ai/embed.js"
-          data-bot-id="cm74658eg0tkgsvk7iw855klb"
-          strategy="lazyOnload"
-        />
 
         <ChatbotAndSocialButtons />
       </body>

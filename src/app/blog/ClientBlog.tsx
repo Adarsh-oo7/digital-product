@@ -68,6 +68,7 @@ export default function ClientBlog({ initialPosts }: { initialPosts: BlogPost[] 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
+            <span className="sr-only">Digital Growth and Software Guides for Kerala Businesses. </span>
             <span className="bg-gradient-to-r from-blue-600 to-black bg-clip-text text-transparent">DPS </span>
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               BLOGS

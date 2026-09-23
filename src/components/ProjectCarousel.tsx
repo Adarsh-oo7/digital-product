@@ -32,25 +32,36 @@ function InfiniteCarousel(props: { items: Project[] }) {
   useEffect(() => {
     const track = trackRef.current
     if (!track) return
-    let animId: number
+    const root = track.parentElement
+    let animId = 0
     let pos = 0
+    let visible = true
     const speed = 0.5
 
     function step() {
-      const singleWidth = track!.scrollWidth / 3
-      if (!pausedRef.current) {
+      const singleWidth = track!.scrollWidth / 2
+      if (!pausedRef.current && visible && singleWidth > 0) {
         pos += speed
-        if (pos >= singleWidth) pos = 0
+        if (pos >= singleWidth) pos -= singleWidth
         track!.style.transform = "translateX(-" + pos + "px)"
       }
-      animId = requestAnimationFrame(step)
+      if (visible) animId = requestAnimationFrame(step)
     }
 
+    const io = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting
+      if (visible) animId = requestAnimationFrame(step)
+      else cancelAnimationFrame(animId)
+    })
+    if (root) io.observe(root)
     animId = requestAnimationFrame(step)
-    return () => cancelAnimationFrame(animId)
+    return () => {
+      cancelAnimationFrame(animId)
+      io.disconnect()
+    }
   }, [])
 
-  const looped = [...props.items, ...props.items, ...props.items]
+  const looped = [...props.items, ...props.items]
 
   return (
     <div
@@ -63,8 +74,10 @@ function InfiniteCarousel(props: { items: Project[] }) {
           <a
             key={i}
             href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
+            target={project.url.startsWith("/") ? undefined : "_blank"}
+            rel={project.url.startsWith("/") ? undefined : "noopener noreferrer"}
+            aria-hidden={i >= props.items.length ? true : undefined}
+            tabIndex={i >= props.items.length ? -1 : undefined}
             className="relative group overflow-hidden rounded-2xl shadow-lg flex-shrink-0 w-56 h-56 md:w-72 md:h-72 block"
           >
             <Image

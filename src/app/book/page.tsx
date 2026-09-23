@@ -162,7 +162,7 @@ export default function BookingPage() {
                   transition={{ duration: 0.6, delay: 0.4 }}
                   style={{ fontFamily: "Quicksand, sans-serif" }}
                 >
-                  Schedule Your Appointment
+                  Book a Consultation with Digital Product Solutions
                 </motion.h1>
                 <form
                   action="https://formsubmit.co/digitalproductkerala@gmail.com"

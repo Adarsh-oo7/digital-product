@@ -7,13 +7,22 @@ export default function ParticleNetwork() {
     const mouse = useRef({ x: 0, y: 0 });
 
     useEffect(() => {
-        const canvas = canvasRef.current!;
-        const ctx = canvas.getContext("2d")!;
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return;
+        const parent = canvas.parentElement;
 
-        let width = (canvas.width = window.innerWidth);
-        let height = (canvas.height = window.innerHeight);
+        let width = 0;
+        let height = 0;
+        const resize = () => {
+            width = canvas.width = parent?.clientWidth || window.innerWidth;
+            height = canvas.height = parent?.clientHeight || window.innerHeight;
+        };
+        resize();
 
-        const particles = Array.from({ length: 80 }).map(() => ({
+        const count = window.matchMedia("(max-width: 768px)").matches ? 28 : 48;
+        const particles = Array.from({ length: count }).map(() => ({
             x: Math.random() * width,
             y: Math.random() * height,
             vx: (Math.random() - 0.5) * 0.6,
@@ -22,8 +31,9 @@ export default function ParticleNetwork() {
         }));
 
         const handleMouse = (e: MouseEvent) => {
-            mouse.current.x = e.clientX;
-            mouse.current.y = e.clientY;
+            const rect = canvas.getBoundingClientRect();
+            mouse.current.x = e.clientX - rect.left;
+            mouse.current.y = e.clientY - rect.top;
         };
 
         window.addEventListener("mousemove", handleMouse);
@@ -78,19 +88,34 @@ export default function ParticleNetwork() {
                 }
             }
 
-            requestAnimationFrame(draw);
+            if (active) raf = requestAnimationFrame(draw);
         };
 
-        draw();
-
-        const resize = () => {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
+        let raf = 0;
+        let active = false;
+        const start = () => {
+            if (active) return;
+            active = true;
+            raf = requestAnimationFrame(draw);
+        };
+        const stop = () => {
+            active = false;
+            cancelAnimationFrame(raf);
         };
 
+        const io = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) start();
+            else stop();
+        });
+        if (parent) io.observe(parent);
+
+        const idle = window.setTimeout(start, 600);
         window.addEventListener("resize", resize);
 
         return () => {
+            window.clearTimeout(idle);
+            stop();
+            io.disconnect();
             window.removeEventListener("mousemove", handleMouse);
             window.removeEventListener("resize", resize);
         };

@@ -1,11 +1,28 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import JotFormEmbed from "../components/JotFormScript"
 
 import { track } from "@/lib/analytics";
 
 export default function ChatbotAndSocialButtons() {
   const [showJotForm, setShowJotForm] = useState(false);
+
+  useEffect(() => {
+    const load = () => {
+      if (document.querySelector('script[data-bot-id="cm74658eg0tkgsvk7iw855klb"]')) return;
+      const script = document.createElement("script");
+      script.src = "https://app.fastbots.ai/embed.js";
+      script.async = true;
+      script.dataset.botId = "cm74658eg0tkgsvk7iw855klb";
+      document.body.appendChild(script);
+    };
+    const timer = window.setTimeout(load, 8000);
+    window.addEventListener("pointerdown", load, { once: true });
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener("pointerdown", load);
+    };
+  }, []);
 
   return (
     <div className="fixed bottom-4 right-4 z-50">

@@ -263,6 +263,15 @@ export default function Pricing() {
                         >
                             Choose the perfect package for your business. From personal portfolios to full e-commerce platforms, we have a solution tailored for you.
                         </p>
+                        <p
+                            className="text-sm sm:text-base max-w-2xl mx-auto mt-4 leading-relaxed"
+                            style={{ color: colors.muted }}
+                        >
+                            These figures are starting ranges. GST, hosting, a domain name and third-party fees are confirmed in the written estimate.
+                        </p>
+                        <Link href="/work" className="inline-block mt-4 text-sm font-semibold underline" style={{ color: colors.accent }}>
+                            See real project scope and delivery examples
+                        </Link>
                     </div>
 
                     {/* Pricing Grid */}
