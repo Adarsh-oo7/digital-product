@@ -1,4 +1,20 @@
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "App Development Kerala | Mobile App Developers in Trivandrum & Kochi",
+  description:
+    "Custom Android & iOS mobile app development in Kerala using Flutter and React Native. Transparent pricing from ₹25,000, 100% code ownership, and direct engineer communication.",
+  path: "/app-development-kerala",
+  keywords: [
+    "App Development Kerala",
+    "Mobile App Developers Trivandrum",
+    "Flutter App Development Kerala",
+    "iOS App Development Kochi",
+    "Android App Developers Kerala",
+    "App Development Cost Kerala",
+  ],
+});
 
 export default function AppDevelopmentKeralaPage() {
   const faqSchema = {

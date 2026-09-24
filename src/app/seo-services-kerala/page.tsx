@@ -1,4 +1,20 @@
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "SEO Services in Kerala | Top Local SEO Agency Trivandrum & Kochi",
+  description:
+    "Rank #1 on Google with data-driven SEO services in Kerala. Transparent pricing from ₹5,000/mo, Google Maps pack domination, Next.js technical SEO, and direct developer communication.",
+  path: "/seo-services-kerala",
+  keywords: [
+    "SEO Services Kerala",
+    "Best SEO Company Kerala",
+    "Local SEO Trivandrum",
+    "SEO Agency Kochi",
+    "Google Maps SEO Kerala",
+    "Technical SEO Next.js Kerala",
+  ],
+});
 
 export default function SEOServicesKeralaPage() {
   const faqSchema = {

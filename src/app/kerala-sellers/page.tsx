@@ -1,3 +1,13 @@
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Kerala Sellers Marketplace Platform | Built by Digital Product Solutions",
+  description:
+    "Explore Kerala Sellers (keralasellers.in), the online multi-vendor marketplace platform engineered by Digital Product Solutions for local Kerala business owners.",
+  path: "/kerala-sellers",
+  keywords: ["Kerala Sellers", "Kerala Marketplace Platform", "E-commerce Platform Kerala"],
+});
+
 export default function KeralaSellersPage() {
   return (
     <section className="py-28  text-white relative overflow-hidden">
