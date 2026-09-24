@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Breadcrumbs, { type Crumb } from "./Breadcrumbs";
 import CtaBand from "./CtaBand";
 import FaqList, { type FaqItem } from "./FaqList";
@@ -25,6 +26,7 @@ export type LandingContent = {
   faqs: FaqItem[];
   whatsappText?: string;
   serviceName?: string;
+  heroImage?: string;
 };
 
 export default function LandingPage({ content, children }: { content: LandingContent; children?: React.ReactNode }) {
@@ -80,14 +82,36 @@ export default function LandingPage({ content, children }: { content: LandingCon
       : null;
 
   return (
-    <article className="min-h-screen bg-white pt-28 pb-16 px-4">
+    <article className={content.heroImage ? "min-h-screen bg-white pb-16" : "min-h-screen bg-white pt-28 pb-16 px-4"}>
       <JsonLd data={webpage} />
       {service && <JsonLd data={service} />}
       {faqSchema && <JsonLd data={faqSchema} />}
-      <div className="max-w-4xl mx-auto">
+      {content.heroImage && (
+        <header className="relative flex min-h-[78vh] items-end overflow-hidden">
+          <Image
+            src={content.heroImage}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/55 to-black/35" />
+          <div className="relative z-10 mx-auto w-full max-w-4xl px-4 pb-16 pt-36 text-white">
+            <p className="mb-3 text-sm font-medium uppercase tracking-widest text-blue-200">Digital Product Solutions · Kerala</p>
+            <h1 className="text-3xl font-bold leading-tight md:text-5xl">{content.h1}</h1>
+            <p className="mt-4 max-w-3xl text-lg leading-relaxed text-gray-100">{content.lede}</p>
+          </div>
+        </header>
+      )}
+      <div className={content.heroImage ? "mx-auto max-w-4xl px-4 pt-10" : "mx-auto max-w-4xl"}>
         <Breadcrumbs items={crumbs} />
-        <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">{content.h1}</h1>
-        <p className="text-lg text-gray-600 leading-relaxed mb-10">{content.lede}</p>
+        {!content.heroImage && (
+          <>
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">{content.h1}</h1>
+            <p className="text-lg text-gray-600 leading-relaxed mb-10">{content.lede}</p>
+          </>
+        )}
 
         {content.audience && (
           <section className="mb-10">

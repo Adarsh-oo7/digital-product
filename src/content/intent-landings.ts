@@ -25,6 +25,7 @@ export function landing(path: string): LandingContent {
 export const intentLandings: LandingContent[] = [
   page({
     path: "/hotel-booking-website-kerala",
+    heroImage: "/img/projects/mangrove-spot.jpg",
     metaTitle: "Hotel Booking Website in Kerala",
     metaDescription:
       "Hotel booking websites for Kerala properties: rooms, availability, payment and WhatsApp. Booking engines are listed from ₹60,000. Ask for an estimate.",
@@ -63,6 +64,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/homestay-booking-website-kerala",
+    heroImage: "/img/projects/mangrove-moments.jpg",
     metaTitle: "Homestay Booking Website in Kerala",
     metaDescription:
       "Homestay and villa websites in Kerala with dates, house rules and WhatsApp confirmation. A simple site can fit published website packages. Ask for an estimate.",
@@ -99,6 +101,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/jewellery-website-kerala",
+    heroImage: "/img/projects/guava-fizz.jpg",
     metaTitle: "Jewellery Website in Kerala",
     metaDescription:
       "Jewellery and gold-shop websites in Kerala: catalogue, enquiry and WhatsApp. Shop sites use published website or e-commerce ranges. Request an estimate.",
@@ -135,6 +138,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/salon-booking-website-kerala",
+    heroImage: "/img/blog/blog-clinic-whatsapp.jpg",
     metaTitle: "Salon Booking Website in Kerala",
     metaDescription:
       "Salon and spa websites in Kerala with services, staff and appointment requests on WhatsApp. Simple sites use published website packages.",
@@ -171,6 +175,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/interior-designer-website-kerala",
+    heroImage: "/img/projects/buildwellz.jpg",
     metaTitle: "Interior Designer Website in Kerala",
     metaDescription:
       "Interior designer websites in Kerala: project photos, rooms and an enquiry form. Portfolio sites use published website packages. CRM is a separate scope.",
@@ -207,6 +212,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/gym-membership-website-kerala",
+    heroImage: "/img/blog/blog-team-desk.jpg",
     metaTitle: "Gym Membership Website in Kerala",
     metaDescription:
       "Gym websites in Kerala with plans, trial requests and WhatsApp. A membership desk with renewals is custom software from ₹15,000.",
@@ -243,6 +249,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/manufacturing-website-kerala",
+    heroImage: "/img/blog/blog-lead-list.jpg",
     metaTitle: "Manufacturing Website in Kerala",
     metaDescription:
       "Factory and B2B catalogue websites in Kerala for product enquiries and dealer requests. Catalogue sites use published website packages.",
@@ -279,6 +286,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/car-rental-website-kerala",
+    heroImage: "/img/blog/blog-phone-website.jpg",
     metaTitle: "Car Rental Website in Kerala",
     metaDescription:
       "Car rental websites in Kerala with vehicles, date requests and WhatsApp. A fleet desk is custom software from ₹15,000. Dealer CRM is a different page.",
@@ -315,6 +323,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/coaching-centre-website-kerala",
+    heroImage: "/img/blog/blog-choose-path.jpg",
     metaTitle: "Coaching Centre Website in Kerala",
     metaDescription:
       "Tuition and coaching websites in Kerala with courses and admission enquiries. A student portal is custom software from ₹15,000.",
@@ -351,6 +360,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/logistics-website-kerala",
+    heroImage: "/img/blog/blog-secure-site.jpg",
     metaTitle: "Logistics Website in Kerala",
     metaDescription:
       "Logistics and transport websites in Kerala with services and a booking enquiry. Live tracking is custom software from ₹15,000, not a brochure page.",
@@ -386,6 +396,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/photography-website-kerala",
+    heroImage: "/img/projects/crystalknot.jpg",
     metaTitle: "Photography Website in Kerala",
     metaDescription:
       "Photographer and wedding studio websites in Kerala: galleries and date enquiries. Crystal Knot Films is a studio site we shipped.",
@@ -422,6 +433,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/online-booking-website-kerala",
+    heroImage: "/img/projects/wedding-events.jpg",
     metaTitle: "Online Booking Website in Kerala",
     metaDescription:
       "Booking and appointment websites for Kerala businesses: hotels, salons, gyms and clinics. Request a scope before you assume payment is included.",
@@ -457,5 +469,174 @@ export const intentLandings: LandingContent[] = [
     ],
     serviceName: "Online Booking Website Kerala",
     whatsappText: "Hi, I'm interested in an online booking website",
+  }),
+  page({
+    path: "/travel-agency-website-kerala",
+    heroImage: "/img/projects/mangrove-moments.jpg",
+    metaTitle: "Travel Agency Website in Kerala",
+    metaDescription: "Tour package websites for Kerala travel agencies: packages, enquiry and WhatsApp. A booking desk is custom software from ₹15,000.",
+    h1: "Travel agency websites in Kerala",
+    lede: "A travel page lists packages you actually sell and lets a traveller ask for dates. It is not the CRM that tracks those enquiries afterwards.",
+    audience: "Tour operators and travel agencies in Kerala.",
+    problem: "Packages live in WhatsApp broadcasts. There is no page a customer can forward with the price and what is included.",
+    deliverables: ["Package list you write", "Date enquiry", "WhatsApp", "Office city and phone", "Payment only if scoped"],
+    costs: [
+      { title: "Package site", text: "Standard website packages ₹10,000–₹18,000." },
+      { title: "Enquiry desk", text: "The travel CRM page covers follow-up. Custom booking software starts at ₹15,000. " + estimate },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "Mangrove Moments and Mangrove Spot are hospitality sites. A travel agency site uses your own packages.",
+    related: [
+      { href: "/travel-agency-crm-kerala", label: "Travel agency CRM" },
+      { href: "/hotel-booking-website-kerala", label: "Hotel booking websites" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Will this sell tickets?", a: "Not unless a payment and inventory scope is written into the estimate." },
+    ],
+    serviceName: "Travel Agency Website Kerala",
+    whatsappText: "Hi, I'm interested in a travel agency website",
+  }),
+  page({
+    path: "/real-estate-website-kerala",
+    heroImage: "/img/projects/buildwellz.jpg",
+    metaTitle: "Real Estate Website in Kerala",
+    metaDescription: "Property listing websites for Kerala agents and builders. Enquiry forms use published website packages. A lead desk is the real-estate CRM.",
+    h1: "Real estate websites in Kerala",
+    lede: "Buyers need listings, location and a way to ask about one property. The CRM is where your team follows that enquiry.",
+    audience: "Agents and small builders in Kerala who need a public listing page.",
+    problem: "Plots and flats are posted as photos with no single page that stays updated.",
+    deliverables: ["Listing cards", "Enquiry per property", "WhatsApp", "Office address", "No invented availability"],
+    costs: [
+      { title: "Listing site", text: "Standard ₹10,000–₹18,000 or Premium ₹25,000–₹45,000 for many listings." },
+      { title: "Lead pipeline", text: "See the real-estate CRM page. " + estimate },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "BuilDwellz is a builder site we shipped. Listing pages use the properties you supply.",
+    related: [
+      { href: "/real-estate-builder-website-development-kerala", label: "Builder websites" },
+      { href: "/real-estate-crm-lead-management-kerala", label: "Real estate CRM" },
+      { href: "/work/buildwellz", label: "BuilDwellz story" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Do you find buyers?", a: "No. We build the website. Leads depend on the listings and how you promote them." },
+    ],
+    serviceName: "Real Estate Website Kerala",
+    whatsappText: "Hi, I'm interested in a real estate website",
+  }),
+  page({
+    path: "/furniture-shop-website-kerala",
+    heroImage: "/img/blog/blog-shop-store.jpg",
+    metaTitle: "Furniture Shop Website in Kerala",
+    metaDescription: "Furniture showroom websites in Kerala with a catalogue and WhatsApp enquiry. Online checkout uses the e-commerce packages.",
+    h1: "Furniture shop websites in Kerala",
+    lede: "A showroom site shows sofas, kitchens or office furniture and lets a customer ask for a quote on a piece they can name.",
+    audience: "Furniture shops and modular studios in Kerala.",
+    problem: "Quotes go out as PDFs and never get a follow-up page the customer can reopen.",
+    deliverables: ["Category catalogue", "Quote enquiry", "WhatsApp", "Showroom address", "Checkout only if scoped"],
+    costs: [
+      { title: "Catalogue", text: "Website packages from ₹10,000–₹18,000 standard." },
+      { title: "Online store or lead desk", text: "E-commerce is ₹35,000–₹70,000+. The furniture CRM page is the follow-up desk. " + estimate },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "Kerala Sellers is a marketplace we built. A furniture catalogue is a smaller shop site, not that marketplace.",
+    related: [
+      { href: "/furniture-crm-kerala", label: "Furniture CRM" },
+      { href: "/ecommerce-website-development-kerala", label: "E-commerce websites" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Is this an online store?", a: "Only if you choose the e-commerce scope. Otherwise it is a catalogue and enquiry site." },
+    ],
+    serviceName: "Furniture Shop Website Kerala",
+    whatsappText: "Hi, I'm interested in a furniture shop website",
+  }),
+  page({
+    path: "/car-showroom-website-kerala",
+    heroImage: "/img/blog/blog-phone-website.jpg",
+    metaTitle: "Car Showroom Website in Kerala",
+    metaDescription: "Car showroom websites in Kerala with models and enquiry forms. Sales follow-up is the car dealer CRM, not this brochure.",
+    h1: "Car showroom websites in Kerala",
+    lede: "A showroom page lists models or stock you choose and sends the enquiry to WhatsApp. It does not replace the sales desk.",
+    audience: "New and used car showrooms in Kerala.",
+    problem: "Stock is explained on calls. There is no page with the car, the branch and a way to ask for a visit.",
+    deliverables: ["Model or stock list", "Test-drive or price enquiry", "WhatsApp", "Branch address", "No invented prices"],
+    costs: [
+      { title: "Showroom site", text: "Standard website packages ₹10,000–₹18,000." },
+      { title: "Sales pipeline", text: "Car dealer CRM is a separate page. " + estimate },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "We have not published a named showroom client. Rental sites are a different page.",
+    related: [
+      { href: "/car-dealer-crm-kerala", label: "Car dealer CRM" },
+      { href: "/car-rental-website-kerala", label: "Car rental websites" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Is this for rentals?", a: "No. Rentals have their own page. This is for sales enquiries." },
+    ],
+    serviceName: "Car Showroom Website Kerala",
+    whatsappText: "Hi, I'm interested in a car showroom website",
+  }),
+  page({
+    path: "/wedding-planner-website-kerala",
+    heroImage: "/img/projects/wedding-events.jpg",
+    metaTitle: "Wedding Planner Website in Kerala",
+    metaDescription: "Wedding planner websites in Kerala with galleries and date enquiries. Follow-up for many leads is the wedding planner CRM.",
+    h1: "Wedding planner websites in Kerala",
+    lede: "Couples look at weddings you have already done, then ask if their date is open. The site is that gallery and enquiry.",
+    audience: "Wedding planners and event studios in Kerala.",
+    problem: "The work is on Instagram. There is no page that explains what you plan and how to enquire.",
+    deliverables: ["Gallery", "Services you offer", "Date enquiry", "WhatsApp", "City"],
+    costs: [
+      { title: "Portfolio site", text: "Standard ₹10,000–₹18,000 or Premium ₹25,000–₹45,000." },
+      { title: "Lead desk", text: "Wedding planner CRM is separate. " + estimate },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "Crystal Knot Films is a wedding studio site we shipped. A planner site uses your events, not that studio’s films.",
+    related: [
+      { href: "/wedding-planner-crm-kerala", label: "Wedding planner CRM" },
+      { href: "/photography-website-kerala", label: "Photography websites" },
+      { href: "/work/crystal-knot-films", label: "Crystal Knot Films story" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Do you plan the wedding?", a: "No. We build the website." },
+    ],
+    serviceName: "Wedding Planner Website Kerala",
+    whatsappText: "Hi, I'm interested in a wedding planner website",
+  }),
+  page({
+    path: "/professional-service-website-kerala",
+    heroImage: "/img/blog/blog-team-desk.jpg",
+    metaTitle: "Professional Service Website in Kerala",
+    metaDescription: "Websites for architects, lawyers, accountants and consultants in Kerala. Published website packages. No ranking promise.",
+    h1: "Professional service websites in Kerala",
+    lede: "Architects, lawyers, chartered accountants and consultants need a clear page: who you are, what you do, and how to book a conversation.",
+    audience: "Professional firms in Kerala that are not a shop, hotel or school.",
+    problem: "The firm is known by referral, but there is no page a client can check before they call.",
+    deliverables: ["Services", "Team names you approve", "Enquiry form", "WhatsApp or phone", "Office city"],
+    costs: [
+      { title: "Firm website", text: "Basic ₹5,000–₹8,000 or Standard ₹10,000–₹18,000. " + estimate },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "This covers firm brochure sites. Software for the practice is estimated separately from ₹15,000.",
+    related: [
+      { href: "/website-development", label: "Website development" },
+      { href: "/interior-designer-website-kerala", label: "Interior designer websites" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Can one page cover a CA and a lawyer?", a: "Only if they are the same firm. Separate firms need separate sites." },
+    ],
+    serviceName: "Professional Service Website Kerala",
+    whatsappText: "Hi, I'm interested in a professional service website",
   }),
 ];

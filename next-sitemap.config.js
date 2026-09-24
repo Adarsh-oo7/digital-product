@@ -136,6 +136,12 @@ const ALLOW = new Set([
   '/logistics-website-kerala',
   '/photography-website-kerala',
   '/online-booking-website-kerala',
+  '/travel-agency-website-kerala',
+  '/real-estate-website-kerala',
+  '/furniture-shop-website-kerala',
+  '/car-showroom-website-kerala',
+  '/wedding-planner-website-kerala',
+  '/professional-service-website-kerala',
 ]);
 
 module.exports = {
