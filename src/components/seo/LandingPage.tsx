@@ -87,24 +87,20 @@ export default function LandingPage({ content, children }: { content: LandingCon
       {service && <JsonLd data={service} />}
       {faqSchema && <JsonLd data={faqSchema} />}
       {content.heroImage && (
-        <header className="relative flex min-h-[78vh] items-end overflow-hidden">
-          <Image
-            src={content.heroImage}
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/55 to-black/35" />
-          <div className="relative z-10 mx-auto w-full max-w-4xl px-4 pb-16 pt-36 text-white">
-            <p className="mb-3 text-sm font-medium uppercase tracking-widest text-blue-200">Digital Product Solutions · Kerala</p>
-            <h1 className="text-3xl font-bold leading-tight md:text-5xl">{content.h1}</h1>
-            <p className="mt-4 max-w-3xl text-lg leading-relaxed text-gray-100">{content.lede}</p>
+        <header className="bg-gradient-to-b from-white to-gray-50 px-4 pb-6 pt-28">
+          <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2">
+            <div>
+              <p className="mb-3 inline-block rounded-full bg-blue-50 px-4 py-1 text-sm font-medium text-blue-700">Digital Product Solutions · Kerala</p>
+              <h1 className="text-3xl font-bold leading-tight text-gray-900 md:text-5xl">{content.h1}</h1>
+              <p className="mt-4 text-lg leading-relaxed text-gray-600">{content.lede}</p>
+            </div>
+            <div className="relative h-72 overflow-hidden rounded-3xl border border-gray-100 shadow-lg md:h-[420px]">
+              <Image src={content.heroImage} alt={content.h1} fill priority sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+            </div>
           </div>
         </header>
       )}
-      <div className={content.heroImage ? "mx-auto max-w-4xl px-4 pt-10" : "mx-auto max-w-4xl"}>
+      <div className={content.heroImage ? "mx-auto max-w-6xl px-4 pt-10" : "mx-auto max-w-4xl"}>
         <Breadcrumbs items={crumbs} />
         {!content.heroImage && (
           <>
@@ -119,24 +115,50 @@ export default function LandingPage({ content, children }: { content: LandingCon
             <p className="text-gray-600 leading-relaxed">{content.audience}</p>
           </section>
         )}
-        {content.problem && (
-          <section className="mb-10">
-            <h2 className="text-xl font-bold mb-3">The problem we solve</h2>
-            <p className="text-gray-600 leading-relaxed">{content.problem}</p>
+        {content.heroImage && (content.problem || content.deliverables) ? (
+          <section className="mb-10 grid gap-6 md:grid-cols-2">
+            {content.problem && (
+              <div className="rounded-3xl border border-gray-100 bg-gray-50 p-8">
+                <h2 className="mb-3 text-xl font-bold text-gray-900">The problem</h2>
+                <p className="leading-relaxed text-gray-600">{content.problem}</p>
+              </div>
+            )}
+            {content.deliverables && (
+              <div className="rounded-3xl border border-gray-100 bg-white p-8 shadow-lg">
+                <h2 className="mb-3 text-xl font-bold text-gray-900">How this solves it</h2>
+                <ul className="space-y-2 text-gray-600">
+                  {content.deliverables.map((d) => (
+                    <li key={d} className="flex gap-2">
+                      <span className="text-blue-600">✔</span>
+                      <span>{d}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </section>
-        )}
-        {content.deliverables && (
-          <section className="mb-10">
-            <h2 className="text-xl font-bold mb-3">What you get</h2>
-            <ul className="space-y-2 text-gray-600">
-              {content.deliverables.map((d) => (
-                <li key={d} className="flex gap-2">
-                  <span className="text-blue-600">✔</span>
-                  <span>{d}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
+        ) : (
+          <>
+            {content.problem && (
+              <section className="mb-10">
+                <h2 className="text-xl font-bold mb-3">The problem we solve</h2>
+                <p className="text-gray-600 leading-relaxed">{content.problem}</p>
+              </section>
+            )}
+            {content.deliverables && (
+              <section className="mb-10">
+                <h2 className="text-xl font-bold mb-3">What you get</h2>
+                <ul className="space-y-2 text-gray-600">
+                  {content.deliverables.map((d) => (
+                    <li key={d} className="flex gap-2">
+                      <span className="text-blue-600">✔</span>
+                      <span>{d}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+          </>
         )}
         {children}
         {content.costs && (
