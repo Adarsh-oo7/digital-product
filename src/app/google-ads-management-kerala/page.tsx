@@ -1,11 +1,11 @@
 import { pageMetadata } from "@/lib/seo";
-﻿import Link from "next/link";
+import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "Google Ads Management in Kerala | PPC Agency Trivandrum",
-  description: "Google Ads management for Kerala businesses. ROI-tracked Search, Display & YouTube campaigns for hospitals, real estate, education & retail. Based in Trivandrum.",
+  title: "Google Ads Agency in Kerala & Trivandrum | Best PPC Expert",
+  description: "ROI-driven Google Ads management in Kerala & Trivandrum. Certified Google Ads agency managing high-converting Search, Display & YouTube campaigns from ₹5,000/mo.",
   path: "/google-ads-management-kerala",
-  keywords: "Google Ads management Kerala, PPC agency Trivandrum, Google Ads Kochi, paid search Kerala, Google advertising Kerala",
+  keywords: "google ads agency in trivandrum, google ads agency in kerala, google ads agency kerala, google ads consultant trivandrum, best google ads expert in kerala, google ads services in kerala, ppc agency trivandrum, google ads kochi",
 });
 
 export default function Page() {

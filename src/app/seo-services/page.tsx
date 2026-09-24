@@ -2,10 +2,10 @@ import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "SEO Services in Kerala and Trivandrum",
-  description: "SEO for Kerala businesses from ₹5,000/month. Technical fixes, local pages and Google Business Profile support in Trivandrum and other Kerala cities. No ranking guarantee.",
+  title: "Best SEO Company in Kerala | #1 SEO Agency in Trivandrum",
+  description: "Rank on Google with the best SEO company in Kerala. Technical SEO, Google Maps 3-pack rankings, e-commerce SEO & local search optimization starting from ₹5,000/mo.",
   path: "/seo-services",
-  keywords: "SEO services Kerala, SEO services in Trivandrum, SEO services in Kerala, local SEO Trivandrum, local SEO Kerala, technical SEO",
+  keywords: "best seo company in kerala, best seo agency in kerala, seo services kerala, best seo expert in kerala, ecommerce seo expert kerala, ai seo company kerala, seo company in trivandrum, local seo kerala",
 });
 
 export default function SEOServicesPage() {

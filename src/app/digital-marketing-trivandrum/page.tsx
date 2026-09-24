@@ -2,10 +2,10 @@ import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "Digital Marketing in Trivandrum | ₹3,000/mo | 20+ Clients | Free Audit",
-  description: "Top digital marketing agency in Trivandrum, Kerala. Beat competitors like Easynet Digital with transparent pricing (from ₹3,000/mo), fast Next.js speed, and direct developer communication. Book your free audit today!",
+  title: "Best Digital Marketing Company in Trivandrum | Top Agency Kerala",
+  description: "Partner with the best digital marketing company in Trivandrum. Proven SEO, Google Ads, social media marketing & lead generation for Kerala businesses from ₹3,000/mo.",
   path: "/digital-marketing-trivandrum",
-  keywords: "digital marketing trivandrum, digital marketing agency in trivandrum, online marketing trivandrum, digital marketing company in trivandrum, best digital marketing company trivandrum",
+  keywords: "best digital marketing company in trivandrum, digital marketing agency in trivandrum, best digital marketing agency in trivandrum, digital marketing in trivandrum, digital marketing companies in trivandrum",
 });
 
 export default function DigitalMarketingTrivandrum() {

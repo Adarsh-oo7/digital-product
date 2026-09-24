@@ -2,10 +2,10 @@ import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "Custom Android and iOS App Development",
-  description: "Catalogue, booking and operations apps for Android and iOS. Published starting price ₹25,000. Kerala local work lives on the app development in Kerala page.",
+  title: "Android & iOS App Development Company in Kerala & Trivandrum",
+  description: "Custom Android and iOS mobile app development in Kerala & Trivandrum. Native & Flutter apps with backend API, Play Store & App Store publishing from ₹25,000.",
   path: "/app-development",
-  keywords: "app development, Android app, iOS app, Flutter, React Native",
+  keywords: "android app development company in kerala, app development company in kerala, android app development in thiruvananthapuram, app development in thiruvananthapuram, flutter app development kerala",
 });
 
 export default function AppDevelopmentPage() {
