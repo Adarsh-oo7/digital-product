@@ -142,6 +142,10 @@ const ALLOW = new Set([
   '/car-showroom-website-kerala',
   '/wedding-planner-website-kerala',
   '/professional-service-website-kerala',
+  '/vehicle-service-website-kerala',
+  '/jewellery-crm-kerala',
+  '/construction-crm-kerala',
+  '/clinic-management-software-kerala',
 ]);
 
 module.exports = {
