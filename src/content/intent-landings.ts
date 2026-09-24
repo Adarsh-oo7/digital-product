@@ -25,7 +25,7 @@ export function landing(path: string): LandingContent {
 export const intentLandings: LandingContent[] = [
   page({
     path: "/hotel-booking-website-kerala",
-    heroImage: "/img/projects/mangrove-spot.jpg",
+    heroImage: "/img/pages/hotel-booking.jpg",
     metaTitle: "Hotel Booking Website in Kerala",
     metaDescription:
       "Hotel booking websites for Kerala properties: rooms, availability, payment and WhatsApp. Booking engines are listed from ₹60,000. Ask for an estimate.",
@@ -64,7 +64,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/homestay-booking-website-kerala",
-    heroImage: "/img/projects/mangrove-moments.jpg",
+    heroImage: "/img/pages/homestay-booking.jpg",
     metaTitle: "Homestay Booking Website in Kerala",
     metaDescription:
       "Homestay and villa websites in Kerala with dates, house rules and WhatsApp confirmation. A simple site can fit published website packages. Ask for an estimate.",
@@ -101,7 +101,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/jewellery-website-kerala",
-    heroImage: "/img/industries/jewellery-shop.jpg",
+    heroImage: "/img/pages/jewellery-website.jpg",
     metaTitle: "Jewellery Website in Kerala",
     metaDescription:
       "Jewellery and gold-shop websites in Kerala: catalogue, enquiry and WhatsApp. Shop sites use published website or e-commerce ranges. Request an estimate.",
@@ -138,7 +138,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/salon-booking-website-kerala",
-    heroImage: "/img/industries/salon-booking.jpg",
+    heroImage: "/img/pages/salon-website.jpg",
     metaTitle: "Salon Booking Website in Kerala",
     metaDescription:
       "Salon and spa websites in Kerala with services, staff and appointment requests on WhatsApp. Simple sites use published website packages.",
@@ -175,7 +175,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/interior-designer-website-kerala",
-    heroImage: "/img/industries/interior-studio.jpg",
+    heroImage: "/img/pages/interior-website.jpg",
     metaTitle: "Interior Designer Website in Kerala",
     metaDescription:
       "Interior designer websites in Kerala: project photos, rooms and an enquiry form. Portfolio sites use published website packages. CRM is a separate scope.",
@@ -212,7 +212,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/gym-membership-website-kerala",
-    heroImage: "/img/industries/gym-membership.jpg",
+    heroImage: "/img/pages/gym-website.jpg",
     metaTitle: "Gym Membership Website in Kerala",
     metaDescription:
       "Gym websites in Kerala with plans, trial requests and WhatsApp. A membership desk with renewals is custom software from ₹15,000.",
@@ -249,7 +249,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/manufacturing-website-kerala",
-    heroImage: "/img/industries/factory-catalogue.jpg",
+    heroImage: "/img/pages/factory-website.jpg",
     metaTitle: "Manufacturing Website in Kerala",
     metaDescription:
       "Factory and B2B catalogue websites in Kerala for product enquiries and dealer requests. Catalogue sites use published website packages.",
@@ -286,7 +286,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/car-rental-website-kerala",
-    heroImage: "/img/industries/car-rental.jpg",
+    heroImage: "/img/pages/rental-website.jpg",
     metaTitle: "Car Rental Website in Kerala",
     metaDescription:
       "Car rental websites in Kerala with vehicles, date requests and WhatsApp. A fleet desk is custom software from ₹15,000. Dealer CRM is a different page.",
@@ -323,7 +323,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/coaching-centre-website-kerala",
-    heroImage: "/img/industries/coaching-class.jpg",
+    heroImage: "/img/pages/coaching-website.jpg",
     metaTitle: "Coaching Centre Website in Kerala",
     metaDescription:
       "Tuition and coaching websites in Kerala with courses and admission enquiries. A student portal is custom software from ₹15,000.",
@@ -360,7 +360,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/logistics-website-kerala",
-    heroImage: "/img/industries/logistics-yard.jpg",
+    heroImage: "/img/pages/logistics-website.jpg",
     metaTitle: "Logistics Website in Kerala",
     metaDescription:
       "Logistics and transport websites in Kerala with services and a booking enquiry. Live tracking is custom software from ₹15,000, not a brochure page.",
@@ -396,7 +396,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/photography-website-kerala",
-    heroImage: "/img/projects/crystalknot.jpg",
+    heroImage: "/img/pages/photography-website.jpg",
     metaTitle: "Photography Website in Kerala",
     metaDescription:
       "Photographer and wedding studio websites in Kerala: galleries and date enquiries. Crystal Knot Films is a studio site we shipped.",
@@ -433,7 +433,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/online-booking-website-kerala",
-    heroImage: "/img/industries/online-booking.jpg",
+    heroImage: "/img/pages/booking-website.jpg",
     metaTitle: "Online Booking Website in Kerala",
     metaDescription:
       "Booking and appointment websites for Kerala businesses: hotels, salons, gyms and clinics. Request a scope before you assume payment is included.",
@@ -472,7 +472,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/travel-agency-website-kerala",
-    heroImage: "/img/industries/travel-desk.jpg",
+    heroImage: "/img/pages/travel-website.jpg",
     metaTitle: "Travel Agency Website in Kerala",
     metaDescription: "Tour package websites for Kerala travel agencies: packages, enquiry and WhatsApp. A booking desk is custom software from ₹15,000.",
     h1: "Travel agency websites in Kerala",
@@ -500,7 +500,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/real-estate-website-kerala",
-    heroImage: "/img/industries/property-listing.jpg",
+    heroImage: "/img/pages/property-website.jpg",
     metaTitle: "Real Estate Website in Kerala",
     metaDescription: "Property listing websites for Kerala agents and builders. Enquiry forms use published website packages. A lead desk is the real-estate CRM.",
     h1: "Real estate websites in Kerala",
@@ -529,7 +529,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/furniture-shop-website-kerala",
-    heroImage: "/img/industries/furniture-showroom.jpg",
+    heroImage: "/img/pages/furniture-website.jpg",
     metaTitle: "Furniture Shop Website in Kerala",
     metaDescription: "Furniture showroom websites in Kerala with a catalogue and WhatsApp enquiry. Online checkout uses the e-commerce packages.",
     h1: "Furniture shop websites in Kerala",
@@ -557,7 +557,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/car-showroom-website-kerala",
-    heroImage: "/img/industries/car-showroom.jpg",
+    heroImage: "/img/pages/showroom-website.jpg",
     metaTitle: "Car Showroom Website in Kerala",
     metaDescription: "Car showroom websites in Kerala with models and enquiry forms. Sales follow-up is the car dealer CRM, not this brochure.",
     h1: "Car showroom websites in Kerala",
@@ -585,7 +585,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/wedding-planner-website-kerala",
-    heroImage: "/img/projects/wedding-events.jpg",
+    heroImage: "/img/pages/wedding-website.jpg",
     metaTitle: "Wedding Planner Website in Kerala",
     metaDescription: "Wedding planner websites in Kerala with galleries and date enquiries. Follow-up for many leads is the wedding planner CRM.",
     h1: "Wedding planner websites in Kerala",
@@ -614,7 +614,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/professional-service-website-kerala",
-    heroImage: "/img/industries/professional-office.jpg",
+    heroImage: "/img/pages/office-website.jpg",
     metaTitle: "Professional Service Website in Kerala",
     metaDescription: "Websites for architects, lawyers, accountants and consultants in Kerala. Published website packages. No ranking promise.",
     h1: "Professional service websites in Kerala",
@@ -641,7 +641,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/vehicle-service-website-kerala",
-    heroImage: "/img/industries/vehicle-workshop.jpg",
+    heroImage: "/img/pages/workshop-website.jpg",
     metaTitle: "Vehicle Service Booking Website in Kerala",
     metaDescription: "Workshop and car service websites in Kerala: services, appointment requests and WhatsApp. A service desk is custom software from ₹15,000.",
     h1: "Vehicle service booking websites in Kerala",
@@ -670,7 +670,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/jewellery-crm-kerala",
-    heroImage: "/img/industries/jewellery-shop.jpg",
+    heroImage: "/img/pages/jewellery-crm.jpg",
     metaTitle: "Jewellery CRM and Inventory Software in Kerala",
     metaDescription: "Jewellery customer, enquiry and inventory software for Kerala gold shops. Custom software starts at ₹15,000. The shop website is a separate page.",
     h1: "Jewellery CRM and inventory software in Kerala",
@@ -699,7 +699,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/construction-crm-kerala",
-    heroImage: "/img/projects/buildwellz.jpg",
+    heroImage: "/img/pages/construction-crm.jpg",
     metaTitle: "Construction CRM in Kerala",
     metaDescription: "Enquiry and project follow-up software for Kerala builders and contractors. Custom software starts at ₹15,000. The company website is a separate page.",
     h1: "Construction CRM for Kerala builders",
@@ -728,7 +728,7 @@ export const intentLandings: LandingContent[] = [
   }),
   page({
     path: "/clinic-management-software-kerala",
-    heroImage: "/img/industries/clinic-desk.jpg",
+    heroImage: "/img/pages/clinic-software.jpg",
     metaTitle: "Clinic Management Software in Kerala",
     metaDescription: "Appointment and patient follow-up software for Kerala clinics. Custom software starts at ₹15,000. The public clinic website is a separate page.",
     h1: "Clinic management software in Kerala",
