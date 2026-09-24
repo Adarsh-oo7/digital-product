@@ -124,6 +124,18 @@ const ALLOW = new Set([
   '/terms-of-service',
   '/data-deletion',
   '/freelance-software-developer-kerala',
+  '/hotel-booking-website-kerala',
+  '/homestay-booking-website-kerala',
+  '/jewellery-website-kerala',
+  '/salon-booking-website-kerala',
+  '/interior-designer-website-kerala',
+  '/gym-membership-website-kerala',
+  '/manufacturing-website-kerala',
+  '/car-rental-website-kerala',
+  '/coaching-centre-website-kerala',
+  '/logistics-website-kerala',
+  '/photography-website-kerala',
+  '/online-booking-website-kerala',
 ]);
 
 module.exports = {

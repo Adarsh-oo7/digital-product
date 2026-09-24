@@ -1,0 +1,461 @@
+import type { LandingContent } from "@/components/seo/LandingPage";
+
+const estimate =
+  "Figures are starting ranges published on this website. GST, hosting, domain and payment-gateway fees are confirmed in the written estimate.";
+
+const sharedProcess: LandingContent["process"] = [
+  { title: "Scope", text: "We confirm pages, enquiry or booking steps, and who supplies photos and prices." },
+  { title: "Build", text: "Mobile layout, WhatsApp, and the booking or catalogue flow agreed in the estimate." },
+  { title: "Launch", text: "You check the live URL. Domain stays in your name. Support terms are written down." },
+];
+
+const sharedOwnership =
+  "You should own the domain. Hosting and gateway fees are separate unless the estimate includes them. We do not promise a Google position.";
+
+function page(content: LandingContent): LandingContent {
+  return content;
+}
+
+export function landing(path: string): LandingContent {
+  const item = intentLandings.find((entry) => entry.path === path);
+  if (!item) throw new Error(`Missing landing ${path}`);
+  return item;
+}
+
+export const intentLandings: LandingContent[] = [
+  page({
+    path: "/hotel-booking-website-kerala",
+    metaTitle: "Hotel Booking Website in Kerala",
+    metaDescription:
+      "Hotel booking websites for Kerala properties: rooms, availability, payment and WhatsApp. Booking engines are listed from ₹60,000. Ask for an estimate.",
+    h1: "Hotel booking website development in Kerala",
+    lede: "A booking page is for guests who want a room date and a way to pay or request it, without only sending them to an OTA listing.",
+    audience: "Hotels and resorts in Kerala that already know their room types and want direct enquiries or a scoped booking step.",
+    problem: "A photo gallery does not take a date. Guests still message on WhatsApp or book on an OTA if the site cannot show rooms and how to reserve.",
+    deliverables: [
+      "Room types with rates you supply",
+      "Date enquiry or a booking step if scoped",
+      "Online payment only when a gateway is included",
+      "WhatsApp handoff with the room and date",
+      "Map, phone and house rules",
+    ],
+    costs: [
+      { title: "Property website", text: "The hotel page on this site lists a basic property site from ₹35,000." },
+      { title: "Booking engine", text: "The same page lists online booking integration from ₹60,000. " + estimate },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "Mangrove Moments and Mangrove Spot are hospitality sites we shipped. This page is the booking intent. The broader hotel site page covers galleries and property types.",
+    related: [
+      { href: "/website-development-for-hotels-resorts-kerala", label: "Hotel and resort websites in Kerala" },
+      { href: "/homestay-booking-website-kerala", label: "Homestay and villa booking websites" },
+      { href: "/whatsapp-automation-kerala", label: "WhatsApp automation" },
+      { href: "/work", label: "Project stories" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Is this an OTA?", a: "No. It is your site. Guests can still use OTAs. The page is for direct enquiries or a booking step you approve." },
+      { q: "Do you guarantee more direct bookings?", a: "No. We build the flow. Occupancy depends on the property, price and photos." },
+      { q: "Can guests pay online?", a: "Only if the estimate includes a payment gateway. Gateway fees are the provider’s, not a hidden line in the website package." },
+    ],
+    serviceName: "Hotel Booking Website Kerala",
+    whatsappText: "Hi, I'm interested in a hotel booking website",
+  }),
+  page({
+    path: "/homestay-booking-website-kerala",
+    metaTitle: "Homestay Booking Website in Kerala",
+    metaDescription:
+      "Homestay and villa websites in Kerala with dates, house rules and WhatsApp confirmation. A simple site can fit published website packages. Ask for an estimate.",
+    h1: "Homestay and villa booking websites in Kerala",
+    lede: "Homestay owners usually need one property, a few rooms, house rules, and a clear way for a guest to ask if those dates are free.",
+    audience: "Homestays, villas and small stays in Kerala that confirm bookings on WhatsApp or a short form.",
+    problem: "Listing only on Airbnb or Instagram leaves no page you control when a guest searches the stay name.",
+    deliverables: [
+      "Stay story, rooms and house rules",
+      "Date enquiry form",
+      "WhatsApp message with dates filled in",
+      "Map and directions",
+      "Gallery from photos you supply",
+    ],
+    costs: [
+      { title: "Enquiry site", text: "A small stay page can fit Standard website packages, ₹10,000–₹18,000, when there is no live payment. " + estimate },
+      { title: "Payment or calendar sync", text: "That is scoped separately. Hotel booking engines on this site are listed from ₹60,000." },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "Hospitality examples on this site are Mangrove Moments and Mangrove Spot. A homestay is a smaller scope than a resort booking engine.",
+    related: [
+      { href: "/hotel-booking-website-kerala", label: "Hotel booking websites" },
+      { href: "/website-development-for-hotels-resorts-kerala", label: "Hotel and resort websites" },
+      { href: "/whatsapp-automation-kerala", label: "WhatsApp automation" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Will this replace Airbnb?", a: "No. It is your own page for guests who already know the stay or find the name." },
+      { q: "Can one page cover a villa and a homestay?", a: "Yes, if it is the same owner and the same enquiry flow. A second property is extra pages." },
+    ],
+    serviceName: "Homestay Booking Website Kerala",
+    whatsappText: "Hi, I'm interested in a homestay booking website",
+  }),
+  page({
+    path: "/jewellery-website-kerala",
+    metaTitle: "Jewellery Website in Kerala",
+    metaDescription:
+      "Jewellery and gold-shop websites in Kerala: catalogue, enquiry and WhatsApp. Shop sites use published website or e-commerce ranges. Request an estimate.",
+    h1: "Jewellery shop websites in Kerala",
+    lede: "A jewellery site is a catalogue customers can trust: pieces, making charges you publish, and a WhatsApp enquiry that names the design.",
+    audience: "Gold shops and jewellery stores in Kerala that sell in person and want a catalogue online.",
+    problem: "Design photos sit on Instagram. Customers still ask weight, making charge and whether the piece is in the shop.",
+    deliverables: [
+      "Catalogue categories you choose",
+      "Enquiry with product name",
+      "WhatsApp link",
+      "Shop address and hours",
+      "Online checkout only if an e-commerce scope is agreed",
+    ],
+    costs: [
+      { title: "Catalogue site", text: "Brochure and catalogue sites follow published website packages from ₹5,000–₹8,000 basic and ₹10,000–₹18,000 standard." },
+      { title: "Online store", text: "E-commerce packages are listed at ₹35,000–₹70,000+. " + estimate },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "We have shipped product brands such as Squeeze Berriez and the Kerala Sellers marketplace. A jewellery catalogue is scoped to your stock, not copied from those projects.",
+    related: [
+      { href: "/ecommerce-website-development-kerala", label: "E-commerce websites in Kerala" },
+      { href: "/whatsapp-automation-kerala", label: "WhatsApp automation" },
+      { href: "/online-store-development-trivandrum", label: "Online store development in Trivandrum" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Do you photograph the gold?", a: "No. You supply photos. A photographer is a separate cost." },
+      { q: "Is this a billing or inventory system?", a: "Not unless that software is scoped. This page is the customer website. Inventory software starts from the custom software range, ₹15,000." },
+    ],
+    serviceName: "Jewellery Website Kerala",
+    whatsappText: "Hi, I'm interested in a jewellery website",
+  }),
+  page({
+    path: "/salon-booking-website-kerala",
+    metaTitle: "Salon Booking Website in Kerala",
+    metaDescription:
+      "Salon and spa websites in Kerala with services, staff and appointment requests on WhatsApp. Simple sites use published website packages.",
+    h1: "Salon booking websites in Kerala",
+    lede: "A salon page lists services and prices you set, then lets a customer ask for a time instead of only calling during a haircut.",
+    audience: "Salons, spas and beauty parlours in Kerala with a fixed menu of services.",
+    problem: "Bookings live in one staff member’s phone. Missed calls become empty chairs.",
+    deliverables: [
+      "Service menu",
+      "Staff or branch note if you have more than one",
+      "Appointment request with service and preferred time",
+      "WhatsApp confirmation path",
+      "Map and hours",
+    ],
+    costs: [
+      { title: "Appointment request site", text: "Fits published website packages when you confirm the slot yourself. Basic ₹5,000–₹8,000, Standard ₹10,000–₹18,000." },
+      { title: "Memberships or automatic reminders", text: "Those are software or WhatsApp automation. WhatsApp automation is listed from ₹10,000. " + estimate },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "This is a new service page. Closest live pattern is enquiry and WhatsApp work on our other Kerala business sites, not a salon brand we can name here.",
+    related: [
+      { href: "/online-booking-website-kerala", label: "Online booking websites" },
+      { href: "/whatsapp-automation-kerala", label: "WhatsApp automation" },
+      { href: "/clinic-website-development-kerala", label: "Clinic websites, if you also need appointments for a clinic" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Will the site block double bookings?", a: "Only if a real calendar is scoped. A request form does not lock the chair until your staff confirms." },
+      { q: "Can I take a deposit?", a: "Yes, if a payment gateway is in the estimate." },
+    ],
+    serviceName: "Salon Booking Website Kerala",
+    whatsappText: "Hi, I'm interested in a salon booking website",
+  }),
+  page({
+    path: "/interior-designer-website-kerala",
+    metaTitle: "Interior Designer Website in Kerala",
+    metaDescription:
+      "Interior designer websites in Kerala: project photos, rooms and an enquiry form. Portfolio sites use published website packages. CRM is a separate scope.",
+    h1: "Interior designer websites in Kerala",
+    lede: "Clients hire from rooms they can see. The site is the portfolio, the enquiry, and a way to say which project they liked.",
+    audience: "Interior studios in Kerala that need a public portfolio, not only a lead spreadsheet.",
+    problem: "Project photos stay on Instagram. The studio has no page that shows a full home and how to start a brief.",
+    deliverables: [
+      "Project gallery",
+      "Services such as home, office or kitchen",
+      "Enquiry that names the project",
+      "WhatsApp",
+      "Studio city and phone",
+    ],
+    costs: [
+      { title: "Portfolio site", text: "Standard packages ₹10,000–₹18,000 suit a studio with several projects. Premium ₹25,000–₹45,000 if the gallery is large." },
+      { title: "Lead desk", text: "Follow-up for many enquiries is the interior CRM page, not this portfolio. " + estimate },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "Crystal Knot Films is a portfolio-style site we shipped for a studio. Interior work would use your project photos the same way.",
+    related: [
+      { href: "/interior-design-crm-kerala", label: "Interior design CRM" },
+      { href: "/construction-website-development-kerala", label: "Construction company websites" },
+      { href: "/work/crystal-knot-films", label: "Crystal Knot Films story" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Is this the CRM?", a: "No. This is the public website. The CRM is for tracking quotes after the enquiry arrives." },
+      { q: "Do you style the rooms?", a: "No. We build the site from photos and text you approve." },
+    ],
+    serviceName: "Interior Designer Website Kerala",
+    whatsappText: "Hi, I'm interested in an interior designer website",
+  }),
+  page({
+    path: "/gym-membership-website-kerala",
+    metaTitle: "Gym Membership Website in Kerala",
+    metaDescription:
+      "Gym websites in Kerala with plans, trial requests and WhatsApp. A membership desk with renewals is custom software from ₹15,000.",
+    h1: "Gym membership websites in Kerala",
+    lede: "The public page shows plans and a trial request. Renewals, attendance and member logins are a software scope, not a one-page brochure.",
+    audience: "Gyms and yoga studios in Kerala that want a site for plans and trial sign-up.",
+    problem: "Trials are booked in comments and DMs. The owner cannot see who asked for this week.",
+    deliverables: [
+      "Plans and prices you publish",
+      "Trial or join request",
+      "WhatsApp",
+      "Timetable if you supply it",
+      "Branch address",
+    ],
+    costs: [
+      { title: "Public site", text: "Website packages from ₹5,000–₹8,000 basic or ₹10,000–₹18,000 standard." },
+      { title: "Member desk", text: "Attendance, renewals and reminders start from custom software at ₹15,000, or the gym CRM page if you need a pipeline. " + estimate },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "The gym CRM page is the lead desk. This page is the public membership site. We do not claim a named gym client here.",
+    related: [
+      { href: "/gym-crm-kerala", label: "Gym CRM in Kerala" },
+      { href: "/online-booking-website-kerala", label: "Online booking websites" },
+      { href: "/whatsapp-automation-kerala", label: "WhatsApp automation" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Does the site mark attendance?", a: "Not in the website package. Attendance is software and has to be estimated." },
+      { q: "Can members pay the plan online?", a: "Only with a payment gateway in the estimate." },
+    ],
+    serviceName: "Gym Membership Website Kerala",
+    whatsappText: "Hi, I'm interested in a gym membership website",
+  }),
+  page({
+    path: "/manufacturing-website-kerala",
+    metaTitle: "Manufacturing Website in Kerala",
+    metaDescription:
+      "Factory and B2B catalogue websites in Kerala for product enquiries and dealer requests. Catalogue sites use published website packages.",
+    h1: "Manufacturing and B2B catalogue websites in Kerala",
+    lede: "Buyers and dealers need product lines, a location, and an enquiry that says which product they want. They do not need a shop checkout unless you sell retail.",
+    audience: "Factories, exporters and industrial suppliers in Kerala.",
+    problem: "The PDF catalogue is emailed one buyer at a time. There is no page a purchasing officer can open.",
+    deliverables: [
+      "Product or line catalogue",
+      "Dealer or buyer enquiry",
+      "Plant location and phone",
+      "Downloads you supply, such as a spec sheet",
+      "No public prices unless you want them shown",
+    ],
+    costs: [
+      { title: "Catalogue site", text: "Standard ₹10,000–₹18,000 or Premium ₹25,000–₹45,000 depending on the number of products." },
+      { title: "Dealer portal", text: "Logins and order forms are custom software from ₹15,000. " + estimate },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "Squeeze Berriez is a product brand site. A factory catalogue is the same kind of build with your specifications, not a copy of that brand.",
+    related: [
+      { href: "/ecommerce-website-development-kerala", label: "E-commerce, if you also sell a public catalogue" },
+      { href: "/odoo-erp-development-kerala", label: "Odoo ERP for operations" },
+      { href: "/software-development", label: "Custom software" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Will you write technical specs?", a: "No. Your team supplies approved product text." },
+      { q: "Is this an ERP?", a: "No. ERP and Odoo are separate pages and a separate estimate." },
+    ],
+    serviceName: "Manufacturing Website Kerala",
+    whatsappText: "Hi, I'm interested in a manufacturing website",
+  }),
+  page({
+    path: "/car-rental-website-kerala",
+    metaTitle: "Car Rental Website in Kerala",
+    metaDescription:
+      "Car rental websites in Kerala with vehicles, date requests and WhatsApp. A fleet desk is custom software from ₹15,000. Dealer CRM is a different page.",
+    h1: "Car rental websites in Kerala",
+    lede: "A rental site shows cars, deposits you set, and a request for pickup date and place. It is not a used-car sales CRM.",
+    audience: "Car rental and self-drive operators in Kerala.",
+    problem: "Availability is answered on calls. The website, if any, is a phone number and a logo.",
+    deliverables: [
+      "Vehicle list",
+      "Date and place request",
+      "Deposit and document notes you write",
+      "WhatsApp",
+      "Pickup locations",
+    ],
+    costs: [
+      { title: "Request site", text: "Website packages from ₹10,000–₹18,000 for a standard vehicle list." },
+      { title: "Live fleet calendar", text: "Custom software from ₹15,000. Sales-lead CRM for dealers is the car dealer CRM page. " + estimate },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "We have not published a named car-rental client. The car dealer CRM page is for sales leads. This page is for rental requests.",
+    related: [
+      { href: "/car-dealer-crm-kerala", label: "Car dealer CRM" },
+      { href: "/online-booking-website-kerala", label: "Online booking websites" },
+      { href: "/whatsapp-automation-kerala", label: "WhatsApp automation" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Does the site block a car that is already out?", a: "Only if a fleet calendar is built. A request form does not know your yard." },
+      { q: "Is this for used-car sales?", a: "No. Used-car and showroom leads belong on the car dealer CRM page." },
+    ],
+    serviceName: "Car Rental Website Kerala",
+    whatsappText: "Hi, I'm interested in a car rental website",
+  }),
+  page({
+    path: "/coaching-centre-website-kerala",
+    metaTitle: "Coaching Centre Website in Kerala",
+    metaDescription:
+      "Tuition and coaching websites in Kerala with courses and admission enquiries. A student portal is custom software from ₹15,000.",
+    h1: "Coaching and tuition centre websites in Kerala",
+    lede: "Parents look for the course, the batch timing, and how to ask for a seat. A full school ERP is a different product.",
+    audience: "Tuition centres and coaching institutes in Kerala.",
+    problem: "Admissions are collected on paper and WhatsApp status forwards. There is no course page to send a parent.",
+    deliverables: [
+      "Courses and batches you list",
+      "Admission enquiry",
+      "WhatsApp",
+      "Centre address",
+      "Results or faculty only from text you approve",
+    ],
+    costs: [
+      { title: "Centre website", text: "Standard website packages ₹10,000–₹18,000." },
+      { title: "Fees, attendance, parent login", text: "School software and custom portals start at published software prices from ₹15,000. See the school management page for that scope. " + estimate },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "School website and school software pages already exist for campuses. This page is for a coaching or tuition centre.",
+    related: [
+      { href: "/school-website-development-kerala", label: "School websites" },
+      { href: "/school-education-management-software-kerala", label: "School management software" },
+      { href: "/education-admission-crm-kerala", label: "Admission CRM" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Can parents pay fees on the site?", a: "Only if fee collection is scoped. It is not part of a basic centre website." },
+      { q: "Is this a school ERP?", a: "No. ERP, attendance and parent apps are the school software page." },
+    ],
+    serviceName: "Coaching Centre Website Kerala",
+    whatsappText: "Hi, I'm interested in a coaching centre website",
+  }),
+  page({
+    path: "/logistics-website-kerala",
+    metaTitle: "Logistics Website in Kerala",
+    metaDescription:
+      "Logistics and transport websites in Kerala with services and a booking enquiry. Live tracking is custom software from ₹15,000, not a brochure page.",
+    h1: "Logistics company websites in Kerala",
+    lede: "A transport company needs lanes, vehicle types, and a way for a customer to ask for a pickup. Parcel tracking is software.",
+    audience: "Logistics, courier and fleet operators in Kerala.",
+    problem: "Customers call to ask if you cover a route. The answer is not on a page they can forward.",
+    deliverables: [
+      "Services and routes you name",
+      "Pickup or quote request",
+      "WhatsApp",
+      "Office address",
+      "Tracking only if a software scope is agreed",
+    ],
+    costs: [
+      { title: "Company site", text: "Standard website packages ₹10,000–₹18,000." },
+      { title: "Tracking or fleet desk", text: "Custom software from ₹15,000. " + estimate },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "We have not published a named logistics client. The page describes the website scope only.",
+    related: [
+      { href: "/software-development", label: "Custom software" },
+      { href: "/whatsapp-automation-kerala", label: "WhatsApp automation" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Will customers track a parcel?", a: "Not on a brochure site. Tracking needs a system and an estimate." },
+      { q: "Do you integrate GPS?", a: "Only if that integration is written into the software scope." },
+    ],
+    serviceName: "Logistics Website Kerala",
+    whatsappText: "Hi, I'm interested in a logistics website",
+  }),
+  page({
+    path: "/photography-website-kerala",
+    metaTitle: "Photography Website in Kerala",
+    metaDescription:
+      "Photographer and wedding studio websites in Kerala: galleries and date enquiries. Crystal Knot Films is a studio site we shipped.",
+    h1: "Photography websites in Kerala",
+    lede: "Couples and clients judge the pictures first. The site is the gallery plus a date enquiry, not a CRM for the studio inbox.",
+    audience: "Wedding and event photographers in Kerala.",
+    problem: "The work is on Instagram grids. There is no album page and no form that asks for the wedding date.",
+    deliverables: [
+      "Gallery sections you choose",
+      "Date and event enquiry",
+      "WhatsApp",
+      "City and phone",
+      "No watermarking tool unless scoped",
+    ],
+    costs: [
+      { title: "Portfolio site", text: "Standard ₹10,000–₹18,000 or Premium ₹25,000–₹45,000 for a large gallery." },
+      { title: "Lead follow-up", text: "The photography CRM page is the desk after the enquiry. " + estimate },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "Crystal Knot Films is a wedding studio site we built. Your gallery would use your own films and photos.",
+    related: [
+      { href: "/work/crystal-knot-films", label: "Crystal Knot Films story" },
+      { href: "/photography-crm-kerala", label: "Photography CRM" },
+      { href: "/wedding-planner-crm-kerala", label: "Wedding planner CRM" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Will you shoot the weddings?", a: "No. We build the website." },
+      { q: "Is this a booking calendar?", a: "The page takes a date request. It does not lock your weekend unless a calendar is scoped." },
+    ],
+    serviceName: "Photography Website Kerala",
+    whatsappText: "Hi, I'm interested in a photography website",
+  }),
+  page({
+    path: "/online-booking-website-kerala",
+    metaTitle: "Online Booking Website in Kerala",
+    metaDescription:
+      "Booking and appointment websites for Kerala businesses: hotels, salons, gyms and clinics. Request a scope before you assume payment is included.",
+    h1: "Online booking websites in Kerala",
+    lede: "Booking means a customer can ask for a time or a date on your site. A locked calendar and online payment are extra scope.",
+    audience: "Hotels, salons, clinics, gyms and rental desks that want one enquiry path.",
+    problem: "Each industry page on this site covers one trade. This page is the shared booking idea, with links to the specific ones.",
+    deliverables: [
+      "Service or inventory list",
+      "Date or time request",
+      "WhatsApp summary",
+      "Payment only if scoped",
+      "A link to the industry page that matches the business",
+    ],
+    costs: [
+      { title: "Request form on a website", text: "Often inside Standard website packages, ₹10,000–₹18,000." },
+      { title: "Live availability and payment", text: "Hotel booking engines are listed from ₹60,000. Other systems start from custom software at ₹15,000. " + estimate },
+    ],
+    process: sharedProcess,
+    ownership: sharedOwnership,
+    proof: "Use the industry page closest to the business. Hospitality examples are Mangrove Moments and Mangrove Spot.",
+    related: [
+      { href: "/hotel-booking-website-kerala", label: "Hotel booking websites" },
+      { href: "/salon-booking-website-kerala", label: "Salon booking websites" },
+      { href: "/gym-membership-website-kerala", label: "Gym membership websites" },
+      { href: "/clinic-website-development-kerala", label: "Clinic websites" },
+      { href: "/whatsapp-automation-kerala", label: "WhatsApp automation" },
+      { href: "/contact", label: "Get a project estimate" },
+    ],
+    faqs: [
+      { q: "Which page should I open?", a: "Hotel, homestay, salon, gym, clinic or car rental. This page only explains the shared booking scope." },
+      { q: "Do you promise the calendar will never double-book?", a: "No. That depends on a system that knows your real availability." },
+    ],
+    serviceName: "Online Booking Website Kerala",
+    whatsappText: "Hi, I'm interested in an online booking website",
+  }),
+];
