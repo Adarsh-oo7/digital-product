@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link';
 import ParticleNetwork from '@/components/ParticleNetwork';
 import { motion } from 'framer-motion'
 import CtaBand from '@/components/seo/CtaBand';
@@ -12,7 +13,10 @@ import {
   Smartphone,
   Palette,
   Gauge,
-  Wrench
+  Wrench,
+  Bot,
+  MessageCircle,
+  Database
 } from 'lucide-react';
 
 const services = [
@@ -20,46 +24,79 @@ const services = [
     title: 'Web Development',
     description: 'Custom websites and web applications tailored to your specific needs. We use cutting-edge technologies to ensure your site is fast, secure, and scalable.',
     icon: Code,
+    link: '/website-development',
   },
   {
     title: 'E-commerce Solutions',
     description: 'Powerful online stores that drive sales and improve customer experience. We integrate secure payment gateways and optimize for mobile shopping.',
     icon: ShoppingCart,
+    link: '/ecommerce-website-development-kerala',
   },
   {
     title: 'SEO Optimization',
     description: 'Improve your online visibility and attract more customers to your website. We use data-driven strategies to boost your search engine rankings and increase organic traffic.',
     icon: Search,
+    link: '/seo-services-kerala',
+  },
+  {
+    title: 'Mobile App Development',
+    description: 'Native and cross-platform mobile apps for Android & iOS built with Flutter and React Native. Clean code, high performance, and published prices.',
+    icon: Smartphone,
+    link: '/app-development-kerala',
+  },
+  {
+    title: 'WhatsApp Automation',
+    description: 'Official Meta Cloud API automation, automated customer replies, order notification broadcasts, and lead capture for Kerala businesses.',
+    icon: MessageCircle,
+    link: '/whatsapp-automation-kerala',
+  },
+  {
+    title: 'AI Solutions & Chatbots',
+    description: 'Intelligent AI agents, customer support chatbots, and machine learning automations tailored to reduce business operational hours.',
+    icon: Bot,
+    link: '/ai-services',
+  },
+  {
+    title: 'Kerala Industry CRM Software',
+    description: 'Industry-specific lead management CRM software for real estate, clinics, gyms, wedding planners, coaching centres, and travel agencies.',
+    icon: Database,
+    link: '/crm-software-kerala',
   },
   {
     title: 'Responsive Design',
-    description: 'Ensure your website looks great on all devices with our expertise in responsive web design using Bootstrap and CSS. Provide a seamless experience for your users.',
+    description: 'Ensure your website looks great on all devices with our expertise in responsive web design using Bootstrap and Tailwind CSS. Provide a seamless experience for your users.',
     icon: Smartphone,
+    link: '/website-development-trivandrum',
   },
   {
     title: 'UI/UX Prototyping',
-    description: 'Create intuitive and visually appealing user interfaces using basic Figma designs. Turn your ideas into effective prototypes for a better user experience.',
+    description: 'Create intuitive and visually appealing user interfaces using modern Figma workflows. Turn your ideas into effective prototypes for a better user experience.',
     icon: Palette,
+    link: '/contact',
   },
   {
     title: 'Full-Stack Development',
     description: 'Get a complete solution for your web application with our full-stack development services. From frontend interfaces to backend functionality, we cover it all.',
     icon: Layers,
+    link: '/software-development',
   },
   {
     title: 'Custom APIs and Integrations',
     description: 'Develop and integrate RESTful APIs tailored to your business needs. Connect multiple services and create a seamless ecosystem for your web application.',
     icon: Network,
+    link: '/freelance-software-developer-kerala',
   },
   {
     title: 'Performance Optimization',
     description: 'Enhance your website’s loading speed and overall performance with our optimization techniques, ensuring a smooth user experience.',
     icon: Gauge,
+    link: '/website-maintenance-kerala',
   },
   {
     title: 'Website Maintenance',
     description: 'Keep your website up-to-date and secure with regular maintenance. We handle bug fixes, updates, and performance improvements.',
     icon: Wrench,
+    link: '/website-maintenance-kerala',
   },
 ];
 
@@ -116,41 +153,56 @@ export default function ServicesClient() {
         duration-300
         hover:-translate-y-2
         overflow-hidden
+        flex
+        flex-col
+        justify-between
       "
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 hover:opacity-100 transition duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 hover:opacity-100 transition duration-300 pointer-events-none" />
 
-              <service.icon className="
-                  w-8 h-8 
-                  sm:w-10 sm:h-10 
-                  md:w-12 md:h-12 
-                  mb-3 md:mb-4 
-                  text-blue-300
-                " />
+              <div>
+                <service.icon className="
+                    w-8 h-8 
+                    sm:w-10 sm:h-10 
+                    md:w-12 md:h-12 
+                    mb-3 md:mb-4 
+                    text-blue-500
+                  " />
 
-              <h2 className="
-                text-md 
-                sm:text-lg 
-                md:text-xl 
-                font-semibold 
-                mb-2 md:mb-3 
-                text-black
-              ">
-                {service.title}
-              </h2>
+                <h2 className="
+                  text-md 
+                  sm:text-lg 
+                  md:text-xl 
+                  font-semibold 
+                  mb-2 md:mb-3 
+                  text-black
+                ">
+                  {service.title}
+                </h2>
 
-              <p className="
-                text-sm 
-                sm:text-base 
-                md:text-md 
-                leading-relaxed 
-                text-black
-              ">
-                {service.description}
-              </p>
+                <p className="
+                  text-sm 
+                  sm:text-base 
+                  md:text-md 
+                  leading-relaxed 
+                  text-black/80
+                  mb-5
+                ">
+                  {service.description}
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-purple-200/50 flex items-center justify-between z-10 relative">
+                <Link
+                  href={service.link}
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-semibold hover:from-blue-700 hover:to-indigo-700 transition shadow-sm"
+                >
+                  Know More →
+                </Link>
+              </div>
             </motion.div>
           ))}
         </div>

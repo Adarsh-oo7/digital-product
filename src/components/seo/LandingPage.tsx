@@ -203,17 +203,29 @@ export default function LandingPage({ content, children }: { content: LandingCon
             </p>
           </section>
         )}
-        <section className="mb-10">
-          <h2 className="text-xl font-bold mb-3">Continue reading</h2>
-          <ul className="space-y-2">
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">Explore Related Solutions</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
             {content.related.map((r) => (
-              <li key={r.href}>
-                <Link href={r.href} className="text-blue-600 hover:underline">
-                  {r.label}
+              <div
+                key={r.href}
+                className="flex flex-col justify-between p-5 rounded-2xl border border-gray-100 bg-gray-50/80 hover:bg-white hover:border-blue-400 hover:shadow-md transition-all duration-300"
+              >
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">{r.label}</h3>
+                  <p className="text-xs text-gray-500 mb-4">
+                    Explore customized features, direct pricing, and development scope for Kerala businesses.
+                  </p>
+                </div>
+                <Link
+                  href={r.href}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-blue-50 text-blue-700 text-xs font-semibold hover:bg-blue-600 hover:text-white transition-all w-fit"
+                >
+                  Know More →
                 </Link>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </section>
         <FaqList items={content.faqs} />
         <CtaBand whatsappText={content.whatsappText} />
