@@ -59,7 +59,7 @@ async function main() {
   ];
   const token = await getAccessToken(creds, scopes);
   const siteUrl = "https://www.digitalproductsolutions.in/";
-  const gaProperty = "properties/555459287";
+  const gaProperty = "properties/536567965";
 
   const now = new Date();
   const d90 = new Date(now.getTime() - 90 * 24 * 60 * 60 * 1000);
