@@ -19,7 +19,7 @@ export const diasporaPages: DiasporaContent[] = [
       "DPS builds affordable websites, software, CRM, SEO and automation for Malayali entrepreneurs and Kerala-connected businesses worldwide.",
     absoluteTitle: true,
     h1: "Build and Grow Your Business Anywhere in the World",
-    lede: "International-quality websites, software, SEO, automation and business analytics for Malayali entrepreneurs and Kerala-connected businesses worldwide. Built in Kerala. Designed for businesses anywhere in the world.",
+    lede: "Kerala-based websites, software, AI and digital support for Malayali entrepreneurs and Kerala-connected businesses worldwide. International-quality work, transparent INR pricing, and direct contact with the Kerala team.",
     image: "/img/blog/blog-team-desk.jpg",
     imageAlt: "Digital Product Solutions team desk in Kerala",
     event: "view_service_page",
@@ -42,7 +42,8 @@ export const diasporaPages: DiasporaContent[] = [
           "CRM and lead follow-up",
           "Custom software and mobile apps",
           "WhatsApp automation and other business automation",
-          "SEO, Google Business Profile support where the listing is yours, and analytics you can read",
+          "AI tools and WhatsApp automation when the estimate includes them",
+          "SEO and a Google Business Profile checklist where the listing is yours",
           "Website or software maintenance after launch",
         ],
       },
@@ -60,7 +61,9 @@ export const diasporaPages: DiasporaContent[] = [
     related: [
       { href: "/start-business-website-software", label: "Starting a business abroad" },
       { href: "/international-business-digital-solutions", label: "International technology services" },
-      { href: "/international-business-pricing", label: "International starting prices" },
+      { href: "/kerala-affordable-software-web-ai-agency", label: "Affordable software, web and AI" },
+      { href: "/kerala-digital-lead-generation-agency", label: "Lead-generation systems" },
+      { href: "/international-business-pricing", label: "Starting prices" },
       { href: "/contact", label: "Contact" },
       { href: "/privacy-policy", label: "Privacy policy" },
     ],
@@ -95,7 +98,7 @@ export const diasporaPages: DiasporaContent[] = [
         h2: "Launch checklist",
         paragraphs: ["Before the site goes live you check the pages, the form, the phone number and the country you actually serve. Hosting and any payment gateway stay in the estimate."],
       },
-      { h2: "Time and price", paragraphs: ["A small site is often planned in days once your text and photos are ready. A lead system or software takes longer. Use the international starting ranges, then ask for an exact estimate. " + remote] },
+      { h2: "Time and price", paragraphs: ["A small site is often planned in days once your text and photos are ready. A lead system or software takes longer. The prices are the same published INR ranges as the homepage. Ask for an exact estimate. " + remote] },
       { h2: "Proof", paragraphs: [proof] },
     ],
     faqs: [
@@ -411,6 +414,96 @@ diasporaPages.push(
     whatsappText: "Hi, I need a professional services website",
     related: [{ href: "/professional-service-website-kerala", label: "Professional service websites" }, { href: "/seo-services", label: "SEO services" }],
   }),
+);
+
+diasporaPages.push(
+  {
+    path: "/kerala-affordable-software-web-ai-agency",
+    metaTitle: "Affordable Software, Web & AI Agency in Kerala | DPS",
+    metaDescription: "Affordable websites, software, apps and AI from a Kerala team. Published INR prices. Direct support. No ranking or lead promise.",
+    absoluteTitle: true,
+    h1: "Affordable Software, Website and AI Solutions from Kerala",
+    lede: "Digital Product Solutions is a Kerala technology team for small businesses that want a clear scope, a published starting price, and a person they can message. This is not a cheap-outsourcing pitch and it is not a promise of sales.",
+    image: "/img/blog/blog-team-desk.jpg",
+    imageAlt: "Kerala team desk at Digital Product Solutions",
+    event: "view_service_page",
+    serviceName: "Affordable software, website and AI agency in Kerala",
+    whatsappText: "Hi, I want an affordable website, software or AI estimate",
+    showPackages: true,
+    sections: [
+      {
+        h2: "What you can buy",
+        paragraphs: ["Each item is a service already offered from Korani. You choose the one that matches the job."],
+        bullets: [
+          "Websites from ₹5,000, standard sites ₹10,000–₹18,000, premium sites ₹25,000–₹45,000",
+          "Custom software from ₹15,000 and mobile apps from ₹25,000",
+          "AI tools from ₹12,000 and WhatsApp automation from ₹10,000",
+          "SEO from ₹5,000 a month, with no ranking guarantee",
+          "Booking, ordering and CRM only when the estimate includes them",
+        ],
+      },
+      {
+        h2: "How delivery works",
+        paragraphs: [remote, "Milestones are scope, build and your review. You own the domain. Hosting, ads and payment-gateway fees are extra unless the estimate includes them."],
+      },
+      { h2: "Proof you can open", paragraphs: [proof, "Search volume for these phrases was not taken from a keyword tool for this page, so no monthly-search number is shown."] },
+    ],
+    faqs: [
+      { q: "Are you only a low-cost outsourcing shop?", a: "No. The price is the published INR range for a written scope. You speak with the Kerala team, not a reseller." },
+      { q: "Will AI or SEO bring a set number of leads?", a: "No. We can build the site, the tracking and the follow-up. Lead count and profit are not promised." },
+    ],
+    related: [
+      { href: hub, label: "Malayali businesses worldwide" },
+      { href: "/software-development", label: "Software development" },
+      { href: "/ai-powered-solutions", label: "AI solutions" },
+      { href: "/pricing", label: "Pricing" },
+      { href: "/contact", label: "Contact" },
+    ],
+  },
+  {
+    path: "/kerala-digital-lead-generation-agency",
+    metaTitle: "Digital Lead Generation Systems from Kerala | DPS",
+    metaDescription: "Websites, ads, SEO and follow-up for business enquiries. Built in Kerala. No lead-count or ROI promise without your own numbers.",
+    h1: "A website and follow-up system for business enquiries",
+    lede: "DPS can build the pages, the form, the ad landing path and the CRM status for enquiries. DPS does not claim a past ROI figure on this page. A result needs your revenue, the comparison period and your permission.",
+    image: "/img/pages/office-website.jpg",
+    imageAlt: "Office desk with a services website on a laptop",
+    event: "view_service_page",
+    serviceName: "Lead-generation websites and follow-up from Kerala",
+    whatsappText: "Hi, I want a lead follow-up system for my business",
+    showPackages: true,
+    sections: [
+      {
+        h2: "What is included when you ask for it",
+        paragraphs: ["The estimate names which of these are in the project. An ad account spend is yours."],
+        bullets: [
+          "A page with one clear enquiry action",
+          "Google Ads or Meta Ads support only if the estimate says who owns the account",
+          "SEO work linked from the SEO page, without a position promise",
+          "CRM or WhatsApp follow-up so a person owns the next reply",
+          "Analytics events already on this site for form, phone and WhatsApp clicks",
+        ],
+      },
+      {
+        h2: "What is not included",
+        paragraphs: ["A guaranteed number of leads, a cost-per-lead target, or a return on ad spend. Those need your baseline and a written attribution method. Care N Cure is not used here as a DPS result."],
+      },
+      { h2: "How we work", paragraphs: [remote] },
+      { h2: "Proof", paragraphs: [proof] },
+    ],
+    faqs: [
+      { q: "Have you published a lead-generation case study?", a: "Not on this page. A client name, dates, before-and-after numbers and written permission are required first." },
+      { q: "Do you promise qualified leads?", a: "No. We define a lead as a form, call or WhatsApp message you receive. Whether it is qualified is your rule, written in the estimate." },
+    ],
+    related: [
+      { href: "/kerala-affordable-software-web-ai-agency", label: "Software, web and AI" },
+      { href: "/seo-services", label: "SEO services" },
+      { href: "/google-ads-management-kerala", label: "Google Ads" },
+      { href: "/crm-software-kerala", label: "CRM software" },
+      { href: hub, label: "Malayali businesses worldwide" },
+      { href: "/contact", label: "Contact" },
+    ],
+  },
 );
 
 export function diaspora(path: string): DiasporaContent {

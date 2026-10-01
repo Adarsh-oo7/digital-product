@@ -154,6 +154,8 @@ export const htmlSitemapGroups: { heading: string; links: { href: string; label:
     heading: "Malayali businesses worldwide",
     links: [
       { href: "/malayali-business-solutions-worldwide", label: "Websites and software for Malayali businesses worldwide" },
+      { href: "/kerala-affordable-software-web-ai-agency", label: "Affordable software, web and AI from Kerala" },
+      { href: "/kerala-digital-lead-generation-agency", label: "Lead-generation systems from Kerala" },
       { href: "/start-business-website-software", label: "Start a business website abroad" },
       { href: "/international-business-digital-solutions", label: "International digital solutions" },
       { href: "/international-business-pricing", label: "International starting prices" },

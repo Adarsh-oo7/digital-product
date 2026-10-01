@@ -147,6 +147,8 @@ const ALLOW = new Set([
   '/construction-crm-kerala',
   '/clinic-management-software-kerala',
   '/malayali-business-solutions-worldwide',
+  '/kerala-affordable-software-web-ai-agency',
+  '/kerala-digital-lead-generation-agency',
   '/start-business-website-software',
   '/international-business-digital-solutions',
   '/international-business-pricing',
