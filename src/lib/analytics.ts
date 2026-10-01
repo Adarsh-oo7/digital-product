@@ -1,6 +1,6 @@
 "use client";
 
-type EventName =
+export type AnalyticsEvent =
   | "whatsapp_click"
   | "phone_click"
   | "form_start"
@@ -10,7 +10,13 @@ type EventName =
   | "estimate_start"
   | "estimate_submit"
   | "calculator_start"
-  | "calculator_complete";
+  | "calculator_complete"
+  | "view_country_page"
+  | "view_industry_page"
+  | "view_service_page"
+  | "click_whatsapp"
+  | "click_phone"
+  | "submit_consultation_form";
 
 declare global {
   interface Window {
@@ -19,7 +25,7 @@ declare global {
 }
 
 /** Fire GA4 events with no names, emails, phones, or message text. */
-export function track(event: EventName, params?: Record<string, string | number | boolean>) {
+export function track(event: AnalyticsEvent, params?: Record<string, string | number | boolean>) {
   if (typeof window === "undefined" || typeof window.gtag !== "function") return;
   const safe: Record<string, string | number | boolean> = {};
   if (params) {

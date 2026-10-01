@@ -146,6 +146,20 @@ const ALLOW = new Set([
   '/jewellery-crm-kerala',
   '/construction-crm-kerala',
   '/clinic-management-software-kerala',
+  '/malayali-business-solutions-worldwide',
+  '/start-business-website-software',
+  '/international-business-digital-solutions',
+  '/international-business-pricing',
+  '/uk-malayali-business-website-development',
+  '/australia-malayali-business-website-development',
+  '/uae-malayali-business-website-development',
+  '/gcc-malayali-business-digital-solutions',
+  '/restaurant-website-software-for-malayali-businesses',
+  '/recruitment-consultancy-website-crm-malayali-businesses',
+  '/property-real-estate-website-crm-malayali-businesses',
+  '/kerala-tourism-travel-website-booking-system',
+  '/kerala-products-ecommerce-website-development',
+  '/professional-services-website-crm-seo',
 ]);
 
 module.exports = {

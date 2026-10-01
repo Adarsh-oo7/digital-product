@@ -151,6 +151,25 @@ export const htmlSitemapGroups: { heading: string; links: { href: string; label:
     ],
   },
   {
+    heading: "Malayali businesses worldwide",
+    links: [
+      { href: "/malayali-business-solutions-worldwide", label: "Websites and software for Malayali businesses worldwide" },
+      { href: "/start-business-website-software", label: "Start a business website abroad" },
+      { href: "/international-business-digital-solutions", label: "International digital solutions" },
+      { href: "/international-business-pricing", label: "International starting prices" },
+      { href: "/uk-malayali-business-website-development", label: "UK Malayali business websites" },
+      { href: "/australia-malayali-business-website-development", label: "Australia Malayali business websites" },
+      { href: "/uae-malayali-business-website-development", label: "UAE Malayali business websites" },
+      { href: "/gcc-malayali-business-digital-solutions", label: "GCC Malayali business systems" },
+      { href: "/restaurant-website-software-for-malayali-businesses", label: "Restaurant sites for Malayali businesses" },
+      { href: "/recruitment-consultancy-website-crm-malayali-businesses", label: "Recruitment websites and CRM" },
+      { href: "/property-real-estate-website-crm-malayali-businesses", label: "Property websites and CRM" },
+      { href: "/kerala-tourism-travel-website-booking-system", label: "Kerala tourism sites for international guests" },
+      { href: "/kerala-products-ecommerce-website-development", label: "Kerala products e-commerce" },
+      { href: "/professional-services-website-crm-seo", label: "Professional services websites and SEO" },
+    ],
+  },
+  {
     heading: "Compliance & Policies",
     links: [
       { href: "/privacy-policy", label: "Privacy Policy (DPDP Act & Meta Tech Provider Compliant)" },
