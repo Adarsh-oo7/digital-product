@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Facebook, Instagram, Linkedin, MapPin, Phone, MessageCircle, Mail, ExternalLink } from 'lucide-react'
+import { Facebook, Instagram, Linkedin, MapPin, Phone } from 'lucide-react'
 import Image from 'next/image';
 
 const Footer: React.FC = () => {

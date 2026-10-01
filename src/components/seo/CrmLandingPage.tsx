@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Breadcrumbs from "./Breadcrumbs";
-import CtaBand from "./CtaBand";
 import JsonLd from "./JsonLd";
 import type { CrmIndustry } from "@/content/crm-industries";
 import { crmIndustries } from "@/content/crm-industries";

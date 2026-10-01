@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState, useRef, useEffect } from 'react'
-import { useMotionValue, animate } from "framer-motion"
+import { useMotionValue, animate, type AnimationPlaybackControls } from "framer-motion"
 import Image from "next/image";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -525,9 +525,9 @@ function TestimonialCard({ review, index }: { review: Review; index: number }) {
 export default function ExpandableTestimonials() {
 
   const [paused, setPaused] = useState(false)
-  const [isHovered, setIsHovered] = useState(false)
+  const [isHovered] = useState(false)
   const x = useMotionValue(0)
-  const controls = useRef<any>(null)
+  const controls = useRef<AnimationPlaybackControls | null>(null)
   const positionRef = useRef(0)
 
   const handleMouseEnter = () => {
@@ -550,7 +550,7 @@ export default function ExpandableTestimonials() {
     })
 
     return () => controls.current?.stop()
-  }, [])
+  }, [x])
 
   return (
     <>

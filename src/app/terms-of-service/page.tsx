@@ -10,13 +10,10 @@ import {
   MessageSquare,
   Building2,
   Mail,
-  Phone,
   Clock,
-  ArrowRight,
   Lock,
   Ban,
   Server,
-  HelpCircle,
 } from "lucide-react";
 
 export const metadata = pageMetadata({

@@ -8,7 +8,6 @@ import {
   Trash2,
   Building2,
   Mail,
-  Phone,
   Clock,
   CheckCircle2,
   Database,

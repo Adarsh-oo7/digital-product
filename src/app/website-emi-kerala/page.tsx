@@ -1,5 +1,4 @@
 import { pageMetadata } from "@/lib/seo";
-import { Metadata } from "next";
 import EMIPageClient from "./EMIPageClient";
 
 export const metadata = pageMetadata({
