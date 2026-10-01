@@ -10,6 +10,7 @@ import FaqList from "./FaqList";
 import JsonLd from "./JsonLd";
 import { track, type AnalyticsEvent } from "@/lib/analytics";
 import { business, SITE_URL, whatsappUrl } from "@/lib/business";
+import { verifiedPricing, inr } from "@/lib/pricing";
 import { absUrl } from "@/lib/seo";
 
 export type DiasporaSection = {
@@ -37,9 +38,9 @@ export type DiasporaContent = {
 };
 
 const packages = [
-  ["Essential Website", "From ₹35,000", "New or small business that needs a clear site, enquiry form and WhatsApp."],
-  ["Growth Website + Lead System", "From ₹1,25,000", "Established service business that needs pages plus a lead follow-up flow."],
-  ["Custom Software and Automation", "From ₹2,50,000", "A workflow that a brochure site cannot run."],
+  [verifiedPricing.websiteBasic.label, `${inr(verifiedPricing.websiteBasic.from)}–${inr(verifiedPricing.websiteBasic.to)}`, "A small site with your services, a form and WhatsApp. Same range as the homepage price list."],
+  [verifiedPricing.websiteStandard.label, `${inr(verifiedPricing.websiteStandard.from)}–${inr(verifiedPricing.websiteStandard.to)}`, "More pages for a business that already has customers, in India or abroad."],
+  ["Software and follow-up", `From ${inr(verifiedPricing.softwareFrom)}`, "A CRM, booking step or automation when a brochure site is not enough. Apps start from ₹25,000."],
 ];
 
 export default function DiasporaPage({ content }: { content: DiasporaContent }) {
@@ -135,26 +136,39 @@ export default function DiasporaPage({ content }: { content: DiasporaContent }) 
         ))}
         {content.showPackages && (
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900">International starting ranges</h2>
+            <h2 className="text-2xl font-bold text-gray-900">Affordable starting ranges</h2>
             <p className="mt-3 leading-relaxed text-gray-600">
-              These are starting ranges for a diaspora or international scope. They are not a fixed quote. Smaller Kerala website packages already published on this site start from ₹5,000, standard sites ₹10,000–₹18,000, and premium sites ₹25,000–₹45,000. Software starts from ₹15,000. Apps start from ₹25,000. SEO starts from ₹5,000 a month. WhatsApp automation starts from ₹10,000.
+              These are the same published ranges as the homepage and the pricing page. An international enquiry does not move you onto a higher list. GST, hosting, domain and payment-gateway fees are confirmed in the written estimate. SEO starts from ₹5,000 a month. Social posts start from ₹3,000 a month. WhatsApp automation starts from ₹10,000. A premium website is ₹25,000–₹45,000. An online store is ₹35,000–₹70,000 and up.
             </p>
             <div className="mt-6 grid gap-4 md:grid-cols-3">
               {packages.map(([name, price, who]) => (
-                <div key={name} className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
-                  <h3 className="text-lg font-bold text-gray-900">{name}</h3>
-                  <p className="mt-2 text-blue-700 font-semibold">{price}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-gray-600">{who}</p>
+                <div key={name} className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg">
+                  <h3 className="text-lg font-semibold text-gray-900">{name}</h3>
+                  <p className="mt-3 bg-gradient-to-r from-blue-600 to-purple-500 bg-clip-text text-xl font-bold text-transparent">{price}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-gray-600">{who}</p>
                 </div>
               ))}
             </div>
-            <ul className="mt-4 space-y-2 text-sm text-gray-600">
-              <li>Analytics dashboard setup from ₹35,000, confirmed in the estimate.</li>
-              <li>Maintenance from ₹5,000 a month when a support plan is written into the estimate.</li>
-              <li>INR is the price. A GBP, AUD or AED figure on a country page is an approximate reference, not a locked rate.</li>
-            </ul>
+            <p className="mt-4 text-sm text-gray-600">
+              INR is the price. A GBP, AUD or AED note on a country page is only a rough guide, not a locked rate.{" "}
+              <Link href="/pricing" className="text-blue-600 hover:underline">Open the full price list</Link>.
+            </p>
           </section>
         )}
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-gray-900">Check this yourself</h2>
+          <p className="mt-3 leading-relaxed text-gray-600">
+            Trust here is something you can open. We do not add a score, a client count, or an overseas office on this page.
+          </p>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+            <li><Link href="/work" className="text-blue-600 hover:underline">Project stories you can read</Link></li>
+            <li><Link href="/portfolio" className="text-blue-600 hover:underline">Live project links</Link></li>
+            <li><Link href="/digital-product-solutions-reviews" className="text-blue-600 hover:underline">Reviews page</Link></li>
+            <li><Link href="/certificate-verified" className="text-blue-600 hover:underline">MSME registration page</Link></li>
+            <li><a href={business.mapsUrl} className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Google listing in Korani</a></li>
+            <li><Link href="/privacy-policy" className="text-blue-600 hover:underline">Privacy policy</Link></li>
+          </ul>
+        </section>
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-gray-900">Related pages</h2>
           <ul className="mt-3 space-y-2">
