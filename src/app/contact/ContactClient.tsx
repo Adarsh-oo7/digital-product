@@ -28,7 +28,7 @@ export default function ContactClient() {
     {
       question: "How can I contact Digital Product Solutions?",
       answer:
-        "Use the form on this page, WhatsApp or call +91 94003 55185, or email digitalproductkerala@gmail.com. The office is in Korani, Thiruvananthapuram, Kerala 695104.",
+        "Use the form on this page, WhatsApp or call +91 94003 55185, or email hello@digitalproductsolutions.in. The office is in Korani, Thiruvananthapuram, Kerala 695104.",
     },
     {
       question: "What services do you provide?",
@@ -127,7 +127,14 @@ export default function ContactClient() {
               <div className="text-center text-white">
                 <h2 className="text-2xl font-bold mb-4">Thank You for Reaching Out!</h2>
                 <p>
-                  Your message has been successfully sent. Our Kerala-based team will respond within 24–48 hours to discuss how we can support your business with customized web development and AI solutions. Check your inbox for our reply.
+                  Your message has been sent. The Kerala team replies within 24–48 hours on Monday to Saturday. Check the inbox you entered, including spam.
+                </p>
+                <p className="mt-4">
+                  To write directly, email{" "}
+                  <a href="mailto:hello@digitalproductsolutions.in" className="underline hover:text-blue-300">
+                    hello@digitalproductsolutions.in
+                  </a>
+                  .
                 </p>
               </div>
             ) : (
@@ -274,10 +281,10 @@ export default function ContactClient() {
             <p>
               Email:{" "}
               <a
-                href="mailto:digitalproductkerala@gmail.com"
+                href="mailto:hello@digitalproductsolutions.in"
                 className="underline hover:text-blue-400"
               >
-                digitalproductkerala@gmail.com
+                hello@digitalproductsolutions.in
               </a>
             </p>
             <p>

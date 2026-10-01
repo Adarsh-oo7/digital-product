@@ -33,11 +33,25 @@ export default function DiasporaEnquiryForm({
 
   if (sent) {
     return (
-      <section id="consultation" className="mt-16 rounded-3xl border border-gray-100 bg-gray-50 p-8">
-        <h2 className="text-2xl font-bold text-gray-900">Enquiry received</h2>
-        <p className="mt-3 text-gray-600 leading-relaxed">
-          The Kerala team has your details. A reply goes to the email you entered, usually within 24–48 hours on Monday to Saturday. Nothing you submitted is published on this page.
+      <section id="consultation" className="mt-16 rounded-3xl border border-green-100 bg-green-50 p-8 md:p-10">
+        <p className="text-sm font-semibold uppercase tracking-wide text-green-700">Thank you</p>
+        <h2 className="mt-2 text-3xl font-bold text-gray-900">Your estimate request is in</h2>
+        <p className="mt-4 max-w-2xl leading-relaxed text-gray-700">
+          We received the form. The Kerala team reads it on Monday to Saturday and replies to the email or WhatsApp number you entered, usually within 24–48 hours. Your details are not published on this page.
         </p>
+        <ol className="mt-6 space-y-3 text-gray-700">
+          <li>1. Check the inbox you typed, including spam, for the reply.</li>
+          <li>2. If you need to add a file or a correction, email hello@digitalproductsolutions.in.</li>
+          <li>3. Or message the same request on WhatsApp.</li>
+        </ol>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a href="mailto:hello@digitalproductsolutions.in" className="rounded-xl bg-gray-900 px-5 py-3 font-semibold text-white">
+            Email hello@digitalproductsolutions.in
+          </a>
+          <a href={`https://wa.me/${business.whatsapp}`} className="rounded-xl border border-gray-300 bg-white px-5 py-3 font-semibold text-gray-900">
+            WhatsApp the team
+          </a>
+        </div>
       </section>
     );
   }
@@ -46,7 +60,7 @@ export default function DiasporaEnquiryForm({
     <section id="consultation" className="mt-16 rounded-3xl border border-gray-100 bg-white p-6 shadow-lg md:p-8">
       <h2 className="text-2xl font-bold text-gray-900">Request an estimate</h2>
       <p className="mt-2 text-sm leading-relaxed text-gray-600">
-        Tell us the country, the service and a budget range. The written estimate confirms the price. Final cost depends on scope, integrations, pages, content, hosting and support.
+        Tell us the country, the service and a budget range. The written estimate confirms the price. You can also email hello@digitalproductsolutions.in directly. The form itself still goes to the existing enquiry inbox.
       </p>
       <form
         action={`https://formsubmit.co/${business.emailLeads}`}

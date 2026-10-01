@@ -116,6 +116,9 @@ export default function DiasporaPage({ content }: { content: DiasporaContent }) 
               <a href="#consultation" className="rounded-xl border border-gray-300 px-5 py-3 font-semibold text-gray-900">
                 Request an estimate
               </a>
+              <a href="mailto:hello@digitalproductsolutions.in" className="rounded-xl border border-gray-300 px-5 py-3 font-semibold text-gray-900">
+                hello@digitalproductsolutions.in
+              </a>
             </div>
           </div>
           <div className="relative h-72 overflow-hidden rounded-3xl border border-gray-100 shadow-lg md:h-[420px]">
