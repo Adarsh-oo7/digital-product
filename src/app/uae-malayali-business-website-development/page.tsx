@@ -11,11 +11,6 @@ export const metadata = pageMetadata({
   absoluteTitle: content.absoluteTitle,
 });
 
-export default async function Page({
-  searchParams,
-}: {
-  searchParams: Promise<{ sent?: string }>;
-}) {
-  const query = await searchParams;
-  return <DiasporaPage content={content} sent={query.sent === "1"} />;
+export default function Page() {
+  return <DiasporaPage content={content} />;
 }

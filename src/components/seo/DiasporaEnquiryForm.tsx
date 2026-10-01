@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { track } from "@/lib/analytics";
 import { SITE_URL, business } from "@/lib/business";
@@ -18,14 +18,18 @@ const budgets = [
 export default function DiasporaEnquiryForm({
   path,
   pageTitle,
-  sent,
 }: {
   path: string;
   pageTitle: string;
-  sent?: boolean;
 }) {
   const [started, setStarted] = useState(false);
+  const [sent, setSent] = useState(false);
   const next = `${SITE_URL}${path}?sent=1`;
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setSent(params.get("sent") === "1");
+  }, []);
 
   if (sent) {
     return (

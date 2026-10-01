@@ -42,7 +42,7 @@ const packages = [
   ["Custom Software and Automation", "From ₹2,50,000", "A workflow that a brochure site cannot run."],
 ];
 
-export default function DiasporaPage({ content, sent }: { content: DiasporaContent; sent?: boolean }) {
+export default function DiasporaPage({ content }: { content: DiasporaContent }) {
   useEffect(() => {
     track(content.event, { page: content.path });
   }, [content.event, content.path]);
@@ -166,7 +166,7 @@ export default function DiasporaPage({ content, sent }: { content: DiasporaConte
           </ul>
         </section>
         <FaqList items={content.faqs} />
-        <DiasporaEnquiryForm path={content.path} pageTitle={content.h1} sent={sent} />
+        <DiasporaEnquiryForm path={content.path} pageTitle={content.h1} />
         <CtaBand whatsappText={content.whatsappText} />
       </div>
     </article>
