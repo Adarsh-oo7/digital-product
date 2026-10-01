@@ -38,9 +38,15 @@ export type DiasporaContent = {
 };
 
 const packages = [
-  [verifiedPricing.websiteBasic.label, `${inr(verifiedPricing.websiteBasic.from)}–${inr(verifiedPricing.websiteBasic.to)}`, "A small site with your services, a form and WhatsApp. Same range as the homepage price list."],
-  [verifiedPricing.websiteStandard.label, `${inr(verifiedPricing.websiteStandard.from)}–${inr(verifiedPricing.websiteStandard.to)}`, "More pages for a business that already has customers, in India or abroad."],
-  ["Software and follow-up", `From ${inr(verifiedPricing.softwareFrom)}`, "A CRM, booking step or automation when a brochure site is not enough. Apps start from ₹25,000."],
+  ["Basic website", `From ${inr(verifiedPricing.websiteBasic.from)}`, "A small site, a form and WhatsApp."],
+  ["Standard website", `From ${inr(verifiedPricing.websiteStandard.from)}`, "More pages for a business that already has customers."],
+  ["Premium website", `From ${inr(verifiedPricing.websitePremium.from)}`, "A larger site when the scope needs it."],
+  ["E-commerce", `From ${inr(verifiedPricing.ecommerce.from)}`, "A catalogue with checkout, if that is in the estimate."],
+  ["Software", `From ${inr(verifiedPricing.softwareFrom)}`, "CRM, booking or a workflow the site cannot run."],
+  ["Mobile app", `From ${inr(verifiedPricing.appFrom)}`, "Android or iOS, scoped in the estimate."],
+  ["SEO", `From ${inr(verifiedPricing.seoMonthlyFrom)}/month`, "Technical SEO and local pages. No ranking promise."],
+  ["WhatsApp automation", `From ${inr(verifiedPricing.automationFrom)}`, "Replies and follow-up you agree in writing."],
+  ["AI tools", `From ${inr(verifiedPricing.aiFrom)}`, "A chatbot or automation only if the estimate includes it."],
 ];
 
 export default function DiasporaPage({ content }: { content: DiasporaContent }) {
@@ -136,9 +142,9 @@ export default function DiasporaPage({ content }: { content: DiasporaContent }) 
         ))}
         {content.showPackages && (
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900">Affordable starting ranges</h2>
+            <h2 className="text-2xl font-bold text-gray-900">Starting prices</h2>
             <p className="mt-3 leading-relaxed text-gray-600">
-              These are the same published ranges as the homepage and the pricing page. An international enquiry does not move you onto a higher list. GST, hosting, domain and payment-gateway fees are confirmed in the written estimate. SEO starts from ₹5,000 a month. Social posts start from ₹3,000 a month. WhatsApp automation starts from ₹10,000. A premium website is ₹25,000–₹45,000. An online store is ₹35,000–₹70,000 and up.
+              These are starting prices only, the same figures published on the pricing page. An overseas enquiry does not raise them. The written estimate is the price for your scope. GST, hosting, domain and payment-gateway fees are extra unless that estimate includes them.
             </p>
             <div className="mt-6 grid gap-4 md:grid-cols-3">
               {packages.map(([name, price, who]) => (
