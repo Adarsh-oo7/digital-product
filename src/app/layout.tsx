@@ -112,12 +112,28 @@ const rootSchema = {
       ],
       sameAs: [
         business.mapsUrl,
+        business.mapsShareUrl,
         ...business.sameAs,
       ],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: business.googleRatingValue,
+        reviewCount: String(business.googleReviewCount),
+        bestRating: "5",
+        worstRating: "1",
+      },
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Digital Services for Kerala Businesses",
         itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "CRM Software Kerala",
+              description: "WhatsApp-integrated industry CRM software for real estate, clinics, gyms, wedding planners, and travel agencies starting ₹15,000",
+            },
+          },
           {
             "@type": "Offer",
             itemOffered: {
