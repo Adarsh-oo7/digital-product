@@ -779,3 +779,66 @@ export const freelanceSoftwareDev: LandingContent = {
   serviceName: "Freelance Software Developer Kerala",
   whatsappText: "Hi, I am looking for a software developer in Kerala",
 };
+
+export const webDevelopmentKerala: LandingContent = {
+  path: "/web-development-kerala",
+  metaTitle: "Web Development Company in Kerala | Digital Product Solutions",
+  metaDescription:
+    "Top web development company in Kerala. Fast, responsive business websites, Next.js web applications, and e-commerce stores starting at ₹5,000. Direct developer WhatsApp access.",
+  h1: "Web Development Company in Kerala",
+  lede: "Digital Product Solutions is a registered MSME IT company in Korani, Thiruvananthapuram, engineering high-speed websites, Next.js web applications, and digital platforms for businesses across all 14 Kerala districts — with direct senior developer access and transparent published prices.",
+  audience: "Business owners, startups, clinics, retailers, hotels, and service companies across Trivandrum, Kochi, Kozhikode, and all of Kerala who want a modern website that drives enquiries, not just an online brochure.",
+  problem: "Most businesses in Kerala either pay high fees to large IT agencies with slow communication, or hire solo freelancers who disappear without documentation. We offer direct developer WhatsApp access with the legal backing and reliability of a registered MSME engineering team.",
+  deliverables: [
+    "High-speed, modern responsive web design (Next.js, React, Tailwind CSS)",
+    "Mobile-first architecture optimized for 100/100 Google Core Web Vitals",
+    "Direct WhatsApp business enquiry integration & lead capture forms",
+    "Complete local SEO structure and Google Search Console setup",
+    "E-commerce stores with Razorpay, Cashfree, and UPI payment gateways",
+    "Custom CMS or administrative dashboard for effortless content updates",
+    "100% source code ownership and complete deployment documentation",
+  ],
+  costs: [
+    { title: "Basic Business Website", text: "₹5,000–₹8,000 (1–3 pages, 3–5 days turnaround). Perfect for local services, clinics, and small shops." },
+    { title: "Standard Corporate Site", text: "₹10,000–₹18,000 (5–7 pages, 7–10 days turnaround). Multi-section layout with blog, gallery, and SEO." },
+    { title: "Custom Web Application", text: "From ₹15,000–₹35,000 for custom database portals, booking engines, and CRM integrations." },
+    { title: "E-Commerce Web Portal", text: "From ₹35,000 with product catalogue, cart, checkout, payment gateway, and order notifications." },
+  ],
+  process: [
+    { title: "Discovery & Requirements", text: "Quick WhatsApp or phone consultation to understand your business objectives and design preferences." },
+    { title: "UI/UX & Fast Development", text: "Modern responsive build with direct WhatsApp updates and real-time review previews." },
+    { title: "SEO & Speed Testing", text: "Rigorous testing across mobile, tablet, and desktop for sub-second page loads." },
+    { title: "Launch & Code Handover", text: "Deployment to high-speed cloud hosting, Google Search Console submission, and full code handover." },
+  ],
+  ownership: "You own 100% of your domain, hosting, and custom source code. We never lock you into proprietary platforms or monthly hostage fees.",
+  proof: "Built by our registered Kerala team in Korani, Thiruvananthapuram. Live portfolio includes BuilDwellz, Crystal Knot Films, Squeeze Berriez, Mangrove Moments, Lemon Caters, and Kerala Sellers. 5.0 Google rating from 25 client reviews.",
+  related: [
+    { href: "/website-development-cost-kerala", label: "Website development cost Kerala" },
+    { href: "/freelance-web-developer-kerala", label: "Freelance web developer Kerala" },
+    { href: "/software-development", label: "Software development Kerala" },
+    { href: "/app-development-kerala", label: "Mobile app development Kerala" },
+    { href: "/seo-services-kerala", label: "SEO services Kerala" },
+    { href: "/whatsapp-automation-kerala", label: "WhatsApp automation Kerala" },
+    { href: "/work", label: "View real project case studies" },
+  ],
+  faqs: [
+    { q: "How much does web development cost in Kerala?", a: "At Digital Product Solutions, professional business websites start at ₹5,000 for basic sites, ₹10,000–₹18,000 for standard multi-page company sites, and ₹15,000+ for custom web applications." },
+    { q: "How long does it take to build a website?", a: "Standard business websites are typically delivered within 5 to 7 days once content and details are shared." },
+    { q: "Do you provide direct developer support?", a: "Yes. You speak and chat directly on WhatsApp with senior developers (+91 94003 55185) building your site, ensuring rapid updates without sales middlemen." },
+    { q: "Will my website rank on Google?", a: "Yes. Every website is built with clean semantic HTML5, schema markup, high-speed Core Web Vitals, and direct submission to Google Search Console." },
+  ],
+  serviceName: "Web Development Kerala",
+  whatsappText: "Hi, I am looking for web development in Kerala",
+};
+
+export const websiteDevelopmentKerala: LandingContent = {
+  ...webDevelopmentKerala,
+  path: "/website-development-kerala",
+  metaTitle: "Website Development Services in Kerala | Packages from ₹5,000",
+  metaDescription:
+    "Professional website development services in Kerala by Digital Product Solutions. Custom business websites, e-commerce, and mobile-friendly design with direct developer access.",
+  h1: "Website Development in Kerala",
+  serviceName: "Website Development Kerala",
+  whatsappText: "Hi, I am looking for website development services in Kerala",
+};
+

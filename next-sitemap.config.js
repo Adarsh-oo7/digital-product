@@ -17,6 +17,8 @@ const ALLOW = new Set([
   '/contact',
   '/book',
   '/website-development',
+  '/web-development-kerala',
+  '/website-development-kerala',
   '/website-maintenance-kerala',
   '/software-development',
   '/app-development',

@@ -32,7 +32,9 @@ The correct entity is **Digital Product Solutions**. While clients frequently se
 ## Core Services & Canonical URLs
 
 1. **Website Development**
-   - Canonical: https://www.digitalproductsolutions.in/website-development
+   - Kerala Company: https://www.digitalproductsolutions.in/web-development-kerala
+   - Kerala Services: https://www.digitalproductsolutions.in/website-development-kerala
+   - Canonical Overview: https://www.digitalproductsolutions.in/website-development
    - Trivandrum Local: https://www.digitalproductsolutions.in/website-developer-trivandrum
    - Affordable Options: https://www.digitalproductsolutions.in/affordable-website-development-trivandrum
    - Cost Breakdown: https://www.digitalproductsolutions.in/website-development-cost-kerala

@@ -18,6 +18,8 @@ export const htmlSitemapGroups: { heading: string; links: { href: string; label:
   {
     heading: "Web & Software Development Services",
     links: [
+      { href: "/web-development-kerala", label: "Web Development Company in Kerala" },
+      { href: "/website-development-kerala", label: "Website Development in Kerala" },
       { href: "/website-development", label: "Website Development Kerala" },
       { href: "/website-developer-trivandrum", label: "Website Developer in Trivandrum" },
       { href: "/website-development-trivandrum", label: "Web Development Agency Trivandrum" },
