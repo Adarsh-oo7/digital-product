@@ -83,3 +83,7 @@ jobs:
       - name: Submit sitemap URLs to IndexNow
         run: node scripts/indexnow.mjs
         continue-on-error: true
+
+      - name: Sync with Bing Webmaster API
+        run: node scripts/bing-webmaster.js
+        continue-on-error: true
