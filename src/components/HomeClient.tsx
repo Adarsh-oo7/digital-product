@@ -474,20 +474,30 @@ export default function Home() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6 leading-tight">
                 A Dedicated Team of <span className="text-blue-600">9 Digital Creators</span> Based in Trivandrum
               </h2>
-              <div className="flex gap-3 mb-6">
-                {[
-                  { src: "/img/adarshnew.png", alt: "Adarsh B S" },
-                  { src: "/img/midhin.jpg", alt: "Midhin S" },
-                  { src: "/img/aromalnew.png", alt: "Aromal V G" },
-                ].map((p) => (
-                  <div key={p.src} className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border border-gray-200 bg-gray-100">
-                    <Image src={p.src} alt={p.alt} fill className="object-cover" sizes="80px" />
-                  </div>
-                ))}
+              <div className="flex items-center gap-3 mb-6">
+                <Link href="/adarsh-b-s" className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-blue-500 bg-gray-100 hover:scale-105 transition shadow-sm" title="Adarsh B S — Founder & AI Consultant">
+                  <Image src="/img/adarshnew.png" alt="Adarsh B S — Founder, AI Consultant & Software Architect" fill className="object-cover" sizes="80px" />
+                </Link>
+                <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border border-gray-200 bg-gray-100" title="Aromal V G — Co-Founder">
+                  <Image src="/img/aromalnew.png" alt="Aromal V G — Co-Founder & Full-Stack UI/UX" fill className="object-cover" sizes="80px" />
+                </div>
+                <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border border-gray-200 bg-gray-100" title="Midhin S — Lead Full-Stack">
+                  <Image src="/img/midhin.jpg" alt="Midhin S — Lead Full-Stack Developer" fill className="object-cover" sizes="80px" />
+                </div>
               </div>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                We are a registered MSME IT company and growth agency. Unlike solo freelancers who might vanish mid-project, or bloated agencies where you get ignored, Digital Product Solutions offers a structured team of engineers, UI/UX designers, copywriters, and SEO specialists. Photos are the real people in Korani — not stock or AI faces.
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Founded by <strong>Adarsh B S</strong> (Lead AI Consultant & Software Solutions Architect) alongside Co-Founder <strong>Aromal V G</strong> (UI/UX & Full-Stack Engineer), Digital Product Solutions is a registered MSME IT company in Korani, Thiruvananthapuram. Unlike solo freelancers who might vanish mid-project or bloated agencies where you get ignored, we provide direct senior developer access on every project.
               </p>
+              <div className="flex flex-wrap gap-3 mb-6 text-xs">
+                <Link href="/adarsh-b-s" className="inline-flex items-center gap-1 font-semibold text-blue-600 hover:text-blue-800 bg-blue-50 px-3 py-1.5 rounded-full border border-blue-100">
+                  <span>Adarsh B S Profile & Work</span>
+                  <span>→</span>
+                </Link>
+                <a href="https://adarsh.digitalproductsolutions.in/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-semibold text-gray-700 hover:text-gray-900 bg-gray-100 px-3 py-1.5 rounded-full border border-gray-200">
+                  <span>Portfolio (adarsh.digitalproductsolutions.in)</span>
+                  <span>↗</span>
+                </a>
+              </div>
               <ul className="space-y-3 text-gray-700 font-medium">
                 <li className="flex items-center gap-2">
                   <span className="text-blue-500 font-bold">✔</span> Direct developer WhatsApp access — no account manager filters

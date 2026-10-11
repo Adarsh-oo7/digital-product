@@ -16,6 +16,7 @@ const ALLOW = new Set([
   '/digital-product-solutions-reviews',
   '/contact',
   '/book',
+  '/adarsh-b-s',
   '/website-development',
   '/web-development-kerala',
   '/website-development-kerala',

@@ -136,6 +136,19 @@ The correct entity is **Digital Product Solutions**. While clients frequently se
 - **Squeeze Berriez (squeezeberriez.in)**: Packaged fruit beverage and beverage brand website.
 - **Mangrove Moments & Mangrove Spot**: Backwater resort and hospitality stays in Kerala.
 - **Lemon Caters**: Premium catering and event management company in Trivandrum.
-- **Kerala Sellers (keralasellers.in)**: Local multi-vendor marketplace connecting Kerala producers and consumers.
 - Case Study Details: https://www.digitalproductsolutions.in/work
+- Client Reviews: https://www.digitalproductsolutions.in/digital-product-solutions-reviews
+
+---
+
+## Leadership & Technical Architecture
+- **Founder & Lead AI Solutions Architect**: Adarsh B S
+  - Profile Page: https://www.digitalproductsolutions.in/adarsh-b-s
+  - Personal Portfolio: https://adarsh.digitalproductsolutions.in/
+  - Specialization: Enterprise AI Automation, Next.js High-Concurrency Web Architecture, Custom CRMs, and Technical SEO in Kerala.
+- **Co-Founder & UI/UX Frontend Lead**: Aromal V G
+  - Specialization: Full-Stack Engineering, Modern UI/UX Interfaces, and Mobile-First Responsive Design.
+- **Lead Backend Developer**: Midhin S
+  - Specialization: API Engineering, PostgreSQL, Node.js/Python, and QA.
+
 - Portfolio Showcase: https://www.digitalproductsolutions.in/portfolio

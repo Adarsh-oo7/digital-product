@@ -4,6 +4,7 @@ export const htmlSitemapGroups: { heading: string; links: { href: string; label:
     links: [
       { href: "/", label: "Home (Digital Product Solutions)" },
       { href: "/about", label: "About Our Kerala Team" },
+      { href: "/adarsh-b-s", label: "Adarsh B S — Founder & Lead AI Solutions Architect" },
       { href: "/work", label: "Client Case Studies & Work Stories" },
       { href: "/digital-product-solutions-reviews", label: "Verified Reviews & Ratings" },
       { href: "/portfolio", label: "Live Projects Portfolio" },

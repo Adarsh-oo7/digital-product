@@ -2,29 +2,40 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 import ParticleNetwork from "@/components/ParticleNetwork"
 import { business } from "@/lib/business"
 
-const teamMembers = [
+const teamMembers: Array<{
+  name: string
+  role?: string[]
+  image: string
+  imageHover?: string
+  tier: "core" | "member"
+  profileUrl?: string
+  portfolioUrl?: string
+}> = [
   {
     name: "Adarsh B S",
-    role: ["Project Manager", "SEO and Marketing Specialist"],
+    role: ["Founder", "Lead AI Consultant & Software Solutions Architect"],
     image: "/img/adarshnew.png",
     imageHover: "/img/adarshcrazy.jpg",
+    tier: "core",
+    profileUrl: "/adarsh-b-s",
+    portfolioUrl: "https://adarsh.digitalproductsolutions.in/",
+  },
+  {
+    name: "Aromal V G",
+    role: ["Co-Founder", "Full-Stack Developer & UI/UX Specialist"],
+    image: "/img/aromalnew.png",
+    imageHover: "/img/aromalcrazy.jpg",
     tier: "core",
   },
   {
     name: "Midhin S",
-    role: ["Full-Stack Developer", "Backend Specialist", "Quality Assurance (QA)"],
+    role: ["Lead Full-Stack Developer", "Backend & QA Specialist"],
     image: "/img/midhin.jpg",
     imageHover: "/img/midhincrazy.jpg",
-    tier: "core",
-  },
-  {
-    name: "Aromal V G",
-    role: ["Full-Stack Developer", "UI/UX Designer", "Frontend Specialist"],
-    image: "/img/aromalnew.png",
-    imageHover: "/img/aromalcrazy.jpg",
     tier: "core",
   },
   {
@@ -99,6 +110,29 @@ const MemberCard = ({
           </span>
         ))}
       </p>
+    )}
+
+    {member.profileUrl && (
+      <div className="flex flex-wrap items-center justify-center gap-2 mt-3">
+        <Link
+          href={member.profileUrl}
+          className="text-xs bg-blue-600 hover:bg-blue-700 text-white font-medium py-1.5 px-3.5 rounded-full transition shadow-sm flex items-center gap-1"
+        >
+          <span>Dedicated Profile</span>
+          <span>→</span>
+        </Link>
+        {member.portfolioUrl && (
+          <a
+            href={member.portfolioUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs bg-gray-800 hover:bg-gray-900 text-gray-200 font-medium py-1.5 px-3 rounded-full border border-gray-700 transition flex items-center gap-1"
+          >
+            <span>Portfolio</span>
+            <span className="text-[10px]">↗</span>
+          </a>
+        )}
+      </div>
     )}
   </motion.div>
 )
