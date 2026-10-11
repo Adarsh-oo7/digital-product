@@ -842,3 +842,53 @@ export const websiteDevelopmentKerala: LandingContent = {
   whatsappText: "Hi, I am looking for website development services in Kerala",
 };
 
+export const aiAutomationKerala: LandingContent = {
+  path: "/ai-automation-for-businesses-kerala",
+  metaTitle: "AI Automation for Kerala Businesses | Workflow & Chatbot Systems",
+  metaDescription:
+    "Intelligent AI automation solutions for businesses in Kerala: custom AI CRM, WhatsApp chatbot automation, automated document parsing, and lead qualification starting from ₹10,000.",
+  h1: "AI Automation for Businesses in Kerala",
+  lede: "Digital Product Solutions engineers custom AI automations for Kerala enterprises, clinics, real estate firms, and hospitality brands — automating manual customer communication, document workflows, and WhatsApp lead handling with direct developer access.",
+  audience: "Small and medium business owners, clinic managers, retail chains, and property consultants across Trivandrum, Kochi, Kozhikode, and all Kerala districts looking to save 20+ hours per week through intelligent workflow automation.",
+  problem: "Most businesses in Kerala lose hot leads because staff cannot reply instantly on WhatsApp after hours, or waste dozens of hours every week manually entering inquiries into spreadsheets. We build reliable AI automations that respond in seconds, qualify prospects, and sync directly with your CRM.",
+  deliverables: [
+    "Official WhatsApp Cloud API conversational bots powered by Gemini / OpenAI",
+    "Automated lead scoring, filtering, and instant notification alerts",
+    "Smart document extraction and invoice parsing directly to Google Sheets / Database",
+    "Custom AI-integrated customer relationship management (CRM) workflows",
+    "Automated appointment booking with Google Calendar / WhatsApp confirmation",
+    "24/7 intelligent customer support trained exclusively on your business data",
+    "Complete handover with documentation and direct developer WhatsApp support",
+  ],
+  costs: [
+    { title: "Starter AI WhatsApp Bot", text: "₹10,000–₹15,000 one-time setup. Auto-reply, FAQ resolution, lead capture, and instant WhatsApp alerts." },
+    { title: "Custom Workflow Automation", text: "₹18,000–₹35,000. Connects website, WhatsApp, CRM, and internal databases with custom business logic." },
+    { title: "Enterprise RAG & AI Agent", text: "From ₹40,000 for complex multi-agent reasoning, PDF document querying, and custom API actions." },
+  ],
+  process: [
+    { title: "Workflow Audit", text: "We identify your bottlenecks: repetitive customer queries, manual lead entry, or slow after-hours follow-ups." },
+    { title: "Custom AI Architecture", text: "We build and train the AI pipeline on your company FAQs, product catalogue, and response guidelines." },
+    { title: "Rigorous Safety Testing", text: "We test against edge cases, hallucination limits, and multi-language queries (English & Malayalam)." },
+    { title: "Deployment & Team Onboarding", text: "Live launch with staff walkthrough and real-time dashboard monitoring." },
+  ],
+  ownership: "You maintain 100% ownership of your business data, API keys, and workflow automations. We never store your customer records on proprietary third-party servers.",
+  proof: "Built by our Trivandrum software engineering team in Korani. Deployed automated WhatsApp booking and CRM flows for hospitality, health clinics, and retail clients across Kerala. Rated 5.0 on Google Business Profile.",
+  related: [
+    { href: "/whatsapp-automation-kerala", label: "WhatsApp automation in Kerala" },
+    { href: "/crm-software-kerala", label: "Custom CRM software Kerala" },
+    { href: "/ai-chatbot-development-kerala", label: "AI chatbot development Kerala" },
+    { href: "/ai-services", label: "AI & machine learning services" },
+    { href: "/software-development", label: "Custom software development" },
+    { href: "/contact", label: "Request a custom AI demo" },
+  ],
+  faqs: [
+    { q: "Can the AI understand Malayalam and Manglish?", a: "Yes. Our AI automations can be tuned to understand Malayalam script, Manglish (Malayalam written in English letters), and standard English, allowing natural communication with Kerala customers." },
+    { q: "How does the AI connect to WhatsApp?", a: "We utilize the official Meta WhatsApp Cloud API with verified phone numbers, ensuring zero ban risk and reliable 24/7 automated delivery." },
+    { q: "How long does implementation take?", a: "Standard WhatsApp AI lead bots and automated workflows are typically deployed within 5 to 7 days." },
+    { q: "What ongoing costs are involved?", a: "You only pay the standard Meta WhatsApp conversation costs (often free for the first 1,000 monthly inquiries) and small token usage on Google/OpenAI, with zero mandatory monthly hostage fees." },
+  ],
+  serviceName: "AI Automation Kerala",
+  whatsappText: "Hi, I am interested in AI automation for my business in Kerala",
+};
+
+
