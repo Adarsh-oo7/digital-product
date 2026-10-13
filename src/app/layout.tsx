@@ -91,6 +91,7 @@ const rootSchema = {
       "@id": `${SITE_URL}/#organization`,
       name: business.legalName,
       legalName: business.legalName,
+      slogan: "Smart Solutions. Built on Trust.",
       alternateName: ["DPS Kerala", "Digital Product Solutions Trivandrum", "Digital Product Solutions Korani"],
       url: SITE_URL,
       logo: `${SITE_URL}/img/logo.png`,

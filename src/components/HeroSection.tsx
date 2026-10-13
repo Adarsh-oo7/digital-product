@@ -85,7 +85,7 @@ export default function WhiteHero() {
                 >
                     <span className="sr-only">Website, App and Software Development for Kerala Businesses. </span>
                     <span className="block text-xs sm:text-sm md:text-base font-bold uppercase tracking-widest text-indigo-600 mb-3 sm:mb-4">
-                        Website &amp; app development team based in Trivandrum
+                        Smart Solutions. Built on Trust.
                     </span>
                     We Build{" "}
 

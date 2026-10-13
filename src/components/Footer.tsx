@@ -28,6 +28,7 @@ const Footer: React.FC = () => {
                 />
                 <span className="font-bold text-gray-900 text-base">Digital Product Solutions</span>
               </div>
+              <p className="text-gray-900 font-medium text-xs sm:text-sm mb-2">Smart Solutions. Built on Trust.</p>
               <p className="text-gray-700 leading-relaxed text-xs sm:text-sm">
                 Registered MSME software, mobile app, technical SEO, and business automation company based in Trivandrum, Kerala. 4+ years of building production-grade digital products with direct developer communication.
               </p>
