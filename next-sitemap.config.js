@@ -25,8 +25,11 @@ const ALLOW = new Set([
   '/app-development',
   '/app-development-kerala',
   '/seo-services',
+  '/seo-services-kerala',
   '/business-automation',
   '/ai-powered-solutions',
+  '/ai-services',
+  '/ai-automation-for-businesses-kerala',
   '/social-media-management',
   '/ecommerce-website-development-kerala',
   '/whatsapp-automation-kerala',
@@ -181,9 +184,6 @@ module.exports = {
     '/api',
     '/certificate-verified',
     '/website-emi-kerala',
-    '/seo-services-kerala',
-    '/ai-services',
-    '/ai-automation-for-businesses-kerala',
   ],
   transform: async (config, path) => {
     if (!ALLOW.has(path)) return null;

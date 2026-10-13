@@ -6,6 +6,7 @@ export const metadata = pageMetadata({
   description:
     "Verify the authenticity of digital certificates and course completions issued by Digital Product Solutions in Korani, Thiruvananthapuram, Kerala.",
   path: "/certificate-verified",
+  noindex: true,
   keywords: [
     "Certificate Verification Kerala",
     "Digital Product Solutions Certificate",
