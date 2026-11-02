@@ -237,16 +237,17 @@ export const travelCrm: CrmIndustry = {
 
 export const educationCrm: CrmIndustry = {
   path: "/education-admission-crm-kerala",
-  metaTitle: "Education CRM & Admission Management Software in Kerala",
+  metaTitle:
+    "Education CRM Development in Trivandrum & Top Education CRM Providers in Kerala",
   metaDescription:
-    "Track student enquiries from first contact to admission. Built for Kerala coaching centres, institutes and schools.",
+    "Leading education CRM providers in Kerala & custom education CRM development in Trivandrum. Track student enquiries, counsellor follow-ups, WhatsApp leads & admissions from ₹15,000.",
   keywords:
-    "education CRM Kerala, admission CRM software, student lead management, institute enquiry management Kerala",
-  badge: "Education / Admission CRM — Kerala · 4+ years",
-  h1: "Admission CRM Kerala — the enquiry dies between the gate and the counsellor",
+    "education crm development in trivandrum, education crm providers in kerala, education CRM Kerala, admission CRM software, student lead management, institute enquiry management Kerala",
+  badge: "Education / Admission CRM — Trivandrum & Kerala · 4+ years",
+  h1: "Education CRM Development in Trivandrum & Admission CRM Providers in Kerala",
   h1Accent: "Parents WhatsApp at 9pm. Your counsellor sees it on Monday. The seat is gone.",
   lede:
-    "Kerala software team, 4+ years. This is the funnel before they join: enquiry → counsellor → application → admitted. Not the full school ERP. Coaching centres need this first. Direct WhatsApp to a developer — no call-centre CRM pitch.",
+    "As one of the trusted education CRM providers in Kerala with custom education CRM development in Trivandrum (and creators of KPSC Master — 56,155+ Google Search Console impressions & 4,223+ student clicks), we build the funnel before students join: enquiry → counsellor → application → admitted. Direct WhatsApp to a developer — no call-centre CRM pitch.",
   problemTitle: "The problem",
   problem:
     "Walk-ins, website forms, WhatsApp and phone all reach different people. The counsellor who should call back does not see the front-desk note. Parents ask “what happened to our form?” and nobody can answer from one screen.",
@@ -320,6 +321,8 @@ export const educationCrm: CrmIndustry = {
   icon: "🎓",
   hubBlurb: "Walk-in, WhatsApp, website — one record until they are admitted. ERP is a different page.",
   searchQueries: [
+    "education crm development in trivandrum",
+    "education crm providers in kerala",
     "education CRM Kerala",
     "admission CRM software",
     "student lead management",
@@ -329,16 +332,17 @@ export const educationCrm: CrmIndustry = {
 
 export const carDealerCrm: CrmIndustry = {
   path: "/car-dealer-crm-kerala",
-  metaTitle: "Car Dealer CRM & Sales Lead Management Software in Kerala",
+  metaTitle:
+    "DealerCRM — Car Dealer CRM & Showroom Lead Software in Kerala (Cloud Login & Demo)",
   metaDescription:
-    "Manage showroom enquiries, test drives and quotations from one dashboard. Built for Kerala car dealerships.",
+    "DealerCRM by Digital Product Solutions: Cloud car dealer CRM for new & used car dealerships in Kerala. Manage showroom walk-ins, OLX/WhatsApp leads, test drives, quotes & branch logins from ₹15,000.",
   keywords:
-    "car dealer CRM Kerala, automobile CRM software, test drive management software, vehicle enquiry management Trivandrum",
-  badge: "Car Dealer CRM — Kerala · 4+ years",
-  h1: "Car Dealer CRM Kerala — the test drive never got booked",
+    "dealercrm, dealer crm, dealercrm login, car dealer CRM Kerala, automobile CRM software, test drive management software, vehicle enquiry management Trivandrum, used car dealer crm kerala",
+  badge: "DealerCRM — Car Dealership CRM Kerala · Cloud Portal & WhatsApp",
+  h1: "DealerCRM — Car Dealer CRM & Showroom Lead Software in Kerala",
   h1Accent: "“Price for this model?” on WhatsApp. Three hours later, they bought from the next showroom.",
   lede:
-    "4+ years building Kerala software. Showroom, Facebook, OLX and WhatsApp leads get an owner, a test-drive slot and a quote on one card. Not a national auto-SaaS login. Message the developer who will actually build it.",
+    "DealerCRM is our custom-engineered car dealership CRM for new and pre-owned car showrooms across Trivandrum, Kochi, Kozhikode, and Kerala. Showroom, Facebook, OLX, and WhatsApp leads get a dedicated sales executive login, a test-drive slot, and a variant quote on one cloud dashboard — starting from ₹15,000 with zero per-seat SaaS lock-in.",
   problemTitle: "The problem",
   problem:
     "The person who took the WhatsApp price query is not the person who booked the test drive. Exchange and finance notes live in a notebook. Follow-up on “will decide after salary day” never happens.",
@@ -412,6 +416,9 @@ export const carDealerCrm: CrmIndustry = {
   icon: "🚗",
   hubBlurb: "Walk-in, Facebook, WhatsApp → exec → test drive → quote → follow-up. Floor notes stop living in a diary.",
   searchQueries: [
+    "dealercrm",
+    "dealer crm",
+    "dealercrm login",
     "car dealer CRM Kerala",
     "automobile CRM software",
     "test drive management software",

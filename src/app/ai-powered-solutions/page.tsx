@@ -2,10 +2,23 @@ import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "AI Chatbots & Automation for Kerala Businesses",
-  description: "AI chatbots, WhatsApp automation & intelligent systems for Kerala businesses — hospitals, hotels, restaurants, retail. Based in Trivandrum. Starting ₹12,000.",
+  title:
+    "AI Consulting Services & Best AI Automation Agency in Kerala | AI Website & Chatbot Development",
+  description:
+    "Leading AI consulting services in Kerala, AI website development company & best AI automation agency in Trivandrum & Kochi. Custom AI chatbots, RAG agents & WhatsApp automation starting at ₹12,000.",
   path: "/ai-powered-solutions",
-  keywords: "AI chatbot development Kerala, WhatsApp chatbot Kerala, AI automation Trivandrum, chatbot for hospital Kerala, AI solutions for small business Kerala",
+  absoluteTitle: true,
+  keywords: [
+    "ai consulting services kerala",
+    "ai website development company in kerala",
+    "best ai automation agency in kerala",
+    "ai automation agency near me",
+    "ai agency near me",
+    "best ai web developer in kerala",
+    "AI chatbot development Kerala",
+    "WhatsApp chatbot Kerala",
+    "AI automation Trivandrum",
+  ],
 });
 
 export default function AIPoweredSolutionsPage() {
@@ -27,17 +40,17 @@ export default function AIPoweredSolutionsPage() {
 
         {/* HERO */}
         <div className="text-center mb-20">
-          <span className="inline-block bg-indigo-600/20 text-indigo-400 text-sm px-4 py-1 rounded-full mb-4 font-medium">
-            AI-Powered Solutions for Kerala
+          <span className="inline-block bg-indigo-600/20 text-indigo-400 text-sm px-4 py-1 rounded-full mb-4 font-semibold">
+            AI Consulting Services &amp; Best AI Automation Agency in Kerala
           </span>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Transform Your Kerala Business with
-            <span className="text-indigo-500"> Artificial Intelligence</span>
+            AI Consulting Services &amp;{" "}
+            <span className="text-indigo-500">AI Automation Agency in Kerala</span>
           </h1>
 
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            We build AI chatbots, WhatsApp automation and intelligent systems for Kerala businesses — hospitals, hotels, restaurants, retail shops and more. Based in <strong>Trivandrum</strong>, serving all of Kerala.
+            Led by Chief AI Consultant <Link href="/adarsh-b-s" className="text-indigo-400 underline">Adarsh B S</Link>, we are a premier <strong>AI website development company and AI automation agency in Kerala</strong>. We build custom RAG agents, WhatsApp AI chatbots, and intelligent business automation for hospitals, hotels, e-commerce, and enterprises across <strong>Trivandrum, Kochi, and global markets</strong> starting at <strong>₹12,000</strong>.
           </p>
 
           <div className="mt-8 flex justify-center gap-4 flex-wrap">

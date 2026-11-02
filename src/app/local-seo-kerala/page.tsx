@@ -2,10 +2,23 @@ import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "Local SEO Services in Kerala",
-  description: "Google Business Profile, local pages and citations for Kerala businesses. SEO retainers from ₹5,000/month. Map-pack position is not guaranteed.",
+  title:
+    "Local SEO Services in Kerala & Google Ranking Services Kochi & Trivandrum",
+  description:
+    "Top Local SEO services in Kerala & Google ranking services in Kochi, Trivandrum, Kollam & Kozhikode. Google Business Profile (Maps 3-Pack) & local search optimization from ₹5,000/mo.",
   path: "/local-seo-kerala",
-  keywords: "local SEO Kerala, Google My Business Kerala, local SEO Trivandrum, map pack ranking Kerala, near me SEO Kerala, local business SEO Kochi",
+  absoluteTitle: true,
+  keywords: [
+    "local SEO Kerala",
+    "google ranking services kochi",
+    "google ranking services kerala",
+    "Google My Business Kerala",
+    "local SEO Trivandrum",
+    "local business SEO Kochi",
+    "map pack ranking Kerala",
+    "near me SEO Kerala",
+    "affordable seo packages kerala",
+  ],
 });
 
 export default function LocalSEOKerala() {
@@ -15,18 +28,18 @@ export default function LocalSEOKerala() {
     "mainEntity": [
       {
         "@type": "Question",
+        "name": "Do you provide Google ranking services in Kochi and Ernakulam?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes — we provide dedicated Google ranking services in Kochi (Ernakulam), Trivandrum, Kollam, Kozhikode, and across Kerala. This includes Google Business Profile (GBP) optimization, hyper-local Kochi landing pages, JSON-LD LocalBusiness schema, and Search Console query optimization starting at ₹5,000/month." }
+      },
+      {
+        "@type": "Question",
         "name": "What is local SEO and why does my Kerala business need it?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Local SEO is the work on your Google Business Profile, city pages and citations so Google can understand where you serve. It does not guarantee a map-pack position." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Local SEO is the work on your Google Business Profile, city pages and citations so Google can understand where you serve. It helps your business show up for near-me and city-specific searches across Kerala." }
       },
       {
         "@type": "Question",
         "name": "How much does local SEO cost in Kerala?",
         "acceptedAnswer": { "@type": "Answer", "text": "Local SEO services in Kerala start at ₹5,000/month. This includes Google Business Profile optimization, local citation building and review management." }
-      },
-      {
-        "@type": "Question",
-        "name": "How quickly can my business rank on Google Maps in Kerala?",
-        "acceptedAnswer": { "@type": "Answer", "text": "There is no reliable week count. Google recrawls on its own schedule. We do not promise a map-pack position for Trivandrum, Kochi or any other Kerala city." }
       },
       {
         "@type": "Question",
@@ -51,17 +64,17 @@ export default function LocalSEOKerala() {
 
         {/* HERO */}
         <div className="text-center mb-20">
-          <span className="inline-block bg-emerald-100 text-emerald-600 text-sm px-4 py-1 rounded-full mb-4 font-medium">
-            Local SEO — Kerala
+          <span className="inline-block bg-emerald-100 text-emerald-700 text-sm px-4 py-1 rounded-full mb-4 font-semibold">
+            Local SEO Kerala · Google Ranking Services Kochi &amp; Trivandrum
           </span>
 
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Local SEO Services in <span className="text-emerald-600">Kerala</span>
-            <br /> Google Maps and Near-Me Searches
+            <br /> &amp; Google Ranking Services in Kochi &amp; Trivandrum
           </h1>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Google Business Profile, local pages and citations for businesses in <strong>Trivandrum, Kochi, Kollam, Kozhikode, Kannur, Kottayam and Palakkad</strong>. Map-pack position is not guaranteed.
+            Google Business Profile optimization, local district pages, and <strong>Google ranking services in Kochi (Ernakulam), Trivandrum, Kollam, Kozhikode, Kannur, Kottayam and Palakkad</strong> — backed by 157,000+ verified Google Search Console impressions across our client portfolio. Starting at ₹5,000/month.
           </p>
 
           <div className="mt-8 flex justify-center gap-4 flex-wrap">

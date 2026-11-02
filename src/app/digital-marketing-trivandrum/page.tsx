@@ -2,10 +2,25 @@ import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "Best Digital Marketing Company in Trivandrum | Top Agency Kerala",
-  description: "Partner with the best digital marketing company in Trivandrum. Proven SEO, Google Ads, social media marketing & lead generation for Kerala businesses from ₹3,000/mo.",
+  title:
+    "Best Digital Marketing Company in Trivandrum & Attingal | Top SEO & Ads Agency",
+  description:
+    "Partner with the best digital marketing company in Trivandrum & Attingal. Proven digital marketing services in Trivandrum — AI SEO, Google Ads, social media & WhatsApp lead automation from ₹3,000/mo.",
   path: "/digital-marketing-trivandrum",
-  keywords: "best digital marketing company in trivandrum, digital marketing agency in trivandrum, best digital marketing agency in trivandrum, digital marketing in trivandrum, digital marketing companies in trivandrum",
+  absoluteTitle: true,
+  keywords: [
+    "digital marketing services in trivandrum",
+    "best digital marketing company in trivandrum",
+    "digital marketing agency in trivandrum",
+    "digital marketing company in trivandrum",
+    "digital marketing agency trivandrum",
+    "best digital marketing agency in trivandrum",
+    "digital marketing trivandrum",
+    "digital marketing in trivandrum",
+    "digital marketing agency in attingal",
+    "digital marketing in attingal",
+    "digital marketing companies in trivandrum",
+  ],
 });
 
 export default function DigitalMarketingTrivandrum() {

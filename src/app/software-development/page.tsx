@@ -2,10 +2,24 @@ import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "Custom Software Development in Kerala | Web Apps & ERP | Starting ₹15,000",
-  description: "Custom software and web application development agency in Kerala. Custom web portals, SaaS platforms, ERP, and Odoo setup starting at ₹15,000. Get a free proposal!",
+  title:
+    "Custom Software Development Company in Trivandrum & Kerala | ERP, CRM & SaaS from ₹15,000",
+  description:
+    "Leading custom software development company in Trivandrum & Kerala. Custom software development services in Trivandrum, ERP/Odoo, CRM software & SaaS web portals starting at ₹15,000.",
   path: "/software-development",
-  keywords: "software development Kerala, web app development Trivandrum, custom software Kerala, ERP development Kerala, Odoo Kerala, hospital management software Kerala",
+  absoluteTitle: true,
+  keywords: [
+    "custom software development services in trivandrum",
+    "custom software development company in trivandrum",
+    "custom software development company in thiruvananthapuram",
+    "custom software development company in kerala",
+    "custom software development kerala",
+    "erp software development company kerala",
+    "erp development company in kerala",
+    "crm software development in kerala",
+    "software development Kerala",
+    "web app development Trivandrum",
+  ],
 });
 
 export default function SoftwareDevelopmentPage() {
@@ -35,17 +49,17 @@ export default function SoftwareDevelopmentPage() {
 
         {/* HERO */}
         <div className="text-center mb-20">
-          <span className="inline-block bg-blue-100 text-blue-600 text-sm px-4 py-1 rounded-full mb-4 font-medium">
-            Software Development
+          <span className="inline-block bg-blue-100 text-blue-700 text-sm px-4 py-1 rounded-full mb-4 font-semibold">
+            Custom Software Development Company in Trivandrum &amp; Kerala
           </span>
 
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Custom Software Development in <span className="text-blue-600">Kerala</span>
-            <br /> For Your Business
+            Custom Software Development in <span className="text-blue-600">Trivandrum &amp; Kerala</span>
+            <br /> ERP, CRM &amp; Scalable SaaS Platforms
           </h1>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We design and develop powerful web applications, SaaS platforms, hospital management systems, school software, hotel booking systems and ERP solutions for <strong>Kerala businesses</strong> — from Trivandrum to Kochi and beyond.
+            Partner with an engineering-led <strong>custom software development company in Trivandrum and Kerala</strong> (led by Software Solution Architect <Link href="/adarsh-b-s" className="text-blue-700 underline">Adarsh B S</Link>). We deliver end-to-end <strong>custom software development services in Trivandrum, Kochi, and across Kerala</strong> — including SaaS platforms, Odoo ERP, industry CRMs, and healthcare/EdTech portals starting from <strong>₹15,000</strong>.
           </p>
 
           <div className="mt-8 flex justify-center gap-4 flex-wrap">

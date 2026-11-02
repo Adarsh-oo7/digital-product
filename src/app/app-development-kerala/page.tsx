@@ -2,17 +2,25 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "App Development Kerala | Mobile App Developers in Trivandrum & Kochi",
+  title:
+    "Best Mobile App Development Company in Kerala | Android, iOS & Flutter Developers in Trivandrum & Kochi",
   description:
-    "Custom Android & iOS mobile app development in Kerala using Flutter and React Native. Transparent pricing from ₹25,000, 100% code ownership, and direct engineer communication.",
+    "Partner with the best mobile app development company in Kerala (Trivandrum & Kochi). Custom Android, iOS & Flutter app development cost starting at ₹25,000 with 100% source-code ownership.",
   path: "/app-development-kerala",
+  absoluteTitle: true,
   keywords: [
-    "App Development Kerala",
-    "Mobile App Developers Trivandrum",
-    "Flutter App Development Kerala",
-    "iOS App Development Kochi",
-    "Android App Developers Kerala",
-    "App Development Cost Kerala",
+    "best mobile app development company in kerala",
+    "app development company in kerala",
+    "app developers in kerala",
+    "app development company in thiruvananthapuram",
+    "app development cost in thiruvananthapuram",
+    "app development company in kochi",
+    "android app development company in kerala",
+    "android app development company cochin",
+    "flutter application development company kerala",
+    "ios app development company kerala",
+    "best mobile app development company in trivandrum",
+    "best mobile app development company in kochi",
   ],
 });
 

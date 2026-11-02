@@ -945,7 +945,7 @@ export const australiaLanding: LandingContent = {
     },
   ],
   ownership: "You own 100% of the custom source code, domain, and cloud infrastructure from day one. All contracts include clear IP assignment and optional post-launch SLA support.",
-  proof: "Proven Australian delivery includes Care & Cure Home Care Perth (carencure.com.au — Western Australian clinical aged care, Support at Home & local suburb SEO platform), alongside our 8-month Kerala Sellers multi-vendor marketplace build, BuilDwellz construction portal, and Mangrove Moments hospitality platform. Rated 5.0★ across 25 verified Google reviews.",
+  proof: "Proven Australian delivery includes Care N Cure Group Perth (carencure.com.au — generating 73,746+ verified Google Search Console impressions in Australia and ranking #1.1 for 'aged care agencies', #1.3 for 'home care services WA', and #1.5 for 'home care services'), alongside our 8-month Kerala Sellers multi-vendor marketplace build (7,620+ GSC impressions), KPSC Master EdTech platform (56,155+ GSC impressions & 4,223 clicks), and BuilDwellz construction portal. Rated 5.0★ across 25 verified Google reviews.",
   related: [
     { href: "/adarsh-b-s", label: "Meet Founder & Lead AI Architect Adarsh B S" },
     { href: "/australia-malayali-business-website-development", label: "Australia Malayali Business Digital Solutions" },
@@ -962,7 +962,7 @@ export const australiaLanding: LandingContent = {
     },
     {
       q: "Have you built platforms for Australian businesses before?",
-      a: "Yes. We engineered and optimized Care & Cure (carencure.com.au) in Perth, Western Australia, implementing clinical home-care service architecture, Support at Home funding guides, and multi-suburb local SEO.",
+      a: "Yes. We engineered and optimized Care N Cure Group (carencure.com.au) in Perth, Western Australia — delivering 73,746+ verified Google Search Console impressions in Australia and #1.1–#1.5 Page-1 rankings for aged care and home care services in WA.",
     },
     {
       q: "Can you deploy our software on Australian servers for data residency?",
