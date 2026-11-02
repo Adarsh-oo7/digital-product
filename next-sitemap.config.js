@@ -6,6 +6,8 @@ const ALLOW = new Set([
   '/pricing',
   '/portfolio',
   '/work',
+  '/work/care-n-cure-australia',
+  '/work/kpsc-master',
   '/work/buildwellz',
   '/work/crystal-knot-films',
   '/work/squeeze-berriez',

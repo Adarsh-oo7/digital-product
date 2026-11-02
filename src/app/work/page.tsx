@@ -9,10 +9,11 @@ import { absUrl } from "@/lib/seo";
 import { business } from "@/lib/business";
 
 export const metadata = pageMetadata({
-  title: "Real Project Stories from Our Kerala Team",
+  title: "Verified Client Case Studies & Project Stories | Australia & Kerala",
   description:
-    "Short stories of live websites we built — BuilDwellz, Crystal Knot Films, Squeeze Berriez, Mangrove Moments and more. Timelines and what shipped, not padded AI copy.",
+    "Verified software, SaaS, and SEO case studies by Digital Product Solutions — Care N Cure Group Perth (73,746+ GSC impressions in Australia), KPSC Master (56,155+ impressions & 4,223 clicks), Kerala Sellers, BuilDwellz & more.",
   path: "/work",
+  absoluteTitle: true,
 });
 
 export default function WorkIndexPage() {

@@ -24,6 +24,64 @@ export type WorkStory = {
 
 export const workStories: WorkStory[] = [
   {
+    slug: "care-n-cure-australia",
+    client: "Care N Cure Group (Perth, Western Australia)",
+    metaTitle: "Care N Cure Group Perth Case Study | Australian Healthcare Web & SEO (73.7K Impressions)",
+    metaDescription:
+      "How Digital Product Solutions engineered and ranked Care N Cure Group (carencure.com.au) in Perth, Western Australia — 73,746+ verified Google Search Console impressions & #1.1 WA rankings.",
+    h1: "Care N Cure Group (Perth, WA): 73,746+ Australian Google Search Console Impressions & #1 Rankings",
+    industry: "Healthcare & Clinical Home Care (Australia)",
+    where: "Perth, Western Australia (30+ WA Suburbs)",
+    timeline: "Multi-phase platform & SEO rollout",
+    liveUrl: "https://carencure.com.au/",
+    image: "/img/healthcare.jpg",
+    imageAlt: "Care N Cure Group Perth Western Australia healthcare platform engineered by Digital Product Solutions",
+    problem:
+      "Australian aged-care and home-nursing providers compete against national healthcare directories in high-CPC Perth searches. Without dedicated clinical service architecture and suburb-level local SEO, families searching for private nurses or Support at Home packages cannot find local WA providers.",
+    whatWeDid:
+      "We engineered and optimized Care N Cure Group's digital platform (carencure.com.au) with clinical care pathways (Private Nursing, Elderly Care, Wound Care, Post-Hospital Care, Support at Home, NDIS Nursing) and 30+ hyper-local Perth suburb hubs (South Perth, Rockingham, Joondalup, Claremont, Nedlands, Canning Vale, Applecross). In first-party Google Search Console analytics, the property has generated 73,746+ organic impressions (71,169 in Australia) and 303 clicks, ranking Position #1.1 for 'aged care agencies', #1.3 for 'home care services WA', and #1.5 for 'home care services'.",
+    shipped: [
+      "Clinical service & Support at Home architecture (carencure.com.au)",
+      "30+ Perth suburb local SEO landing pages (South Perth, Joondalup, Rockingham, Claremont, Nedlands)",
+      "MedicalOrganization, Service & FAQPage JSON-LD structured data",
+      "73,746+ verified Google Search Console impressions & #1.1–#1.5 WA rankings",
+    ],
+    supplements: [
+      { href: "/au", label: "Australia Software, AI & Web Outsourcing (/au)" },
+      { href: "/website-development-for-hospitals-clinics-kerala", label: "Healthcare & Clinic Web Development" },
+      { href: "/seo-services", label: "Best SEO Company in Kerala & International SEO" },
+    ],
+  },
+  {
+    slug: "kpsc-master",
+    client: "KPSC Master (EdTech SaaS Platform)",
+    metaTitle: "KPSC Master Case Study | EdTech SaaS & 56,155+ Google Search Console Impressions",
+    metaDescription:
+      "How Digital Product Solutions built and scaled KPSC Master (kpscmaster.in) — generating 56,155+ Google Search Console impressions and 4,223 organic student clicks (7.5% CTR).",
+    h1: "KPSC Master: Scaling an EdTech Mock-Test SaaS to 56,155+ Impressions & 4,223 Organic Clicks",
+    industry: "EdTech SaaS & Online Exam Platform",
+    where: "Kerala (Statewide)",
+    timeline: "Ongoing SaaS product & programmatic SEO",
+    liveUrl: "https://www.kpscmaster.in/",
+    image: "/img/projects/kerala-psc.jpg",
+    imageAlt: "KPSC Master EdTech SaaS platform built by Digital Product Solutions",
+    problem:
+      "Kerala PSC aspirants needed a fast, mobile-first bilingual (Malayalam & English) mock-test engine with instant OMR-style scoring, current affairs, and exam-specific practice banks without slow app downloads.",
+    whatWeDid:
+      "We engineered KPSC Master (kpscmaster.in) as a high-concurrency web SaaS with interactive timed mock tests, bilingual Malayalam/English question rendering, automated syllabus hubs, and district coaching pages. In verified Google Search Console data over 123 days, KPSC Master achieved 56,155+ organic impressions and 4,223 clicks (7.5% sitewide CTR), ranking Position #1.8 (56.0% CTR) for 'vfa mock test 2026' and Position #2.2 for 'vfa mock test malayalam'.",
+    shipped: [
+      "Interactive real-time mock test & scoring SaaS engine",
+      "Bilingual Malayalam & English question bank architecture",
+      "Programmatic exam & syllabus SEO pages across 30+ PSC categories",
+      "56,155+ verified Google Search Console impressions & 4,223 organic clicks",
+    ],
+    supplements: [
+      { href: "/education-admission-crm-kerala", label: "Education & Admission CRM Kerala" },
+      { href: "/school-education-management-software-kerala", label: "School & EdTech Software Development" },
+      { href: "/software-development", label: "Custom Software & SaaS Development" },
+    ],
+  },
+  {
     slug: "buildwellz",
     client: "BuilDwellz",
     metaTitle: "BuilDwellz Construction Website Story, Kerala",
