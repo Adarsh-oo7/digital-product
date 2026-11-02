@@ -6,6 +6,15 @@ export function absUrl(path = "/") {
   return `${SITE_URL}${path === "/" ? "/" : path}`;
 }
 
+export const INTERNATIONAL_HREFLANGS: Record<string, string> = {
+  "en-AU": absUrl("/au"),
+  "en-AE": absUrl("/uae"),
+  "en-GB": absUrl("/uk"),
+  "de-DE": absUrl("/de"),
+  "en-IN": absUrl("/"),
+  "x-default": absUrl("/international-business-digital-solutions"),
+};
+
 export function pageMetadata({
   title,
   description,
@@ -15,6 +24,8 @@ export function pageMetadata({
   ogImage = "/img/logo.png",
   absoluteTitle = false,
   keywords,
+  languages,
+  locale = "en_IN",
 }: {
   title: string;
   description: string;
@@ -25,6 +36,8 @@ export function pageMetadata({
   /** Skip the layout "%s | Digital Product Solutions" suffix (use on the homepage title). */
   absoluteTitle?: boolean;
   keywords?: string | string[];
+  languages?: Record<string, string>;
+  locale?: string;
 }): Metadata {
   const canonical = absUrl(canonicalPath ?? path);
   const image = ogImage.startsWith("http") ? ogImage : absUrl(ogImage);
@@ -40,7 +53,7 @@ export function pageMetadata({
     ...(keywords ? { keywords } : {}),
     alternates: {
       canonical,
-      languages: { "en-IN": canonical, "x-default": canonical },
+      languages: languages ?? { "en-IN": canonical, "x-default": canonical },
     },
     robots: noindex
       ? {
@@ -64,7 +77,7 @@ export function pageMetadata({
       url: canonical,
       siteName: "Digital Product Solutions",
       type: "website",
-      locale: "en_IN",
+      locale,
       images: [
         {
           url: image,

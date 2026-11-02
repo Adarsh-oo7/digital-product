@@ -1,6 +1,6 @@
 import DiasporaPage from "@/components/seo/DiasporaPage";
 import { diaspora } from "@/content/diaspora";
-import { pageMetadata } from "@/lib/seo";
+import { pageMetadata, INTERNATIONAL_HREFLANGS } from "@/lib/seo";
 
 const content = diaspora("/international-business-digital-solutions");
 
@@ -9,6 +9,7 @@ export const metadata = pageMetadata({
   description: content.metaDescription,
   path: content.path,
   absoluteTitle: content.absoluteTitle,
+  languages: INTERNATIONAL_HREFLANGS,
 });
 
 export default function Page() {

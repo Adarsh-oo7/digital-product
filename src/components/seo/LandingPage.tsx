@@ -27,6 +27,7 @@ export type LandingContent = {
   whatsappText?: string;
   serviceName?: string;
   heroImage?: string;
+  areaServed?: string[];
 };
 
 export default function LandingPage({ content, children }: { content: LandingContent; children?: React.ReactNode }) {
@@ -63,7 +64,7 @@ export default function LandingPage({ content, children }: { content: LandingCon
             addressCountry: business.addressCountry,
           },
         },
-        areaServed: ["Thiruvananthapuram", "Kerala"],
+        areaServed: content.areaServed ?? ["Thiruvananthapuram", "Kerala"],
         url: absUrl(content.path),
       }
     : null;

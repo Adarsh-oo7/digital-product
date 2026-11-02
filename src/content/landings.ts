@@ -891,4 +891,353 @@ export const aiAutomationKerala: LandingContent = {
   whatsappText: "Hi, I am interested in AI automation for my business in Kerala",
 };
 
+export const australiaLanding: LandingContent = {
+  path: "/au",
+  metaTitle: "Outsource Software, AI & Web Development Australia | India Engineering Team",
+  metaDescription:
+    "Australian businesses outsource custom software, Next.js web platforms, Flutter apps, Odoo ERP, and AI automation to Digital Product Solutions in India. Transparent AUD pricing from AUD $450.",
+  h1: "Software, AI & Web Development Partner for Australian Businesses",
+  lede: "Digital Product Solutions is a registered 9-person software engineering team in Kerala, India, building high-speed Next.js web platforms, custom CRMs, Odoo ERP integrations, Flutter mobile apps, and AI automations for Australian SMEs and healthcare providers — with direct senior architect access and transparent AUD pricing.",
+  audience: "Australian founders, healthcare & NDIS/Aged Care providers, construction firms, hospitality groups, and SMEs across Sydney, Melbourne, Perth, Brisbane, and Adelaide looking to outsource software development to India without agency middlemen.",
+  problem: "Hiring local Australian agencies often costs AUD $15,000–$50,000+ for basic web or CRM builds, while solo offshore freelancers carry single-point-of-failure risks. We operate as a dedicated, named 9-engineer team with 5+ hours of daily AWST/AEST overlap and direct WhatsApp/Slack access to Lead Architect Adarsh B S.",
+  deliverables: [
+    "High-performance Next.js & React web applications optimized for 95+ Core Web Vitals",
+    "Custom CRM & Odoo ERP implementation tailored to Australian workflows and GST rules",
+    "Cross-platform Flutter mobile app development (iOS & Android) from a single codebase",
+    "Enterprise AI & LLM integration, RAG knowledge assistants, and WhatsApp Cloud API bots",
+    "Aged Care, NDIS & Healthcare digital platforms (WCAG accessibility & clinical compliance)",
+    "100% source code ownership, GitHub repository handover, and AWS Sydney (ap-southeast-2) deployment",
+  ],
+  costs: [
+    {
+      title: "Next.js Business & Corporate Websites",
+      text: "AUD $450 – $1,800 one-time (5–10 days delivery). Includes responsive UI/UX, technical SEO, schema markup, and lead capture.",
+    },
+    {
+      title: "Custom Web Apps, CRM & Odoo ERP",
+      text: "AUD $1,800 – $5,500+ scoped per milestone. Full-stack portals, booking engines, and custom Odoo modules.",
+    },
+    {
+      title: "Flutter Mobile Apps (iOS & Android)",
+      text: "AUD $2,500 – $7,500+ including backend APIs, push notifications, and App Store / Google Play publishing.",
+    },
+    {
+      title: "Dedicated Developer / AI Pod Retainer",
+      text: "AUD $1,800 – $2,800 / month for a dedicated full-stack Next.js, Python AI, or Flutter engineer working in Australian time-zone overlap.",
+    },
+  ],
+  process: [
+    {
+      title: "1. Direct Architect Discovery (AWST / AEST Overlap)",
+      text: "Video or WhatsApp consultation directly with Founder & Solutions Architect Adarsh B S — no non-technical sales reps.",
+    },
+    {
+      title: "2. Fixed-Price AUD Scope & Milestones",
+      text: "You receive a clear written specification in AUD with exact deliverables, sprint dates, and zero hidden retainers.",
+    },
+    {
+      title: "3. Agile Sprints & Staging Previews",
+      text: "Live preview links updated weekly with direct communication across Slack, Teams, or WhatsApp.",
+    },
+    {
+      title: "4. AWS Sydney Deployment & Code Handover",
+      text: "Production launch on Australian cloud regions with complete repository and credential ownership.",
+    },
+  ],
+  ownership: "You own 100% of the custom source code, domain, and cloud infrastructure from day one. All contracts include clear IP assignment and optional post-launch SLA support.",
+  proof: "Proven Australian delivery includes Care & Cure Home Care Perth (carencure.com.au — Western Australian clinical aged care, Support at Home & local suburb SEO platform), alongside our 8-month Kerala Sellers multi-vendor marketplace build, BuilDwellz construction portal, and Mangrove Moments hospitality platform. Rated 5.0★ across 25 verified Google reviews.",
+  related: [
+    { href: "/adarsh-b-s", label: "Meet Founder & Lead AI Architect Adarsh B S" },
+    { href: "/australia-malayali-business-website-development", label: "Australia Malayali Business Digital Solutions" },
+    { href: "/odoo-erp-development-kerala", label: "Odoo ERP Implementation & Custom Modules" },
+    { href: "/app-development", label: "Flutter Mobile App Development" },
+    { href: "/ai-agent-rag-development-india", label: "Enterprise AI Agents & RAG Systems" },
+    { href: "/work", label: "Explore Verified Case Studies" },
+    { href: "/contact", label: "Request an AUD Project Estimate" },
+  ],
+  faqs: [
+    {
+      q: "How do we handle the time-zone difference between Australia and India?",
+      a: "India Standard Time (IST) is only 2.5 hours behind Perth (AWST) and 4.5 to 5.5 hours behind Sydney/Melbourne (AEST/AEDT). Our engineering team overlaps for 5–6 hours every Australian business day for live standups and instant messages.",
+    },
+    {
+      q: "Have you built platforms for Australian businesses before?",
+      a: "Yes. We engineered and optimized Care & Cure (carencure.com.au) in Perth, Western Australia, implementing clinical home-care service architecture, Support at Home funding guides, and multi-suburb local SEO.",
+    },
+    {
+      q: "Can you deploy our software on Australian servers for data residency?",
+      a: "Yes. We routinely deploy Next.js, PostgreSQL, and Python backends to AWS Sydney (ap-southeast-2) or Vercel/Cloudflare Australian edge nodes to satisfy Australian Privacy Principles (APP) and low-latency requirements.",
+    },
+    {
+      q: "How do payments and invoicing work for Australian clients?",
+      a: "We issue compliant international commercial invoices in AUD, payable via Wise, international bank wire (SWIFT), or credit/debit card linked to milestone sign-offs.",
+    },
+  ],
+  serviceName: "Software & Web Development Outsourcing for Australia",
+  whatsappText: "Hi Adarsh, I am inquiring from Australia regarding a software/web project",
+  areaServed: ["Australia", "Sydney", "Melbourne", "Perth", "Brisbane", "Adelaide"],
+};
+
+export const uaeLanding: LandingContent = {
+  path: "/uae",
+  metaTitle: "Custom Software, AI & Web Development UAE | Dubai & Abu Dhabi Tech Partner",
+  metaDescription:
+    "Custom software development, Official WhatsApp Cloud API chatbots, Odoo ERP, Flutter apps, and Next.js websites for UAE businesses in Dubai & Abu Dhabi. Transparent AED/USD pricing.",
+  h1: "Custom Software, AI Automation & Web Development for UAE Businesses",
+  lede: "Digital Product Solutions engineers high-converting Next.js websites (English & Arabic RTL), official Meta WhatsApp Cloud API chatbots, custom CRMs, Odoo ERP systems, and Flutter mobile apps for companies in Dubai, Abu Dhabi, and Sharjah — delivered by our 9-person engineering team with 100% GCC workday overlap.",
+  audience: "SMEs, real estate brokerages, healthcare clinics, hospitality brands, trading companies, and retail chains in Dubai, Abu Dhabi, Sharjah, and across the GCC seeking high-speed engineering with direct architect communication.",
+  problem: "Local Dubai agencies often charge AED 25,000–80,000+ while outsourcing the actual coding anyway. By working directly with our registered engineering team (only 1.5 hours ahead of UAE time), you cut out agency markups and speak directly with the senior developers building your platform.",
+  deliverables: [
+    "Bilingual Next.js & React web platforms (English + Arabic RTL support) with sub-second speed",
+    "Official Meta WhatsApp Cloud API automation, AI lead qualification & bilingual chatbots",
+    "Custom CRM & Odoo ERP implementation for UAE trading, real estate, and service firms",
+    "Flutter iOS & Android mobile apps with UAE payment gateways (Stripe UAE, Telr, Network, PayTabs)",
+    "Technical SEO & Google Maps optimization targeting Dubai, Abu Dhabi, and GCC commercial queries",
+    "Full source code handover and deployment on AWS Middle East (UAE me-central-1) cloud regions",
+  ],
+  costs: [
+    {
+      title: "High-Speed Business & Corporate Websites",
+      text: "AED 1,200 – AED 4,500 (USD $330 – $1,250). Mobile-first Next.js build, WhatsApp integration, and technical SEO.",
+    },
+    {
+      title: "WhatsApp Cloud API & AI Chatbot Systems",
+      text: "AED 2,200 – AED 5,500 (USD $600 – $1,500). 24/7 automated lead capture, CRM sync, and appointment booking.",
+    },
+    {
+      title: "Custom CRM, Odoo ERP & Web Portals",
+      text: "AED 4,000 – AED 14,000+ (USD $1,100 – $3,800+) tailored for real estate, clinics, logistics, and trading.",
+    },
+    {
+      title: "Flutter Mobile Apps (iOS & Android)",
+      text: "AED 5,500 – AED 18,000+ (USD $1,500 – $4,900+) complete with admin dashboard and store publishing.",
+    },
+  ],
+  process: [
+    {
+      title: "1. Direct WhatsApp / Zoom Consultation (GST Time Zone)",
+      text: "Speak directly with Founder & AI Architect Adarsh B S during standard Dubai business hours (only 1.5h time difference).",
+    },
+    {
+      title: "2. Fixed AED / USD Proposal",
+      text: "Transparent milestone breakdown with exact delivery dates and zero hidden licensing traps.",
+    },
+    {
+      title: "3. Rapid Engineering & Live Previews",
+      text: "Weekly sprint demos with bilingual (English/Arabic) UI verification and WhatsApp flow testing.",
+    },
+    {
+      title: "4. Launch on UAE Cloud & Handover",
+      text: "Go-live with complete source code, admin training, and dedicated post-launch support.",
+    },
+  ],
+  ownership: "100% ownership of source code, custom AI prompts, databases, and domain names. No recurring vendor lock-in fees.",
+  proof: "Our team has shipped 20+ production systems across construction (BuilDwellz), hospitality (Mangrove Moments & Mangrove Spot), FMCG (Squeeze Berriez), e-commerce (Kerala Sellers), and healthcare (Care & Cure). Rated 5.0★ on Google.",
+  related: [
+    { href: "/adarsh-b-s", label: "Meet Founder & AI Solutions Architect Adarsh B S" },
+    { href: "/uae-malayali-business-website-development", label: "UAE Malayali Business Digital Solutions" },
+    { href: "/gcc-malayali-business-digital-solutions", label: "GCC Business Software & Automation" },
+    { href: "/whatsapp-automation-kerala", label: "Official WhatsApp Cloud API Automation" },
+    { href: "/crm-software-kerala", label: "Custom Real Estate & Clinic CRM Systems" },
+    { href: "/odoo-erp-development-kerala", label: "Odoo ERP Implementation Services" },
+    { href: "/contact", label: "Get a Fixed AED / USD Quote" },
+  ],
+  faqs: [
+    {
+      q: "Do you build bilingual Arabic and English websites and AI bots for Dubai?",
+      a: "Yes (نعم). We engineer full Right-to-Left (RTL) Arabic and English interfaces in Next.js, and our LLM/WhatsApp chatbots converse fluently in both Arabic and English for UAE customers.",
+    },
+    {
+      q: "Can you integrate UAE payment gateways like Telr, PayTabs, or Stripe UAE?",
+      a: "Yes. We integrate Stripe UAE, Telr, PayTabs, Network International, Apple Pay, and Tabby/Tamara buy-now-pay-later flows into custom web and mobile apps.",
+    },
+    {
+      q: "How fast can you launch a business website or WhatsApp bot in the UAE?",
+      a: "Standard business websites and WhatsApp Cloud API lead bots go live in 5 to 10 business days once branding and requirements are confirmed.",
+    },
+    {
+      q: "Why choose Digital Product Solutions over a local Dubai agency?",
+      a: "You get direct access to our senior engineering team led by Adarsh B S at 60–70% lower development cost than Dubai agency retainers, with virtually the same time zone (1.5 hours difference).",
+    },
+  ],
+  serviceName: "Custom Software, AI & Web Development UAE (شركة تطوير برمجيات دبي)",
+  whatsappText: "Hi Adarsh, I am inquiring from the UAE regarding software/AI/web development",
+  areaServed: ["United Arab Emirates", "Dubai", "Abu Dhabi", "Sharjah", "GCC"],
+};
+
+export const ukLanding: LandingContent = {
+  path: "/uk",
+  metaTitle: "Outsource Software, AI & Web Development UK | Dedicated India Tech Team",
+  metaDescription:
+    "UK SMEs and startups outsource custom software, Next.js web apps, Flutter mobile development, Odoo ERP, and LLM integration to Digital Product Solutions. Transparent GBP (£) pricing.",
+  h1: "Offshore Software, AI & Web Development Partner for UK Businesses",
+  lede: "Digital Product Solutions provides UK SMEs, startups, and digital agencies with a reliable 9-person software engineering team in Kerala, India. We deliver Next.js web platforms, custom CRMs, Odoo ERP implementations, Flutter apps, and LLM automations with transparent GBP (£) pricing and direct senior architect access.",
+  audience: "UK founders, SME directors, recruitment & healthcare consultancies, and digital agencies in London, Manchester, Birmingham, Edinburgh, and across the UK seeking cost-effective engineering without IR35 contractor headaches.",
+  problem: "Hiring UK-based developers or agencies carries high overhead (£500–£900/day rates) and complex IR35 off-payroll compliance. Solo offshore freelancers often lack QA and continuity. Our registered MSME engineering team gives you a structured, multi-disciplinary pod under a clean B2B statement of work.",
+  deliverables: [
+    "Custom web applications & high-speed corporate sites built with Next.js, React, and TypeScript",
+    "LLM integration services, RAG document pipelines, and Official WhatsApp Business API bots",
+    "Odoo ERP & custom CRM development tailored for UK service, healthcare, and property firms",
+    "Cross-platform iOS & Android mobile app development using Flutter",
+    "White-label web & software fulfillment for UK digital and marketing agencies",
+    "GDPR-compliant architecture deployed on AWS London (eu-west-2) with full IP assignment",
+  ],
+  costs: [
+    {
+      title: "Next.js Business & E-Commerce Websites",
+      text: "£300 – £1,200 one-time. Ultra-fast load speeds, UK local SEO structure, Stripe UK checkout, and WhatsApp/CRM forms.",
+    },
+    {
+      title: "Custom Web Applications, CRM & Odoo ERP",
+      text: "£1,100 – £3,800+ scoped per milestone. Bespoke client portals, booking systems, and workflow automation.",
+    },
+    {
+      title: "AI / LLM Integration & WhatsApp Automation",
+      text: "£650 – £2,200. Custom AI customer triage agents, automated document processing, and CRM lead routing.",
+    },
+    {
+      title: "Dedicated Developer Retainer (Outside IR35 B2B)",
+      text: "£1,200 – £2,000 / month for a dedicated full-stack Next.js, Python AI, or Flutter engineer.",
+    },
+  ],
+  process: [
+    {
+      title: "1. Technical Scoping Call (UK Morning / Afternoon)",
+      text: "Direct consultation with Founder & Solutions Architect Adarsh B S to define technical architecture and commercial goals.",
+    },
+    {
+      title: "2. Fixed GBP (£) Statement of Work",
+      text: "Written scope with milestone deliverables, fixed GBP pricing, and clear exclusions before a single line of code is written.",
+    },
+    {
+      title: "3. Sprint Delivery & QA",
+      text: "4.5+ hours of daily UK overlap (9:00 AM – 1:30 PM GMT/BST) for live standups, code reviews, and staging demos.",
+    },
+    {
+      title: "4. AWS London Launch & Handover",
+      text: "Deployment to UK/EU servers with full GitHub repository transfer and documentation.",
+    },
+  ],
+  ownership: "100% intellectual property and source code ownership transfers to your UK entity upon milestone completion. GDPR-compliant data processing agreements available.",
+  proof: "20+ shipped platforms including healthcare & recruitment systems, multi-vendor e-commerce (Kerala Sellers), construction portals (BuilDwellz), and hospitality booking sites. Led by Founder Adarsh B S, Co-Founder Aromal V G, and Lead Backend Engineer Midhin S. 5.0★ Google rating.",
+  related: [
+    { href: "/adarsh-b-s", label: "Meet Founder & Solutions Architect Adarsh B S" },
+    { href: "/uk-malayali-business-website-development", label: "UK Malayali Business Website & Software Solutions" },
+    { href: "/outsource-web-development-kerala", label: "Agency White-Label & Outsource Web Development" },
+    { href: "/dedicated-developer-team-kerala", label: "Hire Dedicated Developers in India" },
+    { href: "/odoo-erp-development-kerala", label: "Odoo Implementation Partner Services" },
+    { href: "/work", label: "Real Project Case Studies" },
+    { href: "/contact", label: "Request a GBP (£) Project Estimate" },
+  ],
+  faqs: [
+    {
+      q: "Does outsourcing to your team fall under UK IR35 rules?",
+      a: "No. Because you contract B2B with Digital Product Solutions (a registered overseas corporate engineering entity in India) on a statement-of-work or agency retainer basis, UK IR35 off-payroll working rules for domestic individual contractors do not apply.",
+    },
+    {
+      q: "How do you ensure UK GDPR compliance?",
+      a: "We deploy databases and application servers directly to AWS London (eu-west-2) or EU regions, enforce least-privilege access, and hand over all credentials to your UK administrator upon launch.",
+    },
+    {
+      q: "What hours do your developers overlap with UK business time?",
+      a: "Our team overlaps with UK mornings and early afternoons (typically 8:30 AM to 2:00 PM UK time), giving your team 5+ hours of real-time collaboration every day.",
+    },
+    {
+      q: "How do we pay from the UK?",
+      a: "We invoice in GBP (£) with milestone payments accepted via Wise, Revolut Business, or standard international SWIFT bank transfer.",
+    },
+  ],
+  serviceName: "Software & Web Development Outsourcing UK",
+  whatsappText: "Hi Adarsh, I am inquiring from the UK regarding software/web outsourcing",
+  areaServed: ["United Kingdom", "London", "Manchester", "Birmingham", "Edinburgh"],
+};
+
+export const germanyLanding: LandingContent = {
+  path: "/de",
+  metaTitle: "Softwareentwicklung Outsourcing Indien | KI, Next.js, Flutter & Odoo (DE/EN)",
+  metaDescription:
+    "Softwareentwicklung Outsourcing nach Indien für deutsche KMU & Startups: Individuelle Web-Apps (Next.js), KI-Integration, Odoo ERP & Flutter Apps ab €350 bzw. €1.250/Monat. DSGVO-konform.",
+  h1: "Softwareentwicklung Outsourcing Indien — KI, Web-Apps & Odoo für Deutschland (DE / EN)",
+  lede: "Digital Product Solutions ist Ihr 9-köpfiges Software-Engineering-Team in Kerala, Indien. Wir entwickeln maßgeschneiderte Next.js Webplattformen, KI-Automatisierungen (LLM/RAG), individuelle CRM- & Odoo-ERP-Systeme sowie Flutter Mobile Apps für Unternehmen im DACH-Raum — DSGVO-konform auf EU-Servern (AWS Frankfurt) und zu transparenten Euro-Festpreisen.",
+  audience: "Geschäftsführer, Mittelstand (KMU), Startups und Digitalagenturen in Deutschland, Österreich und der Schweiz (Berlin, München, Frankfurt, Hamburg, Zürich), die verlässliche Softwareentwickler aus Indien ohne teure Zwischenhändler suchen.",
+  problem: "Lokale Entwickler in Deutschland sind knapp und teuer (€80.000+ Jahresgehalt oder €100+/Stunde), während klassische Deutsch-Indische Vermittlungsagenturen hohe Aufschläge (€1.600–€2.500+/Monat) verlangen. Bei uns arbeiten Sie direkt mit Software Solutions Architect Adarsh B S und unserem Kernteam zusammen — ohne Reibungsverluste.",
+  deliverables: [
+    "Individuelle Softwareentwicklung & Web-Applikationen (Next.js, React, TypeScript, Python, Node.js)",
+    "KI-Integration Dienstleistungen: Enterprise LLM/RAG-Assistenten, Dokumenten-KI & Prozessautomatisierung",
+    "CRM-Entwicklung & Odoo Implementierung für Handel, Dienstleister, Gesundheitswesen & Industrie",
+    "Flutter App-Entwicklung (iOS & Android) aus einer einzigen Codebasis",
+    "DSGVO-konformes Hosting auf AWS Frankfurt (eu-central-1) oder Hetzner Deutschland",
+    "100% Quellcode-Eigentum (GitHub-Übergabe), technische Dokumentation & direkter Architekten-Kontakt",
+  ],
+  costs: [
+    {
+      title: "Corporate Websites & Next.js Plattformen",
+      text: "€350 – €1.400 Festpreis (1–2 Wochen). Mehrsprachig (DE/EN), Core Web Vitals 95+, technisches SEO & Schema-Markup.",
+    },
+    {
+      title: "Individuelle Software, CRM & Odoo ERP",
+      text: "€1.300 – €4.500+ nach Meilensteinen. Maßgeschneiderte Kundenportale, Buchungssysteme und ERP-Workflows.",
+    },
+    {
+      title: "KI-Integration & Geschäftsprozessautomatisierung",
+      text: "€800 – €2.800. KI-Chatbots, automatische Dokumentenverarbeitung und API-Schnittstellen.",
+    },
+    {
+      title: "Dedizierte Entwickler (Full-Stack / Python / Flutter)",
+      text: "€1.250 – €1.950 / Monat pro Entwickler — direkt unter den üblichen €1.600–€2.500 Vermittlungsagentur-Preisen.",
+    },
+  ],
+  process: [
+    {
+      title: "1. Direktes Architektur-Gespräch (English / Written German)",
+      text: "Beratung direkt mit Founder & Lead Architect Adarsh B S via Video-Call oder WhatsApp — klare technische Analyse statt Verkaufsfloskeln.",
+    },
+    {
+      title: "2. Schriftliches Festpreis-Angebot in EUR (€)",
+      text: "Transparente Leistungsbeschreibung mit definierten Meilensteinen, Lieferterminen und Festpreisen.",
+    },
+    {
+      title: "3. Agile Entwicklung & Wöchentliche Demos",
+      text: "4,5+ Stunden tägliche Zeitüberschneidung mit Deutschland (MEZ/MESZ Vormittag bis Nachmittag) für schnelles Feedback.",
+    },
+    {
+      title: "4. DSGVO-Deployment (Frankfurt) & Code-Übergabe",
+      text: "Produktivsetzung auf deutschen Servern inklusive vollständiger Übergabe aller Quellcodes und Zugangsdaten.",
+    },
+  ],
+  ownership: "Sie erhalten 100% der geistigen Eigentumsrechte (IP) und den kompletten Quellcode. Alle Systeme werden strikt nach DSGVO-Vorgaben (GDPR) auf Servern in Deutschland (z.B. AWS Frankfurt oder Hetzner) betrieben.",
+  proof: "Über 20 erfolgreich ausgelieferte Plattformen, darunter internationale Healthcare- & Recruiting-Plattformen für den deutschen Markt (Novora Global Health — Healthcare Recruitment Germany), Care & Cure (Australien), Kerala Sellers (Multi-Vendor-Marktplatz) und BuilDwellz. 5.0★ Google-Bewertung.",
+  related: [
+    { href: "/adarsh-b-s", label: "Adarsh B S — Founder, Lead AI Consultant & Software Architect" },
+    { href: "/software-development", label: "Custom Software Development Overview" },
+    { href: "/odoo-erp-development-kerala", label: "Odoo ERP Implementation & Custom Development" },
+    { href: "/ai-agent-rag-development-india", label: "Enterprise AI Agents & RAG Development" },
+    { href: "/dedicated-developer-team-kerala", label: "Dedicated Developer Team India" },
+    { href: "/work", label: "Case Studies & Live References" },
+    { href: "/contact", label: "Unverbindliches EUR-Angebot anfordern / Get Quote" },
+  ],
+  faqs: [
+    {
+      q: "Wie wird die DSGVO (GDPR) beim Software-Outsourcing nach Indien eingehalten?",
+      a: "Alle produktiven Datenbanken und Server werden direkt in Deutschland (z.B. AWS Frankfurt eu-central-1 oder Hetzner) gehostet. Während der Entwicklung arbeiten wir mit anonymisierten Testdaten und übergeben nach Projektabschluss sämtliche Schlüssel und Repositories exklusiv an Ihr Unternehmen.",
+    },
+    {
+      q: "In welcher Sprache findet die Projektkommunikation statt?",
+      a: "Die direkte technische Abstimmung mit unserem Architekten-Team erfolgt auf fließendem Englisch (Video-Calls, Slack, GitHub), während wir Benutzeroberflächen (UI), Webseiten und Dokumentationen vollständig auf Deutsch und Englisch ausliefern — wie bei unseren deutschen Healthcare-Projekten erprobt.",
+    },
+    {
+      q: "Was kostet ein Softwareentwickler aus Indien pro Monat?",
+      a: "Während klassische Vermittlungsagenturen in Deutschland €1.600 bis €2.500+ pro Monat verlangen, bieten wir dedizierte Full-Stack-, Next.js-, Flutter- und Python-KI-Entwickler ab €1.250–€1.950/Monat sowie projektbasierte Festpreise ab €350 für Webprojekte.",
+    },
+    {
+      q: "Wie funktioniert die Rechnungsstellung für deutsche GmbHs und Einzelunternehmen?",
+      a: "Sie erhalten eine ordnungsgemäße internationale B2B-Handelsrechnung in Euro (€) ohne indische Umsatzsteuer (Export of Services). Die Zahlung erfolgt bequem per Wise, SEPA-kompatibler Auslandsüberweisung oder Firmenkreditkarte nach erreichten Meilensteinen.",
+    },
+  ],
+  serviceName: "Softwareentwicklung Outsourcing Indien für Deutschland",
+  whatsappText: "Hello Adarsh, I am inquiring from Germany/DACH regarding software development / KI outsourcing",
+  areaServed: ["Germany", "Deutschland", "Berlin", "Munich", "Frankfurt", "Hamburg", "Austria", "Switzerland"],
+};
+
+
 

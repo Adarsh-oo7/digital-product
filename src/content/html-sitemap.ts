@@ -154,8 +154,12 @@ export const htmlSitemapGroups: { heading: string; links: { href: string; label:
     ],
   },
   {
-    heading: "Malayali businesses worldwide",
+    heading: "International & Diaspora Markets",
     links: [
+      { href: "/au", label: "Australia Software, AI & Web Development (AUD Pricing)" },
+      { href: "/uae", label: "UAE (Dubai & Abu Dhabi) Software, AI & WhatsApp Automation (AED Pricing)" },
+      { href: "/uk", label: "UK Offshore Software, AI & Next.js Development (GBP Pricing)" },
+      { href: "/de", label: "Germany / DACH Softwareentwicklung Outsourcing Indien (EUR Pricing)" },
       { href: "/malayali-business-solutions-worldwide", label: "Websites and software for Malayali businesses worldwide" },
       { href: "/kerala-affordable-software-web-ai-agency", label: "Affordable software, web and AI from Kerala" },
       { href: "/kerala-digital-lead-generation-agency", label: "Lead-generation systems from Kerala" },
