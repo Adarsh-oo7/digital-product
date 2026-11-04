@@ -621,14 +621,14 @@ export default function Home() {
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {[
-                  "Freelance Web Developer",
-                  "Freelance Software Developer",
+                  "Software Development Agency",
+                  "Web Development Company",
+                  "AI Automation Agency",
                   "CRM Software Kerala",
                   "Odoo ERP Kerala",
-                  "AI Automation",
-                  "SEO Kerala",
+                  "Dedicated Developer Squad",
+                  "SEO Agency Kerala",
                   "WhatsApp Cloud API",
-                  "Next.js Full Stack",
                 ].map((tag, i) => (
                   <span key={i} className="text-xs px-3 py-1 bg-blue-50 text-blue-600 rounded-full border border-blue-100 font-medium">{tag}</span>
                 ))}
@@ -638,14 +638,14 @@ export default function Home() {
               <h2 className="text-lg font-bold text-gray-800 mb-3">Specialised Services in Kerala</h2>
               <ul className="space-y-2">
                 {[
-                  { text: "Freelance Web Developer Kerala", link: "/freelance-web-developer-kerala" },
-                  { text: "Freelance Software Developer Kerala", link: "/freelance-software-developer-kerala" },
+                  { text: "Custom Software Development Agency", link: "/software-development" },
+                  { text: "Web Development Company Kerala", link: "/web-development-kerala" },
                   { text: "CRM Software Solutions Kerala", link: "/crm-software-kerala" },
                   { text: "Odoo ERP Development Kerala", link: "/odoo-erp-development-kerala" },
                   { text: "AI Automation for Businesses Kerala", link: "/ai-automation-for-businesses-kerala" },
-                  { text: "Dedicated Developer Team Kerala", link: "/dedicated-developer-team-kerala" },
-                  { text: "Adarsh B S — Lead AI Consultant & Architect", link: "/adarsh-b-s" },
-                  { text: "Local SEO Kerala", link: "/local-seo-kerala" },
+                  { text: "Dedicated Developer Squad (Contract / Retainer)", link: "/dedicated-developer-team-kerala" },
+                  { text: "Adarsh B S — Founder & Lead AI Consultant", link: "/adarsh-b-s" },
+                  { text: "Freelance Developer Alternative (Agency Direct Access)", link: "/freelance-software-developer-kerala" },
                 ].map((item, i) => (
                   <li key={i}>
                     <Link href={item.link} className="text-sm text-gray-600 hover:text-blue-600 transition flex items-center gap-2">

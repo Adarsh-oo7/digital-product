@@ -63,9 +63,9 @@ export default function AdarshProfileClient() {
     },
     {
       icon: Code2,
-      title: "Freelance Software & Web Architecture",
+      title: "Full-Stack Web & Software Engineering",
       description:
-        "Engineering high-concurrency web portals, multi-tenant SaaS backends, and headless platforms using Next.js, Node.js, Python, and PostgreSQL. Available on contract, milestone builds, and dedicated retainers.",
+        "Engineering high-concurrency web portals, multi-tenant SaaS backends, and headless platforms using Next.js, Node.js, Python, and PostgreSQL. Available for turnkey agency builds, dedicated engineering squad retainers, or technical advisory.",
       color: "from-blue-500 to-cyan-600",
       bgLight: "bg-blue-50 text-blue-600 border-blue-100",
     },
@@ -353,13 +353,13 @@ export default function AdarshProfileClient() {
           <section className="mb-20">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">
-                Hire Adarsh B S & The Squad
+                Agency Delivery & Flexible Engagement
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">
-                Flexible Engagement & Hiring Models
+                How to Engage Adarsh & The DPS Squad
               </h2>
               <p className="text-gray-600 text-base">
-                Whether you need a dedicated freelance engineer, a fixed-scope milestone project, or strategic CTO guidance, choose the model that fits your operational stage:
+                Whether you need a full turnkey agency build, a dedicated developer squad embedded into your codebase, or strategic CTO guidance:
               </p>
             </div>
 
@@ -367,9 +367,9 @@ export default function AdarshProfileClient() {
               <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col justify-between">
                 <div>
                   <div className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Model 01</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Fixed-Scope Project Contract</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Turnkey Agency Project Build</h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                    Perfect for new websites, custom web apps, CRM/ERP backends, and WhatsApp bots with a defined specification. Transparent fixed pricing, milestone deliverables, and zero hidden costs.
+                    Full end-to-end delivery for business websites, custom web apps, CRM/ERP systems, and WhatsApp automation with a defined specification, milestones, and SLA guarantee.
                   </p>
                   <ul className="space-y-2 text-xs text-gray-500 mb-6">
                     <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> Websites from ₹5,000 (3–7 days)</li>
@@ -378,12 +378,12 @@ export default function AdarshProfileClient() {
                   </ul>
                 </div>
                 <a
-                  href="https://wa.me/919400355185?text=Hi%20Adarsh%2C%20I%20want%20to%20discuss%20a%20fixed-scope%20project%20estimate"
+                  href="https://wa.me/919400355185?text=Hi%20Adarsh%2C%20I%20want%20to%20discuss%20a%20project%20estimate%20with%20your%20agency"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3 px-4 rounded-xl bg-gray-900 text-white font-medium text-xs text-center hover:bg-black transition"
                 >
-                  Get Project Scope & Estimate
+                  Get Agency Project Scope
                 </a>
               </div>
 
@@ -393,9 +393,9 @@ export default function AdarshProfileClient() {
                 </span>
                 <div>
                   <div className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-2">Model 02</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Dedicated Freelance Developer / Squad</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Dedicated Developer Squad / Retainer</h3>
                   <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                    Hire senior engineers on a monthly contract retainer dedicated directly to your GitHub repository and sprint backlog. Agility of a top freelancer with MSME team backup.
+                    Deploy our senior engineers on a monthly contract retainer dedicated directly to your GitHub repository and sprint backlog. Agency horsepower with direct developer agility.
                   </p>
                   <ul className="space-y-2 text-xs text-gray-500 mb-6">
                     <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> Direct daily WhatsApp / Slack access</li>
@@ -404,12 +404,12 @@ export default function AdarshProfileClient() {
                   </ul>
                 </div>
                 <a
-                  href="https://wa.me/919400355185?text=Hi%20Adarsh%2C%20I%20am%20looking%20to%20hire%20a%20dedicated%20freelance%20developer%20retainer"
+                  href="https://wa.me/919400355185?text=Hi%20Adarsh%2C%20I%20am%20looking%20to%20hire%20a%20dedicated%20developer%20team%20retainer"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3 px-4 rounded-xl bg-blue-600 text-white font-medium text-xs text-center hover:bg-blue-700 transition"
                 >
-                  Hire Dedicated Developer
+                  Deploy Dedicated Squad
                 </a>
               </div>
 

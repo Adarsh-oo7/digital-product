@@ -4,23 +4,23 @@ import JsonLd from "@/components/seo/JsonLd";
 import { business, SITE_URL } from "@/lib/business";
 
 export const metadata = pageMetadata({
-  title: "Digital Product Solutions | Software, Web, App & AI Kerala",
+  title: "Digital Product Solutions | Software, Web & AI Agency Kerala",
   description:
-    "Digital Product Solutions builds custom software, Next.js websites, mobile apps, CRM, ERP & AI automation in Kerala. Direct senior developer access.",
+    "Digital Product Solutions is a software, web & AI development agency in Kerala. Custom apps, Next.js, CRM, ERP & automation with direct developer access.",
   path: "/",
   absoluteTitle: true,
   languages: INTERNATIONAL_HREFLANGS,
   keywords: [
     "digital product solutions",
-    "freelance software developer kerala",
-    "freelance web developer kerala",
+    "software development agency kerala",
+    "web development agency kerala",
     "custom software development company in trivandrum",
+    "ai automation agency kerala",
     "crm software kerala",
     "odoo erp development kerala",
-    "ai automation agency kerala",
-    "ai solutions kerala",
-    "website development kerala",
     "app development kerala",
+    "freelance software developer kerala",
+    "freelance web developer kerala",
     "best seo company in kerala",
     "digital product development company",
   ],
