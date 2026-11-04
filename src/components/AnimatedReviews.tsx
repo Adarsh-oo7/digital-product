@@ -773,9 +773,13 @@ export default function ExpandableTestimonials() {
                 width: 'max-content',
               }}
             >
-              {/* Duplicate for seamless loop */}
+              {/* Duplicate for seamless loop — cloned items marked aria-hidden for clean SEO & accessibility */}
               {[...reviews, ...reviews].map((review, i) => (
-                <div key={i} className="et-card">
+                <div
+                  key={i}
+                  className="et-card"
+                  aria-hidden={i >= reviews.length ? true : undefined}
+                >
                   <TestimonialCard review={review} index={i} />
                 </div>
               ))}

@@ -55,13 +55,13 @@ export default function Brands() {
             <ParticleNetwork />
 
 
-            <h3 className="text-center font-bold tracking-tight
+            <h2 className="text-center font-bold tracking-tight
                             text-2xl sm:text-3xl md:text-4xl lg:text-5xl
                             mb-10 md:mb-14
                             bg-gradient-to-r from-blue-600 via-purple-500 to-indigo-600
                             bg-clip-text text-transparent relative z-20">
                             Our Brands
-            </h3>
+            </h2>
 
             {/* White Box Content */}
             <div className="relative z-20 flex items-center justify-center h-full px-4">

@@ -3,9 +3,10 @@ import Link from "next/link";
 
 export const metadata = pageMetadata({
   title: "Business Automation & WhatsApp Bots for Kerala SMEs",
-  description: "Automate WhatsApp replies, order tracking, invoicing and CRM for Kerala businesses. Business automation services in Trivandrum starting ₹10,000. Save time, scale faster.",
+  description:
+    "Business automation & WhatsApp bot developer in Kerala. Automate replies, order tracking, invoicing and CRM from ₹10,000. Save time and scale operations.",
   path: "/business-automation",
-  keywords: "business automation Kerala, WhatsApp automation Kerala, WhatsApp bot Trivandrum, workflow automation Kerala, CRM automation Kerala",
+  keywords: "business automation Kerala, freelance automation developer, WhatsApp automation Kerala, workflow automation Kerala, CRM automation Kerala",
 });
 
 export default function BusinessAutomationPage() {

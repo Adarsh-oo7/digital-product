@@ -90,9 +90,9 @@ function InfiniteCarousel(props: { items: Project[] }) {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-              <h3 className="text-white text-sm md:text-base font-semibold text-center">
+              <p className="text-white text-sm md:text-base font-semibold text-center">
                 {project.title}
-              </h3>
+              </p>
             </div>
           </a>
         ))}
@@ -149,9 +149,9 @@ export default function ProjectGrid() {
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4">
-                    <h3 className="text-sm md:text-base text-center font-semibold">
+                    <p className="text-sm md:text-base text-center font-semibold">
                       {project.title}
-                    </h3>
+                    </p>
                     {project.upcoming && (
                       <p className="text-[10px] uppercase tracking-widest text-yellow-500 text-center mt-1">
                         Coming Soon

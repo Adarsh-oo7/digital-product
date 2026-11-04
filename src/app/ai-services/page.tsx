@@ -4,10 +4,12 @@ import AIServicesClient from "./AIServicesClient";
 export const metadata = pageMetadata({
   title: "AI Services & Automation in Kerala | Machine Learning & NLP",
   description:
-    "Cutting-edge AI services and business automation in Kerala. Machine learning solutions, natural language processing, intelligent bots, and predictive analytics by Digital Product Solutions.",
+    "AI services and automation consultant in Kerala. Custom LLM systems, WhatsApp AI bots, machine learning & predictive analytics starting from ₹12,000.",
   path: "/ai-services",
   keywords: [
     "AI Services Kerala",
+    "freelance AI developer",
+    "AI consultant Kerala",
     "Machine Learning Solutions Trivandrum",
     "AI Automation Kerala",
     "NLP Chatbots Kerala",

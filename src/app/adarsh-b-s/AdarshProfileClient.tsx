@@ -9,6 +9,8 @@ import {
   CheckCircle2,
   Database,
   Globe,
+  Layers,
+  Workflow,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -28,16 +30,18 @@ export default function AdarshProfileClient() {
     "sameAs": [
       "https://adarsh.digitalproductsolutions.in/"
     ],
-    "description": "Founder, Lead AI Consultant, and Software Solutions Architect at Digital Product Solutions in Kerala. Specializing in enterprise AI automation, scalable Next.js architectures, and tailored CRM systems.",
+    "description": "Founder, Lead AI Consultant, and Software Solutions Architect at Digital Product Solutions in Kerala. Specializing in freelance software architecture, enterprise AI systems, Next.js, custom CRM, and Odoo ERP.",
     "knowsAbout": [
-      "Artificial Intelligence",
-      "AI Automation",
-      "Software Architecture",
-      "Full-Stack Development",
-      "Next.js & React",
-      "WhatsApp Business API Automation",
-      "Enterprise CRM & ERP Systems",
-      "Technical SEO & Core Web Vitals"
+      "Freelance Software Architecture",
+      "Freelance Web Development",
+      "Artificial Intelligence & LLM Systems",
+      "AI Automation & RAG Pipelines",
+      "Custom CRM Software Development",
+      "Odoo ERP Implementation & Customization",
+      "Business Process Automation",
+      "Next.js & React Full-Stack",
+      "Meta WhatsApp Cloud API Automation",
+      "Technical SEO & Search Console Growth"
     ],
     "address": {
       "@type": "PostalAddress",
@@ -59,31 +63,59 @@ export default function AdarshProfileClient() {
     },
     {
       icon: Code2,
-      title: "Scalable Software Architecture",
+      title: "Freelance Software & Web Architecture",
       description:
-        "Engineering high-concurrency web portals, multi-tenant SaaS backends, and headless web platforms using Next.js, Node.js, Python, and PostgreSQL. Focused on sub-second loads and 100/100 Core Web Vitals.",
+        "Engineering high-concurrency web portals, multi-tenant SaaS backends, and headless platforms using Next.js, Node.js, Python, and PostgreSQL. Available on contract, milestone builds, and dedicated retainers.",
       color: "from-blue-500 to-cyan-600",
       bgLight: "bg-blue-50 text-blue-600 border-blue-100",
     },
     {
       icon: Database,
-      title: "Tailored CRM & Business Systems",
+      title: "Custom CRM & Odoo ERP Systems",
       description:
-        "Designing custom operational engines tailored to real-world workflows in Real Estate, Clinical Healthcare, Tourism, and FMCG manufacturing. Eliminating vendor lock-in and monthly license fees.",
+        "Designing custom operational engines and Odoo ERP modules tailored to real-world workflows in Manufacturing, Real Estate, Healthcare, and FMCG. Eliminating bloated monthly SaaS per-user fees.",
       color: "from-emerald-500 to-teal-600",
       bgLight: "bg-emerald-50 text-emerald-600 border-emerald-100",
     },
     {
+      icon: Workflow,
+      title: "Business Process & WhatsApp Automation",
+      description:
+        "Automating order tracking, automated invoicing, customer follow-up sequences, and cross-platform webhooks via Meta WhatsApp Cloud API and Python microservices to eliminate repetitive manual desk work.",
+      color: "from-violet-500 to-purple-600",
+      bgLight: "bg-violet-50 text-violet-600 border-violet-100",
+    },
+    {
       icon: Globe,
-      title: "Technical SEO & Growth Strategy",
+      title: "Technical SEO & Growth Architecture",
       description:
         "Deep semantic markup, programmatic schema architecture, Google Search Console indexing automation, and high-intent keyword clustering designed to dominate Google Maps and organic Page 1 rankings.",
       color: "from-amber-500 to-orange-600",
       bgLight: "bg-amber-50 text-amber-600 border-amber-100",
     },
+    {
+      icon: Layers,
+      title: "Dedicated Squad & Fractional CTO Advisory",
+      description:
+        "Advising startups and growing SMBs as a hands-on Fractional CTO. From choosing scalable tech stacks to leading the 9-engineer DPS squad for rapid, guaranteed delivery.",
+      color: "from-rose-500 to-pink-600",
+      bgLight: "bg-rose-50 text-rose-600 border-rose-100",
+    },
   ];
 
   const clientHighlights = [
+    {
+      title: "Care N Cure Group Perth",
+      category: "Aged Care Platform & National SEO",
+      result: "73,746+ verified Google Search Console impressions across Australia (#1.1 rank).",
+      link: "/work/care-n-cure-australia",
+    },
+    {
+      title: "KPSC Master",
+      category: "EdTech SaaS Platform",
+      result: "56,155+ impressions & 4,223 clicks (7.5% CTR) for competitive exam mock tests.",
+      link: "/work/kpsc-master",
+    },
     {
       title: "BuilDwellz",
       category: "Construction & Engineering Portal",
@@ -98,7 +130,7 @@ export default function AdarshProfileClient() {
     },
     {
       title: "Squeeze Berriez",
-      category: "FMCG Brand & Distribution System",
+      category: "FMCG Brand & WhatsApp Automation",
       result: "D2C ordering portal and automated WhatsApp distributor dispatch.",
       link: "/work/squeeze-berriez",
     },
@@ -317,6 +349,95 @@ export default function AdarshProfileClient() {
             </div>
           </section>
 
+          {/* FLEXIBLE ENGAGEMENT MODELS */}
+          <section className="mb-20">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">
+                Hire Adarsh B S & The Squad
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">
+                Flexible Engagement & Hiring Models
+              </h2>
+              <p className="text-gray-600 text-base">
+                Whether you need a dedicated freelance engineer, a fixed-scope milestone project, or strategic CTO guidance, choose the model that fits your operational stage:
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                  <div className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Model 01</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Fixed-Scope Project Contract</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-6">
+                    Perfect for new websites, custom web apps, CRM/ERP backends, and WhatsApp bots with a defined specification. Transparent fixed pricing, milestone deliverables, and zero hidden costs.
+                  </p>
+                  <ul className="space-y-2 text-xs text-gray-500 mb-6">
+                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> Websites from ₹5,000 (3–7 days)</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> Custom Software from ₹15,000</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> 100% Source code handover</li>
+                  </ul>
+                </div>
+                <a
+                  href="https://wa.me/919400355185?text=Hi%20Adarsh%2C%20I%20want%20to%20discuss%20a%20fixed-scope%20project%20estimate"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 px-4 rounded-xl bg-gray-900 text-white font-medium text-xs text-center hover:bg-black transition"
+                >
+                  Get Project Scope & Estimate
+                </a>
+              </div>
+
+              <div className="bg-gradient-to-b from-blue-50/50 to-white p-8 rounded-3xl border-2 border-blue-500/20 shadow-md transition flex flex-col justify-between relative">
+                <span className="absolute -top-3 right-6 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                  Popular
+                </span>
+                <div>
+                  <div className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-2">Model 02</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Dedicated Freelance Developer / Squad</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-6">
+                    Hire senior engineers on a monthly contract retainer dedicated directly to your GitHub repository and sprint backlog. Agility of a top freelancer with MSME team backup.
+                  </p>
+                  <ul className="space-y-2 text-xs text-gray-500 mb-6">
+                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> Direct daily WhatsApp / Slack access</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> Next.js, Python, Flutter & PostgreSQL</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> Flexible sprint or monthly terms</li>
+                  </ul>
+                </div>
+                <a
+                  href="https://wa.me/919400355185?text=Hi%20Adarsh%2C%20I%20am%20looking%20to%20hire%20a%20dedicated%20freelance%20developer%20retainer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 px-4 rounded-xl bg-blue-600 text-white font-medium text-xs text-center hover:bg-blue-700 transition"
+                >
+                  Hire Dedicated Developer
+                </a>
+              </div>
+
+              <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                  <div className="text-xs font-bold text-purple-600 uppercase tracking-widest mb-2">Model 03</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Fractional CTO & AI Advisory</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-6">
+                    Strategic technical advisory for business owners and startups evaluating AI integrations, choosing technology stacks, or conducting code architecture audits.
+                  </p>
+                  <ul className="space-y-2 text-xs text-gray-500 mb-6">
+                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> AI feasibility & LLM roadmap</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> System architecture & security review</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> Technical team vetting & oversight</li>
+                  </ul>
+                </div>
+                <a
+                  href="https://wa.me/919400355185?text=Hi%20Adarsh%2C%20I%20would%20like%20to%20book%20a%20Fractional%20CTO%20or%20AI%20Advisory%20consultation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 px-4 rounded-xl bg-gray-900 text-white font-medium text-xs text-center hover:bg-black transition"
+                >
+                  Book Advisory Consultation
+                </a>
+              </div>
+            </div>
+          </section>
+
           {/* PORTFOLIO & CASE STUDIES SPOTLIGHT */}
           <section className="mb-20">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
@@ -339,7 +460,7 @@ export default function AdarshProfileClient() {
               </a>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {clientHighlights.map((client, idx) => (
                 <Link
                   key={idx}

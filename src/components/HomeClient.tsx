@@ -620,7 +620,16 @@ export default function Home() {
                 Trusted by 20+ businesses in Trivandrum, Kochi, Kollam, Kozhikode and across Kerala.
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
-                {["SEO Kerala", "WhatsApp Automation", "AI Chatbot", "Web Development", "App Development", "Google Ads Kerala"].map((tag, i) => (
+                {[
+                  "Freelance Web Developer",
+                  "Freelance Software Developer",
+                  "CRM Software Kerala",
+                  "Odoo ERP Kerala",
+                  "AI Automation",
+                  "SEO Kerala",
+                  "WhatsApp Cloud API",
+                  "Next.js Full Stack",
+                ].map((tag, i) => (
                   <span key={i} className="text-xs px-3 py-1 bg-blue-50 text-blue-600 rounded-full border border-blue-100 font-medium">{tag}</span>
                 ))}
               </div>
@@ -629,12 +638,14 @@ export default function Home() {
               <h2 className="text-lg font-bold text-gray-800 mb-3">Specialised Services in Kerala</h2>
               <ul className="space-y-2">
                 {[
-                  { text: "AI Chatbot Development Kerala", link: "/ai-chatbot-development-kerala" },
-                  { text: "WhatsApp Automation Kerala", link: "/whatsapp-automation-kerala" },
-                  { text: "Local SEO Kerala", link: "/local-seo-kerala" },
-                  { text: "Hospital Website Development Kerala", link: "/website-development-for-hospitals-clinics-kerala" },
-                  { text: "Google Ads Management Kerala", link: "/google-ads-management-kerala" },
+                  { text: "Freelance Web Developer Kerala", link: "/freelance-web-developer-kerala" },
+                  { text: "Freelance Software Developer Kerala", link: "/freelance-software-developer-kerala" },
+                  { text: "CRM Software Solutions Kerala", link: "/crm-software-kerala" },
                   { text: "Odoo ERP Development Kerala", link: "/odoo-erp-development-kerala" },
+                  { text: "AI Automation for Businesses Kerala", link: "/ai-automation-for-businesses-kerala" },
+                  { text: "Dedicated Developer Team Kerala", link: "/dedicated-developer-team-kerala" },
+                  { text: "Adarsh B S — Lead AI Consultant & Architect", link: "/adarsh-b-s" },
+                  { text: "Local SEO Kerala", link: "/local-seo-kerala" },
                 ].map((item, i) => (
                   <li key={i}>
                     <Link href={item.link} className="text-sm text-gray-600 hover:text-blue-600 transition flex items-center gap-2">

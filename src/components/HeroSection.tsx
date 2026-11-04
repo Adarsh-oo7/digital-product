@@ -75,6 +75,11 @@ export default function WhiteHero() {
                     </span>
                 </motion.div>
 
+                {/* Eyebrow Tagline */}
+                <p className="block text-xs sm:text-sm md:text-base font-bold uppercase tracking-widest text-indigo-600 mb-3 sm:mb-4">
+                    Smart Solutions. Built on Trust.
+                </p>
+
                 {/* Heading */}
                 <motion.h1
                     initial={{ opacity: 0, y: 30 }}
@@ -83,15 +88,9 @@ export default function WhiteHero() {
                     className="font-bold leading-tight text-gray-900
                text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
                 >
-                    <span className="sr-only">Website, App and Software Development for Kerala Businesses. </span>
-                    <span className="block text-xs sm:text-sm md:text-base font-bold uppercase tracking-widest text-indigo-600 mb-3 sm:mb-4">
-                        Smart Solutions. Built on Trust.
-                    </span>
-                    We Build{" "}
-
-                    <FlipWords words={["Software", "Apps", "AI Solutions"]} />
-
-                    {" "}for Kerala Businesses
+                    We Build Custom{" "}
+                    <FlipWords words={["Software", "Websites", "Mobile Apps", "AI Systems"]} />
+                    {" "}in Kerala
                 </motion.h1>
 
                 {/* Subtext */}

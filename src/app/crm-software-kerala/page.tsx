@@ -11,7 +11,7 @@ import { whatsappUrl } from "@/lib/business";
 export const metadata = pageMetadata({
   title: "CRM Software in Kerala | Industry Lead Management",
   description:
-    "Kerala CRM provider, 4+ years. Separate landing pages for real estate, travel, education, car dealers, wedding, gyms and more. WhatsApp-first. Direct developers.",
+    "Custom CRM developer & WhatsApp CRM software in Kerala. Built for real estate, education, clinics, car dealers & gyms from ₹15,000. Direct developer access.",
   path: CRM_HUB_PATH,
   absoluteTitle: true,
 });

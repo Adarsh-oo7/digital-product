@@ -6,9 +6,15 @@ import Script from "next/script";
 import ChatbotAndSocialButtons from "@/components/ChatbotAndSocialButtons";
 import ClientCursor from "@/components/ClientCursor";
 import { business, postalAddressSchema, geoSchema, SITE_URL } from "@/lib/business";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -228,7 +234,6 @@ export default function RootLayout({
           }}
         />
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Adarsh B S" />
         <link rel="manifest" href="/site.webmanifest" />
 

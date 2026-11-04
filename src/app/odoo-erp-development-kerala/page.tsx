@@ -2,10 +2,11 @@ import { pageMetadata } from "@/lib/seo";
 ﻿import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "Odoo ERP Development in Kerala | ERP for Manufacturing & Retail",
-  description: "Odoo ERP implementation partner in Kerala for manufacturing, retail & distribution. Inventory, accounting, HR & CRM modules. Based in Trivandrum. Starting ₹2,00,000.",
+  title: "Odoo ERP Development in Kerala | Custom ERP Solutions",
+  description:
+    "Odoo ERP implementation & custom ERP developer in Kerala for manufacturing, retail & logistics. Inventory, accounting, HR & CRM. Starting ₹2,00,000.",
   path: "/odoo-erp-development-kerala",
-  keywords: "Odoo ERP Kerala, ERP development Kerala, Odoo implementation partner Kerala, manufacturing ERP Kerala, ERP for retail Kerala",
+  keywords: "Odoo ERP Kerala, freelance ERP developer, ERP development Kerala, Odoo implementation partner Kerala, manufacturing ERP Kerala, custom ERP Kerala",
 });
 
 export default function Page() {

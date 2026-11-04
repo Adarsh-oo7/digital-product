@@ -4,26 +4,25 @@ import JsonLd from "@/components/seo/JsonLd";
 import { business, SITE_URL } from "@/lib/business";
 
 export const metadata = pageMetadata({
-  title:
-    "Digital Product Solutions | Custom Software, Web, App & AI Development Company in Kerala",
+  title: "Digital Product Solutions | Software, Web, App & AI Kerala",
   description:
-    "Digital Product Solutions (DPS) is a premier digital product development company in Trivandrum, Kerala & global delivery partner (AU, UAE, UK, DE). Custom software, Next.js websites, Flutter apps, AI automation & SEO with 157,000+ verified Google Search Console impressions.",
+    "Digital Product Solutions builds custom software, Next.js websites, mobile apps, CRM, ERP & AI automation in Kerala. Direct senior developer access.",
   path: "/",
   absoluteTitle: true,
   languages: INTERNATIONAL_HREFLANGS,
   keywords: [
     "digital product solutions",
-    "digital product development company",
-    "digital solutions",
-    "digital product innovation solutions",
-    "digital product development services",
-    "digital product agency",
-    "digital product design services",
-    "digital transformation company in kerala",
+    "freelance software developer kerala",
+    "freelance web developer kerala",
     "custom software development company in trivandrum",
-    "best seo company in kerala",
-    "website development kerala",
+    "crm software kerala",
+    "odoo erp development kerala",
     "ai automation agency kerala",
+    "ai solutions kerala",
+    "website development kerala",
+    "app development kerala",
+    "best seo company in kerala",
+    "digital product development company",
   ],
 });
 
