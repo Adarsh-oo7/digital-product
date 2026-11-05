@@ -15,7 +15,7 @@ const projects = [
 
 const inHouseProjects = [
   { title: "Kerala Sellers", image: "/img/projects/kerala-sellers.jpg", url: "/kerala-sellers", upcoming: false },
-  { title: "Kerala PSC", image: "/img/projects/kerala-psc.jpg", url: "#", upcoming: true },
+  { title: "KPSC Master EdTech SaaS", image: "/img/projects/kerala-psc.jpg", url: "/work/kpsc-master", upcoming: false },
 ]
 
 type Project = { title: string; image: string; url: string }
