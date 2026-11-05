@@ -16,6 +16,7 @@ export default function ContactClient() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [formStarted, setFormStarted] = useState(false);
+  const [mapTab, setMapTab] = useState<'neighborhood' | 'locator'>('neighborhood');
 
   const markFormStart = () => {
     if (formStarted) return;
@@ -359,17 +360,43 @@ export default function ContactClient() {
           <div className="w-full mt-10 rounded-2xl overflow-hidden border border-gray-700 shadow-2xl bg-slate-900">
             <div className="p-4 bg-slate-800/80 border-b border-gray-700 flex flex-wrap items-center justify-between gap-3">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-blue-400">Google Maps Store Locator</span>
+                <div className="flex items-center gap-2 mb-1.5 flex-wrap">
+                  <span className="text-xs font-bold uppercase tracking-wider text-blue-400">Google Maps Experience</span>
+                  <div className="inline-flex rounded-lg bg-slate-900/90 p-0.5 border border-slate-700">
+                    <button
+                      type="button"
+                      onClick={() => setMapTab('neighborhood')}
+                      className={`px-3 py-1 text-xs font-semibold rounded-md transition ${
+                        mapTab === 'neighborhood'
+                          ? 'bg-blue-600 text-white shadow'
+                          : 'text-gray-400 hover:text-white'
+                      }`}
+                    >
+                      Neighborhood Discovery
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setMapTab('locator')}
+                      className={`px-3 py-1 text-xs font-semibold rounded-md transition ${
+                        mapTab === 'locator'
+                          ? 'bg-blue-600 text-white shadow'
+                          : 'text-gray-400 hover:text-white'
+                      }`}
+                    >
+                      Store Locator
+                    </button>
+                  </div>
+                </div>
                 <p className="text-sm font-semibold text-white">Digital Product Solutions · NH 66, Korani, Trivandrum</p>
               </div>
               <div className="flex items-center gap-3">
                 <a
-                  href="/locator.html"
+                  href={mapTab === 'neighborhood' ? "https://storage.googleapis.com/maps-solutions-9d8930bxka/neighborhood-discovery/o2bf/neighborhood-discovery.html" : "/locator.html"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium transition shadow"
                 >
-                  Full Screen Locator
+                  {mapTab === 'neighborhood' ? "Full Screen Discovery ↗" : "Full Screen Locator ↗"}
                 </a>
                 <a
                   href={business.mapsUrl}
@@ -381,17 +408,31 @@ export default function ContactClient() {
                 </a>
               </div>
             </div>
-            <iframe
-              src="/locator.html"
-              width="100%"
-              height="480"
-              style={{ border: 0 }}
-              allowFullScreen={true}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full"
-              title="Digital Product Solutions Store Locator"
-            ></iframe>
+            {mapTab === 'neighborhood' ? (
+              <iframe
+                src="https://storage.googleapis.com/maps-solutions-9d8930bxka/neighborhood-discovery/o2bf/neighborhood-discovery.html"
+                width="100%"
+                height="520"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full"
+                title="Digital Product Solutions Neighborhood Discovery"
+              ></iframe>
+            ) : (
+              <iframe
+                src="/locator.html"
+                width="100%"
+                height="520"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full"
+                title="Digital Product Solutions Store Locator"
+              ></iframe>
+            )}
           </div>
         </div>
       </div>
