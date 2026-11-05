@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Digital Product Solutions — Office Location & Map</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Find the Digital Product Solutions office on NH 66, Korani, Thiruvananthapuram, Kerala 695104. Interactive Google Maps Store Locator with directions and appointment booking.">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background-color: #f8fafc;
+      }
+      gmpx-store-locator {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <script>
+      const CONFIGURATION = {
+        "locations": [
+          {
+            "title": "Digital Product Solutions",
+            "address1": "NH 66, Korani",
+            "address2": "Thiruvananthapuram, Kerala 695104, India",
+            "coords": { "lat": 8.660270593488546, "lng": 76.84064196441801 },
+            "placeId": "ChIJtZzQlgG5OokRYhu7yTjQvw0",
+            "actions": [
+              { "label": "Book Appointment", "defaultUrl": "https://www.digitalproductsolutions.in/book" },
+              { "label": "WhatsApp Office", "defaultUrl": "https://wa.me/919400355185" }
+            ]
+          }
+        ],
+        "mapOptions": {
+          "center": { "lat": 8.660270593488546, "lng": 76.84064196441801 },
+          "fullscreenControl": true,
+          "mapTypeControl": false,
+          "streetViewControl": true,
+          "zoom": 15,
+          "zoomControl": true,
+          "maxZoom": 19,
+          "mapId": ""
+        },
+        "mapsApiKey": "AIzaSyDwLCwTMrlal-aC_qnfPb8SwrXooo7wDMM",
+        "capabilities": {
+          "input": true,
+          "autocomplete": true,
+          "directions": true,
+          "distanceMatrix": true,
+          "details": true,
+          "actions": true
+        }
+      };
+
+      document.addEventListener('DOMContentLoaded', async () => {
+        await customElements.whenDefined('gmpx-store-locator');
+        const locator = document.querySelector('gmpx-store-locator');
+        locator.configureFromQuickBuilder(CONFIGURATION);
+      });
+    </script>
+  </head>
+  <body>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.15/index.min.js"></script>
+    <gmpx-api-loader key="AIzaSyDwLCwTMrlal-aC_qnfPb8SwrXooo7wDMM" solution-channel="GMP_QB_locatorplus_v11_cABDF"></gmpx-api-loader>
+    <gmpx-store-locator map-id="DEMO_MAP_ID"></gmpx-store-locator>
+  </body>
+</html>
+

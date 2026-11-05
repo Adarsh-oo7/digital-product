@@ -356,16 +356,41 @@ export default function ContactClient() {
             </div>
           </motion.div>
 
-          <div className="w-full mt-10 rounded-xl overflow-hidden border border-gray-700 shadow-lg">
+          <div className="w-full mt-10 rounded-2xl overflow-hidden border border-gray-700 shadow-2xl bg-slate-900">
+            <div className="p-4 bg-slate-800/80 border-b border-gray-700 flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-wider text-blue-400">Google Maps Store Locator</span>
+                <p className="text-sm font-semibold text-white">Digital Product Solutions · NH 66, Korani, Trivandrum</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <a
+                  href="/locator.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium transition shadow"
+                >
+                  Full Screen Locator
+                </a>
+                <a
+                  href={business.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-1.5 rounded-lg bg-gray-700 hover:bg-gray-600 text-white text-xs font-medium transition"
+                >
+                  Open in Google Maps ↗
+                </a>
+              </div>
+            </div>
             <iframe
-              src={business.mapsEmbedSrc}
+              src="/locator.html"
               width="100%"
-              height="400"
+              height="480"
               style={{ border: 0 }}
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="w-full"
+              title="Digital Product Solutions Store Locator"
             ></iframe>
           </div>
         </div>
