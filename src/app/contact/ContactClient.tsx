@@ -16,7 +16,7 @@ export default function ContactClient() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [formStarted, setFormStarted] = useState(false);
-  const [mapTab, setMapTab] = useState<'neighborhood' | 'locator'>('neighborhood');
+  const [mapTab, setMapTab] = useState<'google' | 'neighborhood' | 'locator'>('google');
 
   const markFormStart = () => {
     if (formStarted) return;
@@ -365,6 +365,17 @@ export default function ContactClient() {
                   <div className="inline-flex rounded-lg bg-slate-900/90 p-0.5 border border-slate-700">
                     <button
                       type="button"
+                      onClick={() => setMapTab('google')}
+                      className={`px-3 py-1 text-xs font-semibold rounded-md transition ${
+                        mapTab === 'google'
+                          ? 'bg-blue-600 text-white shadow'
+                          : 'text-gray-400 hover:text-white'
+                      }`}
+                    >
+                      📍 Live Office Map
+                    </button>
+                    <button
+                      type="button"
                       onClick={() => setMapTab('neighborhood')}
                       className={`px-3 py-1 text-xs font-semibold rounded-md transition ${
                         mapTab === 'neighborhood'
@@ -372,7 +383,7 @@ export default function ContactClient() {
                           : 'text-gray-400 hover:text-white'
                       }`}
                     >
-                      Neighborhood Discovery
+                      🧭 Neighborhood Discovery
                     </button>
                     <button
                       type="button"
@@ -383,7 +394,7 @@ export default function ContactClient() {
                           : 'text-gray-400 hover:text-white'
                       }`}
                     >
-                      Store Locator
+                      🏢 Store Locator
                     </button>
                   </div>
                 </div>
@@ -391,12 +402,22 @@ export default function ContactClient() {
               </div>
               <div className="flex items-center gap-3">
                 <a
-                  href={mapTab === 'neighborhood' ? "https://storage.googleapis.com/maps-solutions-9d8930bxka/neighborhood-discovery/o2bf/neighborhood-discovery.html" : "/locator.html"}
+                  href={
+                    mapTab === 'neighborhood'
+                      ? "https://storage.googleapis.com/maps-solutions-9d8930bxka/neighborhood-discovery/o2bf/neighborhood-discovery.html"
+                      : mapTab === 'locator'
+                      ? "/locator.html"
+                      : business.mapsUrl
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium transition shadow"
                 >
-                  {mapTab === 'neighborhood' ? "Full Screen Discovery ↗" : "Full Screen Locator ↗"}
+                  {mapTab === 'neighborhood'
+                    ? "Full Screen Discovery ↗"
+                    : mapTab === 'locator'
+                    ? "Full Screen Locator ↗"
+                    : "Open Full Map ↗"}
                 </a>
                 <a
                   href={business.mapsUrl}
@@ -404,13 +425,13 @@ export default function ContactClient() {
                   rel="noopener noreferrer"
                   className="px-4 py-1.5 rounded-lg bg-gray-700 hover:bg-gray-600 text-white text-xs font-medium transition"
                 >
-                  Open in Google Maps ↗
+                  Google Listing ↗
                 </a>
               </div>
             </div>
-            {mapTab === 'neighborhood' ? (
+            {mapTab === 'google' && (
               <iframe
-                src="https://storage.googleapis.com/maps-solutions-9d8930bxka/neighborhood-discovery/o2bf/neighborhood-discovery.html"
+                src="https://maps.google.com/maps?q=Digital+Product+Solutions,+NH+66,+Korani,+Thiruvananthapuram&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="520"
                 style={{ border: 0 }}
@@ -418,9 +439,23 @@ export default function ContactClient() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="w-full"
+                title="Digital Product Solutions Office Map"
+              ></iframe>
+            )}
+            {mapTab === 'neighborhood' && (
+              <iframe
+                src="https://storage.googleapis.com/maps-solutions-9d8930bxka/neighborhood-discovery/o2bf/neighborhood-discovery.html"
+                width="100%"
+                height="520"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer"
+                className="w-full"
                 title="Digital Product Solutions Neighborhood Discovery"
               ></iframe>
-            ) : (
+            )}
+            {mapTab === 'locator' && (
               <iframe
                 src="/locator.html"
                 width="100%"
