@@ -17,7 +17,7 @@ export const business = {
   description:
     "Registered MSME IT company in Korani, Thiruvananthapuram, Kerala. Websites, software, mobile apps, SEO, WhatsApp automation and AI solutions for small and medium businesses.",
 
-  streetAddress: "Korani",
+  streetAddress: "NH 66, Korani",
   addressLocality: "Thiruvananthapuram",
   addressRegion: "Kerala",
   postalCode: "695104",
@@ -26,11 +26,15 @@ export const business = {
   district: "Thiruvananthapuram",
 
   /** One-line visible address (matches the Korani Google pin). */
-  addressLine: "Korani, Thiruvananthapuram, Kerala 695104",
+  addressLine: "NH 66, Korani, Thiruvananthapuram, Kerala 695104",
 
-  /** Pin from the Contact page Google embed for this business. */
-  latitude: 8.660278,
-  longitude: 76.838053,
+  /** Verified Google Business Profile Place ID & CID (Korani, Trivandrum). */
+  placeId: "ChIJtZzQlgG5OokRYhu7yTjQvw0",
+  cid: "990739385366027106",
+
+  /** Exact coordinates from the Google Business Profile / Maps Store Locator pin. */
+  latitude: 8.6602706,
+  longitude: 76.840642,
 
   telephone: "+919400355185",
   telephoneDisplay: "+91 94003 55185",
@@ -60,11 +64,23 @@ export const business = {
 
   /** Opens the Digital Product Solutions place pin in Korani. */
   mapsUrl: "https://www.google.com/maps?cid=990739385366027106",
+  mapsPlaceIdUrl:
+    "https://www.google.com/maps/place/?q=place_id:ChIJtZzQlgG5OokRYhu7yTjQvw0",
+  mapsWriteReviewUrl:
+    "https://search.google.com/local/writereview?placeid=ChIJtZzQlgG5OokRYhu7yTjQvw0",
   mapsShareUrl: "https://share.google/RQBkpICvuXSo7u45X",
   mapsEmbedSrc:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.3284626251293!2d76.8380526744956!3d8.660278494652756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x893ab90196d09cb5%3A0xdbfd038c9bb1b62!2sDigital%20product%20solutions!5e0!3m2!1sen!2sin!4v1772689938826!5m2!1sen!2sin",
 
   gbpCategoryObserved: "Internet marketing service",
+  gbpRecommendedCategories: [
+    "Software company",
+    "Website designer",
+    "Internet marketing service",
+    "Marketing agency",
+  ] as const,
+  gscPortfolioImpressions: "189,800+",
+  gscPortfolioClicks: "6,380+",
 } as const;
 
 export const whatsappUrl = (prefill?: string) =>

@@ -39,9 +39,13 @@ const Footer: React.FC = () => {
                 <MapPin className="w-4 h-4 text-blue-600 inline" /> Registered Office Location
               </h2>
               <p className="text-gray-700 leading-relaxed text-xs sm:text-sm">
-                📍 Korani, Attingal / Trivandrum Region, Kerala 695104<br />
+                📍 NH 66, Korani, Attingal / Trivandrum Region, Kerala 695104<br />
                 <a href="https://www.google.com/maps?cid=990739385366027106" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition font-semibold underline underline-offset-2">
-                  View Google Pin (Korani, Trivandrum)
+                  View Google Business Profile (Korani, Trivandrum)
+                </a>
+                {" · "}
+                <a href="https://search.google.com/local/writereview?placeid=ChIJtZzQlgG5OokRYhu7yTjQvw0" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition font-semibold underline underline-offset-2">
+                  Leave a Review
                 </a><br />
                 Serving clients across Thiruvananthapuram, Kochi, Kollam, Kozhikode, Kannur, Palakkad, Kottayam & GCC.
               </p>
@@ -75,6 +79,10 @@ const Footer: React.FC = () => {
                 <li><Link href="/freelance-software-developer-kerala" className="hover:text-blue-600 transition">Freelance Developer Kerala</Link></li>
                 <li><Link href="/dedicated-developer-team-kerala" className="hover:text-blue-600 transition">Dedicated Developer Team</Link></li>
                 <li><Link href="/startup-mvp-development-kerala" className="hover:text-blue-600 transition">Startup MVP Development</Link></li>
+                <li><Link href="/saas-development-company-kerala" className="hover:text-blue-600 transition">SaaS Development Company</Link></li>
+                <li><Link href="/lms-development-company-kerala" className="hover:text-blue-600 transition">LMS &amp; EdTech Software</Link></li>
+                <li><Link href="/pos-billing-software-kerala" className="hover:text-blue-600 transition">POS &amp; GST Billing Software</Link></li>
+                <li><Link href="/wordpress-woocommerce-development-kerala" className="hover:text-blue-600 transition">WordPress &amp; WooCommerce</Link></li>
                 <li><Link href="/website-maintenance-kerala" className="hover:text-blue-600 transition">Website Maintenance Kerala</Link></li>
               </ul>
             </div>
@@ -102,6 +110,7 @@ const Footer: React.FC = () => {
               </h3>
               <ul className="space-y-2">
                 <li><Link href="/crm-software-kerala" className="hover:text-blue-600 transition font-medium">CRM Software Kerala Hub</Link></li>
+                <li><Link href="/call-center-telecalling-crm-kerala" className="hover:text-blue-600 transition">Call Center &amp; Telecalling CRM</Link></li>
                 <li><Link href="/real-estate-crm-lead-management-kerala" className="hover:text-blue-600 transition">Real Estate CRM Kerala</Link></li>
                 <li><Link href="/travel-agency-crm-kerala" className="hover:text-blue-600 transition">Travel Agency CRM</Link></li>
                 <li><Link href="/education-admission-crm-kerala" className="hover:text-blue-600 transition">Education Admission CRM</Link></li>
@@ -126,6 +135,11 @@ const Footer: React.FC = () => {
                 <li><Link href="/blog" className="hover:text-blue-600 transition">Kerala Business Growth Blog</Link></li>
                 <li><Link href="/certificate-verified" className="hover:text-blue-600 transition">Verified MSME Certificate</Link></li>
                 <li><Link href="/kerala-sellers" className="hover:text-blue-600 transition">Kerala Sellers Platform</Link></li>
+                <li><Link href="/uae" className="hover:text-blue-600 transition">UAE (Dubai &amp; Abu Dhabi) Hub</Link></li>
+                <li><Link href="/gcc" className="hover:text-blue-600 transition">GCC (Saudi, Qatar, Kuwait, Oman)</Link></li>
+                <li><Link href="/au" className="hover:text-blue-600 transition">Australia (Perth &amp; Sydney) Hub</Link></li>
+                <li><Link href="/uk" className="hover:text-blue-600 transition">UK (London &amp; Manchester) Hub</Link></li>
+                <li><Link href="/de" className="hover:text-blue-600 transition">Germany / DACH Hub</Link></li>
                 <li><Link href="/all-pages" className="hover:text-blue-600 transition font-bold text-blue-800 underline underline-offset-2">All Pages Directory (100+)</Link></li>
               </ul>
             </div>

@@ -110,7 +110,43 @@ const rootSchema = {
       openingHours: business.openingHours,
       address: postalAddressSchema,
       geo: geoSchema,
-      hasMap: business.mapsUrl,
+      hasMap: business.mapsPlaceIdUrl,
+      identifier: [
+        {
+          "@type": "PropertyValue",
+          propertyID: "googlePlaceId",
+          value: business.placeId,
+        },
+        {
+          "@type": "PropertyValue",
+          propertyID: "googleCid",
+          value: business.cid,
+        },
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: business.telephone,
+        contactType: "customer service",
+        email: business.emailSchema,
+        areaServed: ["IN", "AU", "AE", "GB", "DE"],
+        availableLanguage: ["English", "Malayalam", "Hindi"],
+      },
+      potentialAction: {
+        "@type": "ReserveAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${SITE_URL}/book`,
+          inLanguage: "en-IN",
+          actionPlatform: [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform",
+          ],
+        },
+        result: {
+          "@type": "Reservation",
+          name: "Book Consultation Appointment",
+        },
+      },
       areaServed: [
         "Thiruvananthapuram",
         "Kochi",
@@ -125,6 +161,7 @@ const rootSchema = {
       ],
       sameAs: [
         business.mapsUrl,
+        business.mapsPlaceIdUrl,
         business.mapsShareUrl,
         ...business.sameAs,
       ],

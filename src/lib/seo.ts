@@ -9,6 +9,11 @@ export function absUrl(path = "/") {
 export const INTERNATIONAL_HREFLANGS: Record<string, string> = {
   "en-AU": absUrl("/au"),
   "en-AE": absUrl("/uae"),
+  "en-SA": absUrl("/gcc"),
+  "en-QA": absUrl("/gcc"),
+  "en-KW": absUrl("/gcc"),
+  "en-OM": absUrl("/gcc"),
+  "en-BH": absUrl("/gcc"),
   "en-GB": absUrl("/uk"),
   "de-DE": absUrl("/de"),
   "en-IN": absUrl("/"),

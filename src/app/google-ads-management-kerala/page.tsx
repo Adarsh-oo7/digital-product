@@ -2,14 +2,15 @@ import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title:
-    "Google Ads Agency in Kerala & Trivandrum | Best Google Ads Expert & Consultant",
+  title: "Google Ads & PPC Agency in Trivandrum & Kerala | DPS",
   description:
-    "Partner with a ROI-tracked Google Ads agency in Kerala & Trivandrum. Direct Google Ads expert & consultant managing high-converting Search, Performance Max & YouTube campaigns across Trivandrum, Kochi (Ernakulam) & Kerala from ₹5,000/mo.",
+    "ROI-tracked Google Ads & PPC agency in Trivandrum & Kerala. Direct Google Ads expert managing Search, Performance Max & YouTube campaigns from ₹5,000/mo.",
   path: "/google-ads-management-kerala",
   absoluteTitle: true,
   keywords: [
     "google ads agency in trivandrum",
+    "ppc in trivandrum",
+    "ppc agency kerala",
     "google ads agency in kerala",
     "google ads agency kerala",
     "google advertisement kerala",

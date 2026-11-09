@@ -1,4 +1,5 @@
 import LandingPage from "@/components/seo/LandingPage";
+import InternationalCompetitorMatrix from "@/components/seo/InternationalCompetitorMatrix";
 import { australiaLanding } from "@/content/landings";
 import { pageMetadata, INTERNATIONAL_HREFLANGS } from "@/lib/seo";
 
@@ -11,6 +12,7 @@ export const metadata = pageMetadata({
   locale: "en_AU",
   keywords: [
     "outsource software development Australia",
+    "custom software development Perth Sydney Melbourne",
     "hire software developers India Australia",
     "Odoo implementation partner Australia",
     "Flutter app development Australia",
@@ -22,6 +24,10 @@ export const metadata = pageMetadata({
 });
 
 export default function Page() {
-  return <LandingPage content={australiaLanding} />;
+  return (
+    <LandingPage content={australiaLanding}>
+      <InternationalCompetitorMatrix region="au" />
+    </LandingPage>
+  );
 }
 

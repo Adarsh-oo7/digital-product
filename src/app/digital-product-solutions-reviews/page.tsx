@@ -55,6 +55,7 @@ export default function ReviewsPage() {
       name: business.legalName,
       url: SITE_URL,
       telephone: business.telephone,
+      hasMap: business.mapsPlaceIdUrl,
       aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: business.googleRatingValue,
@@ -64,8 +65,8 @@ export default function ReviewsPage() {
     },
   };
 
-  const mapsSearch =
-    "https://www.google.com/maps?cid=990739385366027106";
+  const mapsSearch = business.mapsUrl;
+  const writeReviewUrl = business.mapsWriteReviewUrl;
 
   return (
     <main className="min-h-screen bg-white pt-28 pb-16 px-4">
@@ -84,11 +85,14 @@ export default function ReviewsPage() {
           If you searched “Digital Product Solutions reviews”, this is the first-party page. Google Business Profile currently shows a{" "}
           <strong>{business.googleRatingValue} rating from {business.googleReviewCount} reviews</strong>. We do not buy reviews, and we do not invent conversion percentages for marketing.
         </p>
-        <p className="mb-10">
-          <a href={mapsSearch} className="text-blue-600 font-semibold underline" target="_blank" rel="noopener noreferrer">
-            Read Google reviews for Digital Product Solutions
+        <div className="mb-10 flex flex-wrap gap-4 items-center">
+          <a href={mapsSearch} className="inline-flex items-center px-5 py-2.5 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition text-sm" target="_blank" rel="noopener noreferrer">
+            Read 25 Google Reviews (5.0★) ↗
           </a>
-        </p>
+          <a href={writeReviewUrl} className="inline-flex items-center px-5 py-2.5 rounded-xl border border-gray-300 text-gray-800 font-semibold hover:bg-gray-50 transition text-sm" target="_blank" rel="noopener noreferrer">
+            Write a Google Review ↗
+          </a>
+        </div>
 
         <section className="mb-12">
           <h2 className="text-xl font-bold mb-4">Named quotes from work we actually shipped</h2>

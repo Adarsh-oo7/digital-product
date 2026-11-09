@@ -1,4 +1,5 @@
 import LandingPage from "@/components/seo/LandingPage";
+import InternationalCompetitorMatrix from "@/components/seo/InternationalCompetitorMatrix";
 import { uaeLanding } from "@/content/landings";
 import { pageMetadata, INTERNATIONAL_HREFLANGS } from "@/lib/seo";
 
@@ -11,6 +12,7 @@ export const metadata = pageMetadata({
   locale: "en_AE",
   keywords: [
     "custom software development company Dubai",
+    "web development company Dubai UAE",
     "AI development company UAE",
     "machine learning services Dubai",
     "business automation company UAE",
@@ -27,6 +29,10 @@ export const metadata = pageMetadata({
 });
 
 export default function Page() {
-  return <LandingPage content={uaeLanding} />;
+  return (
+    <LandingPage content={uaeLanding}>
+      <InternationalCompetitorMatrix region="uae" />
+    </LandingPage>
+  );
 }
 

@@ -2,10 +2,9 @@ import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title:
-    "Local SEO Services in Kerala & Google Ranking Services Kochi & Trivandrum",
+  title: "Local SEO Services Kerala | Google Ranking Kochi & TVM",
   description:
-    "Top Local SEO services in Kerala & Google ranking services in Kochi, Trivandrum, Kollam & Kozhikode. Google Business Profile (Maps 3-Pack) & local search optimization from ₹5,000/mo.",
+    "Local SEO services in Kerala & Google ranking services in Kochi, Trivandrum, Kollam & Kozhikode. Google Business Profile & Maps optimization from ₹5,000/mo.",
   path: "/local-seo-kerala",
   absoluteTitle: true,
   keywords: [
@@ -74,7 +73,7 @@ export default function LocalSEOKerala() {
           </h1>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Google Business Profile optimization, local district pages, and <strong>Google ranking services in Kochi (Ernakulam), Trivandrum, Kollam, Kozhikode, Kannur, Kottayam and Palakkad</strong> — backed by 157,000+ verified Google Search Console impressions across our client portfolio. Starting at ₹5,000/month.
+            Google Business Profile optimization, local district pages, and <strong>Google ranking services in Kochi (Ernakulam), Trivandrum, Kollam, Kozhikode, Kannur, Kottayam and Palakkad</strong> — backed by 189,800+ verified Google Search Console impressions across our client portfolio. Starting at ₹5,000/month.
           </p>
 
           <div className="mt-8 flex justify-center gap-4 flex-wrap">

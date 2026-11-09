@@ -32,6 +32,10 @@ export const htmlSitemapGroups: { heading: string; links: { href: string; label:
       { href: "/outsource-web-development-kerala", label: "Outsource Web Development to Kerala" },
       { href: "/software-development", label: "Custom Software Development" },
       { href: "/software-development-trivandrum", label: "Software Development Company Trivandrum" },
+      { href: "/saas-development-company-kerala", label: "Digital Product & SaaS Development Company Kerala" },
+      { href: "/lms-development-company-kerala", label: "LMS & EdTech Software Development Company Trivandrum" },
+      { href: "/pos-billing-software-kerala", label: "POS & GST Billing Software Kerala" },
+      { href: "/wordpress-woocommerce-development-kerala", label: "WordPress & WooCommerce Development Agency Trivandrum" },
       { href: "/startup-mvp-development-kerala", label: "Startup MVP App & Web Development" },
       { href: "/website-maintenance-kerala", label: "Website Maintenance & Support Kerala" },
       { href: "/website-redesign-trivandrum", label: "Website Redesign Trivandrum" },
@@ -86,6 +90,7 @@ export const htmlSitemapGroups: { heading: string; links: { href: string; label:
     heading: "Kerala Industry CRM Software",
     links: [
       { href: "/crm-software-kerala", label: "CRM Software Kerala (Central Hub)" },
+      { href: "/call-center-telecalling-crm-kerala", label: "Call Center Solution & Telecalling CRM Software Kerala" },
       { href: "/real-estate-crm-lead-management-kerala", label: "Real Estate CRM & Lead Management" },
       { href: "/travel-agency-crm-kerala", label: "Travel Agency Booking & Inquiry CRM" },
       { href: "/education-admission-crm-kerala", label: "Education & College Admission CRM" },
@@ -158,6 +163,7 @@ export const htmlSitemapGroups: { heading: string; links: { href: string; label:
     links: [
       { href: "/au", label: "Australia Software, AI & Web Development (AUD Pricing)" },
       { href: "/uae", label: "UAE (Dubai & Abu Dhabi) Software, AI & WhatsApp Automation (AED Pricing)" },
+      { href: "/gcc", label: "GCC Hub (Saudi Arabia, Qatar, Kuwait, Oman & Bahrain Software, CRM & ERP)" },
       { href: "/uk", label: "UK Offshore Software, AI & Next.js Development (GBP Pricing)" },
       { href: "/de", label: "Germany / DACH Softwareentwicklung Outsourcing Indien (EUR Pricing)" },
       { href: "/malayali-business-solutions-worldwide", label: "Websites and software for Malayali businesses worldwide" },

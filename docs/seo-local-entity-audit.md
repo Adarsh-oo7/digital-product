@@ -12,7 +12,11 @@
 | Phone / WhatsApp | +91 94003 55185 (`919400355185`) | `VERIFIED` |
 | GBP category | Internet marketing service | `VERIFIED` (see recommendation below) |
 | GBP locality | Korani, Kerala | `VERIFIED` |
-| **Office address** | Mangalapuram Panchayat, Korani, Chempakamangalam, Kerala **695104** | **`VERIFIED` — use this PIN, not 695001 or 695101** |
+| **Office address** | NH 66, Mangalapuram Panchayat, Korani, Chempakamangalam, Thiruvananthapuram, Kerala **695104** | **`VERIFIED` — use this PIN, not 695001 or 695101** |
+| **Google Place ID** | `ChIJtZzQlgG5OokRYhu7yTjQvw0` | **`VERIFIED` (from GBP Store Locator export)** |
+| **Google CID** | `990739385366027106` | **`VERIFIED` (`https://www.google.com/maps?cid=990739385366027106`)** |
+| **GBP Exact Coordinates** | `8.6602706, 76.840642` | **`VERIFIED` (from GBP Store Locator export)** |
+| **GBP Booking URL** | `https://www.digitalproductsolutions.in/book` | **`VERIFIED` (`ReserveAction` in root schema)** |
 | GBP rating | 5.0 from **25** Google reviews | `VERIFIED` (not 50 reviews) |
 | Service area language | Thiruvananthapuram district / Kerala | Honest; this is not a city-centre 695001 office |
 

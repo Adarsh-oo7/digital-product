@@ -2,38 +2,79 @@ import { pageMetadata } from "@/lib/seo";
 ﻿import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "SEO Services in Kannur",
-  description: "Professional seo services services in Kannur, Kerala. Expert digital solutions for local businesses — SEO, web development, WhatsApp automation & AI. Based in Trivandrum. Starting from ₹5,000/month.",
+  title: "SEO Company & Agency in Kannur | AI SEO Services Kannur",
+  description:
+    "Top SEO company & AI SEO agency in Kannur, Kerala. Local Google Maps SEO, technical SEO & website ranking backed by 189,800+ GSC impressions. From ₹5,000/mo.",
   path: "/seo-services-kannur",
-  keywords: "SEO services Kannur, SEO company Kannur Kerala, Google ranking Kannur, local SEO Kannur",
+  absoluteTitle: true,
+  keywords: [
+    "seo company kannur",
+    "seo agency kannur",
+    "seo services in kannur",
+    "seo services kannur",
+    "ai seo agency in kannur",
+    "best seo company in kannur",
+    "local seo kannur",
+  ],
 });
 
 export default function Page() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Digital Product Solutions",
-    "url": "https://www.digitalproductsolutions.in",
-    "telephone": "+919400355185",
-    "areaServed": ["Kannur", "Kerala"],
-    "address": { "@type": "PostalAddress", "addressLocality": "Thiruvananthapuram", "addressRegion": "Kerala", "addressCountry": "IN" }
+    name: "Digital Product Solutions",
+    url: "https://www.digitalproductsolutions.in",
+    telephone: "+919400355185",
+    areaServed: ["Kannur", "Kerala"],
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "NH 66, Korani",
+      addressLocality: "Thiruvananthapuram",
+      postalCode: "695104",
+      addressRegion: "Kerala",
+      addressCountry: "IN",
+    },
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Which is the best SEO company and SEO agency in Kannur?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Digital Product Solutions provides engineering-led SEO services in Kannur, backed by 189,800+ verified Google Search Console impressions and 6,380+ organic clicks across client properties. We deliver local Google Business Profile (Maps) optimization, technical Next.js SEO, and AI search visibility (GEO) starting from ₹5,000/month.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you offer AI SEO agency services in Kannur?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. As an AI SEO agency serving Kannur and North Malabar businesses, we implement structured JSON-LD entity schemas, llms.txt documentation, and automated Google Indexing API & Bing IndexNow pipelines so your Kannur business ranks on Google Search, Google Maps, and AI assistants like ChatGPT and Perplexity.",
+        },
+      },
+    ],
   };
 
   return (
     <section className="min-h-screen mt-7 bg-gradient-to-b from-white to-gray-50 py-32 px-4">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="max-w-6xl mx-auto">
 
         <div className="text-center mb-20">
           <span className="inline-block bg-green-100 text-green-600 text-sm px-4 py-1 rounded-full mb-4 font-medium">
-            SEO Services — Kannur, Kerala
+            SEO Company &amp; AI SEO Agency — Kannur, Kerala
           </span>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            SEO Services in <span className="text-green-600">Kannur</span>
-            <br />Digital Growth for Kannur Businesses
+            SEO Company &amp; Agency in <span className="text-green-600">Kannur</span>
+            <br />AI SEO &amp; Google Ranking Services
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We provide professional <strong>seo services services in Kannur, Kerala</strong>. From SEO and web development to WhatsApp automation and AI chatbots — we help Kannur businesses grow online. Based in Trivandrum, serving all of Kerala.
+            Partner with a proven <strong>SEO company and AI SEO agency in Kannur, Kerala</strong>. From local Google Business Profile (Maps) ranking and technical SEO to Next.js web development and WhatsApp automation — we help Kannur businesses dominate local search starting from <strong>₹5,000/month</strong>.
           </p>
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
             <Link href="/contact" className="bg-green-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-green-700 transition shadow-lg">

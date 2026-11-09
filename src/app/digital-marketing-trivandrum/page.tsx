@@ -2,10 +2,9 @@ import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title:
-    "Best Digital Marketing Company in Trivandrum & Attingal | Top SEO & Ads Agency",
+  title: "Digital Marketing Company in Trivandrum | SEO & Ads Agency",
   description:
-    "Partner with the best digital marketing company in Trivandrum & Attingal. Proven digital marketing services in Trivandrum — AI SEO, Google Ads, social media & WhatsApp lead automation from ₹3,000/mo.",
+    "Best digital marketing company in Trivandrum & Attingal. Proven digital marketing services in Trivandrum — SEO, Google Ads & WhatsApp automation from ₹3,000/mo.",
   path: "/digital-marketing-trivandrum",
   absoluteTitle: true,
   keywords: [

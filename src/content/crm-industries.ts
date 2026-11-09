@@ -51,7 +51,7 @@ export const realEstateCrm: CrmIndustry = {
   metaDescription:
     "4+ years building Kerala software. Stop losing property enquiries in WhatsApp. Real estate CRM for Trivandrum agents and builders — capture, follow-up, bookings.",
   keywords:
-    "real estate CRM Kerala, property lead management software, real estate CRM Trivandrum, property enquiry management system, real estate WhatsApp CRM",
+    "real estate CRM Kerala, property lead management software, real estate CRM Trivandrum, construction erp software in trivandrum, property enquiry management system, real estate WhatsApp CRM",
   badge: "Real Estate CRM — Kerala · 4+ years",
   h1: "Real Estate CRM Kerala — built like a sales desk, not a brochure",
   h1Accent: "That 99acres lead is going cold in WhatsApp while your agent is on another call.",
@@ -137,6 +137,7 @@ export const realEstateCrm: CrmIndustry = {
   searchQueries: [
     "real estate CRM Kerala",
     "real estate CRM Trivandrum",
+    "construction erp software in trivandrum",
     "property lead management software",
     "property enquiry management system",
     "real estate WhatsApp CRM",
@@ -145,11 +146,11 @@ export const realEstateCrm: CrmIndustry = {
 
 export const travelCrm: CrmIndustry = {
   path: "/travel-agency-crm-kerala",
-  metaTitle: "Travel Agency CRM & Enquiry Management Software in Kerala",
+  metaTitle: "Travel Agency CRM & Tour Operator Booking Software Kerala",
   metaDescription:
-    "Manage travel enquiries, quotations, follow-ups and bookings in one system. Built for Kerala tour operators and travel agencies.",
+    "Kerala tour operator booking software & travel agency CRM. Manage travel enquiries, WhatsApp quotations, follow-ups and bookings in one system from ₹15,000.",
   keywords:
-    "travel agency CRM Kerala, travel CRM software, tour package enquiry management, travel quotation software Trivandrum",
+    "kerala tour operator booking software, travel agency CRM Kerala, travel CRM software, tour package enquiry management, travel quotation software Trivandrum",
   badge: "Travel Agency CRM — Kerala · 4+ years",
   h1: "Travel Agency CRM Kerala — quotes that do not vanish at 11pm",
   h1Accent: "Onam rush. Five WhatsApp threads. Nobody knows which quote is still alive.",
@@ -228,6 +229,7 @@ export const travelCrm: CrmIndustry = {
   icon: "🚌",
   hubBlurb: "Munnar, Alleppey, honeymoon quotes — stored, followed up, booked. Not lost in a personal phone.",
   searchQueries: [
+    "kerala tour operator booking software",
     "travel agency CRM Kerala",
     "travel CRM software",
     "tour package enquiry management",
@@ -237,17 +239,16 @@ export const travelCrm: CrmIndustry = {
 
 export const educationCrm: CrmIndustry = {
   path: "/education-admission-crm-kerala",
-  metaTitle:
-    "Education CRM Development in Trivandrum & Top Education CRM Providers in Kerala",
+  metaTitle: "Education CRM Development in Trivandrum & Providers Kerala",
   metaDescription:
-    "Leading education CRM providers in Kerala & custom education CRM development in Trivandrum. Track student enquiries, counsellor follow-ups, WhatsApp leads & admissions from ₹15,000.",
+    "Top education CRM providers in Kerala & education CRM development in Trivandrum. Student management system, counsellor follow-ups & admissions from ₹15,000.",
   keywords:
-    "education crm development in trivandrum, education crm providers in kerala, education CRM Kerala, admission CRM software, student lead management, institute enquiry management Kerala",
+    "education crm development in trivandrum, education crm providers in kerala, student management system in trivandrum, education CRM Kerala, admission CRM software, student lead management, institute enquiry management Kerala",
   badge: "Education / Admission CRM — Trivandrum & Kerala · 4+ years",
   h1: "Education CRM Development in Trivandrum & Admission CRM Providers in Kerala",
   h1Accent: "Parents WhatsApp at 9pm. Your counsellor sees it on Monday. The seat is gone.",
   lede:
-    "As one of the trusted education CRM providers in Kerala with custom education CRM development in Trivandrum (and creators of KPSC Master — 56,155+ Google Search Console impressions & 4,223+ student clicks), we build the funnel before students join: enquiry → counsellor → application → admitted. Direct WhatsApp to a developer — no call-centre CRM pitch.",
+    "As one of the trusted education CRM providers in Kerala with custom education CRM development in Trivandrum (and creators of KPSC Master — 58,525+ Google Search Console impressions & 4,362+ student clicks), we build the funnel before students join: enquiry → counsellor → application → admitted. Direct WhatsApp to a developer — no call-centre CRM pitch.",
   problemTitle: "The problem",
   problem:
     "Walk-ins, website forms, WhatsApp and phone all reach different people. The counsellor who should call back does not see the front-desk note. Parents ask “what happened to our form?” and nobody can answer from one screen.",
@@ -323,6 +324,7 @@ export const educationCrm: CrmIndustry = {
   searchQueries: [
     "education crm development in trivandrum",
     "education crm providers in kerala",
+    "student management system in trivandrum",
     "education CRM Kerala",
     "admission CRM software",
     "student lead management",
@@ -332,10 +334,9 @@ export const educationCrm: CrmIndustry = {
 
 export const carDealerCrm: CrmIndustry = {
   path: "/car-dealer-crm-kerala",
-  metaTitle:
-    "DealerCRM — Car Dealer CRM & Showroom Lead Software in Kerala (Cloud Login & Demo)",
+  metaTitle: "DealerCRM | Car Dealer CRM & Showroom Software in Kerala",
   metaDescription:
-    "DealerCRM by Digital Product Solutions: Cloud car dealer CRM for new & used car dealerships in Kerala. Manage showroom walk-ins, OLX/WhatsApp leads, test drives, quotes & branch logins from ₹15,000.",
+    "DealerCRM by Digital Product Solutions: Cloud car dealer CRM for Kerala showrooms. Manage walk-ins, OLX/WhatsApp leads, test drives & quotes from ₹15,000.",
   keywords:
     "dealercrm, dealer crm, dealercrm login, car dealer CRM Kerala, automobile CRM software, test drive management software, vehicle enquiry management Trivandrum, used car dealer crm kerala",
   badge: "DealerCRM — Car Dealership CRM Kerala · Cloud Portal & WhatsApp",

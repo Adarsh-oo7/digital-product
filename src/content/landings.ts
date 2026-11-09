@@ -912,9 +912,9 @@ export const aiAutomationKerala: LandingContent = {
 
 export const australiaLanding: LandingContent = {
   path: "/au",
-  metaTitle: "Outsource Software, AI & Web Development Australia | India Engineering Team",
+  metaTitle: "Outsource Software, AI & Web Development Australia | DPS",
   metaDescription:
-    "Australian businesses outsource custom software, Next.js web platforms, Flutter apps, Odoo ERP, and AI automation to Digital Product Solutions in India. Transparent AUD pricing from AUD $450.",
+    "Outsource custom software, Next.js web apps, Flutter, Odoo ERP & AI automation for Australian SMEs. Proven Perth WA delivery (82,824+ GSC impr). From AUD $450.",
   h1: "Software, AI & Web Development Partner for Australian Businesses",
   lede: "Digital Product Solutions is a registered 9-person software engineering team in Kerala, India, building high-speed Next.js web platforms, custom CRMs, Odoo ERP integrations, Flutter mobile apps, and AI automations for Australian SMEs and healthcare providers — with direct senior architect access and transparent AUD pricing.",
   audience: "Australian founders, healthcare & NDIS/Aged Care providers, construction firms, hospitality groups, and SMEs across Sydney, Melbourne, Perth, Brisbane, and Adelaide looking to outsource software development to India without agency middlemen.",
@@ -964,7 +964,7 @@ export const australiaLanding: LandingContent = {
     },
   ],
   ownership: "You own 100% of the custom source code, domain, and cloud infrastructure from day one. All contracts include clear IP assignment and optional post-launch SLA support.",
-  proof: "Proven Australian delivery includes Care N Cure Group Perth (carencure.com.au — generating 73,746+ verified Google Search Console impressions in Australia and ranking #1.1 for 'aged care agencies', #1.3 for 'home care services WA', and #1.5 for 'home care services'), alongside our 8-month Kerala Sellers multi-vendor marketplace build (7,620+ GSC impressions), KPSC Master EdTech platform (56,155+ GSC impressions & 4,223 clicks), and BuilDwellz construction portal. Rated 5.0★ across 25 verified Google reviews.",
+  proof: "Proven Australian delivery includes Care N Cure Group Perth (carencure.com.au — generating 82,824+ verified Google Search Console impressions and 386 clicks in Australia, ranking #1.0 for 'aged care agencies', #1.3 for 'home care services WA', and #1.5 for 'home care services'), alongside our 8-month Kerala Sellers multi-vendor marketplace build (19,081+ GSC impressions & 1,239 clicks), KPSC Master EdTech platform (58,525+ GSC impressions & 4,362 clicks), and BuilDwellz construction portal. Rated 5.0★ across 25 verified Google reviews.",
   related: [
     { href: "/adarsh-b-s", label: "Meet Founder & Lead AI Architect Adarsh B S" },
     { href: "/australia-malayali-business-website-development", label: "Australia Malayali Business Digital Solutions" },
@@ -981,7 +981,7 @@ export const australiaLanding: LandingContent = {
     },
     {
       q: "Have you built platforms for Australian businesses before?",
-      a: "Yes. We engineered and optimized Care N Cure Group (carencure.com.au) in Perth, Western Australia — delivering 73,746+ verified Google Search Console impressions in Australia and #1.1–#1.5 Page-1 rankings for aged care and home care services in WA.",
+      a: "Yes. We engineered and optimized Care N Cure Group (carencure.com.au) in Perth, Western Australia — delivering 82,824+ verified Google Search Console impressions and 386 clicks in Australia and #1.0–#1.5 Page-1 rankings for aged care and home care services in WA.",
     },
     {
       q: "Can you deploy our software on Australian servers for data residency?",
@@ -999,9 +999,9 @@ export const australiaLanding: LandingContent = {
 
 export const uaeLanding: LandingContent = {
   path: "/uae",
-  metaTitle: "Custom Software, AI & Web Development UAE | Dubai & Abu Dhabi Tech Partner",
+  metaTitle: "Custom Software, AI & Web Development UAE | Dubai & Abu Dhabi",
   metaDescription:
-    "Custom software development, Official WhatsApp Cloud API chatbots, Odoo ERP, Flutter apps, and Next.js websites for UAE businesses in Dubai & Abu Dhabi. Transparent AED/USD pricing.",
+    "Custom software development, WhatsApp Cloud API bots, Odoo ERP, CRM, Flutter apps & Next.js websites in Dubai & Abu Dhabi. Transparent AED pricing from AED 1,200.",
   h1: "Custom Software, AI Automation & Web Development for UAE Businesses",
   lede: "Digital Product Solutions engineers high-converting Next.js websites (English & Arabic RTL), official Meta WhatsApp Cloud API chatbots, custom CRMs, Odoo ERP systems, and Flutter mobile apps for companies in Dubai, Abu Dhabi, and Sharjah — delivered by our 9-person engineering team with 100% GCC workday overlap.",
   audience: "SMEs, real estate brokerages, healthcare clinics, hospitality brands, trading companies, and retail chains in Dubai, Abu Dhabi, Sharjah, and across the GCC seeking high-speed engineering with direct architect communication.",
@@ -1086,9 +1086,9 @@ export const uaeLanding: LandingContent = {
 
 export const ukLanding: LandingContent = {
   path: "/uk",
-  metaTitle: "Outsource Software, AI & Web Development UK | Dedicated India Tech Team",
+  metaTitle: "Outsource Software, AI & Web Development UK | India Tech Team",
   metaDescription:
-    "UK SMEs and startups outsource custom software, Next.js web apps, Flutter mobile development, Odoo ERP, and LLM integration to Digital Product Solutions. Transparent GBP (£) pricing.",
+    "UK SMEs & agencies outsource custom software, Next.js web apps, Flutter, CRM, Odoo ERP & AI automation to Digital Product Solutions. From £300 (Outside IR35).",
   h1: "Offshore Software, AI & Web Development Partner for UK Businesses",
   lede: "Digital Product Solutions provides UK SMEs, startups, and digital agencies with a reliable 9-person software engineering team in Kerala, India. We deliver Next.js web platforms, custom CRMs, Odoo ERP implementations, Flutter apps, and LLM automations with transparent GBP (£) pricing and direct senior architect access.",
   audience: "UK founders, SME directors, recruitment & healthcare consultancies, and digital agencies in London, Manchester, Birmingham, Edinburgh, and across the UK seeking cost-effective engineering without IR35 contractor headaches.",
@@ -1173,9 +1173,9 @@ export const ukLanding: LandingContent = {
 
 export const germanyLanding: LandingContent = {
   path: "/de",
-  metaTitle: "Softwareentwicklung Outsourcing Indien | KI, Next.js, Flutter & Odoo (DE/EN)",
+  metaTitle: "Softwareentwicklung Outsourcing Indien | KI, Next.js & Odoo",
   metaDescription:
-    "Softwareentwicklung Outsourcing nach Indien für deutsche KMU & Startups: Individuelle Web-Apps (Next.js), KI-Integration, Odoo ERP & Flutter Apps ab €350 bzw. €1.250/Monat. DSGVO-konform.",
+    "Softwareentwicklung Outsourcing nach Indien für deutsche KMU: Next.js Web-Apps, KI-Integration, CRM, Odoo ERP & Flutter Apps ab €350 (DSGVO-konform).",
   h1: "Softwareentwicklung Outsourcing Indien — KI, Web-Apps & Odoo für Deutschland (DE / EN)",
   lede: "Digital Product Solutions ist Ihr 9-köpfiges Software-Engineering-Team in Kerala, Indien. Wir entwickeln maßgeschneiderte Next.js Webplattformen, KI-Automatisierungen (LLM/RAG), individuelle CRM- & Odoo-ERP-Systeme sowie Flutter Mobile Apps für Unternehmen im DACH-Raum — DSGVO-konform auf EU-Servern (AWS Frankfurt) und zu transparenten Euro-Festpreisen.",
   audience: "Geschäftsführer, Mittelstand (KMU), Startups und Digitalagenturen in Deutschland, Österreich und der Schweiz (Berlin, München, Frankfurt, Hamburg, Zürich), die verlässliche Softwareentwickler aus Indien ohne teure Zwischenhändler suchen.",
@@ -1256,6 +1256,508 @@ export const germanyLanding: LandingContent = {
   serviceName: "Softwareentwicklung Outsourcing Indien für Deutschland",
   whatsappText: "Hello Adarsh, I am inquiring from Germany/DACH regarding software development / KI outsourcing",
   areaServed: ["Germany", "Deutschland", "Berlin", "Munich", "Frankfurt", "Hamburg", "Austria", "Switzerland"],
+};
+
+export const gccLanding: LandingContent = {
+  path: "/gcc",
+  metaTitle: "Software, Web, CRM & AI Development GCC | Saudi, Qatar, Kuwait & Oman",
+  metaDescription:
+    "Custom software, bilingual EN/AR Next.js websites, Odoo ERP, CRM & WhatsApp Cloud API bots across Saudi Arabia (KSA), Qatar, Kuwait, Oman, Bahrain & UAE.",
+  h1: "Custom Software, CRM, ERP, AI & Web Development Across the GCC (Saudi Arabia, Qatar, Kuwait, Oman, Bahrain & UAE)",
+  lede: "Digital Product Solutions is a registered 9-person software engineering agency in Kerala, India, building bilingual (English + Arabic RTL) Next.js web platforms, custom CRMs, Odoo ERP systems, ZATCA-ready workflows, Flutter mobile apps, and official Meta WhatsApp Cloud API automations for businesses across Saudi Arabia (Riyadh, Jeddah, Dammam), Qatar (Doha), Kuwait (Kuwait City), Oman (Muscat), Bahrain (Manama), and the UAE.",
+  audience: "Enterprises, SMEs, real estate & construction groups, healthcare clinics, logistics providers, retail chains, and hospitality brands across Saudi Arabia (KSA), Qatar, Kuwait, Oman, Bahrain, and the UAE seeking high-speed engineering with direct senior architect communication and 100% GCC workday overlap.",
+  problem: "Hiring large regional agencies in Riyadh, Doha, Dubai, or Kuwait City often costs USD $15,000–$60,000+ with layers of account managers who outsource the engineering anyway. Working directly with our senior engineering team (only 1.5 to 2.5 hours ahead of GCC time) gives you direct WhatsApp/Zoom access to Lead Architect Adarsh B S at 60–70% lower engineering cost.",
+  deliverables: [
+    "Bilingual Next.js & React web platforms (English + Right-to-Left Arabic) engineered for 95+ Core Web Vitals",
+    "Official Meta WhatsApp Cloud API automation, bilingual AI chatbots & CRM lead routing",
+    "Custom CRM & Odoo ERP implementation (including Saudi ZATCA e-invoicing workflows & GCC VAT rules)",
+    "Cross-platform Flutter iOS & Android apps integrated with Mada, STC Pay, KNET, BenefitPay, PayTabs, Telr & Tap Payments",
+    "Technical SEO, AI Search Optimization (GEO) & Google Maps ranking across Riyadh, Doha, Kuwait City, Muscat, Manama & Dubai",
+    "100% source code ownership and cloud deployment on AWS Middle East (Bahrain me-south-1 / UAE me-central-1) & GCP Doha",
+  ],
+  costs: [
+    {
+      title: "High-Speed Business & Corporate Websites (EN / AR)",
+      text: "SAR 1,200 / QAR 1,200 / KWD 100 / OMR 125 / BHD 125 (USD $330 – $1,250). Includes responsive UI/UX, Arabic RTL support, WhatsApp integration, and technical SEO.",
+    },
+    {
+      title: "WhatsApp Cloud API & Bilingual AI Chatbots",
+      text: "SAR 2,200 / QAR 2,200 / KWD 180 / OMR 230 / BHD 230 (USD $600 – $1,500). 24/7 automated lead qualification, booking, and CRM sync.",
+    },
+    {
+      title: "Custom CRM, Odoo ERP & Enterprise Web Portals",
+      text: "SAR 4,000 – 14,000+ / QAR 4,000+ / KWD 330+ (USD $1,100 – $3,800+) tailored for real estate, clinics, construction, logistics, and trading.",
+    },
+    {
+      title: "Dedicated Full-Stack / Flutter / AI Engineer Retainer",
+      text: "SAR 4,500 – 7,500 / month (USD $1,200 – $2,000/mo) for a dedicated engineer working in full GCC business hours overlap.",
+    },
+  ],
+  process: [
+    {
+      title: "1. Direct Architect Consultation (AST / GST Time Zone)",
+      text: "Speak directly on WhatsApp or Zoom with Founder & Solutions Architect Adarsh B S during standard Riyadh, Doha, Kuwait, Muscat, or Manama business hours.",
+    },
+    {
+      title: "2. Fixed Milestone Proposal (SAR / QAR / KWD / OMR / BHD / AED / USD)",
+      text: "Clear written specification with exact deliverables, sprint dates, and zero hidden licensing traps.",
+    },
+    {
+      title: "3. Weekly Sprints & Live Staging Previews",
+      text: "Test bilingual English/Arabic UI, payment gateways, and WhatsApp automation flows on live staging links every week.",
+    },
+    {
+      title: "4. GCC Cloud Launch & Full Code Handover",
+      text: "Production launch on AWS Middle East (Bahrain / UAE) or GCP Doha with complete GitHub source code and credential transfer.",
+    },
+  ],
+  ownership: "You own 100% of the source code, databases, domains, and cloud accounts. No per-user SaaS lock-in fees.",
+  proof: "Backed by 189,800+ verified Google Search Console impressions and 6,380+ organic clicks across engineered platforms — including Kerala Sellers (19,081+ impressions & 1,239 clicks with active buyer/seller traffic across UAE, Saudi Arabia, Qatar, Kuwait, Oman & Bahrain), Care N Cure Perth (82,824+ impressions), KPSC Master (58,525+ impressions), and 20+ shipped commercial systems. Rated 5.0★ on Google.",
+  related: [
+    { href: "/uae", label: "UAE (Dubai & Abu Dhabi) Software, AI & Web Hub" },
+    { href: "/gcc-malayali-business-digital-solutions", label: "GCC Malayali Business Digital Solutions" },
+    { href: "/crm-software-kerala", label: "Custom Industry CRM Software" },
+    { href: "/odoo-erp-development-kerala", label: "Odoo ERP Implementation & Custom Modules" },
+    { href: "/whatsapp-automation-kerala", label: "Official WhatsApp Cloud API Automation" },
+    { href: "/dedicated-developer-team-kerala", label: "Hire Dedicated Developers (GCC Time Zone)" },
+    { href: "/contact", label: "Request a Fixed GCC Project Quote" },
+  ],
+  faqs: [
+    {
+      q: "Which GCC countries do you serve for custom software, web, CRM, and AI development?",
+      a: "We serve businesses across all six Gulf Cooperation Council (GCC) nations: Saudi Arabia (Riyadh, Jeddah, Dammam, Khobar), United Arab Emirates (Dubai, Abu Dhabi, Sharjah), Qatar (Doha, Lusail), Kuwait (Kuwait City, Hawalli), Oman (Muscat, Salalah), and Bahrain (Manama).",
+    },
+    {
+      q: "Can you integrate local GCC payment gateways like Mada, STC Pay, KNET, BenefitPay, and Tap Payments?",
+      a: "Yes. We integrate Mada, STC Pay, HyperPay, and Moyasar for Saudi Arabia; KNET for Kuwait; BenefitPay for Bahrain; OmanNet/Thawani for Oman; QPay/SkipCash for Qatar; and Telr, PayTabs, Network, Stripe UAE, and Tap Payments across the entire GCC.",
+    },
+    {
+      q: "Do you support Arabic RTL websites and Saudi ZATCA / PDPL data residency requirements?",
+      a: "Yes. We build native Right-to-Left (RTL) Arabic and English Next.js platforms, support Saudi ZATCA Phase 1 & 2 e-invoicing workflows in custom ERP/Odoo builds, and deploy directly to AWS Middle East (Bahrain me-south-1, UAE me-central-1) or Google Cloud Doha (me-central1) to satisfy local data residency rules.",
+    },
+    {
+      q: "How does Digital Product Solutions compare to local GCC agencies or large enterprise IT firms?",
+      a: "Local agencies in Riyadh, Dubai, or Doha typically charge USD $15,000–$60,000+ while routing communication through non-technical account managers. With Digital Product Solutions, you work directly on WhatsApp/Slack with Founder & Lead Architect Adarsh B S and our 9-engineer team at 60–70% lower cost, with 100% source code ownership.",
+    },
+  ],
+  serviceName: "Custom Software, Web, CRM, ERP & AI Development GCC (Saudi Arabia, Qatar, Kuwait, Oman, Bahrain, UAE)",
+  whatsappText: "Hi Adarsh, I am inquiring from the GCC (Saudi/Qatar/Kuwait/Oman/Bahrain/UAE) regarding a software/web/AI project",
+  areaServed: [
+    "Saudi Arabia",
+    "Riyadh",
+    "Jeddah",
+    "Dammam",
+    "Qatar",
+    "Doha",
+    "Kuwait",
+    "Kuwait City",
+    "Oman",
+    "Muscat",
+    "Bahrain",
+    "Manama",
+    "United Arab Emirates",
+    "Dubai",
+    "Abu Dhabi",
+    "GCC",
+  ],
+};
+
+export const posBillingSoftwareKerala: LandingContent = {
+  path: "/pos-billing-software-kerala",
+  metaTitle: "POS & GST Billing Software in Kerala | Retail, Hotel & Supermarket",
+  metaDescription:
+    "Custom POS software & GST billing software in Kerala for supermarkets, restaurants, hotels, pharmacies & retail shops. Barcode, KOT, stock & WhatsApp bills from ₹15,000.",
+  h1: "POS & GST Billing Software in Kerala — Built for Retail, Restaurants & Supermarkets",
+  lede: "Digital Product Solutions engineers fast, cloud-synced and offline-ready Point of Sale (POS), GST billing, barcode inventory, and hotel KOT billing software for retail stores, supermarkets, restaurants, cafes, textiles, and wholesale distributors across Trivandrum, Kochi, Kozhikode, and all of Kerala.",
+  audience: "Supermarkets, hypermarkets, restaurants, hotels, bakeries, pharmacies, hardware stores, textile showrooms, and wholesale traders in Kerala who want fast billing without annual per-counter license lock-in.",
+  problem: "Legacy desktop billing software crashes, locks your data on a single PC, or charges heavy yearly renewal fees per terminal. Generic cloud POS apps lag when internet drops. We build fast POS & GST billing systems with barcode scanning, thermal printer integration, WhatsApp PDF invoice delivery, and multi-branch owner dashboards.",
+  deliverables: [
+    "2-second barcode scanning, thermal receipt printing (58mm/80mm) & GST-compliant invoicing (CGST/SGST/IGST)",
+    "Restaurant & hotel KOT (Kitchen Order Ticket) billing, table management & Zomato/Swiggy/online order sync",
+    "Real-time stock & inventory management with low-stock WhatsApp alerts, batch/expiry tracking & supplier POs",
+    "Automatic WhatsApp digital bill & feedback link sent to the customer's phone on checkout",
+    "Multi-branch cloud dashboard for owners to check live daily sales, cash/UPI/card split & staff shifts from mobile",
+    "Integration with weighing scales, barcode label printers, Razorpay/Pine Labs UPI terminals & Tally/Odoo export",
+  ],
+  costs: [
+    {
+      title: "Single-Store Retail / Restaurant POS & Billing",
+      text: "From ₹15,000 one-time setup. Includes GST billing, thermal printer setup, stock tracking, and owner mobile summary.",
+    },
+    {
+      title: "Multi-Counter Supermarket / Hotel KOT + Inventory Suite",
+      text: "₹25,000 – ₹45,000. Barcode label printing, batch/expiry inventory, supplier ledgers, and WhatsApp digital invoices.",
+    },
+    {
+      title: "Multi-Branch Chain POS + E-Commerce / Odoo ERP Sync",
+      text: "From ₹55,000+ for centralized warehouse distribution, franchise reporting, and unified online + offline stock.",
+    },
+  ],
+  process: [
+    {
+      title: "1. Store & Hardware Workflow Check",
+      text: "We review your existing thermal printers, barcode scanners, GST slabs, and counter workflow on WhatsApp or a store call.",
+    },
+    {
+      title: "2. Custom Configuration & Catalog Import",
+      text: "We import your item master (Excel/CSV), HSN codes, tax rates, and configure your invoice header and UPI QR code.",
+    },
+    {
+      title: "3. Counter Staff Training & Live Trial",
+      text: "Cashiers learn the billing screen in under 15 minutes with keyboard shortcuts and touch-POS support.",
+    },
+    {
+      title: "4. Go-Live & Direct Developer WhatsApp Support",
+      text: "Direct support from our Korani, Trivandrum engineering team whenever you add counters or branches.",
+    },
+  ],
+  ownership: "100% ownership of your sales database, customer phone list, and item catalog. Export to Excel, Tally, or GST portal anytime.",
+  proof: "Engineered the POS & inventory billing module for Kerala Sellers (keralasellers.in — 19,081+ verified Google Search Console impressions) and food/retail ordering workflows for Kerala brands including Squeeze Berriez and Lemon Caters. Rated 5.0★ on Google.",
+  related: [
+    { href: "/odoo-erp-development-kerala", label: "Odoo ERP & Inventory Software Kerala" },
+    { href: "/restaurant-website-online-ordering-kerala", label: "Restaurant Online Ordering & KOT Systems" },
+    { href: "/ecommerce-website-development-kerala", label: "E-Commerce & Online Store Development" },
+    { href: "/whatsapp-automation-kerala", label: "WhatsApp Automated Invoice & Order Alerts" },
+    { href: "/software-development", label: "Custom Business Software Kerala" },
+    { href: "/contact", label: "Book a Free POS Billing Demo" },
+  ],
+  faqs: [
+    {
+      q: "Does your POS billing software work with existing thermal printers and barcode scanners in Kerala?",
+      a: "Yes. Our POS billing software supports all standard USB, LAN, and Bluetooth 58mm/80mm thermal receipt printers (Epson, TVS, Rugtek, Essae) and 1D/2D barcode scanners used in Kerala shops and hotels.",
+    },
+    {
+      q: "Can it handle hotel and restaurant KOT billing as well as retail GST billing?",
+      a: "Yes. For hotels, cafes, and restaurants in Kerala, we configure table-wise orders, Kitchen Order Tickets (KOT), parcel/takeaway pricing, and split cash/UPI settlement.",
+    },
+    {
+      q: "Can the bill be sent directly to the customer on WhatsApp?",
+      a: "Yes. On bill completion, the system can automatically send a clean PDF receipt and Google Review link to the customer's WhatsApp number.",
+    },
+    {
+      q: "What is the price of POS and billing software in Kerala?",
+      a: "Our POS and GST billing software starts at ₹15,000 for single-store setups, with custom multi-counter and multi-branch ERP packages scoped transparently upfront.",
+    },
+  ],
+  serviceName: "POS & GST Billing Software Kerala",
+  whatsappText: "Hi Adarsh, I need POS / GST billing software for my business in Kerala",
+  areaServed: ["Thiruvananthapuram", "Kochi", "Kozhikode", "Kollam", "Thrissur", "Kannur", "Kottayam", "Palakkad", "Kerala"],
+};
+
+export const lmsDevelopmentKerala: LandingContent = {
+  path: "/lms-development-company-kerala",
+  metaTitle: "LMS Development Company in Trivandrum & Kerala | EdTech & Exam Apps",
+  metaDescription:
+    "Top LMS development company in Trivandrum & Kerala (creators of KPSC Master — 58,525+ GSC impressions). Custom e-learning portals, mock-test apps & coaching LMS from ₹25,000.",
+  h1: "LMS Development Company in Trivandrum & Kerala — E-Learning, Mock-Test & Coaching Platforms",
+  lede: "Digital Product Solutions is a proven EdTech and Learning Management System (LMS) development company in Trivandrum, Kerala — creators of KPSC Master (58,525+ verified Google Search Console impressions & 4,362+ organic student clicks). We build custom web & Flutter mobile LMS platforms, live mock-test engines, video course portals, and admission CRMs for coaching institutes, colleges, and training academies across Kerala, UAE, and UK.",
+  audience: "PSC/UPSC/NEET/JEE coaching centres, nursing & IELTS academies, skill-training institutes, universities, CBSE/state syllabus schools, and EdTech founders in Trivandrum, Kochi, Kozhikode, and GCC.",
+  problem: "Generic third-party course platforms take 10–30% revenue share, restrict how you run negative-marking mock exams, or allow students to pirate video lectures. We engineer your own branded Next.js + Flutter LMS with DRM-protected video streaming, automated OMR/CBT mock tests, Razorpay fee collection, and 0% commission.",
+  deliverables: [
+    "Custom Web + Android & iOS Flutter Student App with your institute's brand and domain",
+    "CBT Mock-Test & Quiz Engine with timer, negative marking, instant rank list, percentile & Malayalam/English support",
+    "Secure Recorded Video Lectures (HLS encryption, watermark overlay, anti-screen-capture) & Zoom/Live class integration",
+    "Automated Course Enrollment, EMI/Installment Fee Payment (Razorpay, UPI, Stripe) & GST Receipt generation",
+    "AI Doubt-Solving Assistant & Automated WhatsApp Exam/Attendance Alerts for students and parents",
+    "Complete Admin & Faculty Dashboard to upload PDFs, question banks (Excel/Word import), and track student progress",
+  ],
+  costs: [
+    {
+      title: "Coaching Website + Student Course & Test Portal",
+      text: "₹20,000 – ₹35,000. Branded course catalog, student login, PDF notes, mock tests, and Razorpay fee checkout.",
+    },
+    {
+      title: "Full Custom LMS + Android/iOS Flutter Mobile App",
+      text: "₹45,000 – ₹85,000+. Encrypted video streaming, live rank-list exam engine, push notifications, and batch management.",
+    },
+    {
+      title: "Enterprise EdTech SaaS & AI Question Generator",
+      text: "Custom milestone quote for multi-institute SaaS platforms, AI-powered personalized test engines, and high-concurrency scaling.",
+    },
+  ],
+  process: [
+    {
+      title: "1. Live Walkthrough of Our EdTech Architecture",
+      text: "See how we engineered KPSC Master to handle thousands of concurrent Kerala exam takers with sub-second load times.",
+    },
+    {
+      title: "2. Curriculum, Exam Rules & Batch Scoping",
+      text: "We map your courses, negative-marking rules, bilingual font support (Malayalam + English), and payment tiers.",
+    },
+    {
+      title: "3. Web + Mobile App Build & Question Bank Import",
+      text: "Bulk import thousands of MCQs, video playlists, and study materials in one click.",
+    },
+    {
+      title: "4. Play Store / App Store Launch & Handover",
+      text: "Full deployment on your own cloud account and developer console with 100% code and student-data ownership.",
+    },
+  ],
+  ownership: "You own 100% of your student database, question banks, video content, domain, and source code — zero per-student monthly tax.",
+  proof: "First-party EdTech proof: We engineered and rank KPSC Master (kpscmaster.in), which has generated 58,525+ verified Google Search Console impressions and 4,362+ organic clicks (7.5% CTR), ranking #1.8 (55.1% CTR) for 'vfa mock test 2026' and #2.2 for Malayalam exam queries.",
+  related: [
+    { href: "/education-admission-crm-kerala", label: "Education & Admission CRM Software Trivandrum" },
+    { href: "/school-education-management-software-kerala", label: "School & College Management ERP Software" },
+    { href: "/coaching-centre-website-kerala", label: "Coaching Centre Website Development Kerala" },
+    { href: "/app-development-kerala", label: "Android & iOS Flutter App Development" },
+    { href: "/ai-agent-rag-development-india", label: "AI Doubt-Solving & Question Bank Bots" },
+    { href: "/contact", label: "Request a Live LMS Demo & Quote" },
+  ],
+  faqs: [
+    {
+      q: "Why is Digital Product Solutions ranked among the top LMS development companies in Trivandrum?",
+      a: "Unlike generic web agencies, we build and operate our own high-traffic EdTech platform in Kerala — KPSC Master (kpscmaster.in, with 58,525+ verified Google Search Console impressions and 4,362+ student clicks). You get battle-tested exam, video, and student-analytics architecture straight from our Trivandrum engineering team.",
+    },
+    {
+      q: "Does the LMS support Malayalam questions, math equations (LaTeX), and negative marking?",
+      a: "Yes. Our exam engine natively supports Unicode Malayalam, English, Hindi, Arabic, LaTeX mathematical formulas, image-based questions, section timers, and customizable negative-marking schemes.",
+    },
+    {
+      q: "Can we prevent students from downloading or screen-recording paid video classes?",
+      a: "Yes. We implement encrypted HLS streaming, dynamic student phone/email watermarks on the video player, single-device login locks, and mobile screen-capture blocking in the Flutter app.",
+    },
+    {
+      q: "How much does custom LMS development cost in Kerala?",
+      a: "A web-based coaching LMS and test portal starts at ₹20,000–₹35,000, while a complete Web + Android/iOS Flutter mobile LMS app typically ranges from ₹45,000 to ₹85,000+ with 100% ownership.",
+    },
+  ],
+  serviceName: "LMS Development Company Trivandrum & Kerala",
+  whatsappText: "Hi Adarsh, I want an estimate for an LMS / e-learning / exam app in Kerala",
+  areaServed: ["Thiruvananthapuram", "Kochi", "Kozhikode", "Thrissur", "Kollam", "Kottayam", "Kannur", "Kerala", "India", "UAE"],
+};
+
+export const saasDevelopmentKerala: LandingContent = {
+  path: "/saas-development-company-kerala",
+  metaTitle: "Digital Product & SaaS Development Company in Trivandrum, Kerala",
+  metaDescription:
+    "Premier digital product development agency & SaaS development company in Trivandrum, Kerala. Multi-tenant cloud SaaS, Next.js, Flutter, Python AI & MVP engineering from ₹25,000.",
+  h1: "Digital Product & SaaS Development Company in Trivandrum, Kerala",
+  lede: "Digital Product Solutions is a full-cycle digital product development agency and SaaS engineering company in Korani, Trivandrum. Led by Founder & AI Solutions Architect Adarsh B S, our 9-person engineering squad designs, builds, and scales multi-tenant SaaS platforms, AI-native web applications, and cloud digital products for startups and enterprises across Kerala, Australia, UAE, GCC, UK, and Germany.",
+  audience: "Startup founders, B2B SaaS entrepreneurs, industry domain experts turning internal workflows into subscription software, and enterprises seeking a dedicated digital product development agency.",
+  problem: "Most traditional IT service shops build slow, monolithic apps without multi-tenant architecture, subscription billing, or organic SEO growth built in. We build production-grade SaaS products (like Kerala Sellers and KPSC Master) engineered from day one for sub-second speed, recurring Stripe/Razorpay billing, and Google/AI search acquisition.",
+  deliverables: [
+    "Multi-tenant SaaS architecture (Next.js 15, TypeScript, Node.js/Python, PostgreSQL with Row-Level Security)",
+    "Subscription billing, tiered plan gating, usage metering & automated invoicing (Stripe, Razorpay, Paddle, LemonSqueezy)",
+    "Role-Based Access Control (RBAC), SSO/OAuth2 authentication, audit logs & tenant subdomain/custom-domain routing",
+    "Embedded AI Agents, RAG document intelligence & Official WhatsApp Cloud API workflow triggers",
+    "Companion iOS & Android mobile apps built in Flutter sharing the same cloud API backend",
+    "Programmatic SEO & Generative Engine Optimization (GEO) baked into public product pages to drive organic signups",
+  ],
+  costs: [
+    {
+      title: "SaaS MVP Launch Build (2–4 Weeks)",
+      text: "₹25,000 – ₹55,000 (USD $350 – $750). Core tenant auth, primary workflow module, subscription checkout, and cloud deployment.",
+    },
+    {
+      title: "Full-Scale Multi-Tenant SaaS Platform (4–8 Weeks)",
+      text: "₹65,000 – ₹1,50,000+ (USD $900 – $2,200+). Multi-role dashboards, API webhooks, AI automation, and mobile app.",
+    },
+    {
+      title: "Dedicated Product Engineering Pod (Monthly Retainer)",
+      text: "From ₹75,000/month (USD $1,200/mo) for continuous product roadmap delivery, DevOps, and scaling support.",
+    },
+  ],
+  process: [
+    {
+      title: "1. Product Architecture & Monetization Blueprint",
+      text: "Direct session with Solutions Architect Adarsh B S to define database tenancy, pricing tiers, and MVP scope.",
+    },
+    {
+      title: "2. UI/UX Prototyping & Database Schema",
+      text: "Interactive component design by Co-Founder Aromal V G paired with scalable API and schema engineering by Midhin S.",
+    },
+    {
+      title: "3. Weekly Sprint Releases on Live Staging",
+      text: "Test real user onboarding, billing webhooks, and AI features every week with direct developer WhatsApp/Slack access.",
+    },
+    {
+      title: "4. Production Cloud Launch & Growth SEO Setup",
+      text: "Deployment on AWS/Vercel/Railway with Google Search Console, GA4 funnel events, and 100% GitHub IP ownership.",
+    },
+  ],
+  ownership: "100% Intellectual Property (IP), GitHub source code, database, and cloud account ownership belongs to you from day one.",
+  proof: "Ranked #1.0 on Google for 'saas development company in thiruvananthapuram, india'. First-party SaaS platforms engineered and grown by our team include Kerala Sellers (multi-vendor e-commerce SaaS — 19,081+ GSC impressions & 1,239 clicks), KPSC Master (EdTech SaaS — 58,525+ GSC impressions & 4,362 clicks), and DealerCRM.",
+  related: [
+    { href: "/startup-mvp-development-kerala", label: "Startup MVP Development in 30 Days" },
+    { href: "/dedicated-developer-team-kerala", label: "Hire Dedicated Developer Squad" },
+    { href: "/ai-agent-rag-development-india", label: "Enterprise AI Agent & RAG Development" },
+    { href: "/software-development", label: "Custom Software Development Kerala" },
+    { href: "/adarsh-b-s", label: "Adarsh B S — Founder & SaaS Architect" },
+    { href: "/contact", label: "Discuss Your SaaS Product Roadmap" },
+  ],
+  faqs: [
+    {
+      q: "What makes Digital Product Solutions a leading digital product development company and SaaS agency?",
+      a: "We don't just write code to spec — we build, launch, and rank our own commercial SaaS products (Kerala Sellers and KPSC Master, generating over 77,600+ combined Google Search Console impressions). Every client product benefits from the same high-concurrency Next.js architecture, AI automation, and growth SEO.",
+    },
+    {
+      q: "How fast can you build and launch a SaaS MVP in Trivandrum?",
+      a: "A focused, revenue-ready SaaS MVP with authentication, core workflow, admin dashboard, and Stripe/Razorpay subscription billing is typically shipped in 15 to 30 days.",
+    },
+    {
+      q: "Do I keep 100% equity and source code ownership of my SaaS product?",
+      a: "Yes. We work on a transparent fixed-milestone or dedicated-pod fee with 100% IP and GitHub source code ownership assigned to your company.",
+    },
+  ],
+  serviceName: "Digital Product & SaaS Development Company Kerala",
+  whatsappText: "Hi Adarsh, I want to build a SaaS / digital product with Digital Product Solutions",
+  areaServed: ["Thiruvananthapuram", "Kochi", "Kerala", "India", "Australia", "United Arab Emirates", "Saudi Arabia", "United Kingdom", "Germany"],
+};
+
+export const wordpressWoocommerceKerala: LandingContent = {
+  path: "/wordpress-woocommerce-development-kerala",
+  metaTitle: "WordPress & WooCommerce Development Agency Trivandrum, Kerala",
+  metaDescription:
+    "Ranked #1 WordPress & WooCommerce development agency in Trivandrum, Kerala. Custom WordPress websites, WooCommerce stores, speed optimization & Next.js migration from ₹5,000.",
+  h1: "WordPress, WooCommerce & Website Maintenance Agency in Trivandrum, Kerala",
+  lede: "Digital Product Solutions is Trivandrum's #1 ranked WordPress website development, WooCommerce online store, and website maintenance agency. Whether you need a fast, SEO-ready WordPress business site, a high-converting WooCommerce store with Razorpay/WhatsApp checkout, or a migration from a slow WordPress site to sub-second Next.js, our Korani, Trivandrum engineering team delivers with published pricing.",
+  audience: "Small and medium businesses, e-commerce brands, news/media portals, travel agencies, clinics, and overseas agencies looking for reliable WordPress, WooCommerce, or Next.js development and maintenance in Kerala.",
+  problem: "Most WordPress and WooCommerce sites in Kerala suffer from bloated themes, 6-second mobile load times, hacked plugins, and developers who disappear after launch. We build clean, security-hardened WordPress/WooCommerce sites (or headless Next.js + WordPress setups) backed by 90+ PageSpeed scores and structured monthly maintenance.",
+  deliverables: [
+    "Custom lightweight WordPress business websites & landing pages (zero bloated nulled themes)",
+    "Full WooCommerce online stores with Razorpay, PhonePe, Stripe, Cashfree & WhatsApp order notifications",
+    "WordPress speed optimization (Core Web Vitals 90+, Cloudflare CDN, Redis/LiteSpeed caching & WebP compression)",
+    "WordPress malware cleanup, security hardening, SSL setup & automated daily off-site backups",
+    "Seamless WordPress-to-Next.js migration preserving 100% of your existing URLs, SEO rankings, and Google Search Console authority",
+    "Dedicated monthly WordPress & travel/e-commerce website maintenance retainers from ₹1,500/month",
+  ],
+  costs: [
+    {
+      title: "WordPress Business Website (3–7 Pages)",
+      text: "₹5,000 – ₹15,000 one-time. Mobile-first design, on-page technical SEO, WhatsApp chat, and fast hosting setup.",
+    },
+    {
+      title: "WooCommerce Online Store (Catalog + Payment Gateway)",
+      text: "₹18,000 – ₹40,000. Product variations, Razorpay/UPI checkout, shipping zones, and automated WhatsApp order alerts.",
+    },
+    {
+      title: "WordPress Maintenance, Speed & Security Retainer",
+      text: "From ₹1,500 – ₹4,000 / month. Core/plugin updates, uptime monitoring, malware protection, and content edits.",
+    },
+  ],
+  process: [
+    {
+      title: "1. Site Audit or New Store Scope",
+      text: "Message our Trivandrum developer team on WhatsApp with your domain or store requirements.",
+    },
+    {
+      title: "2. Clean Staging Build or Speed Fix",
+      text: "We build or optimize on a staging URL so your live business never experiences downtime.",
+    },
+    {
+      title: "3. Payment, SEO & Schema Verification",
+      text: "Every page is verified for mobile speed, Product/LocalBusiness JSON-LD schema, and Search Console indexing.",
+    },
+    {
+      title: "4. Handover & Optional Maintenance SLA",
+      text: "You get full wp-admin and hosting ownership, plus simple video walkthroughs to manage products or posts.",
+    },
+  ],
+  ownership: "100% admin, domain, and hosting ownership. We never lock your WordPress or WooCommerce store onto proprietary hosting.",
+  proof: "Ranked Position #1.0 in Google Search Console for 'wordpress website development agency in thiruvananthapuram, india', 'woocommerce development agency in thiruvananthapuram, india', 'online store development company in thiruvananthapuram, india', and 'wordpress maintenance company in thiruvananthapuram, india'.",
+  related: [
+    { href: "/website-maintenance-kerala", label: "Website Maintenance Services Kerala" },
+    { href: "/online-store-development-trivandrum", label: "Online Store Development Trivandrum" },
+    { href: "/ecommerce-website-development-kerala", label: "Custom E-Commerce Website Development" },
+    { href: "/website-redesign-trivandrum", label: "Website Redesign & Speed Upgrade Trivandrum" },
+    { href: "/seo-services", label: "WooCommerce & WordPress SEO Services" },
+    { href: "/contact", label: "Get a Free WordPress / WooCommerce Quote" },
+  ],
+  faqs: [
+    {
+      q: "Should I choose WordPress/WooCommerce or custom Next.js for my Kerala business?",
+      a: "WordPress and WooCommerce are great when your team wants a familiar visual dashboard for frequent blog publishing or standard product catalogs under ₹35,000. If you want sub-second load speeds, zero plugin maintenance, and custom CRM/AI workflows, we recommend our Next.js stack (starting from ₹5,000 for business sites). We build and support both.",
+    },
+    {
+      q: "Do you provide WordPress maintenance and malware removal in Trivandrum?",
+      a: "Yes. We provide one-time hacked WordPress cleanup and speed optimization as well as monthly maintenance plans starting from ₹1,500/month for businesses, travel agencies, and online stores.",
+    },
+    {
+      q: "Can you integrate WhatsApp order notifications with WooCommerce?",
+      a: "Yes. We connect WooCommerce directly to the Official Meta WhatsApp Cloud API so customers and store owners receive instant order confirmations, payment links, and courier tracking links on WhatsApp.",
+    },
+  ],
+  serviceName: "WordPress & WooCommerce Development Agency Trivandrum Kerala",
+  whatsappText: "Hi Adarsh, I need WordPress / WooCommerce development or maintenance in Kerala",
+  areaServed: ["Thiruvananthapuram", "Kochi", "Kozhikode", "Kollam", "Thrissur", "Kannur", "Kottayam", "Kerala"],
+};
+
+export const callCenterTelecallingCrmKerala: LandingContent = {
+  path: "/call-center-telecalling-crm-kerala",
+  metaTitle: "Call Center Solution & Telecalling CRM Software in Trivandrum, Kerala",
+  metaDescription:
+    "Cloud call center solution, IVR, auto-dialer & WhatsApp telecalling CRM software in Trivandrum & Kerala. Track sales calls, recordings & leads from ₹15,000.",
+  h1: "Call Center Solution, IVR & Telecalling CRM Software in Trivandrum, Kerala",
+  lede: "Digital Product Solutions provides custom telecalling CRM software, cloud telephony (IVR, click-to-call, call recording) integration, and automated WhatsApp follow-up systems for sales teams, study-abroad consultancies, real estate builders, healthcare clinics, and customer support desks in Trivandrum, Kochi, and across Kerala.",
+  audience: "Education & study-abroad consultancies, real estate sales teams, car dealerships, hospitals, insurance/finance agencies, and BPO/support centers in Trivandrum and Kerala managing 3 to 100+ telecallers.",
+  problem: "When telecallers use personal SIM cards and Excel sheets, management has zero visibility into how many calls were actually made, whether leads were followed up on time, or what was promised on the call. When a telecaller leaves, the lead history leaves with them.",
+  deliverables: [
+    "Centralized Telecalling CRM with auto-lead distribution from Meta Ads, Google Ads, website forms & Excel upload",
+    "Click-to-Call, Mobile SIM Call Log Sync & Cloud IVR integration (Exotel, Knowlarity, MyOperator, Tata Tele, Twilio)",
+    "Automatic WhatsApp brochure/location message sent the moment a telecaller marks a call as 'Interested'",
+    "Mandatory disposition tags (Interested, Call Back Later, Not Reachable, Converted, Lost) with timed callback alarms",
+    "Live Team Leader & Owner Dashboard showing calls per agent, talk time, pending follow-ups, and conversion rate",
+    "Role-based data security so telecallers cannot bulk-export or steal your company's customer database",
+  ],
+  costs: [
+    {
+      title: "Telecalling & Lead Follow-Up CRM (Up to 10 Agents)",
+      text: "₹15,000 – ₹28,000 one-time build. Lead assignment, follow-up reminders, WhatsApp click-to-chat, and owner reports.",
+    },
+    {
+      title: "Cloud Call Center CRM + IVR / Auto-Dialer Integration",
+      text: "₹30,000 – ₹60,000. Full integration with cloud telephony APIs, automatic call recording logs, and WhatsApp Cloud API automation.",
+    },
+    {
+      title: "Enterprise Multi-Branch Contact Center Suite",
+      text: "Custom milestone quote for 25+ seats, AI call-transcript summarization, and ERP/admission portal sync.",
+    },
+  ],
+  process: [
+    {
+      title: "1. Sales Floor & Telephony Audit",
+      text: "We review how your telecallers currently dial (SIM vs Cloud IVR) and where your leads come from.",
+    },
+    {
+      title: "2. Pipeline & Disposition Configuration",
+      text: "We configure your custom call outcomes, follow-up timers, and WhatsApp templates.",
+    },
+    {
+      title: "3. Telephony & Ad Lead Webhook Setup",
+      text: "Facebook/Instagram Lead Ads, website inquiries, and IVR missed calls flow into the CRM in real time.",
+    },
+    {
+      title: "4. Agent Onboarding & Live Dashboard Handover",
+      text: "Your telecallers get a fast mobile/desktop calling view while owners get real-time conversion analytics.",
+    },
+  ],
+  ownership: "100% ownership of your CRM software and lead database — no expensive per-agent monthly SaaS fees that punish you as your team grows.",
+  proof: "Already ranking in Google Search Console for 'call center solution dealer in thiruvananthapuram' and 'call center solution dealer in trivandrum', backed by our suite of 12+ Kerala industry CRM systems and official WhatsApp Cloud API automations.",
+  related: [
+    { href: "/crm-software-kerala", label: "All Industry CRM Software in Kerala" },
+    { href: "/education-admission-crm-kerala", label: "Education & Study-Abroad Telecalling CRM" },
+    { href: "/real-estate-crm-lead-management-kerala", label: "Real Estate Sales & Site-Visit CRM" },
+    { href: "/car-dealer-crm-kerala", label: "DealerCRM — Showroom Telecalling & Test-Drive CRM" },
+    { href: "/whatsapp-automation-kerala", label: "Official WhatsApp Cloud API Automation" },
+    { href: "/contact", label: "Request a Telecalling CRM Demo" },
+  ],
+  faqs: [
+    {
+      q: "Do you provide call center software and telecalling CRM in Trivandrum?",
+      a: "Yes. From our Korani, Trivandrum office, we build custom telecalling CRMs and integrate cloud call center solutions (IVR, toll-free numbers, call recording, and auto-dialers) for Kerala businesses starting from ₹15,000.",
+    },
+    {
+      q: "Can we use the telecalling CRM without paying per-user monthly fees?",
+      a: "Yes. Unlike SaaS telecalling apps that charge ₹800–₹2,500 per user every month forever, we build your own cloud telecalling CRM with a one-time development fee so you can add agents without per-seat license penalties.",
+    },
+    {
+      q: "Can it connect with Exotel, MyOperator, Knowlarity, or Jio/Airtel/Tata cloud telephony?",
+      a: "Yes. Whenever your cloud telephony provider supports webhooks and click-to-call APIs, we log incoming/outgoing calls, missed-call leads, and call recording URLs directly on the customer's CRM card.",
+    },
+  ],
+  serviceName: "Call Center Solution & Telecalling CRM Software Trivandrum Kerala",
+  whatsappText: "Hi Adarsh, I need a call center / telecalling CRM solution in Trivandrum / Kerala",
+  areaServed: ["Thiruvananthapuram", "Kochi", "Kozhikode", "Kollam", "Thrissur", "Kottayam", "Kannur", "Kerala"],
 };
 
 

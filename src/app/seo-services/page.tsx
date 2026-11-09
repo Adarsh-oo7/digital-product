@@ -2,25 +2,25 @@ import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "Best SEO Company in Kerala | AI SEO Specialist & Agency in Trivandrum",
+  title: "Best SEO Company in Kerala | Technical & AI SEO Agency",
   description:
-    "Partner with the best SEO company in Kerala (157,000+ verified Google Search Console impressions across client properties). Technical SEO, AI SEO / GEO, E-Commerce SEO & Local Maps optimization from ₹5,000/mo.",
+    "Best SEO company in Kerala (189,800+ verified GSC impressions & 6,380+ clicks). Technical SEO, AI SEO / GEO, E-Commerce & Local Maps SEO from ₹5,000/mo.",
   path: "/seo-services",
   absoluteTitle: true,
   keywords: [
     "best seo company in kerala",
-    "best seo agency in kerala",
-    "best seo company kerala",
-    "best seo expert in kerala",
-    "best seo expert kerala",
+    "seo company in kerala",
+    "seo company kerala",
+    "seo expert in kerala",
+    "seo services in kerala",
+    "seo services kerala",
+    "seo services in trivandrum",
+    "seo company in trivandrum",
+    "seo agency in trivandrum",
     "ai seo company kerala",
     "ai seo specialist kerala",
     "ecommerce seo expert kerala",
-    "best seo companies in kerala",
-    "best seo services in kerala",
     "affordable seo company kerala",
-    "affordable seo packages kerala",
-    "seo company in trivandrum",
     "local seo kerala",
   ],
 });
@@ -35,7 +35,7 @@ export default function SEOServicesPage() {
         name: "Which is the best SEO company in Kerala with verified Google Search Console proof?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Digital Product Solutions (headquartered in Korani, Trivandrum and led by AI & SEO Architect Adarsh B S) manages over 157,000+ verified Google Search Console impressions and 5,100+ organic clicks across live properties including Care N Cure Group Perth (73,746+ impressions, #1.1 for aged care agencies in WA), KPSC Master (56,155+ impressions & 4,223 clicks), and Kerala Sellers (7,620+ impressions).",
+          text: "Digital Product Solutions (headquartered in Korani, Trivandrum and led by AI & SEO Architect Adarsh B S) manages over 189,800+ verified Google Search Console impressions and 6,380+ organic clicks across live properties including Care N Cure Group Perth (82,824+ impressions & 386 clicks, #1.0 for aged care agencies in WA), KPSC Master (58,525+ impressions & 4,362 clicks), Kerala Sellers (19,081+ impressions & 1,239 clicks), and digitalproductsolutions.in (27,377+ impressions).",
         },
       },
       {
@@ -165,8 +165,8 @@ export default function SEOServicesPage() {
               )
             </strong>
             . We have delivered{" "}
-            <strong>157,000+ verified Google Search Console impressions</strong>{" "}
-            and <strong>5,100+ organic clicks</strong> across Kerala and
+            <strong>189,800+ verified Google Search Console impressions</strong>{" "}
+            and <strong>6,380+ organic clicks</strong> across Kerala and
             international client properties — starting from{" "}
             <strong>₹5,000/month</strong>.
           </p>
@@ -209,14 +209,14 @@ export default function SEOServicesPage() {
                 Australia Healthcare (Perth, WA)
               </div>
               <div className="text-3xl font-extrabold text-gray-900 mb-1">
-                73,746+
+                82,824+
               </div>
               <div className="text-sm font-medium text-gray-800 mb-2">
-                GSC Impressions · 303 Clicks
+                GSC Impressions · 386 Clicks
               </div>
               <p className="text-xs text-gray-600">
                 <strong>Care N Cure Group (carencure.com.au):</strong> Ranked{" "}
-                <strong>#1.1</strong> for &ldquo;aged care agencies&rdquo;,{" "}
+                <strong>#1.0</strong> for &ldquo;aged care agencies&rdquo;,{" "}
                 <strong>#1.3</strong> for &ldquo;home care services WA&rdquo;,
                 and <strong>#1.5</strong> for &ldquo;home care services&rdquo;
                 in Australia.
@@ -227,15 +227,15 @@ export default function SEOServicesPage() {
                 Kerala EdTech SaaS Platform
               </div>
               <div className="text-3xl font-extrabold text-gray-900 mb-1">
-                56,155+
+                58,525+
               </div>
               <div className="text-sm font-medium text-gray-800 mb-2">
-                GSC Impressions · 4,223 Clicks
+                GSC Impressions · 4,362 Clicks
               </div>
               <p className="text-xs text-gray-600">
                 <strong>KPSC Master (kpscmaster.in):</strong> 7.5% sitewide CTR,
-                ranked <strong>#1.8</strong> (56% CTR) for &ldquo;vfa mock test
-                2026&rdquo; and <strong>#2.2</strong> for Malayalam exam
+                ranked <strong>#1.8</strong> (55.1% CTR) for &ldquo;vfa mock
+                test 2026&rdquo; and <strong>#2.2</strong> for Malayalam exam
                 queries.
               </p>
             </div>
@@ -244,16 +244,16 @@ export default function SEOServicesPage() {
                 E-Commerce Marketplace SEO
               </div>
               <div className="text-3xl font-extrabold text-gray-900 mb-1">
-                7,620+
+                19,081+
               </div>
               <div className="text-sm font-medium text-gray-800 mb-2">
-                GSC Impressions · 402 Clicks
+                GSC Impressions · 1,239 Clicks
               </div>
               <p className="text-xs text-gray-600">
                 <strong>Kerala Sellers (keralasellers.in):</strong> Ranked{" "}
-                <strong>#4.4</strong> for online selling in Kerala and{" "}
-                <strong>#6.9</strong> (12.0% CTR) for Instagram seller
-                onboarding across India &amp; GCC.
+                <strong>#1.3</strong> (65.6% CTR) for &ldquo;kerala
+                sellers&rdquo; and <strong>#4.6</strong> for &ldquo;online
+                business in kerala&rdquo; across India &amp; GCC.
               </p>
             </div>
             <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200">
@@ -261,15 +261,15 @@ export default function SEOServicesPage() {
                 Local Trivandrum Rental Hub
               </div>
               <div className="text-3xl font-extrabold text-gray-900 mb-1">
-                1,668+
+                1,875+
               </div>
               <div className="text-sm font-medium text-gray-800 mb-2">
-                GSC Impressions · 117 Clicks
+                GSC Impressions · 126 Clicks
               </div>
               <p className="text-xs text-gray-600">
                 <strong>DPS Gaming (gaming.digitalproductsolutions.in):</strong>{" "}
-                Ranked <strong>#3.7 to #5.4</strong> for &ldquo;PS5 rental near
-                me&rdquo; and &ldquo;TV rental Trivandrum&rdquo; with 7.0% CTR.
+                Ranked <strong>#2.0 to #5.4</strong> for &ldquo;rent a PS5 near
+                me&rdquo; and &ldquo;TV rental Trivandrum&rdquo; with 6.7% CTR.
               </p>
             </div>
           </div>
@@ -517,7 +517,7 @@ export default function SEOServicesPage() {
             {[
               {
                 q: "Which is the best SEO company in Kerala with verified Google Search Console proof?",
-                a: "Digital Product Solutions (headquartered in Korani, Trivandrum and led by AI & SEO Architect Adarsh B S) manages over 157,000+ verified Google Search Console impressions and 5,100+ organic clicks across live properties including Care N Cure Group Perth (73,746+ impressions, #1.1 for aged care agencies in WA), KPSC Master (56,155+ impressions & 4,223 clicks), and Kerala Sellers (7,620+ impressions).",
+                a: "Digital Product Solutions (headquartered in Korani, Trivandrum and led by AI & SEO Architect Adarsh B S) manages over 189,800+ verified Google Search Console impressions and 6,380+ organic clicks across live properties including Care N Cure Group Perth (82,824+ impressions & 386 clicks, #1.0 for aged care agencies in WA), KPSC Master (58,525+ impressions & 4,362 clicks), Kerala Sellers (19,081+ impressions & 1,239 clicks), and digitalproductsolutions.in (27,377+ impressions).",
               },
               {
                 q: "What are your affordable SEO packages in Kerala?",
