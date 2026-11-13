@@ -587,14 +587,16 @@ export default function Home() {
             <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-2">Serving Businesses Across <span className="text-blue-600">All of Kerala</span></h2>
             <p className="text-gray-500 text-sm">Based in Trivandrum — we provide digital services to every major city in Kerala.</p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
             {[
               { city: "Trivandrum", link: "/digital-marketing-trivandrum" },
-              { city: "Kochi", link: "/local-seo-kerala" },
+              { city: "Attingal & Korani", link: "/website-development-attingal" },
+              { city: "Kochi Web", link: "/web-development-kochi" },
+              { city: "Kochi SEO", link: "/digital-marketing-kochi" },
+              { city: "Thrissur", link: "/web-development-thrissur" },
               { city: "Kollam", link: "/digital-marketing-kollam" },
               { city: "Kozhikode", link: "/digital-marketing-kozhikode" },
               { city: "Kannur", link: "/seo-services-kannur" },
-              { city: "Kottayam", link: "/web-development-kottayam" },
             ].map((c, i) => (
               <Link
                 key={i}
