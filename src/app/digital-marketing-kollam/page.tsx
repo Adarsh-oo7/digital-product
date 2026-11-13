@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export const metadata = pageMetadata({
   title:
-    "Best Digital Marketing Company & AI SEO Agency in Kollam | Pricing from ₹3,000/mo",
+    "Digital Marketing & AI SEO Agency in Kollam | From ₹3,000",
   description:
-    "Partner with the best digital marketing company, AI SEO agency & digital marketing expert in Kollam, Kerala. Transparent digital marketing pricing in Kollam from ₹3,000/mo — SEO, Google Ads, WhatsApp automation & Next.js websites.",
+    "Digital marketing company, AI SEO agency & strategist in Kollam, Kerala. Transparent pricing from ₹3,000/mo — Local SEO, Google Ads, WhatsApp bots & Next.js sites.",
   path: "/digital-marketing-kollam",
   absoluteTitle: true,
   keywords: [

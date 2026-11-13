@@ -3,9 +3,9 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title:
-    "Best Mobile App Development Company in Kerala | Android, iOS & Flutter Developers in Trivandrum & Kochi",
+    "Mobile App Development Company Kerala | Android, iOS & Kochi",
   description:
-    "Partner with the best mobile app development company in Kerala (Trivandrum & Kochi). Custom Android, iOS & Flutter app development cost starting at ₹25,000 with 100% source-code ownership.",
+    "Best mobile app & Android app development company in Kerala (Trivandrum & Kochi). Custom Android, iOS & Flutter apps from ₹25,000 with 100% source-code ownership.",
   path: "/app-development-kerala",
   absoluteTitle: true,
   keywords: [

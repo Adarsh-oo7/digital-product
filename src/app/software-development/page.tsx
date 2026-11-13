@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export const metadata = pageMetadata({
   title:
-    "Custom Software Development Company in Trivandrum & Kerala | ERP, CRM & SaaS from ₹15,000",
+    "Custom Software Development Company Kerala | ERP, CRM & SaaS",
   description:
-    "Leading custom software development company in Trivandrum & Kerala. Custom software development services in Trivandrum, ERP/Odoo, CRM software & SaaS web portals starting at ₹15,000.",
+    "Custom software development company in Trivandrum & Kerala. Bespoke ERP/Odoo, CRM software & SaaS web portals starting at ₹15,000 with 100% source ownership.",
   path: "/software-development",
   absoluteTitle: true,
   keywords: [

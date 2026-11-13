@@ -851,13 +851,63 @@ export const webDevelopmentKerala: LandingContent = {
 };
 
 export const websiteDevelopmentKerala: LandingContent = {
-  ...webDevelopmentKerala,
   path: "/website-development-kerala",
-  metaTitle: "Website Development Services in Kerala | Packages from ₹5,000",
+  metaTitle: "Website Development Services Kerala | Next.js & E-Commerce",
   metaDescription:
-    "Professional website development services in Kerala by Digital Product Solutions. Custom business websites, e-commerce, and mobile-friendly design with direct developer access.",
-  h1: "Website Development in Kerala",
-  serviceName: "Website Development Kerala",
+    "Custom website development services in Kerala (Trivandrum & Kochi). Fast Next.js business websites, e-commerce stores & SEO-ready portals from ₹5,000.",
+  h1: "Website Development Services in Kerala (Trivandrum, Kochi & Statewide)",
+  lede: "Need a conversion-ready corporate website, booking portal, or online store? Digital Product Solutions engineers high-speed Next.js and WordPress websites for businesses across Trivandrum (Technopark), Kochi (Infopark), Kozhikode, Kollam, and Thrissur — with published pricing and 100% source-code ownership.",
+  audience:
+    "SMEs, clinics, hospitals, resorts, real estate builders, and growing D2C brands across Kerala upgrading from slow template sites to fast, SEO-engineered web platforms.",
+  problem:
+    "Most Kerala web agencies deliver bloated WordPress themes scoring under 50 on mobile PageSpeed, causing Google to bury your site on page 5 while paid ad clicks bounce before loading.",
+  deliverables: [
+    "Custom Next.js / React or headless WordPress architecture (95+ Core Web Vitals)",
+    "Mobile-first UI/UX tailored for high-intent Kerala & NRI customers",
+    "Google Business Profile, LocalBusiness JSON-LD & Technical SEO pre-configured",
+    "Official WhatsApp lead capture, instant quote forms & Google Analytics 4 events",
+    "Razorpay, Cashfree, UPI & multi-currency (INR / AED / AUD / GBP) checkout",
+    "Direct WhatsApp access to senior engineers — zero account-manager delays",
+  ],
+  costs: [
+    { title: "Starter Business Website", text: "₹5,000–₹8,000 (1–3 pages, 3–5 days). Ideal for clinics, consultants & local shops." },
+    { title: "Growth Corporate Website", text: "₹10,000–₹18,000 (5–7 pages, 7–10 days). Includes blog, portfolio, schema & speed tuning." },
+    { title: "Custom Web Portal / E-Commerce", text: "₹25,000–₹70,000+ for custom dashboards, booking engines & Razorpay/UPI stores." },
+  ],
+  process: [
+    { title: "1. Architecture & Wireframe", text: "We map your target Kerala & regional keywords, conversion funnel, and page structure." },
+    { title: "2. High-Speed Engineering", text: "Built in Next.js or optimized WooCommerce with live preview links on WhatsApp." },
+    { title: "3. Core Web Vitals & Schema QA", text: "Tested for sub-second mobile load, structured data, and form/WhatsApp tracking." },
+    { title: "4. Launch & Full Handover", text: "Deployed with Search Console + IndexNow submission and 100% code ownership." },
+  ],
+  ownership:
+    "Your domain, cloud hosting, Git repository, and database stay 100% in your company's name — zero vendor lock-in or recurring license traps.",
+  proof:
+    "Verified across 189,800+ Google Search Console impressions and live builds including Care N Cure Group (Perth), Kerala Sellers, KPSC Master, BuilDwellz, CrystalKnot Films, and Squeeze Berriez.",
+  related: [
+    { href: "/web-development-kerala", label: "Web development company Kerala" },
+    { href: "/website-development-cost-kerala", label: "Website development cost in Kerala" },
+    { href: "/seo-services", label: "Best SEO & AI SEO company in Kerala" },
+    { href: "/ecommerce-website-development-kerala", label: "E-commerce website development Kerala" },
+    { href: "/wordpress-woocommerce-development-kerala", label: "WordPress & WooCommerce agency" },
+    { href: "/contact", label: "Request a free website estimate" },
+  ],
+  faqs: [
+    {
+      q: "Why do Next.js websites built by Digital Product Solutions rank faster in Kerala?",
+      a: "Unlike heavy page-builder themes, Next.js static and server-rendered pages load in under 1 second on mobile 4G networks across Kerala and ship with built-in LocalBusiness, Service, and FAQPage JSON-LD schema.",
+    },
+    {
+      q: "Do you build websites for businesses in Kochi, Kozhikode, and Thrissur as well as Trivandrum?",
+      a: "Yes. While our engineering office is at NH 66, Korani in Thiruvananthapuram, we build and support websites for clients across Kochi (Ernakulam), Kollam, Kottayam, Thrissur, Kozhikode, Kannur, UAE, Australia, and the UK.",
+    },
+    {
+      q: "Can you redesign my existing slow WordPress or Wix site without losing Google rankings?",
+      a: "Yes. We map every existing URL, preserve metadata and canonical structure, upgrade Core Web Vitals, and resubmit your updated sitemap via Google Search Console and IndexNow.",
+    },
+  ],
+  serviceName: "Website Development Services Kerala",
+  areaServed: ["Thiruvananthapuram", "Kochi", "Kollam", "Kozhikode", "Thrissur", "Kottayam", "Kerala"],
   whatsappText: "Hi, I am looking for website development services in Kerala",
 };
 

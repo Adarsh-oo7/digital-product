@@ -51,10 +51,17 @@ export default function LandingPage({ content, children }: { content: LandingCon
         "@type": "Service",
         name: content.serviceName,
         provider: {
-          "@type": "Organization",
+          "@type": "LocalBusiness",
+          "@id": `${SITE_URL}/#organization`,
           name: business.legalName,
           url: SITE_URL,
           telephone: business.telephone,
+          hasMap: business.mapsPlaceIdUrl,
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: business.latitude,
+            longitude: business.longitude,
+          },
           address: {
             "@type": "PostalAddress",
             streetAddress: business.streetAddress,

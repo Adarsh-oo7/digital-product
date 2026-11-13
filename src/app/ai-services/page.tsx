@@ -6,6 +6,8 @@ export const metadata = pageMetadata({
   description:
     "AI services and automation consultant in Kerala. Custom LLM systems, WhatsApp AI bots, machine learning & predictive analytics starting from ₹12,000.",
   path: "/ai-services",
+  noindex: true,
+  canonicalPath: "/ai-powered-solutions",
   keywords: [
     "AI Services Kerala",
     "freelance AI developer",

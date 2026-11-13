@@ -638,6 +638,11 @@ export default function Home() {
               <h2 className="text-lg font-bold text-gray-800 mb-3">Specialised Services in Kerala</h2>
               <ul className="space-y-2">
                 {[
+                  { text: "Best SEO & AI SEO Company in Kerala", link: "/seo-services" },
+                  { text: "Local SEO & Google Maps Ranking Kerala", link: "/local-seo-kerala" },
+                  { text: "Digital Marketing Agency in Trivandrum", link: "/digital-marketing-trivandrum" },
+                  { text: "Website Development Services Kerala", link: "/website-development-kerala" },
+                  { text: "Mobile App & Android Development Kerala & Kochi", link: "/app-development-kerala" },
                   { text: "Custom Software Development Agency", link: "/software-development" },
                   { text: "Web Development Company Kerala", link: "/web-development-kerala" },
                   { text: "CRM Software Solutions Kerala", link: "/crm-software-kerala" },

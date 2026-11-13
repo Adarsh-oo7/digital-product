@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export const metadata = pageMetadata({
   title:
-    "AI Consulting Services & Best AI Automation Agency in Kerala | AI Website & Chatbot Development",
+    "AI Consulting & Automation Agency Kerala | Chatbots & Web AI",
   description:
-    "Leading AI consulting services in Kerala, AI website development company & best AI automation agency in Trivandrum & Kochi. Custom AI chatbots, RAG agents & WhatsApp automation starting at ₹12,000.",
+    "AI consulting services & best AI automation agency in Kerala (Trivandrum & Kochi). Custom AI websites, RAG agents, chatbots & WhatsApp automation from ₹12,000.",
   path: "/ai-powered-solutions",
   absoluteTitle: true,
   keywords: [

@@ -2,9 +2,9 @@ import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "Best SEO Company in Kerala | Technical & AI SEO Agency",
+  title: "Best SEO & AI SEO Company in Kerala | Technical & Local SEO",
   description:
-    "Best SEO company in Kerala (189,800+ verified GSC impressions & 6,380+ clicks). Technical SEO, AI SEO / GEO, E-Commerce & Local Maps SEO from ₹5,000/mo.",
+    "Best SEO & AI SEO company in Kerala (189,800+ verified GSC impressions & 6,380+ clicks). Technical SEO, AI SEO / GEO & Local Maps packages from ₹5,000/mo.",
   path: "/seo-services",
   absoluteTitle: true,
   keywords: [

@@ -6,6 +6,8 @@ export const metadata = pageMetadata({
   description:
     "Rank #1 on Google with data-driven SEO services in Kerala. Transparent pricing from ₹5,000/mo, Google Maps pack domination, Next.js technical SEO, and direct developer communication.",
   path: "/seo-services-kerala",
+  noindex: true,
+  canonicalPath: "/seo-services",
   keywords: [
     "SEO Services Kerala",
     "Best SEO Company Kerala",
