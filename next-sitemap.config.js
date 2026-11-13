@@ -62,6 +62,8 @@ const ALLOW = new Set([
   '/freelance-web-developer-kerala',
   '/dedicated-developer-team-kerala',
   '/outsource-web-development-kerala',
+  '/outsource-software-development-india',
+  '/white-label-web-development-india',
   '/restaurant-website-online-ordering-kerala',
   '/website-development-for-hotels-resorts-kerala',
   '/real-estate-builder-website-development-kerala',

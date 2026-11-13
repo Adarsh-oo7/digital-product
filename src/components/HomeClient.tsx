@@ -656,6 +656,8 @@ export default function Home() {
                   { text: "Call Center & Telecalling CRM Software", link: "/call-center-telecalling-crm-kerala" },
                   { text: "AI Automation for Businesses Kerala", link: "/ai-automation-for-businesses-kerala" },
                   { text: "Dedicated Developer Squad (Contract / Retainer)", link: "/dedicated-developer-team-kerala" },
+                  { text: "Outsource Software & Web Development to India ($299+)", link: "/outsource-software-development-india" },
+                  { text: "White-Label Web Development Partner India (NDA)", link: "/white-label-web-development-india" },
                   { text: "UAE (Dubai & Abu Dhabi) Software, AI & Web Hub", link: "/uae" },
                   { text: "GCC (Saudi Arabia, Qatar, Kuwait, Oman, Bahrain) Hub", link: "/gcc" },
                   { text: "Australia (Perth, Sydney, Melbourne) Tech Partner", link: "/au" },

@@ -175,6 +175,8 @@ export const htmlSitemapGroups: { heading: string; links: { href: string; label:
       { href: "/kerala-digital-lead-generation-agency", label: "Lead-generation systems from Kerala" },
       { href: "/start-business-website-software", label: "Start a business website abroad" },
       { href: "/international-business-digital-solutions", label: "International digital solutions" },
+      { href: "/outsource-software-development-india", label: "Outsource Software & Web Development to India (From $299)" },
+      { href: "/white-label-web-development-india", label: "White-Label Web & App Partner in India (NDA)" },
       { href: "/international-business-pricing", label: "International starting prices" },
       { href: "/uk-malayali-business-website-development", label: "UK Malayali business websites" },
       { href: "/australia-malayali-business-website-development", label: "Australia Malayali business websites" },
