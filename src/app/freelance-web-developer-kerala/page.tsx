@@ -1,4 +1,5 @@
 import LandingPage from "@/components/seo/LandingPage";
+import OverseasCaseStudiesShowcase from "@/components/seo/OverseasCaseStudiesShowcase";
 import { freelanceWeb } from "@/content/landings";
 import { pageMetadata } from "@/lib/seo";
 
@@ -9,5 +10,9 @@ export const metadata = pageMetadata({
 });
 
 export default function Page() {
-  return <LandingPage content={freelanceWeb} />;
+  return (
+    <LandingPage content={freelanceWeb}>
+      <OverseasCaseStudiesShowcase regionLabel="Freelance-Direct, Agency & Company Projects" />
+    </LandingPage>
+  );
 }

@@ -1,5 +1,6 @@
 import LandingPage from "@/components/seo/LandingPage";
 import InternationalCompetitorMatrix from "@/components/seo/InternationalCompetitorMatrix";
+import OverseasCaseStudiesShowcase from "@/components/seo/OverseasCaseStudiesShowcase";
 import { germanyLanding } from "@/content/landings";
 import { pageMetadata, INTERNATIONAL_HREFLANGS } from "@/lib/seo";
 
@@ -30,6 +31,7 @@ export const metadata = pageMetadata({
 export default function Page() {
   return (
     <LandingPage content={germanyLanding}>
+      <OverseasCaseStudiesShowcase regionLabel="Germany & DACH Clients" />
       <InternationalCompetitorMatrix region="de" />
     </LandingPage>
   );

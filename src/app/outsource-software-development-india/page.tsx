@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { pageMetadata, INTERNATIONAL_HREFLANGS } from "@/lib/seo";
 import { business, SITE_URL } from "@/lib/business";
+import OverseasCaseStudiesShowcase from "@/components/seo/OverseasCaseStudiesShowcase";
 
 export const metadata = pageMetadata({
   title: "Outsource Software & Web Development to India | Kerala",
@@ -203,7 +204,9 @@ export default function OutsourceSoftwareIndiaPage() {
           </div>
         </div>
 
-        <div className="space-y-4">
+        <OverseasCaseStudiesShowcase regionLabel="GCC, Australia, UK, USA & Global Clients" />
+
+        <div className="space-y-4 mt-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
           {faqSchema.mainEntity.map((f) => (
             <div key={f.name} className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
@@ -216,3 +219,4 @@ export default function OutsourceSoftwareIndiaPage() {
     </section>
   );
 }
+

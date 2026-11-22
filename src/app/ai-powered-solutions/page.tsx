@@ -227,6 +227,30 @@ export default function AIPoweredSolutionsPage() {
           </div>
         </div>
 
+        {/* AI CONSULTING & COCHIN / KERALA USE CASES */}
+        <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 md:p-10 mb-14">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            AI Consulting Services &amp; AI Agent Development Across Kerala &amp; Kochi
+          </h2>
+          <p className="text-gray-300 text-sm leading-relaxed mb-6">
+            Our <strong>AI consulting services in Kerala</strong> help business owners in Trivandrum,
+            Kochi (Infopark/Ernakulam), Thrissur, and Kozhikode automate repetitive WhatsApp sales,
+            appointment booking, and internal PDF/database lookups — without enterprise overhead.
+            Read our{" "}
+            <Link href="/blog/ai-consulting-services-kerala-guide" className="text-indigo-400 underline">
+              2026 Kerala AI Consulting &amp; Cost Guide
+            </Link>{" "}
+            or explore our{" "}
+            <Link href="/ai-chatbot-development-kerala" className="text-indigo-400 underline">
+              AI Chatbot Development
+            </Link>{" "}
+            and{" "}
+            <Link href="/seo-services" className="text-indigo-400 underline">
+              AI SEO (GEO) Services
+            </Link>.
+          </p>
+        </div>
+
         {/* CTA */}
         <div className="relative bg-gradient-to-r from-indigo-600 to-purple-600 p-14 rounded-3xl text-center overflow-hidden">
 

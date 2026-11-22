@@ -30,4 +30,7 @@ export const indexableBlogSlugs = new Set<string>([
   "app-development-cost-kerala",
   "software-development-cost-kerala",
   "seo-cost-kerala",
+  "ai-consulting-services-kerala-guide",
+  "ai-seo-vs-traditional-seo-kerala",
+  "outsource-web-app-development-india-cost-2026",
 ]);

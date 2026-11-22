@@ -3,20 +3,21 @@ import { pageMetadata } from "@/lib/seo";
 import { business, SITE_URL } from "@/lib/business";
 
 export const metadata = pageMetadata({
-  title: "Web & Software Development Company Thrissur | From ₹5,000",
+  title: "Web, E-Commerce & Software Company Thrissur & Chalakudy",
   description:
-    "Trusted web design & software development company in Thrissur. Websites, e-commerce, jewellery & clinic CRM, and GST POS billing software from ₹5,000.",
+    "Trusted web design, e-commerce & software development company in Thrissur & Chalakudy. Websites, Razorpay stores, jewellery & clinic CRM, and POS billing from ₹5,000.",
   path: "/web-development-thrissur",
   absoluteTitle: true,
   keywords: [
     "web development company in thrissur",
+    "web development company in chalakudy",
+    "ecommerce website development thrissur",
     "best web design company in thrissur",
     "website development company in thrissur",
     "software development company in thrissur",
     "it company in thrissur",
     "best software company in thrissur",
     "jewellery website development thrissur",
-    "ecommerce website thrissur",
   ],
 });
 
@@ -33,7 +34,7 @@ export default function WebDevelopmentThrissurPage() {
       telephone: business.telephone,
       hasMap: business.mapsPlaceIdUrl,
     },
-    areaServed: ["Thrissur", "Guruvayur", "Irinjalakuda", "Chalakudy", "Kunnamkulam", "Kodungallur", "Kerala"],
+    areaServed: ["Thrissur", "Chalakudy", "Guruvayur", "Irinjalakuda", "Kunnamkulam", "Kodungallur", "Kerala"],
     description:
       "Custom websites, jewellery & retail e-commerce, clinic/hospital portals, and GST billing/CRM software for Thrissur businesses from ₹5,000.",
     offers: {
@@ -131,6 +132,29 @@ export default function WebDevelopmentThrissurPage() {
               <span className="text-xs font-semibold text-amber-700">Explore Solution →</span>
             </Link>
           ))}
+        </div>
+
+        <div className="bg-amber-50 border border-amber-100 rounded-3xl p-8 md:p-10 mb-14">
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">
+            E-Commerce &amp; Custom Software in Thrissur, Chalakudy, Irinjalakuda &amp; Guruvayur
+          </h2>
+          <p className="text-gray-700 text-sm leading-relaxed mb-6">
+            Whether you need an <strong>e-commerce website in Thrissur</strong> for gold, textiles,
+            or Ayurvedic products, or a <strong>web &amp; software development company in Chalakudy
+            or Irinjalakuda</strong> for clinics, wholesalers, and NRI businesses, we deliver
+            Next.js + Razorpay/UPI platforms in 5–14 days with direct engineer WhatsApp support.
+          </p>
+          <div className="flex flex-wrap gap-3 text-sm">
+            <Link href="/ecommerce-website-development-kerala" className="px-4 py-2 bg-white rounded-full border border-amber-200 text-amber-800 font-medium hover:bg-amber-100">
+              E-Commerce Website Development →
+            </Link>
+            <Link href="/software-development" className="px-4 py-2 bg-white rounded-full border border-amber-200 text-amber-800 font-medium hover:bg-amber-100">
+              Custom Software &amp; ERP Kerala →
+            </Link>
+            <Link href="/blog/ai-consulting-services-kerala-guide" className="px-4 py-2 bg-white rounded-full border border-amber-200 text-amber-800 font-medium hover:bg-amber-100">
+              AI Consulting Guide for Kerala SMEs →
+            </Link>
+          </div>
         </div>
 
         <div className="space-y-4">
